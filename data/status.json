@@ -1,0 +1,108 @@
+{
+ "dashboards": {
+  "macro": {
+   "checked_at": "2026-10-09T19:35:39+00:00",
+   "data_changed_at": "2026-10-09T19:35:31+00:00",
+   "series": {
+    "gdp": {
+     "fred": "A191RL1Q225SBEA",
+     "status": "ok",
+     "latest": {
+      "date": "2026-04-01",
+      "value": 2.2
+     }
+    },
+    "unrate": {
+     "fred": "UNRATE",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 4.2
+     }
+    },
+    "payrolls": {
+     "fred": "PAYEMS",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 29.0
+     }
+    },
+    "claims": {
+     "fred": "ICSA",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-03",
+      "value": 197.0
+     }
+    },
+    "cpi": {
+     "fred": "CPIAUCSL",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 3.353
+     }
+    },
+    "corepce": {
+     "fred": "PCEPILFE",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 3.0076
+     }
+    },
+    "dff": {
+     "fred": "DFF",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-07",
+      "value": 3.88
+     }
+    },
+    "dgs2": {
+     "fred": "DGS2",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-07",
+      "value": 4.77
+     }
+    },
+    "dgs10": {
+     "fred": "DGS10",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-07",
+      "value": 5.28
+     }
+    },
+    "spread": {
+     "fred": "T10Y2Y",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-08",
+      "value": 0.47
+     }
+    },
+    "indpro": {
+     "fred": "INDPRO",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 1.4204
+     }
+    },
+    "retail": {
+     "fred": "RSAFS",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 5.3619
+     }
+    }
+   }
+  }
+ },
+ "checked_at": "2026-10-09T19:35:39+00:00",
+ "ok": true
+}

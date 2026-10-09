@@ -1,0 +1,53 @@
+name: Refresh dashboard data
+
+# Weekday pulls from FRED (keyless fredgraph CSV via curl). Times in UTC; CT shown for CDT (UTC-5)
+# and CST (UTC-6, Nov-Mar). GitHub may start scheduled runs a few minutes late.
+on:
+  schedule:
+    - cron: "47 13 * * 1-5"   # 8:47 AM CDT / 7:47 AM CST  - after 8:30 ET releases (jobs, CPI, claims, retail sales)
+    - cron: "07 16 * * 1-5"   # 11:07 AM CDT / 10:07 AM CST - mid-morning releases (ind. production, PCE, revisions)
+    - cron: "17 21 * * 1-5"   # 4:17 PM CDT / 3:17 PM CST  - daily Treasury yields, spread, fed funds
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch FRED series
+        id: fetch
+        run: |
+          set +e
+          python3 fetch_data.py
+          echo "rc=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Commit data if changed
+        run: |
+          git add data/*.json
+          if git diff --cached --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data: refresh $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
+
+      - name: Fail if any series stale or failed
+        if: steps.fetch.outputs.rc != '0'
+        run: |
+          echo "::error::One or more series could not be fetched from FRED (kept last good copy, flagged stale). See data/status.json."
+          exit 1

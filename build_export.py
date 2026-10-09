@@ -8,6 +8,9 @@ def main():
     html = (ROOT / "index.html").read_text()
     hub = json.loads((ROOT / "data/hub.json").read_text())
     inline = {"hub": hub}
+    st = ROOT / "data/status.json"
+    if st.exists():
+        inline["status"] = json.loads(st.read_text())
     for a in hub["areas"]:
         f = ROOT / "data" / f"{a['id']}.json"
         if a.get("status") == "live" and f.exists():

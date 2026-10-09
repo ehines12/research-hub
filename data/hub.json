@@ -93,14 +93,17 @@
    "title": "Financials Dashboard",
    "icon": "chart",
    "url": "https://ehines12.github.io/financials-dashboard/",
-   "tagline": "US financials macro dashboard: rates, credit spreads, H.8/H.6 deposit mix and KRE data"
+   "tagline": "US financials macro dashboard: rates, credit spreads, H.8/H.6 deposit mix and KRE data",
+   "embed": true
   },
   {
    "id": "fdic-qbp",
    "title": "FDIC Quarterly Banking Profile",
    "icon": "bank",
    "url": "https://www.fdic.gov/quarterly-banking-profile",
-   "tagline": "Quarterly industry-wide bank financial data from the FDIC"
+   "tagline": "Quarterly industry-wide bank financial data from the FDIC",
+   "embed": false,
+   "embed_blocked_reason": "fdic.gov sends X-Frame-Options: SAMEORIGIN, which blocks framing on other sites"
   }
  ]
 }

@@ -145,16 +145,33 @@ def run_dashboard(cfg_path):
         lt = rec.get("latest") or {}
         print(f"  {s['fred']:<16} {st:<7} {lt.get('date','-'):<11} {lt.get('value','')}  {rec.get('error','')}")
     DATA.mkdir(exist_ok=True)
-    tmp = out_path.with_suffix(".tmp")
-    tmp.write_text(json.dumps(result, separators=(",", ":")))
-    tmp.replace(out_path)
+    # Only rewrite the (large) data file when the numbers or config actually changed, so the
+    # scheduled job commits a big diff only on new FRED data. updated_at = last data change.
+    changed = _strip(result) != _strip(prev)
+    if changed:
+        tmp = out_path.with_suffix(".tmp")
+        tmp.write_text(json.dumps(result, separators=(",", ":")))
+        tmp.replace(out_path)
+    else:
+        result["updated_at"] = prev.get("updated_at", result["updated_at"])
+    print(f"  -> {'data changed, wrote' if changed else 'no data change, kept'} {out_path.name}")
     return result
+
+
+def _strip(doc):
+    """Comparable view of a dashboard doc, without run timestamps."""
+    doc = json.loads(json.dumps(doc))  # normalize tuples -> lists
+    return {"config": doc.get("config"),
+            "series": {k: {f: v for f, v in s.items() if f != "fetched_at"} for k, s in doc.get("series", {}).items()}}
 
 
 def main():
     hub = json.loads((ROOT / "config/hub.json").read_text())
     only = set(sys.argv[1:])
     bad = 0
+    status_path = DATA / "status.json"
+    status = json.loads(status_path.read_text()) if status_path.exists() else {}
+    status.setdefault("dashboards", {})
     for a in hub["areas"]:
         if a.get("status") != "live" or not a.get("dashboard"):
             continue
@@ -163,6 +180,14 @@ def main():
         print(f"[{a['id']}] {a['dashboard']}")
         r = run_dashboard(a["dashboard"])
         bad += sum(1 for s in r["series"].values() if s["status"] != "ok")
+        status["dashboards"][a["id"]] = {
+            "checked_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+            "data_changed_at": r["updated_at"],
+            "series": {k: {"fred": s["fred"], "status": s["status"], "latest": s.get("latest"), **({"error": s["error"]} if s.get("error") else {})}
+                       for k, s in r["series"].items()}}
+    status["checked_at"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    status["ok"] = bad == 0
+    status_path.write_text(json.dumps(status, indent=1))
     (DATA / "hub.json").write_text(json.dumps(hub, indent=1))
     sys.exit(1 if bad else 0)
 

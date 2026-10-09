@@ -61,8 +61,11 @@
     const rq = new URLSearchParams(q || "").get("r"); if (["1Y", "5Y", "10Y", "Max"].includes(rq)) range = rq;
     const hub = await load("hub");
     const area = hub.areas.find(a => a.id === h);
+    const link = (hub.links || []).find(l => l.id === h && l.embed);
+    document.body.classList.toggle("embedded", !!link);
     window.scrollTo(0, 0);
     try {
+      if (link) return embed(link);
       if (!area) return home(hub);
       crumbs.innerHTML = '<a href="#/">Hub</a> / ' + esc(area.title);
       if (area.status === "live") return dashboard(area);
@@ -75,9 +78,23 @@
     document.title = "Research Hub";
     app.innerHTML = '<h1>Research Hub</h1><p class="sub">Financials research workspace. Select an area.</p><div class="tiles">' +
       hub.areas.map(a => '<a class="tile" href="#/' + a.id + '"><span class="badge ' + (a.status === "live" ? "live\">LIVE" : "soon\">COMING SOON") + '</span><div class="ic">' + (ICONS[a.icon] || "") + "</div><h3>" + esc(a.title) + "</h3><p>" + esc(a.tagline) + "</p></a>").join("") + "</div>" +
-      ((hub.links || []).length ? '<h2>Links</h2><div class="tiles">' + hub.links.map(l => '<a class="tile ext" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer" title="' + esc(l.url) + '"><span class="badge ext">EXTERNAL ' + EXT + '</span><div class="ic">' + (ICONS[l.icon] || "") + "</div><h3>" + esc(l.title) + "</h3><p>" + esc(l.tagline) + '</p><span class="url">' + esc(l.url.replace(/^https?:\/\//, "").replace(/\/$/, "")) + "</span></a>").join("") + "</div>" : "");
+      ((hub.links || []).length ? '<h2>Links</h2><div class="tiles">' + hub.links.map(l => (l.embed ? '<a class="tile ext" href="#/' + esc(l.id) + '" title="Opens inside the hub"><span class="badge ext">EMBEDDED</span>' : '<a class="tile ext" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer" title="' + esc(l.url) + '"><span class="badge ext">EXTERNAL ' + EXT + '</span>') + '<div class="ic">' + (ICONS[l.icon] || "") + "</div><h3>" + esc(l.title) + "</h3><p>" + esc(l.tagline) + '</p><span class="url">' + esc(l.url.replace(/^https?:\/\//, "").replace(/\/$/, "")) + "</span></a>").join("") + "</div>" : "");
     const live = hub.areas.filter(a => a.status === "live");
-    try { const d = await load(live[0].id); stamp.textContent = "Data last updated " + fmtTime(d.updated_at); } catch (e) { stamp.textContent = ""; }
+    try { stamp.textContent = "Data last updated " + fmtTime(await lastChecked(live[0].id)); } catch (e) { stamp.textContent = ""; }
+  }
+
+  // last successful check time (data/status.json), falling back to the data file's own stamp
+  async function lastChecked(id) {
+    let st = null; try { st = await load("status"); } catch (e) {}
+    const d = await load(id);
+    return (st && st.dashboards && st.dashboards[id] && st.dashboards[id].checked_at) || d.updated_at;
+  }
+
+  function embed(l) {
+    document.title = l.title + " · Research Hub";
+    crumbs.innerHTML = '<a href="#/">Hub</a> / ' + esc(l.title);
+    stamp.innerHTML = '<a class="btn sm" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">Open in new tab ' + EXT + "</a>";
+    app.innerHTML = '<iframe class="embed" src="' + esc(l.url) + '" title="' + esc(l.title) + '" loading="eager"></iframe>';
   }
 
   function soon(a) {
@@ -95,7 +112,8 @@
   async function dashboard(area) {
     const D = await load(area.id), cfg = D.config, S = D.series;
     document.title = cfg.title + " · Research Hub";
-    stamp.innerHTML = "Last updated " + fmtTime(D.updated_at);
+    const chk = await lastChecked(area.id);
+    stamp.innerHTML = "Last updated " + fmtTime(chk) + (chk !== D.updated_at ? '<br><span style="opacity:.75">FRED data last changed ' + fmtTime(D.updated_at) + "</span>" : "");
     const kpis = cfg.series.map(s => kpiCard(S[s.key])).join("");
     const secs = cfg.sections.map((sec, i) => "<h2>" + esc(sec.title) + '</h2><div class="panels">' + sec.panels.map((p, j) =>
       '<div class="panel' + (p.wide ? " wide" : "") + (p.full ? " full" : "") + '"><h4>' + esc(p.title) + '</h4><div class="cv"><canvas id="c' + i + "_" + j + '"></canvas></div><div class="src">FRED: ' + p.series.map(k => esc(S[k].fred)).join(", ") + "</div></div>").join("") + "</div>").join("");

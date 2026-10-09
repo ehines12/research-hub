@@ -48,3 +48,6 @@ h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut)
 .btn{display:inline-block;margin-top:14px;padding:8px 16px;border-radius:7px;background:var(--acc);color:#fff;font-weight:600}
 .err{color:var(--dn)}
 .badge.ext{background:rgba(78,161,255,.14);color:var(--acc)}.tile.ext .ic{background:#24304a}.tile .url{margin-top:auto;color:var(--acc);font-size:12px;opacity:.8}
+.btn.sm{margin:0;padding:5px 12px;font-size:12px}
+body.embedded main{max-width:none;padding:0}body.embedded .foot{display:none}
+.embed{display:block;width:100%;height:calc(100vh - 55px);border:0;background:#fff}
