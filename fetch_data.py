@@ -440,6 +440,8 @@ def run_dashboard(cfg_path):
     changed = _strip(result) != _strip(prev)
     if result.get("quarterly") and (changed or not (DATA / f"{cfg['id']}-quarterly.csv").exists()):
         _write_quarterly_files(cfg["id"], result["quarterly"])
+    if result.get("growth5y") and (changed or not (DATA / f"{cfg['id']}-growth5y.csv").exists()):
+        _write_growth5y_files(cfg["id"], result["growth5y"])
     if changed:
         tmp = out_path.with_suffix(".tmp")
         tmp.write_text(json.dumps(result, separators=(",", ":")))
@@ -511,6 +513,38 @@ def _derive_all(cfg, result):
         result["summary"] = rows
     if cfg.get("quarterly"):
         result["quarterly"] = _quarterly(cfg["quarterly"], S)
+    if cfg.get("growth5y"):
+        result["growth5y"] = _growth5y(cfg["growth5y"], S)
+
+
+def _growth5y(gc, S):
+    """Last N quarters (+ QTD) of YoY and compounded LQA growth on two bases: end-of-period (last weekly
+    reading on/before quarter-end) and quarter-average."""
+    import calc
+    per = {r["key"]: calc.quarter_averages((S.get(r["key"]) or {}).get("obs") or [], (S.get(r["key"]) or {}).get("freq")) for r in gc["rows"]}
+    anchor = per[gc["anchor"]]
+    full = sorted(k for k, v in anchor.items() if v["complete"])
+    cols = full[-int(gc.get("quarters", 20)):] + [k for k in sorted(anchor) if k > full[-1]]
+    prev_q = lambda y, q: (y, q - 1) if q > 1 else (y - 1, 4)
+    g = lambda a, b: round((a / b - 1) * 100, 2) if b else None
+    rows = []
+    for r in gc["rows"]:
+        s = S.get(r["key"]) or {}
+        qa, cells = per[r["key"]], []
+        for (y, q) in cols:
+            c = qa.get((y, q))
+            if not c:
+                cells.append(None); continue
+            yo, lq = qa.get((y - 1, q)), qa.get(prev_q(y, q))
+            cell = {"n": c["n"], "partial": not c["complete"], "eop_date": c["last"]}
+            for basis, f in (("eop", "eop"), ("avg", "avg")):
+                cell[basis] = {"level": round(c[f], 2),
+                               "yoy": g(c[f], yo[f]) if yo and yo["complete"] else None,
+                               "lqa": round(((c[f] / lq[f]) ** 4 - 1) * 100, 2) if lq and lq["complete"] and lq[f] > 0 and c[f] > 0 else None}
+            cells.append(cell)
+        rows.append({**r, "sa": r.get("sa", "SA"), "freq": s.get("freq"), "status": s.get("status", "failed"), "cells": cells})
+    return {"title": gc.get("title"), "note": gc.get("note"), "rows": rows,
+            "columns": [{"label": f"Q{q} {y}", "y": y, "q": q, "eop_date": anchor[(y, q)]["last"], "partial": not anchor[(y, q)]["complete"], "n": anchor[(y, q)]["n"]} for y, q in cols]}
 
 
 def _quarterly(qc, S):
@@ -583,6 +617,50 @@ def _write_quarterly_files(did, qd):
     ws.append([]); ws.append([qd.get("note") or ""])
     wb.properties.created = wb.properties.modified = dt.datetime(2000, 1, 1)  # deterministic file -> no spurious commits
     wb.save(DATA / f"{did}-quarterly.xlsx")
+
+
+def growth5y_table(gd, basis):
+    hdr = ["Basis", "Series", "FRED id", "SA/NSA"]
+    for c in gd["columns"]:
+        lab = c["label"] + (" QTD" if c["partial"] else "")
+        hdr += [f"{lab} level ($bn)", f"{lab} YoY %", f"{lab} LQA %"] + ([f"{lab} EOP week"] if basis == "eop" else [f"{lab} weeks in qtr"])
+    out = [hdr]
+    for r in gd["rows"]:
+        row = ["End of period" if basis == "eop" else "Quarter average", "  " * r.get("lvl", 0) + r["name"], r["key"], r["sa"]]
+        for c in r["cells"]:
+            if not c:
+                row += [None] * 4; continue
+            b = c[basis]
+            row += [b["level"], b["yoy"], b["lqa"], c["eop_date"] if basis == "eop" else c["n"]]
+        out.append(row)
+    return out
+
+
+def _write_growth5y_files(did, gd):
+    eop, avg = growth5y_table(gd, "eop"), growth5y_table(gd, "avg")
+    with open(DATA / f"{did}-growth5y.csv", "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerows([["" if v is None else v for v in r] for r in eop])
+        w.writerow([])
+        w.writerows([["" if v is None else v for v in r] for r in avg])
+        w.writerows([[], [gd.get("note") or ""]])
+    try:
+        import openpyxl
+        from openpyxl.styles import Font
+    except ImportError:
+        print("  (openpyxl missing: skipped xlsx)"); return
+    wb = openpyxl.Workbook()
+    for i, (name, rows) in enumerate((("EOP", eop), ("Average", avg))):
+        ws = wb.active if i == 0 else wb.create_sheet()
+        ws.title = name
+        for r in rows:
+            ws.append(r)
+        for c in ws[1]:
+            c.font = Font(bold=True)
+        ws.freeze_panes = "E2"
+        ws.append([]); ws.append([gd.get("note") or ""])
+    wb.properties.created = wb.properties.modified = dt.datetime(2000, 1, 1)
+    wb.save(DATA / f"{did}-growth5y.xlsx")
 
 
 def _strip(doc):

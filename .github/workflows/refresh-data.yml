@@ -40,7 +40,7 @@ jobs:
 
       - name: Commit data if changed
         run: |
-          git add data/*.json data/*-quarterly.csv data/*-quarterly.xlsx
+          git add data/*.json data/*-quarterly.csv data/*-quarterly.xlsx data/*-growth5y.csv data/*-growth5y.xlsx
           if git diff --cached --quiet; then
             echo "No data changes."
             exit 0

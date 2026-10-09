@@ -282,6 +282,106 @@
       "freq": "Weekly",
       "kpi": false,
       "src_label": "FRED / Fed H.8"
+    },
+    {
+      "key": "CLDACBW027SBOG",
+      "fred": "CLDACBW027SBOG",
+      "title": "Construction & land development loans, all commercial banks",
+      "units": "$bn",
+      "transform": "level",
+      "freq": "Weekly",
+      "kpi": false,
+      "src_label": "FRED / Fed H.8"
+    },
+    {
+      "key": "SMPACBW027SBOG",
+      "fred": "SMPACBW027SBOG",
+      "title": "Multifamily CRE loans, all commercial banks",
+      "units": "$bn",
+      "transform": "level",
+      "freq": "Weekly",
+      "kpi": false,
+      "src_label": "FRED / Fed H.8"
+    },
+    {
+      "key": "SNFACBW027SBOG",
+      "fred": "SNFACBW027SBOG",
+      "title": "Nonfarm nonresidential CRE loans, all commercial banks",
+      "units": "$bn",
+      "transform": "level",
+      "freq": "Weekly",
+      "kpi": false,
+      "src_label": "FRED / Fed H.8"
+    },
+    {
+      "key": "CRLACBW027SBOG",
+      "fred": "CRLACBW027SBOG",
+      "title": "Closed-end residential loans, all commercial banks",
+      "units": "$bn",
+      "transform": "level",
+      "freq": "Weekly",
+      "kpi": false,
+      "src_label": "FRED / Fed H.8"
+    },
+    {
+      "key": "RHEACBW027SBOG",
+      "fred": "RHEACBW027SBOG",
+      "title": "Revolving home equity loans (HELOCs), all commercial banks",
+      "units": "$bn",
+      "transform": "level",
+      "freq": "Weekly",
+      "kpi": false,
+      "src_label": "FRED / Fed H.8"
+    },
+    {
+      "key": "OCLACBW027SBOG",
+      "fred": "OCLACBW027SBOG",
+      "title": "Other consumer loans, all commercial banks",
+      "units": "$bn",
+      "transform": "level",
+      "freq": "Weekly",
+      "kpi": false,
+      "src_label": "FRED / Fed H.8"
+    },
+    {
+      "key": "CARACBW027SBOG",
+      "fred": "CARACBW027SBOG",
+      "title": "Auto loans, all commercial banks",
+      "units": "$bn",
+      "transform": "level",
+      "freq": "Weekly",
+      "kpi": false,
+      "src_label": "FRED / Fed H.8"
+    },
+    {
+      "key": "AOLACBW027SBOG",
+      "fred": "AOLACBW027SBOG",
+      "title": "All other loans & leases, all commercial banks",
+      "units": "$bn",
+      "transform": "level",
+      "freq": "Weekly",
+      "kpi": false,
+      "src_label": "FRED / Fed H.8"
+    },
+    {
+      "key": "LNFACBW027SBOG",
+      "fred": "LNFACBW027SBOG",
+      "title": "Loans to nondepository financial institutions, all commercial banks",
+      "units": "$bn",
+      "transform": "level",
+      "freq": "Weekly",
+      "kpi": false,
+      "src_label": "FRED / Fed H.8"
+    },
+    {
+      "key": "SBFACBW027SBOG",
+      "fred": "SBFACBW027SBOG",
+      "title": "Farmland CRE loans, all commercial banks",
+      "units": "$bn",
+      "transform": "level",
+      "freq": "Weekly",
+      "kpi": false,
+      "src_label": "FRED / Fed H.8"
     }
   ],
   "derived": [
@@ -1471,6 +1571,11 @@
       ]
     },
     {
+      "title": "Loan & Deposit Growth: Last 5 Years",
+      "growth5y": true,
+      "panels": []
+    },
+    {
       "title": "Quarterly Data",
       "quarterly": true,
       "panels": []
@@ -1607,5 +1712,108 @@
       }
     ],
     "note": "Levels are quarter averages of the weekly (H.8, week-ending Wednesday) or monthly (H.6) data, $bn. YoY = quarter average vs the same quarter a year earlier. LQA = linked-quarter annualized, compounded: ((Q avg / prior-Q avg)^4 \u2212 1). QTD = quarter still in progress (average of the observations so far; hover for count); its YoY/LQA compare that partial average with full prior quarters. Borrowings are NSA, so their LQA includes seasonal swings. H.6 'other liquid deposits' splices savings + OCDs (pre-May 2020) with MDLM. Source: Federal Reserve H.8 and H.6 via FRED."
+  },
+  "growth5y": {
+    "title": "Loan & Deposit Growth: Last 5 Years",
+    "quarters": 20,
+    "anchor": "TOTLL",
+    "rows": [
+      {
+        "key": "TOTLL",
+        "name": "Total loans & leases",
+        "lvl": 0
+      },
+      {
+        "key": "TOTCI",
+        "name": "C&I loans",
+        "lvl": 1
+      },
+      {
+        "key": "CREACBW027SBOG",
+        "name": "CRE loans",
+        "lvl": 1
+      },
+      {
+        "key": "CLDACBW027SBOG",
+        "name": "Construction & land development",
+        "lvl": 2
+      },
+      {
+        "key": "SBFACBW027SBOG",
+        "name": "Farmland",
+        "lvl": 2
+      },
+      {
+        "key": "SMPACBW027SBOG",
+        "name": "Multifamily",
+        "lvl": 2
+      },
+      {
+        "key": "SNFACBW027SBOG",
+        "name": "Nonfarm nonresidential",
+        "lvl": 2
+      },
+      {
+        "key": "RREACBW027SBOG",
+        "name": "Residential real estate loans",
+        "lvl": 1
+      },
+      {
+        "key": "CRLACBW027SBOG",
+        "name": "Closed-end residential",
+        "lvl": 2
+      },
+      {
+        "key": "RHEACBW027SBOG",
+        "name": "Home equity (HELOCs)",
+        "lvl": 2
+      },
+      {
+        "key": "CLSACBW027SBOG",
+        "name": "Consumer loans",
+        "lvl": 1
+      },
+      {
+        "key": "CCLACBW027SBOG",
+        "name": "Credit cards & other revolving",
+        "lvl": 2
+      },
+      {
+        "key": "OCLACBW027SBOG",
+        "name": "Other consumer",
+        "lvl": 2
+      },
+      {
+        "key": "CARACBW027SBOG",
+        "name": "of which: auto",
+        "lvl": 3
+      },
+      {
+        "key": "AOLACBW027SBOG",
+        "name": "Other loans & leases",
+        "lvl": 1
+      },
+      {
+        "key": "LNFACBW027SBOG",
+        "name": "of which: nondepository financial institutions",
+        "lvl": 2
+      },
+      {
+        "key": "DPSACBW027SBOG",
+        "name": "Total deposits",
+        "lvl": 0
+      },
+      {
+        "key": "LTDACBW027SBOG",
+        "name": "Large time deposits",
+        "lvl": 1
+      },
+      {
+        "key": "ODSACBW027SBOG",
+        "name": "Other deposits (ex large time)",
+        "lvl": 1
+      }
+    ],
+    "note": "Fed H.8, all commercial banks, weekly (week-ending Wednesday), seasonally adjusted, via FRED. EOP basis = the last weekly reading dated on or before quarter-end (the week used is shown under each quarter). Average basis = average of all weekly readings dated in the quarter. YoY = vs the same quarter a year earlier on the same basis; LQA = linked-quarter annualized, compounded: ((Q / prior Q)^4 \u2212 1), on the same basis. QTD = quarter in progress (EOP = latest week available; average = weeks so far)."
   }
 }

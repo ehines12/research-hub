@@ -187,7 +187,9 @@ def quarter_averages(obs, freq):
             continue
         k = qkey(t)
         r = out.setdefault(k, {"sum": 0.0, "n": 0, "first": t, "last": t, "months": set()})
-        r["sum"] += v; r["n"] += 1; r["last"] = max(r["last"], t); r["first"] = min(r["first"], t)
+        r["sum"] += v; r["n"] += 1; r["first"] = min(r["first"], t)
+        if t >= r["last"]:
+            r["last"], r["eop"] = t, v  # end-of-period = latest obs dated on/before quarter-end
         r["months"].add(d(t).month)
     for (y, q), r in out.items():
         end = q_end(y, q)

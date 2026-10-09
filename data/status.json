@@ -349,8 +349,8 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-09T21:00:56+00:00",
-   "data_changed_at": "2026-10-09T20:58:28+00:00",
+   "checked_at": "2026-10-09T21:07:29+00:00",
+   "data_changed_at": "2026-10-09T21:07:27+00:00",
    "series": {
     "TOTLL": {
      "fred": "TOTLL",
@@ -574,6 +574,86 @@
      "latest": {
       "date": "2026-09-30",
       "value": 2332.1946
+     }
+    },
+    "CLDACBW027SBOG": {
+     "fred": "CLDACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 456.1267
+     }
+    },
+    "SMPACBW027SBOG": {
+     "fred": "SMPACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 641.7531
+     }
+    },
+    "SNFACBW027SBOG": {
+     "fred": "SNFACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1921.1588
+     }
+    },
+    "CRLACBW027SBOG": {
+     "fred": "CRLACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 2405.543
+     }
+    },
+    "RHEACBW027SBOG": {
+     "fred": "RHEACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 291.0039
+     }
+    },
+    "OCLACBW027SBOG": {
+     "fred": "OCLACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 831.4459
+     }
+    },
+    "CARACBW027SBOG": {
+     "fred": "CARACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 524.4724
+     }
+    },
+    "AOLACBW027SBOG": {
+     "fred": "AOLACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 3390.4708
+     }
+    },
+    "LNFACBW027SBOG": {
+     "fred": "LNFACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 2079.4364
+     }
+    },
+    "SBFACBW027SBOG": {
+     "fred": "SBFACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 123.3377
      }
     },
     "TOTLL_YOY": {
@@ -883,6 +963,6 @@
    }
   }
  },
- "checked_at": "2026-10-09T21:00:56+00:00",
+ "checked_at": "2026-10-09T21:07:29+00:00",
  "ok": true
 }

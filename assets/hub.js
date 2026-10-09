@@ -122,7 +122,7 @@
     const inSec = new Set(cfg.sections.flatMap(sec => sec.kpis || []));
     const kpis = D.kpis ? D.kpis.map(chipTile).join("") : cfg.series.filter(s => s.kpi !== false && !inSec.has(s.key)).map(s => kpiCard(S[s.key], S)).join("");
     const secs = cfg.sections.map((sec, i) => "<h2>" + esc(sec.title) + (sec.link ? ' <a class="hint" href="' + esc(sec.link) + '" target="_blank" rel="noopener noreferrer">source page ' + EXT + "</a>" : "") + "</h2>" +
-      (sec.kpis ? '<div class="kpis sec">' + sec.kpis.map(k => kpiCard(S[k], S)).join("") + "</div>" : "") + (sec.nowcast_table ? nowcastTable(sec.nowcast_table, S) : "") + (sec.quarterly && D.quarterly ? '<div id="qtr">' + quarterlyTable(D.quarterly, area.id) + "</div>" : "") + (sec.panels.length ? '<div class="panels' + (sec.cols === 2 ? " c2" : "") + '">' + sec.panels.map((p, j) =>
+      (sec.kpis ? '<div class="kpis sec">' + sec.kpis.map(k => kpiCard(S[k], S)).join("") + "</div>" : "") + (sec.nowcast_table ? nowcastTable(sec.nowcast_table, S) : "") + (sec.growth5y && D.growth5y ? '<div id="g5">' + growthTable(D.growth5y) + "</div>" : "") + (sec.quarterly && D.quarterly ? '<div id="qtr">' + quarterlyTable(D.quarterly, area.id) + "</div>" : "") + (sec.panels.length ? '<div class="panels' + (sec.cols === 2 ? " c2" : "") + '">' + sec.panels.map((p, j) =>
       '<div class="panel' + (p.wide ? " wide" : "") + (p.full ? " full" : "") + '"><h4>' + esc(p.title) + "</h4>" + (cfg.panel_latest ? panelLatest(p, S) : "") + '<div class="cv"><canvas id="c' + i + "_" + j + '"></canvas></div>' + (p.note ? '<div class="pnote">' + esc(p.note) + "</div>" : "") + '<div class="src">Source: ' + [...new Set(p.series.map(k => S[k].src_label || "FRED " + S[k].fred))].map(esc).join(" · ") + "</div></div>").join("") + "</div>" : "")).join("") +
       (D.summary ? summaryTable(D, cfg) : "");
     app.innerHTML = "<h1>" + esc(cfg.title) + '</h1><p class="sub">' + esc(cfg.subtitle) + '</p><div class="kpis">' + kpis + '</div><div class="toolbar"><span>Lookback</span><div class="seg">' +
@@ -138,7 +138,52 @@
       if (b) { qView = b.dataset.qv; localStorage.setItem("rh-qview", qView); qb.innerHTML = quarterlyTable(D.quarterly, area.id); }
       if (dl) downloadCsv(D.quarterly, area.id);
     });
+    const gb = app.querySelector("#g5");
+    if (gb) gb.addEventListener("click", e => {
+      const b = e.target.closest("button[data-gm],button[data-gb]"), dl = e.target.closest("button[data-gcsv]");
+      if (b) { if (b.dataset.gm) gMetric = b.dataset.gm; if (b.dataset.gb) gBasis = b.dataset.gb; gb.innerHTML = growthTable(D.growth5y); g5scroll(); }
+      if (dl) growthCsv(D.growth5y, area.id);
+    });
+    g5scroll();
     drawAll(cfg, S);
+  }
+
+  // ---- 5-year loan & deposit growth: EOP or quarter-average basis, YoY or compounded LQA ----
+  let gMetric = "yoy", gBasis = "eop";
+  function g5scroll() { const w = app.querySelector("#g5 .gwrap"); if (w) w.scrollLeft = w.scrollWidth; }  // open on the newest quarters
+  const GB = { eop: "End of period (last weekly reading in quarter)", avg: "Quarter average" }, GM = { yoy: "YoY %", lqa: "LQA % (compounded)" };
+  const shortD = s => fmtDate(s, "Daily").replace(/, \d{4}$/, "");
+  function growthTable(G) {
+    const seg = (attr, opts, cur) => '<div class="seg">' + Object.entries(opts).map(([k, l]) => '<button data-' + attr + '="' + k + '" class="' + (k === cur ? "on" : "") + '">' + l + "</button>").join("") + "</div>";
+    let h = '<div class="qbar"><div class="gtg"><span class="glab">Basis</span>' + seg("gb", { eop: "EOP", avg: "Average" }, gBasis) + '<span class="glab">Metric</span>' + seg("gm", { yoy: "YoY %", lqa: "LQA %" }, gMetric) + "</div>" +
+      '<div class="qdl"><button class="btn sm" data-gcsv="1">Download CSV</button>' + (INLINE ? "" : '<a class="btn sm" href="data/h8-growth5y.xlsx" download>Download Excel</a>') + "</div></div>" +
+      '<div class="gcap">Showing <b>' + esc(GM[gMetric]) + "</b> on a <b>" + esc(GB[gBasis]) + "</b> basis · all commercial banks, SA · hover a cell for the $bn level and week · <i>scroll left for earlier quarters</i></div>" +
+      '<div class="gwrap"><table class="sumtbl qtbl gtbl"><thead><tr><th class="sl">Series</th>' + G.columns.map(c => '<th class="r">' + esc(c.label) +
+        (c.partial ? '<span class="qtag">QTD: ' + c.n + " wk" + (c.n > 1 ? "s" : "") + "</span>" : "") + (gBasis === "eop" ? '<span class="wk">wk ' + esc(shortD(c.eop_date)) + "</span>" : '<span class="wk">' + c.n + " wks avg</span>") + "</th>").join("") + "</tr></thead><tbody>";
+    for (const r of G.rows) {
+      const top = !r.lvl;
+      h += '<tr class="' + (top ? "gtop" : "") + '"><td class="sl" title="FRED ' + esc(r.key) + '" style="padding-left:' + (10 + (r.lvl || 0) * 14) + 'px">' + esc(r.name) + (r.sa === "NSA" ? ' <span class="stl">NSA</span>' : "") + (r.status !== "ok" ? ' <span class="stl">' + esc(r.status.toUpperCase()) + "</span>" : "") + "</td>" +
+        r.cells.map(c => { if (!c) return '<td class="r na">–</td>'; const b = c[gBasis], x = b[gMetric];
+          const tip = (gBasis === "eop" ? "EOP week " + shortD(c.eop_date) : c.n + " weeks avg") + " · $" + b.level.toLocaleString("en-US", { maximumFractionDigits: 1 }) + "bn · YoY " + (b.yoy == null ? "n/a" : b.yoy.toFixed(2) + "%") + " · LQA " + (b.lqa == null ? "n/a" : b.lqa.toFixed(2) + "%");
+          const k = x == null ? "na" : x > 0.005 ? "pos" : x < -0.005 ? "neg" : "flat";
+          return '<td class="r ' + k + (c.partial ? " qtd" : "") + '" title="' + esc(tip) + '">' + (x == null ? "–" : (x > 0 ? "+" : x < 0 ? "−" : "") + Math.abs(x).toFixed(1) + "%") + "</td>"; }).join("") + "</tr>";
+    }
+    return h + "</tbody></table></div>" + (G.note ? '<div class="pnote">' + esc(G.note) + "</div>" : "");
+  }
+  function growthCsv(G, id) {
+    const rows = [];
+    for (const basis of ["eop", "avg"]) {
+      const head = ["Basis", "Series", "FRED id", "SA/NSA"];
+      G.columns.forEach(c => { const l = c.label + (c.partial ? " QTD" : ""); head.push(l + " level ($bn)", l + " YoY %", l + " LQA %", basis === "eop" ? l + " EOP week" : l + " weeks in qtr"); });
+      rows.push(head);
+      G.rows.forEach(r => { const row = [basis === "eop" ? "End of period" : "Quarter average", "  ".repeat(r.lvl || 0) + r.name, r.key, r.sa];
+        r.cells.forEach(c => c ? row.push(c[basis].level, c[basis].yoy ?? "", c[basis].lqa ?? "", basis === "eop" ? c.eop_date : c.n) : row.push("", "", "", "")); rows.push(row); });
+      rows.push([]);
+    }
+    if (G.note) rows.push([G.note]);
+    const q = v => { v = String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; };
+    const blob = new Blob([rows.map(r => r.map(q).join(",")).join("\r\n")], { type: "text/csv" });
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = id + "-growth5y.csv"; document.body.appendChild(a); a.click(); a.remove();
   }
 
   // ---- quarterly table (quarter-average levels, YoY, compounded LQA) ----
