@@ -42,36 +42,6 @@
       ]
     },
     {
-      "id": "asset-managers",
-      "title": "Asset Managers",
-      "icon": "pie",
-      "status": "coming_soon",
-      "tagline": "AUM, flows, fees and valuation",
-      "description": "Traditional and alternative asset managers: AUM and organic growth, fund flows by asset class, fee rates, margins, and relative valuation.",
-      "planned": [
-        "AUM and organic growth by manager",
-        "Mutual fund / ETF flows by asset class",
-        "Fee rates and operating margins",
-        "Alts fundraising and FRE",
-        "Valuation: P/E, EV/EBITDA"
-      ]
-    },
-    {
-      "id": "rates-credit",
-      "title": "Rates & Credit",
-      "icon": "curve",
-      "status": "coming_soon",
-      "tagline": "Yield curve, spreads and funding",
-      "description": "Treasury curve shape and history, IG and HY credit spreads, SOFR and funding markets, mortgage rates and breakevens.",
-      "planned": [
-        "Treasury curve snapshots and history",
-        "IG / HY OAS",
-        "SOFR, repo and funding",
-        "Mortgage rates and MBS spreads",
-        "TIPS breakevens and real yields"
-      ]
-    },
-    {
       "id": "markets",
       "title": "Markets",
       "icon": "chart",
