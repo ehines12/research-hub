@@ -5,7 +5,7 @@ Central financials research hub: a home page of tiles, one per research area, wi
 - `index.html` + `assets/hub.js` + `assets/hub.css`: static front end (hash router: `#/`, `#/macro`, `#/banks`, ...). Add `?r=1Y|5Y|10Y|Max` to set the lookback.
 - `config/hub.json`: tile registry (title, icon, status `live` / `coming_soon`, description, planned views).
 - `config/dashboards/<id>.json`: dashboard definition (FRED series + transform + format, sections and chart panels).
-- `fetch_data.py`: pulls every series for every live dashboard from the FRED fredgraph CSV (keyless; ALFRED fallback) into `data/<id>.json`. If a pull fails, the last good copy is kept and flagged STALE. Nothing is ever made up.
+- `fetch_data.py`: pulls every series (series with `"source": "gdpnow"` come from the Atlanta Fed GDPNow tracking workbook, GDPTrackingModelDataAndForecasts.xlsx; needs `openpyxl`) for every live dashboard from the FRED fredgraph CSV (keyless; ALFRED fallback) into `data/<id>.json`. If a pull fails, the last good copy is kept and flagged STALE. Nothing is ever made up.
 - `build_export.py`: writes `research-hub.html`, one self-contained file with all data inlined.
 - `refresh.sh`: fetch + export, logs to `logs/refresh.log` (use this for scheduled refreshes).
 - `serve.sh [port]`: serves locally in the background (default 8077).

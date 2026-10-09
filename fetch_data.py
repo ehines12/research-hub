@@ -68,9 +68,73 @@ def fetch(sid):
     raise RuntimeError("; ".join(errs))
 
 
-def _safe_fetch(sid):
+GDPNOW_PAGE = "https://www.atlantafed.org/cqer/research/gdpnow"
+GDPNOW_XLSX = ("https://www.atlantafed.org/-/media/Project/Atlanta/FRBA/Documents/research-and-data/"
+               "data/gdpnow/GDPTrackingModelDataAndForecasts.xlsx")
+
+
+def _qlabel(d):
+    return f"Q{(d.month - 1) // 3 + 1} {d.year}"
+
+
+def fetch_gdpnow():
+    """Atlanta Fed GDPNow daily nowcast history from its public tracking workbook.
+    Returns (source, url, [(date, value)], {date: {"target": "Q3 2026", "release": "..."}}).
+    Finished quarters: TrackingDeepArchives + TrackingArchives ('GDP Nowcast' column).
+    Current quarter: CurrentQtrEvolution (Date / Major Releases / GDP* column triplets)."""
+    import openpyxl, re, tempfile, os
+    fd, path = tempfile.mkstemp(suffix=".xlsx"); os.close(fd)
     try:
-        return fetch(sid)
+        r = subprocess.run(["curl", "-sSfL", "--max-time", "120", "-o", path, GDPNOW_XLSX], capture_output=True, text=True)
+        if r.returncode != 0:
+            raise RuntimeError(f"curl exit {r.returncode}: {r.stderr.strip()[:200]}")
+        wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
+        pts = {}  # date -> (value, target_quarter_end, release)
+        for name in ("TrackingDeepArchives", "TrackingArchives"):
+            rows = wb[name].iter_rows(values_only=True)
+            hdr = next(rows)
+            gi = [i for i, c in enumerate(hdr) if c and str(c).strip().lower() == "gdp nowcast"]
+            if not gi:
+                raise ValueError(f"{name}: no 'GDP Nowcast' column")
+            for row in rows:
+                d, q, v = row[0], row[1], row[gi[0]]
+                if hasattr(d, "year") and hasattr(q, "year") and isinstance(v, (int, float)):
+                    if d.date() not in pts or q.date() > pts[d.date()][1]:
+                        pts[d.date()] = (float(v), q.date(), None)
+        title = next(wb["TrackingHistory"].iter_rows(min_row=2, max_row=2, values_only=True))[0] or ""
+        m = re.search(r"(\d{4})\s*q\s*(\d)", str(title), re.I)
+        if not m:
+            raise ValueError(f"cannot find current quarter in TrackingHistory title {title!r}")
+        y, qn = int(m.group(1)), int(m.group(2))
+        cur_q = dt.date(y, 3 * qn, 31 if qn in (1, 4) else 30)
+        rows = list(wb["CurrentQtrEvolution"].iter_rows(values_only=True))
+        if not rows or "date" not in str(rows[0][0]).lower():
+            raise ValueError("CurrentQtrEvolution layout changed")
+        n_cur = 0
+        for row in rows[1:]:
+            for b in range(0, len(row) - 2, 3):
+                d, lab, v = row[b], row[b + 1], row[b + 2]
+                if hasattr(d, "year") and isinstance(v, (int, float)):
+                    pts[d.date()] = (float(v), cur_q, str(lab).strip() if lab else None); n_cur += 1
+        if n_cur == 0:
+            raise ValueError("no current-quarter nowcasts found")
+    finally:
+        os.unlink(path)
+    dates = sorted(pts)
+    obs = [(d.isoformat(), pts[d][0]) for d in dates]
+    meta = {d.isoformat(): {"target": _qlabel(pts[d][1]), **({"release": pts[d][2]} if pts[d][2] else {})} for d in dates}
+    return "Atlanta Fed", GDPNOW_XLSX, obs, meta
+
+
+def _fetch_series(s):
+    if s.get("source") == "gdpnow":
+        return fetch_gdpnow()
+    return fetch(s["fred"]) + (None,)
+
+
+def _safe_fetch(spec):
+    try:
+        return _fetch_series(spec)
     except Exception as e:
         return e
 
@@ -116,15 +180,17 @@ def run_dashboard(cfg_path):
     result = {"id": cfg["id"], "config": cfg, "updated_at": now.isoformat(timespec="seconds"), "series": {}}
     with ThreadPoolExecutor(max_workers=6) as ex:
         fetched = dict(zip([s["key"] for s in cfg["series"]],
-                           ex.map(lambda s: _safe_fetch(s["fred"]), cfg["series"])))
+                           ex.map(_safe_fetch, cfg["series"])))
     for s in cfg["series"]:
         rec = {k: v for k, v in s.items()}
         try:
             res = fetched[s["key"]]
             if isinstance(res, Exception):
                 raise res
-            src, url, raw = res
+            src, url, raw, meta = res
             obs = [(t, round(v, 4)) for t, v in transform(raw, s["transform"])]
+            if meta:
+                rec["obs_meta"] = {t: meta[t] for t, _ in obs[-400:] if t in meta}
             rec.update(status="ok", source=src, source_url=url, fetched_at=now.isoformat(timespec="seconds"),
                        raw_latest={"date": raw[-1][0], "value": raw[-1][1]}, obs=obs)
         except Exception as e:
@@ -139,7 +205,14 @@ def run_dashboard(cfg_path):
             rec["latest"] = {"date": o[-1][0], "value": o[-1][1]}
             rec["prior"] = {"date": o[-2][0], "value": o[-2][1]} if len(o) > 1 else None
             ya = year_ago(o)
-            rec["year_ago"] = {"date": ya[0], "value": ya[1]} if ya else None
+            rec["year_ago"] = {"date": ya[0], "value": ya[1]} if ya and not s.get("no_yoy") else None
+            om = rec.get("obs_meta")
+            if om and o[-1][0] in om:
+                # nowcast-style series: prior = previous estimate for the SAME target quarter
+                rec["latest"].update(om[o[-1][0]])
+                tgt = om[o[-1][0]].get("target")
+                same = [x for x in o[:-1] if om.get(x[0], {}).get("target") == tgt]
+                rec["prior"] = {"date": same[-1][0], "value": same[-1][1], **om[same[-1][0]]} if same else None
         result["series"][s["key"]] = rec
         st = rec["status"]
         lt = rec.get("latest") or {}

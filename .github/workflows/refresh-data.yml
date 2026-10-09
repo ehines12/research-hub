@@ -1,6 +1,6 @@
 name: Refresh dashboard data
 
-# Weekday pulls from FRED (keyless fredgraph CSV via curl). Times in UTC; CT shown for CDT (UTC-5)
+# Weekday pulls from FRED (keyless fredgraph CSV via curl) and the Atlanta Fed GDPNow workbook. Times in UTC; CT shown for CDT (UTC-5)
 # and CST (UTC-6, Nov-Mar). GitHub may start scheduled runs a few minutes late.
 on:
   schedule:
@@ -27,7 +27,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Fetch FRED series
+      - name: Install dependencies
+        run: python3 -m pip install --quiet openpyxl   # Atlanta Fed GDPNow tracking workbook
+
+      - name: Fetch FRED + Atlanta Fed series
         id: fetch
         run: |
           set +e

@@ -113,9 +113,9 @@
     document.title = cfg.title + " · Research Hub";
     const chk = await lastChecked(area.id);
     stamp.innerHTML = "Last updated " + fmtTime(chk) + (chk !== D.updated_at ? '<br><span style="opacity:.75">FRED data last changed ' + fmtTime(D.updated_at) + "</span>" : "");
-    const kpis = cfg.series.map(s => kpiCard(S[s.key])).join("");
+    const kpis = cfg.series.filter(s => s.kpi !== false).map(s => kpiCard(S[s.key])).join("");
     const secs = cfg.sections.map((sec, i) => "<h2>" + esc(sec.title) + '</h2><div class="panels">' + sec.panels.map((p, j) =>
-      '<div class="panel' + (p.wide ? " wide" : "") + (p.full ? " full" : "") + '"><h4>' + esc(p.title) + '</h4><div class="cv"><canvas id="c' + i + "_" + j + '"></canvas></div><div class="src">FRED: ' + p.series.map(k => esc(S[k].fred)).join(", ") + "</div></div>").join("") + "</div>").join("");
+      '<div class="panel' + (p.wide ? " wide" : "") + (p.full ? " full" : "") + '"><h4>' + esc(p.title) + '</h4><div class="cv"><canvas id="c' + i + "_" + j + '"></canvas></div><div class="src">Source: ' + [...new Set(p.series.map(k => S[k].src_label || "FRED " + S[k].fred))].map(esc).join(" · ") + "</div></div>").join("") + "</div>").join("");
     app.innerHTML = "<h1>" + esc(cfg.title) + '</h1><p class="sub">' + esc(cfg.subtitle) + '</p><div class="kpis">' + kpis + '</div><div class="toolbar"><span>Lookback</span><div class="seg">' +
       ["1Y", "5Y", "10Y", "Max"].map(r => '<button data-r="' + r + '" class="' + (r === range ? "on" : "") + '">' + r + "</button>").join("") + "</div></div>" + secs;
     app.querySelectorAll(".seg button").forEach(b => b.onclick = () => {
@@ -132,8 +132,15 @@
     let c = "";
     if (P) { const d = L.value - P.value; c += '<span class="' + cls(d, s) + '">' + fmtChg(d, s.chg) + " vs prior</span>"; }
     if (Y) { const d = L.value - Y.value; c += '<span class="' + cls(d, s) + '">' + fmtChg(d, s.chg) + " y/y</span>"; }
-    return '<div class="kpi ' + (s.status !== "ok" ? s.status : "") + '" title="FRED ' + esc(s.fred) + (s.error ? " · " + esc(s.error) : "") + '"><div class="t">' + esc(s.title) + '</div><div class="v">' + fmtVal(L.value, s.fmt) +
-      '</div><div class="d">' + fmtDate(L.date, s.freq) + (P ? " · prior " + fmtVal(P.value, s.fmt) : "") + (s.status === "stale" ? " · STALE" : "") + '</div><div class="c">' + c + "</div></div>";
+    if (L.target) {  // nowcast: show target quarter, as-of date, change vs prior estimate for that quarter
+      c = P ? '<span class="' + cls(L.value - P.value, s) + '">' + fmtChg(L.value - P.value, s.chg) + " vs " + fmtDate(P.date, "Daily").replace(/, \d{4}$/, "") + " est.</span>" : '<span class="flat">first estimate for ' + esc(L.target) + "</span>";
+    }
+    const tag = s.link ? "a" : "div", href = s.link ? ' href="' + esc(s.link) + '" target="_blank" rel="noopener noreferrer"' : "";
+    const tip = (s.src_label || "FRED " + s.fred) + (L.release ? " · latest update after: " + L.release : "") + (s.error ? " · " + esc(s.error) : "");
+    const dline = L.target ? esc(L.target) + " · as of " + fmtDate(L.date, "Daily") + (P ? " · prior " + fmtVal(P.value, s.fmt) : "")
+                           : fmtDate(L.date, s.freq) + (P ? " · prior " + fmtVal(P.value, s.fmt) : "");
+    return "<" + tag + href + ' class="kpi ' + (s.link ? "linked " : "") + (s.status !== "ok" ? s.status : "") + '" title="' + esc(tip) + '"><div class="t">' + esc(s.title) + (s.link ? " " + EXT : "") + '</div><div class="v">' + fmtVal(L.value, s.fmt) +
+      '</div><div class="d">' + dline + (s.status === "stale" ? " · STALE" : "") + '</div><div class="c">' + c + "</div></" + tag + ">";
   }
 
   function drawAll(cfg, S) {
@@ -150,8 +157,8 @@
         const s = S[k]; let pts = (s.obs || []).map(o => ({ x: Date.parse(o[0] + "T00:00:00Z"), y: o[1] }));
         // quarterly series: pad the window one quarter so 1Y shows >= 4 quarters
         if (cut) { const c = s.freq === "Quarterly" ? cut - 100 * 864e5 : cut; pts = pts.filter(o => o.x >= c); }
-        const col = COLORS[n % COLORS.length];
-        const ds = { label: s.title, data: pts, borderColor: col, backgroundColor: p.type === "bar" ? pts.map(o => o.y < 0 ? "#f85149" : col) : (p.fill ? col + "22" : col), borderWidth: p.type === "bar" ? 0 : 1.6, pointRadius: 0, tension: 0, fill: p.fill ? "origin" : false };
+        const col = COLORS[n % COLORS.length], t = (p.types && p.types[n]) || (p.type === "bar" ? "bar" : "line");
+        const ds = { type: t, label: (p.labels && p.labels[n]) || s.title, data: pts, borderColor: t === "bar" ? col : (p.types ? "#f0883e" : col), backgroundColor: t === "bar" ? pts.map(o => o.y < 0 ? "#f85149" : col) : (p.fill ? col + "22" : col), borderWidth: t === "bar" ? 0 : (p.types ? 2 : 1.6), pointRadius: t === "line" && p.types ? 1.5 : 0, tension: 0, fill: p.fill ? "origin" : false, order: t === "line" ? 0 : 1 };
         return ds;
       });
       const plugins = [];
@@ -163,7 +170,7 @@
           parsing: false, normalized: true, animation: false, maintainAspectRatio: false, interaction: { mode: "index", intersect: false },
           scales: { x: { type: "time", time: { minUnit: "month", unit: (S0.freq === "Quarterly" && range === "1Y") ? "quarter" : undefined }, grid: { color: "#1f2a37" }, ticks: { color: "#8b9bb0", maxTicksLimit: 7 } }, y: { grid: { color: "#1f2a37" }, ticks: { color: "#8b9bb0" } } },
           plugins: {
-            decimation: { enabled: p.type !== "bar", algorithm: "lttb", samples: 600 },
+            decimation: { enabled: p.type !== "bar" && !p.types, algorithm: "lttb", samples: 600 },
             legend: { display: p.series.length > 1, labels: { color: "#e6edf3", boxWidth: 12 } },
             tooltip: { callbacks: { title: it => it.length ? fmtDate(new Date(it[0].parsed.x).toISOString().slice(0, 10), S0.freq) : "", label: it => it.dataset.label + ": " + fmtVal(it.parsed.y, S[p.series[it.datasetIndex]].fmt) } }
           }

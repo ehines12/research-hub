@@ -3,36 +3,275 @@
   "title": "Macro Dashboard",
   "subtitle": "US growth, labor, inflation and rates. Source: FRED, Federal Reserve Bank of St. Louis.",
   "series": [
-    {"key": "gdp",      "fred": "A191RL1Q225SBEA", "title": "Real GDP growth",        "units": "% q/q SAAR", "transform": "level",    "fmt": "pct1", "chg": "pp", "freq": "Quarterly"},
-    {"key": "unrate",   "fred": "UNRATE",          "title": "Unemployment rate",      "units": "%",          "transform": "level",    "fmt": "pct1", "chg": "pp", "freq": "Monthly", "invert": true},
-    {"key": "payrolls", "fred": "PAYEMS",          "title": "Nonfarm payrolls, m/m",  "units": "thous.",     "transform": "diff",     "fmt": "k0",   "chg": "k",  "freq": "Monthly"},
-    {"key": "claims",   "fred": "ICSA",            "title": "Initial jobless claims", "units": "thous.",     "transform": "div1000",  "fmt": "k0",   "chg": "k",  "freq": "Weekly", "invert": true},
-    {"key": "cpi",      "fred": "CPIAUCSL",        "title": "CPI, y/y",               "units": "%",          "transform": "yoy",      "fmt": "pct1", "chg": "pp", "freq": "Monthly", "invert": true},
-    {"key": "corepce",  "fred": "PCEPILFE",        "title": "Core PCE, y/y",          "units": "%",          "transform": "yoy",      "fmt": "pct1", "chg": "pp", "freq": "Monthly", "invert": true},
-    {"key": "dff",      "fred": "DFF",             "title": "Effective fed funds",    "units": "%",          "transform": "level",    "fmt": "pct2", "chg": "bp", "freq": "Daily"},
-    {"key": "dgs2",     "fred": "DGS2",            "title": "2Y Treasury",            "units": "%",          "transform": "level",    "fmt": "pct2", "chg": "bp", "freq": "Daily"},
-    {"key": "dgs10",    "fred": "DGS10",           "title": "10Y Treasury",           "units": "%",          "transform": "level",    "fmt": "pct2", "chg": "bp", "freq": "Daily"},
-    {"key": "spread",   "fred": "T10Y2Y",          "title": "10Y - 2Y spread",        "units": "pp",         "transform": "level",    "fmt": "pp2",  "chg": "bp", "freq": "Daily"},
-    {"key": "indpro",   "fred": "INDPRO",          "title": "Industrial production, y/y", "units": "%",      "transform": "yoy",      "fmt": "pct1", "chg": "pp", "freq": "Monthly"},
-    {"key": "retail",   "fred": "RSAFS",           "title": "Retail sales, y/y",      "units": "%",          "transform": "yoy",      "fmt": "pct1", "chg": "pp", "freq": "Monthly"}
+    {
+      "key": "gdp",
+      "fred": "A191RL1Q225SBEA",
+      "title": "Real GDP growth",
+      "units": "% q/q SAAR",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly"
+    },
+    {
+      "key": "gdpnow",
+      "fred": "GDPNOW",
+      "source": "gdpnow",
+      "title": "Atlanta Fed GDPNow",
+      "units": "% q/q SAAR",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Daily",
+      "no_yoy": true,
+      "link": "https://www.atlantafed.org/cqer/research/gdpnow",
+      "src_label": "Atlanta Fed GDPNow (daily nowcast)"
+    },
+    {
+      "key": "gdpnow_q",
+      "fred": "GDPNOW",
+      "title": "GDPNow, latest nowcast by quarter",
+      "units": "% q/q SAAR",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false
+    },
+    {
+      "key": "unrate",
+      "fred": "UNRATE",
+      "title": "Unemployment rate",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Monthly",
+      "invert": true
+    },
+    {
+      "key": "payrolls",
+      "fred": "PAYEMS",
+      "title": "Nonfarm payrolls, m/m",
+      "units": "thous.",
+      "transform": "diff",
+      "fmt": "k0",
+      "chg": "k",
+      "freq": "Monthly"
+    },
+    {
+      "key": "claims",
+      "fred": "ICSA",
+      "title": "Initial jobless claims",
+      "units": "thous.",
+      "transform": "div1000",
+      "fmt": "k0",
+      "chg": "k",
+      "freq": "Weekly",
+      "invert": true
+    },
+    {
+      "key": "cpi",
+      "fred": "CPIAUCSL",
+      "title": "CPI, y/y",
+      "units": "%",
+      "transform": "yoy",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Monthly",
+      "invert": true
+    },
+    {
+      "key": "corepce",
+      "fred": "PCEPILFE",
+      "title": "Core PCE, y/y",
+      "units": "%",
+      "transform": "yoy",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Monthly",
+      "invert": true
+    },
+    {
+      "key": "dff",
+      "fred": "DFF",
+      "title": "Effective fed funds",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Daily"
+    },
+    {
+      "key": "dgs2",
+      "fred": "DGS2",
+      "title": "2Y Treasury",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Daily"
+    },
+    {
+      "key": "dgs10",
+      "fred": "DGS10",
+      "title": "10Y Treasury",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Daily"
+    },
+    {
+      "key": "spread",
+      "fred": "T10Y2Y",
+      "title": "10Y - 2Y spread",
+      "units": "pp",
+      "transform": "level",
+      "fmt": "pp2",
+      "chg": "bp",
+      "freq": "Daily"
+    },
+    {
+      "key": "indpro",
+      "fred": "INDPRO",
+      "title": "Industrial production, y/y",
+      "units": "%",
+      "transform": "yoy",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Monthly"
+    },
+    {
+      "key": "retail",
+      "fred": "RSAFS",
+      "title": "Retail sales, y/y",
+      "units": "%",
+      "transform": "yoy",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Monthly"
+    }
   ],
   "sections": [
-    {"title": "Growth", "panels": [
-      {"title": "Real GDP growth (% q/q SAAR)", "type": "bar", "series": ["gdp"]},
-      {"title": "Industrial production (% y/y)", "type": "line", "series": ["indpro"], "zero": true},
-      {"title": "Retail sales (% y/y)", "type": "line", "series": ["retail"], "zero": true}
-    ]},
-    {"title": "Labor", "panels": [
-      {"title": "Nonfarm payrolls, monthly change (thous.)", "type": "bar", "series": ["payrolls"]},
-      {"title": "Unemployment rate (%)", "type": "line", "series": ["unrate"]},
-      {"title": "Initial jobless claims (thous.)", "type": "line", "series": ["claims"]}
-    ]},
-    {"title": "Inflation", "panels": [
-      {"title": "CPI vs. core PCE (% y/y)", "type": "line", "series": ["cpi", "corepce"], "ref": 2, "refLabel": "2% target", "full": true}
-    ]},
-    {"title": "Policy & Rates", "panels": [
-      {"title": "Fed funds, 2Y and 10Y Treasury (%)", "type": "line", "series": ["dff", "dgs2", "dgs10"], "wide": true},
-      {"title": "10Y - 2Y Treasury spread (pp)", "type": "line", "series": ["spread"], "zero": true, "fill": true}
-    ]}
+    {
+      "title": "Growth",
+      "panels": [
+        {
+          "title": "Real GDP growth (% q/q SAAR)",
+          "type": "bar",
+          "series": [
+            "gdp"
+          ]
+        },
+        {
+          "title": "GDPNow nowcast vs. actual real GDP growth, by quarter (% q/q SAAR)",
+          "type": "bar",
+          "types": [
+            "bar",
+            "line"
+          ],
+          "series": [
+            "gdp",
+            "gdpnow_q"
+          ],
+          "labels": [
+            "Actual (BEA)",
+            "GDPNow (latest nowcast)"
+          ],
+          "wide": true
+        },
+        {
+          "title": "Atlanta Fed GDPNow, daily nowcast history (% q/q SAAR)",
+          "type": "line",
+          "series": [
+            "gdpnow"
+          ],
+          "zero": true
+        },
+        {
+          "title": "Industrial production (% y/y)",
+          "type": "line",
+          "series": [
+            "indpro"
+          ],
+          "zero": true
+        },
+        {
+          "title": "Retail sales (% y/y)",
+          "type": "line",
+          "series": [
+            "retail"
+          ],
+          "zero": true
+        }
+      ]
+    },
+    {
+      "title": "Labor",
+      "panels": [
+        {
+          "title": "Nonfarm payrolls, monthly change (thous.)",
+          "type": "bar",
+          "series": [
+            "payrolls"
+          ]
+        },
+        {
+          "title": "Unemployment rate (%)",
+          "type": "line",
+          "series": [
+            "unrate"
+          ]
+        },
+        {
+          "title": "Initial jobless claims (thous.)",
+          "type": "line",
+          "series": [
+            "claims"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Inflation",
+      "panels": [
+        {
+          "title": "CPI vs. core PCE (% y/y)",
+          "type": "line",
+          "series": [
+            "cpi",
+            "corepce"
+          ],
+          "ref": 2,
+          "refLabel": "2% target",
+          "full": true
+        }
+      ]
+    },
+    {
+      "title": "Policy & Rates",
+      "panels": [
+        {
+          "title": "Fed funds, 2Y and 10Y Treasury (%)",
+          "type": "line",
+          "series": [
+            "dff",
+            "dgs2",
+            "dgs10"
+          ],
+          "wide": true
+        },
+        {
+          "title": "10Y - 2Y Treasury spread (pp)",
+          "type": "line",
+          "series": [
+            "spread"
+          ],
+          "zero": true,
+          "fill": true
+        }
+      ]
+    }
   ]
 }

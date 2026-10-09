@@ -20,7 +20,7 @@ h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut)
 .badge{position:absolute;top:18px;right:18px;font-size:11px;padding:3px 9px;border-radius:20px;font-weight:600;letter-spacing:.03em}
 .badge.live{background:rgba(63,185,80,.15);color:var(--up)}.badge.soon{background:rgba(139,155,176,.15);color:var(--mut)}
 /* kpis */
-.kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:12px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:12px}
 .kpi{padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
 .kpi .t{color:var(--mut);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .kpi .v{font-size:24px;font-weight:600;margin:4px 0 2px;font-variant-numeric:tabular-nums}
@@ -52,3 +52,4 @@ h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut)
 body.embedded main{max-width:none;padding:0}body.embedded .foot{display:none}
 .embed{display:block;width:100%;height:calc(100vh - 55px);border:0;background:#fff}
 .srclink{color:var(--mut);font-size:12px;margin-right:14px}.srclink:hover{color:var(--acc)}
+a.kpi.linked{display:block;color:inherit}a.kpi.linked:hover{border-color:var(--acc)}a.kpi.linked .t svg{opacity:.7}
