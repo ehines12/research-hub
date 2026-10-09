@@ -164,3 +164,34 @@ def inputs_of(spec):
         elif v:
             out.append(v)
     return out
+
+
+# ---- quarterly averages (bank-analyst convention: quarter-average balances) ----
+def qkey(date):
+    dd = d(date)
+    return dd.year, (dd.month - 1) // 3 + 1
+
+
+def q_end(y, q):
+    import datetime as _dt
+    return (_dt.date(y + (q == 4), 1 if q == 4 else 3 * q + 1, 1) - _dt.timedelta(days=1))
+
+
+def quarter_averages(obs, freq):
+    """{(y, q): {"avg", "n", "complete", "first", "last"}} from weekly/monthly obs (dated by FRED obs date:
+    week-ending Wednesday for H.8, first of month for H.6). Complete = the quarter's last weekly obs (dated
+    within 6 days of quarter end) or its 3rd month is present."""
+    out = {}
+    for t, v in obs:
+        if v is None:
+            continue
+        k = qkey(t)
+        r = out.setdefault(k, {"sum": 0.0, "n": 0, "first": t, "last": t, "months": set()})
+        r["sum"] += v; r["n"] += 1; r["last"] = max(r["last"], t); r["first"] = min(r["first"], t)
+        r["months"].add(d(t).month)
+    for (y, q), r in out.items():
+        end = q_end(y, q)
+        r["complete"] = (len(r["months"]) == 3) if freq == "Monthly" else ((end - d(r["last"])).days <= 6)
+        r["avg"] = r["sum"] / r["n"]
+        del r["sum"], r["months"]
+    return out

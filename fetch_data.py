@@ -438,6 +438,8 @@ def run_dashboard(cfg_path):
     # Only rewrite the (large) data file when the numbers or config actually changed, so the
     # scheduled job commits a big diff only on new FRED data. updated_at = last data change.
     changed = _strip(result) != _strip(prev)
+    if result.get("quarterly") and (changed or not (DATA / f"{cfg['id']}-quarterly.csv").exists()):
+        _write_quarterly_files(cfg["id"], result["quarterly"])
     if changed:
         tmp = out_path.with_suffix(".tmp")
         tmp.write_text(json.dumps(result, separators=(",", ":")))
@@ -507,6 +509,80 @@ def _derive_all(cfg, result):
                 r["missing"] = True
             rows.append(r)
         result["summary"] = rows
+    if cfg.get("quarterly"):
+        result["quarterly"] = _quarterly(cfg["quarterly"], S)
+
+
+def _quarterly(qc, S):
+    """Quarter-average levels with YoY (vs same quarter a year earlier) and compounded LQA
+    ((avg_q / avg_q-1)^4 - 1) growth, for the last N quarters. Partial (QTD) quarters are flagged per cell."""
+    import calc
+    nq = int(qc.get("quarters", 8))
+    per = {}
+    for g in qc["groups"]:
+        for r in g["rows"]:
+            s = S.get(r["key"]) or {}
+            per[r["key"]] = calc.quarter_averages(s.get("obs") or [], s.get("freq"))
+    # columns: the latest nq quarters that are complete for the anchor series, plus any later quarter with data
+    anchor = per[qc["anchor"]]
+    full = sorted(k for k, v in anchor.items() if v["complete"])
+    allq = sorted({k for v in per.values() for k in v})
+    cols = full[-nq:] + [k for k in allq if k > full[-1]]
+    prev_q = lambda y, q: (y, q - 1) if q > 1 else (y - 1, 4)
+    groups = []
+    for g in qc["groups"]:
+        rows = []
+        for r in g["rows"]:
+            s = S.get(r["key"]) or {}
+            qa = per[r["key"]]
+            cells = []
+            for (y, q) in cols:
+                c = qa.get((y, q))
+                if not c:
+                    cells.append(None); continue
+                yo, lq = qa.get((y - 1, q)), qa.get(prev_q(y, q))
+                cells.append({"level": round(c["avg"], 2), "n": c["n"], "partial": not c["complete"], "last": c["last"],
+                              "yoy": round((c["avg"] / yo["avg"] - 1) * 100, 2) if yo and yo["complete"] and yo["avg"] else None,
+                              "lqa": round(((c["avg"] / lq["avg"]) ** 4 - 1) * 100, 2) if lq and lq["complete"] and lq["avg"] > 0 and c["avg"] > 0 else None})
+            rows.append({**r, "freq": s.get("freq"), "status": s.get("status", "failed"), "cells": cells})
+        groups.append({"title": g["title"], "rows": rows})
+    return {"columns": [{"label": f"Q{q} {y}", "y": y, "q": q} for y, q in cols], "groups": groups,
+            "note": qc.get("note"), "title": qc.get("title")}
+
+
+def quarterly_table(qd):
+    """Flat rows (header + data) with every column: level, YoY and LQA per quarter."""
+    hdr = ["Group", "Series", "FRED id", "SA/NSA", "Frequency"]
+    for c in qd["columns"]:
+        hdr += [f"{c['label']} avg level ($bn)", f"{c['label']} YoY %", f"{c['label']} LQA %", f"{c['label']} obs in qtr", f"{c['label']} partial (QTD)"]
+    out = [hdr]
+    for g in qd["groups"]:
+        for r in g["rows"]:
+            row = [g["title"], r["name"], r["key"], r.get("sa", "SA"), r.get("freq")]
+            for c in r["cells"]:
+                row += [None] * 5 if not c else [c["level"], c["yoy"], c["lqa"], c["n"], "QTD" if c["partial"] else ""]
+            out.append(row)
+    return out
+
+
+def _write_quarterly_files(did, qd):
+    rows = quarterly_table(qd)
+    with open(DATA / f"{did}-quarterly.csv", "w", newline="") as f:
+        csv.writer(f).writerows([["" if v is None else v for v in r] for r in rows])
+    try:
+        import openpyxl
+        from openpyxl.styles import Font
+    except ImportError:
+        print("  (openpyxl missing: skipped xlsx)"); return
+    wb = openpyxl.Workbook(); ws = wb.active; ws.title = "Quarterly"
+    for r in rows:
+        ws.append(r)
+    for c in ws[1]:
+        c.font = Font(bold=True)
+    ws.freeze_panes = "F2"
+    ws.append([]); ws.append([qd.get("note") or ""])
+    wb.properties.created = wb.properties.modified = dt.datetime(2000, 1, 1)  # deterministic file -> no spurious commits
+    wb.save(DATA / f"{did}-quarterly.xlsx")
 
 
 def _strip(doc):

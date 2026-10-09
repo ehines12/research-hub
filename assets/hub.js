@@ -122,8 +122,8 @@
     const inSec = new Set(cfg.sections.flatMap(sec => sec.kpis || []));
     const kpis = D.kpis ? D.kpis.map(chipTile).join("") : cfg.series.filter(s => s.kpi !== false && !inSec.has(s.key)).map(s => kpiCard(S[s.key], S)).join("");
     const secs = cfg.sections.map((sec, i) => "<h2>" + esc(sec.title) + (sec.link ? ' <a class="hint" href="' + esc(sec.link) + '" target="_blank" rel="noopener noreferrer">source page ' + EXT + "</a>" : "") + "</h2>" +
-      (sec.kpis ? '<div class="kpis sec">' + sec.kpis.map(k => kpiCard(S[k], S)).join("") + "</div>" : "") + (sec.nowcast_table ? nowcastTable(sec.nowcast_table, S) : "") + '<div class="panels' + (sec.cols === 2 ? " c2" : "") + '">' + sec.panels.map((p, j) =>
-      '<div class="panel' + (p.wide ? " wide" : "") + (p.full ? " full" : "") + '"><h4>' + esc(p.title) + "</h4>" + (cfg.panel_latest ? panelLatest(p, S) : "") + '<div class="cv"><canvas id="c' + i + "_" + j + '"></canvas></div>' + (p.note ? '<div class="pnote">' + esc(p.note) + "</div>" : "") + '<div class="src">Source: ' + [...new Set(p.series.map(k => S[k].src_label || "FRED " + S[k].fred))].map(esc).join(" · ") + "</div></div>").join("") + "</div>").join("") +
+      (sec.kpis ? '<div class="kpis sec">' + sec.kpis.map(k => kpiCard(S[k], S)).join("") + "</div>" : "") + (sec.nowcast_table ? nowcastTable(sec.nowcast_table, S) : "") + (sec.quarterly && D.quarterly ? '<div id="qtr">' + quarterlyTable(D.quarterly, area.id) + "</div>" : "") + (sec.panels.length ? '<div class="panels' + (sec.cols === 2 ? " c2" : "") + '">' + sec.panels.map((p, j) =>
+      '<div class="panel' + (p.wide ? " wide" : "") + (p.full ? " full" : "") + '"><h4>' + esc(p.title) + "</h4>" + (cfg.panel_latest ? panelLatest(p, S) : "") + '<div class="cv"><canvas id="c' + i + "_" + j + '"></canvas></div>' + (p.note ? '<div class="pnote">' + esc(p.note) + "</div>" : "") + '<div class="src">Source: ' + [...new Set(p.series.map(k => S[k].src_label || "FRED " + S[k].fred))].map(esc).join(" · ") + "</div></div>").join("") + "</div>" : "")).join("") +
       (D.summary ? summaryTable(D, cfg) : "");
     app.innerHTML = "<h1>" + esc(cfg.title) + '</h1><p class="sub">' + esc(cfg.subtitle) + '</p><div class="kpis">' + kpis + '</div><div class="toolbar"><span>Lookback</span><div class="seg">' +
       ["1Y", "5Y", "10Y", "Max"].map(r => '<button data-r="' + r + '" class="' + (r === range ? "on" : "") + '">' + r + "</button>").join("") + "</div></div>" + secs;
@@ -132,7 +132,56 @@
       app.querySelectorAll(".seg button").forEach(x => x.classList.toggle("on", x === b));
       drawAll(cfg, S);
     });
+    const qb = app.querySelector("#qtr");
+    if (qb) qb.addEventListener("click", e => {
+      const b = e.target.closest("button[data-qv]"), dl = e.target.closest("button[data-csv]");
+      if (b) { qView = b.dataset.qv; localStorage.setItem("rh-qview", qView); qb.innerHTML = quarterlyTable(D.quarterly, area.id); }
+      if (dl) downloadCsv(D.quarterly, area.id);
+    });
     drawAll(cfg, S);
+  }
+
+  // ---- quarterly table (quarter-average levels, YoY, compounded LQA) ----
+  let qView = localStorage.getItem("rh-qview") || "yoy";
+  function qCell(c, v) {
+    if (!c) return '<td class="r na">–</td>';
+    const tip = c.n + (c.partial ? " obs so far (QTD), through " : " obs, through ") + fmtDate(c.last, "Daily") + " · avg $" + c.level.toLocaleString("en-US", { maximumFractionDigits: 1 }) + "bn" +
+      " · YoY " + (c.yoy == null ? "n/a" : c.yoy.toFixed(2) + "%") + " · LQA " + (c.lqa == null ? "n/a" : c.lqa.toFixed(2) + "%");
+    let txt, k = "";
+    if (v === "level") txt = c.level.toLocaleString("en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+    else { const x = c[v]; if (x == null) txt = "–"; else { txt = (x > 0 ? "+" : x < 0 ? "−" : "") + Math.abs(x).toFixed(2) + "%"; k = x > 0.005 ? "pos" : x < -0.005 ? "neg" : "flat"; } }
+    return '<td class="r ' + k + (c.partial ? " qtd" : "") + '" title="' + esc(tip) + '">' + txt + (c.partial ? "<sup>QTD</sup>" : "") + "</td>";
+  }
+  function quarterlyTable(Q, id) {
+    const V = { level: "Level ($bn, qtr avg)", yoy: "YoY %", lqa: "LQA % (compounded)" };
+    const cols = Q.columns, nc = cols.length;
+    // column header: mark QTD and summarize how much of the quarter is in, per frequency
+    const hdr = cols.map((c, i) => {
+      const part = {}; Q.groups.forEach(g => g.rows.forEach(r => { const x = r.cells[i]; if (x && x.partial) part[r.freq] = x.n; }));
+      const tag = Object.entries(part).map(([f, n]) => (f === "Monthly" ? "H.6 QTD: " + n + " of 3 mo" : "QTD: " + n + " wk" + (n > 1 ? "s" : ""))).join("; ");
+      return '<th class="r">' + esc(c.label) + (tag ? '<span class="qtag">' + esc(tag) + "</span>" : "") + "</th>"; }).join("");
+    let h = '<div class="qbar"><div class="seg">' + Object.entries(V).map(([k, l]) => '<button data-qv="' + k + '" class="' + (k === qView ? "on" : "") + '">' + l + "</button>").join("") + "</div>" +
+      '<div class="qdl"><button class="btn sm" data-csv="1">Download CSV</button>' + (INLINE ? "" : '<a class="btn sm" href="data/' + esc(id) + '-quarterly.xlsx" download>Download Excel</a>') + "</div></div>" +
+      '<div class="qwrap"><table class="sumtbl qtbl"><thead><tr><th class="sl">Series</th>' + hdr + "</tr></thead><tbody>";
+    for (const g of Q.groups) {
+      h += '<tr class="grp"><td class="sl" colspan="1">' + esc(g.title) + '</td><td colspan="' + nc + '"></td></tr>';
+      for (const r of g.rows) {
+        const ind = (r.name.match(/^ */) || [""])[0].length / 2;
+        h += '<tr><td class="sl" style="padding-left:' + (10 + ind * 14) + 'px">' + esc(r.name.trim()) + ' <span class="sid">' + esc(r.key) + "</span>" + (r.sa === "NSA" ? ' <span class="stl">NSA</span>' : "") + (r.status !== "ok" ? ' <span class="stl">' + esc(r.status.toUpperCase()) + "</span>" : "") + "</td>" + r.cells.map(c => qCell(c, qView)).join("") + "</tr>";
+      }
+    }
+    return h + "</tbody></table></div>" + (Q.note ? '<div class="pnote">' + esc(Q.note) + "</div>" : "");
+  }
+  function downloadCsv(Q, id) {
+    const head = ["Group", "Series", "FRED id", "SA/NSA", "Frequency"];
+    Q.columns.forEach(c => head.push(c.label + " avg level ($bn)", c.label + " YoY %", c.label + " LQA %", c.label + " obs in qtr", c.label + " partial (QTD)"));
+    const rows = [head];
+    Q.groups.forEach(g => g.rows.forEach(r => { const row = [g.title, r.name.trim(), r.key, r.sa || "SA", r.freq || ""];
+      r.cells.forEach(c => c ? row.push(c.level, c.yoy ?? "", c.lqa ?? "", c.n, c.partial ? "QTD" : "") : row.push("", "", "", "", "")); rows.push(row); }));
+    if (Q.note) rows.push([], [Q.note]);
+    const q = v => { v = String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; };
+    const blob = new Blob([rows.map(r => r.map(q).join(",")).join("\r\n")], { type: "text/csv" });
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = id + "-quarterly.csv"; document.body.appendChild(a); a.click(); a.remove();
   }
 
   function kpiCard(s, S) {

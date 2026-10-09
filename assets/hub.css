@@ -68,3 +68,10 @@ a.kpi.linked{display:block;color:inherit}a.kpi.linked:hover{border-color:var(--a
 .kpis.sec{margin-bottom:14px;grid-template-columns:repeat(4,minmax(0,1fr))}@media(max-width:900px){.kpis.sec{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .ncw{margin-bottom:6px}.nctbl td,.nctbl th{white-space:nowrap}.nctbl .mm{display:block;font-size:10.5px;font-weight:400;color:var(--mut)}
 h2 a.hint{margin-left:8px;color:var(--acc)}
+.qbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}.qdl{display:flex;gap:8px}
+.qwrap{max-height:min(85vh,1000px);overflow:auto;border:1px solid var(--line);border-radius:10px}
+.qtbl{border-collapse:separate;border-spacing:0}.qtbl thead th{position:sticky;top:0;z-index:2;vertical-align:bottom}
+.qtbl .sl{position:sticky;left:0;z-index:1;background:var(--panel);min-width:260px}.qtbl thead th.sl{z-index:3;background:var(--panel2)}.qtbl .grp .sl{background:#131a22}
+.qtbl td.qtd{background:rgba(227,179,65,.07);font-style:italic}.qtbl sup{font-size:8.5px;color:var(--warn);margin-left:2px;font-style:normal}
+.qtag{display:block;font-size:9.5px;font-weight:500;color:var(--warn)}.qtbl td.na{color:var(--mut)}
+.qdl .btn{margin-top:0;border:0;cursor:pointer;font:inherit;font-size:12px;font-weight:600}
