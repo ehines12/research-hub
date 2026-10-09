@@ -1,6 +1,7 @@
 name: Refresh dashboard data
 
-# Weekday pulls from FRED (keyless fredgraph CSV via curl) and the Atlanta Fed GDPNow workbook. Times in UTC; CT shown for CDT (UTC-5)
+# Weekday pulls (all keyless, via curl): FRED fredgraph CSV, Atlanta Fed GDPNow workbook, Cleveland Fed inflation-nowcast JSON,
+# TSA checkpoint table and the Treasury Fiscal Data DTS API. Daily items refresh on every weekday run. Times in UTC; CT shown for CDT (UTC-5)
 # and CST (UTC-6, Nov-Mar). GitHub may start scheduled runs a few minutes late.
 on:
   schedule:
@@ -30,7 +31,7 @@ jobs:
       - name: Install dependencies
         run: python3 -m pip install --quiet openpyxl   # Atlanta Fed GDPNow tracking workbook
 
-      - name: Fetch FRED + Atlanta Fed series
+      - name: Fetch FRED, Atlanta Fed, Cleveland Fed, TSA and Treasury series
         id: fetch
         run: |
           set +e
@@ -52,5 +53,5 @@ jobs:
       - name: Fail if any series stale or failed
         if: steps.fetch.outputs.rc != '0'
         run: |
-          echo "::error::One or more series could not be fetched from FRED (kept last good copy, flagged stale). See data/status.json."
+          echo "::error::One or more series could not be fetched (kept last good copy, flagged stale). See data/status.json."
           exit 1

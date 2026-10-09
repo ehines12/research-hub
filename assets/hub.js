@@ -38,6 +38,10 @@
     if (f === "pct2") return v.toFixed(2) + "%";
     if (f === "pp2") return (v > 0 ? "+" : "") + v.toFixed(2) + " pp";
     if (f === "k0") return (v > 0 && v < 0 ? "" : "") + Math.round(v).toLocaleString() + "K";
+    if (f === "usd2") return "$" + v.toFixed(2);
+    if (f === "n1") return v.toFixed(1);
+    if (f === "m2") return v.toFixed(2) + "M";
+    if (f === "bn0") return "$" + Math.round(v).toLocaleString() + "bn";
     return v.toFixed(2);
   }
   function fmtChg(d, u) {
@@ -45,6 +49,8 @@
     if (u === "bp") return sgn + Math.round(a * 100) + " bp";
     if (u === "pp") return sgn + a.toFixed(1) + " pp";
     if (u === "k") return sgn + Math.round(a).toLocaleString() + "K";
+    if (u === "pctc") return sgn + a.toFixed(1) + "%";
+    if (u === "usd") return sgn + "$" + a.toFixed(2);
     return sgn + a.toFixed(2);
   }
   function cls(d, s) {
@@ -113,8 +119,10 @@
     document.title = cfg.title + " · Research Hub";
     const chk = await lastChecked(area.id);
     stamp.innerHTML = "Last updated " + fmtTime(chk) + (chk !== D.updated_at ? '<br><span style="opacity:.75">FRED data last changed ' + fmtTime(D.updated_at) + "</span>" : "");
-    const kpis = D.kpis ? D.kpis.map(chipTile).join("") : cfg.series.filter(s => s.kpi !== false).map(s => kpiCard(S[s.key])).join("");
-    const secs = cfg.sections.map((sec, i) => "<h2>" + esc(sec.title) + '</h2><div class="panels' + (sec.cols === 2 ? " c2" : "") + '">' + sec.panels.map((p, j) =>
+    const inSec = new Set(cfg.sections.flatMap(sec => sec.kpis || []));
+    const kpis = D.kpis ? D.kpis.map(chipTile).join("") : cfg.series.filter(s => s.kpi !== false && !inSec.has(s.key)).map(s => kpiCard(S[s.key], S)).join("");
+    const secs = cfg.sections.map((sec, i) => "<h2>" + esc(sec.title) + (sec.link ? ' <a class="hint" href="' + esc(sec.link) + '" target="_blank" rel="noopener noreferrer">source page ' + EXT + "</a>" : "") + "</h2>" +
+      (sec.kpis ? '<div class="kpis sec">' + sec.kpis.map(k => kpiCard(S[k], S)).join("") + "</div>" : "") + (sec.nowcast_table ? nowcastTable(sec.nowcast_table, S) : "") + '<div class="panels' + (sec.cols === 2 ? " c2" : "") + '">' + sec.panels.map((p, j) =>
       '<div class="panel' + (p.wide ? " wide" : "") + (p.full ? " full" : "") + '"><h4>' + esc(p.title) + "</h4>" + (cfg.panel_latest ? panelLatest(p, S) : "") + '<div class="cv"><canvas id="c' + i + "_" + j + '"></canvas></div>' + (p.note ? '<div class="pnote">' + esc(p.note) + "</div>" : "") + '<div class="src">Source: ' + [...new Set(p.series.map(k => S[k].src_label || "FRED " + S[k].fred))].map(esc).join(" · ") + "</div></div>").join("") + "</div>").join("") +
       (D.summary ? summaryTable(D, cfg) : "");
     app.innerHTML = "<h1>" + esc(cfg.title) + '</h1><p class="sub">' + esc(cfg.subtitle) + '</p><div class="kpis">' + kpis + '</div><div class="toolbar"><span>Lookback</span><div class="seg">' +
@@ -127,21 +135,44 @@
     drawAll(cfg, S);
   }
 
-  function kpiCard(s) {
+  function kpiCard(s, S) {
     if (!s || !s.latest) return '<div class="kpi failed"><div class="t">' + esc(s ? s.title : "?") + '</div><div class="v">n/a</div><div class="d err">' + esc(s && s.error || "no data") + "</div></div>";
     const L = s.latest, P = s.prior, Y = s.year_ago;
     let c = "";
-    if (P) { const d = L.value - P.value; c += '<span class="' + cls(d, s) + '">' + fmtChg(d, s.chg) + " vs prior</span>"; }
-    if (Y) { const d = L.value - Y.value; c += '<span class="' + cls(d, s) + '">' + fmtChg(d, s.chg) + " y/y</span>"; }
+    const dv = (a, b) => s.chg === "pctc" ? (a / b - 1) * 100 : a - b;
+    if (P) { const d = dv(L.value, P.value); c += '<span class="' + cls(d, s) + '">' + fmtChg(d, s.chg) + " vs prior</span>"; }
+    if (Y) { const d = dv(L.value, Y.value); c += '<span class="' + cls(d, s) + '">' + fmtChg(d, s.chg) + " y/y</span>"; }
+    const YK = s.yoy_key && S && S[s.yoy_key] && S[s.yoy_key].latest;  // y/y from a companion series (e.g. same-weekday TSA y/y)
+    if (YK && YK.date === L.date) { const d = YK.value; c += '<span class="' + cls(d, s) + '">' + fmtChg(d, "pctc") + " y/y</span>"; }
     if (L.target) {  // nowcast: show target quarter, as-of date, change vs prior estimate for that quarter
       c = P ? '<span class="' + cls(L.value - P.value, s) + '">' + fmtChg(L.value - P.value, s.chg) + " vs " + fmtDate(P.date, "Daily").replace(/, \d{4}$/, "") + " est.</span>" : '<span class="flat">first estimate for ' + esc(L.target) + "</span>";
     }
     const tag = s.link ? "a" : "div", href = s.link ? ' href="' + esc(s.link) + '" target="_blank" rel="noopener noreferrer"' : "";
     const tip = (s.src_label || "FRED " + s.fred) + (L.release ? " · latest update after: " + L.release : "") + (s.error ? " · " + esc(s.error) : "");
-    const dline = L.target ? esc(L.target) + " · as of " + fmtDate(L.date, "Daily") + (P ? " · prior " + fmtVal(P.value, s.fmt) : "")
+    const dline = L.asof ? esc(L.target) + " · as of " + fmtDate(L.asof, "Daily").replace(/, \d{4}$/, "") + (L.mm != null ? " · m/m " + L.mm.toFixed(2) + "%" : "")
+                : L.target ? esc(L.target) + " · as of " + fmtDate(L.date, "Daily") + (P ? " · prior " + fmtVal(P.value, s.fmt) : "")
                            : fmtDate(L.date, s.freq) + (P ? " · prior " + fmtVal(P.value, s.fmt) : "");
     return "<" + tag + href + ' class="kpi ' + (s.link ? "linked " : "") + (s.status !== "ok" ? s.status : "") + '" title="' + esc(tip) + '"><div class="t">' + esc(s.title) + (s.link ? " " + EXT : "") + '</div><div class="v">' + fmtVal(L.value, s.fmt) +
       '</div><div class="d">' + dline + (s.status === "stale" ? " · STALE" : "") + '</div><div class="c">' + c + "</div></" + tag + ">";
+  }
+
+  // Cleveland Fed-style nowcast table: rows = target periods still being nowcast, cols = measures
+  function nowcastTable(t, S) {
+    const rows = {};  // target label -> {kind, start, cells}
+    const add = (kind, n, s) => { if (!s || !s.obs_meta) return;
+      for (const [d, m] of Object.entries(s.obs_meta)) { if (!m.pending) continue;
+        const r = rows[m.target] || (rows[m.target] = { kind, start: d, asof: m.asof, cells: {} });
+        r.cells[n] = { v: (s.obs.find(o => o[0] === d) || [])[1], mm: m.mm }; if (m.asof > r.asof) r.asof = m.asof; } };
+    t.measures.forEach((m, n) => { add("m", n, S[m.yy]); add("q", n, S[m.q]); });
+    const order = Object.entries(rows).sort((a, b) => (a[1].kind === b[1].kind ? a[1].start.localeCompare(b[1].start) : a[1].kind === "m" ? -1 : 1));
+    if (!order.length) return '<p class="err">No pending nowcasts found in the Cleveland Fed data.</p>';
+    let h = '<div class="tblwrap ncw"><table class="sumtbl nctbl"><thead><tr><th>Target</th>' + t.measures.map(m => '<th class="r">' + esc(m.label) + "</th>").join("") + "<th>As of</th></tr></thead><tbody>";
+    for (const [lab, r] of order) {
+      h += "<tr><td>" + esc(lab) + ' <span class="sid">' + (r.kind === "m" ? "y/y · m/m" : "q/q SAAR") + "</span></td>" + t.measures.map((m, n) => { const c = r.cells[n];
+        return '<td class="r b">' + (c && c.v != null ? c.v.toFixed(2) + "%" + (c.mm != null ? '<span class="mm">' + c.mm.toFixed(2) + "% m/m</span>" : "") : '<span class="sid">released</span>') + "</td>"; }).join("") +
+        "<td>" + fmtDate(r.asof, "Daily") + "</td></tr>";
+    }
+    return h + "</tbody></table></div>" + (t.note ? '<div class="pnote">' + esc(t.note) + "</div>" : "");
   }
 
   // ---- config-driven extras (used by the H.8 / H.6 dashboard; Macro unaffected) ----

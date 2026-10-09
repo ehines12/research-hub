@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Pull FRED series for every live dashboard in config/hub.json into data/<dashboard>.json.
+"""Pull every series for each live dashboard in config/hub.json into data/<dashboard>.json.
 
-Source: FRED public fredgraph CSV endpoint (no API key). Fallback: ALFRED graph CSV.
+Sources: FRED public fredgraph CSV endpoint (no API key; fallback ALFRED), Atlanta Fed GDPNow workbook,
+Cleveland Fed inflation-nowcast JSON, TSA checkpoint table, Treasury Fiscal Data DTS API (all keyless).
 No numbers are ever synthesized: if a series cannot be fetched, the last good copy on
 disk is kept and flagged stale; if none exists, the series is marked failed.
 
@@ -126,9 +127,218 @@ def fetch_gdpnow():
     return "Atlanta Fed", GDPNOW_XLSX, obs, meta
 
 
+# ---------------------------------------------------------------------------------------------
+# Non-FRED sources. Each fetcher returns (source, url, [(date, value)], meta|None). Downloads that
+# feed several series (one Cleveland Fed file -> 4 measures, one TSA pull -> level + y/y) are cached
+# per run so each URL is fetched once.
+import threading, re as _re
+_CACHE, _LOCKS, _GL = {}, {}, threading.Lock()
+
+
+def _cached(key, fn):
+    with _GL:
+        lk = _LOCKS.setdefault(key, threading.Lock())
+    with lk:
+        if key not in _CACHE:
+            try:
+                _CACHE[key] = ("ok", fn())
+            except Exception as e:  # noqa: BLE001 - re-raised for every dependent series
+                _CACHE[key] = ("err", e)
+    st, v = _CACHE[key]
+    if st == "err":
+        raise v
+    return v
+
+
+def _curl(url, timeout=120, ua=None):
+    cmd = ["curl", "-sSfL", "-g", "--max-time", str(timeout), "--retry", "2", "--retry-delay", "3"]
+    if ua:
+        cmd += ["-A", ua]
+    r = subprocess.run(cmd + [url], capture_output=True)
+    if r.returncode != 0 or not r.stdout:
+        raise RuntimeError(f"curl exit {r.returncode}: {r.stderr.decode(errors='replace').strip()[:200]}")
+    return r.stdout
+
+
+# Cleveland Fed inflation nowcast: the page's charts read these public JSON files (FusionCharts
+# configs, one per target period, each with daily nowcasts and the actual print once released).
+CLEV_PAGE = "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting"
+CLEV_JSON = "https://www.clevelandfed.org/-/media/files/webcharts/inflationnowcasting/nowcast_{h}.json"
+MON = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
+
+
+def _clev_targets(h):
+    """{target_label: {"start": date, "measures": {name: {"pts": [(date, v)], "actual": v|None}}}}, as_of"""
+    doc = json.loads(_curl(CLEV_JSON.format(h=h)))
+    out, as_of = {}, None
+    for e in doc:
+        sub = e["chart"]["subcaption"].strip()
+        if h == "quarter":
+            m = _re.fullmatch(r"(\d{4}):Q([1-4])", sub); y, mo = int(m.group(1)), 3 * int(m.group(2)) - 2
+            label = f"Q{m.group(2)} {y}"
+        else:
+            m = _re.fullmatch(r"(\d{4})-(\d{1,2})", sub); y, mo = int(m.group(1)), int(m.group(2))
+            label = f"{MON[mo - 1]} {y}"
+        if not m:
+            raise ValueError(f"unexpected target {sub!r}")
+        # category labels are mm/dd without a year: infer it from the target period, rolling over at Jan
+        days, yy, pm = [], y, mo
+        for c in e["categories"][0]["category"]:
+            if c.get("vline"):
+                continue  # release markers ("CPI Aug"), no data point
+            mm, dd = map(int, c["label"].split("/"))
+            if mm < pm:
+                yy += 1
+            pm = mm
+            days.append(dt.date(yy, mm, dd))
+        if any(b <= a for a, b in zip(days, days[1:])) or (days and (days[-1] - days[0]).days > 220):
+            raise ValueError(f"{sub}: non-monotonic dates")
+        meas = {}
+        for ds in e["dataset"]:
+            name = ds["seriesname"].strip()
+            if len(ds["data"]) != len(days):
+                raise ValueError(f"{sub}/{name}: {len(ds['data'])} points vs {len(days)} dates")
+            pts = [(days[i], float(x["value"])) for i, x in enumerate(ds["data"]) if str(x.get("value", "")).strip() not in ("",)]
+            if name.startswith("Actual "):
+                meas.setdefault(name[7:], {"pts": [], "actual": None})["actual"] = pts[-1][1] if pts else None
+            else:
+                meas.setdefault(name, {"pts": [], "actual": None})["pts"] = pts
+                if pts and (as_of is None or pts[-1][0] > as_of):
+                    as_of = pts[-1][0]
+        out[label] = {"start": dt.date(y, mo, 1), "measures": meas}
+    if not out or as_of is None:
+        raise ValueError("no nowcasts found")
+    return out, as_of
+
+
+def fetch_clevnow(s):
+    """mode 'nowcast': one obs per target period = latest nowcast (final pre-release one for past targets).
+       mode 'actual': the released print the Cleveland Fed charts it against."""
+    h, name, mode = s["horizon"], s["measure"], s.get("mode", "nowcast")
+    tg, as_of = _cached("clev:" + h, lambda: _clev_targets(h))
+    mm = _cached("clev:month", lambda: _clev_targets("month"))[0] if s.get("with_mm") else None
+    obs, meta = [], {}
+    for label, t in sorted(tg.items(), key=lambda kv: kv[1]["start"]):
+        m = t["measures"].get(name)
+        if not m:
+            continue
+        k = t["start"].isoformat()
+        if mode == "actual":
+            if m["actual"] is not None:
+                obs.append((k, m["actual"]))
+            continue
+        if not m["pts"]:
+            continue
+        last_d, last_v = m["pts"][-1]
+        obs.append((k, last_v))
+        pend = m["actual"] is None and last_d == as_of
+        md = {"target": label, "asof": last_d.isoformat(), "pending": pend}
+        wk = [p for p in m["pts"] if p[0] <= last_d - dt.timedelta(days=7)]
+        if pend and wk:
+            md.update(prior_date=wk[-1][0].isoformat(), prior_value=round(wk[-1][1], 4))
+        if m["actual"] is not None:
+            md["actual"] = round(m["actual"], 4)
+        if mm and label in mm and mm[label]["measures"].get(name, {}).get("pts"):
+            md["mm"] = round(mm[label]["measures"][name]["pts"][-1][1], 4)
+        meta[k] = md
+    if not obs:
+        raise ValueError(f"no {mode} values for {name}")
+    return "Cleveland Fed", CLEV_PAGE, obs, meta
+
+
+# TSA checkpoint travel numbers: the published HTML table (current year page + one page per past year).
+TSA_URL = "https://www.tsa.gov/travel/passenger-volumes"
+BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+
+
+def _tsa_daily():
+    this = dt.date.today().year
+    pts = {}
+    for url in [TSA_URL] + [f"{TSA_URL}/{y}" for y in (this - 1, this - 2, this - 3)]:
+        html = _curl(url, 60, BROWSER_UA).decode("utf-8", "replace")
+        cells = _re.findall(r"<td[^>]*>\s*([^<]*?)\s*</td>", html)
+        n = 0
+        for a, b in zip(cells[::2], cells[1::2]):
+            m = _re.fullmatch(r"(\d{1,2})/(\d{1,2})/(\d{4})", a)
+            if m and _re.fullmatch(r"[\d,]+", b):
+                pts[dt.date(int(m.group(3)), int(m.group(1)), int(m.group(2)))] = int(b.replace(",", "")); n += 1
+        if n < 25:
+            raise ValueError(f"TSA table layout changed ({url}: {n} rows)")
+    return pts
+
+
+def fetch_tsa(s):
+    """mode 'avg7': trailing 7-day average (millions); 'yoy': that average vs the same 7 days 364 days
+       earlier (same weekdays), %. Only full 7-day windows are used."""
+    pts = _cached("tsa", _tsa_daily)
+    days = sorted(pts)
+    avg = {}
+    for d0 in days:
+        w = [pts.get(d0 - dt.timedelta(days=i)) for i in range(7)]
+        if all(v is not None for v in w):
+            avg[d0] = sum(w) / 7.0
+    if s.get("mode") == "yoy":
+        obs = [(d0.isoformat(), (v / avg[d0 - dt.timedelta(days=364)] - 1) * 100) for d0, v in sorted(avg.items()) if d0 - dt.timedelta(days=364) in avg]
+    else:
+        obs = [(d0.isoformat(), v / 1e6) for d0, v in sorted(avg.items())]
+    if not obs:
+        raise ValueError("TSA: not enough history")
+    return "TSA", TSA_URL, obs, None
+
+
+# Daily Treasury Statement, Table II deposits: 'Taxes - Withheld Individual/FICA' ($ millions).
+DTS_API = ("https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/dts/"
+           "deposits_withdrawals_operating_cash?fields=record_date,transaction_catg,transaction_today_amt"
+           "&filter=transaction_catg:eq:Taxes%20-%20Withheld%20Individual/FICA,record_date:gte:2023-01-01"
+           "&sort=record_date&page[size]=10000")
+
+
+def _dts_daily():
+    doc = json.loads(_curl(DTS_API, 90))
+    rows = doc.get("data") or []
+    if len(rows) < 260:
+        raise ValueError(f"DTS: only {len(rows)} rows")
+    pts = {}
+    for r in rows:
+        pts[d(r["record_date"])] = pts.get(d(r["record_date"]), 0.0) + float(r["transaction_today_amt"])
+    return pts
+
+
+def fetch_dts(s):
+    """mode 'sum20': rolling N-business-day (N DTS reports, default 20) sum, $bn; 'yoy': that sum vs the sum
+       ending on the last report on/before the same date a year earlier, %."""
+    pts = _cached("dts", _dts_daily)
+    days = sorted(pts)
+    n = int(s.get("window", 20))
+    roll = {days[i]: sum(pts[x] for x in days[i - n + 1:i + 1]) / 1000.0 for i in range(n - 1, len(days))}
+    if s.get("mode") == "yoy":
+        rd = sorted(roll)
+        obs = []
+        for d0 in rd:
+            try:
+                tgt = d0.replace(year=d0.year - 1)
+            except ValueError:
+                tgt = d0 - dt.timedelta(days=365)
+            prev = [x for x in rd if x <= tgt and (tgt - x).days <= 5]
+            if prev:
+                obs.append((d0.isoformat(), (roll[d0] / roll[prev[-1]] - 1) * 100))
+    else:
+        obs = [(x.isoformat(), v) for x, v in sorted(roll.items())]
+    if not obs:
+        raise ValueError("DTS: not enough history")
+    return "Treasury Fiscal Data (DTS)", "https://fiscaldata.treasury.gov/datasets/daily-treasury-statement/", obs, None
+
+
 def _fetch_series(s):
-    if s.get("source") == "gdpnow":
+    src = s.get("source")
+    if src == "gdpnow":
         return fetch_gdpnow()
+    if src == "clevnow":
+        return fetch_clevnow(s)
+    if src == "tsa":
+        return fetch_tsa(s)
+    if src == "dts":
+        return fetch_dts(s)
     return fetch(s["fred"]) + (None,)
 
 
@@ -191,6 +401,8 @@ def run_dashboard(cfg_path):
             obs = [(t, round(v, 4)) for t, v in transform(raw, s["transform"])]
             if meta:
                 rec["obs_meta"] = {t: meta[t] for t, _ in obs[-400:] if t in meta}
+            if len(raw) < 2:
+                raise ValueError("fewer than 2 observations")
             rec.update(status="ok", source=src, source_url=url, fetched_at=now.isoformat(timespec="seconds"),
                        raw_latest={"date": raw[-1][0], "value": raw[-1][1]}, obs=obs)
         except Exception as e:
@@ -209,14 +421,18 @@ def run_dashboard(cfg_path):
             om = rec.get("obs_meta")
             if om and o[-1][0] in om:
                 # nowcast-style series: prior = previous estimate for the SAME target quarter
-                rec["latest"].update(om[o[-1][0]])
-                tgt = om[o[-1][0]].get("target")
-                same = [x for x in o[:-1] if om.get(x[0], {}).get("target") == tgt]
-                rec["prior"] = {"date": same[-1][0], "value": same[-1][1], **om[same[-1][0]]} if same else None
+                m0 = om[o[-1][0]]
+                rec["latest"].update(m0)
+                if "asof" in m0:  # one obs per target period (Cleveland Fed): prior = estimate ~1 week earlier
+                    rec["prior"] = {"date": m0["prior_date"], "value": m0["prior_value"]} if "prior_value" in m0 else None
+                else:  # daily nowcast (GDPNow): prior = previous estimate for the SAME target quarter
+                    tgt = m0.get("target")
+                    same = [x for x in o[:-1] if om.get(x[0], {}).get("target") == tgt]
+                    rec["prior"] = {"date": same[-1][0], "value": same[-1][1], **om[same[-1][0]]} if same else None
         result["series"][s["key"]] = rec
         st = rec["status"]
         lt = rec.get("latest") or {}
-        print(f"  {s['fred']:<16} {st:<7} {lt.get('date','-'):<11} {lt.get('value','')}  {rec.get('error','')}")
+        print(f"  {s.get('fred') or s['key']:<16} {st:<7} {lt.get('date','-'):<11} {lt.get('value','')}  {rec.get('error','')}")
     _derive_all(cfg, result)
     DATA.mkdir(exist_ok=True)
     # Only rewrite the (large) data file when the numbers or config actually changed, so the
@@ -318,7 +534,7 @@ def main():
         status["dashboards"][a["id"]] = {
             "checked_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
             "data_changed_at": r["updated_at"],
-            "series": {k: {"fred": s["fred"], "status": s["status"], "latest": s.get("latest"), **({"error": s["error"]} if s.get("error") else {})}
+            "series": {k: {"fred": s.get("fred"), "status": s["status"], "latest": s.get("latest"), **({"error": s["error"]} if s.get("error") else {})}
                        for k, s in r["series"].items()}}
     status["checked_at"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
     status["ok"] = bad == 0

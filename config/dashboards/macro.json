@@ -1,7 +1,7 @@
 {
   "id": "macro",
   "title": "Macro Dashboard",
-  "subtitle": "US growth, labor, inflation and rates. Sources: FRED (Federal Reserve Bank of St. Louis) and the Federal Reserve Bank of Atlanta (GDPNow).",
+  "subtitle": "US growth, labor, inflation, rates and real-time alternative data. Sources: FRED (St. Louis Fed), Atlanta Fed (GDPNow), Cleveland Fed (inflation nowcast), Treasury Fiscal Data (DTS) and TSA.",
   "series": [
     {
       "key": "gdp",
@@ -151,6 +151,375 @@
       "fmt": "pct1",
       "chg": "pp",
       "freq": "Monthly"
+    },
+    {
+      "key": "t5yie",
+      "fred": "T5YIE",
+      "title": "5Y breakeven inflation",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Daily",
+      "kpi": false,
+      "src_label": "FRED T5YIE"
+    },
+    {
+      "key": "t10yie",
+      "fred": "T10YIE",
+      "title": "10Y breakeven inflation",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Daily",
+      "kpi": false,
+      "src_label": "FRED T10YIE"
+    },
+    {
+      "key": "t5yifr",
+      "fred": "T5YIFR",
+      "title": "5y5y forward inflation expectation",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Daily",
+      "kpi": false,
+      "src_label": "FRED T5YIFR"
+    },
+    {
+      "key": "clev_cpi_yy",
+      "fred": "Cleveland Fed CPI y/y",
+      "source": "clevnow",
+      "horizon": "year",
+      "measure": "CPI Inflation",
+      "with_mm": true,
+      "title": "CPI nowcast, y/y",
+      "units": "% y/y",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "no_yoy": true,
+      "kpi": false,
+      "invert": true,
+      "link": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting",
+      "src_label": "Cleveland Fed inflation nowcast"
+    },
+    {
+      "key": "clev_ccpi_yy",
+      "fred": "Cleveland Fed Core CPI y/y",
+      "source": "clevnow",
+      "horizon": "year",
+      "measure": "Core CPI Inflation",
+      "with_mm": true,
+      "title": "Core CPI nowcast, y/y",
+      "units": "% y/y",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "no_yoy": true,
+      "kpi": false,
+      "invert": true,
+      "link": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting",
+      "src_label": "Cleveland Fed inflation nowcast"
+    },
+    {
+      "key": "clev_pce_yy",
+      "fred": "Cleveland Fed PCE y/y",
+      "source": "clevnow",
+      "horizon": "year",
+      "measure": "PCE Inflation",
+      "with_mm": true,
+      "title": "PCE nowcast, y/y",
+      "units": "% y/y",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "no_yoy": true,
+      "kpi": false,
+      "invert": true,
+      "link": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting",
+      "src_label": "Cleveland Fed inflation nowcast"
+    },
+    {
+      "key": "clev_cpce_yy",
+      "fred": "Cleveland Fed Core PCE y/y",
+      "source": "clevnow",
+      "horizon": "year",
+      "measure": "Core PCE Inflation",
+      "with_mm": true,
+      "title": "Core PCE nowcast, y/y",
+      "units": "% y/y",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "no_yoy": true,
+      "kpi": false,
+      "invert": true,
+      "link": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting",
+      "src_label": "Cleveland Fed inflation nowcast"
+    },
+    {
+      "key": "clev_cpi_q",
+      "fred": "Cleveland Fed CPI q/q SAAR",
+      "source": "clevnow",
+      "horizon": "quarter",
+      "measure": "CPI Inflation",
+      "title": "CPI nowcast, q/q SAAR",
+      "units": "% q/q SAAR",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Quarterly",
+      "no_yoy": true,
+      "kpi": false,
+      "link": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting",
+      "src_label": "Cleveland Fed inflation nowcast"
+    },
+    {
+      "key": "clev_ccpi_q",
+      "fred": "Cleveland Fed Core CPI q/q SAAR",
+      "source": "clevnow",
+      "horizon": "quarter",
+      "measure": "Core CPI Inflation",
+      "title": "Core CPI nowcast, q/q SAAR",
+      "units": "% q/q SAAR",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Quarterly",
+      "no_yoy": true,
+      "kpi": false,
+      "link": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting",
+      "src_label": "Cleveland Fed inflation nowcast"
+    },
+    {
+      "key": "clev_pce_q",
+      "fred": "Cleveland Fed PCE q/q SAAR",
+      "source": "clevnow",
+      "horizon": "quarter",
+      "measure": "PCE Inflation",
+      "title": "PCE nowcast, q/q SAAR",
+      "units": "% q/q SAAR",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Quarterly",
+      "no_yoy": true,
+      "kpi": false,
+      "link": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting",
+      "src_label": "Cleveland Fed inflation nowcast"
+    },
+    {
+      "key": "clev_cpce_q",
+      "fred": "Cleveland Fed Core PCE q/q SAAR",
+      "source": "clevnow",
+      "horizon": "quarter",
+      "measure": "Core PCE Inflation",
+      "title": "Core PCE nowcast, q/q SAAR",
+      "units": "% q/q SAAR",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Quarterly",
+      "no_yoy": true,
+      "kpi": false,
+      "link": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting",
+      "src_label": "Cleveland Fed inflation nowcast"
+    },
+    {
+      "key": "clev_cpi_yy_act",
+      "fred": "Cleveland Fed actual CPI y/y",
+      "source": "clevnow",
+      "horizon": "year",
+      "measure": "CPI Inflation",
+      "mode": "actual",
+      "title": "Actual CPI, y/y",
+      "units": "% y/y",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "no_yoy": true,
+      "kpi": false,
+      "src_label": "Cleveland Fed inflation nowcast (actuals as charted)"
+    },
+    {
+      "key": "clev_cpce_yy_act",
+      "fred": "Cleveland Fed actual Core PCE y/y",
+      "source": "clevnow",
+      "horizon": "year",
+      "measure": "Core PCE Inflation",
+      "mode": "actual",
+      "title": "Actual Core PCE, y/y",
+      "units": "% y/y",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "no_yoy": true,
+      "kpi": false,
+      "src_label": "Cleveland Fed inflation nowcast (actuals as charted)"
+    },
+    {
+      "key": "indeed",
+      "fred": "IHLIDXUS",
+      "title": "Indeed job postings",
+      "units": "index, Feb 1 2020 = 100",
+      "transform": "level",
+      "fmt": "n1",
+      "chg": "pctc",
+      "freq": "Daily",
+      "kpi": false,
+      "src_label": "Indeed Hiring Lab via FRED IHLIDXUS"
+    },
+    {
+      "key": "tsa_7d",
+      "fred": "TSA",
+      "source": "tsa",
+      "mode": "avg7",
+      "title": "TSA checkpoint, 7-day avg",
+      "units": "mn travelers/day",
+      "transform": "level",
+      "fmt": "m2",
+      "chg": "pctc",
+      "freq": "Daily",
+      "no_yoy": true,
+      "yoy_key": "tsa_yoy",
+      "kpi": false,
+      "link": "https://www.tsa.gov/travel/passenger-volumes",
+      "src_label": "TSA checkpoint travel numbers"
+    },
+    {
+      "key": "tsa_yoy",
+      "fred": "TSA",
+      "source": "tsa",
+      "mode": "yoy",
+      "title": "TSA 7-day avg, y/y (same weekdays)",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Daily",
+      "no_yoy": true,
+      "kpi": false,
+      "src_label": "TSA checkpoint travel numbers"
+    },
+    {
+      "key": "dts_20d",
+      "fred": "DTS",
+      "source": "dts",
+      "mode": "sum20",
+      "title": "Withheld taxes, 20-day sum",
+      "units": "$bn",
+      "transform": "level",
+      "fmt": "bn0",
+      "chg": "pctc",
+      "freq": "Daily",
+      "no_yoy": true,
+      "yoy_key": "dts_yoy",
+      "kpi": false,
+      "link": "https://fiscaldata.treasury.gov/datasets/daily-treasury-statement/",
+      "src_label": "Treasury Fiscal Data, Daily Treasury Statement (Taxes - Withheld Individual/FICA)"
+    },
+    {
+      "key": "dts_yoy",
+      "fred": "DTS",
+      "source": "dts",
+      "mode": "yoy",
+      "title": "Withheld taxes, 20-day sum y/y",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Daily",
+      "no_yoy": true,
+      "kpi": false,
+      "src_label": "Treasury Fiscal Data, Daily Treasury Statement (Taxes - Withheld Individual/FICA)"
+    },
+    {
+      "key": "dts_yoy60",
+      "fred": "DTS",
+      "source": "dts",
+      "mode": "yoy",
+      "title": "Withheld taxes, 60-day sum y/y",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Daily",
+      "no_yoy": true,
+      "kpi": false,
+      "src_label": "Treasury Fiscal Data, Daily Treasury Statement (Taxes - Withheld Individual/FICA)",
+      "window": 60
+    },
+    {
+      "key": "gas",
+      "fred": "GASREGW",
+      "title": "Retail gasoline, regular",
+      "units": "$/gal",
+      "transform": "level",
+      "fmt": "usd2",
+      "chg": "usd",
+      "freq": "Weekly",
+      "kpi": false,
+      "src_label": "EIA via FRED GASREGW",
+      "invert": true
+    },
+    {
+      "key": "wti",
+      "fred": "DCOILWTICO",
+      "title": "WTI crude oil",
+      "units": "$/bbl",
+      "transform": "level",
+      "fmt": "usd2",
+      "chg": "usd",
+      "freq": "Daily",
+      "kpi": false,
+      "src_label": "EIA via FRED DCOILWTICO"
+    },
+    {
+      "key": "wei",
+      "fred": "WEI",
+      "title": "NY Fed Weekly Economic Index",
+      "units": "% (4Q GDP growth scale)",
+      "transform": "level",
+      "fmt": "n2",
+      "chg": "n",
+      "freq": "Weekly",
+      "kpi": false,
+      "src_label": "NY Fed WEI via FRED"
+    },
+    {
+      "key": "ccsa",
+      "fred": "CCSA",
+      "title": "Continuing jobless claims",
+      "units": "thous.",
+      "transform": "div1000",
+      "fmt": "k0",
+      "chg": "k",
+      "freq": "Weekly",
+      "kpi": false,
+      "src_label": "DOL via FRED CCSA",
+      "invert": true
+    },
+    {
+      "key": "nfci",
+      "fred": "NFCI",
+      "title": "Chicago Fed NFCI",
+      "units": "index (0 = average)",
+      "transform": "level",
+      "fmt": "n2",
+      "chg": "n",
+      "freq": "Weekly",
+      "kpi": false,
+      "src_label": "Chicago Fed NFCI via FRED",
+      "invert": true
     }
   ],
   "sections": [
@@ -245,7 +614,90 @@
           ],
           "ref": 2,
           "refLabel": "2% target",
-          "full": true
+          "wide": false
+        },
+        {
+          "title": "Market inflation expectations: 5Y & 10Y breakevens, 5y5y forward (%)",
+          "type": "line",
+          "series": [
+            "t5yie",
+            "t10yie",
+            "t5yifr"
+          ],
+          "ref": 2,
+          "refLabel": "2%",
+          "wide": true,
+          "note": "Breakevens = nominal minus TIPS yield (CPI-based, includes risk/liquidity premia); the Fed's 2% target is for PCE."
+        }
+      ],
+      "kpis": [
+        "t5yie",
+        "t10yie",
+        "t5yifr"
+      ]
+    },
+    {
+      "title": "Cleveland Fed inflation nowcast",
+      "link": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting",
+      "kpis": [
+        "clev_cpi_yy",
+        "clev_ccpi_yy",
+        "clev_pce_yy",
+        "clev_cpce_yy"
+      ],
+      "nowcast_table": {
+        "measures": [
+          {
+            "label": "CPI",
+            "yy": "clev_cpi_yy",
+            "q": "clev_cpi_q"
+          },
+          {
+            "label": "Core CPI",
+            "yy": "clev_ccpi_yy",
+            "q": "clev_ccpi_q"
+          },
+          {
+            "label": "PCE",
+            "yy": "clev_pce_yy",
+            "q": "clev_pce_q"
+          },
+          {
+            "label": "Core PCE",
+            "yy": "clev_cpce_yy",
+            "q": "clev_cpce_q"
+          }
+        ],
+        "note": "Months: y/y with m/m below. Quarters: q/q annualized. Only targets still being nowcast are shown; as-of = latest update."
+      },
+      "panels": [
+        {
+          "title": "CPI y/y: Cleveland Fed nowcast vs. actual, by month (%)",
+          "type": "line",
+          "series": [
+            "clev_cpi_yy",
+            "clev_cpi_yy_act"
+          ],
+          "labels": [
+            "Nowcast (latest; final pre-release for past months)",
+            "Actual"
+          ],
+          "ref": 2,
+          "refLabel": "2%"
+        },
+        {
+          "title": "Core PCE y/y: Cleveland Fed nowcast vs. actual, by month (%)",
+          "type": "line",
+          "series": [
+            "clev_cpce_yy",
+            "clev_cpce_yy_act"
+          ],
+          "labels": [
+            "Nowcast (latest; final pre-release for past months)",
+            "Actual"
+          ],
+          "ref": 2,
+          "refLabel": "2% target"
         }
       ]
     },
@@ -270,6 +722,98 @@
           ],
           "zero": true,
           "fill": true
+        }
+      ]
+    },
+    {
+      "title": "Real-time & Alt Data",
+      "kpis": [
+        "indeed",
+        "tsa_7d",
+        "dts_20d",
+        "gas",
+        "wti",
+        "wei",
+        "ccsa",
+        "nfci"
+      ],
+      "panels": [
+        {
+          "title": "Indeed job postings index (Feb 1, 2020 = 100)",
+          "type": "line",
+          "series": [
+            "indeed"
+          ],
+          "ref": 100,
+          "refLabel": "Feb 2020"
+        },
+        {
+          "title": "TSA checkpoint travelers, 7-day average (millions/day)",
+          "type": "line",
+          "series": [
+            "tsa_7d"
+          ]
+        },
+        {
+          "title": "TSA 7-day average, y/y (%, vs. same weekdays a year earlier)",
+          "type": "line",
+          "series": [
+            "tsa_yoy"
+          ],
+          "zero": true
+        },
+        {
+          "title": "Withheld income & payroll tax receipts, rolling business-day sums, y/y (%)",
+          "type": "line",
+          "series": [
+            "dts_yoy",
+            "dts_yoy60"
+          ],
+          "zero": true,
+          "note": "Daily Treasury Statement deposits, 'Taxes - Withheld Individual/FICA'. Calendar/payday timing makes this noisy around month-ends and holidays.",
+          "labels": [
+            "20-business-day sum, y/y",
+            "60-business-day sum, y/y"
+          ],
+          "wide": true
+        },
+        {
+          "title": "Retail gasoline ($/gal, left) and WTI crude ($/bbl, right)",
+          "type": "line",
+          "series": [
+            "gas",
+            "wti"
+          ],
+          "y2": [
+            "wti"
+          ],
+          "labels": [
+            "Gasoline, regular ($/gal)",
+            "WTI ($/bbl)"
+          ]
+        },
+        {
+          "title": "NY Fed Weekly Economic Index (scaled to 4Q GDP growth, %)",
+          "type": "line",
+          "series": [
+            "wei"
+          ],
+          "zero": true
+        },
+        {
+          "title": "Continuing jobless claims (thous.)",
+          "type": "line",
+          "series": [
+            "ccsa"
+          ]
+        },
+        {
+          "title": "Chicago Fed National Financial Conditions Index (negative = looser than average)",
+          "type": "line",
+          "series": [
+            "nfci"
+          ],
+          "zero": true
         }
       ]
     }

@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-09T20:17:03+00:00",
-   "data_changed_at": "2026-10-09T19:50:37+00:00",
+   "checked_at": "2026-10-09T20:31:56+00:00",
+   "data_changed_at": "2026-10-09T20:31:49+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -74,7 +74,7 @@
      "fred": "DFF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-07",
+      "date": "2026-10-08",
       "value": 3.88
      }
     },
@@ -82,16 +82,16 @@
      "fred": "DGS2",
      "status": "ok",
      "latest": {
-      "date": "2026-10-07",
-      "value": 4.77
+      "date": "2026-10-08",
+      "value": 4.75
      }
     },
     "dgs10": {
      "fred": "DGS10",
      "status": "ok",
      "latest": {
-      "date": "2026-10-07",
-      "value": 5.28
+      "date": "2026-10-08",
+      "value": 5.22
      }
     },
     "spread": {
@@ -116,6 +116,242 @@
      "latest": {
       "date": "2026-08-01",
       "value": 5.3619
+     }
+    },
+    "t5yie": {
+     "fred": "T5YIE",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-08",
+      "value": 2.37
+     }
+    },
+    "t10yie": {
+     "fred": "T10YIE",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-08",
+      "value": 2.35
+     }
+    },
+    "t5yifr": {
+     "fred": "T5YIFR",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-08",
+      "value": 2.33
+     }
+    },
+    "clev_cpi_yy": {
+     "fred": "Cleveland Fed CPI y/y",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-01",
+      "value": 3.633,
+      "target": "Oct 2026",
+      "asof": "2026-10-09",
+      "pending": true,
+      "prior_date": "2026-10-02",
+      "prior_value": 3.5824,
+      "mm": 0.2693
+     }
+    },
+    "clev_ccpi_yy": {
+     "fred": "Cleveland Fed Core CPI y/y",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-01",
+      "value": 2.2975,
+      "target": "Oct 2026",
+      "asof": "2026-10-09",
+      "pending": true,
+      "prior_date": "2026-10-02",
+      "prior_value": 2.2975,
+      "mm": 0.2003
+     }
+    },
+    "clev_pce_yy": {
+     "fred": "Cleveland Fed PCE y/y",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-01",
+      "value": 3.6917,
+      "target": "Oct 2026",
+      "asof": "2026-10-09",
+      "pending": true,
+      "prior_date": "2026-10-02",
+      "prior_value": 3.663,
+      "mm": 0.2784
+     }
+    },
+    "clev_cpce_yy": {
+     "fred": "Cleveland Fed Core PCE y/y",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-01",
+      "value": 3.0965,
+      "target": "Oct 2026",
+      "asof": "2026-10-09",
+      "pending": true,
+      "prior_date": "2026-10-02",
+      "prior_value": 3.0965,
+      "mm": 0.2485
+     }
+    },
+    "clev_cpi_q": {
+     "fred": "Cleveland Fed CPI q/q SAAR",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-01",
+      "value": 4.3872,
+      "target": "Q4 2026",
+      "asof": "2026-10-09",
+      "pending": true,
+      "prior_date": "2026-10-02",
+      "prior_value": 4.0177
+     }
+    },
+    "clev_ccpi_q": {
+     "fred": "Cleveland Fed Core CPI q/q SAAR",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-01",
+      "value": 2.5566,
+      "target": "Q4 2026",
+      "asof": "2026-10-09",
+      "pending": true,
+      "prior_date": "2026-10-02",
+      "prior_value": 2.5566
+     }
+    },
+    "clev_pce_q": {
+     "fred": "Cleveland Fed PCE q/q SAAR",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-01",
+      "value": 3.9975,
+      "target": "Q4 2026",
+      "asof": "2026-10-09",
+      "pending": true,
+      "prior_date": "2026-10-02",
+      "prior_value": 3.788
+     }
+    },
+    "clev_cpce_q": {
+     "fred": "Cleveland Fed Core PCE q/q SAAR",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-01",
+      "value": 3.0544,
+      "target": "Q4 2026",
+      "asof": "2026-10-09",
+      "pending": true,
+      "prior_date": "2026-10-02",
+      "prior_value": 3.0544
+     }
+    },
+    "clev_cpi_yy_act": {
+     "fred": "Cleveland Fed actual CPI y/y",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 3.3965
+     }
+    },
+    "clev_cpce_yy_act": {
+     "fred": "Cleveland Fed actual Core PCE y/y",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 3.0076
+     }
+    },
+    "indeed": {
+     "fred": "IHLIDXUS",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-02",
+      "value": 103.8443
+     }
+    },
+    "tsa_7d": {
+     "fred": "TSA",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-08",
+      "value": 2.5013
+     }
+    },
+    "tsa_yoy": {
+     "fred": "TSA",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-08",
+      "value": -2.0479
+     }
+    },
+    "dts_20d": {
+     "fred": "DTS",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-08",
+      "value": 263.975
+     }
+    },
+    "dts_yoy": {
+     "fred": "DTS",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-08",
+      "value": 4.0402
+     }
+    },
+    "dts_yoy60": {
+     "fred": "DTS",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-08",
+      "value": 3.9993
+     }
+    },
+    "gas": {
+     "fred": "GASREGW",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-05",
+      "value": 4.354
+     }
+    },
+    "wti": {
+     "fred": "DCOILWTICO",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-06",
+      "value": 96.24
+     }
+    },
+    "wei": {
+     "fred": "WEI",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-03",
+      "value": 2.71
+     }
+    },
+    "ccsa": {
+     "fred": "CCSA",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-26",
+      "value": 1716.0
+     }
+    },
+    "nfci": {
+     "fred": "NFCI",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-02",
+      "value": -0.494
      }
     }
    }
@@ -655,6 +891,6 @@
    }
   }
  },
- "checked_at": "2026-10-09T20:17:08+00:00",
+ "checked_at": "2026-10-09T20:31:56+00:00",
  "ok": true
 }
