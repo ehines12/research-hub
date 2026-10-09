@@ -449,7 +449,8 @@
       "chg": "usd",
       "freq": "Daily",
       "kpi": false,
-      "src_label": "EIA via FRED DCOILWTICO"
+      "src_label": "EIA via FRED DCOILWTICO",
+      "invert": true
     },
     {
       "key": "wei",
