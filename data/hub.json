@@ -27,7 +27,7 @@
    "title": "Financials Dashboard",
    "icon": "chart",
    "url": "https://ehines12.github.io/financials-dashboard/",
-   "tagline": "US financials macro dashboard: rates, credit spreads, H.8/H.6 deposit mix and KRE data",
+   "tagline": "US financials macro dashboard: rates & curve, credit spreads, credit quality, housing, labor & inflation, market stress, KRE positioning and financials time allocation",
    "embed": true
   },
   {
