@@ -11,7 +11,7 @@ main{max-width:1440px;margin:0 auto;padding:28px}
 h1{font-size:24px;margin:0 0 4px;font-weight:600}.sub{color:var(--mut);margin:0 0 24px}
 h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut);margin:30px 0 12px;font-weight:600}
 /* hub tiles */
-.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
 .tile{position:relative;display:flex;flex-direction:column;gap:10px;padding:22px;border:1px solid var(--line);border-radius:12px;background:var(--panel);transition:.15s;min-height:170px}
 .tile:hover{border-color:var(--acc);transform:translateY(-2px);background:var(--panel2)}
 .tile .ic{width:46px;height:46px;border-radius:10px;display:grid;place-items:center;background:#1f3550;color:var(--acc)}

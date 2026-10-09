@@ -12,21 +12,6 @@
    "dashboard": "config/dashboards/macro.json"
   },
   {
-   "id": "banks",
-   "title": "Banks",
-   "icon": "bank",
-   "status": "coming_soon",
-   "tagline": "Bank fundamentals, peers and valuation",
-   "description": "Bank-level and peer-group fundamentals: NIM and deposit beta, loan and deposit mix, credit quality (NCOs, NPAs, reserves), capital ratios, CRE concentration, and valuation (P/TBV, P/E) for coverage names and the KRE universe.",
-   "planned": [
-    "NIM, deposit costs and cumulative beta",
-    "Loan / deposit mix and growth",
-    "Credit: NCOs, NPAs, ACL coverage",
-    "Capital: CET1, TCE, CRE concentration",
-    "Valuation: P/TBV, P/E vs. ROTCE"
-   ]
-  },
-  {
    "id": "h8",
    "title": "H.8",
    "icon": "table",
@@ -39,21 +24,6 @@
     "Deposits: large time vs. other",
     "Borrowings and cash assets",
     "Large vs. small domestic banks, weekly and YoY"
-   ]
-  },
-  {
-   "id": "markets",
-   "title": "Markets",
-   "icon": "chart",
-   "status": "coming_soon",
-   "tagline": "Equities, sectors and cross-asset",
-   "description": "Equity index and sector performance (incl. financials sub-sectors), volatility, the dollar and commodities.",
-   "planned": [
-    "Index and sector performance",
-    "Financials sub-sector relative performance",
-    "VIX and realized volatility",
-    "Dollar, oil and gold",
-    "Cross-asset correlation"
    ]
   }
  ],
