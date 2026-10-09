@@ -15,7 +15,7 @@ Central financials research hub: a home page of tiles, one per research area, wi
 Set per series with `"source"` in `config/dashboards/macro.json` (all keyless, fetched with curl):
 - `gdpnow`: Atlanta Fed GDPNow tracking workbook (daily nowcast history).
 - `clevnow`: Cleveland Fed Inflation Nowcasting chart JSON (`/-/media/files/webcharts/inflationnowcasting/nowcast_{month,quarter,year}.json`), the files the public page itself loads. One obs per target month/quarter = latest nowcast (final pre-release value for past targets); `obs_meta` carries the target, as-of date, m/m and pending flag. `"mode": "actual"` gives the released print. `nowcast_table` in a section renders every target still being nowcast.
-- `tsa`: TSA checkpoint travel numbers HTML table (current year plus 3 prior year pages); `avg7` = trailing 7-day average, `yoy` = vs the same 7 weekdays 364 days earlier.
+- `tsa` (fetcher kept, NOT used: tsa.gov returns HTTP 403 to GitHub Actions runners, so it cannot refresh on schedule): TSA checkpoint travel numbers HTML table (current year plus 3 prior year pages); `avg7` = trailing 7-day average, `yoy` = vs the same 7 weekdays 364 days earlier.
 - `dts`: Treasury Fiscal Data DTS API, deposits 'Taxes - Withheld Individual/FICA' (since 2023-02); `sum20` = rolling N-business-day sum (`window`, default 20), `yoy` = vs the window ending on the same date a year earlier.
 A section's `"kpis"` list puts those KPI cards inside the section (and keeps them out of the top grid).
 

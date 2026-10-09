@@ -1,7 +1,7 @@
 {
   "id": "macro",
   "title": "Macro Dashboard",
-  "subtitle": "US growth, labor, inflation, rates and real-time alternative data. Sources: FRED (St. Louis Fed), Atlanta Fed (GDPNow), Cleveland Fed (inflation nowcast), Treasury Fiscal Data (DTS) and TSA.",
+  "subtitle": "US growth, labor, inflation, rates and real-time alternative data. Sources: FRED (St. Louis Fed), Atlanta Fed (GDPNow), Cleveland Fed (inflation nowcast) and Treasury Fiscal Data (DTS).",
   "series": [
     {
       "key": "gdp",
@@ -379,38 +379,6 @@
       "src_label": "Indeed Hiring Lab via FRED IHLIDXUS"
     },
     {
-      "key": "tsa_7d",
-      "fred": "TSA",
-      "source": "tsa",
-      "mode": "avg7",
-      "title": "TSA checkpoint, 7-day avg",
-      "units": "mn travelers/day",
-      "transform": "level",
-      "fmt": "m2",
-      "chg": "pctc",
-      "freq": "Daily",
-      "no_yoy": true,
-      "yoy_key": "tsa_yoy",
-      "kpi": false,
-      "link": "https://www.tsa.gov/travel/passenger-volumes",
-      "src_label": "TSA checkpoint travel numbers"
-    },
-    {
-      "key": "tsa_yoy",
-      "fred": "TSA",
-      "source": "tsa",
-      "mode": "yoy",
-      "title": "TSA 7-day avg, y/y (same weekdays)",
-      "units": "%",
-      "transform": "level",
-      "fmt": "pct1",
-      "chg": "pp",
-      "freq": "Daily",
-      "no_yoy": true,
-      "kpi": false,
-      "src_label": "TSA checkpoint travel numbers"
-    },
-    {
       "key": "dts_20d",
       "fred": "DTS",
       "source": "dts",
@@ -520,6 +488,19 @@
       "kpi": false,
       "src_label": "Chicago Fed NFCI via FRED",
       "invert": true
+    },
+    {
+      "key": "stlfsi",
+      "fred": "STLFSI4",
+      "title": "St. Louis Fed Financial Stress Index",
+      "units": "index (0 = normal)",
+      "transform": "level",
+      "fmt": "n2",
+      "chg": "n",
+      "freq": "Weekly",
+      "kpi": false,
+      "invert": true,
+      "src_label": "St. Louis Fed STLFSI4 via FRED"
     }
   ],
   "sections": [
@@ -729,13 +710,13 @@
       "title": "Real-time & Alt Data",
       "kpis": [
         "indeed",
-        "tsa_7d",
         "dts_20d",
         "gas",
         "wti",
         "wei",
         "ccsa",
-        "nfci"
+        "nfci",
+        "stlfsi"
       ],
       "panels": [
         {
@@ -746,21 +727,6 @@
           ],
           "ref": 100,
           "refLabel": "Feb 2020"
-        },
-        {
-          "title": "TSA checkpoint travelers, 7-day average (millions/day)",
-          "type": "line",
-          "series": [
-            "tsa_7d"
-          ]
-        },
-        {
-          "title": "TSA 7-day average, y/y (%, vs. same weekdays a year earlier)",
-          "type": "line",
-          "series": [
-            "tsa_yoy"
-          ],
-          "zero": true
         },
         {
           "title": "Withheld income & payroll tax receipts, rolling business-day sums, y/y (%)",
@@ -808,12 +774,18 @@
           ]
         },
         {
-          "title": "Chicago Fed National Financial Conditions Index (negative = looser than average)",
+          "title": "Financial conditions: Chicago Fed NFCI and St. Louis Fed Financial Stress Index (0 = average/normal; negative = looser)",
           "type": "line",
           "series": [
-            "nfci"
+            "nfci",
+            "stlfsi"
           ],
-          "zero": true
+          "zero": true,
+          "labels": [
+            "Chicago Fed NFCI",
+            "St. Louis Fed Financial Stress Index"
+          ],
+          "full": true
         }
       ]
     }

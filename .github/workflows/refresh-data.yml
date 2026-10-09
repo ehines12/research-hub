@@ -1,7 +1,7 @@
 name: Refresh dashboard data
 
-# Weekday pulls (all keyless, via curl): FRED fredgraph CSV, Atlanta Fed GDPNow workbook, Cleveland Fed inflation-nowcast JSON,
-# TSA checkpoint table and the Treasury Fiscal Data DTS API. Daily items refresh on every weekday run. Times in UTC; CT shown for CDT (UTC-5)
+# Weekday pulls (all keyless, via curl): FRED fredgraph CSV, Atlanta Fed GDPNow workbook, Cleveland Fed inflation-nowcast JSON
+# and the Treasury Fiscal Data DTS API. Daily items refresh on every weekday run. Times in UTC; CT shown for CDT (UTC-5)
 # and CST (UTC-6, Nov-Mar). GitHub may start scheduled runs a few minutes late.
 on:
   schedule:
@@ -31,7 +31,7 @@ jobs:
       - name: Install dependencies
         run: python3 -m pip install --quiet openpyxl   # Atlanta Fed GDPNow tracking workbook
 
-      - name: Fetch FRED, Atlanta Fed, Cleveland Fed, TSA and Treasury series
+      - name: Fetch FRED, Atlanta Fed, Cleveland Fed and Treasury series
         id: fetch
         run: |
           set +e

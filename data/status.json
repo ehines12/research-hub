@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-09T20:32:17+00:00",
-   "data_changed_at": "2026-10-09T20:32:14+00:00",
+   "checked_at": "2026-10-09T20:33:16+00:00",
+   "data_changed_at": "2026-10-09T20:33:10+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -274,24 +274,6 @@
       "value": 103.8443
      }
     },
-    "tsa_7d": {
-     "fred": "TSA",
-     "status": "stale",
-     "latest": {
-      "date": "2026-10-08",
-      "value": 2.5013
-     },
-     "error": "curl exit 22: curl: (22) The requested URL returned error: 403"
-    },
-    "tsa_yoy": {
-     "fred": "TSA",
-     "status": "stale",
-     "latest": {
-      "date": "2026-10-08",
-      "value": -2.0479
-     },
-     "error": "curl exit 22: curl: (22) The requested URL returned error: 403"
-    },
     "dts_20d": {
      "fred": "DTS",
      "status": "ok",
@@ -354,6 +336,14 @@
      "latest": {
       "date": "2026-10-02",
       "value": -0.494
+     }
+    },
+    "stlfsi": {
+     "fred": "STLFSI4",
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-02",
+      "value": -0.4681
      }
     }
    }
@@ -893,6 +883,6 @@
    }
   }
  },
- "checked_at": "2026-10-09T20:32:23+00:00",
- "ok": false
+ "checked_at": "2026-10-09T20:33:16+00:00",
+ "ok": true
 }
