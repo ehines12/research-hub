@@ -1,0 +1,106 @@
+{
+ "title": "Research Hub",
+ "owner": "Eric Hines",
+ "areas": [
+  {
+   "id": "macro",
+   "title": "Macro",
+   "icon": "globe",
+   "status": "live",
+   "tagline": "Growth, labor, inflation and policy rates",
+   "description": "Live US macro dashboard sourced from FRED: GDP, payrolls, unemployment, claims, CPI and core PCE inflation, fed funds and the Treasury curve.",
+   "dashboard": "config/dashboards/macro.json"
+  },
+  {
+   "id": "banks",
+   "title": "Banks",
+   "icon": "bank",
+   "status": "coming_soon",
+   "tagline": "Bank fundamentals, peers and valuation",
+   "description": "Bank-level and peer-group fundamentals: NIM and deposit beta, loan and deposit mix, credit quality (NCOs, NPAs, reserves), capital ratios, CRE concentration, and valuation (P/TBV, P/E) for coverage names and the KRE universe.",
+   "planned": [
+    "NIM, deposit costs and cumulative beta",
+    "Loan / deposit mix and growth",
+    "Credit: NCOs, NPAs, ACL coverage",
+    "Capital: CET1, TCE, CRE concentration",
+    "Valuation: P/TBV, P/E vs. ROTCE"
+   ]
+  },
+  {
+   "id": "h8",
+   "title": "H.8",
+   "icon": "table",
+   "status": "coming_soon",
+   "tagline": "Fed H.8 weekly bank balance sheets",
+   "description": "Federal Reserve H.8 (Assets and Liabilities of Commercial Banks in the U.S.) weekly data: loans by category, securities, deposits, borrowings and cash, split by large domestic, small domestic and foreign-related banks.",
+   "planned": [
+    "Total loans & leases: C&I, CRE, consumer, resi",
+    "Securities: Treasury & agency, other",
+    "Deposits: large time vs. other",
+    "Borrowings and cash assets",
+    "Large vs. small domestic banks, weekly and YoY"
+   ]
+  },
+  {
+   "id": "asset-managers",
+   "title": "Asset Managers",
+   "icon": "pie",
+   "status": "coming_soon",
+   "tagline": "AUM, flows, fees and valuation",
+   "description": "Traditional and alternative asset managers: AUM and organic growth, fund flows by asset class, fee rates, margins, and relative valuation.",
+   "planned": [
+    "AUM and organic growth by manager",
+    "Mutual fund / ETF flows by asset class",
+    "Fee rates and operating margins",
+    "Alts fundraising and FRE",
+    "Valuation: P/E, EV/EBITDA"
+   ]
+  },
+  {
+   "id": "rates-credit",
+   "title": "Rates & Credit",
+   "icon": "curve",
+   "status": "coming_soon",
+   "tagline": "Yield curve, spreads and funding",
+   "description": "Treasury curve shape and history, IG and HY credit spreads, SOFR and funding markets, mortgage rates and breakevens.",
+   "planned": [
+    "Treasury curve snapshots and history",
+    "IG / HY OAS",
+    "SOFR, repo and funding",
+    "Mortgage rates and MBS spreads",
+    "TIPS breakevens and real yields"
+   ]
+  },
+  {
+   "id": "markets",
+   "title": "Markets",
+   "icon": "chart",
+   "status": "coming_soon",
+   "tagline": "Equities, sectors and cross-asset",
+   "description": "Equity index and sector performance (incl. financials sub-sectors), volatility, the dollar and commodities.",
+   "planned": [
+    "Index and sector performance",
+    "Financials sub-sector relative performance",
+    "VIX and realized volatility",
+    "Dollar, oil and gold",
+    "Cross-asset correlation"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "id": "financials-dashboard",
+   "title": "Financials Dashboard",
+   "icon": "chart",
+   "url": "https://ehines12.github.io/financials-dashboard/",
+   "tagline": "US financials macro dashboard: rates, credit spreads, H.8/H.6 deposit mix and KRE data"
+  },
+  {
+   "id": "fdic-qbp",
+   "title": "FDIC Quarterly Banking Profile",
+   "icon": "bank",
+   "url": "https://www.fdic.gov/quarterly-banking-profile",
+   "tagline": "Quarterly industry-wide bank financial data from the FDIC"
+  }
+ ]
+}

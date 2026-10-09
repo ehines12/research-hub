@@ -1,0 +1,10 @@
+logs/
+screenshots/
+research-hub.html
+data/*.tmp
+__pycache__/
+*.pyc
+.env
+*.pem
+*.key
+.DS_Store
