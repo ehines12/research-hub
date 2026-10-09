@@ -1,7 +1,7 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-09T19:50:39+00:00",
+   "checked_at": "2026-10-09T20:13:41+00:00",
    "data_changed_at": "2026-10-09T19:50:37+00:00",
    "series": {
     "gdp": {
@@ -119,8 +119,542 @@
      }
     }
    }
+  },
+  "h8": {
+   "checked_at": "2026-10-09T20:13:44+00:00",
+   "data_changed_at": "2026-10-09T20:09:50+00:00",
+   "series": {
+    "TOTLL": {
+     "fred": "TOTLL",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 14097.2232
+     }
+    },
+    "DPSACBW027SBOG": {
+     "fred": "DPSACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 19637.1363
+     }
+    },
+    "TOTCI": {
+     "fred": "TOTCI",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 2952.9144
+     }
+    },
+    "CREACBW027SBOG": {
+     "fred": "CREACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 3137.9971
+     }
+    },
+    "CCLACBW027SBOG": {
+     "fred": "CCLACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 1092.8301
+     }
+    },
+    "DPSSCBW027SBOG": {
+     "fred": "DPSSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 5670.7208
+     }
+    },
+    "LLBSCBW027SBOG": {
+     "fred": "LLBSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 4747.6768
+     }
+    },
+    "DPSLCBW027SBOG": {
+     "fred": "DPSLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 12324.7412
+     }
+    },
+    "LLBLCBW027SBOG": {
+     "fred": "LLBLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 7929.9741
+     }
+    },
+    "LTDACBW027SBOG": {
+     "fred": "LTDACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 2596.6546
+     }
+    },
+    "ODSACBW027SBOG": {
+     "fred": "ODSACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 17040.4817
+     }
+    },
+    "LTDLCBW027SBOG": {
+     "fred": "LTDLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 924.9359
+     }
+    },
+    "ODSLCBW027SBOG": {
+     "fred": "ODSLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 11399.8053
+     }
+    },
+    "LTDSCBW027SBOG": {
+     "fred": "LTDSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 729.7384
+     }
+    },
+    "ODSSCBW027SBOG": {
+     "fred": "ODSSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 4940.9824
+     }
+    },
+    "DEMDEPSL": {
+     "fred": "DEMDEPSL",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 7128.0
+     }
+    },
+    "MDLM": {
+     "fred": "MDLM",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 10473.5
+     }
+    },
+    "SAVINGSL": {
+     "fred": "SAVINGSL",
+     "status": "ok",
+     "latest": {
+      "date": "2020-04-01",
+      "value": 10611.0
+     }
+    },
+    "OCDSL": {
+     "fred": "OCDSL",
+     "status": "ok",
+     "latest": {
+      "date": "2020-04-01",
+      "value": 1010.5
+     }
+    },
+    "STDSL": {
+     "fred": "STDSL",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 1505.6
+     }
+    },
+    "RMFSL": {
+     "fred": "RMFSL",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 3073.9
+     }
+    },
+    "SBCACBW027SBOG": {
+     "fred": "SBCACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 5765.2873
+     }
+    },
+    "TASACBW027SBOG": {
+     "fred": "TASACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 4766.334
+     }
+    },
+    "CLSACBW027SBOG": {
+     "fred": "CLSACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 1928.9048
+     }
+    },
+    "RREACBW027SBOG": {
+     "fred": "RREACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 2702.8172
+     }
+    },
+    "CASACBW027SBOG": {
+     "fred": "CASACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 3169.9406
+     }
+    },
+    "TLAACBW027SBOG": {
+     "fred": "TLAACBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 25927.6581
+     }
+    },
+    "H8_BORROW": {
+     "fred": "H8B3094NCBA",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 2340.9402
+     }
+    },
+    "TOTLL_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 7.559
+     }
+    },
+    "DPSACBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 6.639
+     }
+    },
+    "TOTCI_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 9.688
+     }
+    },
+    "CREACBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 3.495
+     }
+    },
+    "CCLACBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 3.929
+     }
+    },
+    "DPSSCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 4.228
+     }
+    },
+    "LLBSCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 5.401
+     }
+    },
+    "DPSLCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 6.429
+     }
+    },
+    "LLBLCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 7.455
+     }
+    },
+    "LTDACBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 7.619
+     }
+    },
+    "ODSACBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 6.491
+     }
+    },
+    "LTD_SHARE_ALL": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 13.2232
+     }
+    },
+    "LTD_SHARE_LARGE": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 7.5047
+     }
+    },
+    "LTD_SHARE_SMALL": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 12.8685
+     }
+    },
+    "H8_CONTRIB_LTD": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 0.998
+     }
+    },
+    "H8_CONTRIB_OTHER": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 5.641
+     }
+    },
+    "OLD_PRE": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2020-04-01",
+      "value": 11621.5
+     }
+    },
+    "OLD_SPLICED": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 10473.5
+     }
+    },
+    "H6_TOTAL": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 19107.1
+     }
+    },
+    "H6_DDA_SHARE": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 37.3055
+     }
+    },
+    "H6_CONTRIB_DDA": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 8.198
+     }
+    },
+    "H6_OLD_SHARE": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 54.8147
+     }
+    },
+    "H6_CONTRIB_OLD": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": -2.22
+     }
+    },
+    "H6_STD_SHARE": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 7.8798
+     }
+    },
+    "H6_CONTRIB_STD": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": -0.117
+     }
+    },
+    "DEMDEPSL_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 26.195
+     }
+    },
+    "OLD_SPLICED_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": -3.685
+     }
+    },
+    "STDSL_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": -1.389
+     }
+    },
+    "RMFSL_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 5.625
+     }
+    },
+    "H6_TOTAL_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 5.86
+     }
+    },
+    "RMF_PCT_DEP": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 16.0877
+     }
+    },
+    "SBCACBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 2.007
+     }
+    },
+    "TASACBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 2.088
+     }
+    },
+    "CLSACBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 5.019
+     }
+    },
+    "RREACBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 1.663
+     }
+    },
+    "CASACBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 0.643
+     }
+    },
+    "TLAACBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 5.805
+     }
+    },
+    "H8_BORROW_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-23",
+      "value": 4.19
+     }
+    }
+   }
   }
  },
- "checked_at": "2026-10-09T19:50:39+00:00",
+ "checked_at": "2026-10-09T20:13:44+00:00",
  "ok": true
 }

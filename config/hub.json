@@ -13,18 +13,12 @@
     },
     {
       "id": "h8",
-      "title": "H.8",
+      "title": "H.8 / H.6 Deposits & Loans",
       "icon": "table",
-      "status": "coming_soon",
-      "tagline": "Fed H.8 weekly bank balance sheets",
-      "description": "Federal Reserve H.8 (Assets and Liabilities of Commercial Banks in the U.S.) weekly data: loans by category, securities, deposits, borrowings and cash, split by large domestic, small domestic and foreign-related banks.",
-      "planned": [
-        "Total loans & leases: C&I, CRE, consumer, resi",
-        "Securities: Treasury & agency, other",
-        "Deposits: large time vs. other",
-        "Borrowings and cash assets",
-        "Large vs. small domestic banks, weekly and YoY"
-      ]
+      "status": "live",
+      "tagline": "Fed H.8 weekly bank balance sheets and H.6 deposit mix",
+      "description": "Fed H.8 weekly commercial-bank deposits, loans, securities and deposit mix (all / large / small domestic), plus H.6 monthly deposit mix and retail MMFs.",
+      "dashboard": "config/dashboards/h8.json"
     }
   ],
   "links": [

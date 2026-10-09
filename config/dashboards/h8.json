@@ -1,0 +1,1477 @@
+{
+ "id": "h8",
+ "title": "H.8 / H.6 Deposits & Loans",
+ "subtitle": "Fed H.8 (Assets and Liabilities of Commercial Banks in the U.S., weekly) and H.6 (Money Stock Measures, monthly) via FRED, Federal Reserve Bank of St. Louis. Seasonally adjusted unless noted.",
+ "series": [
+  {
+   "key": "TOTLL",
+   "fred": "TOTLL",
+   "title": "Loans & leases, all commercial banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "DPSACBW027SBOG",
+   "fred": "DPSACBW027SBOG",
+   "title": "Deposits, all commercial banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "TOTCI",
+   "fred": "TOTCI",
+   "title": "C&I loans, all commercial banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "CREACBW027SBOG",
+   "fred": "CREACBW027SBOG",
+   "title": "CRE loans, all commercial banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "CCLACBW027SBOG",
+   "fred": "CCLACBW027SBOG",
+   "title": "Credit card & revolving loans, all commercial banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "DPSSCBW027SBOG",
+   "fred": "DPSSCBW027SBOG",
+   "title": "Deposits, small domestically chartered banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "LLBSCBW027SBOG",
+   "fred": "LLBSCBW027SBOG",
+   "title": "Loans & leases, small domestically chartered banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "DPSLCBW027SBOG",
+   "fred": "DPSLCBW027SBOG",
+   "title": "Deposits, large domestically chartered banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "LLBLCBW027SBOG",
+   "fred": "LLBLCBW027SBOG",
+   "title": "Loans & leases, large domestically chartered banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "LTDACBW027SBOG",
+   "fred": "LTDACBW027SBOG",
+   "title": "H.8 Large time deposits, all commercial banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "ODSACBW027SBOG",
+   "fred": "ODSACBW027SBOG",
+   "title": "H.8 Other deposits (ex large time), all commercial banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "LTDLCBW027SBOG",
+   "fred": "LTDLCBW027SBOG",
+   "title": "H.8 Large time deposits, large domestic banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "ODSLCBW027SBOG",
+   "fred": "ODSLCBW027SBOG",
+   "title": "H.8 Other deposits, large domestic banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "LTDSCBW027SBOG",
+   "fred": "LTDSCBW027SBOG",
+   "title": "H.8 Large time deposits, small domestic banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "ODSSCBW027SBOG",
+   "fred": "ODSSCBW027SBOG",
+   "title": "H.8 Other deposits, small domestic banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "DEMDEPSL",
+   "fred": "DEMDEPSL",
+   "title": "H.6 Demand deposits",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Monthly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "MDLM",
+   "fred": "MDLM",
+   "title": "H.6 Other liquid deposits (savings, MMDA, OCDs; from May 2020)",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Monthly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "SAVINGSL",
+   "fred": "SAVINGSL",
+   "title": "H.6 Savings deposits incl. MMDA (discontinued Apr 2020)",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Monthly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "OCDSL",
+   "fred": "OCDSL",
+   "title": "H.6 Other checkable deposits (discontinued Apr 2020)",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Monthly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "STDSL",
+   "fred": "STDSL",
+   "title": "H.6 Small-denomination time deposits",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Monthly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "RMFSL",
+   "fred": "RMFSL",
+   "title": "H.6 Retail money market funds",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Monthly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "SBCACBW027SBOG",
+   "fred": "SBCACBW027SBOG",
+   "title": "Securities in bank credit, all commercial banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "TASACBW027SBOG",
+   "fred": "TASACBW027SBOG",
+   "title": "Treasury & agency securities, all commercial banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "CLSACBW027SBOG",
+   "fred": "CLSACBW027SBOG",
+   "title": "Consumer loans, all commercial banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "RREACBW027SBOG",
+   "fred": "RREACBW027SBOG",
+   "title": "Residential real estate loans, all commercial banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "CASACBW027SBOG",
+   "fred": "CASACBW027SBOG",
+   "title": "Cash assets, all commercial banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "TLAACBW027SBOG",
+   "fred": "TLAACBW027SBOG",
+   "title": "Total assets, all commercial banks",
+   "units": "$bn",
+   "transform": "level",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "H8_BORROW",
+   "fred": "H8B3094NCBA",
+   "title": "Borrowings, all commercial banks (NSA)",
+   "units": "$bn",
+   "transform": "div1000",
+   "freq": "Weekly",
+   "kpi": false,
+   "src_label": "FRED / Fed H.8"
+  }
+ ],
+ "derived": [
+  {
+   "key": "TOTLL_YOY",
+   "op": "yoy",
+   "of": "TOTLL",
+   "title": "Loans & leases, all commercial banks \u2014 YoY %",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "DPSACBW027SBOG_YOY",
+   "op": "yoy",
+   "of": "DPSACBW027SBOG",
+   "title": "Deposits, all commercial banks \u2014 YoY %",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "TOTCI_YOY",
+   "op": "yoy",
+   "of": "TOTCI",
+   "title": "C&I loans, all commercial banks \u2014 YoY %",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "CREACBW027SBOG_YOY",
+   "op": "yoy",
+   "of": "CREACBW027SBOG",
+   "title": "CRE loans, all commercial banks \u2014 YoY %",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "CCLACBW027SBOG_YOY",
+   "op": "yoy",
+   "of": "CCLACBW027SBOG",
+   "title": "Credit card & revolving loans, all commercial banks \u2014 YoY %",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "DPSSCBW027SBOG_YOY",
+   "op": "yoy",
+   "of": "DPSSCBW027SBOG",
+   "title": "Deposits, small domestically chartered banks \u2014 YoY %",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "LLBSCBW027SBOG_YOY",
+   "op": "yoy",
+   "of": "LLBSCBW027SBOG",
+   "title": "Loans & leases, small domestically chartered banks \u2014 YoY %",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "DPSLCBW027SBOG_YOY",
+   "op": "yoy",
+   "of": "DPSLCBW027SBOG",
+   "title": "Deposits, large domestically chartered banks \u2014 YoY %",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "LLBLCBW027SBOG_YOY",
+   "op": "yoy",
+   "of": "LLBLCBW027SBOG",
+   "title": "Loans & leases, large domestically chartered banks \u2014 YoY %",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "LTDACBW027SBOG_YOY",
+   "op": "yoy",
+   "of": "LTDACBW027SBOG",
+   "title": "H.8 Large time deposits, all commercial banks \u2014 YoY %",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "ODSACBW027SBOG_YOY",
+   "op": "yoy",
+   "of": "ODSACBW027SBOG",
+   "title": "H.8 Other deposits (ex large time), all commercial banks \u2014 YoY %",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "LTD_SHARE_ALL",
+   "op": "share",
+   "num": "LTDACBW027SBOG",
+   "den": "DPSACBW027SBOG",
+   "title": "H.8 Large time deposits as % of deposits, all commercial banks",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "LTD_SHARE_LARGE",
+   "op": "share",
+   "num": "LTDLCBW027SBOG",
+   "den": "DPSLCBW027SBOG",
+   "title": "H.8 Large time deposits as % of deposits, large domestic banks",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "LTD_SHARE_SMALL",
+   "op": "share",
+   "num": "LTDSCBW027SBOG",
+   "den": "DPSSCBW027SBOG",
+   "title": "H.8 Large time deposits as % of deposits, small domestic banks",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "H8_CONTRIB_LTD",
+   "op": "contribution",
+   "comp": "LTDACBW027SBOG",
+   "total": "DPSACBW027SBOG",
+   "title": "H.8 Contribution to deposit YoY: large time (pp)",
+   "units": "pp",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "H8_CONTRIB_OTHER",
+   "op": "contribution",
+   "comp": "ODSACBW027SBOG",
+   "total": "DPSACBW027SBOG",
+   "title": "H.8 Contribution to deposit YoY: other deposits (pp)",
+   "units": "pp",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "OLD_PRE",
+   "op": "sum",
+   "of": [
+    "SAVINGSL",
+    "OCDSL"
+   ],
+   "title": "H.6 Savings + other checkable deposits (pre-May 2020)",
+   "units": "$bn",
+   "freq": "Monthly",
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "OLD_SPLICED",
+   "op": "splice",
+   "pre": "OLD_PRE",
+   "post": "MDLM",
+   "title": "H.6 Other liquid deposits (savings+OCD before May 2020, MDLM after)",
+   "units": "$bn",
+   "freq": "Monthly",
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "H6_TOTAL",
+   "op": "sum",
+   "of": [
+    "DEMDEPSL",
+    "OLD_SPLICED",
+    "STDSL"
+   ],
+   "title": "H.6 Deposits: demand + other liquid + small time",
+   "units": "$bn",
+   "freq": "Monthly",
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "H6_DDA_SHARE",
+   "op": "share",
+   "num": "DEMDEPSL",
+   "den": "H6_TOTAL",
+   "title": "H.6 DDA share of deposits",
+   "units": "%",
+   "freq": "Monthly",
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "H6_CONTRIB_DDA",
+   "op": "contribution",
+   "comp": "DEMDEPSL",
+   "total": "H6_TOTAL",
+   "title": "H.6 Contribution to deposit YoY: DDA (pp)",
+   "units": "pp",
+   "freq": "Monthly",
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "H6_OLD_SHARE",
+   "op": "share",
+   "num": "OLD_SPLICED",
+   "den": "H6_TOTAL",
+   "title": "H.6 OLD share of deposits",
+   "units": "%",
+   "freq": "Monthly",
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "H6_CONTRIB_OLD",
+   "op": "contribution",
+   "comp": "OLD_SPLICED",
+   "total": "H6_TOTAL",
+   "title": "H.6 Contribution to deposit YoY: OLD (pp)",
+   "units": "pp",
+   "freq": "Monthly",
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "H6_STD_SHARE",
+   "op": "share",
+   "num": "STDSL",
+   "den": "H6_TOTAL",
+   "title": "H.6 STD share of deposits",
+   "units": "%",
+   "freq": "Monthly",
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "H6_CONTRIB_STD",
+   "op": "contribution",
+   "comp": "STDSL",
+   "total": "H6_TOTAL",
+   "title": "H.6 Contribution to deposit YoY: STD (pp)",
+   "units": "pp",
+   "freq": "Monthly",
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "DEMDEPSL_YOY",
+   "op": "yoy",
+   "of": "DEMDEPSL",
+   "title": "H.6 Demand deposits \u2014 YoY %",
+   "units": "%",
+   "freq": "Monthly",
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "OLD_SPLICED_YOY",
+   "op": "yoy",
+   "of": "OLD_SPLICED",
+   "title": "H.6 Other liquid deposits \u2014 YoY %",
+   "units": "%",
+   "freq": "Monthly",
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "STDSL_YOY",
+   "op": "yoy",
+   "of": "STDSL",
+   "title": "H.6 Small time deposits \u2014 YoY %",
+   "units": "%",
+   "freq": "Monthly",
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "RMFSL_YOY",
+   "op": "yoy",
+   "of": "RMFSL",
+   "title": "H.6 Retail money market funds \u2014 YoY %",
+   "units": "%",
+   "freq": "Monthly",
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "H6_TOTAL_YOY",
+   "op": "yoy",
+   "of": "H6_TOTAL",
+   "title": "H.6 Total deposits \u2014 YoY %",
+   "units": "%",
+   "freq": "Monthly",
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "RMF_PCT_DEP",
+   "op": "share",
+   "num": "RMFSL",
+   "den": "H6_TOTAL",
+   "title": "H.6 Retail money market funds as % of deposits",
+   "units": "%",
+   "freq": "Monthly",
+   "src_label": "FRED / Fed H.6"
+  },
+  {
+   "key": "SBCACBW027SBOG_YOY",
+   "op": "yoy",
+   "of": "SBCACBW027SBOG",
+   "title": "Securities in bank credit, all commercial banks \u2014 YoY %",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "TASACBW027SBOG_YOY",
+   "op": "yoy",
+   "of": "TASACBW027SBOG",
+   "title": "Treasury & agency securities, all commercial banks \u2014 YoY %",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "CLSACBW027SBOG_YOY",
+   "op": "yoy",
+   "of": "CLSACBW027SBOG",
+   "title": "Consumer loans, all commercial banks \u2014 YoY %",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "RREACBW027SBOG_YOY",
+   "op": "yoy",
+   "of": "RREACBW027SBOG",
+   "title": "Residential real estate loans, all commercial banks \u2014 YoY %",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "CASACBW027SBOG_YOY",
+   "op": "yoy",
+   "of": "CASACBW027SBOG",
+   "title": "Cash assets, all commercial banks \u2014 YoY %",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "TLAACBW027SBOG_YOY",
+   "op": "yoy",
+   "of": "TLAACBW027SBOG",
+   "title": "Total assets, all commercial banks \u2014 YoY %",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  },
+  {
+   "key": "H8_BORROW_YOY",
+   "op": "yoy",
+   "of": "H8_BORROW",
+   "title": "Borrowings, all commercial banks (NSA) \u2014 YoY %",
+   "units": "%",
+   "freq": "Weekly",
+   "src_label": "FRED / Fed H.8"
+  }
+ ],
+ "kpis": [
+  {
+   "key": "DPSACBW027SBOG",
+   "label": "Bank deposits",
+   "unit": "pct",
+   "polarity": 1,
+   "fmt": "tn"
+  },
+  {
+   "key": "TOTLL",
+   "label": "Bank loans & leases",
+   "unit": "pct",
+   "polarity": 1,
+   "fmt": "tn"
+  },
+  {
+   "key": "DPSSCBW027SBOG",
+   "label": "Small-bank deposits",
+   "unit": "pct",
+   "polarity": 1,
+   "fmt": "tn"
+  },
+  {
+   "key": "H6_DDA_SHARE",
+   "label": "DDA share (H.6)",
+   "unit": "bp",
+   "polarity": 1,
+   "fmt": "pct2"
+  },
+  {
+   "key": "H6_STD_SHARE",
+   "label": "Small time dep. share (H.6)",
+   "unit": "bp",
+   "polarity": -1,
+   "fmt": "pct2"
+  },
+  {
+   "key": "LTD_SHARE_ALL",
+   "label": "Large time dep. share (H.8)",
+   "unit": "bp",
+   "polarity": -1,
+   "fmt": "pct2"
+  },
+  {
+   "key": "DPSLCBW027SBOG",
+   "label": "Large-bank deposits",
+   "unit": "pct",
+   "polarity": 1,
+   "fmt": "tn"
+  },
+  {
+   "key": "LLBSCBW027SBOG",
+   "label": "Small-bank loans & leases",
+   "unit": "pct",
+   "polarity": 1,
+   "fmt": "tn"
+  },
+  {
+   "key": "TOTCI",
+   "label": "C&I loans",
+   "unit": "pct",
+   "polarity": 1,
+   "fmt": "tn"
+  },
+  {
+   "key": "CREACBW027SBOG",
+   "label": "CRE loans",
+   "unit": "pct",
+   "polarity": 1,
+   "fmt": "tn"
+  },
+  {
+   "key": "SBCACBW027SBOG",
+   "label": "Securities",
+   "unit": "pct",
+   "polarity": 0,
+   "fmt": "tn"
+  },
+  {
+   "key": "CASACBW027SBOG",
+   "label": "Cash assets",
+   "unit": "pct",
+   "polarity": 0,
+   "fmt": "tn"
+  },
+  {
+   "key": "TLAACBW027SBOG",
+   "label": "Total assets",
+   "unit": "pct",
+   "polarity": 0,
+   "fmt": "tn"
+  },
+  {
+   "key": "H6_TOTAL",
+   "label": "H.6 deposits (DDA+liquid+small time)",
+   "unit": "pct",
+   "polarity": 1,
+   "fmt": "tn"
+  }
+ ],
+ "summary": [
+  [
+   "Bank Deposits & Loans",
+   "DPSACBW027SBOG",
+   "Deposits, all commercial banks",
+   "pct",
+   1
+  ],
+  [
+   "Bank Deposits & Loans",
+   "DPSLCBW027SBOG",
+   "Deposits, large domestic banks",
+   "pct",
+   1
+  ],
+  [
+   "Bank Deposits & Loans",
+   "DPSSCBW027SBOG",
+   "Deposits, small domestic banks",
+   "pct",
+   1
+  ],
+  [
+   "Bank Deposits & Loans",
+   "TOTLL",
+   "Loans & leases, all commercial banks",
+   "pct",
+   1
+  ],
+  [
+   "Bank Deposits & Loans",
+   "LLBLCBW027SBOG",
+   "Loans & leases, large domestic banks",
+   "pct",
+   1
+  ],
+  [
+   "Bank Deposits & Loans",
+   "LLBSCBW027SBOG",
+   "Loans & leases, small domestic banks",
+   "pct",
+   1
+  ],
+  [
+   "Bank Deposits & Loans",
+   "TOTCI",
+   "C&I loans",
+   "pct",
+   1
+  ],
+  [
+   "Bank Deposits & Loans",
+   "CREACBW027SBOG",
+   "CRE loans",
+   "pct",
+   1
+  ],
+  [
+   "Bank Deposits & Loans",
+   "CCLACBW027SBOG",
+   "Credit card & revolving loans",
+   "pct",
+   1
+  ],
+  [
+   "Bank Deposits & Loans",
+   "DPSACBW027SBOG_YOY",
+   "Deposit growth YoY, all banks",
+   "bp",
+   1
+  ],
+  [
+   "Bank Deposits & Loans",
+   "DPSLCBW027SBOG_YOY",
+   "Deposit growth YoY, large banks",
+   "bp",
+   1
+  ],
+  [
+   "Bank Deposits & Loans",
+   "DPSSCBW027SBOG_YOY",
+   "Deposit growth YoY, small banks",
+   "bp",
+   1
+  ],
+  [
+   "Bank Deposits & Loans",
+   "TOTLL_YOY",
+   "Loan growth YoY, all banks",
+   "bp",
+   1
+  ],
+  [
+   "Bank Deposits & Loans",
+   "LLBLCBW027SBOG_YOY",
+   "Loan growth YoY, large banks",
+   "bp",
+   1
+  ],
+  [
+   "Bank Deposits & Loans",
+   "LLBSCBW027SBOG_YOY",
+   "Loan growth YoY, small banks",
+   "bp",
+   1
+  ],
+  [
+   "Bank Deposits & Loans",
+   "TOTCI_YOY",
+   "C&I loan growth YoY",
+   "bp",
+   1
+  ],
+  [
+   "Bank Deposits & Loans",
+   "CREACBW027SBOG_YOY",
+   "CRE loan growth YoY",
+   "bp",
+   1
+  ],
+  [
+   "Bank Deposits & Loans",
+   "CCLACBW027SBOG_YOY",
+   "Card loan growth YoY",
+   "bp",
+   1
+  ],
+  [
+   "Deposit Mix",
+   "LTDACBW027SBOG",
+   "H.8 Large time deposits, all banks",
+   "pct",
+   0
+  ],
+  [
+   "Deposit Mix",
+   "ODSACBW027SBOG",
+   "H.8 Other deposits, all banks",
+   "pct",
+   1
+  ],
+  [
+   "Deposit Mix",
+   "LTDLCBW027SBOG",
+   "H.8 Large time deposits, large banks",
+   "pct",
+   0
+  ],
+  [
+   "Deposit Mix",
+   "ODSLCBW027SBOG",
+   "H.8 Other deposits, large banks",
+   "pct",
+   1
+  ],
+  [
+   "Deposit Mix",
+   "LTDSCBW027SBOG",
+   "H.8 Large time deposits, small banks",
+   "pct",
+   0
+  ],
+  [
+   "Deposit Mix",
+   "ODSSCBW027SBOG",
+   "H.8 Other deposits, small banks",
+   "pct",
+   1
+  ],
+  [
+   "Deposit Mix",
+   "LTD_SHARE_ALL",
+   "H.8 Large time share of deposits, all banks",
+   "bp",
+   -1
+  ],
+  [
+   "Deposit Mix",
+   "LTD_SHARE_LARGE",
+   "H.8 Large time share, large banks",
+   "bp",
+   -1
+  ],
+  [
+   "Deposit Mix",
+   "LTD_SHARE_SMALL",
+   "H.8 Large time share, small banks",
+   "bp",
+   -1
+  ],
+  [
+   "Deposit Mix",
+   "LTDACBW027SBOG_YOY",
+   "H.8 Large time deposit growth YoY",
+   "bp",
+   0
+  ],
+  [
+   "Deposit Mix",
+   "ODSACBW027SBOG_YOY",
+   "H.8 Other deposit growth YoY",
+   "bp",
+   1
+  ],
+  [
+   "Deposit Mix",
+   "DEMDEPSL",
+   "H.6 Demand deposits",
+   "pct",
+   1
+  ],
+  [
+   "Deposit Mix",
+   "OLD_SPLICED",
+   "H.6 Other liquid deposits (savings/MMDA/OCD)",
+   "pct",
+   1
+  ],
+  [
+   "Deposit Mix",
+   "STDSL",
+   "H.6 Small-denomination time deposits",
+   "pct",
+   0
+  ],
+  [
+   "Deposit Mix",
+   "H6_TOTAL",
+   "H.6 Total (DDA + other liquid + small time)",
+   "pct",
+   1
+  ],
+  [
+   "Deposit Mix",
+   "RMFSL",
+   "H.6 Retail money market funds",
+   "pct",
+   -1
+  ],
+  [
+   "Deposit Mix",
+   "H6_DDA_SHARE",
+   "H.6 DDA share of deposits",
+   "bp",
+   1
+  ],
+  [
+   "Deposit Mix",
+   "H6_OLD_SHARE",
+   "H.6 Other liquid share of deposits",
+   "bp",
+   0
+  ],
+  [
+   "Deposit Mix",
+   "H6_STD_SHARE",
+   "H.6 Small time share of deposits",
+   "bp",
+   -1
+  ],
+  [
+   "Deposit Mix",
+   "RMF_PCT_DEP",
+   "H.6 Retail MMF as % of deposits",
+   "bp",
+   -1
+  ],
+  [
+   "Deposit Mix",
+   "H6_TOTAL_YOY",
+   "H.6 Total deposit growth YoY",
+   "bp",
+   1
+  ],
+  [
+   "H.8 Balance Sheet (added)",
+   "SBCACBW027SBOG",
+   "Securities in bank credit",
+   "pct",
+   0
+  ],
+  [
+   "H.8 Balance Sheet (added)",
+   "TASACBW027SBOG",
+   "Treasury & agency securities",
+   "pct",
+   0
+  ],
+  [
+   "H.8 Balance Sheet (added)",
+   "CLSACBW027SBOG",
+   "Consumer loans",
+   "pct",
+   1
+  ],
+  [
+   "H.8 Balance Sheet (added)",
+   "RREACBW027SBOG",
+   "Residential real estate loans",
+   "pct",
+   1
+  ],
+  [
+   "H.8 Balance Sheet (added)",
+   "CASACBW027SBOG",
+   "Cash assets",
+   "pct",
+   0
+  ],
+  [
+   "H.8 Balance Sheet (added)",
+   "TLAACBW027SBOG",
+   "Total assets",
+   "pct",
+   0
+  ],
+  [
+   "H.8 Balance Sheet (added)",
+   "H8_BORROW",
+   "Borrowings (NSA)",
+   "pct",
+   0
+  ],
+  [
+   "H.8 Balance Sheet (added)",
+   "SBCACBW027SBOG_YOY",
+   "Securities growth YoY",
+   "bp",
+   0
+  ],
+  [
+   "H.8 Balance Sheet (added)",
+   "CLSACBW027SBOG_YOY",
+   "Consumer loan growth YoY",
+   "bp",
+   1
+  ],
+  [
+   "H.8 Balance Sheet (added)",
+   "RREACBW027SBOG_YOY",
+   "Residential RE loan growth YoY",
+   "bp",
+   1
+  ],
+  [
+   "H.8 Balance Sheet (added)",
+   "TLAACBW027SBOG_YOY",
+   "Total asset growth YoY",
+   "bp",
+   0
+  ]
+ ],
+ "sections": [
+  {
+   "title": "Bank Deposits & Loans \u00b7 H.8 weekly, SA",
+   "cols": 2,
+   "panels": [
+    {
+     "title": "Deposit growth YoY (%): all / large / small banks",
+     "type": "line",
+     "series": [
+      "DPSACBW027SBOG_YOY",
+      "DPSLCBW027SBOG_YOY",
+      "DPSSCBW027SBOG_YOY"
+     ],
+     "zero": true,
+     "labels": [
+      "All commercial banks",
+      "Large domestic",
+      "Small domestic"
+     ],
+     "fmt": [
+      "pct",
+      "pct",
+      "pct"
+     ]
+    },
+    {
+     "title": "Loan & lease growth YoY (%): all / large / small banks",
+     "type": "line",
+     "series": [
+      "TOTLL_YOY",
+      "LLBLCBW027SBOG_YOY",
+      "LLBSCBW027SBOG_YOY"
+     ],
+     "zero": true,
+     "labels": [
+      "All commercial banks",
+      "Large domestic",
+      "Small domestic"
+     ],
+     "fmt": [
+      "pct",
+      "pct",
+      "pct"
+     ]
+    },
+    {
+     "title": "Loan growth by type YoY (%): C&I / CRE / credit cards",
+     "type": "line",
+     "series": [
+      "TOTCI_YOY",
+      "CREACBW027SBOG_YOY",
+      "CCLACBW027SBOG_YOY"
+     ],
+     "zero": true,
+     "labels": [
+      "C&I",
+      "CRE",
+      "Credit cards & revolving"
+     ],
+     "fmt": [
+      "pct",
+      "pct",
+      "pct"
+     ]
+    },
+    {
+     "title": "Deposits vs loans & leases, all commercial banks ($T)",
+     "type": "line",
+     "series": [
+      "DPSACBW027SBOG",
+      "TOTLL"
+     ],
+     "scale": 0.001,
+     "labels": [
+      "Deposits",
+      "Loans & leases"
+     ],
+     "fmt": [
+      "T",
+      "T"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Deposit Mix \u00b7 H.8 weekly, commercial banks (all / large / small domestic)",
+   "cols": 2,
+   "panels": [
+    {
+     "title": "Large time deposits as % of total deposits",
+     "type": "line",
+     "series": [
+      "LTD_SHARE_ALL",
+      "LTD_SHARE_LARGE",
+      "LTD_SHARE_SMALL"
+     ],
+     "labels": [
+      "All commercial banks",
+      "Large domestic",
+      "Small domestic"
+     ],
+     "fmt": [
+      "pct",
+      "pct",
+      "pct"
+     ],
+     "note": "H.8 = commercial banks only. Small-bank large-time deposits start Jul 2009."
+    },
+    {
+     "title": "Contribution to all-bank deposit YoY growth (pp)",
+     "type": "bar",
+     "types": [
+      "bar",
+      "bar",
+      "line"
+     ],
+     "stacked": true,
+     "zero": true,
+     "series": [
+      "H8_CONTRIB_LTD",
+      "H8_CONTRIB_OTHER",
+      "DPSACBW027SBOG_YOY"
+     ],
+     "labels": [
+      "Large time deposits",
+      "Other deposits",
+      "Total deposits YoY %"
+     ],
+     "fmt": [
+      "pp",
+      "pp",
+      "pct"
+     ],
+     "note": "Other deposits (all banks) start Jul 2009, so the stacked split begins mid-2010."
+    },
+    {
+     "title": "Deposit levels, all commercial banks ($T)",
+     "type": "line",
+     "series": [
+      "ODSACBW027SBOG",
+      "LTDACBW027SBOG"
+     ],
+     "scale": 0.001,
+     "labels": [
+      "Other deposits",
+      "Large time deposits"
+     ],
+     "fmt": [
+      "T",
+      "T"
+     ]
+    },
+    {
+     "title": "YoY growth (%): large time vs other deposits, all banks",
+     "type": "line",
+     "series": [
+      "LTDACBW027SBOG_YOY",
+      "ODSACBW027SBOG_YOY"
+     ],
+     "zero": true,
+     "labels": [
+      "Large time deposits",
+      "Other deposits"
+     ],
+     "fmt": [
+      "pct",
+      "pct"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Deposit Mix \u00b7 H.6 monthly, all depository institutions (banks, thrifts, credit unions)",
+   "cols": 2,
+   "panels": [
+    {
+     "title": "Deposit mix, share of total (%)",
+     "type": "line",
+     "stacked": true,
+     "fill": true,
+     "series": [
+      "H6_DDA_SHARE",
+      "H6_OLD_SHARE",
+      "H6_STD_SHARE"
+     ],
+     "labels": [
+      "Demand deposits",
+      "Other liquid (savings/MMDA/OCD)",
+      "Small time deposits"
+     ],
+     "fmt": [
+      "pct",
+      "pct",
+      "pct"
+     ],
+     "note": "H.6 = all depository institutions (banks, thrifts, credit unions). Other liquid before May 2020 = savings + other checkable deposits (spliced)."
+    },
+    {
+     "title": "Contribution to deposit YoY growth (pp)",
+     "type": "bar",
+     "types": [
+      "bar",
+      "bar",
+      "bar",
+      "line"
+     ],
+     "stacked": true,
+     "zero": true,
+     "series": [
+      "H6_CONTRIB_DDA",
+      "H6_CONTRIB_OLD",
+      "H6_CONTRIB_STD",
+      "H6_TOTAL_YOY"
+     ],
+     "labels": [
+      "Demand deposits",
+      "Other liquid",
+      "Small time",
+      "Total YoY %"
+     ],
+     "fmt": [
+      "pp",
+      "pp",
+      "pp",
+      "pct"
+     ]
+    },
+    {
+     "title": "Levels ($T): deposits by product and retail MMFs",
+     "type": "line",
+     "series": [
+      "DEMDEPSL",
+      "OLD_SPLICED",
+      "STDSL",
+      "RMFSL"
+     ],
+     "scale": 0.001,
+     "labels": [
+      "Demand deposits",
+      "Other liquid",
+      "Small time",
+      "Retail MMFs"
+     ],
+     "fmt": [
+      "T",
+      "T",
+      "T",
+      "T"
+     ]
+    },
+    {
+     "title": "YoY growth (%) by product, plus retail MMFs",
+     "type": "line",
+     "series": [
+      "DEMDEPSL_YOY",
+      "OLD_SPLICED_YOY",
+      "STDSL_YOY",
+      "RMFSL_YOY"
+     ],
+     "zero": true,
+     "labels": [
+      "Demand deposits",
+      "Other liquid",
+      "Small time",
+      "Retail MMFs"
+     ],
+     "fmt": [
+      "pct",
+      "pct",
+      "pct",
+      "pct"
+     ]
+    },
+    {
+     "title": "Retail money market funds as % of deposits (deposit competition)",
+     "type": "line",
+     "series": [
+      "RMF_PCT_DEP"
+     ],
+     "labels": [
+      "Retail MMFs / (DDA + other liquid + small time)"
+     ],
+     "fmt": [
+      "pct"
+     ],
+     "full": true
+    }
+   ]
+  },
+  {
+   "title": "H.8 Balance Sheet \u00b7 all commercial banks, weekly (added)",
+   "cols": 2,
+   "panels": [
+    {
+     "title": "Bank credit & liquidity ($T): loans & leases, securities, cash",
+     "type": "line",
+     "series": [
+      "TOTLL",
+      "SBCACBW027SBOG",
+      "CASACBW027SBOG"
+     ],
+     "scale": 0.001,
+     "labels": [
+      "Loans & leases",
+      "Securities",
+      "Cash assets"
+     ],
+     "fmt": [
+      "T",
+      "T",
+      "T"
+     ]
+    },
+    {
+     "title": "Securities YoY (%): total vs Treasury & agency",
+     "type": "line",
+     "series": [
+      "SBCACBW027SBOG_YOY",
+      "TASACBW027SBOG_YOY"
+     ],
+     "zero": true,
+     "labels": [
+      "Securities in bank credit",
+      "Treasury & agency"
+     ],
+     "fmt": [
+      "pct",
+      "pct"
+     ]
+    },
+    {
+     "title": "More loan categories YoY (%): consumer, residential RE",
+     "type": "line",
+     "series": [
+      "CLSACBW027SBOG_YOY",
+      "RREACBW027SBOG_YOY"
+     ],
+     "zero": true,
+     "labels": [
+      "Consumer loans",
+      "Residential real estate"
+     ],
+     "fmt": [
+      "pct",
+      "pct"
+     ]
+    },
+    {
+     "title": "Total assets vs borrowings ($T)",
+     "type": "line",
+     "series": [
+      "TLAACBW027SBOG",
+      "H8_BORROW"
+     ],
+     "scale": 0.001,
+     "labels": [
+      "Total assets (SA)",
+      "Borrowings (NSA)"
+     ],
+     "fmt": [
+      "T",
+      "T"
+     ],
+     "y2": [
+      "H8_BORROW"
+     ],
+     "note": "Borrowings on the right axis; FRED carries H.8 borrowings not seasonally adjusted only (H8B3094NCBA)."
+    }
+   ]
+  }
+ ],
+ "panel_latest": true,
+ "summary_title": "Summary of changes",
+ "summary_note": "vs the observation on or before each lookback date \u00b7 bp for % series (shares, growth rates) \u00b7 % change for levels \u00b7 \u2013 = not meaningful at the series frequency"
+}

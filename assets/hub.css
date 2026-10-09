@@ -53,3 +53,15 @@ body.embedded main{max-width:none;padding:0}body.embedded .foot{display:none}
 .embed{display:block;width:100%;height:calc(100vh - 55px);border:0;background:#fff}
 .srclink{color:var(--mut);font-size:12px;margin-right:14px}.srclink:hover{color:var(--acc)}
 a.kpi.linked{display:block;color:inherit}a.kpi.linked:hover{border-color:var(--acc)}a.kpi.linked .t svg{opacity:.7}
+.panels.c2{grid-template-columns:repeat(2,minmax(0,1fr))}.panels.c2 .panel.wide{grid-column:auto}
+.plat{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:11.5px;color:var(--mut);margin:-2px 0 8px}.plat i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px}.plat b{color:var(--txt)}
+.pnote{color:var(--mut);font-size:11px;margin-top:6px;font-style:italic}.stl{color:var(--warn);font-weight:700;font-size:10px}
+.kpi.chip .chips{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:8px}.kpi.chip .chips div{background:var(--panel2);border-radius:5px;padding:3px 4px;text-align:center}
+.kpi.chip .chips span{display:block;font-size:9.5px;color:var(--mut)}.kpi.chip .chips b{font-size:11.5px;font-variant-numeric:tabular-nums}.neu{color:var(--acc)}
+.hint{font-size:11px;text-transform:none;letter-spacing:0;font-weight:400;color:var(--mut)}
+.tblwrap{border:1px solid var(--line);border-radius:10px;overflow:auto;background:var(--panel)}
+.sumtbl{width:100%;border-collapse:collapse;font-size:12.5px;font-variant-numeric:tabular-nums}.sumtbl th,.sumtbl td{padding:6px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+.sumtbl th{color:var(--mut);font-weight:600;background:var(--panel2)}.sumtbl .r{text-align:right}.sumtbl .b{font-weight:600}.sumtbl .grp td{color:var(--acc);font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.06em;background:#131a22}
+.sumtbl .sid{color:var(--mut);font-size:10.5px;margin-left:4px}.sumtbl .cu{color:var(--mut)}
+@media(max-width:900px){.panels.c2{grid-template-columns:1fr}}
+.plat span{white-space:nowrap}.kpi.chip .t{white-space:normal;line-height:1.25;min-height:2.5em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.kpi.chip .chips b{font-size:10.5px;white-space:nowrap}

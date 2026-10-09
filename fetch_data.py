@@ -217,6 +217,7 @@ def run_dashboard(cfg_path):
         st = rec["status"]
         lt = rec.get("latest") or {}
         print(f"  {s['fred']:<16} {st:<7} {lt.get('date','-'):<11} {lt.get('value','')}  {rec.get('error','')}")
+    _derive_all(cfg, result)
     DATA.mkdir(exist_ok=True)
     # Only rewrite the (large) data file when the numbers or config actually changed, so the
     # scheduled job commits a big diff only on new FRED data. updated_at = last data change.
@@ -231,10 +232,71 @@ def run_dashboard(cfg_path):
     return result
 
 
+def _latest_fields(rec, no_yoy=False):
+    o = rec["obs"]
+    rec["latest"] = {"date": o[-1][0], "value": o[-1][1]}
+    rec["prior"] = {"date": o[-2][0], "value": o[-2][1]} if len(o) > 1 else None
+    ya = year_ago(o)
+    rec["year_ago"] = {"date": ya[0], "value": ya[1]} if ya and not no_yoy else None
+
+
+def _derive_all(cfg, result):
+    """Derived series (config 'derived'), KPI tiles ('kpis') and summary table ('summary'),
+    using calc.py (same formulas as the Financials Dashboard)."""
+    import calc
+    S = result["series"]
+    get = lambda k: [list(o) for o in (S.get(k, {}).get("obs") or [])]
+    for spec in cfg.get("derived", []):
+        rec = {k: v for k, v in spec.items()}
+        rec.setdefault("fred", "derived")
+        ins = calc.inputs_of(spec)
+        try:
+            obs = calc.derive(spec["op"], spec, get)
+        except Exception as e:  # noqa: BLE001
+            obs, rec["error"] = [], str(e)
+        rec["obs"] = obs
+        rec["derived_from"] = ins
+        st = [S.get(k, {}).get("status", "failed") for k in ins]
+        rec["status"] = "failed" if not obs else ("stale" if any(x != "ok" for x in st) else "ok")
+        if obs:
+            _latest_fields(rec, spec.get("no_yoy"))
+        S[spec["key"]] = rec
+        lt = rec.get("latest") or {}
+        print(f"  {'= ' + spec['key']:<24} {rec['status']:<7} {lt.get('date','-'):<11} {lt.get('value','')}")
+    hs = [h for h, _ in calc.HORIZONS]
+    if cfg.get("kpis"):
+        out = []
+        for k in cfg["kpis"]:
+            s = S.get(k["key"]) or {}
+            obs = s.get("obs") or []
+            t = {**k, "freq": s.get("freq"), "status": s.get("status", "failed"), "src_label": s.get("src_label")}
+            if obs:
+                t.update(latest=obs[-1][1], asof=obs[-1][0],
+                         chg={h: calc.change(obs, k["unit"], h, s.get("freq")) for h in hs})
+            out.append(t)
+        result["kpis"] = out
+    if cfg.get("summary"):
+        rows = []
+        for section, key, name, unit, pol in cfg["summary"]:
+            s = S.get(key) or {}
+            obs = s.get("obs") or []
+            r = {"section": section, "id": key, "name": name, "unit": unit, "polarity": pol,
+                 "change_unit": calc.UNIT_LABEL[unit], "status": s.get("status", "failed")}
+            if obs:
+                chg = {h: calc.change(obs, unit, h, s.get("freq")) for h in hs}
+                r.update(units=s.get("units"), freq=s.get("freq"), latest=obs[-1][1], asof=obs[-1][0],
+                         latest_fmt=calc.fmt_level(obs[-1][1], s.get("units")), chg=chg,
+                         chg_fmt={h: calc.fmt_change(c, unit) for h, c in chg.items()})
+            else:
+                r["missing"] = True
+            rows.append(r)
+        result["summary"] = rows
+
+
 def _strip(doc):
     """Comparable view of a dashboard doc, without run timestamps."""
     doc = json.loads(json.dumps(doc))  # normalize tuples -> lists
-    return {"config": doc.get("config"),
+    return {"config": doc.get("config"), "kpis": doc.get("kpis"), "summary": doc.get("summary"),
             "series": {k: {f: v for f, v in s.items() if f != "fetched_at"} for k, s in doc.get("series", {}).items()}}
 
 

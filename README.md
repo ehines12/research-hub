@@ -22,3 +22,8 @@ This folder is the git working copy of https://github.com/ehines12/research-hub,
 
 ## Embedded links
 In `config/hub.json`, a link with `"embed": true` opens inside the hub at `#/<id>` in a full-height iframe, with an "Open in new tab" button. Only use this when the target site allows framing (no `X-Frame-Options: DENY/SAMEORIGIN` and no CSP `frame-ancestors` that excludes us). The FDIC QBP sends `X-Frame-Options: SAMEORIGIN`, so it stays an external link.
+
+## H.8 / H.6 dashboard (#/h8)
+`config/dashboards/h8.json`: Fed H.8 weekly bank balance sheet (deposits, loans by type, large/small domestic banks, deposit mix, securities, cash, total assets, borrowings) and H.6 monthly deposit mix / retail MMFs, all via FRED.
+Moved from the Financials Dashboard on 2026-10-09 (rollback there: tag `pre-h8-move`). Derived series (`derived`), KPI tiles (`kpis`) and the summary table (`summary`) use `calc.py`, which uses the same formulas as the Financials Dashboard: YoY with on-or-before lookback, shares, contribution to YoY, H.6 savings+OCD -> MDLM splice, and 1W/1M/3M/1Y changes.
+H.8 is released Fridays around 4:15 PM ET; the 21:17 UTC (4:17 PM CDT / 3:17 PM CST) weekday run is the first to catch it in CDT. In CST it falls just after the release.
