@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-09T21:00:52+00:00",
-   "data_changed_at": "2026-10-09T20:40:45+00:00",
+   "checked_at": "2026-10-09T21:09:11+00:00",
+   "data_changed_at": "2026-10-09T21:09:06+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -122,16 +122,16 @@
      "fred": "T5YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-10-08",
-      "value": 2.37
+      "date": "2026-10-09",
+      "value": 2.34
      }
     },
     "t10yie": {
      "fred": "T10YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-10-08",
-      "value": 2.35
+      "date": "2026-10-09",
+      "value": 2.33
      }
     },
     "t5yifr": {
@@ -349,7 +349,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-09T21:07:29+00:00",
+   "checked_at": "2026-10-09T21:09:15+00:00",
    "data_changed_at": "2026-10-09T21:07:27+00:00",
    "series": {
     "TOTLL": {
@@ -963,6 +963,6 @@
    }
   }
  },
- "checked_at": "2026-10-09T21:07:29+00:00",
+ "checked_at": "2026-10-09T21:09:15+00:00",
  "ok": true
 }
