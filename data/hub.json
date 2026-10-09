@@ -97,13 +97,16 @@
    "embed": true
   },
   {
-   "id": "fdic-qbp",
+   "id": "fdic",
    "title": "FDIC Quarterly Banking Profile",
    "icon": "bank",
-   "url": "https://www.fdic.gov/quarterly-banking-profile",
-   "tagline": "Quarterly industry-wide bank financial data from the FDIC",
-   "embed": false,
-   "embed_blocked_reason": "fdic.gov sends X-Frame-Options: SAMEORIGIN, which blocks framing on other sites"
+   "url": "https://ehines12.github.io/fdic-dashboard/",
+   "embed": true,
+   "tagline": "Quarterly aggregates for all FDIC-insured institutions since Q1 2000: industry vs. community banks and $10B-$250B banks (FDIC BankFind)",
+   "source": {
+    "label": "FDIC QBP",
+    "url": "https://www.fdic.gov/quarterly-banking-profile"
+   }
   }
  ]
 }

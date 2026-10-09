@@ -93,7 +93,8 @@
   function embed(l) {
     document.title = l.title + " · Research Hub";
     crumbs.innerHTML = '<a href="#/">Hub</a> / ' + esc(l.title);
-    stamp.innerHTML = '<a class="btn sm" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">Open in new tab ' + EXT + "</a>";
+    stamp.innerHTML = (l.source ? '<a class="srclink" href="' + esc(l.source.url) + '" target="_blank" rel="noopener noreferrer">Source: ' + esc(l.source.label) + " " + EXT + "</a>" : "") +
+      '<a class="btn sm" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">Open in new tab ' + EXT + "</a>";
     app.innerHTML = '<iframe class="embed" src="' + esc(l.url) + '" title="' + esc(l.title) + '" loading="eager"></iframe>';
   }
 
