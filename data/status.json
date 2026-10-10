@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-09T21:09:11+00:00",
-   "data_changed_at": "2026-10-09T21:09:06+00:00",
+   "checked_at": "2026-10-10T00:56:52+00:00",
+   "data_changed_at": "2026-10-10T00:56:49+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -98,8 +98,8 @@
      "fred": "T10Y2Y",
      "status": "ok",
      "latest": {
-      "date": "2026-10-08",
-      "value": 0.47
+      "date": "2026-10-09",
+      "value": 0.44
      }
     },
     "indpro": {
@@ -138,8 +138,8 @@
      "fred": "T5YIFR",
      "status": "ok",
      "latest": {
-      "date": "2026-10-08",
-      "value": 2.33
+      "date": "2026-10-09",
+      "value": 2.32
      }
     },
     "clev_cpi_yy": {
@@ -349,7 +349,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-09T21:09:15+00:00",
+   "checked_at": "2026-10-10T00:57:03+00:00",
    "data_changed_at": "2026-10-09T21:07:27+00:00",
    "series": {
     "TOTLL": {
@@ -963,6 +963,6 @@
    }
   }
  },
- "checked_at": "2026-10-09T21:09:15+00:00",
+ "checked_at": "2026-10-10T00:57:03+00:00",
  "ok": true
 }
