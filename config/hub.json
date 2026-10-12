@@ -28,6 +28,15 @@
    "tagline": "Top 12 macro, markets and geopolitical odds from Kalshi and Polymarket",
    "description": "Market-implied probabilities for the most liquid macro (Fed, inflation, growth), markets and geopolitical contracts on Kalshi and Polymarket, re-ranked every refresh.",
    "dashboard": "config/dashboards/predictions.json"
+  },
+  {
+   "id": "geo",
+   "title": "Geopolitics & Global Risk",
+   "icon": "shield",
+   "status": "live",
+   "tagline": "Geopolitical risk, policy uncertainty and shipping chokepoints",
+   "description": "Caldara-Iacoviello Geopolitical Risk and Trade Policy Uncertainty, Baker-Bloom-Davis Economic Policy Uncertainty, and IMF PortWatch daily chokepoint transits (Hormuz, Bab el-Mandeb, Suez, Panama, Malacca, Bosporus).",
+   "dashboard": "config/dashboards/geo.json"
   }
  ],
  "links": [

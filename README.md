@@ -44,3 +44,15 @@ In `config/hub.json`, a link with `"embed": true` opens inside the hub at `#/<id
 `config/dashboards/h8.json`: Fed H.8 weekly bank balance sheet (deposits, loans by type, large/small domestic banks, deposit mix, securities, cash, total assets, borrowings) and H.6 monthly deposit mix / retail MMFs, all via FRED.
 Moved from the Financials Dashboard on 2026-10-09 (rollback there: tag `pre-h8-move`). Derived series (`derived`), KPI tiles (`kpis`) and the summary table (`summary`) use `calc.py`, which uses the same formulas as the Financials Dashboard: YoY with on-or-before lookback, shares, contribution to YoY, H.6 savings+OCD -> MDLM splice, and 1W/1M/3M/1Y changes.
 H.8 is released Fridays around 4:15 PM ET; the 21:17 UTC (4:17 PM CDT / 3:17 PM CST) weekday run is the first to catch it in CDT. In CST it falls just after the release.
+
+## Geopolitics & Global Risk (`config/dashboards/geo.json`)
+
+- **GPR** (Caldara-Iacoviello): daily (`data_gpr_daily_recent.xls`: GPRD, GPRD_ACT, GPRD_THREAT) and monthly (`data_gpr_export.xls`: GPR, GPRT, GPRA) from matteoiacoviello.com; source `gpr`, needs `xlrd`.
+- **TPU** (Caldara et al.): `tpu_web_latest.xlsx`, sheets TPU_DAILY / TPU_MONTHLY; source `tpu`.
+- **EPU** via FRED: USEPUINDXD, USEPUINDXM, GEPUCURRENT (global), EPUTRADE (trade-policy category).
+- Cards (`stats: "risk"`): latest, 30-day (daily) / 3-month (monthly) average vs. trailing 1Y average, percentile of that average vs. full history.
+- **IMF PortWatch** chokepoints: public ArcGIS `Daily_Chokepoints_Data` feature service (paged, 1000 rows/call); source `portwatch`. 7-day averages (`ma7`), last-year overlay (`ma7_ly`, +364 days); cards (`stats: "chokepoint"`) vs same dates last year and vs 2019-2022 same-date average. ~1 week publication lag.
+
+## Treasury auctions (Macro, `auctions` block)
+
+Fiscal Data `auctions_query` (notes/bonds incl. TIPS and FRNs) + TreasuryDirect `TA_WS/securities/upcoming`. Each auction is compared with the prior 6 of the same tenor (reopenings under original tenor) and flagged weak/strong on bid-to-cover (±0.10) and dealer takedown (±3 pp). No tails: when-issued yields are not freely available.

@@ -329,6 +329,96 @@ def fetch_dts(s):
     return "Treasury Fiscal Data (DTS)", "https://fiscaldata.treasury.gov/datasets/daily-treasury-statement/", obs, None
 
 
+
+# Caldara-Iacoviello Geopolitical Risk (GPR) and Trade Policy Uncertainty (TPU) indexes (public xls/xlsx).
+GPR_DAILY = "https://www.matteoiacoviello.com/gpr_files/data_gpr_daily_recent.xls"
+GPR_MONTHLY = "https://www.matteoiacoviello.com/gpr_files/data_gpr_export.xls"
+TPU_XLSX = "https://www.matteoiacoviello.com/tpu_files/tpu_web_latest.xlsx"
+
+
+def _xls_table(url):
+    import xlrd
+    b = xlrd.open_workbook(file_contents=_curl(url, 120, BROWSER_UA))
+    sh = b.sheet_by_index(0)
+    hdr = [str(h).strip() for h in sh.row_values(0)]
+    return hdr, [sh.row_values(i) for i in range(1, sh.nrows)], b.datemode
+
+
+def fetch_gpr(s):
+    """s['file'] = daily|monthly, s['col'] = GPRD / GPRD_ACT / GPRD_THREAT (daily) or GPR / GPRT / GPRA (monthly)."""
+    import xlrd
+    url = GPR_DAILY if s["file"] == "daily" else GPR_MONTHLY
+    hdr, rows, mode = _cached("gpr:" + s["file"], lambda: _xls_table(url))
+    if s["col"] not in hdr:
+        raise ValueError(f"GPR {s['file']}: column {s['col']} missing (have {hdr[:12]})")
+    ci, obs = hdr.index(s["col"]), []
+    for r in rows:
+        v = r[ci]
+        if v in ("", None):
+            continue
+        if s["file"] == "daily":
+            t = str(r[hdr.index("DAY")]).split(".")[0]
+            if not _re.fullmatch(r"\d{8}", t):
+                continue
+            d0 = f"{t[:4]}-{t[4:6]}-{t[6:]}"
+        else:
+            m = r[hdr.index("month")]
+            if not isinstance(m, float):
+                continue
+            d0 = xlrd.xldate_as_datetime(m, mode).date().replace(day=1).isoformat()
+        obs.append((d0, float(v)))
+    if len(obs) < 24:
+        raise ValueError("GPR: too few observations")
+    return "Caldara-Iacoviello GPR", "https://www.matteoiacoviello.com/gpr.htm", sorted(obs), None
+
+
+def fetch_tpu(s):
+    """Caldara et al. Trade Policy Uncertainty: s['sheet'] = TPU_DAILY (col TPUD_index) or TPU_MONTHLY (col TPU)."""
+    import openpyxl, io as _io
+    wb = _cached("tpu", lambda: openpyxl.load_workbook(_io.BytesIO(_curl(TPU_XLSX, 120, BROWSER_UA)), read_only=True, data_only=True))
+    with _GL:
+        rows = list(wb[s["sheet"]].iter_rows(values_only=True))
+    hdr = [str(h).strip() if h else "" for h in rows[0]]
+    if s["col"] not in hdr:
+        raise ValueError(f"TPU {s['sheet']}: column {s['col']} missing")
+    ci, obs = hdr.index(s["col"]), []
+    for r in rows[1:]:
+        if hasattr(r[0], "year") and isinstance(r[ci], (int, float)):
+            obs.append((r[0].date().isoformat(), float(r[ci])))
+    if len(obs) < 24:
+        raise ValueError("TPU: too few observations")
+    return "Caldara et al. TPU", "https://www.matteoiacoviello.com/tpu.htm", sorted(obs), None
+
+
+# IMF PortWatch daily chokepoint transits (public ArcGIS feature service; ~1 week publication lag).
+PORTWATCH = ("https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Chokepoints_Data/"
+             "FeatureServer/0/query")
+
+
+def _portwatch_rows(portid):
+    rows, off = [], 0
+    while True:
+        url = (f"{PORTWATCH}?where=portid%3D%27{portid}%27&outFields=date,portname,n_total,n_tanker,n_container,n_dry_bulk,capacity"
+               f"&orderByFields=date&resultOffset={off}&resultRecordCount=1000&f=json")
+        d = json.loads(_curl(url, 90))
+        if d.get("error"):
+            raise RuntimeError(f"PortWatch: {d['error']}")
+        f = [x["attributes"] for x in d.get("features", [])]
+        rows += f
+        if len(f) < 1000 and not d.get("exceededTransferLimit"):
+            break
+        off += len(f)
+    if len(rows) < 400:
+        raise ValueError(f"PortWatch {portid}: only {len(rows)} rows")
+    return rows
+
+
+def fetch_portwatch(s):
+    rows = _cached("pw:" + s["portid"], lambda: _portwatch_rows(s["portid"]))
+    obs = sorted({str(r["date"])[:10]: float(r[s["field"]]) for r in rows if r.get(s["field"]) is not None}.items())
+    return "IMF PortWatch", "https://portwatch.imf.org/pages/chokepoints", obs, None
+
+
 def _fetch_series(s):
     src = s.get("source")
     if src == "gdpnow":
@@ -339,6 +429,12 @@ def _fetch_series(s):
         return fetch_tsa(s)
     if src == "dts":
         return fetch_dts(s)
+    if src == "gpr":
+        return fetch_gpr(s)
+    if src == "tpu":
+        return fetch_tpu(s)
+    if src == "portwatch":
+        return fetch_portwatch(s)
     return fetch(s["fred"]) + (None,)
 
 
@@ -371,6 +467,15 @@ def transform(obs, how):
                 prev = None
             if prev:
                 out.append((t, (v / prev - 1) * 100.0))
+        return out
+    m = _re.fullmatch(r"ma(\d+)(_ly)?", how)
+    if m:
+        n = int(m.group(1))
+        out = [(obs[i][0], sum(v for _, v in obs[i - n + 1:i + 1]) / n) for i in range(n - 1, len(obs))
+               if (d(obs[i][0]) - d(obs[i - n + 1][0])).days <= n + 2]  # skip windows spanning data gaps
+        if m.group(2):  # shift forward 364 days (same weekday) to overlay last year's path
+            out = [((d(t) + dt.timedelta(days=364)).isoformat(), v) for t, v in out]
+            out = [(t, v) for t, v in out if t <= obs[-1][0]]
         return out
     raise ValueError(f"unknown transform {how}")
 
@@ -459,6 +564,17 @@ def run_dashboard(cfg_path):
         st = rec["status"]
         lt = rec.get("latest") or {}
         print(f"  {s.get('fred') or s['key']:<16} {st:<7} {lt.get('date','-'):<11} {lt.get('value','')}  {rec.get('error','')}")
+    for s in cfg["series"]:  # card statistics + optional obs trimming (raw daily series used only for stats)
+        rec = result["series"][s["key"]]
+        if s.get("stats") and rec.get("obs"):
+            try:
+                rec["stats"] = _stats(s["stats"], rec["obs"], s.get("freq"))
+            except Exception as e:  # noqa: BLE001
+                rec["stats_error"] = str(e)
+        if s.get("keep_obs") and rec.get("obs"):
+            rec["obs"] = rec["obs"][-int(s["keep_obs"]):]
+    if cfg.get("auctions"):
+        _auctions_block(cfg["auctions"], result, prev)
     _derive_all(cfg, result)
     DATA.mkdir(exist_ok=True)
     # Only rewrite the (large) data file when the numbers or config actually changed, so the
@@ -476,6 +592,118 @@ def run_dashboard(cfg_path):
         result["updated_at"] = prev.get("updated_at", result["updated_at"])
     print(f"  -> {'data changed, wrote' if changed else 'no data change, kept'} {out_path.name}")
     return result
+
+
+def _stats(kind, obs, freq):
+    """'risk': latest, short average (30 obs daily / 3 months monthly) vs trailing 1Y average, and the percentile of
+    that short average among all its historical values. 'chokepoint' (on a 7-day-average series): latest vs the same
+    date a year earlier (364 days, same weekday) and vs the 2019-2022 average for the same calendar date."""
+    vals = [v for _, v in obs]
+    last_d = d(obs[-1][0])
+    if kind == "risk":
+        n = 30 if freq == "Daily" else 3
+        roll = [sum(vals[i - n + 1:i + 1]) / n for i in range(n - 1, len(vals))]
+        cut = last_d - dt.timedelta(days=365)
+        yr = [v for t, v in obs if d(t) > cut]
+        cur = roll[-1]
+        pct = 100.0 * sum(1 for x in roll if x <= cur) / len(roll)
+        return {"latest": vals[-1], "date": obs[-1][0], "short": round(cur, 2), "short_n": n, "avg1y": round(sum(yr) / len(yr), 2),
+                "pctile": round(pct, 1), "since": obs[0][0][:4]}
+    if kind == "chokepoint":
+        idx = {t: v for t, v in obs}
+        def near(day):
+            for k in range(4):
+                for dd in (day - dt.timedelta(days=k), day + dt.timedelta(days=k)):
+                    if dd.isoformat() in idx:
+                        return idx[dd.isoformat()]
+            return None
+        ly = near(last_d - dt.timedelta(days=364))
+        base = [near(last_d.replace(year=y) if not (last_d.month == 2 and last_d.day == 29) else last_d.replace(year=y, day=28)) for y in (2019, 2020, 2021, 2022)]
+        base = [b for b in base if b is not None]
+        b0 = sum(base) / len(base) if base else None
+        return {"latest": vals[-1], "date": obs[-1][0], "ly": ly, "base": round(b0, 2) if b0 is not None else None,
+                "vs_ly": round((vals[-1] / ly - 1) * 100, 1) if ly else None, "vs_base": round((vals[-1] / b0 - 1) * 100, 1) if b0 else None}
+    raise ValueError(f"unknown stats kind {kind}")
+
+
+# ---- Treasury coupon auctions: Fiscal Data auctions_query (results) + TreasuryDirect (upcoming) ----
+AUCTIONS_API = ("https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query"
+                "?filter=auction_date:gte:{since},security_type:in:(Note,Bond)&sort=-auction_date&page[size]=10000")
+TD_UPCOMING = "https://www.treasurydirect.gov/TA_WS/securities/upcoming?format=json"
+
+
+def _num(x):
+    try:
+        return float(x)
+    except (TypeError, ValueError):
+        return None
+
+
+def _tenor(term, tips, frn):
+    t = (term or "").strip()
+    m = _re.match(r"(\d+)-Year", t)
+    y = m.group(1) + "Y" if m else t
+    return y + (" TIPS" if tips == "Yes" else "") + (" FRN" if frn == "Yes" else "")
+
+
+def _auctions_block(ac, result, prev):
+    key = "TREASURY_AUCTIONS"
+    now = dt.datetime.now(dt.timezone.utc)
+    try:
+        since = (dt.date.today() - dt.timedelta(days=int(ac.get("history_days", 1100)))).isoformat()
+        rows = json.loads(_curl(AUCTIONS_API.format(since=since), 90)).get("data") or []
+        if len(rows) < 50:
+            raise ValueError(f"only {len(rows)} auction rows")
+        recs = []
+        for r in rows:
+            if _num(r.get("bid_to_cover_ratio")) is None:
+                continue  # announced, not yet auctioned
+            frn = r.get("floating_rate") == "Yes"
+            comp = _num(r.get("comp_accepted")) or 0
+            pctof = lambda k: round(100 * (_num(r.get(k)) or 0) / comp, 1) if comp else None
+            recs.append({"date": r["auction_date"], "cusip": r["cusip"], "type": r["security_type"],
+                         "term": r["security_term"], "tenor": _tenor(r.get("original_security_term") if r.get("original_security_term") not in (None, "", "null") else r["security_term"], r.get("inflation_index_security"), r.get("floating_rate")),
+                         "reopening": r.get("reopening") == "Yes", "size_bn": round((_num(r.get("offering_amt")) or 0) / 1e9, 1),
+                         "yield": _num(r.get("high_discnt_margin")) if frn else _num(r.get("high_yield")), "yield_kind": "disc. margin" if frn else ("real yield" if r.get("inflation_index_security") == "Yes" else "yield"),
+                         "btc": _num(r.get("bid_to_cover_ratio")), "indirect": pctof("indirect_bidder_accepted"), "direct": pctof("direct_bidder_accepted"),
+                         "dealer": pctof("primary_dealer_accepted")})
+        recs.sort(key=lambda x: x["date"])
+        n = int(ac.get("compare_n", 6))
+        for i, x in enumerate(recs):
+            prior = [y for y in recs[:i] if y["tenor"] == x["tenor"]][-n:]
+            if len(prior) >= 3:
+                av = lambda k: round(sum(y[k] for y in prior if y[k] is not None) / len([y for y in prior if y[k] is not None]), 2)
+                x["avg"] = {"btc": av("btc"), "indirect": av("indirect"), "direct": av("direct"), "dealer": av("dealer"), "n": len(prior)}
+                db, dd = x["btc"] - x["avg"]["btc"], x["dealer"] - x["avg"]["dealer"]
+                x["d_btc"], x["d_dealer"], x["d_indirect"] = round(db, 2), round(dd, 1), round(x["indirect"] - x["avg"]["indirect"], 1)
+                weak, strong = db <= -0.10 or dd >= 3.0, db >= 0.10 or dd <= -3.0
+                x["verdict"] = "weak" if weak and not (db >= 0.10 and dd <= -3.0) else ("strong" if strong else "in line")
+        tenors = ac.get("tenors")
+        recent = [x for x in reversed(recs) if not tenors or x["tenor"] in tenors][: int(ac.get("recent_n", 24))]
+        up = []
+        try:
+            for u in json.loads(_curl(TD_UPCOMING, 60)):
+                if u.get("securityType") not in ("Note", "Bond"):
+                    continue
+                up.append({"date": u["auctionDate"][:10], "issue": (u.get("issueDate") or "")[:10], "type": u["securityType"], "term": u.get("securityTerm"),
+                           "tenor": _tenor(u.get("originalSecurityTerm") or u.get("securityTerm"), u.get("tips"), u.get("floatingRate")),
+                           "reopening": u.get("reopening") == "Yes", "size_bn": round(_num(u.get("offeringAmount")) / 1e9, 1) if _num(u.get("offeringAmount")) else None,
+                           "announced": (u.get("announcementDate") or "")[:10]})
+            up_status = "ok"
+        except Exception as e:  # noqa: BLE001
+            up_status = f"failed: {e}"
+        result["auctions"] = {"recent": recent, "upcoming": sorted(up, key=lambda x: x["date"]), "upcoming_status": up_status,
+                              "note": ac.get("note"), "latest": recent[0]["date"] if recent else None}
+        st = "ok" if up_status == "ok" else "stale"
+        result["series"][key] = {"key": key, "fred": "Treasury auctions", "status": st, "title": "Treasury auctions", "obs": [],
+                                 "latest": {"date": recent[0]["date"], "value": recent[0]["btc"]} if recent else None, **({"error": up_status} if st != "ok" else {})}
+    except Exception as e:  # noqa: BLE001
+        old = prev.get("auctions")
+        if old:
+            result["auctions"] = {**old, "stale": True}
+        result["series"][key] = {"key": key, "fred": "Treasury auctions", "status": "stale" if old else "failed", "title": "Treasury auctions", "obs": [], "error": str(e)[:300]}
+    lt = (result["series"][key].get("latest") or {})
+    print(f"  {'TREASURY_AUCTIONS':<16} {result['series'][key]['status']:<7} {lt.get('date','-'):<11} {len((result.get('auctions') or {}).get('recent', []))} recent, {len((result.get('auctions') or {}).get('upcoming', []))} upcoming")
 
 
 def _latest_fields(rec, no_yoy=False):
@@ -692,7 +920,7 @@ def _write_growth5y_files(did, gd):
 def _strip(doc):
     """Comparable view of a dashboard doc, without run timestamps."""
     doc = json.loads(json.dumps(doc))  # normalize tuples -> lists
-    return {"config": doc.get("config"), "kpis": doc.get("kpis"), "summary": doc.get("summary"),
+    return {"config": doc.get("config"), "kpis": doc.get("kpis"), "summary": doc.get("summary"), "auctions": doc.get("auctions"),
             "series": {k: {f: v for f, v in s.items() if f != "fetched_at"} for k, s in doc.get("series", {}).items()}}
 
 

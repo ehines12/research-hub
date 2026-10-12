@@ -33,7 +33,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: python3 -m pip install --quiet openpyxl   # Atlanta Fed GDPNow tracking workbook
+        run: python3 -m pip install --quiet openpyxl xlrd   # Atlanta Fed GDPNow tracking workbook
 
       - name: Fetch FRED, Atlanta Fed, Cleveland Fed, Treasury and prediction-market data
         id: fetch

@@ -9,6 +9,7 @@
     globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>',
     bank: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 9l9-5 9 5M4 9h16M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18"/></svg>',
     table: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M3 14h18M9 9v11M15 9v11"/></svg>',
+    shield: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><circle cx="12" cy="11" r="3"/><path d="M12 8v-2M12 16v-2M9 11H7M17 11h-2"/></svg>',
     odds: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 16L16 8"/><circle cx="8.5" cy="8.5" r="1.6"/><circle cx="15.5" cy="15.5" r="1.6"/></svg>',
     chart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 20h18M6 16l4-5 3 3 5-7"/><circle cx="18" cy="7" r="1.2"/></svg>'
   };
@@ -123,8 +124,8 @@
     stamp.innerHTML = "Last updated " + fmtTime(chk) + (chk !== D.updated_at ? '<br><span style="opacity:.75">FRED data last changed ' + fmtTime(D.updated_at) + "</span>" : "");
     const inSec = new Set(cfg.sections.flatMap(sec => sec.kpis || []));
     const kpis = D.kpis ? D.kpis.map(chipTile).join("") : cfg.series.filter(s => s.kpi !== false && !inSec.has(s.key)).map(s => kpiCard(S[s.key], S)).join("");
-    const secs = cfg.sections.map((sec, i) => "<h2>" + esc(sec.title) + (sec.link ? ' <a class="hint" href="' + esc(sec.link) + '" target="_blank" rel="noopener noreferrer">source page ' + EXT + "</a>" : "") + "</h2>" +
-      (sec.kpis ? '<div class="kpis sec">' + sec.kpis.map(k => kpiCard(S[k], S)).join("") + "</div>" : "") + (sec.nowcast_table ? nowcastTable(sec.nowcast_table, S) : "") + (sec.growth5y && D.growth5y ? '<div id="g5">' + growthTable(D.growth5y) + "</div>" : "") + (sec.quarterly && D.quarterly ? '<div id="qtr">' + quarterlyTable(D.quarterly, area.id) + "</div>" : "") + (sec.panels.length ? '<div class="panels' + (sec.cols === 2 ? " c2" : "") + '">' + sec.panels.map((p, j) =>
+    const secs = cfg.sections.map((sec, i) => "<h2>" + esc(sec.title) + (sec.link ? ' <a class="hint" href="' + esc(sec.link) + '" target="_blank" rel="noopener noreferrer">source page ' + EXT + "</a>" : "") + "</h2>" + (sec.note ? '<p class="secnote">' + esc(sec.note) + "</p>" : "") +
+      (sec.kpis ? '<div class="kpis sec' + (sec.kpi_cols === 3 ? " c3" : "") + '">' + sec.kpis.map(k => kpiCard(S[k], S)).join("") + "</div>" : "") + (sec.nowcast_table ? nowcastTable(sec.nowcast_table, S) : "") + (sec.growth5y && D.growth5y ? '<div id="g5">' + growthTable(D.growth5y) + "</div>" : "") + (sec.auctions ? auctionsTable(D.auctions) : "") + (sec.quarterly && D.quarterly ? '<div id="qtr">' + quarterlyTable(D.quarterly, area.id) + "</div>" : "") + (sec.panels.length ? '<div class="panels' + (sec.cols === 2 ? " c2" : "") + '">' + sec.panels.map((p, j) =>
       '<div class="panel' + (p.wide ? " wide" : "") + (p.full ? " full" : "") + '"><h4>' + esc(p.title) + "</h4>" + (cfg.panel_latest ? panelLatest(p, S) : "") + '<div class="cv"><canvas id="c' + i + "_" + j + '"></canvas></div>' + (p.note ? '<div class="pnote">' + esc(p.note) + "</div>" : "") + '<div class="src">Source: ' + [...new Set(p.series.map(k => S[k].src_label || "FRED " + S[k].fred))].map(esc).join(" · ") + "</div></div>").join("") + "</div>" : "")).join("") +
       (D.summary ? summaryTable(D, cfg) : "");
     app.innerHTML = "<h1>" + esc(cfg.title) + '</h1><p class="sub">' + esc(cfg.subtitle) + '</p><div class="kpis">' + kpis + '</div><div class="toolbar"><span>Lookback</span><div class="seg">' +
@@ -282,6 +283,8 @@
     if (L.target) {  // nowcast: show target quarter, as-of date, change vs prior estimate for that quarter
       c = P ? '<span class="' + cls(L.value - P.value, s) + '">' + fmtChg(L.value - P.value, s.chg) + " vs " + fmtDate(P.date, "Daily").replace(/, \d{4}$/, "") + " est.</span>" : '<span class="flat">first estimate for ' + esc(L.target) + "</span>";
     }
+    if (s.stats && s.stats.short != null) return statsCard(s);
+    if (s.stats && s.stats.vs_ly !== undefined) return chokeCard(s, S);
     const tag = s.link ? "a" : "div", href = s.link ? ' href="' + esc(s.link) + '" target="_blank" rel="noopener noreferrer"' : "";
     const tip = (s.src_label || "FRED " + s.fred) + (L.release ? " · latest update after: " + L.release : "") + (s.error ? " · " + esc(s.error) : "");
     const dline = L.asof ? esc(L.target) + " · as of " + fmtDate(L.asof, "Daily").replace(/, \d{4}$/, "") + (L.mm != null ? " · m/m " + L.mm.toFixed(2) + "%" : "")
@@ -289,6 +292,41 @@
                            : fmtDate(L.date, s.freq) + (P ? " · prior " + fmtVal(P.value, s.fmt) : "");
     return "<" + tag + href + ' class="kpi ' + (s.link ? "linked " : "") + (s.status !== "ok" ? s.status : "") + '" title="' + esc(tip) + '"><div class="t">' + esc(s.title) + (s.link ? " " + EXT : "") + '</div><div class="v">' + fmtVal(L.value, s.fmt) +
       '</div><div class="d">' + dline + (s.status === "stale" ? " · STALE" : "") + '</div><div class="c">' + c + "</div></" + tag + ">";
+  }
+
+  function cardShell(s, c, dline) {
+    const tag = s.link ? "a" : "div", href = s.link ? ' href="' + esc(s.link) + '" target="_blank" rel="noopener noreferrer"' : "";
+    return "<" + tag + href + ' class="kpi ' + (s.link ? "linked " : "") + (s.status !== "ok" ? s.status : "") + '" title="' + esc((s.src_label || "") + (s.error ? " · " + s.error : "")) + '"><div class="t">' + esc(s.title) + (s.link ? " " + EXT : "") +
+      '</div><div class="v">' + fmtVal(s.stats.latest, s.fmt) + '</div><div class="d">' + dline + (s.status === "stale" ? " · STALE" : "") + '</div><div class="c">' + c + "</div></" + tag + ">";
+  }
+  // risk / uncertainty index: short average vs trailing-1Y average, and percentile of the short average vs history
+  function statsCard(s) {
+    const t = s.stats, daily = s.freq === "Daily", d = t.short - t.avg1y;
+    const pc = t.pctile >= 90 ? "neg" : t.pctile <= 25 ? "pos" : "flat";
+    const c = '<span class="' + (d > 0 ? "neg" : "pos") + '">' + (daily ? "30d" : "3m") + " avg " + fmtVal(t.short, s.fmt) + " vs 1Y " + fmtVal(t.avg1y, s.fmt) + '</span><span class="' + pc + '">' + Math.round(t.pctile) + ordSfx(Math.round(t.pctile)) + " pctile since " + esc(t.since) + "</span>";
+    return cardShell(s, c, fmtDate(t.date, s.freq));
+  }
+  function ordSfx(n) { const m = n % 100; return (m >= 11 && m <= 13) ? "th" : ({ 1: "st", 2: "nd", 3: "rd" }[n % 10] || "th"); }
+  // chokepoint transits (7-day avg): vs same dates last year and vs the 2019-2022 baseline; tanker/container split
+  function chokeCard(s, S) {
+    const t = s.stats, sg = v => (v > 0 ? "+" : "") + v.toFixed(0) + "%";
+    const c = (t.vs_ly != null ? '<span class="' + (t.vs_ly < 0 ? "neg" : "pos") + '">' + sg(t.vs_ly) + " y/y</span>" : "") + (t.vs_base != null ? '<span class="' + (t.vs_base < 0 ? "neg" : "pos") + '">' + sg(t.vs_base) + " vs 2019-22</span>" : "");
+    const comp = (s.companions || []).map(k => S[k] && S[k].latest ? (k.endsWith("_tank") ? "tankers " : "containers ") + S[k].latest.value.toFixed(1) : "").filter(Boolean).join(" · ");
+    return cardShell(s, c, "7d avg to " + fmtDate(t.date, "Daily").replace(/, \d{4}$/, "") + (comp ? " · " + comp : ""));
+  }
+  // Treasury coupon auctions: upcoming + recent results vs the prior-6 same-tenor average
+  function auctionsTable(A) {
+    if (!A) return '<p class="err">No auction data.</p>';
+    const f = (v, n) => v == null ? "–" : v.toFixed(n), dl = (v, n, inv) => v == null ? "" : '<span class="dl ' + ((inv ? -v : v) > 0 ? "pos" : (inv ? -v : v) < 0 ? "neg" : "flat") + '">' + (v > 0 ? "+" : "") + v.toFixed(n) + "</span>";
+    const sd = x => fmtDate(x, "Daily");
+    let h = "";
+    if (A.upcoming && A.upcoming.length) h += '<h4 class="atit">Upcoming coupon auctions <span class="hint">TreasuryDirect; sizes appear once announced</span></h4><div class="tblwrap"><table class="sumtbl atbl"><thead><tr><th>Auction</th><th>Security</th><th class="r">Size</th><th>Announced</th><th>Issue</th></tr></thead><tbody>' +
+      A.upcoming.map(u => "<tr><td>" + sd(u.date) + "</td><td><b>" + esc(u.tenor) + "</b>" + (u.reopening ? ' <span class="sid">reopening (' + esc(u.term) + ")</span>" : "") + '</td><td class="r">' + (u.size_bn ? "$" + u.size_bn + "bn" : "tbd") + "</td><td>" + (u.announced ? sd(u.announced) : "–") + "</td><td>" + (u.issue ? sd(u.issue) : "–") + "</td></tr>").join("") + "</tbody></table></div>";
+    h += '<h4 class="atit">Recent results <span class="hint">small figures = change vs prior-6 same-tenor average' + (A.stale ? " · STALE" : "") + '</span></h4><div class="tblwrap"><table class="sumtbl atbl"><thead><tr><th>Date</th><th>Security</th><th class="r">Size</th><th class="r">High yield</th><th class="r">Bid-to-cover</th><th class="r">Indirect %</th><th class="r">Direct %</th><th class="r">Dealer %</th><th>vs last 6</th></tr></thead><tbody>' +
+      A.recent.map(x => '<tr class="v-' + (x.verdict || "na").replace(" ", "") + '"><td>' + sd(x.date) + "</td><td><b>" + esc(x.tenor) + "</b>" + (x.reopening ? ' <span class="sid">reopen</span>' : "") + '</td><td class="r">$' + x.size_bn + 'bn</td><td class="r">' + (x.yield_kind === "disc. margin" ? f(x.yield, 3) + '% <span class="sid">DM</span>' : f(x.yield, 3) + "%") + '</td><td class="r b">' + f(x.btc, 2) + dl(x.d_btc, 2) +
+        '</td><td class="r">' + f(x.indirect, 1) + dl(x.d_indirect, 1) + '</td><td class="r">' + f(x.direct, 1) + '</td><td class="r">' + f(x.dealer, 1) + dl(x.d_dealer, 1, true) + '</td><td><span class="vb">' + esc(x.verdict || "n/a") + "</span></td></tr>").join("") + "</tbody></table></div>" +
+      (A.note ? '<p class="pnote">' + esc(A.note) + "</p>" : "");
+    return h;
   }
 
   // Cleveland Fed-style nowcast table: rows = target periods still being nowcast, cols = measures
@@ -386,6 +424,7 @@
             borderWidth: p.fill ? 1 : (t === "bar" ? 0 : 2), pointRadius: 0, fill: p.fill ? (n === 0 ? "origin" : "-1") : false, barPercentage: 1, categoryPercentage: 1 });
         }
         if (p.y2 && p.y2.includes(k)) ds.yAxisID = "y2";
+        if (p.dashed && p.dashed.includes(k)) Object.assign(ds, { borderDash: [5, 4], borderColor: "#8b9bb0", backgroundColor: "#8b9bb0", borderWidth: 1.3 });
         return ds;
       });
       const plugins = [];

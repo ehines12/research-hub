@@ -1,7 +1,7 @@
 {
   "id": "macro",
   "title": "Macro Dashboard",
-  "subtitle": "US growth, labor, inflation, rates and real-time alternative data. Sources: FRED (St. Louis Fed), Atlanta Fed (GDPNow), Cleveland Fed (inflation nowcast) and Treasury Fiscal Data (DTS).",
+  "subtitle": "US growth, labor, inflation, rates and real-time alternative data. Sources: FRED (St. Louis Fed), Atlanta Fed (GDPNow), Cleveland Fed (inflation nowcast) and Treasury Fiscal Data (DTS) and Treasury auction results (Fiscal Data / TreasuryDirect).",
   "series": [
     {
       "key": "gdp",
@@ -789,6 +789,30 @@
           "full": true
         }
       ]
+    },
+    {
+      "title": "Treasury Auctions",
+      "auctions": true,
+      "panels": []
     }
-  ]
+  ],
+  "auctions": {
+    "history_days": 1100,
+    "compare_n": 6,
+    "recent_n": 24,
+    "tenors": [
+      "2Y",
+      "3Y",
+      "5Y",
+      "7Y",
+      "10Y",
+      "20Y",
+      "30Y",
+      "5Y TIPS",
+      "10Y TIPS",
+      "30Y TIPS",
+      "2Y FRN"
+    ],
+    "note": "Coupon auctions (notes and bonds, including TIPS and 2Y FRNs) from Treasury Fiscal Data (auctions_query); upcoming auctions from TreasuryDirect. Takedown shares are % of competitive awards. 'vs avg' compares each auction with the average of the previous 6 auctions of the same tenor (reopenings counted under their original tenor). Flag: weak = bid-to-cover at least 0.10 below average or primary-dealer takedown at least 3 pp above; strong = bid-to-cover at least 0.10 above or dealer takedown at least 3 pp below (an auction meeting both a weak and a strong test counts as weak unless it is strong on both). Tails vs. when-issued are not shown: free WI yields are not available."
+  }
 }

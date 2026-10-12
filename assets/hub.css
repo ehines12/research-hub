@@ -34,13 +34,13 @@ h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut)
 .seg button{background:var(--panel);color:var(--txt);border:1px solid var(--line);padding:6px 14px;cursor:pointer;font:inherit}
 .seg button:first-child{border-radius:7px 0 0 7px}.seg button:last-child{border-radius:0 7px 7px 0}.seg button+button{border-left:0}
 .seg button.on{background:var(--acc);border-color:var(--acc);color:#fff}
-.panels{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.panels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .panel{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:14px 16px 10px}
 .panel.wide{grid-column:span 2}.panel.full{grid-column:1/-1}
 .panel h4{margin:0 0 8px;font-size:13.5px;font-weight:600}
 .panel .cv{position:relative;height:250px}
 .panel .src{color:var(--mut);font-size:11px;margin-top:6px}
-@media(max-width:1100px){.panels{grid-template-columns:1fr 1fr}}
+@media(max-width:1100px){.panels{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:720px){.panels{grid-template-columns:1fr}.panel.wide,.panel.full{grid-column:auto}main{padding:16px}}
 /* coming soon */
 .soonbox{max-width:760px;border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:28px}
@@ -89,3 +89,15 @@ h2 a.hint{margin-left:8px;color:var(--acc)}
 .pml{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pmb{height:7px;background:var(--panel2);border-radius:4px;overflow:hidden}.pmb i{display:block;height:100%;background:var(--acc);border-radius:4px}
 .pmc{font-size:11.5px}.pmm{font-size:11px;color:var(--mut);margin-top:6px}.pmnote{margin-top:14px;max-width:1100px}
 @media(max-width:700px){.pmgrid,.pmvs{grid-template-columns:1fr}}
+
+.kpis.sec.c3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.kpis.sec.c3{grid-template-columns:repeat(2,1fr)}}
+.secnote{color:#8b9bb0;font-size:12.5px;margin:-4px 0 12px;max-width:1100px;line-height:1.45}
+.atit{margin:14px 0 6px;font-size:14px;color:#c9d4e2}
+.atbl td,.atbl th{white-space:nowrap}
+.atbl .dl{display:block;font-size:11px;font-weight:400}
+.atbl .vb{font-size:11px;padding:2px 7px;border-radius:9px;background:#1f2a37;color:#8b9bb0}
+.atbl tr.v-weak .vb{background:#f8514926;color:#ff7b72}
+.atbl tr.v-strong .vb{background:#3fb95026;color:#56d364}
+.atbl tr.v-weak td:first-child{box-shadow:inset 3px 0 #f85149}
+.atbl tr.v-strong td:first-child{box-shadow:inset 3px 0 #3fb950}

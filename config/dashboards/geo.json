@@ -1,0 +1,925 @@
+{
+  "id": "geo",
+  "title": "Geopolitics & Global Risk",
+  "subtitle": "Geopolitical risk, economic and trade policy uncertainty, and shipping-chokepoint traffic. Sources: Caldara-Iacoviello GPR and TPU, Baker-Bloom-Davis EPU (via FRED) and IMF PortWatch.",
+  "series": [
+    {
+      "key": "gprd",
+      "fred": "GPRD",
+      "title": "Geopolitical Risk (GPR), daily",
+      "units": "index",
+      "transform": "level",
+      "fmt": "n0",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Caldara-Iacoviello GPR (daily)",
+      "source": "gpr",
+      "file": "daily",
+      "col": "GPRD",
+      "stats": "risk",
+      "keep_obs": 400,
+      "link": "https://www.matteoiacoviello.com/gpr.htm"
+    },
+    {
+      "key": "gprd_ma30",
+      "fred": "GPRD",
+      "title": "GPR daily, 30-day avg",
+      "units": "index",
+      "transform": "ma30",
+      "fmt": "n0",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Caldara-Iacoviello GPR (daily)",
+      "source": "gpr",
+      "file": "daily",
+      "col": "GPRD",
+      "keep_obs": 3700
+    },
+    {
+      "key": "gprd_act_ma30",
+      "fred": "GPRD_ACT",
+      "title": "GPR Acts, 30-day avg",
+      "units": "index",
+      "transform": "ma30",
+      "fmt": "n0",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Caldara-Iacoviello GPR (daily)",
+      "source": "gpr",
+      "file": "daily",
+      "col": "GPRD_ACT",
+      "keep_obs": 3700
+    },
+    {
+      "key": "gprd_thr_ma30",
+      "fred": "GPRD_THREAT",
+      "title": "GPR Threats, 30-day avg",
+      "units": "index",
+      "transform": "ma30",
+      "fmt": "n0",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Caldara-Iacoviello GPR (daily)",
+      "source": "gpr",
+      "file": "daily",
+      "col": "GPRD_THREAT",
+      "keep_obs": 3700
+    },
+    {
+      "key": "gpr_m",
+      "fred": "GPR",
+      "title": "Geopolitical Risk (GPR), monthly",
+      "units": "index",
+      "transform": "level",
+      "fmt": "n0",
+      "chg": "n",
+      "freq": "Monthly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Caldara-Iacoviello GPR (monthly)",
+      "source": "gpr",
+      "file": "monthly",
+      "col": "GPR",
+      "stats": "risk",
+      "link": "https://www.matteoiacoviello.com/gpr.htm"
+    },
+    {
+      "key": "gpr_t",
+      "fred": "GPRT",
+      "title": "GPR Threats, monthly",
+      "units": "index",
+      "transform": "level",
+      "fmt": "n0",
+      "chg": "n",
+      "freq": "Monthly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Caldara-Iacoviello GPR (monthly)",
+      "source": "gpr",
+      "file": "monthly",
+      "col": "GPRT"
+    },
+    {
+      "key": "gpr_a",
+      "fred": "GPRA",
+      "title": "GPR Acts, monthly",
+      "units": "index",
+      "transform": "level",
+      "fmt": "n0",
+      "chg": "n",
+      "freq": "Monthly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Caldara-Iacoviello GPR (monthly)",
+      "source": "gpr",
+      "file": "monthly",
+      "col": "GPRA"
+    },
+    {
+      "key": "epu_d",
+      "fred": "USEPUINDXD",
+      "title": "US Economic Policy Uncertainty, daily",
+      "units": "index",
+      "transform": "level",
+      "fmt": "n0",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Baker-Bloom-Davis EPU via FRED USEPUINDXD",
+      "stats": "risk",
+      "keep_obs": 400,
+      "link": "https://www.policyuncertainty.com/"
+    },
+    {
+      "key": "epu_d_ma7",
+      "fred": "USEPUINDXD",
+      "title": "US EPU daily, 7-day avg",
+      "units": "index",
+      "transform": "ma7",
+      "fmt": "n0",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Baker-Bloom-Davis EPU via FRED USEPUINDXD",
+      "keep_obs": 3700
+    },
+    {
+      "key": "epu_d_ma30",
+      "fred": "USEPUINDXD",
+      "title": "US EPU daily, 30-day avg",
+      "units": "index",
+      "transform": "ma30",
+      "fmt": "n0",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Baker-Bloom-Davis EPU via FRED USEPUINDXD",
+      "keep_obs": 3700
+    },
+    {
+      "key": "epu_m",
+      "fred": "USEPUINDXM",
+      "title": "US Economic Policy Uncertainty, monthly",
+      "units": "index",
+      "transform": "level",
+      "fmt": "n0",
+      "chg": "n",
+      "freq": "Monthly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Baker-Bloom-Davis EPU via FRED USEPUINDXM",
+      "stats": "risk",
+      "link": "https://www.policyuncertainty.com/"
+    },
+    {
+      "key": "gepu",
+      "fred": "GEPUCURRENT",
+      "title": "Global Economic Policy Uncertainty, monthly",
+      "units": "index (GDP-weighted)",
+      "transform": "level",
+      "fmt": "n0",
+      "chg": "n",
+      "freq": "Monthly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Davis Global EPU via FRED GEPUCURRENT",
+      "stats": "risk",
+      "link": "https://www.policyuncertainty.com/global_monthly.html"
+    },
+    {
+      "key": "tpu_d",
+      "fred": "TPUD",
+      "title": "Trade Policy Uncertainty, daily",
+      "units": "index",
+      "transform": "level",
+      "fmt": "n0",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Caldara et al. TPU (daily)",
+      "source": "tpu",
+      "sheet": "TPU_DAILY",
+      "col": "TPUD_index",
+      "stats": "risk",
+      "keep_obs": 400,
+      "link": "https://www.matteoiacoviello.com/tpu.htm"
+    },
+    {
+      "key": "tpu_d_ma30",
+      "fred": "TPUD",
+      "title": "TPU daily, 30-day avg",
+      "units": "index",
+      "transform": "ma30",
+      "fmt": "n0",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Caldara et al. TPU (daily)",
+      "source": "tpu",
+      "sheet": "TPU_DAILY",
+      "col": "TPUD_index"
+    },
+    {
+      "key": "tpu_m",
+      "fred": "TPU",
+      "title": "Trade Policy Uncertainty, monthly",
+      "units": "index",
+      "transform": "level",
+      "fmt": "n0",
+      "chg": "n",
+      "freq": "Monthly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Caldara et al. TPU (monthly)",
+      "source": "tpu",
+      "sheet": "TPU_MONTHLY",
+      "col": "TPU",
+      "stats": "risk",
+      "link": "https://www.matteoiacoviello.com/tpu.htm"
+    },
+    {
+      "key": "epu_trade",
+      "fred": "EPUTRADE",
+      "title": "US EPU: trade policy category, monthly",
+      "units": "index",
+      "transform": "level",
+      "fmt": "n0",
+      "chg": "n",
+      "freq": "Monthly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Baker-Bloom-Davis categorical EPU via FRED EPUTRADE",
+      "stats": "risk",
+      "link": "https://www.policyuncertainty.com/categorical_epu.html"
+    },
+    {
+      "key": "pw_hormuz",
+      "fred": "PortWatch chokepoint6",
+      "title": "Strait of Hormuz",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch (daily transit calls)",
+      "source": "portwatch",
+      "portid": "chokepoint6",
+      "field": "n_total",
+      "stats": "chokepoint",
+      "companions": [
+        "pw_hormuz_tank",
+        "pw_hormuz_cont"
+      ],
+      "link": "https://portwatch.imf.org/pages/chokepoints"
+    },
+    {
+      "key": "pw_hormuz_tank",
+      "fred": "PortWatch chokepoint6",
+      "title": "Strait of Hormuz: tankers",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch",
+      "source": "portwatch",
+      "portid": "chokepoint6",
+      "field": "n_tanker"
+    },
+    {
+      "key": "pw_hormuz_cont",
+      "fred": "PortWatch chokepoint6",
+      "title": "Strait of Hormuz: containers",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch",
+      "source": "portwatch",
+      "portid": "chokepoint6",
+      "field": "n_container"
+    },
+    {
+      "key": "pw_hormuz_ly",
+      "fred": "PortWatch chokepoint6",
+      "title": "Strait of Hormuz: total, same period last year",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7_ly",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch",
+      "source": "portwatch",
+      "portid": "chokepoint6",
+      "field": "n_total"
+    },
+    {
+      "key": "pw_babelmandeb",
+      "fred": "PortWatch chokepoint4",
+      "title": "Bab el-Mandeb (Red Sea)",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch (daily transit calls)",
+      "source": "portwatch",
+      "portid": "chokepoint4",
+      "field": "n_total",
+      "stats": "chokepoint",
+      "companions": [
+        "pw_babelmandeb_tank",
+        "pw_babelmandeb_cont"
+      ],
+      "link": "https://portwatch.imf.org/pages/chokepoints"
+    },
+    {
+      "key": "pw_babelmandeb_tank",
+      "fred": "PortWatch chokepoint4",
+      "title": "Bab el-Mandeb (Red Sea): tankers",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch",
+      "source": "portwatch",
+      "portid": "chokepoint4",
+      "field": "n_tanker"
+    },
+    {
+      "key": "pw_babelmandeb_cont",
+      "fred": "PortWatch chokepoint4",
+      "title": "Bab el-Mandeb (Red Sea): containers",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch",
+      "source": "portwatch",
+      "portid": "chokepoint4",
+      "field": "n_container"
+    },
+    {
+      "key": "pw_babelmandeb_ly",
+      "fred": "PortWatch chokepoint4",
+      "title": "Bab el-Mandeb (Red Sea): total, same period last year",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7_ly",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch",
+      "source": "portwatch",
+      "portid": "chokepoint4",
+      "field": "n_total"
+    },
+    {
+      "key": "pw_suez",
+      "fred": "PortWatch chokepoint1",
+      "title": "Suez Canal",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch (daily transit calls)",
+      "source": "portwatch",
+      "portid": "chokepoint1",
+      "field": "n_total",
+      "stats": "chokepoint",
+      "companions": [
+        "pw_suez_tank",
+        "pw_suez_cont"
+      ],
+      "link": "https://portwatch.imf.org/pages/chokepoints"
+    },
+    {
+      "key": "pw_suez_tank",
+      "fred": "PortWatch chokepoint1",
+      "title": "Suez Canal: tankers",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch",
+      "source": "portwatch",
+      "portid": "chokepoint1",
+      "field": "n_tanker"
+    },
+    {
+      "key": "pw_suez_cont",
+      "fred": "PortWatch chokepoint1",
+      "title": "Suez Canal: containers",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch",
+      "source": "portwatch",
+      "portid": "chokepoint1",
+      "field": "n_container"
+    },
+    {
+      "key": "pw_suez_ly",
+      "fred": "PortWatch chokepoint1",
+      "title": "Suez Canal: total, same period last year",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7_ly",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch",
+      "source": "portwatch",
+      "portid": "chokepoint1",
+      "field": "n_total"
+    },
+    {
+      "key": "pw_panama",
+      "fred": "PortWatch chokepoint2",
+      "title": "Panama Canal",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch (daily transit calls)",
+      "source": "portwatch",
+      "portid": "chokepoint2",
+      "field": "n_total",
+      "stats": "chokepoint",
+      "companions": [
+        "pw_panama_tank",
+        "pw_panama_cont"
+      ],
+      "link": "https://portwatch.imf.org/pages/chokepoints"
+    },
+    {
+      "key": "pw_panama_tank",
+      "fred": "PortWatch chokepoint2",
+      "title": "Panama Canal: tankers",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch",
+      "source": "portwatch",
+      "portid": "chokepoint2",
+      "field": "n_tanker"
+    },
+    {
+      "key": "pw_panama_cont",
+      "fred": "PortWatch chokepoint2",
+      "title": "Panama Canal: containers",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch",
+      "source": "portwatch",
+      "portid": "chokepoint2",
+      "field": "n_container"
+    },
+    {
+      "key": "pw_panama_ly",
+      "fred": "PortWatch chokepoint2",
+      "title": "Panama Canal: total, same period last year",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7_ly",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch",
+      "source": "portwatch",
+      "portid": "chokepoint2",
+      "field": "n_total"
+    },
+    {
+      "key": "pw_malacca",
+      "fred": "PortWatch chokepoint5",
+      "title": "Strait of Malacca",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch (daily transit calls)",
+      "source": "portwatch",
+      "portid": "chokepoint5",
+      "field": "n_total",
+      "stats": "chokepoint",
+      "companions": [
+        "pw_malacca_tank",
+        "pw_malacca_cont"
+      ],
+      "link": "https://portwatch.imf.org/pages/chokepoints"
+    },
+    {
+      "key": "pw_malacca_tank",
+      "fred": "PortWatch chokepoint5",
+      "title": "Strait of Malacca: tankers",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch",
+      "source": "portwatch",
+      "portid": "chokepoint5",
+      "field": "n_tanker"
+    },
+    {
+      "key": "pw_malacca_cont",
+      "fred": "PortWatch chokepoint5",
+      "title": "Strait of Malacca: containers",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch",
+      "source": "portwatch",
+      "portid": "chokepoint5",
+      "field": "n_container"
+    },
+    {
+      "key": "pw_malacca_ly",
+      "fred": "PortWatch chokepoint5",
+      "title": "Strait of Malacca: total, same period last year",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7_ly",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch",
+      "source": "portwatch",
+      "portid": "chokepoint5",
+      "field": "n_total"
+    },
+    {
+      "key": "pw_bosporus",
+      "fred": "PortWatch chokepoint3",
+      "title": "Bosporus",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch (daily transit calls)",
+      "source": "portwatch",
+      "portid": "chokepoint3",
+      "field": "n_total",
+      "stats": "chokepoint",
+      "companions": [
+        "pw_bosporus_tank",
+        "pw_bosporus_cont"
+      ],
+      "link": "https://portwatch.imf.org/pages/chokepoints"
+    },
+    {
+      "key": "pw_bosporus_tank",
+      "fred": "PortWatch chokepoint3",
+      "title": "Bosporus: tankers",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch",
+      "source": "portwatch",
+      "portid": "chokepoint3",
+      "field": "n_tanker"
+    },
+    {
+      "key": "pw_bosporus_cont",
+      "fred": "PortWatch chokepoint3",
+      "title": "Bosporus: containers",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch",
+      "source": "portwatch",
+      "portid": "chokepoint3",
+      "field": "n_container"
+    },
+    {
+      "key": "pw_bosporus_ly",
+      "fred": "PortWatch chokepoint3",
+      "title": "Bosporus: total, same period last year",
+      "units": "transits/day, 7-day avg",
+      "transform": "ma7_ly",
+      "fmt": "n1",
+      "chg": "n",
+      "freq": "Daily",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "IMF PortWatch",
+      "source": "portwatch",
+      "portid": "chokepoint3",
+      "field": "n_total"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Geopolitical Risk & Policy Uncertainty",
+      "kpis": [
+        "gprd",
+        "gpr_m",
+        "epu_d",
+        "epu_m",
+        "tpu_d",
+        "tpu_m",
+        "epu_trade",
+        "gepu"
+      ],
+      "note": "Cards: latest reading; 30-day average (daily series) or 3-month average (monthly) vs the trailing 1-year average; and the percentile of that average against its full history. The indexes count newspaper articles on each theme (higher = more risk/uncertainty). Daily indexes are noisy, so the charts use moving averages.",
+      "panels": [
+        {
+          "title": "Geopolitical Risk, daily: GPR vs. Acts and Threats (30-day averages)",
+          "type": "line",
+          "series": [
+            "gprd_ma30",
+            "gprd_act_ma30",
+            "gprd_thr_ma30"
+          ],
+          "labels": [
+            "GPR",
+            "Acts",
+            "Threats"
+          ],
+          "ref": 100,
+          "refLabel": "1985-2019 avg = 100",
+          "wide": true
+        },
+        {
+          "title": "Geopolitical Risk, monthly: GPR, Threats, Acts",
+          "type": "line",
+          "series": [
+            "gpr_m",
+            "gpr_t",
+            "gpr_a"
+          ],
+          "labels": [
+            "GPR",
+            "Threats",
+            "Acts"
+          ],
+          "ref": 100
+        },
+        {
+          "title": "US Economic Policy Uncertainty, daily (7- and 30-day averages)",
+          "type": "line",
+          "series": [
+            "epu_d_ma7",
+            "epu_d_ma30"
+          ],
+          "labels": [
+            "7-day avg",
+            "30-day avg"
+          ]
+        },
+        {
+          "title": "Economic Policy Uncertainty, monthly: US vs. Global",
+          "type": "line",
+          "series": [
+            "epu_m",
+            "gepu"
+          ],
+          "labels": [
+            "US EPU",
+            "Global EPU (GDP-weighted)"
+          ]
+        },
+        {
+          "title": "Trade Policy Uncertainty, daily (30-day average)",
+          "type": "line",
+          "series": [
+            "tpu_d_ma30"
+          ],
+          "labels": [
+            "TPU (Caldara et al.), 30-day avg"
+          ]
+        },
+        {
+          "title": "Trade policy uncertainty, monthly: Caldara et al. TPU vs. EPU trade-policy category",
+          "type": "line",
+          "series": [
+            "tpu_m",
+            "epu_trade"
+          ],
+          "labels": [
+            "TPU (Caldara et al.), left",
+            "EPU trade policy (Baker-Bloom-Davis), right"
+          ],
+          "full": true,
+          "y2": [
+            "epu_trade"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Chokepoint Traffic (IMF PortWatch)",
+      "link": "https://portwatch.imf.org/pages/chokepoints",
+      "kpis": [
+        "pw_hormuz",
+        "pw_babelmandeb",
+        "pw_suez",
+        "pw_panama",
+        "pw_malacca",
+        "pw_bosporus"
+      ],
+      "kpi_cols": 3,
+      "note": "Daily vessel transit calls estimated by IMF PortWatch from AIS satellite data, shown as 7-day averages. Cards compare the latest 7-day average with the same dates a year earlier (364 days, same weekdays) and with the 2019-2022 average for the same calendar date (the pre-2023, pre-Red Sea-attack baseline). PortWatch publishes with about a one-week lag; the as-of date is on each card.",
+      "panels": [
+        {
+          "title": "Strait of Hormuz: daily transits, 7-day average",
+          "type": "line",
+          "series": [
+            "pw_hormuz",
+            "pw_hormuz_tank",
+            "pw_hormuz_cont",
+            "pw_hormuz_ly"
+          ],
+          "labels": [
+            "All vessels",
+            "Tankers",
+            "Containers",
+            "All vessels, a year earlier"
+          ],
+          "dashed": [
+            "pw_hormuz_ly"
+          ],
+          "zero": true
+        },
+        {
+          "title": "Bab el-Mandeb (Red Sea): daily transits, 7-day average",
+          "type": "line",
+          "series": [
+            "pw_babelmandeb",
+            "pw_babelmandeb_tank",
+            "pw_babelmandeb_cont",
+            "pw_babelmandeb_ly"
+          ],
+          "labels": [
+            "All vessels",
+            "Tankers",
+            "Containers",
+            "All vessels, a year earlier"
+          ],
+          "dashed": [
+            "pw_babelmandeb_ly"
+          ],
+          "zero": true
+        },
+        {
+          "title": "Suez Canal: daily transits, 7-day average",
+          "type": "line",
+          "series": [
+            "pw_suez",
+            "pw_suez_tank",
+            "pw_suez_cont",
+            "pw_suez_ly"
+          ],
+          "labels": [
+            "All vessels",
+            "Tankers",
+            "Containers",
+            "All vessels, a year earlier"
+          ],
+          "dashed": [
+            "pw_suez_ly"
+          ],
+          "zero": true
+        },
+        {
+          "title": "Panama Canal: daily transits, 7-day average",
+          "type": "line",
+          "series": [
+            "pw_panama",
+            "pw_panama_tank",
+            "pw_panama_cont",
+            "pw_panama_ly"
+          ],
+          "labels": [
+            "All vessels",
+            "Tankers",
+            "Containers",
+            "All vessels, a year earlier"
+          ],
+          "dashed": [
+            "pw_panama_ly"
+          ],
+          "zero": true
+        },
+        {
+          "title": "Strait of Malacca: daily transits, 7-day average",
+          "type": "line",
+          "series": [
+            "pw_malacca",
+            "pw_malacca_tank",
+            "pw_malacca_cont",
+            "pw_malacca_ly"
+          ],
+          "labels": [
+            "All vessels",
+            "Tankers",
+            "Containers",
+            "All vessels, a year earlier"
+          ],
+          "dashed": [
+            "pw_malacca_ly"
+          ],
+          "zero": true
+        },
+        {
+          "title": "Bosporus: daily transits, 7-day average",
+          "type": "line",
+          "series": [
+            "pw_bosporus",
+            "pw_bosporus_tank",
+            "pw_bosporus_cont",
+            "pw_bosporus_ly"
+          ],
+          "labels": [
+            "All vessels",
+            "Tankers",
+            "Containers",
+            "All vessels, a year earlier"
+          ],
+          "dashed": [
+            "pw_bosporus_ly"
+          ],
+          "zero": true
+        }
+      ]
+    }
+  ]
+}
