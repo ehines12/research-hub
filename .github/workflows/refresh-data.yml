@@ -1,13 +1,17 @@
 name: Refresh dashboard data
 
 # Weekday pulls (all keyless, via curl): FRED fredgraph CSV, Atlanta Fed GDPNow workbook, Cleveland Fed inflation-nowcast JSON
-# and the Treasury Fiscal Data DTS API. Daily items refresh on every weekday run. Times in UTC; CT shown for CDT (UTC-5)
+# the Treasury Fiscal Data DTS API, and the Kalshi / Polymarket public market-data APIs (prediction markets). Daily items refresh on every weekday run. Times in UTC; CT shown for CDT (UTC-5)
 # and CST (UTC-6, Nov-Mar). GitHub may start scheduled runs a few minutes late.
 on:
   schedule:
     - cron: "47 13 * * 1-5"   # 8:47 AM CDT / 7:47 AM CST  - after 8:30 ET releases (jobs, CPI, claims, retail sales)
     - cron: "07 16 * * 1-5"   # 11:07 AM CDT / 10:07 AM CST - mid-morning releases (ind. production, PCE, revisions)
     - cron: "17 21 * * 1-5"   # 4:17 PM CDT / 3:17 PM CST  - daily Treasury yields, spread, fed funds
+    # Prediction-markets odds only (Kalshi + Polymarket), between the full runs: ~6 odds refreshes per weekday
+    - cron: "52 14 * * 1-5"   # 9:52 AM CDT / 8:52 AM CST
+    - cron: "52 17 * * 1-5"   # 12:52 PM CDT / 11:52 AM CST
+    - cron: "52 19 * * 1-5"   # 2:52 PM CDT / 1:52 PM CST
   workflow_dispatch:
 
 permissions:
@@ -31,11 +35,14 @@ jobs:
       - name: Install dependencies
         run: python3 -m pip install --quiet openpyxl   # Atlanta Fed GDPNow tracking workbook
 
-      - name: Fetch FRED, Atlanta Fed, Cleveland Fed and Treasury series
+      - name: Fetch FRED, Atlanta Fed, Cleveland Fed, Treasury and prediction-market data
         id: fetch
         run: |
           set +e
-          python3 fetch_data.py
+          case "${{ github.event.schedule }}" in
+            "52 14 * * 1-5"|"52 17 * * 1-5"|"52 19 * * 1-5") python3 fetch_data.py predictions ;;  # odds-only runs
+            *) python3 fetch_data.py ;;
+          esac
           echo "rc=$?" >> "$GITHUB_OUTPUT"
 
       - name: Commit data if changed

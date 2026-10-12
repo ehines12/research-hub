@@ -961,8 +961,24 @@
      }
     }
    }
+  },
+  "predictions": {
+   "checked_at": "2026-10-12T14:27:39+00:00",
+   "data_changed_at": "2026-10-12T14:27:04+00:00",
+   "series": {
+    "kalshi": {
+     "fred": "Kalshi",
+     "status": "ok",
+     "latest": null
+    },
+    "polymarket": {
+     "fred": "Polymarket",
+     "status": "ok",
+     "latest": null
+    }
+   }
   }
  },
- "checked_at": "2026-10-12T12:56:10+00:00",
+ "checked_at": "2026-10-12T14:27:39+00:00",
  "ok": true
 }

@@ -382,8 +382,34 @@ def year_ago(obs):
     return cand[-1] if cand else None
 
 
+def run_predictions(cfg, out_path, prev):
+    """Prediction-markets dashboard (predictions.py). If either venue fails, keep the last good list
+    (flagged stale) rather than ranking on one venue only."""
+    import predictions
+    now = dt.datetime.now(dt.timezone.utc)
+    r = predictions.build(cfg)
+    src = r["sources"]
+    bad = [k for k, v in src.items() if v.get("status") != "ok"]
+    if bad and prev.get("items"):
+        doc = {**prev, "config": cfg, "stale": True, "sources": src}
+    else:
+        doc = {"id": cfg["id"], "config": cfg, "updated_at": now.isoformat(timespec="seconds"), **r}
+    doc["series"] = {k: {"fred": k.capitalize(), "status": ("stale" if (bad and prev.get("items")) else "failed") if v.get("status") != "ok" else "ok",
+                         **({"error": v["error"]} if v.get("error") else {})} for k, v in src.items()}
+    for it in doc.get("items", []):
+        print(f"  {it['rank']:>2} {it['group']:<12} {it['vol7d']/1e3:>8.0f}k  {it['title'][:70]}")
+    print("  sources:", json.dumps(src))
+    DATA.mkdir(exist_ok=True)
+    out_path.write_text(json.dumps(doc, separators=(",", ":")))
+    return doc
+
+
 def run_dashboard(cfg_path):
     cfg = json.loads((ROOT / cfg_path).read_text())
+    if cfg.get("kind") == "predictions":
+        out_path = DATA / f"{cfg['id']}.json"
+        prev = json.loads(out_path.read_text()) if out_path.exists() else {}
+        return run_predictions(cfg, out_path, prev)
     out_path = DATA / f"{cfg['id']}.json"
     prev = json.loads(out_path.read_text()) if out_path.exists() else {"series": {}}
     now = dt.datetime.now(dt.timezone.utc)

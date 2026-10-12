@@ -9,6 +9,7 @@
     globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>',
     bank: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 9l9-5 9 5M4 9h16M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18"/></svg>',
     table: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M3 14h18M9 9v11M15 9v11"/></svg>',
+    odds: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 16L16 8"/><circle cx="8.5" cy="8.5" r="1.6"/><circle cx="15.5" cy="15.5" r="1.6"/></svg>',
     chart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 20h18M6 16l4-5 3 3 5-7"/><circle cx="18" cy="7" r="1.2"/></svg>'
   };
   const EXT = '<svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" style="vertical-align:-1px"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
@@ -116,6 +117,7 @@
 
   async function dashboard(area) {
     const D = await load(area.id), cfg = D.config, S = D.series;
+    if (cfg.kind === "predictions") return predictionsPage(area, D);
     document.title = cfg.title + " · Research Hub";
     const chk = await lastChecked(area.id);
     stamp.innerHTML = "Last updated " + fmtTime(chk) + (chk !== D.updated_at ? '<br><span style="opacity:.75">FRED data last changed ' + fmtTime(D.updated_at) + "</span>" : "");
@@ -227,6 +229,45 @@
     const q = v => { v = String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; };
     const blob = new Blob([rows.map(r => r.map(q).join(",")).join("\r\n")], { type: "text/csv" });
     const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = id + "-quarterly.csv"; document.body.appendChild(a); a.click(); a.remove();
+  }
+
+  // ---- prediction markets ----
+  const pp = x => x == null ? "–" : (x > 0 ? "+" : x < 0 ? "−" : "±") + Math.abs(x * 100).toFixed(Math.abs(x) < 0.1 ? 1 : 0) + " pp";
+  const pct = x => (x * 100 < 1 && x > 0 ? "<1" : x * 100 > 99 && x < 1 ? ">99" : Math.round(x * 100)) + "%";
+  const money = (v, venue) => (venue === "Kalshi" ? "" : "$") + (v >= 1e6 ? (v / 1e6).toFixed(1) + "M" : v >= 1e3 ? Math.round(v / 1e3) + "K" : Math.round(v)) + (venue === "Kalshi" ? " ct" : "");
+  const shortClose = s => s ? new Date(s).toLocaleDateString("en-US", { timeZone: TZ, month: "short", day: "numeric", year: "numeric" }) : "–";
+  function venueBlock(v) {
+    const rows = v.outcomes.map(o => '<div class="pmo"><span class="pml" title="' + esc(o.label) + '">' + esc(o.label) + '</span><span class="pmb"><i style="width:' + Math.max(1, Math.min(100, o.p * 100)).toFixed(1) + '%"></i></span><b>' + pct(o.p) + "</b>" +
+      '<span class="pmc ' + (o.chg24h > 0.0005 ? "pos" : o.chg24h < -0.0005 ? "neg" : "flat") + '" title="24h change">' + pp(o.chg24h) + '</span><span class="pmc ' + (o.chg7d > 0.0005 ? "pos" : o.chg7d < -0.0005 ? "neg" : "flat") + '" title="7d change">' + pp(o.chg7d) + "</span></div>").join("");
+    return '<div class="pmv"><div class="pmh"><span class="pmvn ' + v.venue.toLowerCase() + '">' + esc(v.venue) + '</span><a href="' + esc(v.url) + '" target="_blank" rel="noopener noreferrer">open market ' + EXT + "</a></div>" +
+      '<div class="pmhd"><span></span><span></span><span>prob</span><span>24h</span><span>7d</span></div>' + rows +
+      '<div class="pmm">7d vol ' + money(v.vol7d || 0, v.venue) + " · " + (v.venue === "Kalshi" ? "OI " + money(v.oi || 0, v.venue) : "OI $" + money(v.oi || 0, "x").slice(1)) + " · closes " + shortClose(v.close) + "</div></div>";
+  }
+  function predictionsPage(area, D) {
+    const cfg = D.config;
+    document.title = cfg.title + " · Research Hub";
+    stamp.innerHTML = "Odds as of " + fmtTime(D.generated_at || D.updated_at) + (D.stale ? ' · <span class="stl">STALE (a venue failed; last good list shown)</span>' : "");
+    const items = D.items || [];
+    let h = "<h1>" + esc(cfg.title) + '</h1><p class="sub">' + esc(cfg.subtitle) + "</p>";
+    for (const g of ["Macro", "Markets", "Geopolitical"]) {
+      const gi = items.filter(x => x.group === g); if (!gi.length) continue;
+      h += "<h2>" + g + ' <span class="hint">' + gi.length + " of " + items.length + "</span></h2><div class=\"pmgrid\">" + gi.map(it =>
+        '<div class="pmcard' + (it.venues.length > 1 ? " both" : "") + '"><div class="pmt"><span class="pmr">#' + it.rank + "</span>" + esc(it.title) + (it.venues.length > 1 ? ' <span class="pmboth">Kalshi + Polymarket</span>' : "") + "</div>" +
+        '<div class="pmvs">' + it.venues.map(venueBlock).join("") + "</div></div>").join("") + "</div>";
+    }
+    const ch = items.filter(x => x.chart);
+    if (ch.length) h += '<h2>Probability history <span class="hint">top ' + ch.length + ' by liquidity, daily, up to 90 days</span></h2><div class="panels c2">' + ch.map((it, j) =>
+      '<div class="panel"><h4>#' + it.rank + " " + esc(it.title) + " (" + esc(it.venues[0].venue) + ')</h4><div class="cv"><canvas id="pm' + j + '"></canvas></div><div class="src">Source: ' + esc(it.venues[0].venue) + "</div></div>").join("") + "</div>";
+    h += '<div class="pnote pmnote">' + esc(cfg.ranking_note || "") + "</div><div class=\"pnote pmnote\">" + esc(cfg.disclaimer || "") + "</div>";
+    app.innerHTML = h;
+    ch.forEach((it, j) => {
+      const v = it.venues[0], outs = v.outcomes.filter(o => o.hist && o.hist.length).sort((a, b) => b.p - a.p).slice(0, 4);
+      const el = document.getElementById("pm" + j); if (!el || !outs.length) return;
+      charts.push(new Chart(el, { type: "line", data: { datasets: outs.map((o, n) => ({ label: o.label, data: o.hist.map(x => ({ x: Date.parse(x[0] + "T00:00:00Z"), y: +(x[1] * 100).toFixed(1) })), borderColor: COLORS[n], backgroundColor: COLORS[n], borderWidth: 1.6, pointRadius: 0, tension: 0 })) },
+        options: { parsing: false, animation: false, maintainAspectRatio: false, interaction: { mode: "index", intersect: false },
+          scales: { x: { type: "time", time: { minUnit: "day" }, grid: { color: "#1f2a37" }, ticks: { color: "#8b9bb0", maxTicksLimit: 7 } }, y: { min: 0, max: 100, grid: { color: "#1f2a37" }, ticks: { color: "#8b9bb0", callback: x => x + "%" } } },
+          plugins: { legend: { labels: { color: "#e6edf3", boxWidth: 12 } }, tooltip: { callbacks: { title: t => t.length ? fmtDate(new Date(t[0].parsed.x).toISOString().slice(0, 10), "Daily") : "", label: t => t.dataset.label + ": " + t.parsed.y.toFixed(1) + "%" } } } } }));
+    });
   }
 
   function kpiCard(s, S) {

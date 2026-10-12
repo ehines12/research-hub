@@ -10,6 +10,10 @@ Central financials research hub: a home page of tiles, one per research area, wi
 - `refresh.sh`: fetch + export, logs to `logs/refresh.log` (use this for scheduled refreshes).
 - `serve.sh [port]`: serves locally in the background (default 8077).
 
+## Prediction Markets (#/predictions)
+
+`predictions.py` (called by `fetch_data.py` for configs with `"kind": "predictions"`) picks the top 12 most liquid macro / markets / geopolitical markets across Kalshi (public trade API v2) and Polymarket (Gamma + CLOB), recomputed every run: category/tag candidates, keyword allow-groups plus a deny-list, live outcomes only, ranked by 7-day volume (open interest tiebreak), with the same question on both venues merged. If either venue fails, the last good list is kept and flagged stale. Odds-only Action runs at 9:52 AM, 12:52 PM and 2:52 PM CT on weekdays, in addition to the 3 full runs.
+
 ## H.8 / H.6 Quarterly Data
 
 `"quarterly"` in `config/dashboards/h8.json` drives the Quarterly Data table on #/h8, computed in `fetch_data.py` (`calc.quarter_averages`) from the series already pulled: quarter-average levels ($bn) of the weekly H.8 / monthly H.6 data, YoY vs the same quarter a year earlier, and compounded LQA ((avg_q/avg_q-1)^4 - 1). Partial quarters are flagged QTD per cell. Each data change also writes `data/h8-quarterly.csv` and `data/h8-quarterly.xlsx` (openpyxl), committed by the Action.

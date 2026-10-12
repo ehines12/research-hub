@@ -19,6 +19,15 @@
    "tagline": "Fed H.8 weekly bank balance sheets and H.6 deposit mix",
    "description": "Fed H.8 weekly commercial-bank deposits, loans, securities and deposit mix (all / large / small domestic), plus H.6 monthly deposit mix and retail MMFs.",
    "dashboard": "config/dashboards/h8.json"
+  },
+  {
+   "id": "predictions",
+   "title": "Prediction Markets",
+   "icon": "odds",
+   "status": "live",
+   "tagline": "Top 12 macro, markets and geopolitical odds from Kalshi and Polymarket",
+   "description": "Market-implied probabilities for the most liquid macro (Fed, inflation, growth), markets and geopolitical contracts on Kalshi and Polymarket, re-ranked every refresh.",
+   "dashboard": "config/dashboards/predictions.json"
   }
  ],
  "links": [
