@@ -573,7 +573,7 @@
       "units": "thousands",
       "transform": "diff",
       "fmt": "k0",
-      "chg": "n",
+      "chg": "k",
       "freq": "Monthly",
       "kpi": false,
       "src_label": "FRED / BLS CES (food services & drinking places)"
