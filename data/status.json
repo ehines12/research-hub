@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-13T19:57:29+00:00",
-   "data_changed_at": "2026-10-13T14:22:58+00:00",
+   "checked_at": "2026-10-13T21:10:14+00:00",
+   "data_changed_at": "2026-10-13T21:10:07+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -74,7 +74,7 @@
      "fred": "DFF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-08",
+      "date": "2026-10-12",
       "value": 3.88
      }
     },
@@ -82,16 +82,16 @@
      "fred": "DGS2",
      "status": "ok",
      "latest": {
-      "date": "2026-10-08",
-      "value": 4.75
+      "date": "2026-10-09",
+      "value": 4.8
      }
     },
     "dgs10": {
      "fred": "DGS10",
      "status": "ok",
      "latest": {
-      "date": "2026-10-08",
-      "value": 5.22
+      "date": "2026-10-09",
+      "value": 5.24
      }
     },
     "spread": {
@@ -130,7 +130,7 @@
      "fred": "T10YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-10-09",
+      "date": "2026-10-13",
       "value": 2.33
      }
     },
@@ -278,24 +278,24 @@
      "fred": "DTS",
      "status": "ok",
      "latest": {
-      "date": "2026-10-08",
-      "value": 263.975
+      "date": "2026-10-09",
+      "value": 263.727
      }
     },
     "dts_yoy": {
      "fred": "DTS",
      "status": "ok",
      "latest": {
-      "date": "2026-10-08",
-      "value": 4.0402
+      "date": "2026-10-09",
+      "value": 4.453
      }
     },
     "dts_yoy60": {
      "fred": "DTS",
      "status": "ok",
      "latest": {
-      "date": "2026-10-08",
-      "value": 3.9993
+      "date": "2026-10-09",
+      "value": 5.7954
      }
     },
     "gas": {
@@ -421,7 +421,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-13T19:57:40+00:00",
+   "checked_at": "2026-10-13T21:10:36+00:00",
    "data_changed_at": "2026-10-13T14:22:31+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2067,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-13T20:25:13+00:00",
-   "data_changed_at": "2026-10-13T20:23:46+00:00",
+   "checked_at": "2026-10-13T21:11:59+00:00",
+   "data_changed_at": "2026-10-13T21:10:36+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,7 +2083,7 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-13T19:59:33+00:00",
+   "checked_at": "2026-10-13T21:12:33+00:00",
    "data_changed_at": "2026-10-13T19:59:07+00:00",
    "series": {
     "gprd": {
@@ -2409,6 +2409,6 @@
    }
   }
  },
- "checked_at": "2026-10-13T20:25:13+00:00",
+ "checked_at": "2026-10-13T21:12:33+00:00",
  "ok": true
 }
