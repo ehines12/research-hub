@@ -902,7 +902,7 @@ def _quarterly(qc, S):
                               "yoy": round((c["avg"] / yo["avg"] - 1) * 100, 2) if yo and yo["complete"] and yo["avg"] else None,
                               "lqa": round(((c["avg"] / lq["avg"]) ** 4 - 1) * 100, 2) if lq and lq["complete"] and lq["avg"] > 0 and c["avg"] > 0 else None})
             rows.append({**r, "freq": s.get("freq"), "status": s.get("status", "failed"), "cells": cells})
-        groups.append({"title": g["title"], "rows": rows})
+        groups.append({"title": g["title"], "bank": g.get("bank"), "rows": rows})
     return {"columns": [{"label": f"Q{q} {y}", "y": y, "q": q} for y, q in cols], "groups": groups,
             "note": qc.get("note"), "title": qc.get("title")}
 
@@ -943,13 +943,14 @@ def _write_quarterly_files(did, qd):
 
 
 def growth5y_table(gd, basis):
-    hdr = ["Basis", "Series", "FRED id", "SA/NSA"]
+    hdr = ["Bank group", "Basis", "Series", "FRED id", "SA/NSA"]
+    BG = {"D": "Domestic total", "L": "Large domestic", "S": "Small domestic"}
     for c in gd["columns"]:
         lab = c["label"] + (" QTD" if c["partial"] else "")
         hdr += [f"{lab} level ($bn)", f"{lab} YoY %", f"{lab} LQA %"] + ([f"{lab} EOP week"] if basis == "eop" else [f"{lab} weeks in qtr"])
     out = [hdr]
     for r in gd["rows"]:
-        row = ["End of period" if basis == "eop" else "Quarter average", "  " * r.get("lvl", 0) + r["name"], r["key"], r["sa"]]
+        row = [BG.get(r.get("bank"), "All commercial banks"), "End of period" if basis == "eop" else "Quarter average", "  " * r.get("lvl", 0) + r["name"], r["key"], r["sa"]]
         for c in r["cells"]:
             if not c:
                 row += [None] * 4; continue
@@ -980,7 +981,7 @@ def _write_growth5y_files(did, gd):
             ws.append(r)
         for c in ws[1]:
             c.font = Font(bold=True)
-        ws.freeze_panes = "E2"
+        ws.freeze_panes = "F2"
         ws.append([]); ws.append([gd.get("note") or ""])
     wb.properties.created = wb.properties.modified = dt.datetime(2000, 1, 1)
     wb.save(DATA / f"{did}-growth5y.xlsx")

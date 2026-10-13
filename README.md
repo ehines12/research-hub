@@ -16,7 +16,7 @@ Central financials research hub: a home page of tiles, one per research area, wi
 
 ## H.8 / H.6 Quarterly Data
 
-`"quarterly"` in `config/dashboards/h8.json` drives the Quarterly Data table on #/h8, computed in `fetch_data.py` (`calc.quarter_averages`) from the series already pulled: quarter-average levels ($bn) of the weekly H.8 / monthly H.6 data, YoY vs the same quarter a year earlier, and compounded LQA ((avg_q/avg_q-1)^4 - 1). Partial quarters are flagged QTD per cell. Each data change also writes `data/h8-quarterly.csv` and `data/h8-quarterly.xlsx` (openpyxl), committed by the Action.
+H.8 uses domestically chartered commercial banks only (domestic total / large / small, FRED ...DCBW / ...LCBW / ...SCBW; large-bank C&I = domestic − small since FRED has no large C&I weekly series). Quarterly groups and growth5y rows carry a `bank` tag (D/L/S) and the page shows one group at a time via a shared Banks toggle; downloads include all three. `"quarterly"` in `config/dashboards/h8.json` drives the Quarterly Data table on #/h8, computed in `fetch_data.py` (`calc.quarter_averages`) from the series already pulled: quarter-average levels ($bn) of the weekly H.8 / monthly H.6 data, YoY vs the same quarter a year earlier, and compounded LQA ((avg_q/avg_q-1)^4 - 1). Partial quarters are flagged QTD per cell. Each data change also writes `data/h8-quarterly.csv` and `data/h8-quarterly.xlsx` (openpyxl), committed by the Action.
 
 ## Macro: non-FRED sources
 

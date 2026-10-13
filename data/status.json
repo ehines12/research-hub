@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-13T13:45:39+00:00",
-   "data_changed_at": "2026-10-13T03:14:01+00:00",
+   "checked_at": "2026-10-13T14:23:06+00:00",
+   "data_changed_at": "2026-10-13T14:22:58+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -149,10 +149,10 @@
       "date": "2026-10-01",
       "value": 3.633,
       "target": "Oct 2026",
-      "asof": "2026-10-09",
+      "asof": "2026-10-13",
       "pending": true,
-      "prior_date": "2026-10-02",
-      "prior_value": 3.5824,
+      "prior_date": "2026-10-06",
+      "prior_value": 3.633,
       "mm": 0.2693
      }
     },
@@ -163,9 +163,9 @@
       "date": "2026-10-01",
       "value": 2.2975,
       "target": "Oct 2026",
-      "asof": "2026-10-09",
+      "asof": "2026-10-13",
       "pending": true,
-      "prior_date": "2026-10-02",
+      "prior_date": "2026-10-06",
       "prior_value": 2.2975,
       "mm": 0.2003
      }
@@ -177,10 +177,10 @@
       "date": "2026-10-01",
       "value": 3.6917,
       "target": "Oct 2026",
-      "asof": "2026-10-09",
+      "asof": "2026-10-13",
       "pending": true,
-      "prior_date": "2026-10-02",
-      "prior_value": 3.663,
+      "prior_date": "2026-10-06",
+      "prior_value": 3.6917,
       "mm": 0.2784
      }
     },
@@ -191,9 +191,9 @@
       "date": "2026-10-01",
       "value": 3.0965,
       "target": "Oct 2026",
-      "asof": "2026-10-09",
+      "asof": "2026-10-13",
       "pending": true,
-      "prior_date": "2026-10-02",
+      "prior_date": "2026-10-06",
       "prior_value": 3.0965,
       "mm": 0.2485
      }
@@ -203,12 +203,12 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 4.3872,
+      "value": 4.5005,
       "target": "Q4 2026",
-      "asof": "2026-10-09",
+      "asof": "2026-10-13",
       "pending": true,
-      "prior_date": "2026-10-02",
-      "prior_value": 4.0177
+      "prior_date": "2026-10-06",
+      "prior_value": 4.1049
      }
     },
     "clev_ccpi_q": {
@@ -218,9 +218,9 @@
       "date": "2026-10-01",
       "value": 2.5566,
       "target": "Q4 2026",
-      "asof": "2026-10-09",
+      "asof": "2026-10-13",
       "pending": true,
-      "prior_date": "2026-10-02",
+      "prior_date": "2026-10-06",
       "prior_value": 2.5566
      }
     },
@@ -229,12 +229,12 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 3.9975,
+      "value": 4.0618,
       "target": "Q4 2026",
-      "asof": "2026-10-09",
+      "asof": "2026-10-13",
       "pending": true,
-      "prior_date": "2026-10-02",
-      "prior_value": 3.788
+      "prior_date": "2026-10-06",
+      "prior_value": 3.8375
      }
     },
     "clev_cpce_q": {
@@ -244,9 +244,9 @@
       "date": "2026-10-01",
       "value": 3.0544,
       "target": "Q4 2026",
-      "asof": "2026-10-09",
+      "asof": "2026-10-13",
       "pending": true,
-      "prior_date": "2026-10-02",
+      "prior_date": "2026-10-06",
       "prior_value": 3.0544
      }
     },
@@ -421,71 +421,15 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-13T13:45:48+00:00",
-   "data_changed_at": "2026-10-13T03:42:59+00:00",
+   "checked_at": "2026-10-13T14:23:11+00:00",
+   "data_changed_at": "2026-10-13T14:22:31+00:00",
    "series": {
-    "TOTLL": {
-     "fred": "TOTLL",
+    "LLBDCBW027SBOG": {
+     "fred": "LLBDCBW027SBOG",
      "status": "ok",
      "latest": {
       "date": "2026-09-30",
-      "value": 14128.1334
-     }
-    },
-    "DPSACBW027SBOG": {
-     "fred": "DPSACBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 19692.9445
-     }
-    },
-    "TOTCI": {
-     "fred": "TOTCI",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 2970.9011
-     }
-    },
-    "CREACBW027SBOG": {
-     "fred": "CREACBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 3142.3763
-     }
-    },
-    "CCLACBW027SBOG": {
-     "fred": "CCLACBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 1096.3924
-     }
-    },
-    "DPSSCBW027SBOG": {
-     "fred": "DPSSCBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 5673.3779
-     }
-    },
-    "LLBSCBW027SBOG": {
-     "fred": "LLBSCBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 4742.7454
-     }
-    },
-    "DPSLCBW027SBOG": {
-     "fred": "DPSLCBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 12414.7394
+      "value": 12696.906
      }
     },
     "LLBLCBW027SBOG": {
@@ -496,20 +440,396 @@
       "value": 7954.1606
      }
     },
-    "LTDACBW027SBOG": {
-     "fred": "LTDACBW027SBOG",
+    "LLBSCBW027SBOG": {
+     "fred": "LLBSCBW027SBOG",
      "status": "ok",
      "latest": {
       "date": "2026-09-30",
-      "value": 2588.9263
+      "value": 4742.7454
      }
     },
-    "ODSACBW027SBOG": {
-     "fred": "ODSACBW027SBOG",
+    "CILDCBW027SBOG": {
+     "fred": "CILDCBW027SBOG",
      "status": "ok",
      "latest": {
       "date": "2026-09-30",
-      "value": 17104.0181
+      "value": 2336.5337
+     }
+    },
+    "CILSCBW027SBOG": {
+     "fred": "CILSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 739.5375
+     }
+    },
+    "CREDCBW027SBOG": {
+     "fred": "CREDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 3018.1209
+     }
+    },
+    "CRELCBW027SBOG": {
+     "fred": "CRELCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 912.5065
+     }
+    },
+    "CRESCBW027SBOG": {
+     "fred": "CRESCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 2105.6143
+     }
+    },
+    "CLDDCBW027SBOG": {
+     "fred": "CLDDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 432.9249
+     }
+    },
+    "CLDLCBW027SBOG": {
+     "fred": "CLDLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 125.0298
+     }
+    },
+    "CLDSCBW027SBOG": {
+     "fred": "CLDSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 307.8951
+     }
+    },
+    "SBFDCBW027SBOG": {
+     "fred": "SBFDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 122.8488
+     }
+    },
+    "SBFLCBW027SBOG": {
+     "fred": "SBFLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 6.3727
+     }
+    },
+    "SBFSCBW027SBOG": {
+     "fred": "SBFSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 116.476
+     }
+    },
+    "SMPDCBW027SBOG": {
+     "fred": "SMPDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 619.8912
+     }
+    },
+    "SMPLCBW027SBOG": {
+     "fred": "SMPLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 253.1314
+     }
+    },
+    "SMPSCBW027SBOG": {
+     "fred": "SMPSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 366.7598
+     }
+    },
+    "SNFDCBW027SBOG": {
+     "fred": "SNFDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1842.456
+     }
+    },
+    "SNFLCBW027SBOG": {
+     "fred": "SNFLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 527.9726
+     }
+    },
+    "SNFSCBW027SBOG": {
+     "fred": "SNFSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1314.4834
+     }
+    },
+    "RREDCBW027SBOG": {
+     "fred": "RREDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 2694.347
+     }
+    },
+    "RRELCBW027SBOG": {
+     "fred": "RRELCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1659.6066
+     }
+    },
+    "RRESCBW027SBOG": {
+     "fred": "RRESCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1034.7404
+     }
+    },
+    "CRLDCBW027SBOG": {
+     "fred": "CRLDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 2403.8785
+     }
+    },
+    "CRLLCBW027SBOG": {
+     "fred": "CRLLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1498.2968
+     }
+    },
+    "CRLSCBW027SBOG": {
+     "fred": "CRLSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 905.5817
+     }
+    },
+    "RHEDCBW027SBOG": {
+     "fred": "RHEDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 290.4685
+     }
+    },
+    "RHELCBW027SBOG": {
+     "fred": "RHELCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 161.3098
+     }
+    },
+    "RHESCBW027SBOG": {
+     "fred": "RHESCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 129.1587
+     }
+    },
+    "CLSDCBW027SBOG": {
+     "fred": "CLSDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1927.8383
+     }
+    },
+    "CLSLCBW027SBOG": {
+     "fred": "CLSLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1586.2189
+     }
+    },
+    "CLSSCBW027SBOG": {
+     "fred": "CLSSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 341.6195
+     }
+    },
+    "CCLDCBW027SBOG": {
+     "fred": "CCLDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1096.3924
+     }
+    },
+    "CCLLCBW027SBOG": {
+     "fred": "CCLLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1002.6152
+     }
+    },
+    "CCLSCBW027SBOG": {
+     "fred": "CCLSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 93.7772
+     }
+    },
+    "OCLDCBW027SBOG": {
+     "fred": "OCLDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 831.4459
+     }
+    },
+    "OCLLCBW027SBOG": {
+     "fred": "OCLLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 583.6037
+     }
+    },
+    "OCLSCBW027SBOG": {
+     "fred": "OCLSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 247.8423
+     }
+    },
+    "CARDCBW027SBOG": {
+     "fred": "CARDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 524.4724
+     }
+    },
+    "CARLCBW027SBOG": {
+     "fred": "CARLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 436.8975
+     }
+    },
+    "CARSCBW027SBOG": {
+     "fred": "CARSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 87.575
+     }
+    },
+    "AOLDCBW027SBOG": {
+     "fred": "AOLDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 2720.0661
+     }
+    },
+    "AOLLCBW027SBOG": {
+     "fred": "AOLLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 2198.8324
+     }
+    },
+    "AOLSCBW027SBOG": {
+     "fred": "AOLSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 521.2337
+     }
+    },
+    "LNFDCBW027SBOG": {
+     "fred": "LNFDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1547.3679
+     }
+    },
+    "LNFLCBW027SBOG": {
+     "fred": "LNFLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1344.6468
+     }
+    },
+    "LNFSCBW027SBOG": {
+     "fred": "LNFSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 202.7211
+     }
+    },
+    "DPSDCBW027SBOG": {
+     "fred": "DPSDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 18088.1174
+     }
+    },
+    "DPSLCBW027SBOG": {
+     "fred": "DPSLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 12414.7394
+     }
+    },
+    "DPSSCBW027SBOG": {
+     "fred": "DPSSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 5673.3779
+     }
+    },
+    "LTDDCBW027SBOG": {
+     "fred": "LTDDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1653.1435
      }
     },
     "LTDLCBW027SBOG": {
@@ -520,14 +840,6 @@
       "value": 918.7138
      }
     },
-    "ODSLCBW027SBOG": {
-     "fred": "ODSLCBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 11496.0256
-     }
-    },
     "LTDSCBW027SBOG": {
      "fred": "LTDSCBW027SBOG",
      "status": "ok",
@@ -536,12 +848,148 @@
       "value": 734.4297
      }
     },
+    "ODSDCBW027SBOG": {
+     "fred": "ODSDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 16434.9739
+     }
+    },
+    "ODSLCBW027SBOG": {
+     "fred": "ODSLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 11496.0256
+     }
+    },
     "ODSSCBW027SBOG": {
      "fred": "ODSSCBW027SBOG",
      "status": "ok",
      "latest": {
       "date": "2026-09-30",
       "value": 4938.9483
+     }
+    },
+    "SBCDCBW027SBOG": {
+     "fred": "SBCDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 5442.9225
+     }
+    },
+    "SBCLCBW027SBOG": {
+     "fred": "SBCLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 4195.7133
+     }
+    },
+    "SBCSCBW027SBOG": {
+     "fred": "SBCSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1247.2092
+     }
+    },
+    "TASDCBW027SBOG": {
+     "fred": "TASDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 4535.6812
+     }
+    },
+    "TASLCBW027SBOG": {
+     "fred": "TASLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 3630.2736
+     }
+    },
+    "TASSCBW027SBOG": {
+     "fred": "TASSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 905.4076
+     }
+    },
+    "CASDCBW027SBOG": {
+     "fred": "CASDCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1858.8116
+     }
+    },
+    "CASLCBW027SBOG": {
+     "fred": "CASLCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1352.9206
+     }
+    },
+    "CASSCBW027SBOG": {
+     "fred": "CASSCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 505.891
+     }
+    },
+    "TLADCBW027SBOG": {
+     "fred": "TLADCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 22305.2051
+     }
+    },
+    "TLALCBW027SBOG": {
+     "fred": "TLALCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 15366.2325
+     }
+    },
+    "TLASCBW027SBOG": {
+     "fred": "TLASCBW027SBOG",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 6938.9725
+     }
+    },
+    "BOR_D": {
+     "fred": "H8B3094NDMD",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1364.637
+     }
+    },
+    "BOR_L": {
+     "fred": "H8B3094NLGD",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1058.386
+     }
+    },
+    "BOR_S": {
+     "fred": "H8B3094NSMD",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 306.251
      }
     },
     "DEMDEPSL": {
@@ -590,142 +1038,6 @@
      "latest": {
       "date": "2026-08-01",
       "value": 3073.9
-     }
-    },
-    "SBCACBW027SBOG": {
-     "fred": "SBCACBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 5755.0529
-     }
-    },
-    "TASACBW027SBOG": {
-     "fred": "TASACBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 4759.7003
-     }
-    },
-    "CLSACBW027SBOG": {
-     "fred": "CLSACBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 1927.8383
-     }
-    },
-    "RREACBW027SBOG": {
-     "fred": "RREACBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 2696.5469
-     }
-    },
-    "CASACBW027SBOG": {
-     "fred": "CASACBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 3158.0701
-     }
-    },
-    "TLAACBW027SBOG": {
-     "fred": "TLAACBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 26009.3195
-     }
-    },
-    "H8_BORROW": {
-     "fred": "H8B3094NCBA",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 2332.1946
-     }
-    },
-    "CLDACBW027SBOG": {
-     "fred": "CLDACBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 456.1267
-     }
-    },
-    "SMPACBW027SBOG": {
-     "fred": "SMPACBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 641.7531
-     }
-    },
-    "SNFACBW027SBOG": {
-     "fred": "SNFACBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 1921.1588
-     }
-    },
-    "CRLACBW027SBOG": {
-     "fred": "CRLACBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 2405.543
-     }
-    },
-    "RHEACBW027SBOG": {
-     "fred": "RHEACBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 291.0039
-     }
-    },
-    "OCLACBW027SBOG": {
-     "fred": "OCLACBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 831.4459
-     }
-    },
-    "CARACBW027SBOG": {
-     "fred": "CARACBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 524.4724
-     }
-    },
-    "AOLACBW027SBOG": {
-     "fred": "AOLACBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 3390.4708
-     }
-    },
-    "LNFACBW027SBOG": {
-     "fred": "LNFACBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 2079.4364
-     }
-    },
-    "SBFACBW027SBOG": {
-     "fred": "SBFACBW027SBOG",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 123.3377
      }
     },
     "fdic_sav_old": {
@@ -1128,60 +1440,20 @@
       "value": -2.0
      }
     },
-    "TOTLL_YOY": {
+    "CIL_LARGE": {
      "fred": "derived",
      "status": "ok",
      "latest": {
       "date": "2026-09-30",
-      "value": 7.551
+      "value": 1596.9962
      }
     },
-    "DPSACBW027SBOG_YOY": {
+    "DPSDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
       "date": "2026-09-30",
-      "value": 6.469
-     }
-    },
-    "TOTCI_YOY": {
-     "fred": "derived",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 10.138
-     }
-    },
-    "CREACBW027SBOG_YOY": {
-     "fred": "derived",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 3.703
-     }
-    },
-    "CCLACBW027SBOG_YOY": {
-     "fred": "derived",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 4.352
-     }
-    },
-    "DPSSCBW027SBOG_YOY": {
-     "fred": "derived",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 4.105
-     }
-    },
-    "LLBSCBW027SBOG_YOY": {
-     "fred": "derived",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 5.233
+      "value": 5.79
      }
     },
     "DPSLCBW027SBOG_YOY": {
@@ -1192,6 +1464,22 @@
       "value": 6.578
      }
     },
+    "DPSSCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 4.105
+     }
+    },
+    "LLBDCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 6.69
+     }
+    },
     "LLBLCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
@@ -1200,28 +1488,292 @@
       "value": 7.578
      }
     },
-    "LTDACBW027SBOG_YOY": {
+    "LLBSCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
       "date": "2026-09-30",
-      "value": 7.702
+      "value": 5.233
      }
     },
-    "ODSACBW027SBOG_YOY": {
+    "CILDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
       "date": "2026-09-30",
-      "value": 6.285
+      "value": 8.464
      }
     },
-    "LTD_SHARE_ALL": {
+    "CIL_LARGE_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
       "date": "2026-09-30",
-      "value": 13.1465
+      "value": 9.78
+     }
+    },
+    "CILSCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 5.728
+     }
+    },
+    "CREDCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 3.575
+     }
+    },
+    "CRELCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 3.784
+     }
+    },
+    "CRESCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 3.485
+     }
+    },
+    "RREDCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1.435
+     }
+    },
+    "RRELCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 0.376
+     }
+    },
+    "RRESCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 3.18
+     }
+    },
+    "CLSDCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 4.962
+     }
+    },
+    "CLSLCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 4.146
+     }
+    },
+    "CLSSCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 8.925
+     }
+    },
+    "CCLDCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 4.352
+     }
+    },
+    "CCLLCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 5.081
+     }
+    },
+    "CCLSCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": -2.854
+     }
+    },
+    "LTDDCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 6.902
+     }
+    },
+    "LTDLCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 13.981
+     }
+    },
+    "LTDSCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": -0.805
+     }
+    },
+    "ODSDCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 5.68
+     }
+    },
+    "ODSLCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 6.028
+     }
+    },
+    "ODSSCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 4.877
+     }
+    },
+    "SBCDCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1.212
+     }
+    },
+    "SBCLCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1.207
+     }
+    },
+    "SBCSCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1.227
+     }
+    },
+    "CASDCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": -3.013
+     }
+    },
+    "CASLCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": -4.636
+     }
+    },
+    "CASSCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 1.611
+     }
+    },
+    "TLADCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 5.179
+     }
+    },
+    "TLALCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 5.44
+     }
+    },
+    "TLASCBW027SBOG_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 4.605
+     }
+    },
+    "BOR_D_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 5.669
+     }
+    },
+    "BOR_L_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 4.84
+     }
+    },
+    "BOR_S_YOY": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 8.637
+     }
+    },
+    "LTD_SHARE_DOM": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 9.1394
+     }
+    },
+    "LDR_DOM": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 70.1947
      }
     },
     "LTD_SHARE_LARGE": {
@@ -1232,6 +1784,14 @@
       "value": 7.4002
      }
     },
+    "LDR_LARGE": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 64.0703
+     }
+    },
     "LTD_SHARE_SMALL": {
      "fred": "derived",
      "status": "ok",
@@ -1240,20 +1800,44 @@
       "value": 12.9452
      }
     },
-    "H8_CONTRIB_LTD": {
+    "LDR_SMALL": {
      "fred": "derived",
      "status": "ok",
      "latest": {
       "date": "2026-09-30",
-      "value": 1.001
+      "value": 83.5965
      }
     },
-    "H8_CONTRIB_OTHER": {
+    "H8_CONTRIB_LTD_D": {
      "fred": "derived",
      "status": "ok",
      "latest": {
       "date": "2026-09-30",
-      "value": 5.468
+      "value": 0.624
+     }
+    },
+    "H8_CONTRIB_OTHER_D": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 5.166
+     }
+    },
+    "H8_CONTRIB_LTD_S": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": -0.109
+     }
+    },
+    "H8_CONTRIB_OTHER_S": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-30",
+      "value": 4.215
      }
     },
     "OLD_PRE": {
@@ -1376,62 +1960,6 @@
       "value": 16.0877
      }
     },
-    "SBCACBW027SBOG_YOY": {
-     "fred": "derived",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 1.919
-     }
-    },
-    "TASACBW027SBOG_YOY": {
-     "fred": "derived",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 2.037
-     }
-    },
-    "CLSACBW027SBOG_YOY": {
-     "fred": "derived",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 4.962
-     }
-    },
-    "RREACBW027SBOG_YOY": {
-     "fred": "derived",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 1.488
-     }
-    },
-    "CASACBW027SBOG_YOY": {
-     "fred": "derived",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 1.215
-     }
-    },
-    "TLAACBW027SBOG_YOY": {
-     "fred": "derived",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 6.055
-     }
-    },
-    "H8_BORROW_YOY": {
-     "fred": "derived",
-     "status": "ok",
-     "latest": {
-      "date": "2026-09-30",
-      "value": 4.613
-     }
-    },
     "dep_sav": {
      "fred": "derived",
      "status": "ok",
@@ -1539,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-13T13:47:13+00:00",
-   "data_changed_at": "2026-10-13T13:45:48+00:00",
+   "checked_at": "2026-10-13T14:23:53+00:00",
+   "data_changed_at": "2026-10-13T14:23:11+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -1555,64 +2083,71 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-13T13:47:58+00:00",
-   "data_changed_at": "2026-10-13T13:47:13+00:00",
+   "checked_at": "2026-10-13T14:24:32+00:00",
+   "data_changed_at": "2026-10-13T14:23:53+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-05",
       "value": 141.4916
-     }
+     },
+     "error": "No module named 'xlrd'"
     },
     "gprd_ma30": {
      "fred": "GPRD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-05",
       "value": 167.307
-     }
+     },
+     "error": "No module named 'xlrd'"
     },
     "gprd_act_ma30": {
      "fred": "GPRD_ACT",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-05",
       "value": 175.0834
-     }
+     },
+     "error": "No module named 'xlrd'"
     },
     "gprd_thr_ma30": {
      "fred": "GPRD_THREAT",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-05",
       "value": 188.9667
-     }
+     },
+     "error": "No module named 'xlrd'"
     },
     "gpr_m": {
      "fred": "GPR",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 146.2099
-     }
+     },
+     "error": "No module named 'xlrd'"
     },
     "gpr_t": {
      "fred": "GPRT",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 173.0874
-     }
+     },
+     "error": "No module named 'xlrd'"
     },
     "gpr_a": {
      "fred": "GPRA",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 144.288
-     }
+     },
+     "error": "No module named 'xlrd'"
     },
     "epu_d": {
      "fred": "USEPUINDXD",
@@ -1881,6 +2416,6 @@
    }
   }
  },
- "checked_at": "2026-10-13T13:47:58+00:00",
- "ok": true
+ "checked_at": "2026-10-13T14:24:32+00:00",
+ "ok": false
 }

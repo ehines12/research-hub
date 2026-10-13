@@ -130,23 +130,32 @@
       (D.summary ? summaryTable(D, cfg) : "");
     app.innerHTML = "<h1>" + esc(cfg.title) + '</h1><p class="sub">' + esc(cfg.subtitle) + '</p><div class="kpis">' + kpis + '</div><div class="toolbar"><span>Lookback</span><div class="seg">' +
       ["1Y", "5Y", "10Y", "Max"].map(r => '<button data-r="' + r + '" class="' + (r === range ? "on" : "") + '">' + r + "</button>").join("") + "</div></div>" + secs;
-    app.querySelectorAll(".seg button").forEach(b => b.onclick = () => {
+    app.querySelectorAll(".toolbar .seg button").forEach(b => b.onclick = () => {
       range = b.dataset.r; localStorage.setItem("rh-range", range);
-      app.querySelectorAll(".seg button").forEach(x => x.classList.toggle("on", x === b));
+      app.querySelectorAll(".toolbar .seg button").forEach(x => x.classList.toggle("on", x === b));
       drawAll(cfg, S);
     });
     const qb = app.querySelector("#qtr");
     if (qb) qb.addEventListener("click", e => {
       const b = e.target.closest("button[data-qv]"), dl = e.target.closest("button[data-csv]");
+      const bk = e.target.closest("button[data-bk]");
+      if (bk) { setBank(bk.dataset.bk); return; }
       if (b) { qView = b.dataset.qv; localStorage.setItem("rh-qview", qView); qb.innerHTML = quarterlyTable(D.quarterly, area.id); }
       if (dl) downloadCsv(D.quarterly, area.id);
     });
     const gb = app.querySelector("#g5");
     if (gb) gb.addEventListener("click", e => {
       const b = e.target.closest("button[data-gm],button[data-gb]"), dl = e.target.closest("button[data-gcsv]");
+      const bk = e.target.closest("button[data-bk]");
+      if (bk) { setBank(bk.dataset.bk); return; }
       if (b) { if (b.dataset.gm) gMetric = b.dataset.gm; if (b.dataset.gb) gBasis = b.dataset.gb; gb.innerHTML = growthTable(D.growth5y); g5scroll(); }
       if (dl) growthCsv(D.growth5y, area.id);
     });
+    function setBank(k) {  // one bank-group selection drives both tables
+      bankView = k; localStorage.setItem("rh-bank", k);
+      if (qb) qb.innerHTML = quarterlyTable(D.quarterly, area.id);
+      if (gb) { gb.innerHTML = growthTable(D.growth5y); g5scroll(); }
+    }
     const sb = app.querySelector("#sloos");
     if (sb) sb.addEventListener("click", e => { if (e.target.closest("button[data-scsv]")) sloosCsv(cfg.sections.find(x => x.sloos).sloos, S); });
     g5scroll();
@@ -154,18 +163,22 @@
   }
 
   // ---- 5-year loan & deposit growth: EOP or quarter-average basis, YoY or compounded LQA ----
-  let gMetric = "yoy", gBasis = "eop";
+  let gMetric = "yoy", gBasis = "eop", bankView = localStorage.getItem("rh-bank") || "S";
+  const BANKS = { D: "Domestic total", L: "Large", S: "Small" }, BANKL = { D: "domestically chartered banks (total)", L: "large domestic banks", S: "small domestic banks" };
+  const bankSeg = () => '<span class="glab">Banks</span><div class="seg">' + Object.entries(BANKS).map(([k, l]) => '<button data-bk="' + k + '" class="' + (k === bankView ? "on" : "") + '">' + l + "</button>").join("") + "</div>";
+  const hasBanks = rows => rows.some(r => r.bank);
   function g5scroll() { const w = app.querySelector("#g5 .gwrap"); if (w) w.scrollLeft = w.scrollWidth; }  // open on the newest quarters
   const GB = { eop: "End of period (last weekly reading in quarter)", avg: "Quarter average" }, GM = { yoy: "YoY %", lqa: "LQA % (compounded)" };
   const shortD = s => fmtDate(s, "Daily").replace(/, \d{4}$/, "");
   function growthTable(G) {
     const seg = (attr, opts, cur) => '<div class="seg">' + Object.entries(opts).map(([k, l]) => '<button data-' + attr + '="' + k + '" class="' + (k === cur ? "on" : "") + '">' + l + "</button>").join("") + "</div>";
-    let h = '<div class="qbar"><div class="gtg"><span class="glab">Basis</span>' + seg("gb", { eop: "EOP", avg: "Average" }, gBasis) + '<span class="glab">Metric</span>' + seg("gm", { yoy: "YoY %", lqa: "LQA %" }, gMetric) + "</div>" +
+    const banked = hasBanks(G.rows), rows = banked ? G.rows.filter(r => r.bank === bankView) : G.rows;
+    let h = '<div class="qbar"><div class="gtg">' + (banked ? bankSeg() : "") + '<span class="glab">Basis</span>' + seg("gb", { eop: "EOP", avg: "Average" }, gBasis) + '<span class="glab">Metric</span>' + seg("gm", { yoy: "YoY %", lqa: "LQA %" }, gMetric) + "</div>" +
       '<div class="qdl"><button class="btn sm" data-gcsv="1">Download CSV</button>' + (INLINE ? "" : '<a class="btn sm" href="data/h8-growth5y.xlsx" download>Download Excel</a>') + "</div></div>" +
-      '<div class="gcap">Showing <b>' + esc(GM[gMetric]) + "</b> on a <b>" + esc(GB[gBasis]) + "</b> basis · all commercial banks, SA · hover a cell for the $bn level and week · <i>scroll left for earlier quarters</i></div>" +
+      '<div class="gcap">Showing <b>' + esc(GM[gMetric]) + "</b> on a <b>" + esc(GB[gBasis]) + "</b> basis · " + (banked ? esc(BANKL[bankView]) : "all commercial banks") + ", SA · hover a cell for the $bn level and week · <i>scroll left for earlier quarters</i></div>" +
       '<div class="gwrap"><table class="sumtbl qtbl gtbl"><thead><tr><th class="sl">Series</th>' + G.columns.map(c => '<th class="r">' + esc(c.label) +
         (c.partial ? '<span class="qtag">QTD: ' + c.n + " wk" + (c.n > 1 ? "s" : "") + "</span>" : "") + (gBasis === "eop" ? '<span class="wk">wk ' + esc(shortD(c.eop_date)) + "</span>" : '<span class="wk">' + c.n + " wks avg</span>") + "</th>").join("") + "</tr></thead><tbody>";
-    for (const r of G.rows) {
+    for (const r of rows) {
       const top = !r.lvl;
       h += '<tr class="' + (top ? "gtop" : "") + '"><td class="sl" title="FRED ' + esc(r.key) + '" style="padding-left:' + (10 + (r.lvl || 0) * 14) + 'px">' + esc(r.name) + (r.sa === "NSA" ? ' <span class="stl">NSA</span>' : "") + (r.status !== "ok" ? ' <span class="stl">' + esc(r.status.toUpperCase()) + "</span>" : "") + "</td>" +
         r.cells.map(c => { if (!c) return '<td class="r na">–</td>'; const b = c[gBasis], x = b[gMetric];
@@ -178,10 +191,10 @@
   function growthCsv(G, id) {
     const rows = [];
     for (const basis of ["eop", "avg"]) {
-      const head = ["Basis", "Series", "FRED id", "SA/NSA"];
+      const head = ["Bank group", "Basis", "Series", "FRED id", "SA/NSA"];
       G.columns.forEach(c => { const l = c.label + (c.partial ? " QTD" : ""); head.push(l + " level ($bn)", l + " YoY %", l + " LQA %", basis === "eop" ? l + " EOP week" : l + " weeks in qtr"); });
       rows.push(head);
-      G.rows.forEach(r => { const row = [basis === "eop" ? "End of period" : "Quarter average", "  ".repeat(r.lvl || 0) + r.name, r.key, r.sa];
+      G.rows.forEach(r => { const row = [BANKS[r.bank] ? (r.bank === "D" ? "Domestic total" : BANKS[r.bank] + " domestic") : "", basis === "eop" ? "End of period" : "Quarter average", "  ".repeat(r.lvl || 0) + r.name, r.key, r.sa];
         r.cells.forEach(c => c ? row.push(c[basis].level, c[basis].yoy ?? "", c[basis].lqa ?? "", basis === "eop" ? c.eop_date : c.n) : row.push("", "", "", "")); rows.push(row); });
       rows.push([]);
     }
@@ -204,16 +217,16 @@
   }
   function quarterlyTable(Q, id) {
     const V = { level: "Level ($bn, qtr avg)", yoy: "YoY %", lqa: "LQA % (compounded)" };
-    const cols = Q.columns, nc = cols.length;
+    const cols = Q.columns, nc = cols.length, banked = Q.groups.some(g => g.bank), groups = banked ? Q.groups.filter(g => !g.bank || g.bank === bankView) : Q.groups;
     // column header: mark QTD and summarize how much of the quarter is in, per frequency
     const hdr = cols.map((c, i) => {
-      const part = {}; Q.groups.forEach(g => g.rows.forEach(r => { const x = r.cells[i]; if (x && x.partial) part[r.freq] = x.n; }));
+      const part = {}; groups.forEach(g => g.rows.forEach(r => { const x = r.cells[i]; if (x && x.partial) part[r.freq] = x.n; }));
       const tag = Object.entries(part).map(([f, n]) => (f === "Monthly" ? "H.6 QTD: " + n + " of 3 mo" : "QTD: " + n + " wk" + (n > 1 ? "s" : ""))).join("; ");
       return '<th class="r">' + esc(c.label) + (tag ? '<span class="qtag">' + esc(tag) + "</span>" : "") + "</th>"; }).join("");
-    let h = '<div class="qbar"><div class="seg">' + Object.entries(V).map(([k, l]) => '<button data-qv="' + k + '" class="' + (k === qView ? "on" : "") + '">' + l + "</button>").join("") + "</div>" +
+    let h = '<div class="qbar"><div class="gtg">' + (banked ? bankSeg() : "") + '<div class="seg">' + Object.entries(V).map(([k, l]) => '<button data-qv="' + k + '" class="' + (k === qView ? "on" : "") + '">' + l + "</button>").join("") + "</div></div>" +
       '<div class="qdl"><button class="btn sm" data-csv="1">Download CSV</button>' + (INLINE ? "" : '<a class="btn sm" href="data/' + esc(id) + '-quarterly.xlsx" download>Download Excel</a>') + "</div></div>" +
       '<div class="qwrap"><table class="sumtbl qtbl"><thead><tr><th class="sl">Series</th>' + hdr + "</tr></thead><tbody>";
-    for (const g of Q.groups) {
+    for (const g of groups) {
       h += '<tr class="grp"><td class="sl" colspan="1">' + esc(g.title) + '</td><td colspan="' + nc + '"></td></tr>';
       for (const r of g.rows) {
         const ind = (r.name.match(/^ */) || [""])[0].length / 2;
