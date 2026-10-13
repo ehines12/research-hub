@@ -1,7 +1,7 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-13T12:19:38+00:00",
+   "checked_at": "2026-10-13T13:45:39+00:00",
    "data_changed_at": "2026-10-13T03:14:01+00:00",
    "series": {
     "gdp": {
@@ -421,7 +421,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-13T12:19:45+00:00",
+   "checked_at": "2026-10-13T13:45:48+00:00",
    "data_changed_at": "2026-10-13T03:42:59+00:00",
    "series": {
     "TOTLL": {
@@ -1539,8 +1539,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-13T12:21:11+00:00",
-   "data_changed_at": "2026-10-13T12:19:45+00:00",
+   "checked_at": "2026-10-13T13:47:13+00:00",
+   "data_changed_at": "2026-10-13T13:45:48+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -1555,8 +1555,8 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-13T12:21:13+00:00",
-   "data_changed_at": "2026-10-13T12:21:11+00:00",
+   "checked_at": "2026-10-13T13:47:58+00:00",
+   "data_changed_at": "2026-10-13T13:47:13+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
@@ -1618,24 +1618,24 @@
      "fred": "USEPUINDXD",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 242.69
+      "date": "2026-10-12",
+      "value": 155.29
      }
     },
     "epu_d_ma7": {
      "fred": "USEPUINDXD",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 316.6471
+      "date": "2026-10-12",
+      "value": 277.65
      }
     },
     "epu_d_ma30": {
      "fred": "USEPUINDXD",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 254.6903
+      "date": "2026-10-12",
+      "value": 251.8053
      }
     },
     "epu_m": {
@@ -1688,223 +1688,199 @@
     },
     "pw_hormuz": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 2.7143
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6592 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_hormuz_tank": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 0.8571
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6592 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_hormuz_cont": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 0.4286
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6592 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_hormuz_ly": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 111.2857
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6592 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_babelmandeb": {
      "fred": "PortWatch chokepoint4",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 29.5714
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6630 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_babelmandeb_tank": {
      "fred": "PortWatch chokepoint4",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 9.0
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6630 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_babelmandeb_cont": {
      "fred": "PortWatch chokepoint4",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 5.2857
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6630 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_babelmandeb_ly": {
      "fred": "PortWatch chokepoint4",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 33.7143
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6630 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_suez": {
      "fred": "PortWatch chokepoint1",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 43.1429
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6633 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_suez_tank": {
      "fred": "PortWatch chokepoint1",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 15.5714
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6633 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_suez_cont": {
      "fred": "PortWatch chokepoint1",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 13.7143
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6633 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_suez_ly": {
      "fred": "PortWatch chokepoint1",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 41.1429
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6633 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_panama": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 27.1429
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6641 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_panama_tank": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 12.4286
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6641 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_panama_cont": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 8.2857
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6641 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_panama_ly": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 31.2857
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6641 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_malacca": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 226.2857
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6644 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_malacca_tank": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 73.4286
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6644 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_malacca_cont": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 60.1429
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6644 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_malacca_ly": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 233.4286
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6644 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_bosporus": {
      "fred": "PortWatch chokepoint3",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 38.5714
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6561 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_bosporus_tank": {
      "fred": "PortWatch chokepoint3",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 12.1429
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6561 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_bosporus_cont": {
      "fred": "PortWatch chokepoint3",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 5.8571
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6561 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     },
     "pw_bosporus_ly": {
      "fred": "PortWatch chokepoint3",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-04",
       "value": 101.1429
-     },
-     "error": "PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6561 request units)! maximum allowed request units (6000) per Minute. Retry after 60 sec.']}"
+     }
     }
    }
   }
  },
- "checked_at": "2026-10-13T12:21:13+00:00",
- "ok": false
+ "checked_at": "2026-10-13T13:47:58+00:00",
+ "ok": true
 }
