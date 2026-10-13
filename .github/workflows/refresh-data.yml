@@ -5,6 +5,7 @@ name: Refresh dashboard data
 # and CST (UTC-6, Nov-Mar). GitHub may start scheduled runs a few minutes late.
 on:
   schedule:
+    - cron: "00 11 * * 1-5"   # 6:00 AM CDT / 5:00 AM CST  - early full refresh before the workday
     - cron: "47 13 * * 1-5"   # 8:47 AM CDT / 7:47 AM CST  - after 8:30 ET releases (jobs, CPI, claims, retail sales)
     - cron: "07 16 * * 1-5"   # 11:07 AM CDT / 10:07 AM CST - mid-morning releases (ind. production, PCE, revisions)
     - cron: "17 21 * * 1-5"   # 4:17 PM CDT / 3:17 PM CST  - daily Treasury yields, spread, fed funds
