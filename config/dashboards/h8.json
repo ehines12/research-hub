@@ -382,6 +382,282 @@
       "freq": "Weekly",
       "kpi": false,
       "src_label": "FRED / Fed H.8"
+    },
+    {
+      "key": "fdic_sav_old",
+      "fred": "SAVNRNJ",
+      "title": "Savings, national rate (pre-2021 method, non-jumbo, monthly avg of weekly)",
+      "units": "%",
+      "transform": "mavg",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED SAVNRNJ"
+    },
+    {
+      "key": "fdic_sav_new",
+      "fred": "SNDR",
+      "title": "Savings, national rate",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED SNDR"
+    },
+    {
+      "key": "fdic_ic_old",
+      "fred": "ICNRNJ",
+      "title": "Interest checking, national rate (pre-2021 method, non-jumbo, monthly avg of weekly)",
+      "units": "%",
+      "transform": "mavg",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED ICNRNJ"
+    },
+    {
+      "key": "fdic_ic_new",
+      "fred": "ICNDR",
+      "title": "Interest checking, national rate",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED ICNDR"
+    },
+    {
+      "key": "fdic_mmda_old",
+      "fred": "MMNRNJ",
+      "title": "Money market (MMDA), national rate (pre-2021 method, non-jumbo, monthly avg of weekly)",
+      "units": "%",
+      "transform": "mavg",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED MMNRNJ"
+    },
+    {
+      "key": "fdic_mmda_new",
+      "fred": "MMNDR",
+      "title": "Money market (MMDA), national rate",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED MMNDR"
+    },
+    {
+      "key": "fdic_cd1_old",
+      "fred": "CD1NRNJ",
+      "title": "1-month CD, national rate (pre-2021 method, non-jumbo, monthly avg of weekly)",
+      "units": "%",
+      "transform": "mavg",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED CD1NRNJ"
+    },
+    {
+      "key": "fdic_cd1_new",
+      "fred": "NDR1MCD",
+      "title": "1-month CD, national rate",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED NDR1MCD"
+    },
+    {
+      "key": "fdic_cd3_old",
+      "fred": "CD3NRNJ",
+      "title": "3-month CD, national rate (pre-2021 method, non-jumbo, monthly avg of weekly)",
+      "units": "%",
+      "transform": "mavg",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED CD3NRNJ"
+    },
+    {
+      "key": "fdic_cd3_new",
+      "fred": "NDR3MCD",
+      "title": "3-month CD, national rate",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED NDR3MCD"
+    },
+    {
+      "key": "fdic_cd6_old",
+      "fred": "CD6NRNJ",
+      "title": "6-month CD, national rate (pre-2021 method, non-jumbo, monthly avg of weekly)",
+      "units": "%",
+      "transform": "mavg",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED CD6NRNJ"
+    },
+    {
+      "key": "fdic_cd6_new",
+      "fred": "NDR6MCD",
+      "title": "6-month CD, national rate",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED NDR6MCD"
+    },
+    {
+      "key": "fdic_cd12_old",
+      "fred": "CD12NRNJ",
+      "title": "12-month CD, national rate (pre-2021 method, non-jumbo, monthly avg of weekly)",
+      "units": "%",
+      "transform": "mavg",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED CD12NRNJ"
+    },
+    {
+      "key": "fdic_cd12_new",
+      "fred": "NDR12MCD",
+      "title": "12-month CD, national rate",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED NDR12MCD"
+    },
+    {
+      "key": "fdic_cd24_old",
+      "fred": "CD24NRNJ",
+      "title": "24-month CD, national rate (pre-2021 method, non-jumbo, monthly avg of weekly)",
+      "units": "%",
+      "transform": "mavg",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED CD24NRNJ"
+    },
+    {
+      "key": "fdic_cd24_new",
+      "fred": "NDR24MCD",
+      "title": "24-month CD, national rate",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED NDR24MCD"
+    },
+    {
+      "key": "fdic_cd36_old",
+      "fred": "CD36NRNJ",
+      "title": "36-month CD, national rate (pre-2021 method, non-jumbo, monthly avg of weekly)",
+      "units": "%",
+      "transform": "mavg",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED CD36NRNJ"
+    },
+    {
+      "key": "fdic_cd36_new",
+      "fred": "NDR36MCD",
+      "title": "36-month CD, national rate",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED NDR36MCD"
+    },
+    {
+      "key": "fdic_cd48_old",
+      "fred": "CD48NRNJ",
+      "title": "48-month CD, national rate (pre-2021 method, non-jumbo, monthly avg of weekly)",
+      "units": "%",
+      "transform": "mavg",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED CD48NRNJ"
+    },
+    {
+      "key": "fdic_cd48_new",
+      "fred": "NDR48MCD",
+      "title": "48-month CD, national rate",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED NDR48MCD"
+    },
+    {
+      "key": "fdic_cd60_old",
+      "fred": "CD60NRNJ",
+      "title": "60-month CD, national rate (pre-2021 method, non-jumbo, monthly avg of weekly)",
+      "units": "%",
+      "transform": "mavg",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED CD60NRNJ"
+    },
+    {
+      "key": "fdic_cd60_new",
+      "fred": "NDR60MCD",
+      "title": "60-month CD, national rate",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FDIC national rates via FRED NDR60MCD"
+    },
+    {
+      "key": "ff_m",
+      "fred": "FEDFUNDS",
+      "title": "Effective fed funds rate (monthly avg)",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct2",
+      "chg": "bp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FRED FEDFUNDS"
     }
   ],
   "derived": [
@@ -746,6 +1022,175 @@
       "units": "%",
       "freq": "Weekly",
       "src_label": "FRED / Fed H.8"
+    },
+    {
+      "key": "dep_sav",
+      "op": "splice",
+      "pre": "fdic_sav_old",
+      "post": "fdic_sav_new",
+      "title": "Savings: national rate",
+      "units": "%",
+      "freq": "Monthly",
+      "fmt": "pct2",
+      "chg": "bp",
+      "src_label": "FDIC national rates via FRED (SAVNRNJ to Mar 2021, SNDR from Apr 2021)",
+      "link": "https://fred.stlouisfed.org/series/SNDR"
+    },
+    {
+      "key": "dep_ic",
+      "op": "splice",
+      "pre": "fdic_ic_old",
+      "post": "fdic_ic_new",
+      "title": "Interest checking: national rate",
+      "units": "%",
+      "freq": "Monthly",
+      "fmt": "pct2",
+      "chg": "bp",
+      "src_label": "FDIC national rates via FRED (ICNRNJ to Mar 2021, ICNDR from Apr 2021)",
+      "link": "https://fred.stlouisfed.org/series/ICNDR"
+    },
+    {
+      "key": "dep_mmda",
+      "op": "splice",
+      "pre": "fdic_mmda_old",
+      "post": "fdic_mmda_new",
+      "title": "Money market (MMDA): national rate",
+      "units": "%",
+      "freq": "Monthly",
+      "fmt": "pct2",
+      "chg": "bp",
+      "src_label": "FDIC national rates via FRED (MMNRNJ to Mar 2021, MMNDR from Apr 2021)",
+      "link": "https://fred.stlouisfed.org/series/MMNDR"
+    },
+    {
+      "key": "dep_cd1",
+      "op": "splice",
+      "pre": "fdic_cd1_old",
+      "post": "fdic_cd1_new",
+      "title": "1-month CD: national rate",
+      "units": "%",
+      "freq": "Monthly",
+      "fmt": "pct2",
+      "chg": "bp",
+      "src_label": "FDIC national rates via FRED (CD1NRNJ to Mar 2021, NDR1MCD from Apr 2021)",
+      "link": "https://fred.stlouisfed.org/series/NDR1MCD"
+    },
+    {
+      "key": "dep_cd3",
+      "op": "splice",
+      "pre": "fdic_cd3_old",
+      "post": "fdic_cd3_new",
+      "title": "3-month CD: national rate",
+      "units": "%",
+      "freq": "Monthly",
+      "fmt": "pct2",
+      "chg": "bp",
+      "src_label": "FDIC national rates via FRED (CD3NRNJ to Mar 2021, NDR3MCD from Apr 2021)",
+      "link": "https://fred.stlouisfed.org/series/NDR3MCD"
+    },
+    {
+      "key": "dep_cd6",
+      "op": "splice",
+      "pre": "fdic_cd6_old",
+      "post": "fdic_cd6_new",
+      "title": "6-month CD: national rate",
+      "units": "%",
+      "freq": "Monthly",
+      "fmt": "pct2",
+      "chg": "bp",
+      "src_label": "FDIC national rates via FRED (CD6NRNJ to Mar 2021, NDR6MCD from Apr 2021)",
+      "link": "https://fred.stlouisfed.org/series/NDR6MCD"
+    },
+    {
+      "key": "dep_cd12",
+      "op": "splice",
+      "pre": "fdic_cd12_old",
+      "post": "fdic_cd12_new",
+      "title": "12-month CD: national rate",
+      "units": "%",
+      "freq": "Monthly",
+      "fmt": "pct2",
+      "chg": "bp",
+      "src_label": "FDIC national rates via FRED (CD12NRNJ to Mar 2021, NDR12MCD from Apr 2021)",
+      "link": "https://fred.stlouisfed.org/series/NDR12MCD"
+    },
+    {
+      "key": "dep_cd24",
+      "op": "splice",
+      "pre": "fdic_cd24_old",
+      "post": "fdic_cd24_new",
+      "title": "24-month CD: national rate",
+      "units": "%",
+      "freq": "Monthly",
+      "fmt": "pct2",
+      "chg": "bp",
+      "src_label": "FDIC national rates via FRED (CD24NRNJ to Mar 2021, NDR24MCD from Apr 2021)",
+      "link": "https://fred.stlouisfed.org/series/NDR24MCD"
+    },
+    {
+      "key": "dep_cd36",
+      "op": "splice",
+      "pre": "fdic_cd36_old",
+      "post": "fdic_cd36_new",
+      "title": "36-month CD: national rate",
+      "units": "%",
+      "freq": "Monthly",
+      "fmt": "pct2",
+      "chg": "bp",
+      "src_label": "FDIC national rates via FRED (CD36NRNJ to Mar 2021, NDR36MCD from Apr 2021)",
+      "link": "https://fred.stlouisfed.org/series/NDR36MCD"
+    },
+    {
+      "key": "dep_cd48",
+      "op": "splice",
+      "pre": "fdic_cd48_old",
+      "post": "fdic_cd48_new",
+      "title": "48-month CD: national rate",
+      "units": "%",
+      "freq": "Monthly",
+      "fmt": "pct2",
+      "chg": "bp",
+      "src_label": "FDIC national rates via FRED (CD48NRNJ to Mar 2021, NDR48MCD from Apr 2021)",
+      "link": "https://fred.stlouisfed.org/series/NDR48MCD"
+    },
+    {
+      "key": "dep_cd60",
+      "op": "splice",
+      "pre": "fdic_cd60_old",
+      "post": "fdic_cd60_new",
+      "title": "60-month CD: national rate",
+      "units": "%",
+      "freq": "Monthly",
+      "fmt": "pct2",
+      "chg": "bp",
+      "src_label": "FDIC national rates via FRED (CD60NRNJ to Mar 2021, NDR60MCD from Apr 2021)",
+      "link": "https://fred.stlouisfed.org/series/NDR60MCD"
+    },
+    {
+      "key": "dep_sprd_cd12",
+      "op": "spread",
+      "a": "dep_cd12",
+      "b": "ff_m",
+      "title": "12M CD minus fed funds",
+      "units": "pp",
+      "freq": "Monthly",
+      "fmt": "pct2",
+      "chg": "bp",
+      "no_yoy": true,
+      "src_label": "Computed: FDIC 12M CD national rate \u2212 FEDFUNDS"
+    },
+    {
+      "key": "dep_sprd_mmda",
+      "op": "spread",
+      "a": "dep_mmda",
+      "b": "ff_m",
+      "title": "MMDA minus fed funds",
+      "units": "pp",
+      "freq": "Monthly",
+      "fmt": "pct2",
+      "chg": "bp",
+      "no_yoy": true,
+      "src_label": "Computed: FDIC MMDA national rate \u2212 FEDFUNDS"
     }
   ],
   "kpis": [
@@ -1579,6 +2024,78 @@
       "title": "Quarterly Data",
       "quarterly": true,
       "panels": []
+    },
+    {
+      "title": "Deposit Pricing",
+      "link": "https://www.fdic.gov/national-rates-and-rate-caps",
+      "deposit_pricing": true,
+      "kpis": [
+        "dep_sav",
+        "dep_mmda",
+        "dep_cd12",
+        "dep_cd60"
+      ],
+      "note": "FDIC national deposit rates: average rates paid across insured institutions (the basis for the national rate caps), via FRED. Monthly from April 2021. Before that, FRED carries the FDIC's earlier weekly non-jumbo series (May 2009 to March 2021), averaged here to months and spliced on; the FDIC changed its methodology in April 2021 (deposit-weighted averages across branches), so levels across that break are not strictly comparable. No break is visible in 2024. Changes on cards are in basis points.",
+      "panels": [
+        {
+          "title": "National deposit rates vs. effective fed funds, since 2009",
+          "type": "line",
+          "series": [
+            "dep_sav",
+            "dep_mmda",
+            "dep_cd12",
+            "dep_cd60",
+            "ff_m"
+          ],
+          "labels": [
+            "Savings",
+            "MMDA",
+            "12M CD",
+            "60M CD",
+            "Fed funds"
+          ],
+          "since": "2009-01-01",
+          "wide": true
+        },
+        {
+          "title": "This cycle (since 2022)",
+          "type": "line",
+          "series": [
+            "dep_sav",
+            "dep_ic",
+            "dep_mmda",
+            "dep_cd6",
+            "dep_cd12",
+            "dep_cd60",
+            "ff_m"
+          ],
+          "labels": [
+            "Savings",
+            "Int. checking",
+            "MMDA",
+            "6M CD",
+            "12M CD",
+            "60M CD",
+            "Fed funds"
+          ],
+          "since": "2022-01-01"
+        },
+        {
+          "title": "Spread to fed funds: 12M CD and MMDA minus effective fed funds (pp)",
+          "type": "line",
+          "series": [
+            "dep_sprd_cd12",
+            "dep_sprd_mmda"
+          ],
+          "labels": [
+            "12M CD \u2212 fed funds",
+            "MMDA \u2212 fed funds"
+          ],
+          "since": "2009-01-01",
+          "zero": true,
+          "full": true
+        }
+      ]
     }
   ],
   "panel_latest": true,
@@ -1815,5 +2332,55 @@
       }
     ],
     "note": "Fed H.8, all commercial banks, weekly (week-ending Wednesday), seasonally adjusted, via FRED. EOP basis = the last weekly reading dated on or before quarter-end (the week used is shown under each quarter). Average basis = average of all weekly readings dated in the quarter. YoY = vs the same quarter a year earlier on the same basis; LQA = linked-quarter annualized, compounded: ((Q / prior Q)^4 \u2212 1), on the same basis. QTD = quarter in progress (EOP = latest week available; average = weeks so far)."
+  },
+  "deposit_pricing": {
+    "fedfunds": "ff_m",
+    "products": [
+      {
+        "key": "dep_sav",
+        "label": "Savings"
+      },
+      {
+        "key": "dep_ic",
+        "label": "Interest checking"
+      },
+      {
+        "key": "dep_mmda",
+        "label": "Money market (MMDA)"
+      },
+      {
+        "key": "dep_cd1",
+        "label": "1-month CD"
+      },
+      {
+        "key": "dep_cd3",
+        "label": "3-month CD"
+      },
+      {
+        "key": "dep_cd6",
+        "label": "6-month CD"
+      },
+      {
+        "key": "dep_cd12",
+        "label": "12-month CD"
+      },
+      {
+        "key": "dep_cd24",
+        "label": "24-month CD"
+      },
+      {
+        "key": "dep_cd36",
+        "label": "36-month CD"
+      },
+      {
+        "key": "dep_cd48",
+        "label": "48-month CD"
+      },
+      {
+        "key": "dep_cd60",
+        "label": "60-month CD"
+      }
+    ],
+    "note": "Cumulative beta = change in the product's national rate \u00f7 change in the effective fed funds rate (monthly averages) between the cycle points, \u00d7100. Turning points are detected from monthly fed funds: the last month at a trough or peak before a move of at least 20 bp in the other direction. A leg ending at the latest month is still in progress."
   }
 }

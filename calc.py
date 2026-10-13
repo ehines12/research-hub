@@ -152,6 +152,8 @@ def derive(op, spec, get):
         return combine(lambda *xs: sum(xs), *[get(k) for k in spec["of"]])
     if op == "splice":
         return splice(get(spec["pre"]), get(spec["post"]))
+    if op == "spread":  # a - b on common dates
+        return combine(lambda x, y: x - y, get(spec["a"]), get(spec["b"]))
     if op == "deflate":  # nominal / price index, rescaled to the price level of the latest month (constant latest-month dollars)
         num, den = get(spec["num"]), get(spec["den"])
         if not den:
@@ -163,7 +165,7 @@ def derive(op, spec, get):
 
 def inputs_of(spec):
     out = []
-    for f in ("of", "num", "den", "comp", "total", "pre", "post"):
+    for f in ("of", "num", "den", "comp", "total", "pre", "post", "a", "b"):
         v = spec.get(f)
         if isinstance(v, list):
             out += v

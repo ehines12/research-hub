@@ -125,7 +125,7 @@
     const inSec = new Set(cfg.sections.flatMap(sec => sec.kpis || []));
     const kpis = D.kpis ? D.kpis.map(chipTile).join("") : cfg.series.filter(s => s.kpi !== false && !inSec.has(s.key)).map(s => kpiCard(S[s.key], S)).join("");
     const secs = cfg.sections.map((sec, i) => "<h2>" + esc(sec.title) + (sec.link ? ' <a class="hint" href="' + esc(sec.link) + '" target="_blank" rel="noopener noreferrer">source page ' + EXT + "</a>" : "") + "</h2>" + (sec.note ? '<p class="secnote">' + esc(sec.note) + "</p>" : "") +
-      (sec.kpis ? '<div class="kpis sec' + (sec.kpi_cols === 3 ? " c3" : "") + '">' + sec.kpis.map(k => kpiCard(S[k], S)).join("") + "</div>" : "") + (sec.nowcast_table ? nowcastTable(sec.nowcast_table, S) : "") + (sec.growth5y && D.growth5y ? '<div id="g5">' + growthTable(D.growth5y) + "</div>" : "") + (sec.auctions ? auctionsTable(D.auctions) : "") + (sec.quarterly && D.quarterly ? '<div id="qtr">' + quarterlyTable(D.quarterly, area.id) + "</div>" : "") + (sec.panels.length ? '<div class="panels' + (sec.cols === 2 ? " c2" : "") + '">' + sec.panels.map((p, j) =>
+      (sec.kpis ? '<div class="kpis sec' + (sec.kpi_cols === 3 ? " c3" : "") + '">' + sec.kpis.map(k => kpiCard(S[k], S)).join("") + "</div>" : "") + (sec.nowcast_table ? nowcastTable(sec.nowcast_table, S) : "") + (sec.growth5y && D.growth5y ? '<div id="g5">' + growthTable(D.growth5y) + "</div>" : "") + (sec.auctions ? auctionsTable(D.auctions) : "") + (sec.deposit_pricing ? depositTables(D.deposit_pricing) : "") + (sec.quarterly && D.quarterly ? '<div id="qtr">' + quarterlyTable(D.quarterly, area.id) + "</div>" : "") + (sec.panels.length ? '<div class="panels' + (sec.cols === 2 ? " c2" : "") + '">' + sec.panels.map((p, j) =>
       '<div class="panel' + (p.wide ? " wide" : "") + (p.full ? " full" : "") + '"><h4>' + esc(p.title) + "</h4>" + (cfg.panel_latest ? panelLatest(p, S) : "") + '<div class="cv"><canvas id="c' + i + "_" + j + '"></canvas></div>' + (p.note ? '<div class="pnote">' + esc(p.note) + "</div>" : "") + '<div class="src">Source: ' + [...new Set(p.series.map(k => S[k].src_label || "FRED " + S[k].fred))].map(esc).join(" · ") + "</div></div>").join("") + "</div>" : "")).join("") +
       (D.summary ? summaryTable(D, cfg) : "");
     app.innerHTML = "<h1>" + esc(cfg.title) + '</h1><p class="sub">' + esc(cfg.subtitle) + '</p><div class="kpis">' + kpis + '</div><div class="toolbar"><span>Lookback</span><div class="seg">' +
@@ -314,6 +314,22 @@
     const comp = (s.companions || []).map(k => S[k] && S[k].latest ? (k.endsWith("_tank") ? "tankers " : "containers ") + S[k].latest.value.toFixed(1) : "").filter(Boolean).join(" · ");
     return cardShell(s, c, "7d avg to " + fmtDate(t.date, "Daily").replace(/, \d{4}$/, "") + (comp ? " · " + comp : ""));
   }
+  // FDIC deposit pricing: cumulative betas per cycle leg + last-8-quarter-end rates
+  function depositTables(P) {
+    if (!P || P.error) return '<p class="err">Deposit pricing unavailable' + (P && P.error ? ": " + esc(P.error) : "") + "</p>";
+    const mon = t => fmtDate(t, "Monthly"), prods = P.table.rows.filter(r => r.key !== "ff_m");
+    let h = '<div class="dpgrid"><div><h4 class="atit">Cumulative deposit betas <span class="hint">Δ product rate ÷ Δ fed funds, %</span></h4><div class="tblwrap"><table class="sumtbl atbl"><thead><tr><th>Product</th>' +
+      P.legs.map(L => '<th class="r">' + esc(L.kind) + '<span class="dl" style="color:var(--mut)">' + mon(L.start) + " → " + mon(L.end) + (L.end_is_latest ? "*" : "") + "<br>FF " + L.ff_start.toFixed(2) + " → " + L.ff_end.toFixed(2) + "%</span></th>").join("") + "</tr></thead><tbody>" +
+      prods.map(r => "<tr><td>" + esc(r.label) + "</td>" + P.legs.map(L => { const b = L.betas[r.key];
+        return '<td class="r b" title="' + (b ? b.r0.toFixed(2) + "% → " + b.r1.toFixed(2) + "% (" + (b.d_rate >= 0 ? "+" : "") + Math.round(b.d_rate * 100) + " bp)" : "") + '">' + (b ? b.beta.toFixed(0) + "%" : "–") + "</td>"; }).join("") + "</tr>").join("") +
+      '</tbody></table></div><p class="pnote">' + esc(P.note || "") + " * still in progress (ends at the latest month). Hover a beta for the start/end rates.</p></div>";
+    const T = P.table;
+    h += '<div><h4 class="atit">Rates at quarter-end months <span class="hint">%, FDIC national rates; fed funds monthly avg</span></h4><div class="tblwrap"><table class="sumtbl atbl"><thead><tr><th>Product</th>' +
+      T.quarters.map(q => '<th class="r">' + q.slice(0, 4) + " Q" + ((+q.slice(5, 7)) / 3) + "</th>").join("") + "</tr></thead><tbody>" +
+      T.rows.map(r => "<tr" + (r.key === "ff_m" ? ' class="ffrow"' : "") + "><td>" + esc(r.label) + "</td>" + r.vals.map(v => '<td class="r">' + (v == null ? "–" : v.toFixed(2)) + "</td>").join("") + "</tr>").join("") + "</tbody></table></div></div></div>";
+    return h;
+  }
+
   // Treasury coupon auctions: upcoming + recent results vs the prior-6 same-tenor average
   function auctionsTable(A) {
     if (!A) return '<p class="err">No auction data.</p>';
@@ -416,7 +432,8 @@
       const datasets = p.series.map((k, n) => {
         const s = S[k], sc = p.scale || 1; let pts = (s.obs || []).map(o => ({ x: Date.parse(o[0] + "T00:00:00Z"), y: +(o[1] * sc).toFixed(4) }));
         // quarterly series: pad the window one quarter so 1Y shows >= 4 quarters
-        if (cut) { const c = s.freq === "Quarterly" ? cut - 100 * 864e5 : cut; pts = pts.filter(o => o.x >= c); }
+        if (p.since) pts = pts.filter(o => o.x >= Date.parse(p.since + "T00:00:00Z"));
+        else if (cut) { const c = s.freq === "Quarterly" ? cut - 100 * 864e5 : cut; pts = pts.filter(o => o.x >= c); }
         const col = COLORS[n % COLORS.length], t = (p.types && p.types[n]) || (p.type === "bar" ? "bar" : "line");
         const ds = { type: t, label: (p.labels && p.labels[n]) || s.title, data: pts, borderColor: t === "bar" ? col : (p.types ? "#f0883e" : col), backgroundColor: t === "bar" ? pts.map(o => o.y < 0 ? "#f85149" : col) : (p.fill ? col + "22" : col), borderWidth: t === "bar" ? 0 : (p.types ? 2 : 1.6), pointRadius: t === "line" && p.types ? 1.5 : 0, tension: 0, fill: p.fill ? "origin" : false, order: t === "line" ? 0 : 1 };
         if (p.stacked) {  // component bars / areas keep their own colour; a line overlays as the total

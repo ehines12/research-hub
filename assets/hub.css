@@ -101,3 +101,7 @@ h2 a.hint{margin-left:8px;color:var(--acc)}
 .atbl tr.v-strong .vb{background:#3fb95026;color:#56d364}
 .atbl tr.v-weak td:first-child{box-shadow:inset 3px 0 #f85149}
 .atbl tr.v-strong td:first-child{box-shadow:inset 3px 0 #3fb950}
+
+.dpgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;margin-bottom:14px}
+@media(max-width:1100px){.dpgrid{grid-template-columns:1fr}}
+.atbl tr.ffrow td{border-top:1px solid var(--line);color:var(--mut)}

@@ -421,8 +421,8 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-13T03:11:20+00:00",
-   "data_changed_at": "2026-10-09T21:07:27+00:00",
+   "checked_at": "2026-10-13T03:22:48+00:00",
+   "data_changed_at": "2026-10-13T03:22:44+00:00",
    "series": {
     "TOTLL": {
      "fred": "TOTLL",
@@ -728,6 +728,190 @@
       "value": 123.3377
      }
     },
+    "fdic_sav_old": {
+     "fred": "SAVNRNJ",
+     "status": "ok",
+     "latest": {
+      "date": "2021-03-01",
+      "value": 0.04
+     }
+    },
+    "fdic_sav_new": {
+     "fred": "SNDR",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 0.37
+     }
+    },
+    "fdic_ic_old": {
+     "fred": "ICNRNJ",
+     "status": "ok",
+     "latest": {
+      "date": "2021-03-01",
+      "value": 0.032
+     }
+    },
+    "fdic_ic_new": {
+     "fred": "ICNDR",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 0.07
+     }
+    },
+    "fdic_mmda_old": {
+     "fred": "MMNRNJ",
+     "status": "ok",
+     "latest": {
+      "date": "2021-03-01",
+      "value": 0.06
+     }
+    },
+    "fdic_mmda_new": {
+     "fred": "MMNDR",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 0.63
+     }
+    },
+    "fdic_cd1_old": {
+     "fred": "CD1NRNJ",
+     "status": "ok",
+     "latest": {
+      "date": "2021-03-01",
+      "value": 0.04
+     }
+    },
+    "fdic_cd1_new": {
+     "fred": "NDR1MCD",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 0.23
+     }
+    },
+    "fdic_cd3_old": {
+     "fred": "CD3NRNJ",
+     "status": "ok",
+     "latest": {
+      "date": "2021-03-01",
+      "value": 0.06
+     }
+    },
+    "fdic_cd3_new": {
+     "fred": "NDR3MCD",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 1.13
+     }
+    },
+    "fdic_cd6_old": {
+     "fred": "CD6NRNJ",
+     "status": "ok",
+     "latest": {
+      "date": "2021-03-01",
+      "value": 0.094
+     }
+    },
+    "fdic_cd6_new": {
+     "fred": "NDR6MCD",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 1.41
+     }
+    },
+    "fdic_cd12_old": {
+     "fred": "CD12NRNJ",
+     "status": "ok",
+     "latest": {
+      "date": "2021-03-01",
+      "value": 0.14
+     }
+    },
+    "fdic_cd12_new": {
+     "fred": "NDR12MCD",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 1.73
+     }
+    },
+    "fdic_cd24_old": {
+     "fred": "CD24NRNJ",
+     "status": "ok",
+     "latest": {
+      "date": "2021-03-01",
+      "value": 0.188
+     }
+    },
+    "fdic_cd24_new": {
+     "fred": "NDR24MCD",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 1.61
+     }
+    },
+    "fdic_cd36_old": {
+     "fred": "CD36NRNJ",
+     "status": "ok",
+     "latest": {
+      "date": "2021-03-01",
+      "value": 0.226
+     }
+    },
+    "fdic_cd36_new": {
+     "fred": "NDR36MCD",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 1.36
+     }
+    },
+    "fdic_cd48_old": {
+     "fred": "CD48NRNJ",
+     "status": "ok",
+     "latest": {
+      "date": "2021-03-01",
+      "value": 0.252
+     }
+    },
+    "fdic_cd48_new": {
+     "fred": "NDR48MCD",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 1.28
+     }
+    },
+    "fdic_cd60_old": {
+     "fred": "CD60NRNJ",
+     "status": "ok",
+     "latest": {
+      "date": "2021-03-01",
+      "value": 0.304
+     }
+    },
+    "fdic_cd60_new": {
+     "fred": "NDR60MCD",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 1.3809
+     }
+    },
+    "ff_m": {
+     "fred": "FEDFUNDS",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 3.75
+     }
+    },
     "TOTLL_YOY": {
      "fred": "derived",
      "status": "ok",
@@ -1030,6 +1214,110 @@
      "latest": {
       "date": "2026-09-30",
       "value": 4.613
+     }
+    },
+    "dep_sav": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 0.37
+     }
+    },
+    "dep_ic": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 0.07
+     }
+    },
+    "dep_mmda": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 0.63
+     }
+    },
+    "dep_cd1": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 0.23
+     }
+    },
+    "dep_cd3": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 1.13
+     }
+    },
+    "dep_cd6": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 1.41
+     }
+    },
+    "dep_cd12": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 1.73
+     }
+    },
+    "dep_cd24": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 1.61
+     }
+    },
+    "dep_cd36": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 1.36
+     }
+    },
+    "dep_cd48": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 1.28
+     }
+    },
+    "dep_cd60": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 1.3809
+     }
+    },
+    "dep_sprd_cd12": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": -2.02
+     }
+    },
+    "dep_sprd_mmda": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": -3.12
      }
     }
    }
@@ -1377,6 +1665,6 @@
    }
   }
  },
- "checked_at": "2026-10-13T03:14:08+00:00",
+ "checked_at": "2026-10-13T03:22:48+00:00",
  "ok": true
 }

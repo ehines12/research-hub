@@ -468,6 +468,11 @@ def transform(obs, how):
             if prev:
                 out.append((t, (v / prev - 1) * 100.0))
         return out
+    if how == "mavg":  # weekly/daily -> calendar-month average, dated the 1st
+        acc = {}
+        for t, v in obs:
+            acc.setdefault(t[:7] + "-01", []).append(v)
+        return [(k, round(sum(v) / len(v), 4)) for k, v in sorted(acc.items())]
     m = _re.fullmatch(r"ma(\d+)(_ly)?", how)
     if m:
         n = int(m.group(1))
@@ -576,6 +581,12 @@ def run_dashboard(cfg_path):
     if cfg.get("auctions"):
         _auctions_block(cfg["auctions"], result, prev)
     _derive_all(cfg, result)
+    if cfg.get("deposit_pricing"):
+        try:
+            result["deposit_pricing"] = _deposit_block(cfg["deposit_pricing"], result["series"])
+        except Exception as e:  # noqa: BLE001
+            result["deposit_pricing"] = {"error": str(e)}
+            print(f"  deposit_pricing FAILED: {e}")
     DATA.mkdir(exist_ok=True)
     # Only rewrite the (large) data file when the numbers or config actually changed, so the
     # scheduled job commits a big diff only on new FRED data. updated_at = last data change.
@@ -704,6 +715,57 @@ def _auctions_block(ac, result, prev):
         result["series"][key] = {"key": key, "fred": "Treasury auctions", "status": "stale" if old else "failed", "title": "Treasury auctions", "obs": [], "error": str(e)[:300]}
     lt = (result["series"][key].get("latest") or {})
     print(f"  {'TREASURY_AUCTIONS':<16} {result['series'][key]['status']:<7} {lt.get('date','-'):<11} {len((result.get('auctions') or {}).get('recent', []))} recent, {len((result.get('auctions') or {}).get('upcoming', []))} upcoming")
+
+
+def _cycle_points(ff, start="2021-06-01", thr=0.20):
+    """Turning points in monthly fed funds since `start`: alternating troughs/peaks, each confirmed once the rate
+    reverses by >= thr pp. The point is the LAST month at the extreme level (i.e. the month before the first move)."""
+    ff = [(t, v) for t, v in ff if t >= start]
+    pts, mode, ext_i = [], "trough", 0
+    for i, (t, v) in enumerate(ff):
+        ev = ff[ext_i][1]
+        if mode == "trough":
+            if v <= ev:
+                ext_i = i
+            elif v - ev >= thr:
+                pts.append(("trough", ff[ext_i][0], ev)); mode, ext_i = "peak", i
+        else:
+            if v >= ev:
+                ext_i = i
+            elif ev - v >= thr:
+                pts.append(("peak", ff[ext_i][0], ev)); mode, ext_i = "trough", i
+    return pts
+
+
+def _deposit_block(dp, S):
+    ffk = dp["fedfunds"]
+    ff = [tuple(o) for o in S[ffk]["obs"]]
+    ffm = dict(ff)
+    prods = [(p["key"], p["label"]) for p in dp["products"]]
+    rates = {k: dict(tuple(o) for o in S[k].get("obs") or []) for k, _ in prods}
+    last = min(max(r) for r in rates.values() if r)  # latest month every product has
+    pts = _cycle_points(ff)
+    legs = []
+    for a, b in zip(pts, pts[1:] + [("latest", last, ffm.get(last))]):
+        if b[1] <= a[1] or ffm.get(b[1]) is None:
+            continue
+        kind = "Hiking" if a[0] == "trough" else "Easing"
+        legs.append({"kind": kind, "start": a[1], "end": b[1], "end_is_latest": b[0] == "latest",
+                     "ff_start": ffm[a[1]], "ff_end": ffm[b[1]], "d_ff": round(ffm[b[1]] - ffm[a[1]], 2)})
+    if len(pts) >= 1:  # full cycle: first trough -> latest
+        a = pts[0]
+        legs.append({"kind": "Full cycle", "start": a[1], "end": last, "end_is_latest": True, "ff_start": ffm[a[1]], "ff_end": ffm[last], "d_ff": round(ffm[last] - ffm[a[1]], 2)})
+    for L in legs:
+        L["betas"] = {}
+        for k, _ in prods:
+            r0, r1 = rates[k].get(L["start"]), rates[k].get(L["end"])
+            if r0 is not None and r1 is not None and abs(L["d_ff"]) >= 0.25:
+                L["betas"][k] = {"beta": round((r1 - r0) / L["d_ff"] * 100, 1), "d_rate": round(r1 - r0, 2), "r0": round(r0, 2), "r1": round(r1, 2)}
+    qs = sorted({t for t in rates[prods[0][0]] if t[5:7] in ("03", "06", "09", "12") and t <= last})[-8:]
+    table = {"quarters": qs, "rows": [{"key": k, "label": lab, "vals": [rates[k].get(q) for q in qs]} for k, lab in prods] +
+             [{"key": ffk, "label": "Effective fed funds (monthly avg)", "vals": [ffm.get(q) for q in qs]}]}
+    print(f"  deposit_pricing: {len(legs)} legs {[ (l['kind'], l['start'][:7], l['end'][:7]) for l in legs]}, latest {last}")
+    return {"latest": last, "turning_points": pts, "legs": legs, "table": table, "note": dp.get("note")}
 
 
 def _latest_fields(rec, no_yoy=False):
@@ -920,7 +982,7 @@ def _write_growth5y_files(did, gd):
 def _strip(doc):
     """Comparable view of a dashboard doc, without run timestamps."""
     doc = json.loads(json.dumps(doc))  # normalize tuples -> lists
-    return {"config": doc.get("config"), "kpis": doc.get("kpis"), "summary": doc.get("summary"), "auctions": doc.get("auctions"),
+    return {"config": doc.get("config"), "kpis": doc.get("kpis"), "summary": doc.get("summary"), "auctions": doc.get("auctions"), "deposit_pricing": doc.get("deposit_pricing"),
             "series": {k: {f: v for f, v in s.items() if f != "fetched_at"} for k, s in doc.get("series", {}).items()}}
 
 
