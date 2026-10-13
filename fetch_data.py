@@ -400,9 +400,16 @@ def _portwatch_rows(portid):
     while True:
         url = (f"{PORTWATCH}?where=portid%3D%27{portid}%27&outFields=date,portname,n_total,n_tanker,n_container,n_dry_bulk,capacity"
                f"&orderByFields=date&resultOffset={off}&resultRecordCount=1000&f=json")
-        d = json.loads(_curl(url, 90))
+        for attempt in range(4):
+            d = json.loads(_curl(url, 90))
+            err = d.get("error")
+            if err and err.get("code") == 429 and attempt < 3:
+                time.sleep(65)  # ArcGIS per-minute quota; wait it out and retry
+                continue
+            break
         if d.get("error"):
             raise RuntimeError(f"PortWatch: {d['error']}")
+        time.sleep(2)  # pace page requests to stay under the per-minute quota
         f = [x["attributes"] for x in d.get("features", [])]
         rows += f
         if len(f) < 1000 and not d.get("exceededTransferLimit"):
