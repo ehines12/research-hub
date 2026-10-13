@@ -2062,7 +2062,6 @@
           "type": "line",
           "series": [
             "dep_sav",
-            "dep_ic",
             "dep_mmda",
             "dep_cd6",
             "dep_cd12",
@@ -2071,7 +2070,6 @@
           ],
           "labels": [
             "Savings",
-            "Int. checking",
             "MMDA",
             "6M CD",
             "12M CD",
