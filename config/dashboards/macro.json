@@ -1,7 +1,7 @@
 {
   "id": "macro",
   "title": "Macro Dashboard",
-  "subtitle": "US growth, labor, inflation, rates and real-time alternative data. Sources: FRED (St. Louis Fed), Atlanta Fed (GDPNow), Cleveland Fed (inflation nowcast) and Treasury Fiscal Data (DTS) and Treasury auction results (Fiscal Data / TreasuryDirect).",
+  "subtitle": "US growth, labor, inflation, rates and real-time alternative data. Sources: FRED (St. Louis Fed), Atlanta Fed (GDPNow), Cleveland Fed (inflation nowcast) and Treasury Fiscal Data (DTS), restaurant sales and jobs (Census, BLS) and Treasury auction results (Fiscal Data / TreasuryDirect).",
   "series": [
     {
       "key": "gdp",
@@ -502,6 +502,81 @@
       "kpi": false,
       "invert": true,
       "src_label": "St. Louis Fed STLFSI4 via FRED"
+    },
+    {
+      "key": "rest_sales_lvl",
+      "fred": "RSFSDP",
+      "title": "Food services & drinking places sales",
+      "units": "$mn",
+      "transform": "level",
+      "fmt": "n0",
+      "chg": "pctc",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FRED / Census (Monthly Retail Trade)"
+    },
+    {
+      "key": "cpi_fafh_lvl",
+      "fred": "CUSR0000SEFV",
+      "title": "CPI: food away from home (index)",
+      "units": "index",
+      "transform": "level",
+      "fmt": "n1",
+      "chg": "pctc",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FRED / BLS CPI"
+    },
+    {
+      "key": "rest_sales_yoy",
+      "fred": "RSFSDP",
+      "title": "Restaurant & bar sales (Census), y/y",
+      "units": "%",
+      "transform": "yoy",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FRED / Census (Monthly Retail Trade)",
+      "link": "https://fred.stlouisfed.org/series/RSFSDP"
+    },
+    {
+      "key": "cpi_fafh_yoy",
+      "fred": "CUSR0000SEFV",
+      "title": "CPI food away from home, y/y",
+      "units": "%",
+      "transform": "yoy",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Monthly",
+      "kpi": false,
+      "invert": true,
+      "src_label": "FRED / BLS CPI"
+    },
+    {
+      "key": "rest_emp_yoy",
+      "fred": "CES7072200001",
+      "title": "Restaurant employment, y/y",
+      "units": "%",
+      "transform": "yoy",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FRED / BLS CES (food services & drinking places)",
+      "link": "https://fred.stlouisfed.org/series/CES7072200001"
+    },
+    {
+      "key": "rest_emp_mm",
+      "fred": "CES7072200001",
+      "title": "Restaurant jobs, m/m change",
+      "units": "thousands",
+      "transform": "diff",
+      "fmt": "k0",
+      "chg": "n",
+      "freq": "Monthly",
+      "kpi": false,
+      "src_label": "FRED / BLS CES (food services & drinking places)"
     }
   ],
   "sections": [
@@ -791,6 +866,57 @@
       ]
     },
     {
+      "title": "Restaurants & Consumer",
+      "kpis": [
+        "rest_sales_yoy",
+        "rest_real_yoy",
+        "rest_emp_yoy",
+        "rest_emp_mm"
+      ],
+      "note": "Census food services & drinking places sales (SA, nominal); real sales are a computed proxy: nominal sales divided by CPI food away from home (SA), so y/y \u2248 volume growth. Restaurant employment is BLS CES food services & drinking places (SA). Bank of America Institute Consumer Checkpoint card data was evaluated but is not included: its restaurant figures are published only inside chart images in monthly PDFs, with no data download.",
+      "panels": [
+        {
+          "title": "Restaurant sales y/y: nominal vs. real (computed proxy) vs. menu prices",
+          "type": "line",
+          "series": [
+            "rest_sales_yoy",
+            "rest_real_yoy",
+            "cpi_fafh_yoy"
+          ],
+          "labels": [
+            "Nominal sales (Census)",
+            "Real sales (proxy)",
+            "CPI food away from home"
+          ],
+          "zero": true,
+          "wide": true
+        },
+        {
+          "title": "Restaurant employment, y/y",
+          "type": "line",
+          "series": [
+            "rest_emp_yoy"
+          ],
+          "labels": [
+            "Food services & drinking places jobs, y/y"
+          ],
+          "zero": true
+        },
+        {
+          "title": "Restaurant jobs, monthly change (thousands)",
+          "type": "bar",
+          "series": [
+            "rest_emp_mm"
+          ],
+          "labels": [
+            "m/m change"
+          ],
+          "zero": true,
+          "full": true
+        }
+      ]
+    },
+    {
       "title": "Treasury Auctions",
       "auctions": true,
       "panels": []
@@ -814,5 +940,32 @@
       "2Y FRN"
     ],
     "note": "Coupon auctions (notes and bonds, including TIPS and 2Y FRNs) from Treasury Fiscal Data (auctions_query); upcoming auctions from TreasuryDirect. Takedown shares are % of competitive awards. 'vs avg' compares each auction with the average of the previous 6 auctions of the same tenor (reopenings counted under their original tenor). Flag: weak = bid-to-cover at least 0.10 below average or primary-dealer takedown at least 3 pp above; strong = bid-to-cover at least 0.10 above or dealer takedown at least 3 pp below (an auction meeting both a weak and a strong test counts as weak unless it is strong on both). Tails vs. when-issued are not shown: free WI yields are not available."
-  }
+  },
+  "derived": [
+    {
+      "key": "rest_real_lvl",
+      "op": "deflate",
+      "num": "rest_sales_lvl",
+      "den": "cpi_fafh_lvl",
+      "title": "Real restaurant sales (computed proxy)",
+      "units": "$mn, latest-month prices",
+      "freq": "Monthly",
+      "fmt": "n0",
+      "chg": "pctc",
+      "no_yoy": true,
+      "src_label": "Computed: RSFSDP / CPI CUSR0000SEFV"
+    },
+    {
+      "key": "rest_real_yoy",
+      "op": "yoy",
+      "of": "rest_real_lvl",
+      "title": "Real restaurant sales, y/y (computed proxy)",
+      "units": "%",
+      "freq": "Monthly",
+      "fmt": "pct1",
+      "chg": "pp",
+      "no_yoy": true,
+      "src_label": "Computed: RSFSDP deflated by CPI food away from home (CUSR0000SEFV)"
+    }
+  ]
 }

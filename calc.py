@@ -152,6 +152,12 @@ def derive(op, spec, get):
         return combine(lambda *xs: sum(xs), *[get(k) for k in spec["of"]])
     if op == "splice":
         return splice(get(spec["pre"]), get(spec["post"]))
+    if op == "deflate":  # nominal / price index, rescaled to the price level of the latest month (constant latest-month dollars)
+        num, den = get(spec["num"]), get(spec["den"])
+        if not den:
+            return []
+        base = den[-1][1]
+        return combine(lambda x, y: (x / y * base) if y else None, num, den)
     raise ValueError(f"unknown derived op {op}")
 
 

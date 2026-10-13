@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-13T02:36:26+00:00",
-   "data_changed_at": "2026-10-12T14:58:28+00:00",
+   "checked_at": "2026-10-13T03:10:57+00:00",
+   "data_changed_at": "2026-10-13T03:10:40+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -346,12 +346,76 @@
       "value": -0.4681
      }
     },
+    "rest_sales_lvl": {
+     "fred": "RSFSDP",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 91416.0
+     }
+    },
+    "cpi_fafh_lvl": {
+     "fred": "CUSR0000SEFV",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 397.868
+     }
+    },
+    "rest_sales_yoy": {
+     "fred": "RSFSDP",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 5.3726
+     }
+    },
+    "cpi_fafh_yoy": {
+     "fred": "CUSR0000SEFV",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 3.3668
+     }
+    },
+    "rest_emp_yoy": {
+     "fred": "CES7072200001",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 0.8882
+     }
+    },
+    "rest_emp_mm": {
+     "fred": "CES7072200001",
+     "status": "ok",
+     "latest": {
+      "date": "2026-09-01",
+      "value": 10.8
+     }
+    },
     "TREASURY_AUCTIONS": {
      "fred": "Treasury auctions",
      "status": "ok",
      "latest": {
       "date": "2026-10-08",
       "value": 2.54
+     }
+    },
+    "rest_real_lvl": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 91416.0
+     }
+    },
+    "rest_real_yoy": {
+     "fred": "derived",
+     "status": "ok",
+     "latest": {
+      "date": "2026-08-01",
+      "value": 1.94
      }
     }
    }
@@ -1313,6 +1377,6 @@
    }
   }
  },
- "checked_at": "2026-10-13T02:38:09+00:00",
+ "checked_at": "2026-10-13T03:10:57+00:00",
  "ok": true
 }
