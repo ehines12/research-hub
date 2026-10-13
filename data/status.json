@@ -1,7 +1,7 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-13T14:23:06+00:00",
+   "checked_at": "2026-10-13T14:24:56+00:00",
    "data_changed_at": "2026-10-13T14:22:58+00:00",
    "series": {
     "gdp": {
@@ -421,7 +421,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-13T14:23:11+00:00",
+   "checked_at": "2026-10-13T14:25:25+00:00",
    "data_changed_at": "2026-10-13T14:22:31+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2067,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-13T14:23:53+00:00",
-   "data_changed_at": "2026-10-13T14:23:11+00:00",
+   "checked_at": "2026-10-13T14:26:48+00:00",
+   "data_changed_at": "2026-10-13T14:25:25+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,71 +2083,64 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-13T14:24:32+00:00",
-   "data_changed_at": "2026-10-13T14:23:53+00:00",
+   "checked_at": "2026-10-13T14:27:31+00:00",
+   "data_changed_at": "2026-10-13T14:26:48+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-05",
       "value": 141.4916
-     },
-     "error": "No module named 'xlrd'"
+     }
     },
     "gprd_ma30": {
      "fred": "GPRD",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-05",
       "value": 167.307
-     },
-     "error": "No module named 'xlrd'"
+     }
     },
     "gprd_act_ma30": {
      "fred": "GPRD_ACT",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-05",
       "value": 175.0834
-     },
-     "error": "No module named 'xlrd'"
+     }
     },
     "gprd_thr_ma30": {
      "fred": "GPRD_THREAT",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-05",
       "value": 188.9667
-     },
-     "error": "No module named 'xlrd'"
+     }
     },
     "gpr_m": {
      "fred": "GPR",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-09-01",
       "value": 146.2099
-     },
-     "error": "No module named 'xlrd'"
+     }
     },
     "gpr_t": {
      "fred": "GPRT",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-09-01",
       "value": 173.0874
-     },
-     "error": "No module named 'xlrd'"
+     }
     },
     "gpr_a": {
      "fred": "GPRA",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-09-01",
       "value": 144.288
-     },
-     "error": "No module named 'xlrd'"
+     }
     },
     "epu_d": {
      "fred": "USEPUINDXD",
@@ -2416,6 +2409,6 @@
    }
   }
  },
- "checked_at": "2026-10-13T14:24:32+00:00",
- "ok": false
+ "checked_at": "2026-10-13T14:27:31+00:00",
+ "ok": true
 }
