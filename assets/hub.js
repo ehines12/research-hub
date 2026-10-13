@@ -125,7 +125,7 @@
     const inSec = new Set(cfg.sections.flatMap(sec => sec.kpis || []));
     const kpis = D.kpis ? D.kpis.map(chipTile).join("") : cfg.series.filter(s => s.kpi !== false && !inSec.has(s.key)).map(s => kpiCard(S[s.key], S)).join("");
     const secs = cfg.sections.map((sec, i) => "<h2>" + esc(sec.title) + (sec.link ? ' <a class="hint" href="' + esc(sec.link) + '" target="_blank" rel="noopener noreferrer">source page ' + EXT + "</a>" : "") + "</h2>" + (sec.note ? '<p class="secnote">' + esc(sec.note) + "</p>" : "") +
-      (sec.kpis ? '<div class="kpis sec' + (sec.kpi_cols === 3 ? " c3" : "") + '">' + sec.kpis.map(k => kpiCard(S[k], S)).join("") + "</div>" : "") + (sec.nowcast_table ? nowcastTable(sec.nowcast_table, S) : "") + (sec.growth5y && D.growth5y ? '<div id="g5">' + growthTable(D.growth5y) + "</div>" : "") + (sec.auctions ? auctionsTable(D.auctions) : "") + (sec.deposit_pricing ? depositTables(D.deposit_pricing) : "") + (sec.quarterly && D.quarterly ? '<div id="qtr">' + quarterlyTable(D.quarterly, area.id) + "</div>" : "") + (sec.panels.length ? '<div class="panels' + (sec.cols === 2 ? " c2" : "") + '">' + sec.panels.map((p, j) =>
+      (sec.kpis ? '<div class="kpis sec' + (sec.kpi_cols === 3 ? " c3" : "") + '">' + sec.kpis.map(k => kpiCard(S[k], S)).join("") + "</div>" : "") + (sec.nowcast_table ? nowcastTable(sec.nowcast_table, S) : "") + (sec.growth5y && D.growth5y ? '<div id="g5">' + growthTable(D.growth5y) + "</div>" : "") + (sec.auctions ? auctionsTable(D.auctions) : "") + (sec.deposit_pricing ? depositTables(D.deposit_pricing) : "") + (sec.sloos ? '<div id="sloos">' + sloosTable(sec.sloos, S) + "</div>" : "") + (sec.quarterly && D.quarterly ? '<div id="qtr">' + quarterlyTable(D.quarterly, area.id) + "</div>" : "") + (sec.panels.length ? '<div class="panels' + (sec.cols === 2 ? " c2" : "") + '">' + sec.panels.map((p, j) =>
       '<div class="panel' + (p.wide ? " wide" : "") + (p.full ? " full" : "") + '"><h4>' + esc(p.title) + "</h4>" + (cfg.panel_latest ? panelLatest(p, S) : "") + '<div class="cv"><canvas id="c' + i + "_" + j + '"></canvas></div>' + (p.note ? '<div class="pnote">' + esc(p.note) + "</div>" : "") + '<div class="src">Source: ' + [...new Set(p.series.map(k => S[k].src_label || "FRED " + S[k].fred))].map(esc).join(" · ") + "</div></div>").join("") + "</div>" : "")).join("") +
       (D.summary ? summaryTable(D, cfg) : "");
     app.innerHTML = "<h1>" + esc(cfg.title) + '</h1><p class="sub">' + esc(cfg.subtitle) + '</p><div class="kpis">' + kpis + '</div><div class="toolbar"><span>Lookback</span><div class="seg">' +
@@ -147,6 +147,8 @@
       if (b) { if (b.dataset.gm) gMetric = b.dataset.gm; if (b.dataset.gb) gBasis = b.dataset.gb; gb.innerHTML = growthTable(D.growth5y); g5scroll(); }
       if (dl) growthCsv(D.growth5y, area.id);
     });
+    const sb = app.querySelector("#sloos");
+    if (sb) sb.addEventListener("click", e => { if (e.target.closest("button[data-scsv]")) sloosCsv(cfg.sections.find(x => x.sloos).sloos, S); });
     g5scroll();
     drawAll(cfg, S);
   }
@@ -315,6 +317,30 @@
     return cardShell(s, c, "7d avg to " + fmtDate(t.date, "Daily").replace(/, \d{4}$/, "") + (comp ? " · " + comp : ""));
   }
   // FDIC deposit pricing: cumulative betas per cycle leg + last-8-quarter-end rates
+  // ---- SLOOS: latest survey table (net %, change vs prior survey) + CSV of full history ----
+  const svy = t => t ? ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][+t.slice(5, 7) - 1] + " " + t.slice(0, 4) : "–";
+  function sloosTable(C, S) {
+    const v = x => x == null ? "–" : (x > 0 ? "+" : "") + x.toFixed(1);
+    const cell = (k, pol) => { const r = S[k]; if (!r || !r.latest) return '<td class="r">–</td><td class="r">–</td><td class="r">–</td>';
+      const L = r.latest.value, P = r.prior ? r.prior.value : null, d = P == null ? null : L - P;
+      return '<td class="r b">' + v(L) + '</td><td class="r">' + v(P) + '</td><td class="r ' + (d == null || Math.abs(d) < 0.05 ? "" : (d * pol > 0 ? "pos" : "neg")) + '">' + (d == null ? "–" : (d > 0 ? "+" : "") + d.toFixed(1) + " pp") + "</td>"; };
+    const any = S[C.rows[0].std] || {}, lt = any.latest && any.latest.date, pr = any.prior && any.prior.date;
+    return '<div class="qbar"><h4 class="atit">Latest survey: ' + svy(lt) + ' <span class="hint">vs ' + svy(pr) + ' · net % of banks</span></h4><div class="qdl"><button class="btn sm" data-scsv="1">Download CSV</button></div></div>' +
+      '<div class="tblwrap"><table class="sumtbl atbl"><thead><tr><th>Loan category</th><th class="r">Standards<span class="dl" style="color:var(--mut)">net % tightening</span></th><th class="r">Prior</th><th class="r">Δ</th><th class="r">Demand<span class="dl" style="color:var(--mut)">net % stronger</span></th><th class="r">Prior</th><th class="r">Δ</th></tr></thead><tbody>' +
+      C.rows.map(r => "<tr><td>" + esc(r.label) + "</td>" + cell(r.std, -1) + cell(r.dem, 1) + "</tr>").join("") +
+      (C.extra || []).map(r => "<tr><td>" + esc(r.label) + "</td>" + cell(r.key, 1) + '<td class="r">–</td><td class="r">–</td><td class="r">–</td></tr>').join("") +
+      '</tbody></table></div><p class="pnote">Green = easier standards / stronger demand vs the prior survey; red = tighter / weaker. CSV contains the full history of every series.</p>';
+  }
+  function sloosCsv(C, S) {
+    const cols = C.rows.flatMap(r => [[r.std, r.label + " - standards (net % tightening)"], [r.dem, r.label + " - demand (net % stronger)"]]).concat((C.extra || []).map(r => [r.key, r.label]));
+    const maps = cols.map(([k]) => new Map((S[k] && S[k].obs || []).map(o => [o[0], o[1]])));
+    const dates = [...new Set(maps.flatMap(m => [...m.keys()]))].sort();
+    const q = x => /[",\r\n]/.test(String(x)) ? '"' + String(x).replace(/"/g, '""') + '"' : String(x);
+    const rows = [["Survey date"].concat(cols.map(c => c[1])), ["FRED id"].concat(cols.map(c => (S[c[0]] || {}).fred || ""))].concat(dates.map(d => [d].concat(maps.map(m => m.has(d) ? m.get(d) : ""))));
+    const blob = new Blob([rows.map(r => r.map(q).join(",")).join("\r\n")], { type: "text/csv" });
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "sloos.csv"; document.body.appendChild(a); a.click(); a.remove();
+  }
+
   function depositTables(P) {
     if (!P || P.error) return '<p class="err">Deposit pricing unavailable' + (P && P.error ? ": " + esc(P.error) : "") + "</p>";
     const mon = t => fmtDate(t, "Monthly"), prods = P.table.rows.filter(r => r.key !== "ff_m");

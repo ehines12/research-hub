@@ -658,6 +658,357 @@
       "freq": "Monthly",
       "kpi": false,
       "src_label": "FRED FEDFUNDS"
+    },
+    {
+      "key": "sloos_std_ci_lm",
+      "fred": "DRTSCILM",
+      "title": "C&I: large & middle-market firms — net % tightening standards",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_dem_ci_lm",
+      "fred": "DRSDCILM",
+      "title": "C&I: large & middle-market firms — net % reporting stronger demand",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_std_ci_sm",
+      "fred": "DRTSCIS",
+      "title": "C&I: small firms — net % tightening standards",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_dem_ci_sm",
+      "fred": "DRSDCIS",
+      "title": "C&I: small firms — net % reporting stronger demand",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_std_cre_cld",
+      "fred": "SUBLPDRCSC",
+      "title": "CRE: construction & land development — net % tightening standards",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_dem_cre_cld",
+      "fred": "SUBLPDRCDC",
+      "title": "CRE: construction & land development — net % reporting stronger demand",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_std_cre_nfnr",
+      "fred": "SUBLPDRCSN",
+      "title": "CRE: nonfarm nonresidential — net % tightening standards",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_dem_cre_nfnr",
+      "fred": "SUBLPDRCDN",
+      "title": "CRE: nonfarm nonresidential — net % reporting stronger demand",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_std_cre_mf",
+      "fred": "SUBLPDRCSM",
+      "title": "CRE: multifamily — net % tightening standards",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_dem_cre_mf",
+      "fred": "SUBLPDRCDM",
+      "title": "CRE: multifamily — net % reporting stronger demand",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_std_rre_gse",
+      "fred": "SUBLPDHMSENQ",
+      "title": "Mortgage: GSE-eligible — net % tightening standards",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_dem_rre_gse",
+      "fred": "SUBLPDHMDENQ",
+      "title": "Mortgage: GSE-eligible — net % reporting stronger demand",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_std_rre_gov",
+      "fred": "SUBLPDHMSGNQ",
+      "title": "Mortgage: government — net % tightening standards",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_dem_rre_gov",
+      "fred": "SUBLPDHMDGNQ",
+      "title": "Mortgage: government — net % reporting stronger demand",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_std_rre_qm",
+      "fred": "SUBLPDHMSQNQ",
+      "title": "Mortgage: QM non-jumbo, non-GSE — net % tightening standards",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_dem_rre_qm",
+      "fred": "SUBLPDHMDQNQ",
+      "title": "Mortgage: QM non-jumbo, non-GSE — net % reporting stronger demand",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_std_rre_qmj",
+      "fred": "SUBLPDHMSJNQ",
+      "title": "Mortgage: QM jumbo — net % tightening standards",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_dem_rre_qmj",
+      "fred": "SUBLPDHMDJNQ",
+      "title": "Mortgage: QM jumbo — net % reporting stronger demand",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_std_rre_nqmj",
+      "fred": "SUBLPDHMSKNQ",
+      "title": "Mortgage: non-QM jumbo — net % tightening standards",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_dem_rre_nqmj",
+      "fred": "SUBLPDHMDKNQ",
+      "title": "Mortgage: non-QM jumbo — net % reporting stronger demand",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_std_cc",
+      "fred": "DRTSCLCC",
+      "title": "Consumer: credit cards — net % tightening standards",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_dem_cc",
+      "fred": "DEMCC",
+      "title": "Consumer: credit cards — net % reporting stronger demand",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_std_auto",
+      "fred": "STDSAUTO",
+      "title": "Consumer: auto — net % tightening standards",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_dem_auto",
+      "fred": "DEMAUTO",
+      "title": "Consumer: auto — net % reporting stronger demand",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_std_oth",
+      "fred": "STDSOTHCONS",
+      "title": "Consumer: other — net % tightening standards",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_dem_oth",
+      "fred": "DEMOTHCONS",
+      "title": "Consumer: other — net % reporting stronger demand",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
+    },
+    {
+      "key": "sloos_wil_cons",
+      "fred": "DRIWCIL",
+      "title": "Net % more willing to make consumer installment loans",
+      "units": "%",
+      "transform": "level",
+      "fmt": "pct1",
+      "chg": "pp",
+      "freq": "Quarterly",
+      "kpi": false,
+      "no_yoy": true,
+      "src_label": "Fed SLOOS via FRED"
     }
   ],
   "derived": [
@@ -665,7 +1016,7 @@
       "key": "TOTLL_YOY",
       "op": "yoy",
       "of": "TOTLL",
-      "title": "Loans & leases, all commercial banks \u2014 YoY %",
+      "title": "Loans & leases, all commercial banks — YoY %",
       "units": "%",
       "freq": "Weekly",
       "src_label": "FRED / Fed H.8"
@@ -674,7 +1025,7 @@
       "key": "DPSACBW027SBOG_YOY",
       "op": "yoy",
       "of": "DPSACBW027SBOG",
-      "title": "Deposits, all commercial banks \u2014 YoY %",
+      "title": "Deposits, all commercial banks — YoY %",
       "units": "%",
       "freq": "Weekly",
       "src_label": "FRED / Fed H.8"
@@ -683,7 +1034,7 @@
       "key": "TOTCI_YOY",
       "op": "yoy",
       "of": "TOTCI",
-      "title": "C&I loans, all commercial banks \u2014 YoY %",
+      "title": "C&I loans, all commercial banks — YoY %",
       "units": "%",
       "freq": "Weekly",
       "src_label": "FRED / Fed H.8"
@@ -692,7 +1043,7 @@
       "key": "CREACBW027SBOG_YOY",
       "op": "yoy",
       "of": "CREACBW027SBOG",
-      "title": "CRE loans, all commercial banks \u2014 YoY %",
+      "title": "CRE loans, all commercial banks — YoY %",
       "units": "%",
       "freq": "Weekly",
       "src_label": "FRED / Fed H.8"
@@ -701,7 +1052,7 @@
       "key": "CCLACBW027SBOG_YOY",
       "op": "yoy",
       "of": "CCLACBW027SBOG",
-      "title": "Credit card & revolving loans, all commercial banks \u2014 YoY %",
+      "title": "Credit card & revolving loans, all commercial banks — YoY %",
       "units": "%",
       "freq": "Weekly",
       "src_label": "FRED / Fed H.8"
@@ -710,7 +1061,7 @@
       "key": "DPSSCBW027SBOG_YOY",
       "op": "yoy",
       "of": "DPSSCBW027SBOG",
-      "title": "Deposits, small domestically chartered banks \u2014 YoY %",
+      "title": "Deposits, small domestically chartered banks — YoY %",
       "units": "%",
       "freq": "Weekly",
       "src_label": "FRED / Fed H.8"
@@ -719,7 +1070,7 @@
       "key": "LLBSCBW027SBOG_YOY",
       "op": "yoy",
       "of": "LLBSCBW027SBOG",
-      "title": "Loans & leases, small domestically chartered banks \u2014 YoY %",
+      "title": "Loans & leases, small domestically chartered banks — YoY %",
       "units": "%",
       "freq": "Weekly",
       "src_label": "FRED / Fed H.8"
@@ -728,7 +1079,7 @@
       "key": "DPSLCBW027SBOG_YOY",
       "op": "yoy",
       "of": "DPSLCBW027SBOG",
-      "title": "Deposits, large domestically chartered banks \u2014 YoY %",
+      "title": "Deposits, large domestically chartered banks — YoY %",
       "units": "%",
       "freq": "Weekly",
       "src_label": "FRED / Fed H.8"
@@ -737,7 +1088,7 @@
       "key": "LLBLCBW027SBOG_YOY",
       "op": "yoy",
       "of": "LLBLCBW027SBOG",
-      "title": "Loans & leases, large domestically chartered banks \u2014 YoY %",
+      "title": "Loans & leases, large domestically chartered banks — YoY %",
       "units": "%",
       "freq": "Weekly",
       "src_label": "FRED / Fed H.8"
@@ -746,7 +1097,7 @@
       "key": "LTDACBW027SBOG_YOY",
       "op": "yoy",
       "of": "LTDACBW027SBOG",
-      "title": "H.8 Large time deposits, all commercial banks \u2014 YoY %",
+      "title": "H.8 Large time deposits, all commercial banks — YoY %",
       "units": "%",
       "freq": "Weekly",
       "src_label": "FRED / Fed H.8"
@@ -755,7 +1106,7 @@
       "key": "ODSACBW027SBOG_YOY",
       "op": "yoy",
       "of": "ODSACBW027SBOG",
-      "title": "H.8 Other deposits (ex large time), all commercial banks \u2014 YoY %",
+      "title": "H.8 Other deposits (ex large time), all commercial banks — YoY %",
       "units": "%",
       "freq": "Weekly",
       "src_label": "FRED / Fed H.8"
@@ -909,7 +1260,7 @@
       "key": "DEMDEPSL_YOY",
       "op": "yoy",
       "of": "DEMDEPSL",
-      "title": "H.6 Demand deposits \u2014 YoY %",
+      "title": "H.6 Demand deposits — YoY %",
       "units": "%",
       "freq": "Monthly",
       "src_label": "FRED / Fed H.6"
@@ -918,7 +1269,7 @@
       "key": "OLD_SPLICED_YOY",
       "op": "yoy",
       "of": "OLD_SPLICED",
-      "title": "H.6 Other liquid deposits \u2014 YoY %",
+      "title": "H.6 Other liquid deposits — YoY %",
       "units": "%",
       "freq": "Monthly",
       "src_label": "FRED / Fed H.6"
@@ -927,7 +1278,7 @@
       "key": "STDSL_YOY",
       "op": "yoy",
       "of": "STDSL",
-      "title": "H.6 Small time deposits \u2014 YoY %",
+      "title": "H.6 Small time deposits — YoY %",
       "units": "%",
       "freq": "Monthly",
       "src_label": "FRED / Fed H.6"
@@ -936,7 +1287,7 @@
       "key": "RMFSL_YOY",
       "op": "yoy",
       "of": "RMFSL",
-      "title": "H.6 Retail money market funds \u2014 YoY %",
+      "title": "H.6 Retail money market funds — YoY %",
       "units": "%",
       "freq": "Monthly",
       "src_label": "FRED / Fed H.6"
@@ -945,7 +1296,7 @@
       "key": "H6_TOTAL_YOY",
       "op": "yoy",
       "of": "H6_TOTAL",
-      "title": "H.6 Total deposits \u2014 YoY %",
+      "title": "H.6 Total deposits — YoY %",
       "units": "%",
       "freq": "Monthly",
       "src_label": "FRED / Fed H.6"
@@ -964,7 +1315,7 @@
       "key": "SBCACBW027SBOG_YOY",
       "op": "yoy",
       "of": "SBCACBW027SBOG",
-      "title": "Securities in bank credit, all commercial banks \u2014 YoY %",
+      "title": "Securities in bank credit, all commercial banks — YoY %",
       "units": "%",
       "freq": "Weekly",
       "src_label": "FRED / Fed H.8"
@@ -973,7 +1324,7 @@
       "key": "TASACBW027SBOG_YOY",
       "op": "yoy",
       "of": "TASACBW027SBOG",
-      "title": "Treasury & agency securities, all commercial banks \u2014 YoY %",
+      "title": "Treasury & agency securities, all commercial banks — YoY %",
       "units": "%",
       "freq": "Weekly",
       "src_label": "FRED / Fed H.8"
@@ -982,7 +1333,7 @@
       "key": "CLSACBW027SBOG_YOY",
       "op": "yoy",
       "of": "CLSACBW027SBOG",
-      "title": "Consumer loans, all commercial banks \u2014 YoY %",
+      "title": "Consumer loans, all commercial banks — YoY %",
       "units": "%",
       "freq": "Weekly",
       "src_label": "FRED / Fed H.8"
@@ -991,7 +1342,7 @@
       "key": "RREACBW027SBOG_YOY",
       "op": "yoy",
       "of": "RREACBW027SBOG",
-      "title": "Residential real estate loans, all commercial banks \u2014 YoY %",
+      "title": "Residential real estate loans, all commercial banks — YoY %",
       "units": "%",
       "freq": "Weekly",
       "src_label": "FRED / Fed H.8"
@@ -1000,7 +1351,7 @@
       "key": "CASACBW027SBOG_YOY",
       "op": "yoy",
       "of": "CASACBW027SBOG",
-      "title": "Cash assets, all commercial banks \u2014 YoY %",
+      "title": "Cash assets, all commercial banks — YoY %",
       "units": "%",
       "freq": "Weekly",
       "src_label": "FRED / Fed H.8"
@@ -1009,7 +1360,7 @@
       "key": "TLAACBW027SBOG_YOY",
       "op": "yoy",
       "of": "TLAACBW027SBOG",
-      "title": "Total assets, all commercial banks \u2014 YoY %",
+      "title": "Total assets, all commercial banks — YoY %",
       "units": "%",
       "freq": "Weekly",
       "src_label": "FRED / Fed H.8"
@@ -1018,7 +1369,7 @@
       "key": "H8_BORROW_YOY",
       "op": "yoy",
       "of": "H8_BORROW",
-      "title": "Borrowings, all commercial banks (NSA) \u2014 YoY %",
+      "title": "Borrowings, all commercial banks (NSA) — YoY %",
       "units": "%",
       "freq": "Weekly",
       "src_label": "FRED / Fed H.8"
@@ -1177,7 +1528,7 @@
       "fmt": "pct2",
       "chg": "bp",
       "no_yoy": true,
-      "src_label": "Computed: FDIC 12M CD national rate \u2212 FEDFUNDS"
+      "src_label": "Computed: FDIC 12M CD national rate − FEDFUNDS"
     },
     {
       "key": "dep_sprd_mmda",
@@ -1190,7 +1541,7 @@
       "fmt": "pct2",
       "chg": "bp",
       "no_yoy": true,
-      "src_label": "Computed: FDIC MMDA national rate \u2212 FEDFUNDS"
+      "src_label": "Computed: FDIC MMDA national rate − FEDFUNDS"
     }
   ],
   "kpis": [
@@ -1647,7 +1998,7 @@
   ],
   "sections": [
     {
-      "title": "Bank Deposits & Loans \u00b7 H.8 weekly, SA",
+      "title": "Bank Deposits & Loans · H.8 weekly, SA",
       "cols": 2,
       "panels": [
         {
@@ -1730,7 +2081,7 @@
       ]
     },
     {
-      "title": "Deposit Mix \u00b7 H.8 weekly, commercial banks (all / large / small domestic)",
+      "title": "Deposit Mix · H.8 weekly, commercial banks (all / large / small domestic)",
       "cols": 2,
       "panels": [
         {
@@ -1817,7 +2168,7 @@
       ]
     },
     {
-      "title": "Deposit Mix \u00b7 H.6 monthly, all depository institutions (banks, thrifts, credit unions)",
+      "title": "Deposit Mix · H.6 monthly, all depository institutions (banks, thrifts, credit unions)",
       "cols": 2,
       "panels": [
         {
@@ -1935,7 +2286,7 @@
       ]
     },
     {
-      "title": "H.8 Balance Sheet \u00b7 all commercial banks, weekly (added)",
+      "title": "H.8 Balance Sheet · all commercial banks, weekly (added)",
       "cols": 2,
       "panels": [
         {
@@ -2086,26 +2437,235 @@
             "dep_sprd_mmda"
           ],
           "labels": [
-            "12M CD \u2212 fed funds",
-            "MMDA \u2212 fed funds"
+            "12M CD − fed funds",
+            "MMDA − fed funds"
           ],
           "since": "2009-01-01",
           "zero": true,
           "full": true
         }
       ]
+    },
+    {
+      "title": "Senior Loan Officer Survey (SLOOS) · quarterly",
+      "sloos": {
+        "rows": [
+          {
+            "label": "C&I: large & middle-market firms",
+            "std": "sloos_std_ci_lm",
+            "dem": "sloos_dem_ci_lm"
+          },
+          {
+            "label": "C&I: small firms",
+            "std": "sloos_std_ci_sm",
+            "dem": "sloos_dem_ci_sm"
+          },
+          {
+            "label": "CRE: construction & land development",
+            "std": "sloos_std_cre_cld",
+            "dem": "sloos_dem_cre_cld"
+          },
+          {
+            "label": "CRE: nonfarm nonresidential",
+            "std": "sloos_std_cre_nfnr",
+            "dem": "sloos_dem_cre_nfnr"
+          },
+          {
+            "label": "CRE: multifamily",
+            "std": "sloos_std_cre_mf",
+            "dem": "sloos_dem_cre_mf"
+          },
+          {
+            "label": "Mortgage: GSE-eligible",
+            "std": "sloos_std_rre_gse",
+            "dem": "sloos_dem_rre_gse"
+          },
+          {
+            "label": "Mortgage: government",
+            "std": "sloos_std_rre_gov",
+            "dem": "sloos_dem_rre_gov"
+          },
+          {
+            "label": "Mortgage: QM non-jumbo, non-GSE",
+            "std": "sloos_std_rre_qm",
+            "dem": "sloos_dem_rre_qm"
+          },
+          {
+            "label": "Mortgage: QM jumbo",
+            "std": "sloos_std_rre_qmj",
+            "dem": "sloos_dem_rre_qmj"
+          },
+          {
+            "label": "Mortgage: non-QM jumbo",
+            "std": "sloos_std_rre_nqmj",
+            "dem": "sloos_dem_rre_nqmj"
+          },
+          {
+            "label": "Consumer: credit cards",
+            "std": "sloos_std_cc",
+            "dem": "sloos_dem_cc"
+          },
+          {
+            "label": "Consumer: auto",
+            "std": "sloos_std_auto",
+            "dem": "sloos_dem_auto"
+          },
+          {
+            "label": "Consumer: other",
+            "std": "sloos_std_oth",
+            "dem": "sloos_dem_oth"
+          }
+        ],
+        "extra": [
+          {
+            "label": "Consumer installment loans: net % more willing to lend",
+            "key": "sloos_wil_cons"
+          }
+        ]
+      },
+      "link": "https://www.federalreserve.gov/data/sloos.htm",
+      "cols": 2,
+      "note": "Federal Reserve Senior Loan Officer Opinion Survey on Bank Lending Practices, domestic banks, via FRED. Standards: net % of banks tightening (positive = tighter). Demand: net % reporting stronger demand (positive = stronger). Willingness: net % more willing to make consumer installment loans. Dates are survey months (Jan/Apr/Jul/Oct), each covering the prior three months. Mortgage categories begin in 2007 (current definitions 2015); CRE subcategories begin in 2013. Changes are in percentage points vs the prior survey.",
+      "panels": [
+        {
+          "title": "C&I: net % tightening standards",
+          "type": "line",
+          "series": [
+            "sloos_std_ci_lm",
+            "sloos_std_ci_sm"
+          ],
+          "labels": [
+            "Large & middle-market",
+            "Small firms"
+          ],
+          "zero": true
+        },
+        {
+          "title": "C&I: net % reporting stronger demand",
+          "type": "line",
+          "series": [
+            "sloos_dem_ci_lm",
+            "sloos_dem_ci_sm"
+          ],
+          "labels": [
+            "Large & middle-market",
+            "Small firms"
+          ],
+          "zero": true
+        },
+        {
+          "title": "CRE: net % tightening standards",
+          "type": "line",
+          "series": [
+            "sloos_std_cre_cld",
+            "sloos_std_cre_nfnr",
+            "sloos_std_cre_mf"
+          ],
+          "labels": [
+            "Construction & land",
+            "Nonfarm nonres.",
+            "Multifamily"
+          ],
+          "zero": true
+        },
+        {
+          "title": "CRE: net % reporting stronger demand",
+          "type": "line",
+          "series": [
+            "sloos_dem_cre_cld",
+            "sloos_dem_cre_nfnr",
+            "sloos_dem_cre_mf"
+          ],
+          "labels": [
+            "Construction & land",
+            "Nonfarm nonres.",
+            "Multifamily"
+          ],
+          "zero": true
+        },
+        {
+          "title": "Residential mortgage: net % tightening standards",
+          "type": "line",
+          "series": [
+            "sloos_std_rre_gse",
+            "sloos_std_rre_gov",
+            "sloos_std_rre_qm",
+            "sloos_std_rre_qmj",
+            "sloos_std_rre_nqmj"
+          ],
+          "labels": [
+            "GSE-eligible",
+            "Government",
+            "QM non-jumbo non-GSE",
+            "QM jumbo",
+            "Non-QM jumbo"
+          ],
+          "zero": true
+        },
+        {
+          "title": "Residential mortgage: net % reporting stronger demand",
+          "type": "line",
+          "series": [
+            "sloos_dem_rre_gse",
+            "sloos_dem_rre_gov",
+            "sloos_dem_rre_qm",
+            "sloos_dem_rre_qmj",
+            "sloos_dem_rre_nqmj"
+          ],
+          "labels": [
+            "GSE-eligible",
+            "Government",
+            "QM non-jumbo non-GSE",
+            "QM jumbo",
+            "Non-QM jumbo"
+          ],
+          "zero": true
+        },
+        {
+          "title": "Consumer: net % tightening standards",
+          "type": "line",
+          "series": [
+            "sloos_std_cc",
+            "sloos_std_auto",
+            "sloos_std_oth"
+          ],
+          "labels": [
+            "Credit cards",
+            "Auto",
+            "Other consumer"
+          ],
+          "zero": true
+        },
+        {
+          "title": "Consumer: net % reporting stronger demand + willingness to lend",
+          "type": "line",
+          "series": [
+            "sloos_dem_cc",
+            "sloos_dem_auto",
+            "sloos_dem_oth",
+            "sloos_wil_cons"
+          ],
+          "labels": [
+            "Card demand",
+            "Auto demand",
+            "Other cons. demand",
+            "Willingness (installment)"
+          ],
+          "zero": true
+        }
+      ]
     }
   ],
   "panel_latest": true,
   "summary_title": "Summary of changes",
-  "summary_note": "vs the observation on or before each lookback date \u00b7 bp for % series (shares, growth rates) \u00b7 % change for levels \u00b7 \u2013 = not meaningful at the series frequency",
+  "summary_note": "vs the observation on or before each lookback date · bp for % series (shares, growth rates) · % change for levels · – = not meaningful at the series frequency",
   "quarterly": {
     "title": "Quarterly Data",
     "quarters": 8,
     "anchor": "DPSACBW027SBOG",
     "groups": [
       {
-        "title": "H.8 \u00b7 All commercial banks (weekly, SA unless noted)",
+        "title": "H.8 · All commercial banks (weekly, SA unless noted)",
         "rows": [
           {
             "key": "DPSACBW027SBOG",
@@ -2167,7 +2727,7 @@
         ]
       },
       {
-        "title": "H.8 \u00b7 Large domestically chartered banks (weekly, SA)",
+        "title": "H.8 · Large domestically chartered banks (weekly, SA)",
         "rows": [
           {
             "key": "DPSLCBW027SBOG",
@@ -2184,7 +2744,7 @@
         ]
       },
       {
-        "title": "H.8 \u00b7 Small domestically chartered banks (weekly, SA)",
+        "title": "H.8 · Small domestically chartered banks (weekly, SA)",
         "rows": [
           {
             "key": "DPSSCBW027SBOG",
@@ -2201,7 +2761,7 @@
         ]
       },
       {
-        "title": "H.6 \u00b7 Money stock, all depository institutions (monthly, SA)",
+        "title": "H.6 · Money stock, all depository institutions (monthly, SA)",
         "rows": [
           {
             "key": "H6_TOTAL",
@@ -2226,7 +2786,7 @@
         ]
       }
     ],
-    "note": "Levels are quarter averages of the weekly (H.8, week-ending Wednesday) or monthly (H.6) data, $bn. YoY = quarter average vs the same quarter a year earlier. LQA = linked-quarter annualized, compounded: ((Q avg / prior-Q avg)^4 \u2212 1). QTD = quarter still in progress (average of the observations so far; hover for count); its YoY/LQA compare that partial average with full prior quarters. Borrowings are NSA, so their LQA includes seasonal swings. H.6 'other liquid deposits' splices savings + OCDs (pre-May 2020) with MDLM. Source: Federal Reserve H.8 and H.6 via FRED."
+    "note": "Levels are quarter averages of the weekly (H.8, week-ending Wednesday) or monthly (H.6) data, $bn. YoY = quarter average vs the same quarter a year earlier. LQA = linked-quarter annualized, compounded: ((Q avg / prior-Q avg)^4 − 1). QTD = quarter still in progress (average of the observations so far; hover for count); its YoY/LQA compare that partial average with full prior quarters. Borrowings are NSA, so their LQA includes seasonal swings. H.6 'other liquid deposits' splices savings + OCDs (pre-May 2020) with MDLM. Source: Federal Reserve H.8 and H.6 via FRED."
   },
   "growth5y": {
     "title": "Loan & Deposit Growth: Last 5 Years",
@@ -2329,7 +2889,7 @@
         "lvl": 1
       }
     ],
-    "note": "Fed H.8, all commercial banks, weekly (week-ending Wednesday), seasonally adjusted, via FRED. EOP basis = the last weekly reading dated on or before quarter-end (the week used is shown under each quarter). Average basis = average of all weekly readings dated in the quarter. YoY = vs the same quarter a year earlier on the same basis; LQA = linked-quarter annualized, compounded: ((Q / prior Q)^4 \u2212 1), on the same basis. QTD = quarter in progress (EOP = latest week available; average = weeks so far)."
+    "note": "Fed H.8, all commercial banks, weekly (week-ending Wednesday), seasonally adjusted, via FRED. EOP basis = the last weekly reading dated on or before quarter-end (the week used is shown under each quarter). Average basis = average of all weekly readings dated in the quarter. YoY = vs the same quarter a year earlier on the same basis; LQA = linked-quarter annualized, compounded: ((Q / prior Q)^4 − 1), on the same basis. QTD = quarter in progress (EOP = latest week available; average = weeks so far)."
   },
   "deposit_pricing": {
     "fedfunds": "ff_m",
@@ -2379,6 +2939,6 @@
         "label": "60-month CD"
       }
     ],
-    "note": "Cumulative beta = change in the product's national rate \u00f7 change in the effective fed funds rate (monthly averages) between the cycle points, \u00d7100. Turning points are detected from monthly fed funds: the last month at a trough or peak before a move of at least 20 bp in the other direction. A leg ending at the latest month is still in progress."
+    "note": "Cumulative beta = change in the product's national rate ÷ change in the effective fed funds rate (monthly averages) between the cycle points, ×100. Turning points are detected from monthly fed funds: the last month at a trough or peak before a move of at least 20 bp in the other direction. A leg ending at the latest month is still in progress."
   }
 }

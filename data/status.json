@@ -1,7 +1,7 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-13T03:23:22+00:00",
+   "checked_at": "2026-10-13T03:43:19+00:00",
    "data_changed_at": "2026-10-13T03:14:01+00:00",
    "series": {
     "gdp": {
@@ -421,8 +421,8 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-13T03:26:15+00:00",
-   "data_changed_at": "2026-10-13T03:26:12+00:00",
+   "checked_at": "2026-10-13T03:43:22+00:00",
+   "data_changed_at": "2026-10-13T03:42:59+00:00",
    "series": {
     "TOTLL": {
      "fred": "TOTLL",
@@ -912,6 +912,222 @@
       "value": 3.75
      }
     },
+    "sloos_std_ci_lm": {
+     "fred": "DRTSCILM",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": 0.0
+     }
+    },
+    "sloos_dem_ci_lm": {
+     "fred": "DRSDCILM",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": 16.1
+     }
+    },
+    "sloos_std_ci_sm": {
+     "fred": "DRTSCIS",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": 1.8
+     }
+    },
+    "sloos_dem_ci_sm": {
+     "fred": "DRSDCIS",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": 3.6
+     }
+    },
+    "sloos_std_cre_cld": {
+     "fred": "SUBLPDRCSC",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": -3.7
+     }
+    },
+    "sloos_dem_cre_cld": {
+     "fred": "SUBLPDRCDC",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": -11.1
+     }
+    },
+    "sloos_std_cre_nfnr": {
+     "fred": "SUBLPDRCSN",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": -11.3
+     }
+    },
+    "sloos_dem_cre_nfnr": {
+     "fred": "SUBLPDRCDN",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": 1.9
+     }
+    },
+    "sloos_std_cre_mf": {
+     "fred": "SUBLPDRCSM",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": -5.7
+     }
+    },
+    "sloos_dem_cre_mf": {
+     "fred": "SUBLPDRCDM",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": -3.8
+     }
+    },
+    "sloos_std_rre_gse": {
+     "fred": "SUBLPDHMSENQ",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": 0.0
+     }
+    },
+    "sloos_dem_rre_gse": {
+     "fred": "SUBLPDHMDENQ",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": -11.8
+     }
+    },
+    "sloos_std_rre_gov": {
+     "fred": "SUBLPDHMSGNQ",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": 0.0
+     }
+    },
+    "sloos_dem_rre_gov": {
+     "fred": "SUBLPDHMDGNQ",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": -16.7
+     }
+    },
+    "sloos_std_rre_qm": {
+     "fred": "SUBLPDHMSQNQ",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": -4.0
+     }
+    },
+    "sloos_dem_rre_qm": {
+     "fred": "SUBLPDHMDQNQ",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": -8.0
+     }
+    },
+    "sloos_std_rre_qmj": {
+     "fred": "SUBLPDHMSJNQ",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": -9.8
+     }
+    },
+    "sloos_dem_rre_qmj": {
+     "fred": "SUBLPDHMDJNQ",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": -8.0
+     }
+    },
+    "sloos_std_rre_nqmj": {
+     "fred": "SUBLPDHMSKNQ",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": -6.5
+     }
+    },
+    "sloos_dem_rre_nqmj": {
+     "fred": "SUBLPDHMDKNQ",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": -10.9
+     }
+    },
+    "sloos_std_cc": {
+     "fred": "DRTSCLCC",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": 6.7
+     }
+    },
+    "sloos_dem_cc": {
+     "fred": "DEMCC",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": 2.2
+     }
+    },
+    "sloos_std_auto": {
+     "fred": "STDSAUTO",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": -4.5
+     }
+    },
+    "sloos_dem_auto": {
+     "fred": "DEMAUTO",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": -11.4
+     }
+    },
+    "sloos_std_oth": {
+     "fred": "STDSOTHCONS",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": 0.0
+     }
+    },
+    "sloos_dem_oth": {
+     "fred": "DEMOTHCONS",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": -4.2
+     }
+    },
+    "sloos_wil_cons": {
+     "fred": "DRIWCIL",
+     "status": "ok",
+     "latest": {
+      "date": "2026-07-01",
+      "value": -2.0
+     }
+    },
     "TOTLL_YOY": {
      "fred": "derived",
      "status": "ok",
@@ -1323,8 +1539,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-13T03:24:56+00:00",
-   "data_changed_at": "2026-10-13T03:23:28+00:00",
+   "checked_at": "2026-10-13T03:44:06+00:00",
+   "data_changed_at": "2026-10-13T03:43:22+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -1339,64 +1555,71 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-13T03:25:00+00:00",
-   "data_changed_at": "2026-10-12T15:03:00+00:00",
+   "checked_at": "2026-10-13T03:44:11+00:00",
+   "data_changed_at": "2026-10-13T03:44:06+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-05",
       "value": 141.4916
-     }
+     },
+     "error": "No module named 'xlrd'"
     },
     "gprd_ma30": {
      "fred": "GPRD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-05",
       "value": 167.307
-     }
+     },
+     "error": "No module named 'xlrd'"
     },
     "gprd_act_ma30": {
      "fred": "GPRD_ACT",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-05",
       "value": 175.0834
-     }
+     },
+     "error": "No module named 'xlrd'"
     },
     "gprd_thr_ma30": {
      "fred": "GPRD_THREAT",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-05",
       "value": 188.9667
-     }
+     },
+     "error": "No module named 'xlrd'"
     },
     "gpr_m": {
      "fred": "GPR",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 146.2099
-     }
+     },
+     "error": "No module named 'xlrd'"
     },
     "gpr_t": {
      "fred": "GPRT",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 173.0874
-     }
+     },
+     "error": "No module named 'xlrd'"
     },
     "gpr_a": {
      "fred": "GPRA",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 144.288
-     }
+     },
+     "error": "No module named 'xlrd'"
     },
     "epu_d": {
      "fred": "USEPUINDXD",
@@ -1665,6 +1888,6 @@
    }
   }
  },
- "checked_at": "2026-10-13T03:26:15+00:00",
- "ok": true
+ "checked_at": "2026-10-13T03:44:11+00:00",
+ "ok": false
 }
