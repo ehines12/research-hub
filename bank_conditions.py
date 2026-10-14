@@ -479,8 +479,23 @@ def rate_credit_flag(R, hist):
     for e in eps:
         for k in ("rel_iwm_26", "abs_26", "mdd_26"):
             e[k] = None if e[k] is None else round(e[k], 1)
+    # Confirmed tier: flag ON and the ex-equity index below -15 vs its 26-wk high for >= 6 consecutive weeks
+    sx = [h.get("score_ex") for h in H]
+    offx = [None if sx[i] is None else sx[i] - max(x for x in sx[max(0, i - 26):i + 1] if x is not None) for i in range(N)]
+    streak = []
+    for i in range(N):
+        b_ = offx[i] is not None and offx[i] <= -15
+        streak.append((streak[-1] + 1 if streak and b_ else int(b_)))
+    conf = [bool(on[i]) and streak[i] >= 6 for i in range(N)]
+    cev = []
+    for i in range(N):
+        if conf[i] and (i == 0 or not conf[i - 1]):
+            r6, m6 = f(i, 26, I), mdd(i)
+            cev.append({"date": dates[i], "rel_iwm_26": None if r6 is None else round(r6, 1), "mdd_26": None if m6 is None else round(m6, 1),
+                        "abs_26": None if f(i, 26) is None else round(f(i, 26), 1)})
     return {"threshold": round(th, 1), "rate_bp": 50, "current": {"on": on[-1], "ust12_bp": u[-1], "credit_off": None if off[-1] is None else round(off[-1], 1),
-            "credit": cr[-1], "date": dates[-1]},
+            "credit": cr[-1], "date": dates[-1], "streak": streak[-1], "confirmed": conf[-1]},
+            "streak_hist": [[d, k] for d, k in zip(dates, streak)], "confirmed_hist": [int(c) for c in conf], "confirmed_events": cev,
             "history": [[d, None if o is None else int(o), None if x is None else round(x, 1), y] for d, o, x, y in zip(dates, on, off, u)],
             "stats": stats, "episodes": eps}
 
