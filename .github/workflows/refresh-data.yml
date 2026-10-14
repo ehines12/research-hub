@@ -1,7 +1,7 @@
 name: Refresh dashboard data
 
 # Weekday pulls (all keyless, via curl): FRED fredgraph CSV, Atlanta Fed GDPNow workbook, Cleveland Fed inflation-nowcast JSON
-# the Treasury Fiscal Data DTS API, and the Kalshi / Polymarket public market-data APIs (prediction markets). Daily items refresh on every weekday run. Times in UTC; CT shown for CDT (UTC-5)
+# the Treasury Fiscal Data DTS API, and the Kalshi / Polymarket public market-data APIs (prediction markets), Yahoo Finance daily chart JSON (Bank Conditions ETF relative performance). Daily items refresh on every weekday run. Times in UTC; CT shown for CDT (UTC-5)
 # and CST (UTC-6, Nov-Mar). GitHub may start scheduled runs a few minutes late.
 on:
   schedule:
@@ -48,7 +48,7 @@ jobs:
 
       - name: Commit data if changed
         run: |
-          git add data/*.json data/*-quarterly.csv data/*-quarterly.xlsx data/*-growth5y.csv data/*-growth5y.xlsx
+          git add data/*.json data/*-history.csv data/*-quarterly.csv data/*-quarterly.xlsx data/*-growth5y.csv data/*-growth5y.xlsx
           if git diff --cached --quiet; then
             echo "No data changes."
             exit 0

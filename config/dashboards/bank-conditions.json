@@ -1,0 +1,16 @@
+{
+  "id": "bank-conditions",
+  "kind": "bank_conditions",
+  "title": "Bank Conditions Diffusion Index",
+  "subtitle": "Is the environment good for banks? 37 real-time inputs across the curve and policy path, H.8 balance sheets, financial conditions, credit, CRE stress, equity relative performance and deposit competition & funding, each scored favorable / neutral / unfavorable by a fixed rule.",
+  "methodology": [
+    "Scoring: each component is +1 (favorable), 0 (neutral) or -1 (unfavorable) by the rule shown in the table. Diffusion = 100 x (favorable + 0.5 x neutral) / components scored. Above 60 = Supportive, 40-60 = Neutral, below 40 = Challenging. Category subscores use the same formula within each category.",
+    "Percentile rules rank the latest value against that series' own trailing 5 years (at least 1 year required), so they measure conditions relative to recent history, not absolute levels. ICE BofA OAS history on FRED begins Oct 2023, so the HY and BBB level percentiles use the shorter window available and start scoring Oct 2024.",
+    "H.8 acceleration = 13-week annualized growth minus 52-week growth, seasonally adjusted, domestically chartered banks (small = outside the top 25). Equity components use Yahoo Finance dividend-adjusted closes; during market hours the latest bar is intraday.",
+    "Policy path is a PROXY, not futures: (1-year Treasury CMT minus effective fed funds) / 25bp approximates net hikes (+) or cuts (-) priced over 12 months; it also contains term premium. Free, reliably scriptable SOFR / fed funds futures data (CME FedWatch) was not available. 10Y pace-of-change components score the size of the move in either direction.",
+    "Stale or failed components are shown but excluded from the score; nothing is filled in or estimated. A component is stale if its source failed this refresh or its latest observation is older than its freshness limit (daily 7 days, weekly 21, monthly 80, quarterly 240, plus the publication lag).",
+    "History is rebuilt weekly from Jan 2012 using only observations whose estimated release date (observation date + typical publication lag: 1 day for daily market data, 9 for H.8, 5-6 for NFCI/STLFSI/claims, ~40 for SLOOS, ~145 for charge-offs/delinquencies, ~165 for Z.1 CRE prices, 1 for H.4.1, ~50 for FDIC rates) is on or before each week. Lookahead caveat: FRED serves today's vintage, so revised series (H.8 especially, after benchmark revisions, plus claims and charge-offs) reflect later revisions, and release lags are approximations. The number of components scored changes over time (SOFR from 2018, CRE SLOOS from 2014, FDIC CD rates from 2021, OAS from 2024), so early history is less comparable. The latest point uses all data available now.",
+    "Sources: FRED (Federal Reserve H.8, H.15 and H.4.1, SOFR, Chicago Fed NFCI, St. Louis Fed STLFSI4, CBOE VIX, ICE BofA OAS, Fed SLOOS, DOL claims, Fed charge-off and delinquency rates incl. CRE, Fed Z.1 commercial real estate price index, FDIC national CD and MMDA rates); Yahoo Finance (KRE, XLF, IWM, SPY and the ICE BofA MOVE index, ^MOVE)."
+  ],
+  "series": []
+}

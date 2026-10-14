@@ -523,6 +523,13 @@ def run_predictions(cfg, out_path, prev):
 
 def run_dashboard(cfg_path):
     cfg = json.loads((ROOT / cfg_path).read_text())
+    if cfg.get("kind") == "bank_conditions":
+        import bank_conditions
+        doc = bank_conditions.build(cfg)
+        c = doc["current"]
+        print(f"  diffusion {c['score']} ({c['label']}), {c['n']}/{c['total']} scored")
+        (DATA / f"{cfg['id']}.json").write_text(json.dumps(doc, separators=(",", ":")))
+        return doc
     if cfg.get("kind") == "predictions":
         out_path = DATA / f"{cfg['id']}.json"
         prev = json.loads(out_path.read_text()) if out_path.exists() else {}

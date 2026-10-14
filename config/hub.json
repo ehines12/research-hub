@@ -21,6 +21,15 @@
    "dashboard": "config/dashboards/h8.json"
   },
   {
+   "id": "bank-conditions",
+   "title": "Bank Conditions",
+   "icon": "gauge",
+   "status": "live",
+   "tagline": "Diffusion index: is the environment good for banks?",
+   "description": "37 real-time inputs (curve, 10Y pace and policy path, H.8 loan and deposit momentum, financial conditions incl. MOVE, credit, CRE stress, small vs large equity performance, deposit competition, borrowings and Fed lending) scored favorable / neutral / unfavorable and rolled into a 0-100 diffusion index with history.",
+   "dashboard": "config/dashboards/bank-conditions.json"
+  },
+  {
    "id": "predictions",
    "title": "Prediction Markets",
    "icon": "odds",

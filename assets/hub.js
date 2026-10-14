@@ -6,6 +6,7 @@
   const TZ = "America/Chicago";
   const COLORS = ["#4ea1ff", "#f0883e", "#a371f7", "#3fb950", "#e3b341", "#ff7b72"];
   const ICONS = {
+    gauge: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/><circle cx="12" cy="17" r="1.2"/></svg>',
     globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>',
     bank: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 9l9-5 9 5M4 9h16M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18"/></svg>',
     table: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M3 14h18M9 9v11M15 9v11"/></svg>',
@@ -119,6 +120,7 @@
   async function dashboard(area) {
     const D = await load(area.id), cfg = D.config, S = D.series;
     if (cfg.kind === "predictions") return predictionsPage(area, D);
+    if (cfg.kind === "bank_conditions") return bankPage(area, D);
     document.title = cfg.title + " · Research Hub";
     const chk = await lastChecked(area.id);
     stamp.innerHTML = "Last updated " + fmtTime(chk) + (chk !== D.updated_at ? '<br><span style="opacity:.75">FRED data last changed ' + fmtTime(D.updated_at) + "</span>" : "");
@@ -259,6 +261,54 @@
       '<div class="pmhd"><span></span><span></span><span>prob</span><span>24h</span><span>7d</span></div>' + rows +
       '<div class="pmm">7d vol ' + money(v.vol7d || 0, v.venue) + " · " + (v.venue === "Kalshi" ? "OI " + money(v.oi || 0, v.venue) : "OI $" + money(v.oi || 0, "x").slice(1)) + " · closes " + shortClose(v.close) + "</div></div>";
   }
+
+  function bankPage(area, D) {
+    const cfg = D.config, C = D.current, comps = D.components || [];
+    document.title = cfg.title + " · Research Hub";
+    stamp.innerHTML = "Last updated " + fmtTime(D.updated_at);
+    const col = x => x == null ? "var(--mut)" : x > 60 ? "var(--up)" : x < 40 ? "var(--dn)" : "var(--warn)";
+    const lbl = x => x == null ? "n/a" : x > 60 ? "Supportive" : x < 40 ? "Challenging" : "Neutral";
+    const ang = x => Math.PI * (1 - x / 100), pt = (x, r) => [100 + r * Math.cos(ang(x)), 100 - r * Math.sin(ang(x))];
+    const arc = (a, b, c) => { const p = pt(a, 80), q = pt(b, 80); return '<path d="M' + p[0] + " " + p[1] + " A80 80 0 0 1 " + q[0] + " " + q[1] + '" stroke="' + c + '" stroke-width="16" fill="none"/>'; };
+    const nd = C.score == null ? null : pt(C.score, 66);
+    const gauge = '<svg viewBox="0 0 200 112" class="bcg">' + arc(0, 40, "#5a2a2a") + arc(40, 60, "#5a4a1f") + arc(60, 100, "#1f4a2a") +
+      (C.score == null ? "" : arc(0, Math.max(C.score, 0.5), col(C.score)) + '<line x1="100" y1="100" x2="' + nd[0] + '" y2="' + nd[1] + '" stroke="#e6edf3" stroke-width="3" stroke-linecap="round"/><circle cx="100" cy="100" r="5" fill="#e6edf3"/>') + "</svg>";
+    const chg = (o, t) => { if (!o || o.score == null || C.score == null) return '<span class="flat">' + t + ": n/a</span>"; const d = C.score - o.score;
+      return '<span class="' + (Math.abs(d) < 0.05 ? "flat" : d > 0 ? "pos" : "neg") + '">' + (d > 0 ? "+" : "") + d.toFixed(1) + " vs " + t + " (" + o.score.toFixed(1) + ", " + fmtDate(o.date, "Daily").replace(/, \d{4}$/, "") + ")</span>"; };
+    let h = "<h1>" + esc(cfg.title) + '</h1><p class="sub">' + esc(cfg.subtitle) + "</p>" +
+      '<div class="bctop"><div class="panel bchead">' + gauge + '<div class="bcv" style="color:' + col(C.score) + '">' + (C.score == null ? "n/a" : C.score.toFixed(1)) + '</div><div class="bcl" style="color:' + col(C.score) + '">' + lbl(C.score) + "</div>" +
+      '<div class="bcc">' + chg(C.w1, "1 wk ago") + chg(C.m1, "1 mo ago") + '</div><div class="pnote">' + C.fav + " favorable · " + C.neu + " neutral · " + C.unf + " unfavorable · " + C.n + " of " + C.total + " scored" + (C.n < C.total ? " (" + (C.total - C.n) + " stale, excluded)" : "") + "</div></div>" +
+      '<div class="panel"><h4>Category subscores</h4><div class="bccats">' + D.categories.map(c => '<div class="bccat"><div class="bcn">' + esc(c.name) + '<span class="hint">' + c.n + "/" + c.total + '</span></div><div class="bcbar"><i style="width:' + (c.score || 0) + "%;background:" + col(c.score) + '"></i></div><div class="bcs" style="color:' + col(c.score) + '">' + (c.score == null ? "n/a" : c.score.toFixed(0)) + " · " + lbl(c.score) + "</div></div>").join("") + "</div></div></div>";
+    h += '<h2>Diffusion index history <span class="hint">weekly, point-in-time · ' + (D.coverage_from ? "≥75% of components available from " + fmtDate(D.coverage_from, "Daily") : "") + '</span></h2><div class="toolbar"><span>Lookback</span><div class="seg">' + ["1Y", "5Y", "10Y", "Max"].map(r => '<button data-r="' + r + '" class="' + (r === range ? "on" : "") + '">' + r + "</button>").join("") + '</div></div><div class="panel full"><div class="cv" style="height:340px"><canvas id="bch"></canvas></div><div class="pnote">Line = diffusion index (left); grey = number of components scored that week (right). Dashed lines at 40 and 60. Coverage grows as sources begin: SOFR Apr 2018, CRE SLOOS Q4 2013, FDIC CD rates Apr 2021, ICE BofA OAS Oct 2023 (level percentiles score from Oct 2024).</div></div>';
+    const v = (x, u) => x == null ? "–" : (u === "%" || u === "pp" ? (x > 0 && u === "pp" ? "+" : "") + x.toFixed(2) + (u === "%" ? "%" : "") : u === "net %" ? x.toFixed(1) : x.toFixed(2));
+    const sig = c => c.status !== "ok" ? '<span class="stl">STALE · excluded</span>' : c.signal === 1 ? '<span class="pos b">Favorable</span>' : c.signal === -1 ? '<span class="neg b">Unfavorable</span>' : '<span class="flat b">Neutral</span>';
+    const dir = c => { if (!c.prior || c.value == null) return "–"; const d = c.value - c.prior.value; if (Math.abs(d) < 1e-6) return '<span class="flat">unch.</span>';
+      const good = c.better === "abs" ? Math.abs(c.value) < Math.abs(c.prior.value) : (d > 0) === (c.better === "high"); return '<span class="' + (good ? "pos" : "neg") + '">' + (d > 0 ? "▲ " : "▼ ") + (good ? "improving" : "worsening") + '</span><span class="dl" style="color:var(--mut)">vs ' + v(c.prior.value, c.unit) + " " + fmtDate(c.prior.date, c.freq === "q" ? "Quarterly" : c.freq === "m" ? "Monthly" : "Daily") + "</span>"; };
+    const fq = { d: "Daily", w: "Daily", m: "Monthly", q: "Quarterly" };
+    h += '<h2>Components</h2><div class="qbar"><h4 class="atit">' + comps.length + ' inputs <span class="hint">value, as-of date, rule and signal</span></h4><div class="qdl"><button class="btn sm" data-bccsv="c">Components CSV</button>' + (INLINE ? "" : '<a class="btn sm" href="data/bank-conditions-history.csv" download>History CSV</a>') + '<button class="btn sm" data-bccsv="h">History CSV (this view)</button></div></div>' +
+      '<div class="tblwrap"><table class="sumtbl atbl bctbl"><thead><tr><th>Component</th><th class="r">Value</th><th>As of</th><th>Rule</th><th>Signal</th><th>Direction</th><th>Source</th></tr></thead><tbody>' +
+      D.categories.map(cat => '<tr class="bcgrp"><td colspan="7">' + esc(cat.name) + " · " + (cat.score == null ? "n/a" : cat.score.toFixed(0)) + "</td></tr>" + comps.filter(c => c.cat === cat.name).map(c =>
+        "<tr><td>" + esc(c.name) + '</td><td class="r b">' + v(c.value, c.unit) + (c.pct != null ? '<span class="dl" style="color:var(--mut)">' + c.pct + "th pctile</span>" : "") + "</td><td>" + (c.asof ? fmtDate(c.asof, fq[c.freq]) : "–") + '</td><td class="bcrule">' + esc(c.rule) + "</td><td>" + sig(c) + (c.error ? '<span class="dl err">' + esc(c.error) + "</span>" : "") + "</td><td>" + dir(c) + '</td><td class="sid">' + esc(c.sources.join(", ")) + "</td></tr>").join("")).join("") + "</tbody></table></div>";
+    h += '<h2>Methodology</h2><div class="panel">' + (cfg.methodology || []).map(p => '<p class="pnote" style="margin:6px 0">' + esc(p) + "</p>").join("") + "</div>";
+    app.innerHTML = h;
+    const dl = (name, rows) => { const b = new Blob([rows.map(r => r.map(x => x == null ? "" : /[",\n]/.test(String(x)) ? '"' + String(x).replace(/"/g, '""') + '"' : x).join(",")).join("\n")], { type: "text/csv" }); const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = name; a.click(); };
+    app.querySelectorAll("button[data-bccsv]").forEach(b => b.onclick = () => b.dataset.bccsv === "c" ?
+      dl("bank-conditions-components.csv", [["category", "component", "value", "unit", "as_of", "percentile", "signal", "status", "rule", "sources"]].concat(comps.map(c => [c.cat, c.name, c.value, c.unit, c.asof, c.pct, c.signal, c.status, c.rule, c.sources.join(" ")]))) :
+      dl("bank-conditions-history.csv", [["date", "diffusion", "components_scored"].concat(D.categories.map(c => c.name))].concat(D.history.map(r => [r.date, r.score, r.n].concat(D.categories.map(c => r.cats[c.name]))))));
+    const draw = () => { charts.forEach(c => c.destroy()); charts = []; const cut = cutoff(), H = D.history.filter(r => !cut || Date.parse(r.date) >= cut);
+      const el = document.getElementById("bch"); if (!el) return;
+      const ref = y => ({ label: "", data: H.length ? [{ x: Date.parse(H[0].date), y }, { x: Date.parse(H[H.length - 1].date), y }] : [], borderColor: "#5b6b80", borderDash: [4, 4], borderWidth: 1, pointRadius: 0 });
+      charts.push(new Chart(el, { type: "line", data: { datasets: [
+        { label: "Diffusion index", data: H.filter(r => r.score != null).map(r => ({ x: Date.parse(r.date), y: r.score })), borderColor: "#4ea1ff", backgroundColor: "#4ea1ff", borderWidth: 1.8, pointRadius: 0, tension: 0 },
+        { label: "Components scored", yAxisID: "y2", data: H.map(r => ({ x: Date.parse(r.date), y: r.n })), borderColor: "#5b6b80", borderWidth: 1, pointRadius: 0, stepped: true }, ref(40), ref(60)] },
+        options: { parsing: false, animation: false, maintainAspectRatio: false, interaction: { mode: "index", intersect: false },
+          scales: { x: { type: "time", grid: { color: "#1f2a37" }, ticks: { color: "#8b9bb0", maxTicksLimit: 10 } }, y: { min: 0, max: 100, grid: { color: "#1f2a37" }, ticks: { color: "#8b9bb0" } }, y2: { position: "right", min: 0, max: comps.length + 2, grid: { display: false }, ticks: { color: "#5b6b80" } } },
+          plugins: { legend: { labels: { color: "#e6edf3", boxWidth: 12, filter: i => i.text } }, tooltip: { filter: i => i.dataset.label, callbacks: { title: t => t.length ? fmtDate(new Date(t[0].parsed.x).toISOString().slice(0, 10), "Daily") : "" } } } } })); };
+    draw();
+    app.querySelectorAll(".toolbar .seg button").forEach(b => b.onclick = () => { range = b.dataset.r; localStorage.setItem("rh-range", range);
+      app.querySelectorAll(".toolbar .seg button").forEach(x => x.classList.toggle("on", x === b)); draw(); });
+  }
+
   function predictionsPage(area, D) {
     const cfg = D.config;
     document.title = cfg.title + " · Research Hub";
