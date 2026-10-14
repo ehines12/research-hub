@@ -1,7 +1,7 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-14T13:52:53+00:00",
+   "checked_at": "2026-10-14T13:59:32+00:00",
    "data_changed_at": "2026-10-14T13:52:48+00:00",
    "series": {
     "gdp": {
@@ -421,7 +421,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-14T13:53:02+00:00",
+   "checked_at": "2026-10-14T13:59:53+00:00",
    "data_changed_at": "2026-10-13T14:22:31+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2067,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-14T13:54:51+00:00",
-   "data_changed_at": "2026-10-14T13:53:24+00:00",
+   "checked_at": "2026-10-14T14:01:53+00:00",
+   "data_changed_at": "2026-10-14T14:00:21+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,7 +2083,7 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-14T13:55:16+00:00",
+   "checked_at": "2026-10-14T14:02:33+00:00",
    "data_changed_at": "2026-10-14T13:54:51+00:00",
    "series": {
     "gprd": {
@@ -2409,8 +2409,8 @@
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-10-14T13:53:24+00:00",
-   "data_changed_at": "2026-10-14T13:53:02+00:00",
+   "checked_at": "2026-10-14T14:00:21+00:00",
+   "data_changed_at": "2026-10-14T13:59:53+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2649,7 +2649,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-14",
-      "value": -3.5015
+      "value": -3.4871
      }
     },
     "kre_xlf_3m": {
@@ -2657,7 +2657,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-14",
-      "value": -8.4555
+      "value": -8.4419
      }
     },
     "iwm_spy_1m": {
@@ -2665,7 +2665,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-14",
-      "value": -6.3933
+      "value": -6.4112
      }
     },
     "iwm_spy_3m": {
@@ -2673,7 +2673,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-14",
-      "value": -10.2641
+      "value": -10.2812
      }
     },
     "dep_pricing": {
@@ -2743,6 +2743,6 @@
    }
   }
  },
- "checked_at": "2026-10-14T13:55:16+00:00",
+ "checked_at": "2026-10-14T14:02:33+00:00",
  "ok": true
 }
