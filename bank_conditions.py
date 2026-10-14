@@ -195,6 +195,11 @@ def pctile(better, years=5, min_years=1):
     return f
 
 
+LAGGARD_WHY = "context only, not scored: lagged KRE in the pre-2019 test (forward correlation below -0.10); bad readings tended to arrive after the stock move"
+CONTEXT_ONLY = {k: LAGGARD_WHY for k in ("fed_lending", "cre_nco", "cre_px", "sloos_cre_std", "cre_dq", "sloos_cre_dem", "dq",
+                                         "sloos_ci_dem", "nco", "sloos_ci_std", "claims")}
+
+
 def rate12_rule(vals, i):
     """12-month change in bp: a big rise is unfavorable (AOCI, deposit repricing); a big fall is NOT scored favorable (it usually means a growth scare)."""
     v = vals[i][1]
@@ -386,6 +391,100 @@ def deterioration(R, hist, key="score_ex"):
     return {"buckets": rows, "current_off_high": round(live - hi, 1) if live is not None else None, "high_26w": hi}
 
 
+def realtime_signals(R, grid, builders):
+    """Per-week signals for components built only from ALFRED-revised series, from the vintage public at each week."""
+    import alfred_rt as A
+    live = {k: R.get(k, []) for k in A.TAIL}
+    try:
+        c, st = A.update(grid, live=live)
+    except Exception as e:  # noqa
+        print(f"  ALFRED update FAILED: {e}")
+        c, st = A.load(), {"all": {"status": "failed", "error": str(e)[:200]}}
+    keys = [k for k, (srcs, *_r) in builders.items() if srcs and all(x in A.TAIL for x in srcs)]
+    out = {k: {} for k in keys}
+    cov = {k: 0 for k in keys}
+    for g in grid:
+        Rv = {}
+        for sid in A.TAIL:
+            v = A.series_at(c, sid, g)
+            if v:
+                Rv[sid] = [tuple(x) for x in v]
+        if not Rv:
+            continue
+        built = {row[0]: row for row in components(Rv)}
+        for k in keys:
+            srcs, rule, freq, lag = builders[k]
+            if not all(x in Rv for x in srcs):
+                continue          # no vintage for this week: caller falls back to revised data
+            vals = [(t, round(v, 4)) for t, v in built[k][5]]
+            if not vals:
+                out[k][g] = None; continue
+            sc = score_series(vals, rule)
+            ok = sc[-1] is not None and (D(g) - D(vals[-1][0])).days <= MAX_AGE[freq] + lag
+            out[k][g] = sc[-1][0] if ok else None
+            cov[k] += 1
+    first = {k: min(out[k]) if out[k] else None for k in keys}
+    return out, {k: {"weeks_realtime": cov[k], "weeks": len(grid), "from": first[k]} for k in keys}, st
+
+
+def rate_credit_flag(R, hist):
+    """Context flag: ON when the 10Y is up > 50bp over 12 months AND the full Credit subscore (incl. context-only
+    inputs) sits deeper below its 26-week high than its pre-2019 20th percentile. Threshold fixed on pre-2019 data."""
+    import statistics as S
+    H = hist
+    dates = [h["date"] for h in H]; N = len(H)
+    cr = [h.get("credit_full") for h in H]
+    off = [None if cr[i] is None else cr[i] - max(x for x in cr[max(0, i - 26):i + 1] if x is not None) for i in range(N)]
+    pre = sorted(o for o, d in zip(off, dates) if o is not None and d < "2019-01-01")
+    if len(pre) < 50 or not R.get("DGS10"):
+        return None
+    th = pre[int(0.2 * len(pre))]
+    ds = [t for t, _ in R["DGS10"]]; vs = [v for _, v in R["DGS10"]]
+    def ust12(g):
+        i = bisect.bisect_right(ds, (D(g) - dt.timedelta(days=1)).isoformat()) - 1
+        j = bisect.bisect_right(ds, (D(ds[i]) - dt.timedelta(days=365)).isoformat()) - 1
+        return None if i < 0 or j < 0 else round(100 * (vs[i] - vs[j]), 0)
+    u = [ust12(g) for g in dates]
+    on = [None if off[i] is None or u[i] is None else (u[i] > 50 and off[i] <= th) for i in range(N)]
+    # forward outcomes
+    def px(k):
+        if not R.get(k): return [None] * N
+        kd = [t for t, _ in R[k]]; kv = [v for _, v in R[k]]
+        return [kv[bisect.bisect_right(kd, g) - 1] for g in dates]
+    K, I, X = px("KRE"), px("IWM"), px("XLF")
+    kd = [t for t, _ in R["KRE"]]; kv = [v for _, v in R["KRE"]]
+    live = [h.get("live") for h in H]
+    def f(i, n, B=None):
+        if i + n >= N or live[i + n] or K[i] is None: return None
+        return 100 * ((K[i + n] / K[i]) / ((B[i + n] / B[i]) if B else 1) - 1)
+    def mdd(i):
+        if i + 26 >= N or live[i + 26]: return None
+        a = bisect.bisect_right(kd, dates[i]) - 1; e = bisect.bisect_right(kd, dates[i + 26])
+        return 100 * (min(kv[a:e]) / kv[a] - 1)
+    tg = {"rel_iwm_26": lambda i: f(i, 26, I), "rel_xlf_26": lambda i: f(i, 26, X), "abs_26": lambda i: f(i, 26), "mdd_26": mdd}
+    stats = []
+    for lab, sel in (("In-sample (2012-2018, threshold set here)", lambda d: d < "2019-01-01"), ("Out-of-sample (2019 onward)", lambda d: d >= "2019-01-01")):
+        for state in (True, False):
+            idx = [i for i in range(N) if on[i] is state and sel(dates[i])]
+            r = {"period": lab, "state": "ON" if state else "OFF", "weeks": len(idx)}
+            for k, fn in tg.items():
+                v = [x for x in (fn(i) for i in idx) if x is not None]
+                r[k] = round(S.mean(v), 2) if v else None
+            stats.append(r)
+    eps, prev = [], False
+    for i in range(N):
+        if on[i] and not prev:
+            eps.append({"date": dates[i], "rel_iwm_26": f(i, 26, I), "abs_26": f(i, 26), "mdd_26": mdd(i)})
+        prev = bool(on[i])
+    for e in eps:
+        for k in ("rel_iwm_26", "abs_26", "mdd_26"):
+            e[k] = None if e[k] is None else round(e[k], 1)
+    return {"threshold": round(th, 1), "rate_bp": 50, "current": {"on": on[-1], "ust12_bp": u[-1], "credit_off": None if off[-1] is None else round(off[-1], 1),
+            "credit": cr[-1], "date": dates[-1]},
+            "history": [[d, None if o is None else int(o), None if x is None else round(x, 1), y] for d, o, x, y in zip(dates, on, off, u)],
+            "stats": stats, "episodes": eps}
+
+
 def build(cfg):
     now = dt.datetime.now(dt.timezone.utc)
     today = dt.date.today()
@@ -406,6 +505,7 @@ def build(cfg):
     comps, series_status = [], {}
     cats = []
     timelines = {}
+    builders = {}
     for key, cat, name, unit, freq, vals, srcs, rule, rule_txt, better in components(R):
         if cat not in cats:
             cats.append(cat)
@@ -414,7 +514,10 @@ def build(cfg):
         lag = max(PUB_LAG[x] for x in srcs)
         bad = [x for x in srcs if st.get(x, {}).get("status") != "ok"]
         rec = {"key": key, "cat": cat, "name": name, "unit": unit, "freq": freq, "rule": rule_txt, "better": better,
-               "sources": srcs, "pub_lag_days": lag}
+               "sources": srcs, "pub_lag_days": lag, "scored": key not in CONTEXT_ONLY}
+        if key in CONTEXT_ONLY:
+            rec["context_reason"] = CONTEXT_ONLY[key]
+        builders[key] = (srcs, rule, freq, lag)
         if not vals or sc[-1] is None:
             rec.update(status="failed", signal=None, error="; ".join(st.get(x, {}).get("error", "insufficient history") for x in srcs))
         else:
@@ -436,19 +539,27 @@ def build(cfg):
         comps.append(rec)
         series_status[key] = {"fred": "+".join(srcs), "status": rec["status"], "latest": {"date": rec.get("asof"), "value": rec.get("value")},
                               **({"error": rec["error"]} if rec.get("error") else {})}
-    cur = diffusion([c["signal"] for c in comps])
-    cat_now = {c: diffusion([x["signal"] for x in comps if x["cat"] == c]) for c in cats}
+    SC = lambda c: c["signal"] if c["scored"] else None
+    cur = diffusion([SC(c) for c in comps])
+    cat_now = {c: diffusion([SC(x) for x in comps if x["cat"] == c]) for c in cats}
 
     # weekly point-in-time history (Fridays), latest point = today
     grid, d0 = [], D(HIST_FROM)
     while d0 < today:
         grid.append(d0.isoformat()); d0 += dt.timedelta(days=7)
     EQ_KEYS = {c["key"] for c in comps if c["cat"].startswith("Equity")}
+    rt, rt_cov, rt_status = realtime_signals(R, grid, builders)
+    catof = {c["key"]: c["cat"] for c in comps}
     hist = []
     for g in grid:
         sigs = {}
         for c in comps:
-            tl = timelines.get(c["key"])
+            k = c["key"]
+            if k in rt and g in rt[k]:
+                if rt[k][g] is not None:
+                    sigs[k] = rt[k][g]
+                continue
+            tl = timelines.get(k)
             if not tl:
                 continue
             i = bisect.bisect_right(tl[0], g) - 1
@@ -457,13 +568,17 @@ def build(cfg):
             # drop signals whose latest observation is older than the freshness limit at that date
             if (D(g) - D(tl[0][i])).days > MAX_AGE[c["freq"]]:
                 continue
-            sigs[c["key"]] = tl[1][i]
-        row = {"date": g, "score": diffusion(list(sigs.values())), "n": len(sigs),
-               "score_ex": diffusion([v for kk, v in sigs.items() if kk not in EQ_KEYS]),
-               "cats": {k: diffusion([v for kk, v in sigs.items() if next(x["cat"] for x in comps if x["key"] == kk) == k]) for k in cats}}
+            sigs[k] = tl[1][i]
+        scd = {k: v for k, v in sigs.items() if k not in CONTEXT_ONLY}
+        row = {"date": g, "score": diffusion(list(scd.values())), "n": len(scd),
+               "score_ex": diffusion([v for kk, v in scd.items() if kk not in EQ_KEYS]),
+               "credit_full": diffusion([v for kk, v in sigs.items() if catof[kk] == "Credit"]),
+               "cats": {k: diffusion([v for kk, v in scd.items() if catof[kk] == k]) for k in cats}}
         hist.append(row)
-    hist.append({"date": today.isoformat(), "score": cur, "score_ex": diffusion([c["signal"] for c in comps if c["key"] not in EQ_KEYS]), "n": sum(1 for c in comps if c["signal"] is not None), "cats": cat_now, "live": True})
-    total = len(comps)
+    hist.append({"date": today.isoformat(), "score": cur, "score_ex": diffusion([SC(c) for c in comps if c["key"] not in EQ_KEYS]),
+                 "credit_full": diffusion([c["signal"] for c in comps if c["cat"] == "Credit"]),
+                 "n": sum(1 for c in comps if SC(c) is not None), "cats": cat_now, "live": True})
+    total = sum(1 for c in comps if c["scored"])
     cov = next((h["date"] for h in hist if h["n"] >= total * 0.75), None)
 
     def ago(days):
@@ -472,15 +587,18 @@ def build(cfg):
         return c[-1] if c else None
     w1, m1 = ago(7), ago(28)
     doc = {"id": cfg["id"], "config": cfg, "updated_at": now.isoformat(timespec="seconds"),
-           "current": {"score": cur, "label": label(cur), "n": sum(1 for c in comps if c["signal"] is not None), "total": total,
-                       "fav": sum(1 for c in comps if c["signal"] == 1), "neu": sum(1 for c in comps if c["signal"] == 0),
-                       "unf": sum(1 for c in comps if c["signal"] == -1),
+           "current": {"score": cur, "label": label(cur), "n": sum(1 for c in comps if SC(c) is not None), "total": total,
+                       "fav": sum(1 for c in comps if SC(c) == 1), "neu": sum(1 for c in comps if SC(c) == 0),
+                       "unf": sum(1 for c in comps if SC(c) == -1), "context_only": len(comps) - total,
                        "w1": w1 and {"date": w1["date"], "score": w1["score"]}, "m1": m1 and {"date": m1["date"], "score": m1["score"]}},
            "categories": [{"name": k, "score": cat_now[k], "label": label(cat_now[k]),
-                           "n": sum(1 for c in comps if c["cat"] == k and c["signal"] is not None),
-                           "total": sum(1 for c in comps if c["cat"] == k)} for k in cats],
+                           "n": sum(1 for c in comps if c["cat"] == k and SC(c) is not None),
+                           "total": sum(1 for c in comps if c["cat"] == k and c["scored"]),
+                           "context": sum(1 for c in comps if c["cat"] == k and not c["scored"])} for k in cats],
            "components": comps, "history": hist, "coverage_from": cov, "sources": st, "series": series_status}
+    doc["realtime"] = {"coverage": rt_cov, "status": rt_status}
     doc["kre"] = kre_rows(R, hist)
+    doc["flag"] = rate_credit_flag(R, hist)
     doc["deterioration"] = deterioration(R, hist)
     try:
         import fwd_context
