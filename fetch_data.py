@@ -528,7 +528,13 @@ def run_dashboard(cfg_path):
         doc = bank_conditions.build(cfg)
         c = doc["current"]
         print(f"  diffusion {c['score']} ({c['label']}), {c['n']}/{c['total']} scored")
-        (DATA / f"{cfg['id']}.json").write_text(json.dumps(doc, separators=(",", ":")))
+        out = DATA / f"{cfg['id']}.json"
+        # Guard: if a source outage (e.g. FRED 403s) leaves under 75% of inputs scored, keep the last good file
+        # instead of publishing an index built from a handful of inputs.
+        if c["total"] and c["n"] < 0.75 * c["total"] and out.exists():
+            print(f"  -> only {c['n']}/{c['total']} inputs scored (source outage); kept previous {out.name}")
+            return json.loads(out.read_text())
+        out.write_text(json.dumps(doc, separators=(",", ":")))
         return doc
     if cfg.get("kind") == "predictions":
         out_path = DATA / f"{cfg['id']}.json"
