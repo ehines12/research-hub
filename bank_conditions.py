@@ -615,12 +615,6 @@ def build(cfg):
     doc["kre"] = kre_rows(R, hist)
     doc["flag"] = rate_credit_flag(R, hist)
     doc["deterioration"] = deterioration(R, hist)
-    try:
-        import fwd_context
-        doc["forward"] = fwd_context.build(R, hist, today, fwd_raw, fwd_st)
-    except Exception as e:  # noqa
-        print(f"  forward context FAILED: {e}")
-        doc["forward"] = None
     lines = ["date,diffusion,components_scored," + ",".join('"' + k + '"' for k in cats)]
     for h in hist:
         lines.append(",".join([h["date"], "" if h["score"] is None else str(h["score"]), str(h["n"])] +

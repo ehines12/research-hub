@@ -18,7 +18,6 @@
   "series": [],
   "notes": {
     "deterioration": "Recomputed each refresh on the real-time history. 26-week forward averages, 2012-2026, overlapping windows: only the 15+ point bucket stands out (KRE about -4.4% vs IWM, -13.3% max drawdown). With fewer, faster-moving scored inputs the index now crosses -20 about 25 times since 2012, so read it as context, not a trigger. The real-time rebuild changed these numbers only slightly versus revised data. Few independent episodes (about 5 real stress periods); in-sample.",
-    "episodes": "Recomputed each refresh. Earlier review (Oct 13, 2026, smaller sample): cheap valuation and high short interest did not separate good from bad deep-drawdown episodes; rate shock did (10Y up > 50bp over 12 months), which led to the separate rate shock + credit flag above. Small samples, overlapping windows; in-sample.",
     "flag": "Threshold fixed on 2012-2018 data; 2019+ is out-of-sample. It uses the full Credit subscore (including context-only inputs). The 2019+ result leans heavily on 2022-23 and the flag flickers on and off, so treat it as context. Overlapping 26-week windows: about 15 independent half-years since 2019."
   }
 }
