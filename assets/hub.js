@@ -333,7 +333,7 @@
           options: { parsing: false, animation: false, maintainAspectRatio: false, interaction: { mode: "index", intersect: false }, layout: { padding: { right: 0 } },
             scales: { x: { type: "time", min: x0, max: x1, grid: { color: "#1f2a37" }, ticks: { color: "#8b9bb0", maxTicksLimit: 10 } }, y: { grid: { color: "#1f2a37" }, ticks: { color: "#8b9bb0" }, afterFit: s => { s.width = 40; } }, y2: { position: "right", display: true, grid: { display: false }, ticks: { display: false }, afterFit: s => { s.width = yw2; } } },
             plugins: { legend: { labels: { color: "#e6edf3", boxWidth: 12 } }, tooltip: { callbacks: { title: t => t.length ? fmtDate(new Date(t[0].parsed.x).toISOString().slice(0, 10), "Daily") : "" } } } } })); };
-      const yw2 = charts[0] ? charts[0].scales.y2.width : 30;
+      const yw2 = (charts[0] && charts[0].scales.y2) ? charts[0].scales.y2.width : 0;
       { const el2 = document.getElementById("bcdd"); if (el2) { const A = D.history, P = [];
         A.forEach((r, i) => { if (r.score_ex == null) return; const w = A.slice(Math.max(0, i - 26), i + 1).map(x => x.score_ex).filter(x => x != null), hi = Math.max(...w); P.push({ x: Date.parse(r.date), v: r.score_ex, hi, off: r.score_ex - hi }); });
         const Q = P.filter(p => !cut || p.x >= cut), rl = y => ({ type: "line", label: "", yAxisID: "y2", data: Q.length ? [{ x: Q[0].x, y }, { x: Q[Q.length - 1].x, y }] : [], borderColor: y === -15 ? "#f85149" : "#d29922", borderDash: [4, 4], borderWidth: 1, pointRadius: 0 });
