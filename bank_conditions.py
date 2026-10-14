@@ -316,7 +316,7 @@ def label(x):
     return None if x is None else ("Supportive" if x > 60 else ("Challenging" if x < 40 else "Neutral"))
 
 
-def kre_signal(R, hist):
+def kre_signal(R, hist, key="score"):
     """Weekly KRE price and KRE/IWM relative (rebased 100) on the index grid, plus in-sample signal stats."""
     def asof(ser):
         ds = [t for t, _ in ser]; vs = [v for _, v in ser]
@@ -338,7 +338,7 @@ def kre_signal(R, hist):
         if len(p) < 20: return None, len(p)
         try: return round(S.correlation([x for x, _ in p], [y for _, y in p]), 3), len(p)
         except Exception: return None, len(p)
-    sc = [h["score"] for h in hist]; rel = [r["rel"] for r in rows]
+    sc = [h.get(key) for h in hist]; rel = [r["rel"] for r in rows]
     d4 = [None if i < 4 or sc[i] is None or sc[i-4] is None else sc[i] - sc[i-4] for i in range(len(sc))]
     out = {"horizons": [], "regimes": ["Supportive", "Neutral", "Challenging"], "from": None, "to": None}
     for n in (4, 13, 26):
@@ -349,9 +349,46 @@ def kre_signal(R, hist):
             v = [y for x, y in zip(sc, fwd) if x is not None and y is not None and f(x)]
             reg[name] = {"avg": round(S.mean(v), 2) if v else None, "hit": round(100 * sum(1 for y in v if y > 0) / len(v)) if v else None, "n": len(v)}
         out["horizons"].append({"weeks": n, "corr_level": cl, "corr_chg4": cc, "n": nl, "regimes": reg})
-    valid = [h["date"] for h, r in zip(hist, rows) if h["score"] is not None and r["rel"] is not None]
+    valid = [h["date"] for h, r in zip(hist, rows) if h.get(key) is not None and r["rel"] is not None]
     out["from"], out["to"] = (valid[0], valid[-1]) if valid else (None, None)
     return rows, out
+
+
+def deterioration(R, hist, key="score_ex"):
+    """In-sample: forward KRE returns bucketed by how far the ex-equity index sits below its trailing 26-week high."""
+    import statistics as S
+    if not all(R.get(k) for k in ("KRE", "IWM", "XLF")):
+        return None
+    H = [h for h in hist if not h.get("live")]
+    dates = [h["date"] for h in H]; N = len(H)
+    def asof(k):
+        ds = [t for t, _ in R[k]]; vs = [v for _, v in R[k]]
+        return ds, vs, [vs[bisect.bisect_right(ds, g) - 1] if bisect.bisect_right(ds, g) else None for g in dates]
+    kd, kv, K = asof("KRE"); _, _, I = asof("IWM"); _, _, X = asof("XLF")
+    def rel(a, b, n): return [None if i + n >= N or None in (a[i], b[i]) else 100 * ((a[i + n] / a[i]) / (b[i + n] / b[i]) - 1) for i in range(N)]
+    def mdd(n):
+        out = []
+        for i, g in enumerate(dates):
+            if i + n >= N: out.append(None); continue
+            a = bisect.bisect_right(kd, g) - 1; e = bisect.bisect_right(kd, dates[i + n])
+            out.append(100 * (min(kv[a:e]) / kv[a] - 1))
+        return out
+    F = {"rel_iwm_13": rel(K, I, 13), "rel_iwm_26": rel(K, I, 26), "rel_xlf_26": rel(K, X, 26), "mdd_26": mdd(26)}
+    s = [h.get(key) for h in H]
+    off = [None if s[i] is None else s[i] - max(x for x in s[max(0, i - 26):i + 1] if x is not None) for i in range(N)]
+    rows = []
+    buckets = [("At or within 5 pts of 26-wk high", 0, 5), ("5-10 pts below", 5, 10), ("10-15 pts below", 10, 15), ("15+ pts below", 15, 999)]
+    for lab, a, b in buckets:
+        idx = [i for i in range(N) if off[i] is not None and a <= -off[i] < b]
+        r = {"label": lab, "weeks": len(idx)}
+        for k, v in F.items():
+            vals = [v[i] for i in idx if v[i] is not None]
+            r[k] = round(S.mean(vals), 2) if vals else None
+        rows.append(r)
+    cur = off[-1] if off else None
+    live = hist[-1].get(key)
+    hi = max(x for x in [h.get(key) for h in hist[-27:]] if x is not None)
+    return {"buckets": rows, "current_off_high": round(live - hi, 1) if live is not None else None, "high_26w": hi}
 
 
 def build(cfg):
@@ -398,6 +435,7 @@ def build(cfg):
     grid, d0 = [], D(HIST_FROM)
     while d0 < today:
         grid.append(d0.isoformat()); d0 += dt.timedelta(days=7)
+    EQ_KEYS = {c["key"] for c in comps if c["cat"].startswith("Equity")}
     hist = []
     for g in grid:
         sigs = {}
@@ -413,9 +451,10 @@ def build(cfg):
                 continue
             sigs[c["key"]] = tl[1][i]
         row = {"date": g, "score": diffusion(list(sigs.values())), "n": len(sigs),
+               "score_ex": diffusion([v for kk, v in sigs.items() if kk not in EQ_KEYS]),
                "cats": {k: diffusion([v for kk, v in sigs.items() if next(x["cat"] for x in comps if x["key"] == kk) == k]) for k in cats}}
         hist.append(row)
-    hist.append({"date": today.isoformat(), "score": cur, "n": sum(1 for c in comps if c["signal"] is not None), "cats": cat_now, "live": True})
+    hist.append({"date": today.isoformat(), "score": cur, "score_ex": diffusion([c["signal"] for c in comps if c["key"] not in EQ_KEYS]), "n": sum(1 for c in comps if c["signal"] is not None), "cats": cat_now, "live": True})
     total = len(comps)
     cov = next((h["date"] for h in hist if h["n"] >= total * 0.75), None)
 
@@ -434,6 +473,8 @@ def build(cfg):
                            "total": sum(1 for c in comps if c["cat"] == k)} for k in cats],
            "components": comps, "history": hist, "coverage_from": cov, "sources": st, "series": series_status}
     doc["kre"], doc["signal"] = kre_signal(R, hist)
+    doc["signal_ex"] = kre_signal(R, hist, "score_ex")[1]
+    doc["deterioration"] = deterioration(R, hist)
     lines = ["date,diffusion,components_scored," + ",".join('"' + k + '"' for k in cats)]
     for h in hist:
         lines.append(",".join([h["date"], "" if h["score"] is None else str(h["score"]), str(h["n"])] +
