@@ -316,13 +316,13 @@ def label(x):
     return None if x is None else ("Supportive" if x > 60 else ("Challenging" if x < 40 else "Neutral"))
 
 
-def kre_signal(R, hist, key="score"):
-    """Weekly KRE price and KRE/IWM relative (rebased 100) on the index grid, plus in-sample signal stats."""
+def kre_rows(R, hist):
+    """Weekly KRE price and KRE/IWM relative (rebased 100) on the index grid."""
     def asof(ser):
         ds = [t for t, _ in ser]; vs = [v for _, v in ser]
         return lambda g: (vs[bisect.bisect_right(ds, g) - 1] if bisect.bisect_right(ds, g) else None)
     if not R.get("KRE") or not R.get("IWM"):
-        return [], None
+        return []
     k, w = asof(R["KRE"]), asof(R["IWM"])
     rows, base = [], None
     for h in hist:
@@ -332,26 +332,7 @@ def kre_signal(R, hist, key="score"):
         r = kv / wv
         base = base or r
         rows.append({"date": h["date"], "kre": round(kv, 2), "rel": round(100 * r / base, 2)})
-    import statistics as S
-    def corr(a, b):
-        p = [(x, y) for x, y in zip(a, b) if x is not None and y is not None]
-        if len(p) < 20: return None, len(p)
-        try: return round(S.correlation([x for x, _ in p], [y for _, y in p]), 3), len(p)
-        except Exception: return None, len(p)
-    sc = [h.get(key) for h in hist]; rel = [r["rel"] for r in rows]
-    d4 = [None if i < 4 or sc[i] is None or sc[i-4] is None else sc[i] - sc[i-4] for i in range(len(sc))]
-    out = {"horizons": [], "regimes": ["Supportive", "Neutral", "Challenging"], "from": None, "to": None}
-    for n in (4, 13, 26):
-        fwd = [None if i + n >= len(rel) or rel[i] is None or rel[i+n] is None or hist[i+n].get("live") else 100 * (rel[i+n] / rel[i] - 1) for i in range(len(rel))]
-        cl, nl = corr(sc, fwd); cc, nc = corr(d4, fwd)
-        reg = {}
-        for name, f in (("Supportive", lambda x: x > 60), ("Neutral", lambda x: 40 <= x <= 60), ("Challenging", lambda x: x < 40)):
-            v = [y for x, y in zip(sc, fwd) if x is not None and y is not None and f(x)]
-            reg[name] = {"avg": round(S.mean(v), 2) if v else None, "hit": round(100 * sum(1 for y in v if y > 0) / len(v)) if v else None, "n": len(v)}
-        out["horizons"].append({"weeks": n, "corr_level": cl, "corr_chg4": cc, "n": nl, "regimes": reg})
-    valid = [h["date"] for h, r in zip(hist, rows) if h.get(key) is not None and r["rel"] is not None]
-    out["from"], out["to"] = (valid[0], valid[-1]) if valid else (None, None)
-    return rows, out
+    return rows
 
 
 def deterioration(R, hist, key="score_ex"):
@@ -472,8 +453,7 @@ def build(cfg):
                            "n": sum(1 for c in comps if c["cat"] == k and c["signal"] is not None),
                            "total": sum(1 for c in comps if c["cat"] == k)} for k in cats],
            "components": comps, "history": hist, "coverage_from": cov, "sources": st, "series": series_status}
-    doc["kre"], doc["signal"] = kre_signal(R, hist)
-    doc["signal_ex"] = kre_signal(R, hist, "score_ex")[1]
+    doc["kre"] = kre_rows(R, hist)
     doc["deterioration"] = deterioration(R, hist)
     lines = ["date,diffusion,components_scored," + ",".join('"' + k + '"' for k in cats)]
     for h in hist:
