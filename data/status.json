@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-13T21:10:14+00:00",
-   "data_changed_at": "2026-10-13T21:10:07+00:00",
+   "checked_at": "2026-10-14T00:20:25+00:00",
+   "data_changed_at": "2026-10-14T00:20:19+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -98,8 +98,8 @@
      "fred": "T10Y2Y",
      "status": "ok",
      "latest": {
-      "date": "2026-10-09",
-      "value": 0.44
+      "date": "2026-10-13",
+      "value": 0.42
      }
     },
     "indpro": {
@@ -122,8 +122,8 @@
      "fred": "T5YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-10-09",
-      "value": 2.34
+      "date": "2026-10-13",
+      "value": 2.33
      }
     },
     "t10yie": {
@@ -138,8 +138,8 @@
      "fred": "T5YIFR",
      "status": "ok",
      "latest": {
-      "date": "2026-10-09",
-      "value": 2.32
+      "date": "2026-10-13",
+      "value": 2.33
      }
     },
     "clev_cpi_yy": {
@@ -421,7 +421,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-13T21:10:36+00:00",
+   "checked_at": "2026-10-14T00:20:32+00:00",
    "data_changed_at": "2026-10-13T14:22:31+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2067,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-13T23:28:35+00:00",
-   "data_changed_at": "2026-10-13T23:27:07+00:00",
+   "checked_at": "2026-10-14T00:22:00+00:00",
+   "data_changed_at": "2026-10-14T00:20:32+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,7 +2083,7 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-13T21:12:33+00:00",
+   "checked_at": "2026-10-14T00:22:26+00:00",
    "data_changed_at": "2026-10-13T19:59:07+00:00",
    "series": {
     "gprd": {
@@ -2409,6 +2409,6 @@
    }
   }
  },
- "checked_at": "2026-10-13T23:28:35+00:00",
+ "checked_at": "2026-10-14T00:22:26+00:00",
  "ok": true
 }
