@@ -327,9 +327,7 @@
       { const el2 = document.getElementById("bcdd"); if (el2) { const A = D.history, P = [];
         A.forEach((r, i) => { if (r.score_ex == null) return; const w = A.slice(Math.max(0, i - 26), i + 1).map(x => x.score_ex).filter(x => x != null), hi = Math.max(...w); P.push({ x: Date.parse(r.date), v: r.score_ex, hi, off: r.score_ex - hi }); });
         const Q = P.filter(p => !cut || p.x >= cut), rl = y => ({ type: "line", label: "", yAxisID: "y2", data: Q.length ? [{ x: Q[0].x, y }, { x: Q[Q.length - 1].x, y }] : [], borderColor: y === -15 ? "#f85149" : "#d29922", borderDash: [4, 4], borderWidth: 1, pointRadius: 0 });
-        const bands = { id: "ddbands", beforeDatasetsDraw(ch) { const { ctx, chartArea: A, scales: { y2 } } = ch; ctx.save();
-          [[0, -10, "rgba(46,160,67,.10)"], [-10, -15, "rgba(210,153,34,.12)"], [-15, -60, "rgba(248,81,73,.10)"]].forEach(([t, b, c]) => { const yt = y2.getPixelForValue(t), yb = y2.getPixelForValue(b); ctx.fillStyle = c; ctx.fillRect(A.left, yt, A.right - A.left, yb - yt); }); ctx.restore(); } };
-        charts.push(new Chart(el2, { type: "bar", plugins: [bands], data: { datasets: [
+        charts.push(new Chart(el2, { type: "bar", data: { datasets: [
           { type: "line", label: "Ex-equity index", data: Q.map(p => ({ x: p.x, y: p.v })), borderColor: "#f472b6", borderWidth: 1.6, pointRadius: 0 },
           { type: "line", label: "Trailing 26-wk high", data: Q.map(p => ({ x: p.x, y: p.hi })), borderColor: "#8b9bb0", borderWidth: 1.2, pointRadius: 0, stepped: true },
           { type: "bar", label: "Points below 26-wk high", yAxisID: "y2", data: Q.map(p => ({ x: p.x, y: p.off })), backgroundColor: Q.map(p => p.off <= -15 ? "rgba(248,81,73,.7)" : p.off <= -10 ? "rgba(210,153,34,.7)" : "rgba(46,160,67,.6)"), barPercentage: 1, categoryPercentage: 1 }, rl(-10), rl(-15)] },
