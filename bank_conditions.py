@@ -455,6 +455,12 @@ def build(cfg):
            "components": comps, "history": hist, "coverage_from": cov, "sources": st, "series": series_status}
     doc["kre"] = kre_rows(R, hist)
     doc["deterioration"] = deterioration(R, hist)
+    try:
+        import fwd_context
+        doc["forward"] = fwd_context.build(R, hist, today)
+    except Exception as e:  # noqa
+        print(f"  forward context FAILED: {e}")
+        doc["forward"] = None
     lines = ["date,diffusion,components_scored," + ",".join('"' + k + '"' for k in cats)]
     for h in hist:
         lines.append(",".join([h["date"], "" if h["score"] is None else str(h["score"]), str(h["n"])] +
