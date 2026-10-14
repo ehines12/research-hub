@@ -61,9 +61,12 @@ def _get(url, tries=4):
     raise RuntimeError(last)
 
 
+EXCLUDE = []  # persistent user exclusions (regex list from config "exclude")
+
+
 def classify(title, extra=""):
     t = (title + " " + extra).lower()
-    if re.search(DENY, t):
+    if re.search(DENY, t) or any(re.search(x, t) for x in EXCLUDE):
         return None
     for g, rx in GROUPS.items():
         if re.search(rx, t):
@@ -216,6 +219,56 @@ def poly_history(item, days):
     return item
 
 
+
+# ------------------------------------------------------------------ pinned markets (fixed tickers / slugs)
+MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+STATIC_PINS = [  # (group, title, kalshi event ticker, polymarket event slug, max outcomes)
+    ("Elections", "Which party wins the House (2026 midterms)?", "CONTROLH-2026", "which-party-will-win-the-house-in-2026", 2),
+    ("Elections", "Which party wins the Senate (2026 midterms)?", "CONTROLS-2026", "which-party-will-win-the-senate-in-2026", 2),
+    ("Elections", "2028 presidential election: winning party", "KXPRESPARTY-2028", "which-party-wins-2028-us-presidential-election", 2),
+    ("Elections", "2028 presidential election: winner (top candidates)", "KXPRESPERSON-28", "presidential-election-winner-2028", 6),
+    ("Fed & CPI", "Fed decision, December 2026 FOMC", "KXFEDDECISION-26DEC", "fed-decision-in-december-20260729232808632", 6),
+]
+
+
+def cpi_pins(n=2):
+    """Next n unreleased CPI prints = the earliest open Kalshi KXCPI events; rolls forward after each release."""
+    evs = _get(f"{KALSHI}/events?series_ticker=KXCPI&status=open&limit=50").get("events", [])
+    def key(t):
+        m = re.search(r"-(\d\d)([A-Z]{3})$", t); return (int(m.group(1)), [x[:3].upper() for x in MONTHS].index(m.group(2))) if m else (99, 99)
+    out = []
+    for e in sorted(evs, key=lambda e: key(e["event_ticker"]))[:n]:
+        yy, mi = key(e["event_ticker"]); mon = MONTHS[mi]; tag = e["event_ticker"].split("-")[1]
+        out.append(("Fed & CPI", f"CPI {mon.title()} 20{yy}: m/m", e["event_ticker"], f"{mon}-inflation-us-monthly", 10))
+        out.append(("Fed & CPI", f"CPI {mon.title()} 20{yy}: y/y", f"KXCPIYOY-{tag}", f"{mon}-inflation-us-annual", 10))
+    return out
+
+
+def pinned(now, hist_days):
+    specs = STATIC_PINS + (_safe(cpi_pins) or [])
+    def one(sp):
+        g, title, kt, slug, k = sp
+        vs = []
+        it = _safe(kalshi_event, g, {"event_ticker": kt, "title": title}, now)
+        if it:
+            it = _safe(kalshi_history, it, hist_days, now) or it
+            vs.append(it)
+        try:
+            e = _get(f"{GAMMA}/events/slug/{slug}", tries=2)
+            pi = poly_item(g, e, now) if not e.get("closed") else None
+            if pi: vs.append(pi)
+        except Exception:
+            pass
+        for v in vs:
+            _trim(v)
+            if v["exclusive"]: v["outcomes"] = v["outcomes"][:k]
+            for o in v["outcomes"]:
+                o.pop("hist", None); o.pop("token", None); o.pop("last", None)
+        return {"key": "pin:" + kt, "group": g, "title": title, "pinned": True, "venues": vs,
+                "ids": [kt, slug] + [v["id"] for v in vs]} if vs else None
+    with ThreadPoolExecutor(4) as ex:
+        return [x for x in ex.map(one, specs) if x]
+
 # ------------------------------------------------------------------ assemble
 def _merge_key(item):
     t = item["title"].lower()
@@ -244,6 +297,9 @@ def build(cfg, now=None):
     top_n, hist_days, n_charts = int(cfg.get("top_n", 12)), int(cfg.get("history_days", 90)), int(cfg.get("charts", 4))
     status = {}
     items = []
+    EXCLUDE[:] = [x for x in cfg.get("exclude", [])]
+    pins = pinned(now, hist_days)
+    pin_ids = {i for p in pins for i in p["ids"]}
     # Kalshi
     try:
         kc = kalshi_candidates(now)
@@ -267,6 +323,7 @@ def build(cfg, now=None):
         status["polymarket"] = {"status": "failed", "error": str(e)[:300]}
     # merge cross-venue duplicates, rank, trim
     merged, byk = [], {}
+    items = [it for it in items if it["id"] not in pin_ids]
     for it in items:
         k = _merge_key(it)
         if k and k in byk:
@@ -293,7 +350,7 @@ def build(cfg, now=None):
                 o.pop("token", None); o.pop("last", None)
         r["rank"] = i + 1
         r["chart"] = i < n_charts
-    return {"generated_at": now.isoformat(timespec="seconds"), "items": top, "sources": status,
+    return {"generated_at": now.isoformat(timespec="seconds"), "items": top, "pinned": pins, "sources": status,
             "universe": {"ranked": len(merged)}, "ranking_note": cfg.get("ranking_note")}
 
 

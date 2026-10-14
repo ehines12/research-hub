@@ -7,5 +7,11 @@
   "history_days": 90,
   "charts": 4,
   "ranking_note": "Ranking: candidates are open Kalshi events (Economics, Financials, Commodities, Politics, Elections, World and Companies categories) and active Polymarket events (macro, markets and geopolitics tags). A title must match a Macro, Markets or Geopolitical keyword group and no deny-list term (sports, entertainment, crypto, weather, US electoral and domestic politics, private-company novelty). Resolved or expired outcomes are dropped. Items are ranked by trailing 7-day traded volume on live outcomes (Kalshi: contracts, $1 notional each, from daily candles; Polymarket: USD), with open interest as the tiebreak. A multi-outcome event counts as one item, and the same question on both venues is merged and ranked on combined volume. Recomputed on every refresh.",
-  "disclaimer": "Market-implied probabilities are prices, not forecasts. Books can be thin, spreads wide and prices stale between trades. Kalshi probability = bid/ask mid when the spread is 10c or less, otherwise last trade; Polymarket = its displayed outcome price. 24h/7d changes are in percentage points (Kalshi: last trade vs the last-trade price 1 and 7 days earlier; Polymarket: its own 1-day/1-week price change). Data: Kalshi (CFTC-regulated exchange, public market-data API) and Polymarket (Gamma and CLOB public APIs)."
+  "disclaimer": "Market-implied probabilities are prices, not forecasts. Books can be thin, spreads wide and prices stale between trades. Kalshi probability = bid/ask mid when the spread is 10c or less, otherwise last trade; Polymarket = its displayed outcome price. 24h/7d changes are in percentage points (Kalshi: last trade vs the last-trade price 1 and 7 days earlier; Polymarket: its own 1-day/1-week price change). Data: Kalshi (CFTC-regulated exchange, public market-data API) and Polymarket (Gamma and CLOB public APIs).",
+  "exclude": [
+    "\\bbrazil\\w*\\b.*\\b(election|president|presidential)\\b|\\b(election|president|presidential)\\b.*\\bbrazil",
+    "\\byemen\\b|\\bhouthi",
+    "\\bputin\\b"
+  ],
+  "pinned_note": "Pinned groups (Elections, Fed & CPI) are always shown, are fetched by fixed market ticker/slug, and do not take a top-12 slot; a pinned market is removed from the ranked list. CPI pins roll to the next two unreleased prints on Kalshi automatically. Persistently excluded from the ranking: Brazil election, US-Yemen/Houthi, Putin markets."
 }

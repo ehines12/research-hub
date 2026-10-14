@@ -369,6 +369,13 @@
     stamp.innerHTML = "Odds as of " + fmtTime(D.generated_at || D.updated_at) + (D.stale ? ' · <span class="stl">STALE (a venue failed; last good list shown)</span>' : "");
     const items = D.items || [];
     let h = "<h1>" + esc(cfg.title) + '</h1><p class="sub">' + esc(cfg.subtitle) + "</p>";
+    const pins = D.pinned || [];
+    for (const g of ["Elections", "Fed & CPI"]) {
+      const gi = pins.filter(x => x.group === g); if (!gi.length) continue;
+      h += "<h2>" + g + ' <span class="hint">pinned · always shown · not ranked</span></h2><div class="pmgrid">' + gi.map(it =>
+        '<div class="pmcard' + (it.venues.length > 1 ? " both" : "") + '"><div class="pmt"><span class="pmr">📌</span>' + esc(it.title) + (it.venues.length > 1 ? ' <span class="pmboth">Kalshi + Polymarket</span>' : ' <span class="hint">' + esc(it.venues[0].venue) + " only</span>") + "</div>" +
+        '<div class="pmvs">' + it.venues.map(venueBlock).join("") + "</div></div>").join("") + "</div>";
+    }
     for (const g of ["Macro", "Markets", "Geopolitical"]) {
       const gi = items.filter(x => x.group === g); if (!gi.length) continue;
       h += "<h2>" + g + ' <span class="hint">' + gi.length + " of " + items.length + "</span></h2><div class=\"pmgrid\">" + gi.map(it =>
@@ -378,7 +385,7 @@
     const ch = items.filter(x => x.chart);
     if (ch.length) h += '<h2>Probability history <span class="hint">top ' + ch.length + ' by liquidity, daily, up to 90 days</span></h2><div class="panels c2">' + ch.map((it, j) =>
       '<div class="panel"><h4>#' + it.rank + " " + esc(it.title) + " (" + esc(it.venues[0].venue) + ')</h4><div class="cv"><canvas id="pm' + j + '"></canvas></div><div class="src">Source: ' + esc(it.venues[0].venue) + "</div></div>").join("") + "</div>";
-    h += '<div class="pnote pmnote">' + esc(cfg.ranking_note || "") + "</div><div class=\"pnote pmnote\">" + esc(cfg.disclaimer || "") + "</div>";
+    h += '<div class="pnote pmnote">' + esc(cfg.ranking_note || "") + (cfg.pinned_note ? " " + esc(cfg.pinned_note) : "") + "</div><div class=\"pnote pmnote\">" + esc(cfg.disclaimer || "") + "</div>";
     app.innerHTML = h;
     ch.forEach((it, j) => {
       const v = it.venues[0], outs = v.outcomes.filter(o => o.hist && o.hist.length).sort((a, b) => b.p - a.p).slice(0, 4);
