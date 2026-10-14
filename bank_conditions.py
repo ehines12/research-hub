@@ -19,7 +19,7 @@ HIST_FROM = "2012-01-06"
 
 FRED_IDS = ["SOFR", "DGS5", "T10Y2Y", "T10Y3M", "LLBSCBW027SBOG", "LLBDCBW027SBOG", "DPSSCBW027SBOG", "NFCI", "STLFSI4",
             "VIXCLS", "BAMLH0A0HYM2", "BAMLC0A4CBBB", "DRTSCILM", "DRSDCILM", "SUBLPDRCSC", "SUBLPDRCSN", "SUBLPDRCSM",
-            "SUBLPDRCDC", "SUBLPDRCDN", "SUBLPDRCDM", "ICSA", "CORALACBS", "DRALACBS", "NDR12MCD", "FEDFUNDS", "DGS10", "DGS1", "DFF", "MMNDR", "LTDSCBW027SBOG", "H8B3094NSMD",
+            "SUBLPDRCDC", "SUBLPDRCDN", "SUBLPDRCDM", "ICSA", "CORALACBS", "DRALACBS", "NDR12MCD", "FEDFUNDS", "DGS10", "DGS2", "DGS1", "DFF", "MMNDR", "LTDSCBW027SBOG", "H8B3094NSMD",
             "DRCRELEXFACBS", "CORCREXFACBS", "BOGZ1FL075035503Q", "WLCFLL"]
 TICKERS = ["KRE", "XLF", "IWM", "SPY", "^MOVE"]
 # estimated days from FRED observation date to public release (point-in-time history)
@@ -28,7 +28,7 @@ PUB_LAG = {"SOFR": 1, "DGS5": 1, "T10Y2Y": 1, "T10Y3M": 1, "VIXCLS": 1, "BAMLH0A
            "DRTSCILM": 40, "DRSDCILM": 40, "SUBLPDRCSC": 40, "SUBLPDRCSN": 40, "SUBLPDRCSM": 40, "SUBLPDRCDC": 40,
            "SUBLPDRCDN": 40, "SUBLPDRCDM": 40, "CORALACBS": 145, "DRALACBS": 145, "NDR12MCD": 50, "FEDFUNDS": 32,
            "KRE": 0, "XLF": 0, "IWM": 0, "SPY": 0, "^MOVE": 0,
-           "DGS10": 1, "DGS1": 1, "DFF": 1, "MMNDR": 50, "LTDSCBW027SBOG": 9, "H8B3094NSMD": 9, "DRCRELEXFACBS": 145,
+           "DGS10": 1, "DGS2": 1, "UL_ALL": 60, "UL_CB": 60, "DGS1": 1, "DFF": 1, "MMNDR": 50, "LTDSCBW027SBOG": 9, "H8B3094NSMD": 9, "DRCRELEXFACBS": 145,
            "CORCREXFACBS": 145, "BOGZ1FL075035503Q": 165, "WLCFLL": 1}
 MAX_AGE = {"d": 7, "q2": 300, "w": 21, "m": 80, "q": 240}   # days; older latest value => STALE (excluded)
 D = dt.date.fromisoformat
@@ -195,6 +195,12 @@ def pctile(better, years=5, min_years=1):
     return f
 
 
+def rate12_rule(vals, i):
+    """12-month change in bp: a big rise is unfavorable (AOCI, deposit repricing); a big fall is NOT scored favorable (it usually means a growth scare)."""
+    v = vals[i][1]
+    return -1 if v >= 75 else (1 if -50 <= v <= 25 else 0)
+
+
 def components(R):
     s = lambda k: [(t, v) for t, v in R.get(k, [])]
     smdep = s("DPSSCBW027SBOG")
@@ -209,6 +215,14 @@ def components(R):
          "≥ +0.50 favorable · ≤ 0 (inverted) unfavorable", "high"),
         ("3m10y", "Curve & funding", "3m10y Treasury slope", "pp", "d", s("T10Y3M"), ["T10Y3M"], band(0.50, 0.0, "high"),
          "≥ +0.50 favorable · ≤ 0 (inverted) unfavorable", "high"),
+        ("ust10_12m", "Rate shock", "10Y Treasury: 12-month change", "bp", "d", _scale(_chg(s("DGS10"), 250), 100), ["DGS10"], rate12_rule,
+         "≥ +75bp unfavorable · −50 to +25bp favorable · a larger fall is neutral (usually a growth scare, not a tailwind)", "low"),
+        ("ust2_12m", "Rate shock", "2Y Treasury: 12-month change", "bp", "d", _scale(_chg(s("DGS2"), 250), 100), ["DGS2"], rate12_rule,
+         "≥ +75bp unfavorable · −50 to +25bp favorable · a larger fall is neutral (policy-path shock)", "low"),
+        ("ul_all", "Rate shock", "Unrealized securities gains (−losses), AFS + HTM, % of equity: all insured banks", "%", "q", s("UL_ALL"), ["UL_ALL"],
+         band(-2, -8, "high"), "≥ −2% favorable · ≤ −8% unfavorable (FDIC, ~60-day publication lag)", "high"),
+        ("ul_cb_4q", "Rate shock", "Community-bank unrealized securities gains (−losses), % of equity: 4-quarter change", "pp", "q", _chg(s("UL_CB"), 4), ["UL_CB"],
+         band(0, -3, "high"), "≥ 0 favorable (improving) · ≤ −3pp unfavorable (worsening) (FDIC, ~60-day lag)", "high"),
         ("ust10_1m", "Curve & funding", "10Y Treasury: 1-month change", "bp", "d", _scale(_chg(s("DGS10"), 21), 100), ["DGS10"], absband(25, 50),
          "Size of 21-trading-day move, either direction: ≤ 25bp favorable · ≥ 50bp unfavorable (rate volatility hits AOCI, mortgage and deposit repricing)", "abs"),
         ("ust10_3m", "Curve & funding", "10Y Treasury: 3-month change", "bp", "d", _scale(_chg(s("DGS10"), 63), 100), ["DGS10"], absband(40, 75),
@@ -376,6 +390,19 @@ def build(cfg):
     now = dt.datetime.now(dt.timezone.utc)
     today = dt.date.today()
     R, st = fetch_all()
+    fwd_raw = fwd_st = None
+    try:
+        import fwd_context
+        fwd_raw, fwd_st = fwd_context.fetch_all()
+        S = fwd_context.series(fwd_raw)
+        for k, src in (("UL_ALL", "fdic_all"), ("UL_CB", "fdic_cb")):
+            if S.get(k):
+                R[k] = S[k]; st[k] = dict(fwd_st[src], src="FDIC BankFind financials API")
+            else:
+                st[k] = {"status": "failed", "error": fwd_st.get(src, {}).get("error", "no data")}
+    except Exception as e:  # noqa
+        for k in ("UL_ALL", "UL_CB"):
+            st[k] = {"status": "failed", "error": str(e)[:200]}
     comps, series_status = [], {}
     cats = []
     timelines = {}
@@ -457,7 +484,7 @@ def build(cfg):
     doc["deterioration"] = deterioration(R, hist)
     try:
         import fwd_context
-        doc["forward"] = fwd_context.build(R, hist, today)
+        doc["forward"] = fwd_context.build(R, hist, today, fwd_raw, fwd_st)
     except Exception as e:  # noqa
         print(f"  forward context FAILED: {e}")
         doc["forward"] = None

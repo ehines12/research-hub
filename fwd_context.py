@@ -178,8 +178,9 @@ def episodes(S, hist, kre, iwm):
     return out
 
 
-def build(R, hist, today):
-    raw, st = fetch_all()
+def build(R, hist, today, raw=None, st=None):
+    if raw is None:
+        raw, st = fetch_all()
     S = series(raw)
     cur = []
     for k, lab, unit, grp, lag, note in META:
