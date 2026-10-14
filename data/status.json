@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-14T13:59:32+00:00",
-   "data_changed_at": "2026-10-14T13:52:48+00:00",
+   "checked_at": "2026-10-14T14:03:06+00:00",
+   "data_changed_at": "2026-10-14T14:03:01+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -147,13 +147,13 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 3.633,
+      "value": 3.7796,
       "target": "Oct 2026",
-      "asof": "2026-10-13",
+      "asof": "2026-10-14",
       "pending": true,
-      "prior_date": "2026-10-06",
+      "prior_date": "2026-10-07",
       "prior_value": 3.633,
-      "mm": 0.2693
+      "mm": 0.2785
      }
     },
     "clev_ccpi_yy": {
@@ -161,13 +161,13 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 2.2975,
+      "value": 2.4828,
       "target": "Oct 2026",
-      "asof": "2026-10-13",
+      "asof": "2026-10-14",
       "pending": true,
-      "prior_date": "2026-10-06",
+      "prior_date": "2026-10-07",
       "prior_value": 2.2975,
-      "mm": 0.2003
+      "mm": 0.2114
      }
     },
     "clev_pce_yy": {
@@ -175,13 +175,13 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 3.6917,
+      "value": 3.7367,
       "target": "Oct 2026",
-      "asof": "2026-10-13",
+      "asof": "2026-10-14",
       "pending": true,
-      "prior_date": "2026-10-06",
+      "prior_date": "2026-10-07",
       "prior_value": 3.6917,
-      "mm": 0.2784
+      "mm": 0.2814
      }
     },
     "clev_cpce_yy": {
@@ -189,13 +189,13 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 3.0965,
+      "value": 3.1281,
       "target": "Oct 2026",
-      "asof": "2026-10-13",
+      "asof": "2026-10-14",
       "pending": true,
-      "prior_date": "2026-10-06",
+      "prior_date": "2026-10-07",
       "prior_value": 3.0965,
-      "mm": 0.2485
+      "mm": 0.2509
      }
     },
     "clev_cpi_q": {
@@ -203,12 +203,12 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 4.5005,
+      "value": 4.8207,
       "target": "Q4 2026",
-      "asof": "2026-10-13",
+      "asof": "2026-10-14",
       "pending": true,
-      "prior_date": "2026-10-06",
-      "prior_value": 4.1049
+      "prior_date": "2026-10-07",
+      "prior_value": 4.1382
      }
     },
     "clev_ccpi_q": {
@@ -216,11 +216,11 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 2.5566,
+      "value": 3.0164,
       "target": "Q4 2026",
-      "asof": "2026-10-13",
+      "asof": "2026-10-14",
       "pending": true,
-      "prior_date": "2026-10-06",
+      "prior_date": "2026-10-07",
       "prior_value": 2.5566
      }
     },
@@ -229,12 +229,12 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 4.0618,
+      "value": 4.1513,
       "target": "Q4 2026",
-      "asof": "2026-10-13",
+      "asof": "2026-10-14",
       "pending": true,
-      "prior_date": "2026-10-06",
-      "prior_value": 3.8375
+      "prior_date": "2026-10-07",
+      "prior_value": 3.8564
      }
     },
     "clev_cpce_q": {
@@ -242,11 +242,11 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 3.0544,
+      "value": 3.1526,
       "target": "Q4 2026",
-      "asof": "2026-10-13",
+      "asof": "2026-10-14",
       "pending": true,
-      "prior_date": "2026-10-06",
+      "prior_date": "2026-10-07",
       "prior_value": 3.0544
      }
     },
@@ -254,8 +254,8 @@
      "fred": "Cleveland Fed actual CPI y/y",
      "status": "ok",
      "latest": {
-      "date": "2026-08-01",
-      "value": 3.3965
+      "date": "2026-09-01",
+      "value": 3.7377
      }
     },
     "clev_cpce_yy_act": {
@@ -421,7 +421,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-14T13:59:53+00:00",
+   "checked_at": "2026-10-14T14:03:21+00:00",
    "data_changed_at": "2026-10-13T14:22:31+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2067,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-14T14:01:53+00:00",
-   "data_changed_at": "2026-10-14T14:00:21+00:00",
+   "checked_at": "2026-10-14T14:04:55+00:00",
+   "data_changed_at": "2026-10-14T14:03:34+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,7 +2083,7 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-14T14:02:33+00:00",
+   "checked_at": "2026-10-14T14:05:17+00:00",
    "data_changed_at": "2026-10-14T13:54:51+00:00",
    "series": {
     "gprd": {
@@ -2409,8 +2409,8 @@
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-10-14T14:00:21+00:00",
-   "data_changed_at": "2026-10-14T13:59:53+00:00",
+   "checked_at": "2026-10-14T14:03:34+00:00",
+   "data_changed_at": "2026-10-14T14:03:21+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2553,7 +2553,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-14",
-      "value": 103.2782
+      "value": 104.9183
      }
     },
     "hy_lvl": {
@@ -2649,7 +2649,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-14",
-      "value": -3.4871
+      "value": -3.3733
      }
     },
     "kre_xlf_3m": {
@@ -2657,7 +2657,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-14",
-      "value": -8.4419
+      "value": -8.3338
      }
     },
     "iwm_spy_1m": {
@@ -2665,7 +2665,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-14",
-      "value": -6.4112
+      "value": -6.5079
      }
     },
     "iwm_spy_3m": {
@@ -2673,7 +2673,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-14",
-      "value": -10.2812
+      "value": -10.3739
      }
     },
     "dep_pricing": {
@@ -2743,6 +2743,6 @@
    }
   }
  },
- "checked_at": "2026-10-14T14:02:33+00:00",
+ "checked_at": "2026-10-14T14:05:17+00:00",
  "ok": true
 }
