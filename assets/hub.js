@@ -285,6 +285,16 @@
     const dir = c => { if (!c.prior || c.value == null) return "–"; const d = c.value - c.prior.value; if (Math.abs(d) < 1e-6) return '<span class="flat">unch.</span>';
       const good = c.better === "abs" ? Math.abs(c.value) < Math.abs(c.prior.value) : (d > 0) === (c.better === "high"); return '<span class="' + (good ? "pos" : "neg") + '">' + (d > 0 ? "▲ " : "▼ ") + (good ? "improving" : "worsening") + '</span><span class="dl" style="color:var(--mut)">vs ' + v(c.prior.value, c.unit) + " " + fmtDate(c.prior.date, c.freq === "q" ? "Quarterly" : c.freq === "m" ? "Monthly" : "Daily") + "</span>"; };
     const fq = { d: "Daily", w: "Daily", m: "Monthly", q: "Quarterly" };
+    const SG = D.signal, f2 = x => x == null ? "–" : (x > 0 ? "+" : "") + x.toFixed(2), fp = x => x == null ? "–" : (x > 0 ? "+" : "") + x.toFixed(2) + "%";
+    if (D.kre && D.kre.length) {
+      h += '<h2>KRE <span class="hint">weekly close, dividend-adjusted (Yahoo Finance) · same dates and lookback as the index</span></h2><div class="panel full"><div class="cv" style="height:240px"><canvas id="bckre"></canvas></div></div>' +
+        '<h2>KRE vs Russell 2000 (IWM) <span class="hint">ratio of adjusted closes, rebased to 100 at Jan 6, 2012 · rising = regionals outperforming small caps</span></h2><div class="panel full"><div class="cv" style="height:240px"><canvas id="bcrel"></canvas></div></div>';
+      if (SG) h += '<h2>Does the index lead KRE? <span class="hint">IN-SAMPLE · ' + fmtDate(SG.from, "Daily") + " to " + fmtDate(SG.to, "Daily") + '</span></h2><div class="tblwrap"><table class="sumtbl atbl"><thead><tr><th>Forward KRE return vs IWM</th><th class="r">Corr. with index level</th><th class="r">Corr. with 4-wk index change</th>' +
+        SG.regimes.map(r => '<th class="r">Avg when ' + r + "<span class=\"dl\">hit rate · weeks</span></th>").join("") + "</tr></thead><tbody>" +
+        SG.horizons.map(z => "<tr><td>" + z.weeks + ' weeks</td><td class="r">' + f2(z.corr_level) + '</td><td class="r">' + f2(z.corr_chg4) + "</td>" +
+          SG.regimes.map(r => { const g = z.regimes[r]; return '<td class="r b">' + fp(g.avg) + '<span class="dl" style="color:var(--mut)">' + (g.hit == null ? "–" : g.hit + "% > 0") + " · " + g.n + "</span></td>"; }).join("") + "</tr>").join("") +
+        '</tbody></table></div><div class="pnote">In-sample, weekly observations with overlapping forward windows (so effective sample sizes are much smaller than the week counts and the stats overstate precision). Same lookahead caveat as the index history: FRED serves today\'s revised vintage and release lags are approximate, so this is better than what was knowable in real time. Regimes: Supportive &gt;60, Neutral 40-60, Challenging &lt;40. Relative return = change in the KRE/IWM adjusted-close ratio.</div>';
+    }
     h += '<h2>Components</h2><div class="qbar"><h4 class="atit">' + comps.length + ' inputs <span class="hint">value, as-of date, rule and signal</span></h4><div class="qdl"><button class="btn sm" data-bccsv="c">Components CSV</button>' + (INLINE ? "" : '<a class="btn sm" href="data/bank-conditions-history.csv" download>History CSV</a>') + '<button class="btn sm" data-bccsv="h">History CSV (this view)</button></div></div>' +
       '<div class="tblwrap"><table class="sumtbl atbl bctbl"><thead><tr><th>Component</th><th class="r">Value</th><th>As of</th><th>Rule</th><th>Signal</th><th>Direction</th><th>Source</th></tr></thead><tbody>' +
       D.categories.map(cat => '<tr class="bcgrp"><td colspan="7">' + esc(cat.name) + " · " + (cat.score == null ? "n/a" : cat.score.toFixed(0)) + "</td></tr>" + comps.filter(c => c.cat === cat.name).map(c =>
@@ -302,8 +312,17 @@
         { label: "Diffusion index", data: H.filter(r => r.score != null).map(r => ({ x: Date.parse(r.date), y: r.score })), borderColor: "#4ea1ff", backgroundColor: "#4ea1ff", borderWidth: 1.8, pointRadius: 0, tension: 0 },
         { label: "Components scored", yAxisID: "y2", data: H.map(r => ({ x: Date.parse(r.date), y: r.n })), borderColor: "#5b6b80", borderWidth: 1, pointRadius: 0, stepped: true }, ref(40), ref(60)] },
         options: { parsing: false, animation: false, maintainAspectRatio: false, interaction: { mode: "index", intersect: false },
-          scales: { x: { type: "time", grid: { color: "#1f2a37" }, ticks: { color: "#8b9bb0", maxTicksLimit: 10 } }, y: { min: 0, max: 100, grid: { color: "#1f2a37" }, ticks: { color: "#8b9bb0" } }, y2: { position: "right", min: 0, max: comps.length + 2, grid: { display: false }, ticks: { color: "#5b6b80" } } },
-          plugins: { legend: { labels: { color: "#e6edf3", boxWidth: 12, filter: i => i.text } }, tooltip: { filter: i => i.dataset.label, callbacks: { title: t => t.length ? fmtDate(new Date(t[0].parsed.x).toISOString().slice(0, 10), "Daily") : "" } } } } })); };
+          scales: { x: { type: "time", grid: { color: "#1f2a37" }, ticks: { color: "#8b9bb0", maxTicksLimit: 10 } }, y: { min: 0, max: 100, grid: { color: "#1f2a37" }, ticks: { color: "#8b9bb0" }, afterFit: s => { s.width = 40; } }, y2: { position: "right", min: 0, max: comps.length + 2, grid: { display: false }, ticks: { color: "#5b6b80" } } },
+          plugins: { legend: { labels: { color: "#e6edf3", boxWidth: 12, filter: i => i.text } }, tooltip: { filter: i => i.dataset.label, callbacks: { title: t => t.length ? fmtDate(new Date(t[0].parsed.x).toISOString().slice(0, 10), "Daily") : "" } } } } }));
+      const K = (D.kre || []).filter(r => !cut || Date.parse(r.date) >= cut), x0 = H.length ? Date.parse(H[0].date) : undefined, x1 = H.length ? Date.parse(H[H.length - 1].date) : undefined;
+      const mini = (id, key, label, color, rebase) => { const c = document.getElementById(id); if (!c) return; const base = rebase ? (K.find(r => r[key] != null) || {})[key] : null;
+        charts.push(new Chart(c, { type: "line", data: { datasets: [{ label: label + (rebase && cut ? " (rebased to 100 at start of view)" : ""), data: K.filter(r => r[key] != null).map(r => ({ x: Date.parse(r.date), y: base ? 100 * r[key] / base : r[key] })), borderColor: color, borderWidth: 1.6, pointRadius: 0 }] },
+          options: { parsing: false, animation: false, maintainAspectRatio: false, interaction: { mode: "index", intersect: false }, layout: { padding: { right: 0 } },
+            scales: { x: { type: "time", min: x0, max: x1, grid: { color: "#1f2a37" }, ticks: { color: "#8b9bb0", maxTicksLimit: 10 } }, y: { grid: { color: "#1f2a37" }, ticks: { color: "#8b9bb0" }, afterFit: s => { s.width = 40; } }, y2: { position: "right", display: true, grid: { display: false }, ticks: { display: false }, afterFit: s => { s.width = yw2; } } },
+            plugins: { legend: { labels: { color: "#e6edf3", boxWidth: 12 } }, tooltip: { callbacks: { title: t => t.length ? fmtDate(new Date(t[0].parsed.x).toISOString().slice(0, 10), "Daily") : "" } } } } })); };
+      const yw2 = charts[0] ? charts[0].scales.y2.width : 30;
+      mini("bckre", "kre", "KRE ($)", "#f0b429", false); mini("bcrel", "rel", "KRE / IWM (Jan 2012 = 100)", "#a78bfa", true);
+    };
     draw();
     app.querySelectorAll(".toolbar .seg button").forEach(b => b.onclick = () => { range = b.dataset.r; localStorage.setItem("rh-range", range);
       app.querySelectorAll(".toolbar .seg button").forEach(x => x.classList.toggle("on", x === b)); draw(); });
