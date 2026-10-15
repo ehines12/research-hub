@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-14T20:09:17+00:00",
-   "data_changed_at": "2026-10-14T20:09:12+00:00",
+   "checked_at": "2026-10-14T23:57:34+00:00",
+   "data_changed_at": "2026-10-14T23:57:29+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -74,7 +74,7 @@
      "fred": "DFF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-12",
+      "date": "2026-10-13",
       "value": 3.88
      }
     },
@@ -82,24 +82,24 @@
      "fred": "DGS2",
      "status": "ok",
      "latest": {
-      "date": "2026-10-09",
-      "value": 4.8
+      "date": "2026-10-13",
+      "value": 4.79
      }
     },
     "dgs10": {
      "fred": "DGS10",
      "status": "ok",
      "latest": {
-      "date": "2026-10-09",
-      "value": 5.24
+      "date": "2026-10-13",
+      "value": 5.21
      }
     },
     "spread": {
      "fred": "T10Y2Y",
      "status": "ok",
      "latest": {
-      "date": "2026-10-13",
-      "value": 0.42
+      "date": "2026-10-14",
+      "value": 0.37
      }
     },
     "indpro": {
@@ -122,24 +122,24 @@
      "fred": "T5YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-10-13",
-      "value": 2.33
+      "date": "2026-10-14",
+      "value": 2.36
      }
     },
     "t10yie": {
      "fred": "T10YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-10-13",
-      "value": 2.33
+      "date": "2026-10-14",
+      "value": 2.35
      }
     },
     "t5yifr": {
      "fred": "T5YIFR",
      "status": "ok",
      "latest": {
-      "date": "2026-10-13",
-      "value": 2.33
+      "date": "2026-10-14",
+      "value": 2.34
      }
     },
     "clev_cpi_yy": {
@@ -421,8 +421,8 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-14T20:09:26+00:00",
-   "data_changed_at": "2026-10-14T17:23:26+00:00",
+   "checked_at": "2026-10-14T23:59:19+00:00",
+   "data_changed_at": "2026-10-14T23:57:34+00:00",
    "series": {
     "LLBDCBW027SBOG": {
      "fred": "LLBDCBW027SBOG",
@@ -1258,187 +1258,210 @@
     },
     "sloos_std_cre_cld": {
      "fred": "SUBLPDRCSC",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -3.7
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_cre_cld": {
      "fred": "SUBLPDRCDC",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -11.1
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_cre_nfnr": {
      "fred": "SUBLPDRCSN",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -11.3
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_cre_nfnr": {
      "fred": "SUBLPDRCDN",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 1.9
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_cre_mf": {
      "fred": "SUBLPDRCSM",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -5.7
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_cre_mf": {
      "fred": "SUBLPDRCDM",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -3.8
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_rre_gse": {
      "fred": "SUBLPDHMSENQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 0.0
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_rre_gse": {
      "fred": "SUBLPDHMDENQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -11.8
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_rre_gov": {
      "fred": "SUBLPDHMSGNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 0.0
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_rre_gov": {
      "fred": "SUBLPDHMDGNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -16.7
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_rre_qm": {
      "fred": "SUBLPDHMSQNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -4.0
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_rre_qm": {
      "fred": "SUBLPDHMDQNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -8.0
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_rre_qmj": {
      "fred": "SUBLPDHMSJNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -9.8
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_rre_qmj": {
      "fred": "SUBLPDHMDJNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -8.0
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_rre_nqmj": {
      "fred": "SUBLPDHMSKNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -6.5
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_rre_nqmj": {
      "fred": "SUBLPDHMDKNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -10.9
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_cc": {
      "fred": "DRTSCLCC",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 6.7
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_cc": {
      "fred": "DEMCC",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 2.2
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_auto": {
      "fred": "STDSAUTO",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -4.5
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_auto": {
      "fred": "DEMAUTO",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -11.4
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_oth": {
      "fred": "STDSOTHCONS",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 0.0
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_oth": {
      "fred": "DEMOTHCONS",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -4.2
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_wil_cons": {
      "fred": "DRIWCIL",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -2.0
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "CIL_LARGE": {
      "fred": "derived",
@@ -2067,8 +2090,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-14T22:43:06+00:00",
-   "data_changed_at": "2026-10-14T22:41:21+00:00",
+   "checked_at": "2026-10-15T00:03:48+00:00",
+   "data_changed_at": "2026-10-15T00:02:07+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,8 +2106,8 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-14T20:12:07+00:00",
-   "data_changed_at": "2026-10-14T18:12:56+00:00",
+   "checked_at": "2026-10-15T00:04:39+00:00",
+   "data_changed_at": "2026-10-15T00:03:48+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
@@ -2144,43 +2167,48 @@
     },
     "epu_d": {
      "fred": "USEPUINDXD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-13",
       "value": 216.72
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "epu_d_ma7": {
      "fred": "USEPUINDXD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-13",
       "value": 239.2029
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "epu_d_ma30": {
      "fred": "USEPUINDXD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-13",
       "value": 248.4837
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "epu_m": {
      "fred": "USEPUINDXM",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 175.1933
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "gepu": {
      "fred": "GEPUCURRENT",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 241.6905
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "tpu_d": {
      "fred": "TPUD",
@@ -2208,11 +2236,12 @@
     },
     "epu_trade": {
      "fred": "EPUTRADE",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": 1212.9311
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "pw_hormuz": {
      "fred": "PortWatch chokepoint6",
@@ -2409,7 +2438,7 @@
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-10-14T20:09:42+00:00",
+   "checked_at": "2026-10-15T00:02:07+00:00",
    "data_changed_at": "2026-10-14T20:09:26+00:00",
    "series": {
     "5y_sofr": {
@@ -2743,6 +2772,6 @@
    }
   }
  },
- "checked_at": "2026-10-14T22:43:06+00:00",
- "ok": true
+ "checked_at": "2026-10-15T00:04:39+00:00",
+ "ok": false
 }
