@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-16T19:30:56+00:00",
-   "data_changed_at": "2026-10-16T15:11:10+00:00",
+   "checked_at": "2026-10-16T23:39:13+00:00",
+   "data_changed_at": "2026-10-16T23:39:07+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -74,7 +74,7 @@
      "fred": "DFF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "value": 3.88
      }
     },
@@ -82,24 +82,24 @@
      "fred": "DGS2",
      "status": "ok",
      "latest": {
-      "date": "2026-10-14",
-      "value": 4.82
+      "date": "2026-10-15",
+      "value": 4.77
      }
     },
     "dgs10": {
      "fred": "DGS10",
      "status": "ok",
      "latest": {
-      "date": "2026-10-14",
-      "value": 5.19
+      "date": "2026-10-15",
+      "value": 5.1
      }
     },
     "spread": {
      "fred": "T10Y2Y",
      "status": "ok",
      "latest": {
-      "date": "2026-10-15",
-      "value": 0.33
+      "date": "2026-10-16",
+      "value": 0.35
      }
     },
     "indpro": {
@@ -122,24 +122,24 @@
      "fred": "T5YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-10-15",
-      "value": 2.33
+      "date": "2026-10-16",
+      "value": 2.37
      }
     },
     "t10yie": {
      "fred": "T10YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-10-15",
-      "value": 2.32
+      "date": "2026-10-16",
+      "value": 2.35
      }
     },
     "t5yifr": {
      "fred": "T5YIFR",
      "status": "ok",
      "latest": {
-      "date": "2026-10-15",
-      "value": 2.31
+      "date": "2026-10-16",
+      "value": 2.33
      }
     },
     "clev_cpi_yy": {
@@ -278,24 +278,24 @@
      "fred": "DTS",
      "status": "ok",
      "latest": {
-      "date": "2026-10-14",
-      "value": 263.015
+      "date": "2026-10-15",
+      "value": 251.893
      }
     },
     "dts_yoy": {
      "fred": "DTS",
      "status": "ok",
      "latest": {
-      "date": "2026-10-14",
-      "value": 5.2464
+      "date": "2026-10-15",
+      "value": 4.393
      }
     },
     "dts_yoy60": {
      "fred": "DTS",
      "status": "ok",
      "latest": {
-      "date": "2026-10-14",
-      "value": 2.72
+      "date": "2026-10-15",
+      "value": 6.505
      }
     },
     "gas": {
@@ -421,575 +421,575 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-16T19:31:44+00:00",
-   "data_changed_at": "2026-10-16T17:42:08+00:00",
+   "checked_at": "2026-10-16T23:39:45+00:00",
+   "data_changed_at": "2026-10-16T23:39:13+00:00",
    "series": {
     "LLBDCBW027SBOG": {
      "fred": "LLBDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 12696.906
+      "date": "2026-10-07",
+      "value": 12751.9603
      }
     },
     "LLBLCBW027SBOG": {
      "fred": "LLBLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 7954.1606
+      "date": "2026-10-07",
+      "value": 7983.4472
      }
     },
     "LLBSCBW027SBOG": {
      "fred": "LLBSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 4742.7454
+      "date": "2026-10-07",
+      "value": 4768.5131
      }
     },
     "CILDCBW027SBOG": {
      "fred": "CILDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 2336.5337
+      "date": "2026-10-07",
+      "value": 2359.0344
      }
     },
     "CILSCBW027SBOG": {
      "fred": "CILSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 739.5375
+      "date": "2026-10-07",
+      "value": 742.22
      }
     },
     "CREDCBW027SBOG": {
      "fred": "CREDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 3018.1209
+      "date": "2026-10-07",
+      "value": 3031.8412
      }
     },
     "CRELCBW027SBOG": {
      "fred": "CRELCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 912.5065
+      "date": "2026-10-07",
+      "value": 915.7795
      }
     },
     "CRESCBW027SBOG": {
      "fred": "CRESCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 2105.6143
+      "date": "2026-10-07",
+      "value": 2116.0616
      }
     },
     "CLDDCBW027SBOG": {
      "fred": "CLDDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 432.9249
+      "date": "2026-10-07",
+      "value": 436.1565
      }
     },
     "CLDLCBW027SBOG": {
      "fred": "CLDLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 125.0298
+      "date": "2026-10-07",
+      "value": 125.7675
      }
     },
     "CLDSCBW027SBOG": {
      "fred": "CLDSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 307.8951
+      "date": "2026-10-07",
+      "value": 310.389
      }
     },
     "SBFDCBW027SBOG": {
      "fred": "SBFDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 122.8488
+      "date": "2026-10-07",
+      "value": 123.5099
      }
     },
     "SBFLCBW027SBOG": {
      "fred": "SBFLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 6.3727
+      "date": "2026-10-07",
+      "value": 6.2648
      }
     },
     "SBFSCBW027SBOG": {
      "fred": "SBFSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 116.476
+      "date": "2026-10-07",
+      "value": 117.2451
      }
     },
     "SMPDCBW027SBOG": {
      "fred": "SMPDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 619.8912
+      "date": "2026-10-07",
+      "value": 624.2922
      }
     },
     "SMPLCBW027SBOG": {
      "fred": "SMPLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 253.1314
+      "date": "2026-10-07",
+      "value": 255.2234
      }
     },
     "SMPSCBW027SBOG": {
      "fred": "SMPSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 366.7598
+      "date": "2026-10-07",
+      "value": 369.0688
      }
     },
     "SNFDCBW027SBOG": {
      "fred": "SNFDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1842.456
+      "date": "2026-10-07",
+      "value": 1847.8825
      }
     },
     "SNFLCBW027SBOG": {
      "fred": "SNFLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 527.9726
+      "date": "2026-10-07",
+      "value": 528.5239
      }
     },
     "SNFSCBW027SBOG": {
      "fred": "SNFSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1314.4834
+      "date": "2026-10-07",
+      "value": 1319.3586
      }
     },
     "RREDCBW027SBOG": {
      "fred": "RREDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 2694.347
+      "date": "2026-10-07",
+      "value": 2695.846
      }
     },
     "RRELCBW027SBOG": {
      "fred": "RRELCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1659.6066
+      "date": "2026-10-07",
+      "value": 1656.6491
      }
     },
     "RRESCBW027SBOG": {
      "fred": "RRESCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1034.7404
+      "date": "2026-10-07",
+      "value": 1039.1969
      }
     },
     "CRLDCBW027SBOG": {
      "fred": "CRLDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 2403.8785
+      "date": "2026-10-07",
+      "value": 2404.5038
      }
     },
     "CRLLCBW027SBOG": {
      "fred": "CRLLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1498.2968
+      "date": "2026-10-07",
+      "value": 1495.2697
      }
     },
     "CRLSCBW027SBOG": {
      "fred": "CRLSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 905.5817
+      "date": "2026-10-07",
+      "value": 909.2341
      }
     },
     "RHEDCBW027SBOG": {
      "fred": "RHEDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 290.4685
+      "date": "2026-10-07",
+      "value": 291.3422
      }
     },
     "RHELCBW027SBOG": {
      "fred": "RHELCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 161.3098
+      "date": "2026-10-07",
+      "value": 161.3793
      }
     },
     "RHESCBW027SBOG": {
      "fred": "RHESCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 129.1587
+      "date": "2026-10-07",
+      "value": 129.9628
      }
     },
     "CLSDCBW027SBOG": {
      "fred": "CLSDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1927.8383
+      "date": "2026-10-07",
+      "value": 1935.6657
      }
     },
     "CLSLCBW027SBOG": {
      "fred": "CLSLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1586.2189
+      "date": "2026-10-07",
+      "value": 1583.3219
      }
     },
     "CLSSCBW027SBOG": {
      "fred": "CLSSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 341.6195
+      "date": "2026-10-07",
+      "value": 352.3438
      }
     },
     "CCLDCBW027SBOG": {
      "fred": "CCLDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1096.3924
+      "date": "2026-10-07",
+      "value": 1104.0579
      }
     },
     "CCLLCBW027SBOG": {
      "fred": "CCLLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1002.6152
+      "date": "2026-10-07",
+      "value": 1000.6287
      }
     },
     "CCLSCBW027SBOG": {
      "fred": "CCLSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 93.7772
+      "date": "2026-10-07",
+      "value": 103.4291
      }
     },
     "OCLDCBW027SBOG": {
      "fred": "OCLDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 831.4459
+      "date": "2026-10-07",
+      "value": 831.6079
      }
     },
     "OCLLCBW027SBOG": {
      "fred": "OCLLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 583.6037
+      "date": "2026-10-07",
+      "value": 582.6932
      }
     },
     "OCLSCBW027SBOG": {
      "fred": "OCLSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 247.8423
+      "date": "2026-10-07",
+      "value": 248.9147
      }
     },
     "CARDCBW027SBOG": {
      "fred": "CARDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 524.4724
+      "date": "2026-10-07",
+      "value": 524.4016
      }
     },
     "CARLCBW027SBOG": {
      "fred": "CARLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 436.8975
+      "date": "2026-10-07",
+      "value": 436.3216
      }
     },
     "CARSCBW027SBOG": {
      "fred": "CARSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 87.575
+      "date": "2026-10-07",
+      "value": 88.0799
      }
     },
     "AOLDCBW027SBOG": {
      "fred": "AOLDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 2720.0661
+      "date": "2026-10-07",
+      "value": 2729.573
      }
     },
     "AOLLCBW027SBOG": {
      "fred": "AOLLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 2198.8324
+      "date": "2026-10-07",
+      "value": 2210.8822
      }
     },
     "AOLSCBW027SBOG": {
      "fred": "AOLSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 521.2337
+      "date": "2026-10-07",
+      "value": 518.6908
      }
     },
     "LNFDCBW027SBOG": {
      "fred": "LNFDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1547.3679
+      "date": "2026-10-07",
+      "value": 1559.1733
      }
     },
     "LNFLCBW027SBOG": {
      "fred": "LNFLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1344.6468
+      "date": "2026-10-07",
+      "value": 1358.508
      }
     },
     "LNFSCBW027SBOG": {
      "fred": "LNFSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 202.7211
+      "date": "2026-10-07",
+      "value": 200.6653
      }
     },
     "DPSDCBW027SBOG": {
      "fred": "DPSDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 18088.1174
+      "date": "2026-10-07",
+      "value": 18129.3024
      }
     },
     "DPSLCBW027SBOG": {
      "fred": "DPSLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 12414.7394
+      "date": "2026-10-07",
+      "value": 12441.0143
      }
     },
     "DPSSCBW027SBOG": {
      "fred": "DPSSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 5673.3779
+      "date": "2026-10-07",
+      "value": 5688.2881
      }
     },
     "LTDDCBW027SBOG": {
      "fred": "LTDDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1653.1435
+      "date": "2026-10-07",
+      "value": 1662.1202
      }
     },
     "LTDLCBW027SBOG": {
      "fred": "LTDLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 918.7138
+      "date": "2026-10-07",
+      "value": 914.6214
      }
     },
     "LTDSCBW027SBOG": {
      "fred": "LTDSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 734.4297
+      "date": "2026-10-07",
+      "value": 747.4988
      }
     },
     "ODSDCBW027SBOG": {
      "fred": "ODSDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 16434.9739
+      "date": "2026-10-07",
+      "value": 16467.1822
      }
     },
     "ODSLCBW027SBOG": {
      "fred": "ODSLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 11496.0256
+      "date": "2026-10-07",
+      "value": 11526.3929
      }
     },
     "ODSSCBW027SBOG": {
      "fred": "ODSSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 4938.9483
+      "date": "2026-10-07",
+      "value": 4940.7893
      }
     },
     "SBCDCBW027SBOG": {
      "fred": "SBCDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 5442.9225
+      "date": "2026-10-07",
+      "value": 5442.5301
      }
     },
     "SBCLCBW027SBOG": {
      "fred": "SBCLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 4195.7133
+      "date": "2026-10-07",
+      "value": 4199.7948
      }
     },
     "SBCSCBW027SBOG": {
      "fred": "SBCSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1247.2092
+      "date": "2026-10-07",
+      "value": 1242.7353
      }
     },
     "TASDCBW027SBOG": {
      "fred": "TASDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 4535.6812
+      "date": "2026-10-07",
+      "value": 4526.7475
      }
     },
     "TASLCBW027SBOG": {
      "fred": "TASLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 3630.2736
+      "date": "2026-10-07",
+      "value": 3623.8583
      }
     },
     "TASSCBW027SBOG": {
      "fred": "TASSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 905.4076
+      "date": "2026-10-07",
+      "value": 902.8893
      }
     },
     "CASDCBW027SBOG": {
      "fred": "CASDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1858.8116
+      "date": "2026-10-07",
+      "value": 1879.3384
      }
     },
     "CASLCBW027SBOG": {
      "fred": "CASLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1352.9206
+      "date": "2026-10-07",
+      "value": 1397.2306
      }
     },
     "CASSCBW027SBOG": {
      "fred": "CASSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 505.891
+      "date": "2026-10-07",
+      "value": 482.1078
      }
     },
     "TLADCBW027SBOG": {
      "fred": "TLADCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 22305.2051
+      "date": "2026-10-07",
+      "value": 22336.0942
      }
     },
     "TLALCBW027SBOG": {
      "fred": "TLALCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 15366.2325
+      "date": "2026-10-07",
+      "value": 15401.4033
      }
     },
     "TLASCBW027SBOG": {
      "fred": "TLASCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 6938.9725
+      "date": "2026-10-07",
+      "value": 6934.6909
      }
     },
     "BOR_D": {
      "fred": "H8B3094NDMD",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1364.637
+      "date": "2026-10-07",
+      "value": 1374.822
      }
     },
     "BOR_L": {
      "fred": "H8B3094NLGD",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1058.386
+      "date": "2026-10-07",
+      "value": 1079.503
      }
     },
     "BOR_S": {
      "fred": "H8B3094NSMD",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 306.251
+      "date": "2026-10-07",
+      "value": 295.319
      }
     },
     "DEMDEPSL": {
@@ -1444,400 +1444,400 @@
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1596.9962
+      "date": "2026-10-07",
+      "value": 1616.8144
      }
     },
     "DPSDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 5.79
+      "date": "2026-10-07",
+      "value": 6.377
      }
     },
     "DPSLCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 6.578
+      "date": "2026-10-07",
+      "value": 7.388
      }
     },
     "DPSSCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 4.105
+      "date": "2026-10-07",
+      "value": 4.232
      }
     },
     "LLBDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 6.69
+      "date": "2026-10-07",
+      "value": 7.118
      }
     },
     "LLBLCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 7.578
+      "date": "2026-10-07",
+      "value": 7.954
      }
     },
     "LLBSCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 5.233
+      "date": "2026-10-07",
+      "value": 5.747
      }
     },
     "CILDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 8.464
+      "date": "2026-10-07",
+      "value": 9.704
      }
     },
     "CIL_LARGE_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 9.78
+      "date": "2026-10-07",
+      "value": 11.399
      }
     },
     "CILSCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 5.728
+      "date": "2026-10-07",
+      "value": 6.185
      }
     },
     "CREDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 3.575
+      "date": "2026-10-07",
+      "value": 3.917
      }
     },
     "CRELCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 3.784
+      "date": "2026-10-07",
+      "value": 4.034
      }
     },
     "CRESCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 3.485
+      "date": "2026-10-07",
+      "value": 3.866
      }
     },
     "RREDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1.435
+      "date": "2026-10-07",
+      "value": 1.436
      }
     },
     "RRELCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 0.376
+      "date": "2026-10-07",
+      "value": 0.146
      }
     },
     "RRESCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 3.18
+      "date": "2026-10-07",
+      "value": 3.563
      }
     },
     "CLSDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 4.962
+      "date": "2026-10-07",
+      "value": 5.104
      }
     },
     "CLSLCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 4.146
+      "date": "2026-10-07",
+      "value": 3.689
      }
     },
     "CLSSCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 8.925
+      "date": "2026-10-07",
+      "value": 11.971
      }
     },
     "CCLDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 4.352
+      "date": "2026-10-07",
+      "value": 4.67
      }
     },
     "CCLLCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 5.081
+      "date": "2026-10-07",
+      "value": 4.457
      }
     },
     "CCLSCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": -2.854
+      "date": "2026-10-07",
+      "value": 6.783
      }
     },
     "LTDDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 6.902
+      "date": "2026-10-07",
+      "value": 6.711
      }
     },
     "LTDLCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 13.981
+      "date": "2026-10-07",
+      "value": 13.075
      }
     },
     "LTDSCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": -0.805
+      "date": "2026-10-07",
+      "value": -0.164
      }
     },
     "ODSDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 5.68
+      "date": "2026-10-07",
+      "value": 6.344
      }
     },
     "ODSLCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 6.028
+      "date": "2026-10-07",
+      "value": 6.961
      }
     },
     "ODSSCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 4.877
+      "date": "2026-10-07",
+      "value": 4.931
      }
     },
     "SBCDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1.212
+      "date": "2026-10-07",
+      "value": 1.191
      }
     },
     "SBCLCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1.207
+      "date": "2026-10-07",
+      "value": 1.297
      }
     },
     "SBCSCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1.227
+      "date": "2026-10-07",
+      "value": 0.834
      }
     },
     "CASDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": -3.013
+      "date": "2026-10-07",
+      "value": -0.582
      }
     },
     "CASLCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": -4.636
+      "date": "2026-10-07",
+      "value": 0.207
      }
     },
     "CASSCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 1.611
+      "date": "2026-10-07",
+      "value": -2.8
      }
     },
     "TLADCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 5.179
+      "date": "2026-10-07",
+      "value": 5.312
      }
     },
     "TLALCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 5.44
+      "date": "2026-10-07",
+      "value": 5.672
      }
     },
     "TLASCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 4.605
+      "date": "2026-10-07",
+      "value": 4.521
      }
     },
     "BOR_D_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 5.669
+      "date": "2026-10-07",
+      "value": 4.919
      }
     },
     "BOR_L_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 4.84
+      "date": "2026-10-07",
+      "value": 4.423
      }
     },
     "BOR_S_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 8.637
+      "date": "2026-10-07",
+      "value": 6.771
      }
     },
     "LTD_SHARE_DOM": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 9.1394
+      "date": "2026-10-07",
+      "value": 9.1681
      }
     },
     "LDR_DOM": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 70.1947
+      "date": "2026-10-07",
+      "value": 70.3389
      }
     },
     "LTD_SHARE_LARGE": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 7.4002
+      "date": "2026-10-07",
+      "value": 7.3517
      }
     },
     "LDR_LARGE": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 64.0703
+      "date": "2026-10-07",
+      "value": 64.1704
      }
     },
     "LTD_SHARE_SMALL": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 12.9452
+      "date": "2026-10-07",
+      "value": 13.141
      }
     },
     "LDR_SMALL": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 83.5965
+      "date": "2026-10-07",
+      "value": 83.8304
      }
     },
     "H8_CONTRIB_LTD_D": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 0.624
+      "date": "2026-10-07",
+      "value": 0.613
      }
     },
     "H8_CONTRIB_OTHER_D": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 5.166
+      "date": "2026-10-07",
+      "value": 5.764
      }
     },
     "H8_CONTRIB_LTD_S": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": -0.109
+      "date": "2026-10-07",
+      "value": -0.023
      }
     },
     "H8_CONTRIB_OTHER_S": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 4.215
+      "date": "2026-10-07",
+      "value": 4.255
      }
     },
     "OLD_PRE": {
@@ -2067,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-16T22:15:03+00:00",
-   "data_changed_at": "2026-10-16T22:13:25+00:00",
+   "checked_at": "2026-10-16T23:41:44+00:00",
+   "data_changed_at": "2026-10-16T23:40:01+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,7 +2083,7 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-16T19:34:23+00:00",
+   "checked_at": "2026-10-16T23:42:11+00:00",
    "data_changed_at": "2026-10-16T15:14:02+00:00",
    "series": {
     "gprd": {
@@ -2409,47 +2409,47 @@
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-10-16T19:32:10+00:00",
-   "data_changed_at": "2026-10-16T19:31:44+00:00",
+   "checked_at": "2026-10-16T23:40:01+00:00",
+   "data_changed_at": "2026-10-16T23:39:45+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
      "status": "ok",
      "latest": {
-      "date": "2026-10-14",
-      "value": 1.12
+      "date": "2026-10-15",
+      "value": 1.02
      }
     },
     "2s10s": {
      "fred": "T10Y2Y",
      "status": "ok",
      "latest": {
-      "date": "2026-10-15",
-      "value": 0.33
+      "date": "2026-10-16",
+      "value": 0.35
      }
     },
     "3m10y": {
      "fred": "T10Y3M",
      "status": "ok",
      "latest": {
-      "date": "2026-10-15",
-      "value": 0.82
+      "date": "2026-10-16",
+      "value": 0.83
      }
     },
     "ust10_12m": {
      "fred": "DGS10",
      "status": "ok",
      "latest": {
-      "date": "2026-10-14",
-      "value": 116.0
+      "date": "2026-10-15",
+      "value": 105.0
      }
     },
     "ust2_12m": {
      "fred": "DGS2",
      "status": "ok",
      "latest": {
-      "date": "2026-10-14",
-      "value": 134.0
+      "date": "2026-10-15",
+      "value": 127.0
      }
     },
     "ul_all": {
@@ -2472,56 +2472,56 @@
      "fred": "DGS10",
      "status": "ok",
      "latest": {
-      "date": "2026-10-14",
-      "value": 22.0
+      "date": "2026-10-15",
+      "value": 10.0
      }
     },
     "ust10_3m": {
      "fred": "DGS10",
      "status": "ok",
      "latest": {
-      "date": "2026-10-14",
-      "value": 64.0
+      "date": "2026-10-15",
+      "value": 53.0
      }
     },
     "policy_path": {
      "fred": "DGS1+DFF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-14",
-      "value": 2.6
+      "date": "2026-10-15",
+      "value": 2.44
      }
     },
     "h8_small_loans": {
      "fred": "LLBSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": -0.3486
+      "date": "2026-10-07",
+      "value": 1.1752
      }
     },
     "h8_dom_loans": {
      "fred": "LLBDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 0.0363
+      "date": "2026-10-07",
+      "value": 1.3879
      }
     },
     "h8_small_deps": {
      "fred": "DPSSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": -2.857
+      "date": "2026-10-07",
+      "value": -2.1423
      }
     },
     "h8_small_ldr": {
      "fred": "LLBSCBW027SBOG+DPSSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 83.5965
+      "date": "2026-10-07",
+      "value": 83.8304
      }
     },
     "nfci": {
@@ -2553,7 +2553,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-16",
-      "value": 101.0466
+      "value": 101.1029
      }
     },
     "hy_lvl": {
@@ -2649,7 +2649,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-16",
-      "value": -2.9358
+      "value": -3.1983
      }
     },
     "kre_xlf_3m": {
@@ -2657,7 +2657,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-16",
-      "value": -6.6981
+      "value": -6.9504
      }
     },
     "iwm_spy_1m": {
@@ -2665,7 +2665,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-16",
-      "value": -5.4733
+      "value": -5.5669
      }
     },
     "iwm_spy_3m": {
@@ -2673,7 +2673,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-16",
-      "value": -9.9461
+      "value": -10.0352
      }
     },
     "dep_pricing": {
@@ -2696,16 +2696,16 @@
      "fred": "LTDSCBW027SBOG+DPSSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": -0.0637
+      "date": "2026-10-07",
+      "value": 0.1268
      }
     },
     "bor_vs_dep": {
      "fred": "H8B3094NSMD+DPSSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-09-30",
-      "value": 4.5323
+      "date": "2026-10-07",
+      "value": 2.5387
      }
     },
     "fed_lending": {
@@ -2743,6 +2743,6 @@
    }
   }
  },
- "checked_at": "2026-10-16T22:15:03+00:00",
+ "checked_at": "2026-10-16T23:42:11+00:00",
  "ok": true
 }
