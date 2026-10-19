@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-19T11:45:20+00:00",
-   "data_changed_at": "2026-10-19T11:40:58+00:00",
+   "checked_at": "2026-10-19T11:53:23+00:00",
+   "data_changed_at": "2026-10-19T11:53:18+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -396,12 +396,11 @@
     },
     "TREASURY_AUCTIONS": {
      "fred": "Treasury auctions",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-08",
       "value": 2.54
-     },
-     "error": "failed: 'auctionDate'"
+     }
     },
     "rest_real_lvl": {
      "fred": "derived",
@@ -422,7 +421,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-19T11:46:04+00:00",
+   "checked_at": "2026-10-19T11:53:48+00:00",
    "data_changed_at": "2026-10-19T11:45:20+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2068,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-19T11:48:01+00:00",
-   "data_changed_at": "2026-10-19T11:46:25+00:00",
+   "checked_at": "2026-10-19T11:55:49+00:00",
+   "data_changed_at": "2026-10-19T11:54:10+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2084,7 +2083,7 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-19T11:48:57+00:00",
+   "checked_at": "2026-10-19T11:56:36+00:00",
    "data_changed_at": "2026-10-16T15:14:02+00:00",
    "series": {
     "gprd": {
@@ -2410,8 +2409,8 @@
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-10-19T11:46:25+00:00",
-   "data_changed_at": "2026-10-19T11:46:04+00:00",
+   "checked_at": "2026-10-19T11:54:10+00:00",
+   "data_changed_at": "2026-10-19T11:53:48+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2744,6 +2743,6 @@
    }
   }
  },
- "checked_at": "2026-10-19T11:48:57+00:00",
- "ok": false
+ "checked_at": "2026-10-19T11:56:36+00:00",
+ "ok": true
 }
