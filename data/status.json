@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-16T23:39:13+00:00",
-   "data_changed_at": "2026-10-16T23:39:07+00:00",
+   "checked_at": "2026-10-19T11:41:03+00:00",
+   "data_changed_at": "2026-10-19T11:40:58+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -396,11 +396,12 @@
     },
     "TREASURY_AUCTIONS": {
      "fred": "Treasury auctions",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-08",
       "value": 2.54
-     }
+     },
+     "error": "failed: 'auctionDate'"
     },
     "rest_real_lvl": {
      "fred": "derived",
@@ -421,8 +422,8 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-16T23:39:45+00:00",
-   "data_changed_at": "2026-10-16T23:39:13+00:00",
+   "checked_at": "2026-10-19T11:41:47+00:00",
+   "data_changed_at": "2026-10-19T11:41:03+00:00",
    "series": {
     "LLBDCBW027SBOG": {
      "fred": "LLBDCBW027SBOG",
@@ -2067,8 +2068,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-16T23:41:44+00:00",
-   "data_changed_at": "2026-10-16T23:40:01+00:00",
+   "checked_at": "2026-10-19T11:43:50+00:00",
+   "data_changed_at": "2026-10-19T11:42:12+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,7 +2084,7 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-16T23:42:11+00:00",
+   "checked_at": "2026-10-19T11:44:35+00:00",
    "data_changed_at": "2026-10-16T15:14:02+00:00",
    "series": {
     "gprd": {
@@ -2409,8 +2410,8 @@
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-10-16T23:40:01+00:00",
-   "data_changed_at": "2026-10-16T23:39:45+00:00",
+   "checked_at": "2026-10-19T11:42:12+00:00",
+   "data_changed_at": "2026-10-19T11:41:47+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2553,7 +2554,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-16",
-      "value": 101.1029
+      "value": 101.1
      }
     },
     "hy_lvl": {
@@ -2743,6 +2744,6 @@
    }
   }
  },
- "checked_at": "2026-10-16T23:42:11+00:00",
- "ok": true
+ "checked_at": "2026-10-19T11:44:35+00:00",
+ "ok": false
 }
