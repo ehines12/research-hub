@@ -677,6 +677,59 @@ def _tenor(term, tips, frn):
     return y + (" TIPS" if tips == "Yes" else "") + (" FRN" if frn == "Yes" else "")
 
 
+def _first(r, *keys):
+    """First non-empty value among candidate field names (Treasury feeds rename fields from time to time)."""
+    for k in keys:
+        v = r.get(k)
+        if v not in (None, "", "null"):
+            return v
+    return None
+
+
+def _iso_day(v):
+    """'2026-10-21T00:00:00' / '2026-10-21' / '10/21/2026' -> '2026-10-21'; anything else -> None."""
+    v = str(v or "").strip()
+    if _re.match(r"\d{4}-\d{2}-\d{2}", v):
+        return v[:10]
+    m = _re.match(r"(\d{1,2})/(\d{1,2})/(\d{4})", v)
+    return f"{m.group(3)}-{int(m.group(1)):02d}-{int(m.group(2)):02d}" if m else None
+
+
+def _auction_result(r):
+    """One Fiscal Data auctions_query row -> result record, or None if not yet auctioned / unusable."""
+    btc = _num(_first(r, "bid_to_cover_ratio", "bid_to_cover"))
+    date = _iso_day(_first(r, "auction_date", "auctionDate"))
+    term = _first(r, "security_term", "securityTerm")
+    if btc is None or not date or not term:
+        return None  # announced but not yet auctioned, or missing essentials
+    frn = _first(r, "floating_rate", "floatingRate") == "Yes"
+    tips = _first(r, "inflation_index_security", "inflationProtected", "tips")
+    comp = _num(_first(r, "comp_accepted", "competitive_accepted")) or 0
+    pctof = lambda k: round(100 * (_num(r.get(k)) or 0) / comp, 1) if comp else None
+    return {"date": date, "cusip": _first(r, "cusip"), "type": _first(r, "security_type", "securityType"),
+            "term": term, "tenor": _tenor(_first(r, "original_security_term", "originalSecurityTerm") or term, tips, "Yes" if frn else "No"),
+            "reopening": _first(r, "reopening") == "Yes", "size_bn": round((_num(_first(r, "offering_amt", "offering_amount")) or 0) / 1e9, 1),
+            "yield": _num(r.get("high_discnt_margin")) if frn else _num(r.get("high_yield")), "yield_kind": "disc. margin" if frn else ("real yield" if tips == "Yes" else "yield"),
+            "btc": btc, "indirect": pctof("indirect_bidder_accepted"), "direct": pctof("direct_bidder_accepted"),
+            "dealer": pctof("primary_dealer_accepted")}
+
+
+def _auction_upcoming(u):
+    """One TreasuryDirect upcoming row -> record; False for bills/other types; None if no usable auction date.
+    TreasuryDirect dropped 'auctionDate' from /securities/upcoming in Oct 2026; the auction day is now carried by
+    competitiveAuctionCloseDate (noncompetitive close is the same day)."""
+    if not isinstance(u, dict) or u.get("securityType") not in ("Note", "Bond"):
+        return False
+    date = _iso_day(_first(u, "auctionDate", "competitiveAuctionCloseDate", "noncompetitiveAuctionCloseDate"))
+    if not date:
+        return None
+    amt = _num(_first(u, "offeringAmount"))
+    return {"date": date, "issue": _iso_day(_first(u, "issueDate")) or "", "type": u["securityType"], "term": _first(u, "securityTerm"),
+            "tenor": _tenor(_first(u, "originalSecurityTerm", "securityTerm"), _first(u, "tips", "inflationProtected"), _first(u, "floatingRate")),
+            "reopening": _first(u, "reopening") == "Yes", "size_bn": round(amt / 1e9, 1) if amt else None,
+            "announced": _iso_day(_first(u, "announcementDate")) or ""}
+
+
 def _auctions_block(ac, result, prev):
     key = "TREASURY_AUCTIONS"
     now = dt.datetime.now(dt.timezone.utc)
@@ -685,25 +738,26 @@ def _auctions_block(ac, result, prev):
         rows = json.loads(_curl(AUCTIONS_API.format(since=since), 90)).get("data") or []
         if len(rows) < 50:
             raise ValueError(f"only {len(rows)} auction rows")
-        recs = []
+        recs, bad = [], 0
         for r in rows:
-            if _num(r.get("bid_to_cover_ratio")) is None:
-                continue  # announced, not yet auctioned
-            frn = r.get("floating_rate") == "Yes"
-            comp = _num(r.get("comp_accepted")) or 0
-            pctof = lambda k: round(100 * (_num(r.get(k)) or 0) / comp, 1) if comp else None
-            recs.append({"date": r["auction_date"], "cusip": r["cusip"], "type": r["security_type"],
-                         "term": r["security_term"], "tenor": _tenor(r.get("original_security_term") if r.get("original_security_term") not in (None, "", "null") else r["security_term"], r.get("inflation_index_security"), r.get("floating_rate")),
-                         "reopening": r.get("reopening") == "Yes", "size_bn": round((_num(r.get("offering_amt")) or 0) / 1e9, 1),
-                         "yield": _num(r.get("high_discnt_margin")) if frn else _num(r.get("high_yield")), "yield_kind": "disc. margin" if frn else ("real yield" if r.get("inflation_index_security") == "Yes" else "yield"),
-                         "btc": _num(r.get("bid_to_cover_ratio")), "indirect": pctof("indirect_bidder_accepted"), "direct": pctof("direct_bidder_accepted"),
-                         "dealer": pctof("primary_dealer_accepted")})
+            try:
+                rec = _auction_result(r)
+            except Exception:  # noqa: BLE001  one malformed record must not sink the block
+                rec, bad = None, bad + 1
+            if rec:
+                recs.append(rec)
+        if bad:
+            print(f"  TREASURY_AUCTIONS skipped {bad} malformed result rows")
+        if not recs:
+            raise ValueError("no usable auction results")
         recs.sort(key=lambda x: x["date"])
         n = int(ac.get("compare_n", 6))
         for i, x in enumerate(recs):
             prior = [y for y in recs[:i] if y["tenor"] == x["tenor"]][-n:]
-            if len(prior) >= 3:
-                av = lambda k: round(sum(y[k] for y in prior if y[k] is not None) / len([y for y in prior if y[k] is not None]), 2)
+            if len(prior) >= 3 and None not in (x["btc"], x["dealer"], x["indirect"]):
+                av = lambda k: (lambda v: round(sum(v) / len(v), 2) if v else None)([y[k] for y in prior if y[k] is not None])
+                if None in (av("btc"), av("dealer"), av("indirect")):
+                    continue
                 x["avg"] = {"btc": av("btc"), "indirect": av("indirect"), "direct": av("direct"), "dealer": av("dealer"), "n": len(prior)}
                 db, dd = x["btc"] - x["avg"]["btc"], x["dealer"] - x["avg"]["dealer"]
                 x["d_btc"], x["d_dealer"], x["d_indirect"] = round(db, 2), round(dd, 1), round(x["indirect"] - x["avg"]["indirect"], 1)
@@ -713,13 +767,22 @@ def _auctions_block(ac, result, prev):
         recent = [x for x in reversed(recs) if not tenors or x["tenor"] in tenors][: int(ac.get("recent_n", 24))]
         up = []
         try:
-            for u in json.loads(_curl(TD_UPCOMING, 60)):
-                if u.get("securityType") not in ("Note", "Bond"):
+            feed = json.loads(_curl(TD_UPCOMING, 60))
+            if isinstance(feed, dict):  # tolerate a wrapped payload
+                feed = next((v for v in feed.values() if isinstance(v, list)), [])
+            skipped = 0
+            for u in feed or []:
+                try:
+                    rec = _auction_upcoming(u)
+                except Exception:  # noqa: BLE001
+                    skipped += 1
                     continue
-                up.append({"date": u["auctionDate"][:10], "issue": (u.get("issueDate") or "")[:10], "type": u["securityType"], "term": u.get("securityTerm"),
-                           "tenor": _tenor(u.get("originalSecurityTerm") or u.get("securityTerm"), u.get("tips"), u.get("floatingRate")),
-                           "reopening": u.get("reopening") == "Yes", "size_bn": round(_num(u.get("offeringAmount")) / 1e9, 1) if _num(u.get("offeringAmount")) else None,
-                           "announced": (u.get("announcementDate") or "")[:10]})
+                if rec:
+                    up.append(rec)
+                elif rec is None and isinstance(u, dict) and u.get("securityType") in ("Note", "Bond"):
+                    skipped += 1
+            if skipped:
+                print(f"  TREASURY_AUCTIONS skipped {skipped} upcoming Note/Bond rows without a usable date")
             up_status = "ok"
         except Exception as e:  # noqa: BLE001
             up_status = f"failed: {e}"
