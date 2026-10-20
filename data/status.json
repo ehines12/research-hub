@@ -1,7 +1,7 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-20T00:25:06+00:00",
+   "checked_at": "2026-10-20T11:42:06+00:00",
    "data_changed_at": "2026-10-20T00:25:00+00:00",
    "series": {
     "gdp": {
@@ -421,7 +421,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-20T00:25:32+00:00",
+   "checked_at": "2026-10-20T11:42:33+00:00",
    "data_changed_at": "2026-10-19T19:29:07+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2067,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-20T00:27:28+00:00",
-   "data_changed_at": "2026-10-20T00:25:48+00:00",
+   "checked_at": "2026-10-20T11:44:36+00:00",
+   "data_changed_at": "2026-10-20T11:42:55+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,8 +2083,8 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-20T00:27:50+00:00",
-   "data_changed_at": "2026-10-19T17:21:53+00:00",
+   "checked_at": "2026-10-20T11:46:21+00:00",
+   "data_changed_at": "2026-10-20T11:44:36+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
@@ -2218,15 +2218,15 @@
      "fred": "PortWatch chokepoint6",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 4.1429
+      "date": "2026-10-18",
+      "value": 3.7143
      }
     },
     "pw_hormuz_tank": {
      "fred": "PortWatch chokepoint6",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
+      "date": "2026-10-18",
       "value": 0.5714
      }
     },
@@ -2234,183 +2234,183 @@
      "fred": "PortWatch chokepoint6",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 0.4286
+      "date": "2026-10-18",
+      "value": 0.2857
      }
     },
     "pw_hormuz_ly": {
      "fred": "PortWatch chokepoint6",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 70.5714
+      "date": "2026-10-18",
+      "value": 73.7143
      }
     },
     "pw_babelmandeb": {
      "fred": "PortWatch chokepoint4",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 28.2857
+      "date": "2026-10-18",
+      "value": 26.4286
      }
     },
     "pw_babelmandeb_tank": {
      "fred": "PortWatch chokepoint4",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 8.5714
+      "date": "2026-10-18",
+      "value": 10.0
      }
     },
     "pw_babelmandeb_cont": {
      "fred": "PortWatch chokepoint4",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 6.2857
+      "date": "2026-10-18",
+      "value": 4.7143
      }
     },
     "pw_babelmandeb_ly": {
      "fred": "PortWatch chokepoint4",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 34.0
+      "date": "2026-10-18",
+      "value": 37.5714
      }
     },
     "pw_suez": {
      "fred": "PortWatch chokepoint1",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 41.7143
+      "date": "2026-10-18",
+      "value": 44.2857
      }
     },
     "pw_suez_tank": {
      "fred": "PortWatch chokepoint1",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 17.0
+      "date": "2026-10-18",
+      "value": 15.8571
      }
     },
     "pw_suez_cont": {
      "fred": "PortWatch chokepoint1",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 12.2857
+      "date": "2026-10-18",
+      "value": 13.4286
      }
     },
     "pw_suez_ly": {
      "fred": "PortWatch chokepoint1",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 39.0
+      "date": "2026-10-18",
+      "value": 43.7143
      }
     },
     "pw_panama": {
      "fred": "PortWatch chokepoint2",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 25.8571
+      "date": "2026-10-18",
+      "value": 27.7143
      }
     },
     "pw_panama_tank": {
      "fred": "PortWatch chokepoint2",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 9.4286
+      "date": "2026-10-18",
+      "value": 13.0
      }
     },
     "pw_panama_cont": {
      "fred": "PortWatch chokepoint2",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 7.7143
+      "date": "2026-10-18",
+      "value": 7.0
      }
     },
     "pw_panama_ly": {
      "fred": "PortWatch chokepoint2",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 32.2857
+      "date": "2026-10-18",
+      "value": 32.5714
      }
     },
     "pw_malacca": {
      "fred": "PortWatch chokepoint5",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 233.0
+      "date": "2026-10-18",
+      "value": 215.1429
      }
     },
     "pw_malacca_tank": {
      "fred": "PortWatch chokepoint5",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 74.8571
+      "date": "2026-10-18",
+      "value": 71.4286
      }
     },
     "pw_malacca_cont": {
      "fred": "PortWatch chokepoint5",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 62.4286
+      "date": "2026-10-18",
+      "value": 58.2857
      }
     },
     "pw_malacca_ly": {
      "fred": "PortWatch chokepoint5",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 245.4286
+      "date": "2026-10-18",
+      "value": 245.0
      }
     },
     "pw_bosporus": {
      "fred": "PortWatch chokepoint3",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 58.0
+      "date": "2026-10-18",
+      "value": 46.5714
      }
     },
     "pw_bosporus_tank": {
      "fred": "PortWatch chokepoint3",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 14.5714
+      "date": "2026-10-18",
+      "value": 14.4286
      }
     },
     "pw_bosporus_cont": {
      "fred": "PortWatch chokepoint3",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 5.4286
+      "date": "2026-10-18",
+      "value": 6.0
      }
     },
     "pw_bosporus_ly": {
      "fred": "PortWatch chokepoint3",
      "status": "ok",
      "latest": {
-      "date": "2026-10-11",
-      "value": 95.7143
+      "date": "2026-10-18",
+      "value": 101.2857
      }
     }
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-10-20T00:25:48+00:00",
-   "data_changed_at": "2026-10-20T00:25:32+00:00",
+   "checked_at": "2026-10-20T11:42:55+00:00",
+   "data_changed_at": "2026-10-20T11:42:33+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2553,7 +2553,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-19",
-      "value": 101.2987
+      "value": 101.3
      }
     },
     "hy_lvl": {
@@ -2648,32 +2648,32 @@
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-16",
-      "value": -3.1983
+      "date": "2026-10-19",
+      "value": -3.2065
      }
     },
     "kre_xlf_3m": {
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-16",
-      "value": -6.9504
+      "date": "2026-10-19",
+      "value": -6.9065
      }
     },
     "iwm_spy_1m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-10-16",
-      "value": -5.5669
+      "date": "2026-10-19",
+      "value": -5.1092
      }
     },
     "iwm_spy_3m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-10-16",
-      "value": -10.0352
+      "date": "2026-10-19",
+      "value": -10.679
      }
     },
     "dep_pricing": {
@@ -2743,6 +2743,6 @@
    }
   }
  },
- "checked_at": "2026-10-20T00:27:50+00:00",
+ "checked_at": "2026-10-20T11:46:21+00:00",
  "ok": true
 }
