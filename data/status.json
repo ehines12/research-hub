@@ -1,16 +1,17 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-21T11:34:16+00:00",
-   "data_changed_at": "2026-10-20T23:56:31+00:00",
+   "checked_at": "2026-10-21T20:03:19+00:00",
+   "data_changed_at": "2026-10-21T20:03:14+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-04-01",
       "value": 2.2
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "gdpnow": {
      "fred": "GDPNOW",
@@ -24,136 +25,151 @@
     },
     "gdpnow_q": {
      "fred": "GDPNOW",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 3.4989
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "unrate": {
      "fred": "UNRATE",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 4.2
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "payrolls": {
      "fred": "PAYEMS",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 29.0
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "claims": {
      "fred": "ICSA",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-10",
       "value": 199.0
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "cpi": {
      "fred": "CPIAUCSL",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 3.7173
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "corepce": {
      "fred": "PCEPILFE",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": 3.0076
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "dff": {
      "fred": "DFF",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-19",
       "value": 3.88
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "dgs2": {
      "fred": "DGS2",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-19",
       "value": 4.77
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "dgs10": {
      "fred": "DGS10",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-19",
       "value": 5.15
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "spread": {
      "fred": "T10Y2Y",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-20",
       "value": 0.33
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "indpro": {
      "fred": "INDPRO",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 2.2452
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "retail": {
      "fred": "RSAFS",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 6.2876
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "t5yie": {
      "fred": "T5YIE",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-20",
       "value": 2.39
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "t10yie": {
      "fred": "T10YIE",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-20",
       "value": 2.35
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "t5yifr": {
      "fred": "T5YIFR",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-20",
       "value": 2.31
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "clev_cpi_yy": {
      "fred": "Cleveland Fed CPI y/y",
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 3.7695,
+      "value": 3.7536,
       "target": "Oct 2026",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "pending": true,
-      "prior_date": "2026-10-13",
-      "prior_value": 3.633,
-      "mm": 0.2688
+      "prior_date": "2026-10-14",
+      "prior_value": 3.7796,
+      "mm": 0.2535
      }
     },
     "clev_ccpi_yy": {
@@ -163,10 +179,10 @@
       "date": "2026-10-01",
       "value": 2.4828,
       "target": "Oct 2026",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "pending": true,
-      "prior_date": "2026-10-13",
-      "prior_value": 2.2975,
+      "prior_date": "2026-10-14",
+      "prior_value": 2.4828,
       "mm": 0.2114
      }
     },
@@ -175,13 +191,13 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 3.731,
+      "value": 3.7219,
       "target": "Oct 2026",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "pending": true,
-      "prior_date": "2026-10-13",
-      "prior_value": 3.6917,
-      "mm": 0.2758
+      "prior_date": "2026-10-14",
+      "prior_value": 3.7367,
+      "mm": 0.267
      }
     },
     "clev_cpce_yy": {
@@ -191,10 +207,10 @@
       "date": "2026-10-01",
       "value": 3.1281,
       "target": "Oct 2026",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "pending": true,
-      "prior_date": "2026-10-13",
-      "prior_value": 3.0965,
+      "prior_date": "2026-10-14",
+      "prior_value": 3.1281,
       "mm": 0.2509
      }
     },
@@ -203,12 +219,12 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 4.9805,
+      "value": 4.8533,
       "target": "Q4 2026",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "pending": true,
-      "prior_date": "2026-10-13",
-      "prior_value": 4.5005
+      "prior_date": "2026-10-14",
+      "prior_value": 4.8207
      }
     },
     "clev_ccpi_q": {
@@ -218,10 +234,10 @@
       "date": "2026-10-01",
       "value": 3.0164,
       "target": "Q4 2026",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "pending": true,
-      "prior_date": "2026-10-13",
-      "prior_value": 2.5566
+      "prior_date": "2026-10-14",
+      "prior_value": 3.0164
      }
     },
     "clev_pce_q": {
@@ -229,12 +245,12 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 4.2422,
+      "value": 4.1699,
       "target": "Q4 2026",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "pending": true,
-      "prior_date": "2026-10-13",
-      "prior_value": 4.0618
+      "prior_date": "2026-10-14",
+      "prior_value": 4.1513
      }
     },
     "clev_cpce_q": {
@@ -244,10 +260,10 @@
       "date": "2026-10-01",
       "value": 3.1526,
       "target": "Q4 2026",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "pending": true,
-      "prior_date": "2026-10-13",
-      "prior_value": 3.0544
+      "prior_date": "2026-10-14",
+      "prior_value": 3.1526
      }
     },
     "clev_cpi_yy_act": {
@@ -268,131 +284,144 @@
     },
     "indeed": {
      "fred": "IHLIDXUS",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-16",
       "value": 103.8012
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "dts_20d": {
      "fred": "DTS",
      "status": "ok",
      "latest": {
-      "date": "2026-10-19",
-      "value": 280.821
+      "date": "2026-10-20",
+      "value": 260.443
      }
     },
     "dts_yoy": {
      "fred": "DTS",
      "status": "ok",
      "latest": {
-      "date": "2026-10-19",
-      "value": 10.0344
+      "date": "2026-10-20",
+      "value": -2.3655
      }
     },
     "dts_yoy60": {
      "fred": "DTS",
      "status": "ok",
      "latest": {
-      "date": "2026-10-19",
-      "value": 7.8404
+      "date": "2026-10-20",
+      "value": 4.5691
      }
     },
     "gas": {
      "fred": "GASREGW",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-19",
       "value": 4.284
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "wti": {
      "fred": "DCOILWTICO",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-14",
       "value": 101.91
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "wei": {
      "fred": "WEI",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-10",
       "value": 3.05
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "ccsa": {
      "fred": "CCSA",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-03",
       "value": 1710.0
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "nfci": {
      "fred": "NFCI",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-09",
       "value": -0.499
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "stlfsi": {
      "fred": "STLFSI4",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-09",
       "value": -0.7206
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "rest_sales_lvl": {
      "fred": "RSFSDP",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 92906.0
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "cpi_fafh_lvl": {
      "fred": "CUSR0000SEFV",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 398.783
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "rest_sales_yoy": {
      "fred": "RSFSDP",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 6.989
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "cpi_fafh_yoy": {
      "fred": "CUSR0000SEFV",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 3.4588
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "rest_emp_yoy": {
      "fred": "CES7072200001",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 0.8882
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "rest_emp_mm": {
      "fred": "CES7072200001",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 10.8
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "TREASURY_AUCTIONS": {
      "fred": "Treasury auctions",
@@ -404,7 +433,7 @@
     },
     "rest_real_lvl": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 92906.0
@@ -412,7 +441,7 @@
     },
     "rest_real_yoy": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 3.412
@@ -421,1028 +450,1155 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-21T11:34:30+00:00",
-   "data_changed_at": "2026-10-19T19:29:07+00:00",
+   "checked_at": "2026-10-21T20:05:54+00:00",
+   "data_changed_at": "2026-10-21T20:03:19+00:00",
    "series": {
     "LLBDCBW027SBOG": {
      "fred": "LLBDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 12751.9603
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "LLBLCBW027SBOG": {
      "fred": "LLBLCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 7983.4472
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "LLBSCBW027SBOG": {
      "fred": "LLBSCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 4768.5131
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CILDCBW027SBOG": {
      "fred": "CILDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 2359.0344
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CILSCBW027SBOG": {
      "fred": "CILSCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 742.22
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CREDCBW027SBOG": {
      "fred": "CREDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 3031.8412
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CRELCBW027SBOG": {
      "fred": "CRELCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 915.7795
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CRESCBW027SBOG": {
      "fred": "CRESCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 2116.0616
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CLDDCBW027SBOG": {
      "fred": "CLDDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 436.1565
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CLDLCBW027SBOG": {
      "fred": "CLDLCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 125.7675
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CLDSCBW027SBOG": {
      "fred": "CLDSCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 310.389
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "SBFDCBW027SBOG": {
      "fred": "SBFDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 123.5099
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "SBFLCBW027SBOG": {
      "fred": "SBFLCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 6.2648
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "SBFSCBW027SBOG": {
      "fred": "SBFSCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 117.2451
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "SMPDCBW027SBOG": {
      "fred": "SMPDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 624.2922
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "SMPLCBW027SBOG": {
      "fred": "SMPLCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 255.2234
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "SMPSCBW027SBOG": {
      "fred": "SMPSCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 369.0688
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "SNFDCBW027SBOG": {
      "fred": "SNFDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1847.8825
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "SNFLCBW027SBOG": {
      "fred": "SNFLCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 528.5239
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "SNFSCBW027SBOG": {
      "fred": "SNFSCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1319.3586
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "RREDCBW027SBOG": {
      "fred": "RREDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 2695.846
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "RRELCBW027SBOG": {
      "fred": "RRELCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1656.6491
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "RRESCBW027SBOG": {
      "fred": "RRESCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1039.1969
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CRLDCBW027SBOG": {
      "fred": "CRLDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 2404.5038
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CRLLCBW027SBOG": {
      "fred": "CRLLCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1495.2697
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CRLSCBW027SBOG": {
      "fred": "CRLSCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 909.2341
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "RHEDCBW027SBOG": {
      "fred": "RHEDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 291.3422
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "RHELCBW027SBOG": {
      "fred": "RHELCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 161.3793
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "RHESCBW027SBOG": {
      "fred": "RHESCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 129.9628
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CLSDCBW027SBOG": {
      "fred": "CLSDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1935.6657
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CLSLCBW027SBOG": {
      "fred": "CLSLCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1583.3219
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CLSSCBW027SBOG": {
      "fred": "CLSSCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 352.3438
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CCLDCBW027SBOG": {
      "fred": "CCLDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1104.0579
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CCLLCBW027SBOG": {
      "fred": "CCLLCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1000.6287
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CCLSCBW027SBOG": {
      "fred": "CCLSCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 103.4291
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "OCLDCBW027SBOG": {
      "fred": "OCLDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 831.6079
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "OCLLCBW027SBOG": {
      "fred": "OCLLCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 582.6932
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "OCLSCBW027SBOG": {
      "fred": "OCLSCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 248.9147
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CARDCBW027SBOG": {
      "fred": "CARDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 524.4016
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CARLCBW027SBOG": {
      "fred": "CARLCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 436.3216
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CARSCBW027SBOG": {
      "fred": "CARSCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 88.0799
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "AOLDCBW027SBOG": {
      "fred": "AOLDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 2729.573
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "AOLLCBW027SBOG": {
      "fred": "AOLLCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 2210.8822
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "AOLSCBW027SBOG": {
      "fred": "AOLSCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 518.6908
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "LNFDCBW027SBOG": {
      "fred": "LNFDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1559.1733
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "LNFLCBW027SBOG": {
      "fred": "LNFLCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1358.508
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "LNFSCBW027SBOG": {
      "fred": "LNFSCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 200.6653
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "DPSDCBW027SBOG": {
      "fred": "DPSDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 18129.3024
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "DPSLCBW027SBOG": {
      "fred": "DPSLCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 12441.0143
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "DPSSCBW027SBOG": {
      "fred": "DPSSCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 5688.2881
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "LTDDCBW027SBOG": {
      "fred": "LTDDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1662.1202
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "LTDLCBW027SBOG": {
      "fred": "LTDLCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 914.6214
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "LTDSCBW027SBOG": {
      "fred": "LTDSCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 747.4988
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "ODSDCBW027SBOG": {
      "fred": "ODSDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 16467.1822
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "ODSLCBW027SBOG": {
      "fred": "ODSLCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 11526.3929
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "ODSSCBW027SBOG": {
      "fred": "ODSSCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 4940.7893
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "SBCDCBW027SBOG": {
      "fred": "SBCDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 5442.5301
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "SBCLCBW027SBOG": {
      "fred": "SBCLCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 4199.7948
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "SBCSCBW027SBOG": {
      "fred": "SBCSCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1242.7353
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "TASDCBW027SBOG": {
      "fred": "TASDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 4526.7475
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "TASLCBW027SBOG": {
      "fred": "TASLCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 3623.8583
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "TASSCBW027SBOG": {
      "fred": "TASSCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 902.8893
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CASDCBW027SBOG": {
      "fred": "CASDCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1879.3384
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CASLCBW027SBOG": {
      "fred": "CASLCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1397.2306
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "CASSCBW027SBOG": {
      "fred": "CASSCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 482.1078
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "TLADCBW027SBOG": {
      "fred": "TLADCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 22336.0942
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "TLALCBW027SBOG": {
      "fred": "TLALCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 15401.4033
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "TLASCBW027SBOG": {
      "fred": "TLASCBW027SBOG",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 6934.6909
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "BOR_D": {
      "fred": "H8B3094NDMD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1374.822
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "BOR_L": {
      "fred": "H8B3094NLGD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1079.503
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "BOR_S": {
      "fred": "H8B3094NSMD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 295.319
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "DEMDEPSL": {
      "fred": "DEMDEPSL",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": 7128.0
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "MDLM": {
      "fred": "MDLM",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": 10473.5
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "SAVINGSL": {
      "fred": "SAVINGSL",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2020-04-01",
       "value": 10611.0
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "OCDSL": {
      "fred": "OCDSL",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2020-04-01",
       "value": 1010.5
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "STDSL": {
      "fred": "STDSL",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": 1505.6
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "RMFSL": {
      "fred": "RMFSL",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": 3073.9
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "fdic_sav_old": {
      "fred": "SAVNRNJ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2021-03-01",
       "value": 0.04
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "fdic_sav_new": {
      "fred": "SNDR",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 0.38
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "fdic_ic_old": {
      "fred": "ICNRNJ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2021-03-01",
       "value": 0.032
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "fdic_ic_new": {
      "fred": "ICNDR",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 0.07
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "fdic_mmda_old": {
      "fred": "MMNRNJ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2021-03-01",
       "value": 0.06
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "fdic_mmda_new": {
      "fred": "MMNDR",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 0.63
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "fdic_cd1_old": {
      "fred": "CD1NRNJ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2021-03-01",
       "value": 0.04
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "fdic_cd1_new": {
      "fred": "NDR1MCD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 0.23
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "fdic_cd3_old": {
      "fred": "CD3NRNJ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2021-03-01",
       "value": 0.06
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "fdic_cd3_new": {
      "fred": "NDR3MCD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.14
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "fdic_cd6_old": {
      "fred": "CD6NRNJ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2021-03-01",
       "value": 0.094
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "fdic_cd6_new": {
      "fred": "NDR6MCD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.39
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "fdic_cd12_old": {
      "fred": "CD12NRNJ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2021-03-01",
       "value": 0.14
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "fdic_cd12_new": {
      "fred": "NDR12MCD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.76
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: unexpected CSV header ['<!doctype html>']"
     },
     "fdic_cd24_old": {
      "fred": "CD24NRNJ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2021-03-01",
       "value": 0.188
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "fdic_cd24_new": {
      "fred": "NDR24MCD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.55
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "fdic_cd36_old": {
      "fred": "CD36NRNJ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2021-03-01",
       "value": 0.226
-     }
+     },
+     "error": "FRED: unexpected CSV header ['<!doctype html>']; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "fdic_cd36_new": {
      "fred": "NDR36MCD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.39
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "fdic_cd48_old": {
      "fred": "CD48NRNJ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2021-03-01",
       "value": 0.252
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "fdic_cd48_new": {
      "fred": "NDR48MCD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.31
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "fdic_cd60_old": {
      "fred": "CD60NRNJ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2021-03-01",
       "value": 0.304
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "fdic_cd60_new": {
      "fred": "NDR60MCD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.4148
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "ff_m": {
      "fred": "FEDFUNDS",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 3.75
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_ci_lm": {
      "fred": "DRTSCILM",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 0.0
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_ci_lm": {
      "fred": "DRSDCILM",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 16.1
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_ci_sm": {
      "fred": "DRTSCIS",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 1.8
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_ci_sm": {
      "fred": "DRSDCIS",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 3.6
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_cre_cld": {
      "fred": "SUBLPDRCSC",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -3.7
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_cre_cld": {
      "fred": "SUBLPDRCDC",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -11.1
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_cre_nfnr": {
      "fred": "SUBLPDRCSN",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -11.3
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_cre_nfnr": {
      "fred": "SUBLPDRCDN",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 1.9
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_cre_mf": {
      "fred": "SUBLPDRCSM",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -5.7
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_cre_mf": {
      "fred": "SUBLPDRCDM",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -3.8
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_rre_gse": {
      "fred": "SUBLPDHMSENQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 0.0
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_rre_gse": {
      "fred": "SUBLPDHMDENQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -11.8
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_rre_gov": {
      "fred": "SUBLPDHMSGNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 0.0
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_rre_gov": {
      "fred": "SUBLPDHMDGNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -16.7
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_rre_qm": {
      "fred": "SUBLPDHMSQNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -4.0
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_rre_qm": {
      "fred": "SUBLPDHMDQNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -8.0
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_rre_qmj": {
      "fred": "SUBLPDHMSJNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -9.8
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_rre_qmj": {
      "fred": "SUBLPDHMDJNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -8.0
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_rre_nqmj": {
      "fred": "SUBLPDHMSKNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -6.5
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_rre_nqmj": {
      "fred": "SUBLPDHMDKNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -10.9
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_cc": {
      "fred": "DRTSCLCC",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 6.7
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_cc": {
      "fred": "DEMCC",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 2.2
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_auto": {
      "fred": "STDSAUTO",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -4.5
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_auto": {
      "fred": "DEMAUTO",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -11.4
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_std_oth": {
      "fred": "STDSOTHCONS",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 0.0
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_dem_oth": {
      "fred": "DEMOTHCONS",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -4.2
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "sloos_wil_cons": {
      "fred": "DRIWCIL",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": -2.0
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "CIL_LARGE": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1616.8144
@@ -1450,7 +1606,7 @@
     },
     "DPSDCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 6.377
@@ -1458,7 +1614,7 @@
     },
     "DPSLCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 7.388
@@ -1466,7 +1622,7 @@
     },
     "DPSSCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 4.232
@@ -1474,7 +1630,7 @@
     },
     "LLBDCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 7.118
@@ -1482,7 +1638,7 @@
     },
     "LLBLCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 7.954
@@ -1490,7 +1646,7 @@
     },
     "LLBSCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 5.747
@@ -1498,7 +1654,7 @@
     },
     "CILDCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 9.704
@@ -1506,7 +1662,7 @@
     },
     "CIL_LARGE_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 11.399
@@ -1514,7 +1670,7 @@
     },
     "CILSCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 6.185
@@ -1522,7 +1678,7 @@
     },
     "CREDCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 3.917
@@ -1530,7 +1686,7 @@
     },
     "CRELCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 4.034
@@ -1538,7 +1694,7 @@
     },
     "CRESCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 3.866
@@ -1546,7 +1702,7 @@
     },
     "RREDCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1.436
@@ -1554,7 +1710,7 @@
     },
     "RRELCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 0.146
@@ -1562,7 +1718,7 @@
     },
     "RRESCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 3.563
@@ -1570,7 +1726,7 @@
     },
     "CLSDCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 5.104
@@ -1578,7 +1734,7 @@
     },
     "CLSLCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 3.689
@@ -1586,7 +1742,7 @@
     },
     "CLSSCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 11.971
@@ -1594,7 +1750,7 @@
     },
     "CCLDCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 4.67
@@ -1602,7 +1758,7 @@
     },
     "CCLLCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 4.457
@@ -1610,7 +1766,7 @@
     },
     "CCLSCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 6.783
@@ -1618,7 +1774,7 @@
     },
     "LTDDCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 6.711
@@ -1626,7 +1782,7 @@
     },
     "LTDLCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 13.075
@@ -1634,7 +1790,7 @@
     },
     "LTDSCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": -0.164
@@ -1642,7 +1798,7 @@
     },
     "ODSDCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 6.344
@@ -1650,7 +1806,7 @@
     },
     "ODSLCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 6.961
@@ -1658,7 +1814,7 @@
     },
     "ODSSCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 4.931
@@ -1666,7 +1822,7 @@
     },
     "SBCDCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1.191
@@ -1674,7 +1830,7 @@
     },
     "SBCLCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 1.297
@@ -1682,7 +1838,7 @@
     },
     "SBCSCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 0.834
@@ -1690,7 +1846,7 @@
     },
     "CASDCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": -0.582
@@ -1698,7 +1854,7 @@
     },
     "CASLCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 0.207
@@ -1706,7 +1862,7 @@
     },
     "CASSCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": -2.8
@@ -1714,7 +1870,7 @@
     },
     "TLADCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 5.312
@@ -1722,7 +1878,7 @@
     },
     "TLALCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 5.672
@@ -1730,7 +1886,7 @@
     },
     "TLASCBW027SBOG_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 4.521
@@ -1738,7 +1894,7 @@
     },
     "BOR_D_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 4.919
@@ -1746,7 +1902,7 @@
     },
     "BOR_L_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 4.423
@@ -1754,7 +1910,7 @@
     },
     "BOR_S_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 6.771
@@ -1762,7 +1918,7 @@
     },
     "LTD_SHARE_DOM": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 9.1681
@@ -1770,7 +1926,7 @@
     },
     "LDR_DOM": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 70.3389
@@ -1778,7 +1934,7 @@
     },
     "LTD_SHARE_LARGE": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 7.3517
@@ -1786,7 +1942,7 @@
     },
     "LDR_LARGE": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 64.1704
@@ -1794,7 +1950,7 @@
     },
     "LTD_SHARE_SMALL": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 13.141
@@ -1802,7 +1958,7 @@
     },
     "LDR_SMALL": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 83.8304
@@ -1810,7 +1966,7 @@
     },
     "H8_CONTRIB_LTD_D": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 0.613
@@ -1818,7 +1974,7 @@
     },
     "H8_CONTRIB_OTHER_D": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 5.764
@@ -1826,7 +1982,7 @@
     },
     "H8_CONTRIB_LTD_S": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": -0.023
@@ -1834,7 +1990,7 @@
     },
     "H8_CONTRIB_OTHER_S": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-07",
       "value": 4.255
@@ -1842,7 +1998,7 @@
     },
     "OLD_PRE": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2020-04-01",
       "value": 11621.5
@@ -1850,7 +2006,7 @@
     },
     "OLD_SPLICED": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": 10473.5
@@ -1858,7 +2014,7 @@
     },
     "H6_TOTAL": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": 19107.1
@@ -1866,7 +2022,7 @@
     },
     "H6_DDA_SHARE": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": 37.3055
@@ -1874,7 +2030,7 @@
     },
     "H6_CONTRIB_DDA": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": 8.198
@@ -1882,7 +2038,7 @@
     },
     "H6_OLD_SHARE": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": 54.8147
@@ -1890,7 +2046,7 @@
     },
     "H6_CONTRIB_OLD": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": -2.22
@@ -1898,7 +2054,7 @@
     },
     "H6_STD_SHARE": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": 7.8798
@@ -1906,7 +2062,7 @@
     },
     "H6_CONTRIB_STD": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": -0.117
@@ -1914,7 +2070,7 @@
     },
     "DEMDEPSL_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": 26.195
@@ -1922,7 +2078,7 @@
     },
     "OLD_SPLICED_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": -3.685
@@ -1930,7 +2086,7 @@
     },
     "STDSL_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": -1.389
@@ -1938,7 +2094,7 @@
     },
     "RMFSL_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": 5.625
@@ -1946,7 +2102,7 @@
     },
     "H6_TOTAL_YOY": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": 5.86
@@ -1954,7 +2110,7 @@
     },
     "RMF_PCT_DEP": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": 16.0877
@@ -1962,7 +2118,7 @@
     },
     "dep_sav": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 0.38
@@ -1970,7 +2126,7 @@
     },
     "dep_ic": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 0.07
@@ -1978,7 +2134,7 @@
     },
     "dep_mmda": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 0.63
@@ -1986,7 +2142,7 @@
     },
     "dep_cd1": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 0.23
@@ -1994,7 +2150,7 @@
     },
     "dep_cd3": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.14
@@ -2002,7 +2158,7 @@
     },
     "dep_cd6": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.39
@@ -2010,7 +2166,7 @@
     },
     "dep_cd12": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.76
@@ -2018,7 +2174,7 @@
     },
     "dep_cd24": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.55
@@ -2026,7 +2182,7 @@
     },
     "dep_cd36": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.39
@@ -2034,7 +2190,7 @@
     },
     "dep_cd48": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.31
@@ -2042,7 +2198,7 @@
     },
     "dep_cd60": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.4148
@@ -2050,7 +2206,7 @@
     },
     "dep_sprd_cd12": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": -2.02
@@ -2058,7 +2214,7 @@
     },
     "dep_sprd_mmda": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": -3.12
@@ -2067,8 +2223,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-21T19:01:38+00:00",
-   "data_changed_at": "2026-10-21T18:59:52+00:00",
+   "checked_at": "2026-10-21T20:08:29+00:00",
+   "data_changed_at": "2026-10-21T20:06:40+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,8 +2239,8 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-21T11:37:16+00:00",
-   "data_changed_at": "2026-10-21T11:36:30+00:00",
+   "checked_at": "2026-10-21T20:09:31+00:00",
+   "data_changed_at": "2026-10-21T20:08:29+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
@@ -2144,43 +2300,48 @@
     },
     "epu_d": {
      "fred": "USEPUINDXD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-19",
       "value": 264.5
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "epu_d_ma7": {
      "fred": "USEPUINDXD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-19",
       "value": 289.7557
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "epu_d_ma30": {
      "fred": "USEPUINDXD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-19",
       "value": 263.265
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "epu_m": {
      "fred": "USEPUINDXM",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 175.1933
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "gepu": {
      "fred": "GEPUCURRENT",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 241.6905
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "tpu_d": {
      "fred": "TPUD",
@@ -2208,11 +2369,12 @@
     },
     "epu_trade": {
      "fred": "EPUTRADE",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-08-01",
       "value": 1212.9311
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "pw_hormuz": {
      "fred": "PortWatch chokepoint6",
@@ -2409,7 +2571,7 @@
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-10-21T11:34:46+00:00",
+   "checked_at": "2026-10-21T20:06:40+00:00",
    "data_changed_at": "2026-10-21T11:34:30+00:00",
    "series": {
     "5y_sofr": {
@@ -2743,6 +2905,6 @@
    }
   }
  },
- "checked_at": "2026-10-21T19:01:38+00:00",
- "ok": true
+ "checked_at": "2026-10-21T20:09:31+00:00",
+ "ok": false
 }
