@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-26T19:34:08+00:00",
-   "data_changed_at": "2026-10-26T17:07:19+00:00",
+   "checked_at": "2026-10-26T20:58:55+00:00",
+   "data_changed_at": "2026-10-26T20:58:50+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -74,7 +74,7 @@
      "fred": "DFF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-22",
+      "date": "2026-10-23",
       "value": 3.88
      }
     },
@@ -82,16 +82,16 @@
      "fred": "DGS2",
      "status": "ok",
      "latest": {
-      "date": "2026-10-22",
-      "value": 4.65
+      "date": "2026-10-23",
+      "value": 4.69
      }
     },
     "dgs10": {
      "fred": "DGS10",
      "status": "ok",
      "latest": {
-      "date": "2026-10-22",
-      "value": 4.96
+      "date": "2026-10-23",
+      "value": 5.0
      }
     },
     "spread": {
@@ -278,24 +278,24 @@
      "fred": "DTS",
      "status": "ok",
      "latest": {
-      "date": "2026-10-22",
-      "value": 262.445
+      "date": "2026-10-23",
+      "value": 269.817
      }
     },
     "dts_yoy": {
      "fred": "DTS",
      "status": "ok",
      "latest": {
-      "date": "2026-10-22",
-      "value": 2.3273
+      "date": "2026-10-23",
+      "value": 8.3093
      }
     },
     "dts_yoy60": {
      "fred": "DTS",
      "status": "ok",
      "latest": {
-      "date": "2026-10-22",
-      "value": 5.412
+      "date": "2026-10-23",
+      "value": 5.1624
      }
     },
     "gas": {
@@ -421,7 +421,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-26T19:34:31+00:00",
+   "checked_at": "2026-10-26T20:59:10+00:00",
    "data_changed_at": "2026-10-26T11:38:39+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2067,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-26T20:13:33+00:00",
-   "data_changed_at": "2026-10-26T20:11:41+00:00",
+   "checked_at": "2026-10-26T21:01:11+00:00",
+   "data_changed_at": "2026-10-26T20:59:28+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,7 +2083,7 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-26T19:37:40+00:00",
+   "checked_at": "2026-10-26T21:02:27+00:00",
    "data_changed_at": "2026-10-26T19:36:42+00:00",
    "series": {
     "gprd": {
@@ -2409,15 +2409,15 @@
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-10-26T19:34:54+00:00",
-   "data_changed_at": "2026-10-26T19:34:31+00:00",
+   "checked_at": "2026-10-26T20:59:28+00:00",
+   "data_changed_at": "2026-10-26T20:59:10+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
      "status": "ok",
      "latest": {
-      "date": "2026-10-22",
-      "value": 0.88
+      "date": "2026-10-23",
+      "value": 0.9
      }
     },
     "2s10s": {
@@ -2440,7 +2440,7 @@
      "fred": "DGS10",
      "status": "ok",
      "latest": {
-      "date": "2026-10-22",
+      "date": "2026-10-23",
       "value": 99.0
      }
     },
@@ -2448,8 +2448,8 @@
      "fred": "DGS2",
      "status": "ok",
      "latest": {
-      "date": "2026-10-22",
-      "value": 120.0
+      "date": "2026-10-23",
+      "value": 121.0
      }
     },
     "ul_all": {
@@ -2472,24 +2472,24 @@
      "fred": "DGS10",
      "status": "ok",
      "latest": {
-      "date": "2026-10-22",
-      "value": 0.0
+      "date": "2026-10-23",
+      "value": -11.0
      }
     },
     "ust10_3m": {
      "fred": "DGS10",
      "status": "ok",
      "latest": {
-      "date": "2026-10-22",
-      "value": 25.0
+      "date": "2026-10-23",
+      "value": 31.0
      }
     },
     "policy_path": {
      "fred": "DGS1+DFF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-22",
-      "value": 2.12
+      "date": "2026-10-23",
+      "value": 2.24
      }
     },
     "h8_small_loans": {
@@ -2553,7 +2553,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-26",
-      "value": 102.8592
+      "value": 102.1914
      }
     },
     "hy_lvl": {
@@ -2649,7 +2649,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-26",
-      "value": -0.3442
+      "value": -0.4919
      }
     },
     "kre_xlf_3m": {
@@ -2657,7 +2657,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-26",
-      "value": -2.2616
+      "value": -2.4065
      }
     },
     "iwm_spy_1m": {
@@ -2665,7 +2665,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-26",
-      "value": -0.953
+      "value": -0.9986
      }
     },
     "iwm_spy_3m": {
@@ -2673,7 +2673,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-26",
-      "value": -8.5531
+      "value": -8.5953
      }
     },
     "dep_pricing": {
@@ -2743,6 +2743,6 @@
    }
   }
  },
- "checked_at": "2026-10-26T20:13:33+00:00",
+ "checked_at": "2026-10-26T21:02:27+00:00",
  "ok": true
 }
