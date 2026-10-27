@@ -1,7 +1,7 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-27T00:31:33+00:00",
+   "checked_at": "2026-10-27T11:38:29+00:00",
    "data_changed_at": "2026-10-27T00:31:29+00:00",
    "series": {
     "gdp": {
@@ -421,8 +421,8 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-27T00:31:54+00:00",
-   "data_changed_at": "2026-10-27T00:31:33+00:00",
+   "checked_at": "2026-10-27T11:38:39+00:00",
+   "data_changed_at": "2026-10-27T11:38:29+00:00",
    "series": {
     "LLBDCBW027SBOG": {
      "fred": "LLBDCBW027SBOG",
@@ -2067,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-27T00:34:02+00:00",
-   "data_changed_at": "2026-10-27T00:32:13+00:00",
+   "checked_at": "2026-10-27T11:40:37+00:00",
+   "data_changed_at": "2026-10-27T11:38:55+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,8 +2083,8 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-27T00:35:00+00:00",
-   "data_changed_at": "2026-10-26T19:36:42+00:00",
+   "checked_at": "2026-10-27T11:40:45+00:00",
+   "data_changed_at": "2026-10-27T11:40:37+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
@@ -2216,201 +2216,225 @@
     },
     "pw_hormuz": {
      "fred": "PortWatch chokepoint6",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 3.7143
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_hormuz_tank": {
      "fred": "PortWatch chokepoint6",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 0.5714
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_hormuz_cont": {
      "fred": "PortWatch chokepoint6",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 0.2857
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_hormuz_ly": {
      "fred": "PortWatch chokepoint6",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 73.7143
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_babelmandeb": {
      "fred": "PortWatch chokepoint4",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 26.4286
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_babelmandeb_tank": {
      "fred": "PortWatch chokepoint4",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 10.0
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_babelmandeb_cont": {
      "fred": "PortWatch chokepoint4",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 4.7143
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_babelmandeb_ly": {
      "fred": "PortWatch chokepoint4",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 37.5714
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_suez": {
      "fred": "PortWatch chokepoint1",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 44.2857
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_suez_tank": {
      "fred": "PortWatch chokepoint1",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 15.8571
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_suez_cont": {
      "fred": "PortWatch chokepoint1",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 13.4286
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_suez_ly": {
      "fred": "PortWatch chokepoint1",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 43.7143
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_panama": {
      "fred": "PortWatch chokepoint2",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 27.7143
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_panama_tank": {
      "fred": "PortWatch chokepoint2",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 13.0
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_panama_cont": {
      "fred": "PortWatch chokepoint2",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 7.0
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_panama_ly": {
      "fred": "PortWatch chokepoint2",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 32.5714
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_malacca": {
      "fred": "PortWatch chokepoint5",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 215.1429
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_malacca_tank": {
      "fred": "PortWatch chokepoint5",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 71.4286
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_malacca_cont": {
      "fred": "PortWatch chokepoint5",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 58.2857
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_malacca_ly": {
      "fred": "PortWatch chokepoint5",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 245.0
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_bosporus": {
      "fred": "PortWatch chokepoint3",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 46.5714
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_bosporus_tank": {
      "fred": "PortWatch chokepoint3",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 14.4286
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_bosporus_cont": {
      "fred": "PortWatch chokepoint3",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 6.0
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     },
     "pw_bosporus_ly": {
      "fred": "PortWatch chokepoint3",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-18",
       "value": 101.2857
-     }
+     },
+     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
     }
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-10-27T00:32:13+00:00",
-   "data_changed_at": "2026-10-27T00:31:54+00:00",
+   "checked_at": "2026-10-27T11:38:55+00:00",
+   "data_changed_at": "2026-10-27T11:38:39+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2553,7 +2577,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-26",
-      "value": 102.1914
+      "value": 102.19
      }
     },
     "hy_lvl": {
@@ -2648,32 +2672,32 @@
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-23",
-      "value": -0.3607
+      "date": "2026-10-26",
+      "value": -0.4919
      }
     },
     "kre_xlf_3m": {
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-23",
-      "value": -2.16
+      "date": "2026-10-26",
+      "value": -2.4065
      }
     },
     "iwm_spy_1m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-10-23",
-      "value": -1.1695
+      "date": "2026-10-26",
+      "value": -0.9986
      }
     },
     "iwm_spy_3m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-10-23",
-      "value": -8.4332
+      "date": "2026-10-26",
+      "value": -8.5953
      }
     },
     "dep_pricing": {
@@ -2743,6 +2767,6 @@
    }
   }
  },
- "checked_at": "2026-10-27T00:35:00+00:00",
- "ok": true
+ "checked_at": "2026-10-27T11:40:45+00:00",
+ "ok": false
 }
