@@ -125,7 +125,7 @@
     const chk = await lastChecked(area.id);
     stamp.innerHTML = "Last updated " + fmtTime(chk) + (chk !== D.updated_at ? '<br><span style="opacity:.75">FRED data last changed ' + fmtTime(D.updated_at) + "</span>" : "");
     const inSec = new Set(cfg.sections.flatMap(sec => sec.kpis || []));
-    const kpis = D.kpis ? D.kpis.map(chipTile).join("") : cfg.series.filter(s => s.kpi !== false && !inSec.has(s.key)).map(s => kpiCard(S[s.key], S)).join("");
+    const kpis = D.kpis ? D.kpis.map(t => chipTile(t, D.series)).join("") : cfg.series.filter(s => s.kpi !== false && !inSec.has(s.key)).map(s => kpiCard(S[s.key], S)).join("");
     const secs = cfg.sections.map((sec, i) => "<h2>" + esc(sec.title) + (sec.link ? ' <a class="hint" href="' + esc(sec.link) + '" target="_blank" rel="noopener noreferrer">source page ' + EXT + "</a>" : "") + "</h2>" + (sec.note ? '<p class="secnote">' + esc(sec.note) + "</p>" : "") +
       (sec.kpis ? '<div class="kpis sec' + (sec.kpi_cols === 3 ? " c3" : "") + '">' + sec.kpis.map(k => kpiCard(S[k], S)).join("") + "</div>" : "") + (sec.nowcast_table ? nowcastTable(sec.nowcast_table, S) : "") + (sec.growth5y && D.growth5y ? '<div id="g5">' + growthTable(D.growth5y) + "</div>" : "") + (sec.auctions ? auctionsTable(D.auctions) : "") + (sec.deposit_pricing ? depositTables(D.deposit_pricing) : "") + (sec.sloos ? '<div id="sloos">' + sloosTable(sec.sloos, S) + "</div>" : "") + (sec.quarterly && D.quarterly ? '<div id="qtr">' + quarterlyTable(D.quarterly, area.id) + "</div>" : "") + (sec.panels.length ? '<div class="panels' + (sec.cols === 2 ? " c2" : "") + '">' + sec.panels.map((p, j) =>
       '<div class="panel' + (p.wide ? " wide" : "") + (p.full ? " full" : "") + '"><h4>' + esc(p.title) + "</h4>" + (cfg.panel_latest ? panelLatest(p, S) : "") + '<div class="cv"><canvas id="c' + i + "_" + j + '"></canvas></div>' + (p.note ? '<div class="pnote">' + esc(p.note) + "</div>" : "") + '<div class="src">Source: ' + [...new Set(p.series.map(k => S[k].src_label || "FRED " + S[k].fred))].map(esc).join(" · ") + "</div></div>").join("") + "</div>" : "")).join("") +
@@ -549,13 +549,30 @@
     if (fmt === "pct2") return v.toFixed(2) + "%";
     return fmtVal(v, fmt);
   }
-  function chipTile(t) {
+  // trend: latest weekly vs prior-4-wk avg, and QTD avg vs prior-quarter avg (from real H.8 obs only)
+  function h8Trend(t, SS) {
+    const S = SS && SS[t.key]; if (!S || !S.obs || t.freq !== "Weekly" || t.latest == null) return "";
+    const o = S.obs.filter(x => x[1] != null), n = o.length; if (n < 6) return "";
+    const pct = t.unit === "pct", ms = d => Date.parse(d), avg = a => a.reduce((s, x) => s + x[1], 0) / a.length, mdt = a => a.reduce((s, x) => s + ms(x[0]), 0) / a.length;
+    const ann = (a, b, wks) => pct ? (Math.pow(a / b, 52 / wks) - 1) * 100 : null;
+    const row = (lbl, a, b, wks, tip) => { const d = pct ? (a / b - 1) * 100 : (a - b) * 100, an = ann(a, b, wks), c = (Math.abs(d) < 1e-9 || !t.polarity) ? "flat" : ((d > 0) === (t.polarity > 0) ? "pos" : "neg");
+      return '<div class="tr ' + c + '" title="' + esc(tip) + '"><span>' + lbl + '</span><b>' + (d > 0 ? "▲ " : d < 0 ? "▼ " : "") + (d > 0 ? "+" : "") + d.toFixed(2) + (pct ? "%" : " bp") + (an != null ? ' <i>' + (an > 0 ? "+" : "") + an.toFixed(1) + "% ann.</i>" : "") + "</b></div>"; };
+    let h = "";
+    const L = o[n - 1], P4 = o.slice(n - 5, n - 1);
+    h += row("Latest vs 4-wk avg", L[1], avg(P4), (ms(L[0]) - mdt(P4)) / 6048e5, "Latest " + L[0] + " vs avg of " + P4[0][0] + " to " + P4[3][0] + (pct ? "; annualized over the gap to the 4-wk avg midpoint" : ""));
+    const q = d => { const y = +d.slice(0, 4), m = +d.slice(5, 7); return y * 4 + Math.floor((m - 1) / 3); };
+    const qc = q(L[0]), Q = o.filter(x => q(x[0]) === qc), PQ = o.filter(x => q(x[0]) === qc - 1);
+    if (Q.length && PQ.length) { const ql = k => "Q" + (k % 4 + 1);
+      h += row(ql(qc) + " QTD vs " + ql(qc - 1) + " · " + Q.length + " wk" + (Q.length > 1 ? "s" : ""), avg(Q), avg(PQ), (mdt(Q) - mdt(PQ)) / 6048e5, ql(qc) + " QTD avg (" + Q.length + " wks through " + L[0] + ") vs " + ql(qc - 1) + " avg (" + PQ.length + " wks)" + (pct ? "; annualized over the gap between period midpoints" : "")); }
+    return '<div class="trend">' + h + "</div>";
+  }
+  function chipTile(t, SS) {
     if (t.latest == null) return '<div class="kpi failed"><div class="t">' + esc(t.label) + '</div><div class="v">n/a</div><div class="d err">series unavailable</div></div>';
     const chips = ["1w", "1m", "1y"].map(h => { const c = t.chg && t.chg[h];
       const tip = c ? "vs " + fmtDate(c.vs_date, t.freq) + ": " + tileVal(t.fmt, c.vs_value) : "not meaningful at this frequency";
       return '<div title="' + esc(tip) + '"><span>' + h.toUpperCase() + '</span><b class="' + chgCls(t.polarity, c) + '">' + chgTxt(t.unit, c) + "</b></div>"; }).join("");
     return '<div class="kpi chip ' + (t.status !== "ok" ? t.status : "") + '" title="' + esc((t.src_label || "FRED") + " · " + t.key) + '"><div class="t">' + esc(t.label) + '</div><div class="v">' + tileVal(t.fmt, t.latest) +
-      '</div><div class="d">as of ' + fmtDate(t.asof, t.freq) + " · " + esc(t.freq || "") + (t.status === "stale" ? " · STALE" : "") + '</div><div class="chips">' + chips + "</div></div>";
+      '</div><div class="d">as of ' + fmtDate(t.asof, t.freq) + " · " + esc(t.freq || "") + (t.status === "stale" ? " · STALE" : "") + '</div><div class="chips">' + chips + "</div>" + h8Trend(t, SS) + "</div>";
   }
   function summaryTable(D, cfg) {
     const H = ["1w", "1m", "3m", "1y"]; let sec = null;
