@@ -54,6 +54,8 @@ def hli():
 # Fee rate ex performance fees (GAAP), as reported in the Jul and Oct 2026 releases' 5-quarter highlight tables
 FEE_REP = {"2025-06-30": 59.1, "2025-09-30": 59.1, "2025-12-31": 58.7, "2026-03-31": 59.0, "2026-06-30": 58.5, "2026-09-30": 58.3}
 
+PIPE = json.loads((RAW / "cns_pipeline.json").read_text())
+
 def cns():
     raw = json.loads((RAW / "cns_raw.json").read_text())
     ends = ["2021-12-31","2022-03-31","2022-06-30","2022-09-30","2022-12-31","2023-03-31","2023-06-30","2023-09-30","2023-12-31","2024-03-31","2024-06-30","2024-09-30","2024-12-31","2025-03-31","2025-06-30","2025-09-30","2025-12-31","2026-03-31","2026-06-30","2026-09-30"]
@@ -67,22 +69,23 @@ def cns():
             "flow_tot": round(T["net"] / 1000, 2), "flow_oe": round(r["oe"]["net"] / 1000, 2), "flow_inst": round(r["inst"]["net"] / 1000, 2), "flow_cef": round(r["cef"]["net"] / 1000, 2),
             "og": og(T), "rev": round(r["rev"], 1), "rev_adj": round(r["rev_adj"], 1),
             "fee_calc": round(r["rev_adj"] * 4 / (T["avg"] / 1000) * 10, 1),  # bps: $M*4 / $bn avg AUM -> bps
-            "fee_rep": FEE_REP.get(end), "opm_adj": r["opm"], "adj_eps": r["eps"]})
+            "fee_rep": FEE_REP.get(end), "pipe": PIPE[end]["bn"], "opm_adj": r["opm"], "adj_eps": r["eps"]})
     return {"ticker": "CNS", "name": "Cohen & Steers", "fiscal": "Calendar fiscal year.",
         "fields": [
             {"key": "aum_end", "label": "Ending AUM", "fmt": "bn1"}, {"key": "aum_avg", "label": "Average AUM", "fmt": "bn1"},
             {"key": "aum_oe", "label": "Open-end / Wealth AUM", "fmt": "bn1"}, {"key": "aum_inst", "label": "Institutional AUM", "fmt": "bn1"},
             {"key": "aum_cef", "label": "Closed-end AUM", "fmt": "bn1"}, {"key": "flow_tot", "label": "Net flows", "fmt": "bnf"},
             {"key": "flow_oe", "label": "Net flows: open-end / Wealth", "fmt": "bnf"}, {"key": "flow_inst", "label": "Net flows: institutional", "fmt": "bnf"},
-            {"key": "flow_cef", "label": "Net flows: closed-end", "fmt": "bnf"}, {"key": "og", "label": "Organic growth (ann.)*", "fmt": "pct1"},
+            {"key": "flow_cef", "label": "Net flows: closed-end", "fmt": "bnf"}, {"key": "pipe", "label": "Won-but-unfunded pipeline", "fmt": "bn2"}, {"key": "og", "label": "Organic growth (ann.)*", "fmt": "pct1"},
             {"key": "rev", "label": "Revenue (GAAP)", "fmt": "m1"}, {"key": "rev_adj", "label": "Revenue (adj.)", "fmt": "m1"},
             {"key": "fee_calc", "label": "Effective fee rate*", "fmt": "bps"}, {"key": "fee_rep", "label": "Reported fee rate ex perf.", "fmt": "bps"},
             {"key": "opm_adj", "label": "Op. margin (as adj.)", "fmt": "pct1"}, {"key": "adj_eps", "label": "Adj. diluted EPS", "fmt": "usd2"}],
         "tiles": ["aum_end", "flow_tot", "og"],
-        "kpis": ["aum_end", "aum_avg", "flow_tot", "og", "rev", "fee_calc", "opm_adj", "adj_eps"],
+        "kpis": ["aum_end", "aum_avg", "flow_tot", "og", "pipe", "rev", "fee_calc", "opm_adj", "adj_eps"],
         "charts": [
             {"title": "AUM by vehicle ($bn)", "type": "bar", "stacked": True, "series": ["aum_oe", "aum_inst", "aum_cef"]},
             {"title": "Net flows by vehicle ($bn)", "type": "bar", "stacked": True, "series": ["flow_oe", "flow_inst", "flow_cef"]},
+            {"title": "Institutional won-but-unfunded pipeline vs institutional net flows ($bn)", "type": "bar", "series": ["pipe", "flow_inst"], "zero": True},
             {"title": "Organic growth, annualized (%)", "type": "bar", "series": ["og"], "zero": True},
             {"title": "Effective fee rate (bps) and adj. operating margin (%)", "type": "line", "series": ["fee_calc", "opm_adj"], "y2": ["opm_adj"]},
             {"title": "Adj. EPS", "type": "bar", "series": ["adj_eps"]},
@@ -91,6 +94,7 @@ def cns():
         "notes": ["Source: Cohen & Steers quarterly earnings releases (SEC Form 8-K, Exhibit 99.2) incl. AUM-by-vehicle supplemental tables; one link per quarter. Each quarter is as first reported.",
             "Vehicle names: 'Open-end Funds' through Q2 2026; from Q3 2026 CNS reports 'Wealth' (mutual funds, ETFs, SICAVs, other wealth vehicles). Wealth AUM at Jun 30, 2026 equals the prior Open-end total, so the series is continuous.",
             "* Computed: organic growth = net flows x 4 / beginning AUM; effective fee rate = adjusted revenue x 4 / average AUM (includes performance fees).",
+            "Won-but-unfunded pipeline: institutional mandates awarded but not yet funded, $bn at quarter end. Not in the 8-K exhibits (checked all 20 filings); taken from the CEO's prepared remarks on each earnings call (transcript links in companies/raw/cns_pipeline.json). Values are as stated on the call, often rounded (e.g. $1.1bn). Q1 2023, Q1 2024 and Q3 2024 come from the following quarter's call ('compared with $X last quarter').",
             "Reported fee rate (ex performance fees) is first disclosed in the Q2 2026 release (with history back to Q2 2025); earlier quarters n/a."]}
 
 COMPANIES = [hli, cns]

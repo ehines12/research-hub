@@ -1,0 +1,102 @@
+{
+ "2021-12-31": {
+  "bn": 2.1,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2022/Q1/transcript",
+  "quote": "Q1 2022 call: 'compared with $2.1 billion last quarter'"
+ },
+ "2022-03-31": {
+  "bn": 1.5,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2022/Q1/transcript",
+  "quote": "'stands at $1.5 billion'"
+ },
+ "2022-06-30": {
+  "bn": 1.5,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2022/Q3/transcript",
+  "quote": "Q3 2022 call: 'compared with $1.5 billion last quarter'"
+ },
+ "2022-09-30": {
+  "bn": 1.1,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2022/Q3/transcript",
+  "quote": "'$1.1 billion'"
+ },
+ "2022-12-31": {
+  "bn": 0.885,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2022/Q4/transcript",
+  "quote": "'$885 million at year-end'"
+ },
+ "2023-03-31": {
+  "bn": 0.995,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2023/Q2/transcript",
+  "quote": "Q2 2023 call: up from $995 million in Q1"
+ },
+ "2023-06-30": {
+  "bn": 1.1,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2023/Q2/transcript",
+  "quote": "'$1.1 billion'"
+ },
+ "2023-09-30": {
+  "bn": 0.784,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2023/Q3/transcript",
+  "quote": "'$784 million'"
+ },
+ "2023-12-31": {
+  "bn": 1.2,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2023/Q4/transcript",
+  "quote": "'$1.2 billion' (up from $784M)"
+ },
+ "2024-03-31": {
+  "bn": 1.0,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2024/Q2/transcript",
+  "quote": "Q2 2024 call: unchanged from $1.0 billion in Q1"
+ },
+ "2024-06-30": {
+  "bn": 1.0,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2024/Q2/transcript",
+  "quote": "'$1.0 billion'"
+ },
+ "2024-09-30": {
+  "bn": 0.651,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2024/Q4/transcript",
+  "quote": "Q4 2024 call: down from $651 million in Q3"
+ },
+ "2024-12-31": {
+  "bn": 0.531,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2025/Q1/transcript",
+  "quote": "Q1 2025 call: 'compared with $531 million last quarter'"
+ },
+ "2025-03-31": {
+  "bn": 0.061,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2025/Q1/transcript",
+  "quote": "'ended the quarter at $61 million'"
+ },
+ "2025-06-30": {
+  "bn": 0.776,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2025/Q2/transcript",
+  "quote": "'$776 million'"
+ },
+ "2025-09-30": {
+  "bn": 1.75,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2025/Q3/transcript",
+  "quote": "'$1.75 billion'"
+ },
+ "2025-12-31": {
+  "bn": 1.72,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2025/Q4/transcript",
+  "quote": "'$1.72 billion across 20 mandates'"
+ },
+ "2026-03-31": {
+  "bn": 1.7,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2026/Q1/transcript",
+  "quote": "'$1.7 billion'"
+ },
+ "2026-06-30": {
+  "bn": 1.6,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2026/Q3/transcript",
+  "quote": "Q3 2026 call: up from $1.6 billion in Q2"
+ },
+ "2026-09-30": {
+  "bn": 1.9,
+  "source": "https://exa.ai/library/markets/stocks/CNS/earnings/FY2026/Q3/transcript",
+  "quote": "'grew to 1.9 billion'"
+ }
+}

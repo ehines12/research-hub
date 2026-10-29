@@ -643,6 +643,7 @@
     if (f === "m1") return "$" + v.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "M";
     if (f === "m2") return "$" + v.toFixed(2) + "M";
     if (f === "bn1") return "$" + v.toFixed(1) + "bn";
+    if (f === "bn2") return "$" + v.toFixed(2) + "bn";
     if (f === "bnf") return (v < 0 ? "−$" : "$") + Math.abs(v).toFixed(2) + "bn";
     if (f === "n0") return Math.round(v).toLocaleString();
     if (f === "x2") return v.toFixed(2);
