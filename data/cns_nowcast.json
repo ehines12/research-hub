@@ -1,0 +1,1230 @@
+{
+ "asof_prices": "2026-10-29",
+ "generated": "2026-10-29T17:54+00:00",
+ "current": {
+  "q": "Q4 2026",
+  "avg_aum": 98.86,
+  "end_aum_flat": 100.16,
+  "rev": 153.9,
+  "eps": 0.86,
+  "known_months": [],
+  "run_rate_month": 517.0,
+  "fee_bps": 61.76,
+  "eps_model": {
+   "a": -0.0996,
+   "b": 0.00626
+  },
+  "anchor": "2026-09-30",
+  "anchor_aum": 95.94,
+  "weights": {
+   "U.S. real estate (VNQ)": 49.2,
+   "Global/intl real estate (REET)": 15.0,
+   "Preferred securities (PFF)": 18.9,
+   "Global listed infrastructure (IGF)": 13.0,
+   "Multi-strategy real assets / other (GNR)": 3.9
+  },
+  "qtd_proxy": {
+   "U.S. real estate (VNQ)": 4.16,
+   "Global/intl real estate (REET)": 2.17,
+   "Global listed infrastructure (IGF)": 6.2,
+   "Preferred securities (PFF)": -3.0,
+   "Multi-strategy real assets / other (GNR)": 2.14
+  },
+  "path": [
+   {
+    "d": "2026-10-01",
+    "aum": 95.534,
+    "proj": false
+   },
+   {
+    "d": "2026-10-02",
+    "aum": 95.947,
+    "proj": false
+   },
+   {
+    "d": "2026-10-05",
+    "aum": 95.751,
+    "proj": false
+   },
+   {
+    "d": "2026-10-06",
+    "aum": 96.523,
+    "proj": false
+   },
+   {
+    "d": "2026-10-07",
+    "aum": 95.399,
+    "proj": false
+   },
+   {
+    "d": "2026-10-08",
+    "aum": 95.917,
+    "proj": false
+   },
+   {
+    "d": "2026-10-09",
+    "aum": 96.852,
+    "proj": false
+   },
+   {
+    "d": "2026-10-12",
+    "aum": 97.302,
+    "proj": false
+   },
+   {
+    "d": "2026-10-13",
+    "aum": 97.381,
+    "proj": false
+   },
+   {
+    "d": "2026-10-14",
+    "aum": 96.557,
+    "proj": false
+   },
+   {
+    "d": "2026-10-15",
+    "aum": 97.477,
+    "proj": false
+   },
+   {
+    "d": "2026-10-16",
+    "aum": 97.645,
+    "proj": false
+   },
+   {
+    "d": "2026-10-19",
+    "aum": 96.753,
+    "proj": false
+   },
+   {
+    "d": "2026-10-20",
+    "aum": 98.091,
+    "proj": false
+   },
+   {
+    "d": "2026-10-21",
+    "aum": 97.669,
+    "proj": false
+   },
+   {
+    "d": "2026-10-22",
+    "aum": 98.403,
+    "proj": false
+   },
+   {
+    "d": "2026-10-23",
+    "aum": 98.448,
+    "proj": false
+   },
+   {
+    "d": "2026-10-26",
+    "aum": 98.777,
+    "proj": false
+   },
+   {
+    "d": "2026-10-27",
+    "aum": 98.431,
+    "proj": false
+   },
+   {
+    "d": "2026-10-28",
+    "aum": 97.961,
+    "proj": false
+   },
+   {
+    "d": "2026-10-29",
+    "aum": 99.051,
+    "proj": false
+   },
+   {
+    "d": "2026-10-30",
+    "aum": 99.075,
+    "proj": true
+   },
+   {
+    "d": "2026-11-02",
+    "aum": 99.1,
+    "proj": true
+   },
+   {
+    "d": "2026-11-03",
+    "aum": 99.124,
+    "proj": true
+   },
+   {
+    "d": "2026-11-04",
+    "aum": 99.149,
+    "proj": true
+   },
+   {
+    "d": "2026-11-05",
+    "aum": 99.174,
+    "proj": true
+   },
+   {
+    "d": "2026-11-06",
+    "aum": 99.198,
+    "proj": true
+   },
+   {
+    "d": "2026-11-09",
+    "aum": 99.223,
+    "proj": true
+   },
+   {
+    "d": "2026-11-10",
+    "aum": 99.247,
+    "proj": true
+   },
+   {
+    "d": "2026-11-11",
+    "aum": 99.272,
+    "proj": true
+   },
+   {
+    "d": "2026-11-12",
+    "aum": 99.297,
+    "proj": true
+   },
+   {
+    "d": "2026-11-13",
+    "aum": 99.321,
+    "proj": true
+   },
+   {
+    "d": "2026-11-16",
+    "aum": 99.346,
+    "proj": true
+   },
+   {
+    "d": "2026-11-17",
+    "aum": 99.371,
+    "proj": true
+   },
+   {
+    "d": "2026-11-18",
+    "aum": 99.395,
+    "proj": true
+   },
+   {
+    "d": "2026-11-19",
+    "aum": 99.42,
+    "proj": true
+   },
+   {
+    "d": "2026-11-20",
+    "aum": 99.444,
+    "proj": true
+   },
+   {
+    "d": "2026-11-23",
+    "aum": 99.469,
+    "proj": true
+   },
+   {
+    "d": "2026-11-24",
+    "aum": 99.494,
+    "proj": true
+   },
+   {
+    "d": "2026-11-25",
+    "aum": 99.518,
+    "proj": true
+   },
+   {
+    "d": "2026-11-26",
+    "aum": 99.543,
+    "proj": true
+   },
+   {
+    "d": "2026-11-27",
+    "aum": 99.568,
+    "proj": true
+   },
+   {
+    "d": "2026-11-30",
+    "aum": 99.592,
+    "proj": true
+   },
+   {
+    "d": "2026-12-01",
+    "aum": 99.617,
+    "proj": true
+   },
+   {
+    "d": "2026-12-02",
+    "aum": 99.641,
+    "proj": true
+   },
+   {
+    "d": "2026-12-03",
+    "aum": 99.666,
+    "proj": true
+   },
+   {
+    "d": "2026-12-04",
+    "aum": 99.691,
+    "proj": true
+   },
+   {
+    "d": "2026-12-07",
+    "aum": 99.715,
+    "proj": true
+   },
+   {
+    "d": "2026-12-08",
+    "aum": 99.74,
+    "proj": true
+   },
+   {
+    "d": "2026-12-09",
+    "aum": 99.764,
+    "proj": true
+   },
+   {
+    "d": "2026-12-10",
+    "aum": 99.789,
+    "proj": true
+   },
+   {
+    "d": "2026-12-11",
+    "aum": 99.814,
+    "proj": true
+   },
+   {
+    "d": "2026-12-14",
+    "aum": 99.838,
+    "proj": true
+   },
+   {
+    "d": "2026-12-15",
+    "aum": 99.863,
+    "proj": true
+   },
+   {
+    "d": "2026-12-16",
+    "aum": 99.888,
+    "proj": true
+   },
+   {
+    "d": "2026-12-17",
+    "aum": 99.912,
+    "proj": true
+   },
+   {
+    "d": "2026-12-18",
+    "aum": 99.937,
+    "proj": true
+   },
+   {
+    "d": "2026-12-21",
+    "aum": 99.961,
+    "proj": true
+   },
+   {
+    "d": "2026-12-22",
+    "aum": 99.986,
+    "proj": true
+   },
+   {
+    "d": "2026-12-23",
+    "aum": 100.011,
+    "proj": true
+   },
+   {
+    "d": "2026-12-24",
+    "aum": 100.035,
+    "proj": true
+   },
+   {
+    "d": "2026-12-25",
+    "aum": 100.06,
+    "proj": true
+   },
+   {
+    "d": "2026-12-28",
+    "aum": 100.085,
+    "proj": true
+   },
+   {
+    "d": "2026-12-29",
+    "aum": 100.109,
+    "proj": true
+   },
+   {
+    "d": "2026-12-30",
+    "aum": 100.134,
+    "proj": true
+   },
+   {
+    "d": "2026-12-31",
+    "aum": 100.158,
+    "proj": true
+   }
+  ]
+ },
+ "next": {
+  "q": "Q1 2027",
+  "avg_aum": 100.96,
+  "rev": 153.7,
+  "eps": 0.86
+ },
+ "consensus": {
+  "asof": "2026-10-29",
+  "note": "Sell-side coverage of CNS is thin (1-2 analysts) and providers disagree; treat as low confidence. Revenue = GAAP total revenue; EPS = adjusted diluted EPS.",
+  "providers": [
+   {
+    "name": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/quote/CNS/analysis/",
+    "q4_rev": 154.82,
+    "q4_eps": 0.81,
+    "analysts": "rev 2 / EPS 1",
+    "q1_rev": null,
+    "q1_eps": null
+   },
+   {
+    "name": "FXEmpire",
+    "url": "https://www.fxempire.com/stocks/cns/earnings",
+    "q4_rev": 152.99,
+    "q4_eps": 0.85,
+    "analysts": "n/a",
+    "q1_rev": null,
+    "q1_eps": null
+   },
+   {
+    "name": "Backpack Securities",
+    "url": "https://backpack.exchange/stocks/CNS/earnings/estimates",
+    "q4_rev": 151.48,
+    "q4_eps": 0.88,
+    "analysts": "rev 2 / EPS 1",
+    "q1_rev": 150.16,
+    "q1_eps": 0.9
+   },
+   {
+    "name": "Business Quant",
+    "url": "https://businessquant.com/stocks/cns/estimates/",
+    "q4_rev": 144.63,
+    "q4_eps": 0.84,
+    "analysts": "n/a",
+    "q1_rev": 156.16,
+    "q1_eps": 0.96
+   }
+  ]
+ },
+ "backtest": [
+  {
+   "q": "Q1 2022",
+   "end": "2022-03-31",
+   "act_avg": 101.24,
+   "act_rev": 154.2,
+   "act_eps": 1.04,
+   "M1": {
+    "avg": 101.22,
+    "rev": 155.5,
+    "eps": null
+   },
+   "M2": {
+    "avg": 100.93,
+    "rev": 155.0,
+    "eps": null
+   },
+   "QE": {
+    "avg": 100.96,
+    "rev": 155.1,
+    "eps": null
+   }
+  },
+  {
+   "q": "Q2 2022",
+   "end": "2022-06-30",
+   "act_avg": 95.12,
+   "act_rev": 147.4,
+   "act_eps": 0.96,
+   "M1": {
+    "avg": 98.94,
+    "rev": 152.4,
+    "eps": null
+   },
+   "M2": {
+    "avg": 97.21,
+    "rev": 149.7,
+    "eps": null
+   },
+   "QE": {
+    "avg": 94.38,
+    "rev": 145.3,
+    "eps": null
+   }
+  },
+  {
+   "q": "Q3 2022",
+   "end": "2022-09-30",
+   "act_avg": 89.74,
+   "act_rev": 140.0,
+   "act_eps": 0.92,
+   "M1": {
+    "avg": 92.41,
+    "rev": 144.8,
+    "eps": null
+   },
+   "M2": {
+    "avg": 90.59,
+    "rev": 141.9,
+    "eps": null
+   },
+   "QE": {
+    "avg": 89.88,
+    "rev": 140.8,
+    "eps": null
+   }
+  },
+  {
+   "q": "Q4 2022",
+   "end": "2022-12-31",
+   "act_avg": 80.51,
+   "act_rev": 125.3,
+   "act_eps": 0.79,
+   "M1": {
+    "avg": 79.8,
+    "rev": 124.5,
+    "eps": 0.643
+   },
+   "M2": {
+    "avg": 81.32,
+    "rev": 126.9,
+    "eps": 0.679
+   },
+   "QE": {
+    "avg": 80.33,
+    "rev": 125.3,
+    "eps": 0.656
+   }
+  },
+  {
+   "q": "Q1 2023",
+   "end": "2023-03-31",
+   "act_avg": 83.2,
+   "act_rev": 126.1,
+   "act_eps": 0.76,
+   "M1": {
+    "avg": 86.53,
+    "rev": 131.7,
+    "eps": 0.832
+   },
+   "M2": {
+    "avg": 84.36,
+    "rev": 128.4,
+    "eps": 0.794
+   },
+   "QE": {
+    "avg": 83.3,
+    "rev": 126.8,
+    "eps": 0.775
+   }
+  },
+  {
+   "q": "Q2 2023",
+   "end": "2023-06-30",
+   "act_avg": 79.41,
+   "act_rev": 120.6,
+   "act_eps": 0.7,
+   "M1": {
+    "avg": 80.07,
+    "rev": 122.7,
+    "eps": 0.724
+   },
+   "M2": {
+    "avg": 78.44,
+    "rev": 120.2,
+    "eps": 0.695
+   },
+   "QE": {
+    "avg": 79.0,
+    "rev": 121.1,
+    "eps": 0.705
+   }
+  },
+  {
+   "q": "Q3 2023",
+   "end": "2023-09-30",
+   "act_avg": 79.97,
+   "act_rev": 123.7,
+   "act_eps": 0.7,
+   "M1": {
+    "avg": 81.65,
+    "rev": 125.4,
+    "eps": 0.756
+   },
+   "M2": {
+    "avg": 80.39,
+    "rev": 123.4,
+    "eps": 0.733
+   },
+   "QE": {
+    "avg": 79.88,
+    "rev": 122.7,
+    "eps": 0.724
+   }
+  },
+  {
+   "q": "Q4 2023",
+   "end": "2023-12-31",
+   "act_avg": 76.99,
+   "act_rev": 119.2,
+   "act_eps": 0.67,
+   "M1": {
+    "avg": 72.35,
+    "rev": 111.9,
+    "eps": 0.586
+   },
+   "M2": {
+    "avg": 76.07,
+    "rev": 117.7,
+    "eps": 0.655
+   },
+   "QE": {
+    "avg": 76.87,
+    "rev": 118.9,
+    "eps": 0.67
+   }
+  },
+  {
+   "q": "Q1 2024",
+   "end": "2024-03-31",
+   "act_avg": 80.17,
+   "act_rev": 122.7,
+   "act_eps": 0.7,
+   "M1": {
+    "avg": 80.51,
+    "rev": 123.3,
+    "eps": 0.728
+   },
+   "M2": {
+    "avg": 79.83,
+    "rev": 122.3,
+    "eps": 0.717
+   },
+   "QE": {
+    "avg": 80.0,
+    "rev": 122.5,
+    "eps": 0.72
+   }
+  },
+  {
+   "q": "Q2 2024",
+   "end": "2024-06-30",
+   "act_avg": 79.58,
+   "act_rev": 121.7,
+   "act_eps": 0.68,
+   "M1": {
+    "avg": 75.98,
+    "rev": 116.3,
+    "eps": 0.65
+   },
+   "M2": {
+    "avg": 79.31,
+    "rev": 121.4,
+    "eps": 0.704
+   },
+   "QE": {
+    "avg": 79.35,
+    "rev": 121.4,
+    "eps": 0.704
+   }
+  },
+  {
+   "q": "Q3 2024",
+   "end": "2024-09-30",
+   "act_avg": 86.23,
+   "act_rev": 133.2,
+   "act_eps": 0.77,
+   "M1": {
+    "avg": 84.28,
+    "rev": 130.3,
+    "eps": 0.806
+   },
+   "M2": {
+    "avg": 85.52,
+    "rev": 132.2,
+    "eps": 0.83
+   },
+   "QE": {
+    "avg": 86.07,
+    "rev": 133.1,
+    "eps": 0.841
+   }
+  },
+  {
+   "q": "Q4 2024",
+   "end": "2024-12-31",
+   "act_avg": 89.44,
+   "act_rev": 139.8,
+   "act_eps": 0.78,
+   "M1": {
+    "avg": 90.3,
+    "rev": 139.5,
+    "eps": 0.846
+   },
+   "M2": {
+    "avg": 91.65,
+    "rev": 141.6,
+    "eps": 0.862
+   },
+   "QE": {
+    "avg": 89.33,
+    "rev": 138.0,
+    "eps": 0.833
+   }
+  },
+  {
+   "q": "Q1 2025",
+   "end": "2025-03-31",
+   "act_avg": 86.78,
+   "act_rev": 134.5,
+   "act_eps": 0.75,
+   "M1": {
+    "avg": 87.35,
+    "rev": 133.6,
+    "eps": 0.762
+   },
+   "M2": {
+    "avg": 87.31,
+    "rev": 133.5,
+    "eps": 0.762
+   },
+   "QE": {
+    "avg": 86.65,
+    "rev": 132.5,
+    "eps": 0.756
+   }
+  },
+  {
+   "q": "Q2 2025",
+   "end": "2025-06-30",
+   "act_avg": 87.24,
+   "act_rev": 136.1,
+   "act_eps": 0.73,
+   "M1": {
+    "avg": 85.71,
+    "rev": 134.3,
+    "eps": 0.757
+   },
+   "M2": {
+    "avg": 87.44,
+    "rev": 137.0,
+    "eps": 0.772
+   },
+   "QE": {
+    "avg": 87.28,
+    "rev": 136.8,
+    "eps": 0.77
+   }
+  },
+  {
+   "q": "Q3 2025",
+   "end": "2025-09-30",
+   "act_avg": 89.74,
+   "act_rev": 141.7,
+   "act_eps": 0.81,
+   "M1": {
+    "avg": 89.35,
+    "rev": 140.9,
+    "eps": 0.781
+   },
+   "M2": {
+    "avg": 90.21,
+    "rev": 142.3,
+    "eps": 0.788
+   },
+   "QE": {
+    "avg": 89.76,
+    "rev": 141.6,
+    "eps": 0.785
+   }
+  },
+  {
+   "q": "Q4 2025",
+   "end": "2025-12-31",
+   "act_avg": 90.75,
+   "act_rev": 143.8,
+   "act_eps": 0.81,
+   "M1": {
+    "avg": 89.87,
+    "rev": 141.9,
+    "eps": 0.795
+   },
+   "M2": {
+    "avg": 91.68,
+    "rev": 144.8,
+    "eps": 0.81
+   },
+   "QE": {
+    "avg": 90.79,
+    "rev": 143.4,
+    "eps": 0.803
+   }
+  },
+  {
+   "q": "Q1 2026",
+   "end": "2026-03-31",
+   "act_avg": 94.36,
+   "act_rev": 145.6,
+   "act_eps": 0.79,
+   "M1": {
+    "avg": 93.38,
+    "rev": 144.8,
+    "eps": 0.812
+   },
+   "M2": {
+    "avg": 95.47,
+    "rev": 148.0,
+    "eps": 0.829
+   },
+   "QE": {
+    "avg": 94.32,
+    "rev": 146.2,
+    "eps": 0.819
+   }
+  },
+  {
+   "q": "Q2 2026",
+   "end": "2026-06-30",
+   "act_avg": 98.98,
+   "act_rev": 152.7,
+   "act_eps": 0.85,
+   "M1": {
+    "avg": 98.73,
+    "rev": 154.0,
+    "eps": 0.854
+   },
+   "M2": {
+    "avg": 99.06,
+    "rev": 154.6,
+    "eps": 0.857
+   },
+   "QE": {
+    "avg": 99.01,
+    "rev": 154.5,
+    "eps": 0.856
+   }
+  },
+  {
+   "q": "Q3 2026",
+   "end": "2026-09-30",
+   "act_avg": 101.11,
+   "act_rev": 157.4,
+   "act_eps": 0.89,
+   "M1": {
+    "avg": 102.72,
+    "rev": 160.2,
+    "eps": 0.884
+   },
+   "M2": {
+    "avg": 101.91,
+    "rev": 159.0,
+    "eps": 0.877
+   },
+   "QE": {
+    "avg": 101.0,
+    "rev": 157.5,
+    "eps": 0.87
+   }
+  }
+ ],
+ "bt_stats": {
+  "M1": {
+   "avg": {
+    "n": 19,
+    "mape": 1.88,
+    "bias": -0.03,
+    "max": -6.03
+   },
+   "rev": {
+    "n": 19,
+    "mape": 1.91,
+    "bias": 0.02,
+    "max": -6.12
+   },
+   "eps": {
+    "n": 16,
+    "mae": 0.041,
+    "bias": 0.002
+   }
+  },
+  "M2": {
+   "avg": {
+    "n": 19,
+    "mape": 0.91,
+    "bias": 0.46,
+    "max": 2.47
+   },
+   "rev": {
+    "n": 19,
+    "mape": 0.92,
+    "bias": 0.51,
+    "max": 1.82
+   },
+   "eps": {
+    "n": 16,
+    "mae": 0.032,
+    "bias": 0.011
+   }
+  },
+  "QE": {
+   "avg": {
+    "n": 19,
+    "mape": 0.19,
+    "bias": -0.14,
+    "max": -0.78
+   },
+   "rev": {
+    "n": 19,
+    "mape": 0.55,
+    "bias": -0.09,
+    "max": -1.49
+   },
+   "eps": {
+    "n": 16,
+    "mae": 0.03,
+    "bias": 0.007
+   }
+  }
+ },
+ "wealth": {
+  "snapshots": 1,
+  "first": "2026-10-29",
+  "last": "2026-10-29",
+  "weeks": [],
+  "cov_mf_bn": 38.19,
+  "cov_etf_bn": 1.3,
+  "rep_mf_bn": 40.012,
+  "rep_etf_bn": 1.31,
+  "rep_asof": "2026-09-30",
+  "funds": [
+   {
+    "sym": "CSRSX",
+    "name": "Realty Shares",
+    "na_bn": 7.573,
+    "etf": false
+   },
+   {
+    "sym": "CSRIX",
+    "name": "Institutional Realty Shares",
+    "na_bn": 8.697,
+    "etf": false
+   },
+   {
+    "sym": "CSDIX",
+    "name": "Real Estate Securities",
+    "na_bn": 9.067,
+    "etf": false
+   },
+   {
+    "sym": "CSSPX",
+    "name": "Global Realty",
+    "na_bn": 2.17,
+    "etf": false
+   },
+   {
+    "sym": "IRFIX",
+    "name": "International Realty",
+    "na_bn": 0.224,
+    "etf": false
+   },
+   {
+    "sym": "CSUIX",
+    "name": "Global Infrastructure",
+    "na_bn": 1.067,
+    "etf": false
+   },
+   {
+    "sym": "CPXIX",
+    "name": "Preferred Securities & Income",
+    "na_bn": 6.893,
+    "etf": false
+   },
+   {
+    "sym": "LPXIX",
+    "name": "Low Duration Preferred & Income",
+    "na_bn": null,
+    "etf": false
+   },
+   {
+    "sym": "RAPIX",
+    "name": "Real Assets",
+    "na_bn": 2.095,
+    "etf": false
+   },
+   {
+    "sym": "PISHX",
+    "name": "Preferred Sec. & Income SMA Shares",
+    "na_bn": 0.403,
+    "etf": false
+   },
+   {
+    "sym": "CSRE",
+    "name": "Real Estate Active ETF",
+    "na_bn": 0.563,
+    "etf": true
+   },
+   {
+    "sym": "CSPF",
+    "name": "Preferred & Income Opp. Active ETF",
+    "na_bn": 0.333,
+    "etf": true
+   },
+   {
+    "sym": "CSNR",
+    "name": "Natural Resources Active ETF",
+    "na_bn": 0.118,
+    "etf": true
+   },
+   {
+    "sym": "CSSD",
+    "name": "Short Duration Pref. Active ETF",
+    "na_bn": 0.063,
+    "etf": true
+   },
+   {
+    "sym": "CSIO",
+    "name": "Infrastructure Opp. Active ETF",
+    "na_bn": 0.049,
+    "etf": true
+   },
+   {
+    "sym": "CSEN",
+    "name": "Future of Energy Active ETF",
+    "na_bn": 0.154,
+    "etf": true
+   },
+   {
+    "sym": "CSRA",
+    "name": "Real Assets Active ETF",
+    "na_bn": 0.018,
+    "etf": true
+   }
+  ]
+ },
+ "pipeline": {
+  "next1": {
+   "a": -0.602,
+   "b": 0.312,
+   "r2": 0.061,
+   "n": 19,
+   "t": 1.05,
+   "resid_sd": 0.632
+  },
+  "next2": {
+   "a": -1.145,
+   "b": 0.558,
+   "r2": 0.089,
+   "n": 18,
+   "t": 1.25,
+   "resid_sd": 0.933
+  },
+  "pipe_now": 1.9,
+  "implied_next_q": -0.01,
+  "implied_next_2q": -0.08,
+  "points": [
+   {
+    "q": "Q4 2021",
+    "pipe": 2.1,
+    "next_inst": -0.01
+   },
+   {
+    "q": "Q1 2022",
+    "pipe": 1.5,
+    "next_inst": -0.47
+   },
+   {
+    "q": "Q2 2022",
+    "pipe": 1.5,
+    "next_inst": 0.12
+   },
+   {
+    "q": "Q3 2022",
+    "pipe": 1.1,
+    "next_inst": -0.08
+   },
+   {
+    "q": "Q4 2022",
+    "pipe": 0.885,
+    "next_inst": -0.12
+   },
+   {
+    "q": "Q1 2023",
+    "pipe": 0.995,
+    "next_inst": -0.01
+   },
+   {
+    "q": "Q2 2023",
+    "pipe": 1.1,
+    "next_inst": 0.31
+   },
+   {
+    "q": "Q3 2023",
+    "pipe": 0.784,
+    "next_inst": -0.43
+   },
+   {
+    "q": "Q4 2023",
+    "pipe": 1.2,
+    "next_inst": -2.54
+   },
+   {
+    "q": "Q1 2024",
+    "pipe": 1.0,
+    "next_inst": -0.25
+   },
+   {
+    "q": "Q2 2024",
+    "pipe": 1.0,
+    "next_inst": 0.11
+   },
+   {
+    "q": "Q3 2024",
+    "pipe": 0.651,
+    "next_inst": -0.31
+   },
+   {
+    "q": "Q4 2024",
+    "pipe": 0.531,
+    "next_inst": -0.37
+   },
+   {
+    "q": "Q1 2025",
+    "pipe": 0.061,
+    "next_inst": -0.52
+   },
+   {
+    "q": "Q2 2025",
+    "pipe": 0.776,
+    "next_inst": -0.54
+   },
+   {
+    "q": "Q3 2025",
+    "pipe": 1.75,
+    "next_inst": 0.68
+   },
+   {
+    "q": "Q4 2025",
+    "pipe": 1.72,
+    "next_inst": -0.06
+   },
+   {
+    "q": "Q1 2026",
+    "pipe": 1.7,
+    "next_inst": -0.16
+   },
+   {
+    "q": "Q2 2026",
+    "pipe": 1.6,
+    "next_inst": 0.05
+   }
+  ]
+ },
+ "warnings": [],
+ "sources": {
+  "strategy": {
+   "2021-12-31": "https://www.sec.gov/Archives/edgar/data/1284812/000128481222000036/cns-earningsreleasex123121.htm",
+   "2022-03-31": "https://www.sec.gov/Archives/edgar/data/1284812/000128481222000156/cns-earningsreleasex33122e.htm",
+   "2022-06-30": "https://www.sec.gov/Archives/edgar/data/1284812/000128481222000206/cns-earningsreleasex63022e.htm",
+   "2022-09-30": "https://www.sec.gov/Archives/edgar/data/1284812/000128481222000256/cns-earningsreleasex93022e.htm",
+   "2022-12-31": "https://www.sec.gov/Archives/edgar/data/1284812/000128481223000018/cns-earningsreleasex123122.htm",
+   "2023-03-31": "https://www.sec.gov/Archives/edgar/data/1284812/000128481223000151/cns-earningsreleasex33123e.htm",
+   "2023-06-30": "https://www.sec.gov/Archives/edgar/data/1284812/000128481223000216/cns-earningsreleasex63023e.htm",
+   "2023-09-30": "https://www.sec.gov/Archives/edgar/data/1284812/000128481223000277/cns-earningsreleasex93023e.htm",
+   "2023-12-31": "https://www.sec.gov/Archives/edgar/data/1284812/000128481224000020/cns-earningsreleasex123123.htm",
+   "2024-03-31": "https://www.sec.gov/Archives/edgar/data/1284812/000128481224000186/cns-earningsreleasex33124e.htm",
+   "2024-06-30": "https://www.sec.gov/Archives/edgar/data/1284812/000128481224000267/cns-earningsreleasex63024e.htm",
+   "2024-09-30": "https://www.sec.gov/Archives/edgar/data/1284812/000128481224000351/cns-earningsreleasex93024e.htm",
+   "2024-12-31": "https://www.sec.gov/Archives/edgar/data/1284812/000128481225000024/cns-earningsreleasex123124.htm",
+   "2025-03-31": "https://www.sec.gov/Archives/edgar/data/1284812/000128481225000152/cns-earningsreleasex33125e.htm",
+   "2025-06-30": "https://www.sec.gov/Archives/edgar/data/1284812/000128481225000248/cns-earningsreleasex63025e.htm",
+   "2025-09-30": "https://www.sec.gov/Archives/edgar/data/1284812/000128481225000296/cns-earningsreleasex93025e.htm",
+   "2025-12-31": "https://www.sec.gov/Archives/edgar/data/1284812/000128481226000006/cns-earningsreleasex123125.htm",
+   "2026-03-31": "https://www.sec.gov/Archives/edgar/data/1284812/000128481226000035/cns-earningsreleasex33126e.htm",
+   "2026-06-30": "https://www.sec.gov/Archives/edgar/data/1284812/000128481226000142/cns-earningsreleasex63026e.htm",
+   "2026-09-30": "https://www.sec.gov/Archives/edgar/data/1284812/000128481226000195/cns-earningsreleasex93026e.htm"
+  },
+  "monthly": {
+   "2020-09": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2020-301149032.html",
+   "2020-10": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-october-2020-301168133.html",
+   "2020-11": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-november-2020-301188835.html",
+   "2020-12": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-december-2020-301205655.html",
+   "2021-01": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-january-2021-301224254.html",
+   "2021-02": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-february-2021-301242728.html",
+   "2021-03": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-march-2021-301267052.html",
+   "2021-04": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-april-2021-301287865.html",
+   "2021-05": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-may-2021-301308373.html",
+   "2021-06": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-june-2021-301331880.html",
+   "2021-07": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-july-2021-301351463.html",
+   "2021-08": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-august-2021-301372967.html",
+   "2021-09": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2021-301397339.html",
+   "2021-10": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-october-2021-301419021.html",
+   "2021-11": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-november-2021-301440684.html",
+   "2022-01": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-january-2022-301478109.html",
+   "2022-02": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-february-2022-301498402.html",
+   "2022-03": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-march-2022-301523175.html",
+   "2022-04": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-april-2022-301543018.html",
+   "2022-05": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-may-2022-301564378.html",
+   "2022-06": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-june-2022-301584127.html",
+   "2022-07": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-july-2022-301602932.html",
+   "2022-08": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-august-2022-301622385.html",
+   "2022-09": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2022-301645134.html",
+   "2022-10": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-october-2022-301672212.html",
+   "2022-11": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-november-2022-301698775.html",
+   "2022-12": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-december-2022-301718383.html",
+   "2023-01": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-january-2023-301742486.html",
+   "2023-02": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-february-2023-301766257.html",
+   "2023-03": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-march-2023-301794911.html",
+   "2023-04": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-april-2023-301818669.html",
+   "2023-06": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-june-2023-301874834.html",
+   "2023-07": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-july-2023-301896228.html",
+   "2023-08": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-august-2023-301923845.html",
+   "2023-09": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2023-301951328.html",
+   "2023-10": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-october-2023-301982392.html",
+   "2023-11": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-november-2023-302011855.html",
+   "2023-12": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-december-2023-302030509.html",
+   "2024-01": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-january-2024-302058121.html",
+   "2024-02": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-february-2024-302085765.html",
+   "2024-03": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-march-2024-302110905.html",
+   "2024-04": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-april-2024-302140482.html",
+   "2024-05": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-may-2024-302168649.html",
+   "2024-06": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-june-2024-302192565.html",
+   "2024-07": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-july-2024-302218406.html",
+   "2024-08": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-august-2024-302244288.html",
+   "2024-09": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2024-302270649.html",
+   "2024-10": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-october-2024-302301733.html",
+   "2024-11": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-november-2024-302326677.html",
+   "2024-12": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-december-2024-302347513.html",
+   "2025-01": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-january-2025-302372290.html",
+   "2025-02": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-february-2025-302397494.html",
+   "2025-03": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-march-2025-302423938.html",
+   "2025-04": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-april-2025-302450596.html",
+   "2025-05": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-may-2025-302476829.html",
+   "2025-06": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-june-2025-302501663.html",
+   "2025-07": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-july-2025-302526836.html",
+   "2025-08": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-august-2025-302551494.html",
+   "2025-09": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2025-302578935.html",
+   "2025-10": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-october-2025-302610686.html",
+   "2025-11": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-november-2025-302635805.html",
+   "2026-01": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-january-2026-302682510.html",
+   "2026-02": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-february-2026-302708561.html",
+   "2026-03": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-march-2026-302738722.html",
+   "2026-04": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-april-2026-302768653.html",
+   "2026-05": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-may-2026/",
+   "2026-06": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-june-2026/",
+   "2026-07": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-july-2026/",
+   "2026-08": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-august-2026/",
+   "2026-09": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2026/"
+  },
+  "proxies": {
+   "usre": "VNQ",
+   "glre": "REET",
+   "infra": "IGF",
+   "pref": "PFF",
+   "oth": "GNR"
+  }
+ }
+}

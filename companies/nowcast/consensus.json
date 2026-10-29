@@ -1,0 +1,6 @@
+{"asof": "2026-10-29", "note": "Sell-side coverage of CNS is thin (1-2 analysts) and providers disagree; treat as low confidence. Revenue = GAAP total revenue; EPS = adjusted diluted EPS.",
+ "providers": [
+  {"name": "Yahoo Finance", "url": "https://finance.yahoo.com/quote/CNS/analysis/", "q4_rev": 154.82, "q4_eps": 0.81, "analysts": "rev 2 / EPS 1", "q1_rev": null, "q1_eps": null},
+  {"name": "FXEmpire", "url": "https://www.fxempire.com/stocks/cns/earnings", "q4_rev": 152.99, "q4_eps": 0.85, "analysts": "n/a", "q1_rev": null, "q1_eps": null},
+  {"name": "Backpack Securities", "url": "https://backpack.exchange/stocks/CNS/earnings/estimates", "q4_rev": 151.48, "q4_eps": 0.88, "analysts": "rev 2 / EPS 1", "q1_rev": 150.16, "q1_eps": 0.90},
+  {"name": "Business Quant", "url": "https://businessquant.com/stocks/cns/estimates/", "q4_rev": 144.63, "q4_eps": 0.84, "analysts": "n/a", "q1_rev": 156.16, "q1_eps": 0.96}]}

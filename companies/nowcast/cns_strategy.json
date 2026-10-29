@@ -1,0 +1,894 @@
+{
+ "2021-12-31": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481222000036/cns-earningsreleasex123121.htm",
+  "strat": {
+   "U.S. Real Estate": {
+    "beg": 43045.0,
+    "net": 1284.0,
+    "mkt": 6672.0,
+    "dist": -1052.0,
+    "end": 49915.0,
+    "avg": 46229.0
+   },
+   "Preferred Securities": {
+    "beg": 26715.0,
+    "net": 565.0,
+    "mkt": 10.0,
+    "dist": -337.0,
+    "end": 26987.0,
+    "avg": 26812.0
+   },
+   "Global/International Real Estate": {
+    "beg": 17978.0,
+    "net": -296.0,
+    "mkt": 1775.0,
+    "dist": -77.0,
+    "end": 19380.0,
+    "avg": 18642.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 8138.0,
+    "net": 84.0,
+    "mkt": 607.0,
+    "dist": -66.0,
+    "end": 8763.0,
+    "avg": 8479.0
+   },
+   "Other": {
+    "beg": 1384.0,
+    "net": 154.0,
+    "mkt": 79.0,
+    "dist": -33.0,
+    "end": 1584.0,
+    "avg": 1468.0
+   }
+  }
+ },
+ "2022-03-31": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481222000156/cns-earningsreleasex33122e.htm",
+  "strat": {
+   "U.S. Real Estate": {
+    "beg": 49915.0,
+    "net": 557.0,
+    "mkt": -2792.0,
+    "dist": -412.0,
+    "end": 47268.0,
+    "avg": 46462.0
+   },
+   "Preferred Securities": {
+    "beg": 26987.0,
+    "net": -908.0,
+    "mkt": -1400.0,
+    "dist": -213.0,
+    "end": 24466.0,
+    "avg": 25649.0
+   },
+   "Global/International Real Estate": {
+    "beg": 19380.0,
+    "net": 776.0,
+    "mkt": -775.0,
+    "dist": -19.0,
+    "end": 19362.0,
+    "avg": 18867.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 8763.0,
+    "net": 165.0,
+    "mkt": 314.0,
+    "dist": -45.0,
+    "end": 9197.0,
+    "avg": 8609.0
+   },
+   "Other": {
+    "beg": 1584.0,
+    "net": 166.0,
+    "mkt": 87.0,
+    "dist": -8.0,
+    "end": 1829.0,
+    "avg": 1649.0
+   }
+  }
+ },
+ "2022-06-30": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481222000206/cns-earningsreleasex63022e.htm",
+  "strat": {
+   "U.S. Real Estate": {
+    "beg": 47268.0,
+    "net": 149.0,
+    "mkt": -6542.0,
+    "dist": -697.0,
+    "end": 40178.0,
+    "avg": 43917.0
+   },
+   "Preferred Securities": {
+    "beg": 24466.0,
+    "net": -1046.0,
+    "mkt": -1769.0,
+    "dist": -202.0,
+    "end": 21449.0,
+    "avg": 22915.0
+   },
+   "Global/International Real Estate": {
+    "beg": 19362.0,
+    "net": -303.0,
+    "mkt": -3303.0,
+    "dist": -47.0,
+    "end": 15709.0,
+    "avg": 17524.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 9197.0,
+    "net": 108.0,
+    "mkt": -673.0,
+    "dist": -58.0,
+    "end": 8574.0,
+    "avg": 8853.0
+   },
+   "Other": {
+    "beg": 1829.0,
+    "net": 375.0,
+    "mkt": -237.0,
+    "dist": -15.0,
+    "end": 1952.0,
+    "avg": 1913.0
+   }
+  }
+ },
+ "2022-09-30": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481222000256/cns-earningsreleasex93022e.htm",
+  "strat": {
+   "U.S. Real Estate": {
+    "beg": 40178.0,
+    "net": -939.0,
+    "mkt": -4129.0,
+    "dist": -414.0,
+    "end": 34696.0,
+    "avg": 40910.0
+   },
+   "Preferred Securities": {
+    "beg": 21449.0,
+    "net": -326.0,
+    "mkt": -404.0,
+    "dist": -200.0,
+    "end": 20519.0,
+    "avg": 21936.0
+   },
+   "Global/International Real Estate": {
+    "beg": 15709.0,
+    "net": 131.0,
+    "mkt": -1956.0,
+    "dist": -13.0,
+    "end": 13871.0,
+    "avg": 15938.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 8574.0,
+    "net": 243.0,
+    "mkt": -742.0,
+    "dist": -45.0,
+    "end": 8030.0,
+    "avg": 8859.0
+   },
+   "Other": {
+    "beg": 1952.0,
+    "net": 293.0,
+    "mkt": -155.0,
+    "dist": -8.0,
+    "end": 2082.0,
+    "avg": 2100.0
+   }
+  }
+ },
+ "2022-12-31": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481223000018/cns-earningsreleasex123122.htm",
+  "strat": {
+   "U.S. Real Estate": {
+    "beg": 34696.0,
+    "net": -64.0,
+    "mkt": 1366.0,
+    "dist": -883.0,
+    "end": 35108.0,
+    "avg": 35326.0
+   },
+   "Preferred Securities": {
+    "beg": 20519.0,
+    "net": -873.0,
+    "mkt": 333.0,
+    "dist": -219.0,
+    "end": 19767.0,
+    "avg": 20083.0
+   },
+   "Global/International Real Estate": {
+    "beg": 13871.0,
+    "net": -45.0,
+    "mkt": 995.0,
+    "dist": -39.0,
+    "end": 14782.0,
+    "avg": 14454.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 8030.0,
+    "net": -62.0,
+    "mkt": 696.0,
+    "dist": -68.0,
+    "end": 8596.0,
+    "avg": 8469.0
+   },
+   "Other": {
+    "beg": 2082.0,
+    "net": -38.0,
+    "mkt": 155.0,
+    "dist": -27.0,
+    "end": 2172.0,
+    "avg": 2179.0
+   }
+  }
+ },
+ "2023-03-31": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481223000151/cns-earningsreleasex33123e.htm",
+  "strat": {
+   "U.S. Real Estate": {
+    "beg": 35108.0,
+    "net": 434.0,
+    "mkt": 907.0,
+    "dist": -437.0,
+    "end": 36080.0,
+    "avg": 36772.0
+   },
+   "Preferred Securities": {
+    "beg": 19767.0,
+    "net": -872.0,
+    "mkt": -492.0,
+    "dist": -195.0,
+    "end": 18210.0,
+    "avg": 20227.0
+   },
+   "Global/International Real Estate": {
+    "beg": 14782.0,
+    "net": -144.0,
+    "mkt": 202.0,
+    "dist": -8.0,
+    "end": 14762.0,
+    "avg": 15321.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 8596.0,
+    "net": 11.0,
+    "mkt": 35.0,
+    "dist": -46.0,
+    "end": 8596.0,
+    "avg": 8682.0
+   },
+   "Other": {
+    "beg": 2172.0,
+    "net": 74.0,
+    "mkt": 19.0,
+    "dist": -8.0,
+    "end": 2257.0,
+    "avg": 2200.0
+   }
+  }
+ },
+ "2023-06-30": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481223000216/cns-earningsreleasex63023e.htm",
+  "strat": {
+   "U.S. Real Estate": {
+    "beg": 36080.0,
+    "net": 114.0,
+    "mkt": 1210.0,
+    "dist": -456.0,
+    "end": 36948.0,
+    "avg": 35800.0
+   },
+   "Preferred Securities": {
+    "beg": 18210.0,
+    "net": -365.0,
+    "mkt": 348.0,
+    "dist": -184.0,
+    "end": 18009.0,
+    "avg": 18013.0
+   },
+   "Global/International Real Estate": {
+    "beg": 14762.0,
+    "net": -90.0,
+    "mkt": 206.0,
+    "dist": -40.0,
+    "end": 14838.0,
+    "avg": 14859.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 8596.0,
+    "net": -171.0,
+    "mkt": 12.0,
+    "dist": -58.0,
+    "end": 8379.0,
+    "avg": 8486.0
+   },
+   "Other": {
+    "beg": 2257.0,
+    "net": 0.0,
+    "mkt": 1.0,
+    "dist": -19.0,
+    "end": 2239.0,
+    "avg": 2248.0
+   }
+  }
+ },
+ "2023-09-30": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481223000277/cns-earningsreleasex93023e.htm",
+  "strat": {
+   "U.S. Real Estate": {
+    "beg": 36948.0,
+    "net": 181.0,
+    "mkt": -3056.0,
+    "dist": -359.0,
+    "end": 33719.0,
+    "avg": 36494.0
+   },
+   "Preferred Securities": {
+    "beg": 18009.0,
+    "net": -316.0,
+    "mkt": 56.0,
+    "dist": -183.0,
+    "end": 17561.0,
+    "avg": 18027.0
+   },
+   "Global/International Real Estate": {
+    "beg": 14838.0,
+    "net": 172.0,
+    "mkt": -899.0,
+    "dist": -8.0,
+    "end": 14103.0,
+    "avg": 15022.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 8379.0,
+    "net": -80.0,
+    "mkt": -671.0,
+    "dist": -46.0,
+    "end": 7582.0,
+    "avg": 8157.0
+   },
+   "Other": {
+    "beg": 2239.0,
+    "net": -4.0,
+    "mkt": -34.0,
+    "dist": -8.0,
+    "end": 2193.0,
+    "avg": 2266.0
+   }
+  }
+ },
+ "2023-12-31": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481224000020/cns-earningsreleasex123123.htm",
+  "strat": {
+   "U.S. Real Estate": {
+    "beg": 33719.0,
+    "net": -173.0,
+    "mkt": 5434.0,
+    "dist": -427.0,
+    "end": 38550.0,
+    "avg": 35072.0
+   },
+   "Preferred Securities": {
+    "beg": 17561.0,
+    "net": -340.0,
+    "mkt": 1117.0,
+    "dist": -177.0,
+    "end": 18164.0,
+    "avg": 17492.0
+   },
+   "Global/International Real Estate": {
+    "beg": 14103.0,
+    "net": -384.0,
+    "mkt": 2107.0,
+    "dist": -37.0,
+    "end": 15789.0,
+    "avg": 14381.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 7582.0,
+    "net": 2.0,
+    "mkt": 828.0,
+    "dist": -56.0,
+    "end": 8356.0,
+    "avg": 7851.0
+   },
+   "Other": {
+    "beg": 2193.0,
+    "net": -40.0,
+    "mkt": 144.0,
+    "dist": -20.0,
+    "end": 2277.0,
+    "avg": 2192.0
+   }
+  }
+ },
+ "2024-03-31": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481224000186/cns-earningsreleasex33124e.htm",
+  "strat": {
+   "U.S. Real Estate": {
+    "beg": 38550.0,
+    "net": 361.0,
+    "mkt": -79.0,
+    "dist": -356.0,
+    "end": 38476.0,
+    "avg": 37737.0
+   },
+   "Preferred Securities": {
+    "beg": 18164.0,
+    "net": -18.0,
+    "mkt": 625.0,
+    "dist": -181.0,
+    "end": 18589.0,
+    "avg": 18420.0
+   },
+   "Global/International Real Estate": {
+    "beg": 15789.0,
+    "net": -2208.0,
+    "mkt": -124.0,
+    "dist": -16.0,
+    "end": 13442.0,
+    "avg": 13547.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 8356.0,
+    "net": -104.0,
+    "mkt": 193.0,
+    "dist": -50.0,
+    "end": 8395.0,
+    "avg": 8191.0
+   },
+   "Other": {
+    "beg": 2277.0,
+    "net": -1.0,
+    "mkt": 64.0,
+    "dist": -7.0,
+    "end": 2333.0,
+    "avg": 2280.0
+   }
+  }
+ },
+ "2024-06-30": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481224000267/cns-earningsreleasex63024e.htm",
+  "strat": {
+   "U.S. Real Estate": {
+    "beg": 38476.0,
+    "net": 151.0,
+    "mkt": 452.0,
+    "dist": -367.0,
+    "end": 38717.0,
+    "avg": 37466.0
+   },
+   "Preferred Securities": {
+    "beg": 18589.0,
+    "net": -449.0,
+    "mkt": 138.0,
+    "dist": -179.0,
+    "end": 18094.0,
+    "avg": 18294.0
+   },
+   "Global/International Real Estate": {
+    "beg": 13442.0,
+    "net": -133.0,
+    "mkt": -196.0,
+    "dist": -49.0,
+    "end": 13064.0,
+    "avg": 13045.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 8395.0,
+    "net": 34.0,
+    "mkt": 73.0,
+    "dist": -56.0,
+    "end": 8446.0,
+    "avg": 8430.0
+   },
+   "Other": {
+    "beg": 2333.0,
+    "net": 52.0,
+    "mkt": 25.0,
+    "dist": -22.0,
+    "end": 2388.0,
+    "avg": 2350.0
+   }
+  }
+ },
+ "2024-09-30": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481224000351/cns-earningsreleasex93024e.htm",
+  "strat": {
+   "U.S. Real Estate": {
+    "beg": 38717.0,
+    "net": 1292.0,
+    "mkt": 6028.0,
+    "dist": -349.0,
+    "end": 45685.0,
+    "avg": 42197.0
+   },
+   "Preferred Securities": {
+    "beg": 18094.0,
+    "net": 6.0,
+    "mkt": 1004.0,
+    "dist": -178.0,
+    "end": 18929.0,
+    "avg": 18449.0
+   },
+   "Global/International Real Estate": {
+    "beg": 13064.0,
+    "net": -107.0,
+    "mkt": 2038.0,
+    "dist": -9.0,
+    "end": 14986.0,
+    "avg": 14112.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 8446.0,
+    "net": 5.0,
+    "mkt": 1130.0,
+    "dist": -46.0,
+    "end": 9535.0,
+    "avg": 8995.0
+   },
+   "Other": {
+    "beg": 2388.0,
+    "net": 88.0,
+    "mkt": 178.0,
+    "dist": -9.0,
+    "end": 2645.0,
+    "avg": 2474.0
+   }
+  }
+ },
+ "2024-12-31": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481225000024/cns-earningsreleasex123124.htm",
+  "strat": {
+   "U.S. Real Estate": {
+    "beg": 45685.0,
+    "net": 1262.0,
+    "mkt": -3636.0,
+    "dist": -382.0,
+    "end": 42930.0,
+    "avg": 44973.0
+   },
+   "Preferred Securities": {
+    "beg": 18929.0,
+    "net": -204.0,
+    "mkt": -215.0,
+    "dist": -179.0,
+    "end": 18330.0,
+    "avg": 18681.0
+   },
+   "Global/International Real Estate": {
+    "beg": 14986.0,
+    "net": -220.0,
+    "mkt": -1675.0,
+    "dist": -33.0,
+    "end": 13058.0,
+    "avg": 13909.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 9535.0,
+    "net": -165.0,
+    "mkt": -496.0,
+    "dist": -81.0,
+    "end": 8793.0,
+    "avg": 9246.0
+   },
+   "Other": {
+    "beg": 2645.0,
+    "net": 187.0,
+    "mkt": -107.0,
+    "dist": -22.0,
+    "end": 2703.0,
+    "avg": 2626.0
+   }
+  }
+ },
+ "2025-03-31": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481225000152/cns-earningsreleasex33125e.htm",
+  "strat": {
+   "U.S. Real Estate": {
+    "beg": 42930.0,
+    "net": -217.0,
+    "mkt": 1250.0,
+    "dist": -362.0,
+    "end": 43591.0,
+    "avg": 43340.0
+   },
+   "Preferred Securities": {
+    "beg": 18330.0,
+    "net": -76.0,
+    "mkt": 121.0,
+    "dist": -178.0,
+    "end": 18207.0,
+    "avg": 18380.0
+   },
+   "Global/International Real Estate": {
+    "beg": 13058.0,
+    "net": -166.0,
+    "mkt": 242.0,
+    "dist": -5.0,
+    "end": 13129.0,
+    "avg": 13170.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 8793.0,
+    "net": 586.0,
+    "mkt": 407.0,
+    "dist": -46.0,
+    "end": 9710.0,
+    "avg": 9047.0
+   },
+   "Other": {
+    "beg": 2703.0,
+    "net": 95.0,
+    "mkt": 123.0,
+    "dist": -9.0,
+    "end": 2942.0,
+    "avg": 2841.0
+   }
+  }
+ },
+ "2025-06-30": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481225000248/cns-earningsreleasex63025e.htm",
+  "strat": {
+   "U.S. Real Estate": {
+    "beg": 43591.0,
+    "net": 349.0,
+    "mkt": 466.0,
+    "dist": -434.0,
+    "end": 43972.0,
+    "avg": 43172.0
+   },
+   "Preferred Securities": {
+    "beg": 18207.0,
+    "net": -480.0,
+    "mkt": 351.0,
+    "dist": -176.0,
+    "end": 17902.0,
+    "avg": 17792.0
+   },
+   "Global/International Real Estate": {
+    "beg": 13129.0,
+    "net": -23.0,
+    "mkt": 915.0,
+    "dist": -41.0,
+    "end": 13980.0,
+    "avg": 13521.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 9710.0,
+    "net": 21.0,
+    "mkt": 403.0,
+    "dist": -82.0,
+    "end": 10052.0,
+    "avg": 9829.0
+   },
+   "Other": {
+    "beg": 2942.0,
+    "net": 2.0,
+    "mkt": 115.0,
+    "dist": -29.0,
+    "end": 3030.0,
+    "avg": 2929.0
+   }
+  }
+ },
+ "2025-09-30": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481225000296/cns-earningsreleasex93025e.htm",
+  "strat": {
+   "U.S. Real Estate": {
+    "beg": 43972.0,
+    "net": -221.0,
+    "mkt": 782.0,
+    "dist": -380.0,
+    "end": 44153.0,
+    "avg": 43998.0
+   },
+   "Preferred Securities": {
+    "beg": 17902.0,
+    "net": 130.0,
+    "mkt": 595.0,
+    "dist": -184.0,
+    "end": 18443.0,
+    "avg": 18244.0
+   },
+   "Global/International Real Estate": {
+    "beg": 13980.0,
+    "net": 181.0,
+    "mkt": 367.0,
+    "dist": -8.0,
+    "end": 14520.0,
+    "avg": 14146.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 10052.0,
+    "net": 57.0,
+    "mkt": 458.0,
+    "dist": -46.0,
+    "end": 10521.0,
+    "avg": 10228.0
+   },
+   "Other": {
+    "beg": 3030.0,
+    "net": 86.0,
+    "mkt": 153.0,
+    "dist": -9.0,
+    "end": 3260.0,
+    "avg": 3122.0
+   }
+  }
+ },
+ "2025-12-31": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481226000006/cns-earningsreleasex123125.htm",
+  "strat": {
+   "U.S. Real Estate": {
+    "beg": 44153.0,
+    "net": 794.0,
+    "mkt": -959.0,
+    "dist": -453.0,
+    "end": 43503.0,
+    "avg": 43748.0
+   },
+   "Preferred Securities": {
+    "beg": 18443.0,
+    "net": -334.0,
+    "mkt": 156.0,
+    "dist": -184.0,
+    "end": 18081.0,
+    "avg": 18242.0
+   },
+   "Global/International Real Estate": {
+    "beg": 14520.0,
+    "net": -150.0,
+    "mkt": -68.0,
+    "dist": -61.0,
+    "end": 14273.0,
+    "avg": 14343.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 10521.0,
+    "net": 932.0,
+    "mkt": 96.0,
+    "dist": -93.0,
+    "end": 11456.0,
+    "avg": 11149.0
+   },
+   "Other": {
+    "beg": 3260.0,
+    "net": -35.0,
+    "mkt": 90.0,
+    "dist": -84.0,
+    "end": 3231.0,
+    "avg": 3269.0
+   }
+  }
+ },
+ "2026-03-31": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481226000035/cns-earningsreleasex33126e.htm",
+  "strat": {
+   "U.S. Real Estate": {
+    "beg": 43503.0,
+    "net": -20.0,
+    "mkt": 1457.0,
+    "dist": -371.0,
+    "end": 44569.0,
+    "avg": 45271.0
+   },
+   "Preferred Securities": {
+    "beg": 18081.0,
+    "net": 133.0,
+    "mkt": -183.0,
+    "dist": -183.0,
+    "end": 17848.0,
+    "avg": 18182.0
+   },
+   "Global/International Real Estate": {
+    "beg": 14273.0,
+    "net": 46.0,
+    "mkt": 51.0,
+    "dist": -9.0,
+    "end": 14361.0,
+    "avg": 15020.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 11456.0,
+    "net": 96.0,
+    "mkt": 1091.0,
+    "dist": -54.0,
+    "end": 12589.0,
+    "avg": 12286.0
+   },
+   "Other": {
+    "beg": 3231.0,
+    "net": 242.0,
+    "mkt": 298.0,
+    "dist": -10.0,
+    "end": 3761.0,
+    "avg": 3602.0
+   }
+  }
+ },
+ "2026-06-30": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481226000142/cns-earningsreleasex63026e.htm",
+  "strat": {
+   "U.S. Real Estate": {
+    "beg": 44569.0,
+    "net": 883.0,
+    "mkt": 4495.0,
+    "dist": -397.0,
+    "end": 49550.0,
+    "avg": 48506.0
+   },
+   "Preferred Securities": {
+    "beg": 17848.0,
+    "net": 181.0,
+    "mkt": 532.0,
+    "dist": -190.0,
+    "end": 18371.0,
+    "avg": 18265.0
+   },
+   "Global/International Real Estate": {
+    "beg": 14361.0,
+    "net": -403.0,
+    "mkt": 1205.0,
+    "dist": -47.0,
+    "end": 15116.0,
+    "avg": 15199.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 12589.0,
+    "net": 157.0,
+    "mkt": 245.0,
+    "dist": -98.0,
+    "end": 12704.0,
+    "avg": 12828.0
+   },
+   "Other": {
+    "beg": 3761.0,
+    "net": 480.0,
+    "mkt": -36.0,
+    "dist": -36.0,
+    "end": 4358.0,
+    "avg": 4179.0
+   }
+  }
+ },
+ "2026-09-30": {
+  "src": "https://www.sec.gov/Archives/edgar/data/1284812/000128481226000195/cns-earningsreleasex93026e.htm",
+  "strat": {
+   "Real Estate": {
+    "beg": 65248.0,
+    "net": 684.0,
+    "mkt": -3911.0,
+    "dist": -374.0,
+    "end": 61647.0,
+    "avg": 65987.0
+   },
+   "Preferred Securities": {
+    "beg": 18433.0,
+    "net": 282.0,
+    "mkt": -428.0,
+    "dist": -193.0,
+    "end": 18092.0,
+    "avg": 18397.0
+   },
+   "Global Listed Infrastructure": {
+    "beg": 13082.0,
+    "net": 224.0,
+    "mkt": -761.0,
+    "dist": -57.0,
+    "end": 12488.0,
+    "avg": 13089.0
+   },
+   "Multi-Strategy Real Assets": {
+    "beg": 3336.0,
+    "net": 361.0,
+    "mkt": 28.0,
+    "dist": -8.0,
+    "end": 3717.0,
+    "avg": 3633.0
+   }
+  }
+ }
+}

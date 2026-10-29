@@ -1,0 +1,2998 @@
+{
+ "2020-09": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2020-301149032.html",
+  "adv": {
+   "beg": 16894.0,
+   "net": -502.0,
+   "mkt": -299.0,
+   "dist": 0.0,
+   "end": 16093.0
+  },
+  "sub": {
+   "beg": 9288.0,
+   "net": 93.0,
+   "mkt": -244.0,
+   "dist": -121.0,
+   "end": 9016.0
+  },
+  "inst": {
+   "beg": 31523.0,
+   "net": -352.0,
+   "mkt": -670.0,
+   "dist": -121.0,
+   "end": 30380.0
+  },
+  "oe": {
+   "beg": 31654.0,
+   "net": 328.0,
+   "mkt": -438.0,
+   "dist": -140.0,
+   "end": 31404.0
+  },
+  "cef": {
+   "beg": 8896.0,
+   "net": 0.0,
+   "mkt": -135.0,
+   "dist": -42.0,
+   "end": 8719.0
+  },
+  "tot": {
+   "beg": 72073.0,
+   "net": -24.0,
+   "mkt": -1243.0,
+   "dist": -303.0,
+   "end": 70503.0
+  }
+ },
+ "2020-10": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-october-2020-301168133.html",
+  "adv": {
+   "beg": 16093.0,
+   "net": 348.0,
+   "mkt": -306.0,
+   "dist": 0.0,
+   "end": 16135.0
+  },
+  "sub": {
+   "beg": 9016.0,
+   "net": 42.0,
+   "mkt": -163.0,
+   "dist": -124.0,
+   "end": 8771.0
+  },
+  "inst": {
+   "beg": 30380.0,
+   "net": 426.0,
+   "mkt": -605.0,
+   "dist": -124.0,
+   "end": 30077.0
+  },
+  "oe": {
+   "beg": 31404.0,
+   "net": 309.0,
+   "mkt": -377.0,
+   "dist": -53.0,
+   "end": 31283.0
+  },
+  "cef": {
+   "beg": 8719.0,
+   "net": 1251.0,
+   "mkt": -70.0,
+   "dist": -42.0,
+   "end": 9858.0
+  },
+  "tot": {
+   "beg": 70503.0,
+   "net": 1986.0,
+   "mkt": -1052.0,
+   "dist": -219.0,
+   "end": 71218.0
+  }
+ },
+ "2020-11": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-november-2020-301188835.html",
+  "adv": {
+   "beg": 16135.0,
+   "net": -153.0,
+   "mkt": 1366.0,
+   "dist": 0.0,
+   "end": 17348.0
+  },
+  "sub": {
+   "beg": 8771.0,
+   "net": 9.0,
+   "mkt": 802.0,
+   "dist": -125.0,
+   "end": 9457.0
+  },
+  "inst": {
+   "beg": 30077.0,
+   "net": -238.0,
+   "mkt": 2726.0,
+   "dist": -125.0,
+   "end": 32440.0
+  },
+  "oe": {
+   "beg": 31283.0,
+   "net": 571.0,
+   "mkt": 1929.0,
+   "dist": -54.0,
+   "end": 33729.0
+  },
+  "cef": {
+   "beg": 9858.0,
+   "net": 125.0,
+   "mkt": 562.0,
+   "dist": -42.0,
+   "end": 10503.0
+  },
+  "tot": {
+   "beg": 71218.0,
+   "net": 458.0,
+   "mkt": 5217.0,
+   "dist": -221.0,
+   "end": 76672.0
+  }
+ },
+ "2020-12": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-december-2020-301205655.html",
+  "adv": {
+   "beg": 17348.0,
+   "net": -295.0,
+   "mkt": 575.0,
+   "dist": 0.0,
+   "end": 17628.0
+  },
+  "sub": {
+   "beg": 9457.0,
+   "net": 32.0,
+   "mkt": 358.0,
+   "dist": -127.0,
+   "end": 9720.0
+  },
+  "inst": {
+   "beg": 32440.0,
+   "net": -196.0,
+   "mkt": 1138.0,
+   "dist": -127.0,
+   "end": 33255.0
+  },
+  "oe": {
+   "beg": 33729.0,
+   "net": 812.0,
+   "mkt": 860.0,
+   "dist": -241.0,
+   "end": 35160.0
+  },
+  "cef": {
+   "beg": 10503.0,
+   "net": 822.0,
+   "mkt": 219.0,
+   "dist": -51.0,
+   "end": 11493.0
+  },
+  "tot": {
+   "beg": 76672.0,
+   "net": 1438.0,
+   "mkt": 2217.0,
+   "dist": -419.0,
+   "end": 79908.0
+  }
+ },
+ "2021-01": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-january-2021-301224254.html",
+  "adv": {
+   "beg": 17628.0,
+   "net": 953.0,
+   "mkt": -137.0,
+   "dist": 0.0,
+   "end": 18444.0
+  },
+  "sub": {
+   "beg": 9720.0,
+   "net": -1.0,
+   "mkt": -111.0,
+   "dist": -105.0,
+   "end": 9503.0
+  },
+  "inst": {
+   "beg": 33255.0,
+   "net": 985.0,
+   "mkt": -315.0,
+   "dist": -105.0,
+   "end": 33820.0
+  },
+  "oe": {
+   "beg": 35160.0,
+   "net": 1008.0,
+   "mkt": -197.0,
+   "dist": -53.0,
+   "end": 35918.0
+  },
+  "cef": {
+   "beg": 11493.0,
+   "net": 63.0,
+   "mkt": -74.0,
+   "dist": -49.0,
+   "end": 11433.0
+  },
+  "tot": {
+   "beg": 79908.0,
+   "net": 2056.0,
+   "mkt": -586.0,
+   "dist": -207.0,
+   "end": 81171.0
+  }
+ },
+ "2021-02": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-february-2021-301242728.html",
+  "adv": {
+   "beg": 18444.0,
+   "net": 107.0,
+   "mkt": 537.0,
+   "dist": 0.0,
+   "end": 19088.0
+  },
+  "sub": {
+   "beg": 9503.0,
+   "net": -39.0,
+   "mkt": 415.0,
+   "dist": -100.0,
+   "end": 9779.0
+  },
+  "inst": {
+   "beg": 33820.0,
+   "net": 63.0,
+   "mkt": 1137.0,
+   "dist": -100.0,
+   "end": 34920.0
+  },
+  "oe": {
+   "beg": 35918.0,
+   "net": 165.0,
+   "mkt": 648.0,
+   "dist": -53.0,
+   "end": 36678.0
+  },
+  "cef": {
+   "beg": 11433.0,
+   "net": 1.0,
+   "mkt": 101.0,
+   "dist": -49.0,
+   "end": 11486.0
+  },
+  "tot": {
+   "beg": 81171.0,
+   "net": 229.0,
+   "mkt": 1886.0,
+   "dist": -202.0,
+   "end": 83084.0
+  }
+ },
+ "2021-03": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-march-2021-301267052.html",
+  "adv": {
+   "beg": 19088.0,
+   "net": 633.0,
+   "mkt": 558.0,
+   "dist": 0.0,
+   "end": 20279.0
+  },
+  "sub": {
+   "beg": 9779.0,
+   "net": -163.0,
+   "mkt": 408.0,
+   "dist": -100.0,
+   "end": 9924.0
+  },
+  "inst": {
+   "beg": 34920.0,
+   "net": 540.0,
+   "mkt": 1178.0,
+   "dist": -100.0,
+   "end": 36538.0
+  },
+  "oe": {
+   "beg": 36678.0,
+   "net": 990.0,
+   "mkt": 1087.0,
+   "dist": -132.0,
+   "end": 38623.0
+  },
+  "cef": {
+   "beg": 11486.0,
+   "net": 1.0,
+   "mkt": 441.0,
+   "dist": -49.0,
+   "end": 11879.0
+  },
+  "tot": {
+   "beg": 83084.0,
+   "net": 1531.0,
+   "mkt": 2706.0,
+   "dist": -281.0,
+   "end": 87040.0
+  }
+ },
+ "2021-04": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-april-2021-301287865.html",
+  "adv": {
+   "beg": 20279.0,
+   "net": 406.0,
+   "mkt": 1272.0,
+   "dist": 0.0,
+   "end": 21957.0
+  },
+  "sub": {
+   "beg": 9924.0,
+   "net": -129.0,
+   "mkt": 856.0,
+   "dist": -97.0,
+   "end": 10554.0
+  },
+  "inst": {
+   "beg": 36538.0,
+   "net": 314.0,
+   "mkt": 2551.0,
+   "dist": -97.0,
+   "end": 39306.0
+  },
+  "oe": {
+   "beg": 38623.0,
+   "net": 406.0,
+   "mkt": 2139.0,
+   "dist": -54.0,
+   "end": 41114.0
+  },
+  "cef": {
+   "beg": 11879.0,
+   "net": 101.0,
+   "mkt": 490.0,
+   "dist": -49.0,
+   "end": 12421.0
+  },
+  "tot": {
+   "beg": 87040.0,
+   "net": 821.0,
+   "mkt": 5180.0,
+   "dist": -200.0,
+   "end": 92841.0
+  }
+ },
+ "2021-05": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-may-2021-301308373.html",
+  "adv": {
+   "beg": 21957.0,
+   "net": 123.0,
+   "mkt": 322.0,
+   "dist": 0.0,
+   "end": 22402.0
+  },
+  "sub": {
+   "beg": 10554.0,
+   "net": -108.0,
+   "mkt": 62.0,
+   "dist": -97.0,
+   "end": 10411.0
+  },
+  "inst": {
+   "beg": 39306.0,
+   "net": 87.0,
+   "mkt": 490.0,
+   "dist": -97.0,
+   "end": 39786.0
+  },
+  "oe": {
+   "beg": 41114.0,
+   "net": 672.0,
+   "mkt": 252.0,
+   "dist": -55.0,
+   "end": 41983.0
+  },
+  "cef": {
+   "beg": 12421.0,
+   "net": 1.0,
+   "mkt": 73.0,
+   "dist": -49.0,
+   "end": 12446.0
+  },
+  "tot": {
+   "beg": 92841.0,
+   "net": 760.0,
+   "mkt": 815.0,
+   "dist": -201.0,
+   "end": 94215.0
+  }
+ },
+ "2021-06": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-june-2021-301331880.html",
+  "sub": {
+   "beg": 10411.0,
+   "net": -35.0,
+   "mkt": 241.0,
+   "dist": -114.0,
+   "end": 10503.0
+  },
+  "inst": {
+   "beg": 39786.0,
+   "net": -29.0,
+   "mkt": 513.0,
+   "dist": -114.0,
+   "end": 40156.0
+  },
+  "oe": {
+   "beg": 41983.0,
+   "net": 1009.0,
+   "mkt": 743.0,
+   "dist": -203.0,
+   "end": 43532.0
+  },
+  "cef": {
+   "beg": 12446.0,
+   "net": 1.0,
+   "mkt": 139.0,
+   "dist": -49.0,
+   "end": 12537.0
+  },
+  "tot": {
+   "beg": 94215.0,
+   "net": 981.0,
+   "mkt": 1395.0,
+   "dist": -366.0,
+   "end": 96225.0
+  }
+ },
+ "2021-07": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-july-2021-301351463.html",
+  "sub": {
+   "beg": 10503.0,
+   "net": -37.0,
+   "mkt": 488.0,
+   "dist": -100.0,
+   "end": 10854.0
+  },
+  "inst": {
+   "beg": 40156.0,
+   "net": 68.0,
+   "mkt": 1348.0,
+   "dist": -100.0,
+   "end": 41472.0
+  },
+  "oe": {
+   "beg": 43532.0,
+   "net": 730.0,
+   "mkt": 1157.0,
+   "dist": -59.0,
+   "end": 45360.0
+  },
+  "cef": {
+   "beg": 12537.0,
+   "net": -16.0,
+   "mkt": 200.0,
+   "dist": -49.0,
+   "end": 12672.0
+  },
+  "tot": {
+   "beg": 96225.0,
+   "net": 782.0,
+   "mkt": 2705.0,
+   "dist": -208.0,
+   "end": 99504.0
+  }
+ },
+ "2021-08": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-august-2021-301372967.html",
+  "sub": {
+   "beg": 10854.0,
+   "net": -12.0,
+   "mkt": 233.0,
+   "dist": -97.0,
+   "end": 10978.0
+  },
+  "inst": {
+   "beg": 41472.0,
+   "net": -1118.0,
+   "mkt": 771.0,
+   "dist": -97.0,
+   "end": 41028.0
+  },
+  "oe": {
+   "beg": 45360.0,
+   "net": 658.0,
+   "mkt": 762.0,
+   "dist": -59.0,
+   "end": 46721.0
+  },
+  "cef": {
+   "beg": 12672.0,
+   "net": -94.0,
+   "mkt": 176.0,
+   "dist": -49.0,
+   "end": 12705.0
+  },
+  "tot": {
+   "beg": 99504.0,
+   "net": -554.0,
+   "mkt": 1709.0,
+   "dist": -205.0,
+   "end": 100454.0
+  }
+ },
+ "2021-09": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2021-301397339.html",
+  "sub": {
+   "beg": 10978.0,
+   "net": -3.0,
+   "mkt": -615.0,
+   "dist": -98.0,
+   "end": 10262.0
+  },
+  "inst": {
+   "beg": 41028.0,
+   "net": 434.0,
+   "mkt": -2017.0,
+   "dist": -98.0,
+   "end": 39347.0
+  },
+  "oe": {
+   "beg": 46721.0,
+   "net": 613.0,
+   "mkt": -1582.0,
+   "dist": -159.0,
+   "end": 45593.0
+  },
+  "cef": {
+   "beg": 12705.0,
+   "net": 9.0,
+   "mkt": -345.0,
+   "dist": -49.0,
+   "end": 12320.0
+  },
+  "tot": {
+   "beg": 100454.0,
+   "net": 1056.0,
+   "mkt": -3944.0,
+   "dist": -306.0,
+   "end": 97260.0
+  }
+ },
+ "2021-10": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-october-2021-301419021.html",
+  "sub": {
+   "beg": 10262.0,
+   "net": -129.0,
+   "mkt": 746.0,
+   "dist": -92.0,
+   "end": 10787.0
+  },
+  "inst": {
+   "beg": 39347.0,
+   "net": -463.0,
+   "mkt": 2228.0,
+   "dist": -92.0,
+   "end": 41020.0
+  },
+  "oe": {
+   "beg": 45593.0,
+   "net": 595.0,
+   "mkt": 1757.0,
+   "dist": -62.0,
+   "end": 47883.0
+  },
+  "cef": {
+   "beg": 12320.0,
+   "net": 6.0,
+   "mkt": 414.0,
+   "dist": -49.0,
+   "end": 12691.0
+  },
+  "tot": {
+   "beg": 97260.0,
+   "net": 138.0,
+   "mkt": 4399.0,
+   "dist": -203.0,
+   "end": 101594.0
+  }
+ },
+ "2021-11": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-november-2021-301440684.html",
+  "sub": {
+   "beg": 10787.0,
+   "net": -46.0,
+   "mkt": -46.0,
+   "dist": -93.0,
+   "end": 10602.0
+  },
+  "inst": {
+   "beg": 41020.0,
+   "net": -183.0,
+   "mkt": -570.0,
+   "dist": -93.0,
+   "end": 40174.0
+  },
+  "oe": {
+   "beg": 47883.0,
+   "net": 374.0,
+   "mkt": -585.0,
+   "dist": -62.0,
+   "end": 47610.0
+  },
+  "cef": {
+   "beg": 12691.0,
+   "net": 10.0,
+   "mkt": -216.0,
+   "dist": -49.0,
+   "end": 12436.0
+  },
+  "tot": {
+   "beg": 101594.0,
+   "net": 201.0,
+   "mkt": -1371.0,
+   "dist": -204.0,
+   "end": 100220.0
+  }
+ },
+ "2022-01": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-january-2022-301478109.html",
+  "sub": {
+   "beg": 11329.0,
+   "net": -3.0,
+   "mkt": -697.0,
+   "dist": -94.0,
+   "end": 10535.0
+  },
+  "inst": {
+   "beg": 42727.0,
+   "net": 732.0,
+   "mkt": -2231.0,
+   "dist": -94.0,
+   "end": 41134.0
+  },
+  "oe": {
+   "beg": 50911.0,
+   "net": 201.0,
+   "mkt": -2621.0,
+   "dist": -57.0,
+   "end": 48434.0
+  },
+  "cef": {
+   "beg": 12991.0,
+   "net": 66.0,
+   "mkt": -502.0,
+   "dist": -49.0,
+   "end": 12506.0
+  },
+  "tot": {
+   "beg": 106629.0,
+   "net": 999.0,
+   "mkt": -5354.0,
+   "dist": -200.0,
+   "end": 102074.0
+  }
+ },
+ "2022-02": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-february-2022-301498402.html",
+  "sub": {
+   "beg": 10535.0,
+   "net": 59.0,
+   "mkt": -435.0,
+   "dist": -92.0,
+   "end": 10067.0
+  },
+  "inst": {
+   "beg": 41134.0,
+   "net": -24.0,
+   "mkt": -1310.0,
+   "dist": -92.0,
+   "end": 39708.0
+  },
+  "oe": {
+   "beg": 48434.0,
+   "net": 195.0,
+   "mkt": -1798.0,
+   "dist": -56.0,
+   "end": 46775.0
+  },
+  "cef": {
+   "beg": 12506.0,
+   "net": 308.0,
+   "mkt": -349.0,
+   "dist": -49.0,
+   "end": 12416.0
+  },
+  "tot": {
+   "beg": 102074.0,
+   "net": 479.0,
+   "mkt": -3457.0,
+   "dist": -197.0,
+   "end": 98899.0
+  }
+ },
+ "2022-03": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-march-2022-301523175.html",
+  "sub": {
+   "beg": 10067.0,
+   "net": 60.0,
+   "mkt": 650.0,
+   "dist": -85.0,
+   "end": 10692.0
+  },
+  "inst": {
+   "beg": 39708.0,
+   "net": -585.0,
+   "mkt": 1918.0,
+   "dist": -85.0,
+   "end": 40956.0
+  },
+  "oe": {
+   "beg": 46775.0,
+   "net": -188.0,
+   "mkt": 1684.0,
+   "dist": -166.0,
+   "end": 48105.0
+  },
+  "cef": {
+   "beg": 12416.0,
+   "net": 180.0,
+   "mkt": 514.0,
+   "dist": -49.0,
+   "end": 13061.0
+  },
+  "tot": {
+   "beg": 98899.0,
+   "net": -593.0,
+   "mkt": 4116.0,
+   "dist": -300.0,
+   "end": 102122.0
+  }
+ },
+ "2022-04": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-april-2022-301543018.html",
+  "sub": {
+   "beg": 10692.0,
+   "net": -98.0,
+   "mkt": -377.0,
+   "dist": -84.0,
+   "end": 10133.0
+  },
+  "inst": {
+   "beg": 40956.0,
+   "net": -230.0,
+   "mkt": -1759.0,
+   "dist": -84.0,
+   "end": 38883.0
+  },
+  "oe": {
+   "beg": 48105.0,
+   "net": 232.0,
+   "mkt": -1763.0,
+   "dist": -53.0,
+   "end": 46521.0
+  },
+  "cef": {
+   "beg": 13061.0,
+   "net": 1.0,
+   "mkt": -412.0,
+   "dist": -51.0,
+   "end": 12599.0
+  },
+  "tot": {
+   "beg": 102122.0,
+   "net": 3.0,
+   "mkt": -3934.0,
+   "dist": -188.0,
+   "end": 98003.0
+  }
+ },
+ "2022-05": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-may-2022-301564378.html",
+  "sub": {
+   "beg": 10133.0,
+   "net": 14.0,
+   "mkt": -575.0,
+   "dist": -81.0,
+   "end": 9491.0
+  },
+  "inst": {
+   "beg": 38883.0,
+   "net": -241.0,
+   "mkt": -1474.0,
+   "dist": -81.0,
+   "end": 37087.0
+  },
+  "oe": {
+   "beg": 46521.0,
+   "net": -270.0,
+   "mkt": -1412.0,
+   "dist": -51.0,
+   "end": 44788.0
+  },
+  "cef": {
+   "beg": 12599.0,
+   "net": 1.0,
+   "mkt": -125.0,
+   "dist": -51.0,
+   "end": 12424.0
+  },
+  "tot": {
+   "beg": 98003.0,
+   "net": -510.0,
+   "mkt": -3011.0,
+   "dist": -183.0,
+   "end": 94299.0
+  }
+ },
+ "2022-06": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-june-2022-301584127.html",
+  "sub": {
+   "beg": 9491.0,
+   "net": 107.0,
+   "mkt": -582.0,
+   "dist": -77.0,
+   "end": 8939.0
+  },
+  "inst": {
+   "beg": 37087.0,
+   "net": -4.0,
+   "mkt": -2500.0,
+   "dist": -77.0,
+   "end": 34506.0
+  },
+  "oe": {
+   "beg": 44788.0,
+   "net": -206.0,
+   "mkt": -2478.0,
+   "dist": -521.0,
+   "end": 41583.0
+  },
+  "cef": {
+   "beg": 12424.0,
+   "net": 0.0,
+   "mkt": -600.0,
+   "dist": -51.0,
+   "end": 11773.0
+  },
+  "tot": {
+   "beg": 94299.0,
+   "net": -210.0,
+   "mkt": -5578.0,
+   "dist": -649.0,
+   "end": 87862.0
+  }
+ },
+ "2022-07": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-july-2022-301602932.html",
+  "sub": {
+   "beg": 8939.0,
+   "net": 48.0,
+   "mkt": 798.0,
+   "dist": -81.0,
+   "end": 9704.0
+  },
+  "inst": {
+   "beg": 34506.0,
+   "net": 215.0,
+   "mkt": 2619.0,
+   "dist": -81.0,
+   "end": 37259.0
+  },
+  "oe": {
+   "beg": 41583.0,
+   "net": 109.0,
+   "mkt": 2722.0,
+   "dist": -51.0,
+   "end": 44363.0
+  },
+  "cef": {
+   "beg": 11773.0,
+   "net": 3.0,
+   "mkt": 654.0,
+   "dist": -51.0,
+   "end": 12379.0
+  },
+  "tot": {
+   "beg": 87862.0,
+   "net": 327.0,
+   "mkt": 5995.0,
+   "dist": -183.0,
+   "end": 94001.0
+  }
+ },
+ "2022-08": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-august-2022-301622385.html",
+  "sub": {
+   "beg": 9704.0,
+   "net": 24.0,
+   "mkt": -570.0,
+   "dist": -78.0,
+   "end": 9080.0
+  },
+  "inst": {
+   "beg": 37259.0,
+   "net": 299.0,
+   "mkt": -1962.0,
+   "dist": -78.0,
+   "end": 35518.0
+  },
+  "oe": {
+   "beg": 44363.0,
+   "net": -105.0,
+   "mkt": -1921.0,
+   "dist": -51.0,
+   "end": 42286.0
+  },
+  "cef": {
+   "beg": 12379.0,
+   "net": 3.0,
+   "mkt": -342.0,
+   "dist": -51.0,
+   "end": 11989.0
+  },
+  "tot": {
+   "beg": 94001.0,
+   "net": 197.0,
+   "mkt": -4225.0,
+   "dist": -180.0,
+   "end": 89793.0
+  }
+ },
+ "2022-09": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2022-301645134.html",
+  "sub": {
+   "beg": 9080.0,
+   "net": 59.0,
+   "mkt": -1148.0,
+   "dist": -76.0,
+   "end": 7915.0
+  },
+  "inst": {
+   "beg": 35518.0,
+   "net": -392.0,
+   "mkt": -4183.0,
+   "dist": -76.0,
+   "end": 30867.0
+  },
+  "oe": {
+   "beg": 42286.0,
+   "net": -736.0,
+   "mkt": -4013.0,
+   "dist": -191.0,
+   "end": 37346.0
+  },
+  "cef": {
+   "beg": 11989.0,
+   "net": 5.0,
+   "mkt": -958.0,
+   "dist": -51.0,
+   "end": 10985.0
+  },
+  "tot": {
+   "beg": 89793.0,
+   "net": -1123.0,
+   "mkt": -9154.0,
+   "dist": -318.0,
+   "end": 79198.0
+  }
+ },
+ "2022-10": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-october-2022-301672212.html",
+  "sub": {
+   "beg": 7915.0,
+   "net": 95.0,
+   "mkt": 274.0,
+   "dist": -73.0,
+   "end": 8211.0
+  },
+  "inst": {
+   "beg": 30867.0,
+   "net": 61.0,
+   "mkt": 785.0,
+   "dist": -73.0,
+   "end": 31640.0
+  },
+  "oe": {
+   "beg": 37346.0,
+   "net": -635.0,
+   "mkt": 565.0,
+   "dist": -48.0,
+   "end": 37228.0
+  },
+  "cef": {
+   "beg": 10985.0,
+   "net": 4.0,
+   "mkt": 165.0,
+   "dist": -51.0,
+   "end": 11103.0
+  },
+  "tot": {
+   "beg": 79198.0,
+   "net": -570.0,
+   "mkt": 1515.0,
+   "dist": -172.0,
+   "end": 79971.0
+  }
+ },
+ "2022-11": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-november-2022-301698775.html",
+  "sub": {
+   "beg": 8211.0,
+   "net": 86.0,
+   "mkt": 553.0,
+   "dist": -80.0,
+   "end": 8770.0
+  },
+  "inst": {
+   "beg": 31640.0,
+   "net": 193.0,
+   "mkt": 2187.0,
+   "dist": -80.0,
+   "end": 33940.0
+  },
+  "oe": {
+   "beg": 37228.0,
+   "net": -447.0,
+   "mkt": 1960.0,
+   "dist": -46.0,
+   "end": 38695.0
+  },
+  "cef": {
+   "beg": 11103.0,
+   "net": 2.0,
+   "mkt": 495.0,
+   "dist": -51.0,
+   "end": 11549.0
+  },
+  "tot": {
+   "beg": 79971.0,
+   "net": -252.0,
+   "mkt": 4642.0,
+   "dist": -177.0,
+   "end": 84184.0
+  }
+ },
+ "2022-12": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-december-2022-301718383.html",
+  "sub": {
+   "beg": 8770.0,
+   "net": 99.0,
+   "mkt": -409.0,
+   "dist": -84.0,
+   "end": 8376.0
+  },
+  "inst": {
+   "beg": 33940.0,
+   "net": -339.0,
+   "mkt": -1144.0,
+   "dist": -84.0,
+   "end": 32373.0
+  },
+  "oe": {
+   "beg": 38695.0,
+   "net": 76.0,
+   "mkt": -1206.0,
+   "dist": -662.0,
+   "end": 36903.0
+  },
+  "cef": {
+   "beg": 11549.0,
+   "net": 3.0,
+   "mkt": -262.0,
+   "dist": -141.0,
+   "end": 11149.0
+  },
+  "tot": {
+   "beg": 84184.0,
+   "net": -260.0,
+   "mkt": -2612.0,
+   "dist": -887.0,
+   "end": 80425.0
+  }
+ },
+ "2023-01": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-january-2023-301742486.html",
+  "sub": {
+   "beg": 8376.0,
+   "net": 89.0,
+   "mkt": 887.0,
+   "dist": -88.0,
+   "end": 9264.0
+  },
+  "inst": {
+   "beg": 32373.0,
+   "net": -112.0,
+   "mkt": 2895.0,
+   "dist": -88.0,
+   "end": 35068.0
+  },
+  "oe": {
+   "beg": 36903.0,
+   "net": 431.0,
+   "mkt": 3150.0,
+   "dist": -51.0,
+   "end": 40433.0
+  },
+  "cef": {
+   "beg": 11149.0,
+   "net": 3.0,
+   "mkt": 678.0,
+   "dist": -51.0,
+   "end": 11779.0
+  },
+  "tot": {
+   "beg": 80425.0,
+   "net": 322.0,
+   "mkt": 6723.0,
+   "dist": -190.0,
+   "end": 87280.0
+  }
+ },
+ "2023-02": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-february-2023-301766257.html",
+  "sub": {
+   "beg": 9264.0,
+   "net": 46.0,
+   "mkt": -416.0,
+   "dist": -84.0,
+   "end": 8810.0
+  },
+  "inst": {
+   "beg": 35068.0,
+   "net": -130.0,
+   "mkt": -1494.0,
+   "dist": -84.0,
+   "end": 33360.0
+  },
+  "oe": {
+   "beg": 40433.0,
+   "net": 7.0,
+   "mkt": -1645.0,
+   "dist": -50.0,
+   "end": 38745.0
+  },
+  "cef": {
+   "beg": 11779.0,
+   "net": 5.0,
+   "mkt": -346.0,
+   "dist": -51.0,
+   "end": 11387.0
+  },
+  "tot": {
+   "beg": 87280.0,
+   "net": -118.0,
+   "mkt": -3485.0,
+   "dist": -185.0,
+   "end": 83492.0
+  }
+ },
+ "2023-03": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-march-2023-301794911.html",
+  "sub": {
+   "beg": 8810.0,
+   "net": 191.0,
+   "mkt": -201.0,
+   "dist": -87.0,
+   "end": 8713.0
+  },
+  "inst": {
+   "beg": 33360.0,
+   "net": 124.0,
+   "mkt": -793.0,
+   "dist": -87.0,
+   "end": 32604.0
+  },
+  "oe": {
+   "beg": 38745.0,
+   "net": -742.0,
+   "mkt": -1396.0,
+   "dist": -180.0,
+   "end": 36427.0
+  },
+  "cef": {
+   "beg": 11387.0,
+   "net": -82.0,
+   "mkt": -380.0,
+   "dist": -51.0,
+   "end": 10874.0
+  },
+  "tot": {
+   "beg": 83492.0,
+   "net": -700.0,
+   "mkt": -2569.0,
+   "dist": -318.0,
+   "end": 79905.0
+  }
+ },
+ "2023-04": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-april-2023-301818669.html",
+  "sub": {
+   "beg": 8713.0,
+   "net": 64.0,
+   "mkt": 159.0,
+   "dist": -88.0,
+   "end": 8848.0
+  },
+  "inst": {
+   "beg": 32604.0,
+   "net": 45.0,
+   "mkt": 682.0,
+   "dist": -88.0,
+   "end": 33243.0
+  },
+  "oe": {
+   "beg": 36427.0,
+   "net": -132.0,
+   "mkt": 492.0,
+   "dist": -46.0,
+   "end": 36741.0
+  },
+  "cef": {
+   "beg": 10874.0,
+   "net": 1.0,
+   "mkt": 135.0,
+   "dist": -51.0,
+   "end": 10959.0
+  },
+  "tot": {
+   "beg": 79905.0,
+   "net": -86.0,
+   "mkt": 1309.0,
+   "dist": -185.0,
+   "end": 80943.0
+  }
+ },
+ "2023-06": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-june-2023-301874834.html",
+  "adv": {
+   "beg": 18251.0,
+   "net": -103.0,
+   "mkt": 676.0,
+   "dist": 0.0,
+   "end": 18824.0
+  },
+  "sub": {
+   "beg": 8547.0,
+   "net": 81.0,
+   "mkt": 416.0,
+   "dist": -84.0,
+   "end": 8960.0
+  },
+  "inst": {
+   "beg": 32085.0,
+   "net": -21.0,
+   "mkt": 1295.0,
+   "dist": -84.0,
+   "end": 33275.0
+  },
+  "oe": {
+   "beg": 35116.0,
+   "net": 56.0,
+   "mkt": 1292.0,
+   "dist": -255.0,
+   "end": 36209.0
+  },
+  "cef": {
+   "beg": 10651.0,
+   "net": 1.0,
+   "mkt": 329.0,
+   "dist": -52.0,
+   "end": 10929.0
+  },
+  "tot": {
+   "beg": 77852.0,
+   "net": 36.0,
+   "mkt": 2916.0,
+   "dist": -391.0,
+   "end": 80413.0
+  }
+ },
+ "2023-07": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-july-2023-301896228.html",
+  "adv": {
+   "beg": 18824.0,
+   "net": 187.0,
+   "mkt": 516.0,
+   "dist": 0.0,
+   "end": 19527.0
+  },
+  "sub": {
+   "beg": 8960.0,
+   "net": 26.0,
+   "mkt": 240.0,
+   "dist": -65.0,
+   "end": 9161.0
+  },
+  "inst": {
+   "beg": 33275.0,
+   "net": 292.0,
+   "mkt": 923.0,
+   "dist": -65.0,
+   "end": 34425.0
+  },
+  "oe": {
+   "beg": 36209.0,
+   "net": -64.0,
+   "mkt": 753.0,
+   "dist": -46.0,
+   "end": 36852.0
+  },
+  "cef": {
+   "beg": 10929.0,
+   "net": 3.0,
+   "mkt": 183.0,
+   "dist": -51.0,
+   "end": 11064.0
+  },
+  "tot": {
+   "beg": 80413.0,
+   "net": 231.0,
+   "mkt": 1859.0,
+   "dist": -162.0,
+   "end": 82341.0
+  }
+ },
+ "2023-08": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-august-2023-301923845.html",
+  "adv": {
+   "beg": 19527.0,
+   "net": 90.0,
+   "mkt": -571.0,
+   "dist": 0.0,
+   "end": 19046.0
+  },
+  "sub": {
+   "beg": 9161.0,
+   "net": 2.0,
+   "mkt": -291.0,
+   "dist": -62.0,
+   "end": 8810.0
+  },
+  "inst": {
+   "beg": 34425.0,
+   "net": 185.0,
+   "mkt": -1067.0,
+   "dist": -62.0,
+   "end": 33481.0
+  },
+  "oe": {
+   "beg": 36852.0,
+   "net": -173.0,
+   "mkt": -800.0,
+   "dist": -44.0,
+   "end": 35835.0
+  },
+  "cef": {
+   "beg": 11064.0,
+   "net": 0.0,
+   "mkt": -298.0,
+   "dist": -51.0,
+   "end": 10715.0
+  },
+  "tot": {
+   "beg": 82341.0,
+   "net": 12.0,
+   "mkt": -2165.0,
+   "dist": -157.0,
+   "end": 80031.0
+  }
+ },
+ "2023-09": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2023-301951328.html",
+  "adv": {
+   "beg": 19046.0,
+   "net": -87.0,
+   "mkt": -1055.0,
+   "dist": 0.0,
+   "end": 17904.0
+  },
+  "sub": {
+   "beg": 8810.0,
+   "net": -30.0,
+   "mkt": -630.0,
+   "dist": -60.0,
+   "end": 8090.0
+  },
+  "inst": {
+   "beg": 33481.0,
+   "net": -166.0,
+   "mkt": -2039.0,
+   "dist": -60.0,
+   "end": 31216.0
+  },
+  "oe": {
+   "beg": 35835.0,
+   "net": -123.0,
+   "mkt": -1869.0,
+   "dist": -172.0,
+   "end": 33671.0
+  },
+  "cef": {
+   "beg": 10715.0,
+   "net": -1.0,
+   "mkt": -392.0,
+   "dist": -51.0,
+   "end": 10271.0
+  },
+  "tot": {
+   "beg": 80031.0,
+   "net": -290.0,
+   "mkt": -4300.0,
+   "dist": -283.0,
+   "end": 75158.0
+  }
+ },
+ "2023-10": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-october-2023-301982392.html",
+  "adv": {
+   "beg": 17904.0,
+   "net": -74.0,
+   "mkt": -564.0,
+   "dist": 0.0,
+   "end": 17266.0
+  },
+  "sub": {
+   "beg": 8090.0,
+   "net": 4.0,
+   "mkt": -325.0,
+   "dist": -60.0,
+   "end": 7709.0
+  },
+  "inst": {
+   "beg": 31216.0,
+   "net": -304.0,
+   "mkt": -1072.0,
+   "dist": -60.0,
+   "end": 29780.0
+  },
+  "oe": {
+   "beg": 33671.0,
+   "net": -423.0,
+   "mkt": -835.0,
+   "dist": -43.0,
+   "end": 32370.0
+  },
+  "cef": {
+   "beg": 10271.0,
+   "net": -5.0,
+   "mkt": -180.0,
+   "dist": -51.0,
+   "end": 10035.0
+  },
+  "tot": {
+   "beg": 75158.0,
+   "net": -732.0,
+   "mkt": -2087.0,
+   "dist": -154.0,
+   "end": 72185.0
+  }
+ },
+ "2023-11": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-november-2023-302011855.html",
+  "adv": {
+   "beg": 17266.0,
+   "net": -113.0,
+   "mkt": 1700.0,
+   "dist": 0.0,
+   "end": 18853.0
+  },
+  "sub": {
+   "beg": 7709.0,
+   "net": -12.0,
+   "mkt": 912.0,
+   "dist": -61.0,
+   "end": 8548.0
+  },
+  "inst": {
+   "beg": 29780.0,
+   "net": -148.0,
+   "mkt": 3144.0,
+   "dist": -61.0,
+   "end": 32715.0
+  },
+  "oe": {
+   "beg": 32370.0,
+   "net": -117.0,
+   "mkt": 3102.0,
+   "dist": -43.0,
+   "end": 35312.0
+  },
+  "cef": {
+   "beg": 10035.0,
+   "net": 1.0,
+   "mkt": 716.0,
+   "dist": -51.0,
+   "end": 10701.0
+  },
+  "tot": {
+   "beg": 72185.0,
+   "net": -264.0,
+   "mkt": 6962.0,
+   "dist": -155.0,
+   "end": 78728.0
+  }
+ },
+ "2023-12": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-december-2023-302030509.html",
+  "adv": {
+   "beg": 18853.0,
+   "net": 157.0,
+   "mkt": 1254.0,
+   "dist": 0.0,
+   "end": 20264.0
+  },
+  "sub": {
+   "beg": 8548.0,
+   "net": -160.0,
+   "mkt": 702.0,
+   "dist": -64.0,
+   "end": 9026.0
+  },
+  "inst": {
+   "beg": 32715.0,
+   "net": 25.0,
+   "mkt": 2352.0,
+   "dist": -64.0,
+   "end": 35028.0
+  },
+  "oe": {
+   "beg": 35312.0,
+   "net": 36.0,
+   "mkt": 1977.0,
+   "dist": -293.0,
+   "end": 37032.0
+  },
+  "cef": {
+   "beg": 10701.0,
+   "net": 0.0,
+   "mkt": 426.0,
+   "dist": -51.0,
+   "end": 11076.0
+  },
+  "tot": {
+   "beg": 78728.0,
+   "net": 61.0,
+   "mkt": 4755.0,
+   "dist": -408.0,
+   "end": 83136.0
+  }
+ },
+ "2024-01": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-january-2024-302058121.html",
+  "adv": {
+   "beg": 20264.0,
+   "net": -1744.0,
+   "mkt": -552.0,
+   "dist": 0.0,
+   "end": 17968.0
+  },
+  "sub": {
+   "beg": 9026.0,
+   "net": -64.0,
+   "mkt": -352.0,
+   "dist": -62.0,
+   "end": 8548.0
+  },
+  "inst": {
+   "beg": 35028.0,
+   "net": -1827.0,
+   "mkt": -1127.0,
+   "dist": -62.0,
+   "end": 32012.0
+  },
+  "oe": {
+   "beg": 37032.0,
+   "net": 356.0,
+   "mkt": -909.0,
+   "dist": -44.0,
+   "end": 36435.0
+  },
+  "cef": {
+   "beg": 11076.0,
+   "net": 1.0,
+   "mkt": -157.0,
+   "dist": -51.0,
+   "end": 10869.0
+  },
+  "tot": {
+   "beg": 83136.0,
+   "net": -1470.0,
+   "mkt": -2193.0,
+   "dist": -157.0,
+   "end": 79316.0
+  }
+ },
+ "2024-02": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-february-2024-302085765.html",
+  "adv": {
+   "beg": 17968.0,
+   "net": -776.0,
+   "mkt": 180.0,
+   "dist": 0.0,
+   "end": 17372.0
+  },
+  "sub": {
+   "beg": 8548.0,
+   "net": -26.0,
+   "mkt": 181.0,
+   "dist": -60.0,
+   "end": 8643.0
+  },
+  "inst": {
+   "beg": 32012.0,
+   "net": -820.0,
+   "mkt": 400.0,
+   "dist": -60.0,
+   "end": 31532.0
+  },
+  "oe": {
+   "beg": 36435.0,
+   "net": 136.0,
+   "mkt": 619.0,
+   "dist": -44.0,
+   "end": 37146.0
+  },
+  "cef": {
+   "beg": 10869.0,
+   "net": 1.0,
+   "mkt": 152.0,
+   "dist": -51.0,
+   "end": 10971.0
+  },
+  "tot": {
+   "beg": 79316.0,
+   "net": -683.0,
+   "mkt": 1171.0,
+   "dist": -155.0,
+   "end": 79649.0
+  }
+ },
+ "2024-03": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-march-2024-302110905.html",
+  "adv": {
+   "beg": 17372.0,
+   "net": 324.0,
+   "mkt": 500.0,
+   "dist": 0.0,
+   "end": 18196.0
+  },
+  "sub": {
+   "beg": 8643.0,
+   "net": -221.0,
+   "mkt": 176.0,
+   "dist": -63.0,
+   "end": 8535.0
+  },
+  "inst": {
+   "beg": 31532.0,
+   "net": 104.0,
+   "mkt": 851.0,
+   "dist": -63.0,
+   "end": 32424.0
+  },
+  "oe": {
+   "beg": 37146.0,
+   "net": 78.0,
+   "mkt": 645.0,
+   "dist": -184.0,
+   "end": 37685.0
+  },
+  "cef": {
+   "beg": 10971.0,
+   "net": 1.0,
+   "mkt": 205.0,
+   "dist": -51.0,
+   "end": 11126.0
+  },
+  "tot": {
+   "beg": 79649.0,
+   "net": 183.0,
+   "mkt": 1701.0,
+   "dist": -298.0,
+   "end": 81235.0
+  }
+ },
+ "2024-04": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-april-2024-302140482.html",
+  "adv": {
+   "beg": 18196.0,
+   "net": -17.0,
+   "mkt": -802.0,
+   "dist": 0.0,
+   "end": 17377.0
+  },
+  "sub": {
+   "beg": 8535.0,
+   "net": -58.0,
+   "mkt": -531.0,
+   "dist": -56.0,
+   "end": 7890.0
+  },
+  "inst": {
+   "beg": 32424.0,
+   "net": -84.0,
+   "mkt": -1639.0,
+   "dist": -56.0,
+   "end": 30645.0
+  },
+  "oe": {
+   "beg": 37685.0,
+   "net": 9.0,
+   "mkt": -1881.0,
+   "dist": -44.0,
+   "end": 35769.0
+  },
+  "cef": {
+   "beg": 11126.0,
+   "net": 1.0,
+   "mkt": -330.0,
+   "dist": -51.0,
+   "end": 10746.0
+  },
+  "tot": {
+   "beg": 81235.0,
+   "net": -74.0,
+   "mkt": -3850.0,
+   "dist": -151.0,
+   "end": 77160.0
+  }
+ },
+ "2024-05": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-may-2024-302168649.html",
+  "adv": {
+   "beg": 17377.0,
+   "net": 61.0,
+   "mkt": 823.0,
+   "dist": 0.0,
+   "end": 18261.0
+  },
+  "sub": {
+   "beg": 7890.0,
+   "net": -84.0,
+   "mkt": 463.0,
+   "dist": -55.0,
+   "end": 8214.0
+  },
+  "inst": {
+   "beg": 30645.0,
+   "net": -30.0,
+   "mkt": 1562.0,
+   "dist": -55.0,
+   "end": 32122.0
+  },
+  "oe": {
+   "beg": 35769.0,
+   "net": -64.0,
+   "mkt": 1623.0,
+   "dist": -44.0,
+   "end": 37284.0
+  },
+  "cef": {
+   "beg": 10746.0,
+   "net": 1.0,
+   "mkt": 386.0,
+   "dist": -51.0,
+   "end": 11082.0
+  },
+  "tot": {
+   "beg": 77160.0,
+   "net": -93.0,
+   "mkt": 3571.0,
+   "dist": -150.0,
+   "end": 80488.0
+  }
+ },
+ "2024-06": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-june-2024-302192565.html",
+  "adv": {
+   "beg": 18261.0,
+   "net": 29.0,
+   "mkt": 77.0,
+   "dist": 0.0,
+   "end": 18367.0
+  },
+  "sub": {
+   "beg": 8214.0,
+   "net": -43.0,
+   "mkt": 198.0,
+   "dist": -60.0,
+   "end": 8309.0
+  },
+  "inst": {
+   "beg": 32122.0,
+   "net": -132.0,
+   "mkt": 292.0,
+   "dist": -60.0,
+   "end": 32222.0
+  },
+  "oe": {
+   "beg": 37284.0,
+   "net": -46.0,
+   "mkt": 474.0,
+   "dist": -261.0,
+   "end": 37451.0
+  },
+  "cef": {
+   "beg": 11082.0,
+   "net": 0.0,
+   "mkt": 5.0,
+   "dist": -51.0,
+   "end": 11036.0
+  },
+  "tot": {
+   "beg": 80488.0,
+   "net": -178.0,
+   "mkt": 771.0,
+   "dist": -372.0,
+   "end": 80709.0
+  }
+ },
+ "2024-07": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-july-2024-302218406.html",
+  "adv": {
+   "beg": 18367.0,
+   "net": -66.0,
+   "mkt": 991.0,
+   "dist": 0.0,
+   "end": 19292.0
+  },
+  "sub": {
+   "beg": 8309.0,
+   "net": -77.0,
+   "mkt": 481.0,
+   "dist": -57.0,
+   "end": 8656.0
+  },
+  "inst": {
+   "beg": 32222.0,
+   "net": -202.0,
+   "mkt": 1801.0,
+   "dist": -57.0,
+   "end": 33764.0
+  },
+  "oe": {
+   "beg": 37451.0,
+   "net": 156.0,
+   "mkt": 1858.0,
+   "dist": -45.0,
+   "end": 39420.0
+  },
+  "cef": {
+   "beg": 11036.0,
+   "net": 1.0,
+   "mkt": 405.0,
+   "dist": -51.0,
+   "end": 11391.0
+  },
+  "tot": {
+   "beg": 80709.0,
+   "net": -45.0,
+   "mkt": 4064.0,
+   "dist": -153.0,
+   "end": 84575.0
+  }
+ },
+ "2024-08": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-august-2024-302244288.html",
+  "adv": {
+   "beg": 19292.0,
+   "net": -7.0,
+   "mkt": 918.0,
+   "dist": 0.0,
+   "end": 20203.0
+  },
+  "sub": {
+   "beg": 8656.0,
+   "net": 25.0,
+   "mkt": 506.0,
+   "dist": -58.0,
+   "end": 9129.0
+  },
+  "inst": {
+   "beg": 33764.0,
+   "net": -27.0,
+   "mkt": 1749.0,
+   "dist": -58.0,
+   "end": 35428.0
+  },
+  "oe": {
+   "beg": 39420.0,
+   "net": 34.0,
+   "mkt": 1573.0,
+   "dist": -43.0,
+   "end": 40984.0
+  },
+  "cef": {
+   "beg": 11391.0,
+   "net": 1.0,
+   "mkt": 347.0,
+   "dist": -51.0,
+   "end": 11688.0
+  },
+  "tot": {
+   "beg": 84575.0,
+   "net": 8.0,
+   "mkt": 3669.0,
+   "dist": -152.0,
+   "end": 88100.0
+  }
+ },
+ "2024-09": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2024-302270649.html",
+  "adv": {
+   "beg": 20203.0,
+   "net": 82.0,
+   "mkt": 697.0,
+   "dist": 0.0,
+   "end": 20982.0
+  },
+  "sub": {
+   "beg": 9129.0,
+   "net": 20.0,
+   "mkt": 275.0,
+   "dist": -59.0,
+   "end": 9365.0
+  },
+  "inst": {
+   "beg": 35428.0,
+   "net": 337.0,
+   "mkt": 1186.0,
+   "dist": -59.0,
+   "end": 36892.0
+  },
+  "oe": {
+   "beg": 40984.0,
+   "net": 983.0,
+   "mkt": 1188.0,
+   "dist": -176.0,
+   "end": 42979.0
+  },
+  "cef": {
+   "beg": 11688.0,
+   "net": 1.0,
+   "mkt": 271.0,
+   "dist": -51.0,
+   "end": 11909.0
+  },
+  "tot": {
+   "beg": 88100.0,
+   "net": 1321.0,
+   "mkt": 2645.0,
+   "dist": -286.0,
+   "end": 91780.0
+  }
+ },
+ "2024-10": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-october-2024-302301733.html",
+  "adv": {
+   "beg": 20982.0,
+   "net": -49.0,
+   "mkt": -637.0,
+   "dist": 0.0,
+   "end": 20296.0
+  },
+  "sub": {
+   "beg": 9365.0,
+   "net": -3.0,
+   "mkt": -258.0,
+   "dist": -55.0,
+   "end": 9049.0
+  },
+  "inst": {
+   "beg": 36892.0,
+   "net": -93.0,
+   "mkt": -1158.0,
+   "dist": -55.0,
+   "end": 35586.0
+  },
+  "oe": {
+   "beg": 42979.0,
+   "net": 546.0,
+   "mkt": -996.0,
+   "dist": -44.0,
+   "end": 42485.0
+  },
+  "cef": {
+   "beg": 11909.0,
+   "net": 1.0,
+   "mkt": -191.0,
+   "dist": -51.0,
+   "end": 11668.0
+  },
+  "tot": {
+   "beg": 91780.0,
+   "net": 454.0,
+   "mkt": -2345.0,
+   "dist": -150.0,
+   "end": 89739.0
+  }
+ },
+ "2024-11": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-november-2024-302326677.html",
+  "adv": {
+   "beg": 20296.0,
+   "net": -123.0,
+   "mkt": 390.0,
+   "dist": 0.0,
+   "end": 20563.0
+  },
+  "sub": {
+   "beg": 9049.0,
+   "net": -2.0,
+   "mkt": 357.0,
+   "dist": -56.0,
+   "end": 9348.0
+  },
+  "inst": {
+   "beg": 35586.0,
+   "net": -148.0,
+   "mkt": 902.0,
+   "dist": -56.0,
+   "end": 36284.0
+  },
+  "oe": {
+   "beg": 42485.0,
+   "net": 49.0,
+   "mkt": 817.0,
+   "dist": -44.0,
+   "end": 43307.0
+  },
+  "cef": {
+   "beg": 11668.0,
+   "net": 1.0,
+   "mkt": 227.0,
+   "dist": -51.0,
+   "end": 11845.0
+  },
+  "tot": {
+   "beg": 89739.0,
+   "net": -98.0,
+   "mkt": 1946.0,
+   "dist": -151.0,
+   "end": 91436.0
+  }
+ },
+ "2024-12": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-december-2024-302347513.html",
+  "adv": {
+   "beg": 20563.0,
+   "net": 71.0,
+   "mkt": -1362.0,
+   "dist": 0.0,
+   "end": 19272.0
+  },
+  "sub": {
+   "beg": 9348.0,
+   "net": -28.0,
+   "mkt": -745.0,
+   "dist": -53.0,
+   "end": 8522.0
+  },
+  "inst": {
+   "beg": 36284.0,
+   "net": -65.0,
+   "mkt": -2603.0,
+   "dist": -53.0,
+   "end": 33563.0
+  },
+  "oe": {
+   "beg": 43307.0,
+   "net": 568.0,
+   "mkt": -2621.0,
+   "dist": -292.0,
+   "end": 40962.0
+  },
+  "cef": {
+   "beg": 11845.0,
+   "net": 1.0,
+   "mkt": -506.0,
+   "dist": -51.0,
+   "end": 11289.0
+  },
+  "tot": {
+   "beg": 91436.0,
+   "net": 504.0,
+   "mkt": -5730.0,
+   "dist": -396.0,
+   "end": 85814.0
+  }
+ },
+ "2025-01": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-january-2025-302372290.html",
+  "adv": {
+   "beg": 19272.0,
+   "net": 83.0,
+   "mkt": 243.0,
+   "dist": 0.0,
+   "end": 19598.0
+  },
+  "sub": {
+   "beg": 8522.0,
+   "net": 28.0,
+   "mkt": 102.0,
+   "dist": -54.0,
+   "end": 8598.0
+  },
+  "inst": {
+   "beg": 33563.0,
+   "net": -347.0,
+   "mkt": 415.0,
+   "dist": -54.0,
+   "end": 33577.0
+  },
+  "oe": {
+   "beg": 40962.0,
+   "net": 133.0,
+   "mkt": 459.0,
+   "dist": -44.0,
+   "end": 41510.0
+  },
+  "cef": {
+   "beg": 11289.0,
+   "net": 1.0,
+   "mkt": 86.0,
+   "dist": -51.0,
+   "end": 11325.0
+  },
+  "tot": {
+   "beg": 85814.0,
+   "net": -213.0,
+   "mkt": 960.0,
+   "dist": -149.0,
+   "end": 86412.0
+  }
+ },
+ "2025-02": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-february-2025-302397494.html",
+  "adv": {
+   "beg": 19598.0,
+   "net": -235.0,
+   "mkt": 505.0,
+   "dist": 0.0,
+   "end": 19868.0
+  },
+  "sub": {
+   "beg": 8598.0,
+   "net": -5.0,
+   "mkt": 282.0,
+   "dist": -55.0,
+   "end": 8820.0
+  },
+  "inst": {
+   "beg": 33577.0,
+   "net": -264.0,
+   "mkt": 922.0,
+   "dist": -55.0,
+   "end": 34180.0
+  },
+  "oe": {
+   "beg": 41510.0,
+   "net": 247.0,
+   "mkt": 1173.0,
+   "dist": -44.0,
+   "end": 42886.0
+  },
+  "cef": {
+   "beg": 11325.0,
+   "net": 1.0,
+   "mkt": 218.0,
+   "dist": -52.0,
+   "end": 11492.0
+  },
+  "tot": {
+   "beg": 86412.0,
+   "net": -16.0,
+   "mkt": 2313.0,
+   "dist": -151.0,
+   "end": 88558.0
+  }
+ },
+ "2025-03": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-march-2025-302423938.html",
+  "adv": {
+   "beg": 19868.0,
+   "net": 44.0,
+   "mkt": -209.0,
+   "dist": 0.0,
+   "end": 19703.0
+  },
+  "sub": {
+   "beg": 8820.0,
+   "net": -13.0,
+   "mkt": -218.0,
+   "dist": -55.0,
+   "end": 8534.0
+  },
+  "inst": {
+   "beg": 34180.0,
+   "net": 246.0,
+   "mkt": -485.0,
+   "dist": -55.0,
+   "end": 33886.0
+  },
+  "oe": {
+   "beg": 42886.0,
+   "net": 205.0,
+   "mkt": -598.0,
+   "dist": -195.0,
+   "end": 42298.0
+  },
+  "cef": {
+   "beg": 11492.0,
+   "net": 1.0,
+   "mkt": -47.0,
+   "dist": -51.0,
+   "end": 11395.0
+  },
+  "tot": {
+   "beg": 88558.0,
+   "net": 452.0,
+   "mkt": -1130.0,
+   "dist": -301.0,
+   "end": 87579.0
+  }
+ },
+ "2025-04": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-april-2025-302450596.html",
+  "adv": {
+   "beg": 19703.0,
+   "net": 104.0,
+   "mkt": 130.0,
+   "dist": 0.0,
+   "end": 19937.0
+  },
+  "sub": {
+   "beg": 14183.0,
+   "net": -69.0,
+   "mkt": 34.0,
+   "dist": -57.0,
+   "end": 14091.0
+  },
+  "inst": {
+   "beg": 33886.0,
+   "net": 35.0,
+   "mkt": 164.0,
+   "dist": -57.0,
+   "end": 34028.0
+  },
+  "oe": {
+   "beg": 42298.0,
+   "net": 105.0,
+   "mkt": -150.0,
+   "dist": -43.0,
+   "end": 42210.0
+  },
+  "cef": {
+   "beg": 11395.0,
+   "net": 1.0,
+   "mkt": -74.0,
+   "dist": -51.0,
+   "end": 11271.0
+  },
+  "tot": {
+   "beg": 87579.0,
+   "net": 141.0,
+   "mkt": -60.0,
+   "dist": -151.0,
+   "end": 87509.0
+  }
+ },
+ "2025-05": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-may-2025-302476829.html",
+  "adv": {
+   "beg": 19937.0,
+   "net": 10.0,
+   "mkt": 352.0,
+   "dist": 0.0,
+   "end": 20299.0
+  },
+  "sub": {
+   "beg": 14091.0,
+   "net": -19.0,
+   "mkt": 306.0,
+   "dist": -57.0,
+   "end": 14321.0
+  },
+  "inst": {
+   "beg": 34028.0,
+   "net": -9.0,
+   "mkt": 658.0,
+   "dist": -57.0,
+   "end": 34620.0
+  },
+  "oe": {
+   "beg": 42210.0,
+   "net": -80.0,
+   "mkt": 510.0,
+   "dist": -42.0,
+   "end": 42598.0
+  },
+  "cef": {
+   "beg": 11271.0,
+   "net": 1.0,
+   "mkt": 176.0,
+   "dist": -51.0,
+   "end": 11397.0
+  },
+  "tot": {
+   "beg": 87509.0,
+   "net": -88.0,
+   "mkt": 1344.0,
+   "dist": -150.0,
+   "end": 88615.0
+  }
+ },
+ "2025-06": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-june-2025-302501663.html",
+  "adv": {
+   "beg": 20299.0,
+   "net": -526.0,
+   "mkt": 272.0,
+   "dist": 0.0,
+   "end": 20045.0
+  },
+  "sub": {
+   "beg": 14321.0,
+   "net": -19.0,
+   "mkt": 96.0,
+   "dist": -57.0,
+   "end": 14341.0
+  },
+  "inst": {
+   "beg": 34620.0,
+   "net": -545.0,
+   "mkt": 368.0,
+   "dist": -57.0,
+   "end": 34386.0
+  },
+  "oe": {
+   "beg": 42598.0,
+   "net": 260.0,
+   "mkt": 456.0,
+   "dist": -352.0,
+   "end": 42962.0
+  },
+  "cef": {
+   "beg": 11397.0,
+   "net": 101.0,
+   "mkt": 141.0,
+   "dist": -51.0,
+   "end": 11588.0
+  },
+  "tot": {
+   "beg": 88615.0,
+   "net": -184.0,
+   "mkt": 965.0,
+   "dist": -460.0,
+   "end": 88936.0
+  }
+ },
+ "2025-07": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-july-2025-302526836.html",
+  "adv": {
+   "beg": 20045.0,
+   "net": -66.0,
+   "mkt": -117.0,
+   "dist": 0.0,
+   "end": 19862.0
+  },
+  "sub": {
+   "beg": 14341.0,
+   "net": -20.0,
+   "mkt": -125.0,
+   "dist": -55.0,
+   "end": 14141.0
+  },
+  "inst": {
+   "beg": 34386.0,
+   "net": -86.0,
+   "mkt": -242.0,
+   "dist": -55.0,
+   "end": 34003.0
+  },
+  "oe": {
+   "beg": 42962.0,
+   "net": 294.0,
+   "mkt": -210.0,
+   "dist": -46.0,
+   "end": 43000.0
+  },
+  "cef": {
+   "beg": 11588.0,
+   "net": 1.0,
+   "mkt": 42.0,
+   "dist": -51.0,
+   "end": 11580.0
+  },
+  "tot": {
+   "beg": 88936.0,
+   "net": 209.0,
+   "mkt": -410.0,
+   "dist": -152.0,
+   "end": 88583.0
+  }
+ },
+ "2025-08": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-august-2025-302551494.html",
+  "adv": {
+   "beg": 19862.0,
+   "net": -162.0,
+   "mkt": 483.0,
+   "dist": 0.0,
+   "end": 20183.0
+  },
+  "sub": {
+   "beg": 14141.0,
+   "net": 18.0,
+   "mkt": 413.0,
+   "dist": -55.0,
+   "end": 14517.0
+  },
+  "inst": {
+   "beg": 34003.0,
+   "net": -144.0,
+   "mkt": 896.0,
+   "dist": -55.0,
+   "end": 34700.0
+  },
+  "oe": {
+   "beg": 43000.0,
+   "net": 247.0,
+   "mkt": 785.0,
+   "dist": -45.0,
+   "end": 43987.0
+  },
+  "cef": {
+   "beg": 11580.0,
+   "net": 1.0,
+   "mkt": 138.0,
+   "dist": -51.0,
+   "end": 11668.0
+  },
+  "tot": {
+   "beg": 88583.0,
+   "net": 104.0,
+   "mkt": 1819.0,
+   "dist": -151.0,
+   "end": 90355.0
+  }
+ },
+ "2025-09": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2025-302578935.html",
+  "adv": {
+   "beg": 20183.0,
+   "net": -228.0,
+   "mkt": 253.0,
+   "dist": 0.0,
+   "end": 0.0
+  },
+  "sub": {
+   "beg": 14517.0,
+   "net": -80.0,
+   "mkt": 147.0,
+   "dist": -57.0,
+   "end": -24.0
+  },
+  "inst": {
+   "beg": 34700.0,
+   "net": -308.0,
+   "mkt": 400.0,
+   "dist": -57.0,
+   "end": -24.0
+  },
+  "oe": {
+   "beg": 43987.0,
+   "net": 226.0,
+   "mkt": 397.0,
+   "dist": -213.0,
+   "end": 24.0
+  },
+  "cef": {
+   "beg": 11668.0,
+   "net": 1.0,
+   "mkt": 148.0,
+   "dist": -52.0,
+   "end": 0.0
+  },
+  "tot": {
+   "beg": 90355.0,
+   "net": -81.0,
+   "mkt": 945.0,
+   "dist": -322.0,
+   "end": 0.0
+  }
+ },
+ "2025-10": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-october-2025-302610686.html",
+  "adv": {
+   "beg": 20208.0,
+   "net": 390.0,
+   "mkt": -324.0,
+   "dist": 0.0,
+   "end": 20274.0
+  },
+  "sub": {
+   "beg": 14503.0,
+   "net": 293.0,
+   "mkt": -202.0,
+   "dist": -54.0,
+   "end": 14540.0
+  },
+  "inst": {
+   "beg": 34711.0,
+   "net": 683.0,
+   "mkt": -526.0,
+   "dist": -54.0,
+   "end": 34814.0
+  },
+  "oe": {
+   "beg": 44421.0,
+   "net": -61.0,
+   "mkt": -668.0,
+   "dist": -45.0,
+   "end": 43647.0
+  },
+  "cef": {
+   "beg": 11765.0,
+   "net": 513.0,
+   "mkt": -103.0,
+   "dist": -51.0,
+   "end": 12124.0
+  },
+  "tot": {
+   "beg": 90897.0,
+   "net": 1135.0,
+   "mkt": -1297.0,
+   "dist": -150.0,
+   "end": 90585.0
+  }
+ },
+ "2025-11": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-november-2025-302635805.html",
+  "adv": {
+   "beg": 20274.0,
+   "net": 175.0,
+   "mkt": 555.0,
+   "dist": 0.0,
+   "end": 21004.0
+  },
+  "sub": {
+   "beg": 14540.0,
+   "net": -344.0,
+   "mkt": 344.0,
+   "dist": -54.0,
+   "end": 14486.0
+  },
+  "inst": {
+   "beg": 34814.0,
+   "net": -169.0,
+   "mkt": 899.0,
+   "dist": -54.0,
+   "end": 35490.0
+  },
+  "oe": {
+   "beg": 43647.0,
+   "net": -333.0,
+   "mkt": 923.0,
+   "dist": -43.0,
+   "end": 44194.0
+  },
+  "cef": {
+   "beg": 12124.0,
+   "net": 0.0,
+   "mkt": 179.0,
+   "dist": -54.0,
+   "end": 12249.0
+  },
+  "tot": {
+   "beg": 90585.0,
+   "net": -502.0,
+   "mkt": 2001.0,
+   "dist": -151.0,
+   "end": 91933.0
+  }
+ },
+ "2026-01": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-january-2026-302682510.html",
+  "adv": {
+   "beg": 20843.0,
+   "net": 257.0,
+   "mkt": 598.0,
+   "dist": 0.0,
+   "end": 21698.0
+  },
+  "sub": {
+   "beg": 14217.0,
+   "net": -112.0,
+   "mkt": 468.0,
+   "dist": -53.0,
+   "end": 14520.0
+  },
+  "inst": {
+   "beg": 35060.0,
+   "net": 145.0,
+   "mkt": 1066.0,
+   "dist": -53.0,
+   "end": 36218.0
+  },
+  "oe": {
+   "beg": 43437.0,
+   "net": 304.0,
+   "mkt": 870.0,
+   "dist": -45.0,
+   "end": 44566.0
+  },
+  "cef": {
+   "beg": 12047.0,
+   "net": 0.0,
+   "mkt": 291.0,
+   "dist": -55.0,
+   "end": 12283.0
+  },
+  "tot": {
+   "beg": 90544.0,
+   "net": 449.0,
+   "mkt": 2227.0,
+   "dist": -153.0,
+   "end": 93067.0
+  }
+ },
+ "2026-02": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-february-2026-302708561.html",
+  "adv": {
+   "beg": 21698.0,
+   "net": -24.0,
+   "mkt": 1421.0,
+   "dist": 0.0,
+   "end": 23095.0
+  },
+  "sub": {
+   "beg": 14520.0,
+   "net": -97.0,
+   "mkt": 1066.0,
+   "dist": -51.0,
+   "end": 15438.0
+  },
+  "inst": {
+   "beg": 36218.0,
+   "net": -121.0,
+   "mkt": 2487.0,
+   "dist": -51.0,
+   "end": 38533.0
+  },
+  "oe": {
+   "beg": 44566.0,
+   "net": 127.0,
+   "mkt": 2480.0,
+   "dist": -45.0,
+   "end": 47128.0
+  },
+  "cef": {
+   "beg": 12283.0,
+   "net": 1.0,
+   "mkt": 530.0,
+   "dist": -55.0,
+   "end": 12759.0
+  },
+  "tot": {
+   "beg": 93067.0,
+   "net": 7.0,
+   "mkt": 5497.0,
+   "dist": -151.0,
+   "end": 98420.0
+  }
+ },
+ "2026-03": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-march-2026-302738722.html",
+  "adv": {
+   "beg": 23095.0,
+   "net": -21.0,
+   "mkt": -1395.0,
+   "dist": 0.0,
+   "end": 21679.0
+  },
+  "sub": {
+   "beg": 15438.0,
+   "net": -62.0,
+   "mkt": -974.0,
+   "dist": -52.0,
+   "end": 14350.0
+  },
+  "inst": {
+   "beg": 38533.0,
+   "net": -83.0,
+   "mkt": -2369.0,
+   "dist": -52.0,
+   "end": 36029.0
+  },
+  "oe": {
+   "beg": 47128.0,
+   "net": 124.0,
+   "mkt": -2195.0,
+   "dist": -216.0,
+   "end": 44841.0
+  },
+  "cef": {
+   "beg": 12759.0,
+   "net": 1.0,
+   "mkt": -447.0,
+   "dist": -55.0,
+   "end": 12258.0
+  },
+  "tot": {
+   "beg": 98420.0,
+   "net": 42.0,
+   "mkt": -5011.0,
+   "dist": -323.0,
+   "end": 93128.0
+  }
+ },
+ "2026-04": {
+  "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-april-2026-302768653.html",
+  "adv": {
+   "beg": 21679.0,
+   "net": -299.0,
+   "mkt": 1538.0,
+   "dist": 0.0,
+   "end": 22918.0
+  },
+  "sub": {
+   "beg": 14350.0,
+   "net": 429.0,
+   "mkt": 1208.0,
+   "dist": -49.0,
+   "end": 15938.0
+  },
+  "inst": {
+   "beg": 36029.0,
+   "net": 130.0,
+   "mkt": 2746.0,
+   "dist": -49.0,
+   "end": 38856.0
+  },
+  "oe": {
+   "beg": 44841.0,
+   "net": 571.0,
+   "mkt": 3141.0,
+   "dist": -47.0,
+   "end": 48506.0
+  },
+  "cef": {
+   "beg": 12258.0,
+   "net": 0.0,
+   "mkt": 536.0,
+   "dist": -56.0,
+   "end": 12738.0
+  },
+  "tot": {
+   "beg": 93128.0,
+   "net": 701.0,
+   "mkt": 6423.0,
+   "dist": -152.0,
+   "end": 100100.0
+  }
+ },
+ "2026-05": {
+  "url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-may-2026/",
+  "adv": {
+   "beg": 22918.0,
+   "net": -1.0,
+   "mkt": -219.0,
+   "dist": 0.0,
+   "end": 22698.0
+  },
+  "sub": {
+   "beg": 15938.0,
+   "net": -87.0,
+   "mkt": -89.0,
+   "dist": -50.0,
+   "end": 15712.0
+  },
+  "inst": {
+   "beg": 38856.0,
+   "net": -88.0,
+   "mkt": -308.0,
+   "dist": -50.0,
+   "end": 38410.0
+  },
+  "oe": {
+   "beg": 48506.0,
+   "net": 189.0,
+   "mkt": -191.0,
+   "dist": -48.0,
+   "end": 48456.0
+  },
+  "cef": {
+   "beg": 12738.0,
+   "net": 0.0,
+   "mkt": -93.0,
+   "dist": -56.0,
+   "end": 12589.0
+  },
+  "tot": {
+   "beg": 100100.0,
+   "net": 101.0,
+   "mkt": -592.0,
+   "dist": -154.0,
+   "end": 99455.0
+  }
+ },
+ "2026-06": {
+  "url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-june-2026/",
+  "adv": {
+   "beg": 22698.0,
+   "net": 36.0,
+   "mkt": 171.0,
+   "dist": 0.0,
+   "end": 22905.0
+  },
+  "sub": {
+   "beg": 15712.0,
+   "net": -236.0,
+   "mkt": 194.0,
+   "dist": -52.0,
+   "end": 15618.0
+  },
+  "inst": {
+   "beg": 38410.0,
+   "net": -200.0,
+   "mkt": 365.0,
+   "dist": -52.0,
+   "end": 38523.0
+  },
+  "oe": {
+   "beg": 48456.0,
+   "net": 695.0,
+   "mkt": 196.0,
+   "dist": -354.0,
+   "end": 48993.0
+  },
+  "cef": {
+   "beg": 12589.0,
+   "net": 0.0,
+   "mkt": 50.0,
+   "dist": -56.0,
+   "end": 12583.0
+  },
+  "tot": {
+   "beg": 99455.0,
+   "net": 495.0,
+   "mkt": 611.0,
+   "dist": -462.0,
+   "end": 100099.0
+  }
+ },
+ "2026-07": {
+  "url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-july-2026/",
+  "adv": {
+   "beg": 22905.0,
+   "net": 190.0,
+   "mkt": 476.0,
+   "dist": 0.0,
+   "end": 23571.0
+  },
+  "sub": {
+   "beg": 15618.0,
+   "net": 75.0,
+   "mkt": 385.0,
+   "dist": -49.0,
+   "end": 16029.0
+  },
+  "inst": {
+   "beg": 38523.0,
+   "net": 265.0,
+   "mkt": 861.0,
+   "dist": -49.0,
+   "end": 39600.0
+  },
+  "oe": {
+   "beg": 48993.0,
+   "net": 269.0,
+   "mkt": 933.0,
+   "dist": -50.0,
+   "end": 50145.0
+  },
+  "cef": {
+   "beg": 12583.0,
+   "net": 154.0,
+   "mkt": 97.0,
+   "dist": -56.0,
+   "end": 12778.0
+  },
+  "tot": {
+   "beg": 100099.0,
+   "net": 688.0,
+   "mkt": 1891.0,
+   "dist": -155.0,
+   "end": 102523.0
+  }
+ },
+ "2026-08": {
+  "url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-august-2026/",
+  "adv": {
+   "beg": 23571.0,
+   "net": -21.0,
+   "mkt": -504.0,
+   "dist": 0.0,
+   "end": 23046.0
+  },
+  "sub": {
+   "beg": 16029.0,
+   "net": 119.0,
+   "mkt": -420.0,
+   "dist": -48.0,
+   "end": 15680.0
+  },
+  "inst": {
+   "beg": 39600.0,
+   "net": 98.0,
+   "mkt": -924.0,
+   "dist": -48.0,
+   "end": 38726.0
+  },
+  "oe": {
+   "beg": 50145.0,
+   "net": 430.0,
+   "mkt": -804.0,
+   "dist": -49.0,
+   "end": 49722.0
+  },
+  "cef": {
+   "beg": 12778.0,
+   "net": 0.0,
+   "mkt": -144.0,
+   "dist": -58.0,
+   "end": 12576.0
+  },
+  "tot": {
+   "beg": 102523.0,
+   "net": 528.0,
+   "mkt": -1872.0,
+   "dist": -155.0,
+   "end": 101024.0
+  }
+ },
+ "2026-09": {
+  "url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2026/",
+  "adv": {
+   "beg": 23046.0,
+   "net": -6.0,
+   "mkt": -1251.0,
+   "dist": 0.0,
+   "end": 21789.0
+  },
+  "sub": {
+   "beg": 15680.0,
+   "net": -307.0,
+   "mkt": -960.0,
+   "dist": -48.0,
+   "end": 14419.0
+  },
+  "inst": {
+   "beg": 38726.0,
+   "net": -313.0,
+   "mkt": -2157.0,
+   "dist": -48.0,
+   "end": 36208.0
+  },
+  "oe": {
+   "beg": 49722.0,
+   "net": 598.0,
+   "mkt": -2397.0,
+   "dist": -218.0,
+   "end": 47705.0
+  },
+  "cef": {
+   "beg": 12576.0,
+   "net": 50.0,
+   "mkt": -538.0,
+   "dist": -57.0,
+   "end": 12031.0
+  },
+  "tot": {
+   "beg": 101024.0,
+   "net": 335.0,
+   "mkt": -5092.0,
+   "dist": -323.0,
+   "end": 95944.0
+  }
+ }
+}
