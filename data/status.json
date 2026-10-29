@@ -1,33 +1,33 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-29T11:43:24+00:00",
-   "data_changed_at": "2026-10-29T01:01:31+00:00",
+   "checked_at": "2026-10-29T17:18:11+00:00",
+   "data_changed_at": "2026-10-29T17:18:05+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
      "status": "ok",
      "latest": {
-      "date": "2026-04-01",
-      "value": 2.2
+      "date": "2026-07-01",
+      "value": 3.4
      }
     },
     "gdpnow": {
      "fred": "GDPNOW",
      "status": "ok",
      "latest": {
-      "date": "2026-10-28",
-      "value": 3.2721,
-      "target": "Q3 2026",
-      "release": "Advance Economic Indicators"
+      "date": "2026-10-29",
+      "value": 3.2217,
+      "target": "Q4 2026",
+      "release": "Initial GDPNow 26:Q4 forecast"
      }
     },
     "gdpnow_q": {
      "fred": "GDPNOW",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": 3.2721
+      "date": "2026-10-01",
+      "value": 3.2217
      }
     },
     "unrate": {
@@ -50,7 +50,7 @@
      "fred": "ICSA",
      "status": "ok",
      "latest": {
-      "date": "2026-10-17",
+      "date": "2026-10-24",
       "value": 194.0
      }
     },
@@ -66,8 +66,8 @@
      "fred": "PCEPILFE",
      "status": "ok",
      "latest": {
-      "date": "2026-08-01",
-      "value": 3.0076
+      "date": "2026-09-01",
+      "value": 3.1212
      }
     },
     "dff": {
@@ -149,9 +149,9 @@
       "date": "2026-10-01",
       "value": 3.7418,
       "target": "Oct 2026",
-      "asof": "2026-10-28",
+      "asof": "2026-10-29",
       "pending": true,
-      "prior_date": "2026-10-21",
+      "prior_date": "2026-10-22",
       "prior_value": 3.7536,
       "mm": 0.2421
      }
@@ -163,9 +163,9 @@
       "date": "2026-10-01",
       "value": 2.4828,
       "target": "Oct 2026",
-      "asof": "2026-10-28",
+      "asof": "2026-10-29",
       "pending": true,
-      "prior_date": "2026-10-21",
+      "prior_date": "2026-10-22",
       "prior_value": 2.4828,
       "mm": 0.2114
      }
@@ -175,13 +175,13 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 3.7152,
+      "value": 3.7701,
       "target": "Oct 2026",
-      "asof": "2026-10-28",
+      "asof": "2026-10-29",
       "pending": true,
-      "prior_date": "2026-10-21",
+      "prior_date": "2026-10-22",
       "prior_value": 3.7219,
-      "mm": 0.2606
+      "mm": 0.2652
      }
     },
     "clev_cpce_yy": {
@@ -189,13 +189,13 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 3.1281,
+      "value": 3.2027,
       "target": "Oct 2026",
-      "asof": "2026-10-28",
+      "asof": "2026-10-29",
       "pending": true,
-      "prior_date": "2026-10-21",
+      "prior_date": "2026-10-22",
       "prior_value": 3.1281,
-      "mm": 0.2509
+      "mm": 0.2565
      }
     },
     "clev_cpi_q": {
@@ -203,12 +203,12 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 5.051,
+      "value": 5.1323,
       "target": "Q4 2026",
-      "asof": "2026-10-28",
+      "asof": "2026-10-29",
       "pending": true,
-      "prior_date": "2026-10-21",
-      "prior_value": 4.8533
+      "prior_date": "2026-10-22",
+      "prior_value": 4.8405
      }
     },
     "clev_ccpi_q": {
@@ -218,9 +218,9 @@
       "date": "2026-10-01",
       "value": 3.0164,
       "target": "Q4 2026",
-      "asof": "2026-10-28",
+      "asof": "2026-10-29",
       "pending": true,
-      "prior_date": "2026-10-21",
+      "prior_date": "2026-10-22",
       "prior_value": 3.0164
      }
     },
@@ -229,12 +229,12 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 4.2822,
+      "value": 4.45,
       "target": "Q4 2026",
-      "asof": "2026-10-28",
+      "asof": "2026-10-29",
       "pending": true,
-      "prior_date": "2026-10-21",
-      "prior_value": 4.1699
+      "prior_date": "2026-10-22",
+      "prior_value": 4.1626
      }
     },
     "clev_cpce_q": {
@@ -242,11 +242,11 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 3.1526,
+      "value": 3.3332,
       "target": "Q4 2026",
-      "asof": "2026-10-28",
+      "asof": "2026-10-29",
       "pending": true,
-      "prior_date": "2026-10-21",
+      "prior_date": "2026-10-22",
       "prior_value": 3.1526
      }
     },
@@ -262,8 +262,8 @@
      "fred": "Cleveland Fed actual Core PCE y/y",
      "status": "ok",
      "latest": {
-      "date": "2026-08-01",
-      "value": 3.0076
+      "date": "2026-09-01",
+      "value": 3.1212
      }
     },
     "indeed": {
@@ -318,16 +318,16 @@
      "fred": "WEI",
      "status": "ok",
      "latest": {
-      "date": "2026-10-17",
-      "value": 3.33
+      "date": "2026-10-24",
+      "value": 2.98
      }
     },
     "ccsa": {
      "fred": "CCSA",
      "status": "ok",
      "latest": {
-      "date": "2026-10-10",
-      "value": 1728.0
+      "date": "2026-10-17",
+      "value": 1701.0
      }
     },
     "nfci": {
@@ -421,7 +421,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-29T11:43:47+00:00",
+   "checked_at": "2026-10-29T17:18:17+00:00",
    "data_changed_at": "2026-10-27T18:58:28+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2067,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-29T11:45:56+00:00",
-   "data_changed_at": "2026-10-29T11:44:08+00:00",
+   "checked_at": "2026-10-29T17:20:09+00:00",
+   "data_changed_at": "2026-10-29T17:18:30+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,8 +2083,8 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-29T11:46:00+00:00",
-   "data_changed_at": "2026-10-29T11:45:56+00:00",
+   "checked_at": "2026-10-29T17:20:49+00:00",
+   "data_changed_at": "2026-10-29T17:20:09+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
@@ -2221,7 +2221,7 @@
       "date": "2026-10-25",
       "value": 3.2857
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_hormuz_tank": {
      "fred": "PortWatch chokepoint6",
@@ -2230,7 +2230,7 @@
       "date": "2026-10-25",
       "value": 0.8571
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_hormuz_cont": {
      "fred": "PortWatch chokepoint6",
@@ -2239,7 +2239,7 @@
       "date": "2026-10-25",
       "value": 0.1429
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_hormuz_ly": {
      "fred": "PortWatch chokepoint6",
@@ -2248,7 +2248,7 @@
       "date": "2026-10-25",
       "value": 102.0
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_babelmandeb": {
      "fred": "PortWatch chokepoint4",
@@ -2257,7 +2257,7 @@
       "date": "2026-10-25",
       "value": 28.8571
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_babelmandeb_tank": {
      "fred": "PortWatch chokepoint4",
@@ -2266,7 +2266,7 @@
       "date": "2026-10-25",
       "value": 9.5714
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_babelmandeb_cont": {
      "fred": "PortWatch chokepoint4",
@@ -2275,7 +2275,7 @@
       "date": "2026-10-25",
       "value": 7.2857
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_babelmandeb_ly": {
      "fred": "PortWatch chokepoint4",
@@ -2284,7 +2284,7 @@
       "date": "2026-10-25",
       "value": 37.4286
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_suez": {
      "fred": "PortWatch chokepoint1",
@@ -2293,7 +2293,7 @@
       "date": "2026-10-25",
       "value": 41.2857
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_suez_tank": {
      "fred": "PortWatch chokepoint1",
@@ -2302,7 +2302,7 @@
       "date": "2026-10-25",
       "value": 16.2857
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_suez_cont": {
      "fred": "PortWatch chokepoint1",
@@ -2311,7 +2311,7 @@
       "date": "2026-10-25",
       "value": 13.8571
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_suez_ly": {
      "fred": "PortWatch chokepoint1",
@@ -2320,7 +2320,7 @@
       "date": "2026-10-25",
       "value": 42.7143
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_panama": {
      "fred": "PortWatch chokepoint2",
@@ -2329,7 +2329,7 @@
       "date": "2026-10-25",
       "value": 28.7143
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_panama_tank": {
      "fred": "PortWatch chokepoint2",
@@ -2338,7 +2338,7 @@
       "date": "2026-10-25",
       "value": 12.2857
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_panama_cont": {
      "fred": "PortWatch chokepoint2",
@@ -2347,7 +2347,7 @@
       "date": "2026-10-25",
       "value": 8.4286
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_panama_ly": {
      "fred": "PortWatch chokepoint2",
@@ -2356,7 +2356,7 @@
       "date": "2026-10-25",
       "value": 32.8571
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_malacca": {
      "fred": "PortWatch chokepoint5",
@@ -2365,7 +2365,7 @@
       "date": "2026-10-25",
       "value": 228.0
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_malacca_tank": {
      "fred": "PortWatch chokepoint5",
@@ -2374,7 +2374,7 @@
       "date": "2026-10-25",
       "value": 75.8571
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_malacca_cont": {
      "fred": "PortWatch chokepoint5",
@@ -2383,7 +2383,7 @@
       "date": "2026-10-25",
       "value": 61.0
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_malacca_ly": {
      "fred": "PortWatch chokepoint5",
@@ -2392,7 +2392,7 @@
       "date": "2026-10-25",
       "value": 237.1429
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_bosporus": {
      "fred": "PortWatch chokepoint3",
@@ -2401,7 +2401,7 @@
       "date": "2026-10-25",
       "value": 53.7143
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_bosporus_tank": {
      "fred": "PortWatch chokepoint3",
@@ -2410,7 +2410,7 @@
       "date": "2026-10-25",
       "value": 15.8571
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_bosporus_cont": {
      "fred": "PortWatch chokepoint3",
@@ -2419,7 +2419,7 @@
       "date": "2026-10-25",
       "value": 5.2857
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     },
     "pw_bosporus_ly": {
      "fred": "PortWatch chokepoint3",
@@ -2428,13 +2428,13 @@
       "date": "2026-10-25",
       "value": 101.0
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}"
+     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
     }
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-10-29T11:44:08+00:00",
-   "data_changed_at": "2026-10-29T11:43:47+00:00",
+   "checked_at": "2026-10-29T17:18:30+00:00",
+   "data_changed_at": "2026-10-29T17:18:17+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2568,48 +2568,48 @@
      "fred": "VIXCLS",
      "status": "ok",
      "latest": {
-      "date": "2026-10-27",
-      "value": 17.52
+      "date": "2026-10-28",
+      "value": 16.91
      }
     },
     "move": {
      "fred": "^MOVE",
      "status": "ok",
      "latest": {
-      "date": "2026-10-28",
-      "value": 94.55
+      "date": "2026-10-29",
+      "value": 92.9984
      }
     },
     "hy_lvl": {
      "fred": "BAMLH0A0HYM2",
      "status": "ok",
      "latest": {
-      "date": "2026-10-27",
-      "value": 3.18
+      "date": "2026-10-28",
+      "value": 3.14
      }
     },
     "hy_4w": {
      "fred": "BAMLH0A0HYM2",
      "status": "ok",
      "latest": {
-      "date": "2026-10-27",
-      "value": 0.1
+      "date": "2026-10-28",
+      "value": 0.02
      }
     },
     "bbb_lvl": {
      "fred": "BAMLC0A4CBBB",
      "status": "ok",
      "latest": {
-      "date": "2026-10-27",
-      "value": 1.09
+      "date": "2026-10-28",
+      "value": 1.07
      }
     },
     "bbb_4w": {
      "fred": "BAMLC0A4CBBB",
      "status": "ok",
      "latest": {
-      "date": "2026-10-27",
-      "value": 0.07
+      "date": "2026-10-28",
+      "value": 0.04
      }
     },
     "sloos_ci_std": {
@@ -2648,8 +2648,8 @@
      "fred": "ICSA",
      "status": "ok",
      "latest": {
-      "date": "2026-10-17",
-      "value": -6.3479
+      "date": "2026-10-24",
+      "value": -6.6003
      }
     },
     "nco": {
@@ -2672,32 +2672,32 @@
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-28",
-      "value": -0.6352
+      "date": "2026-10-29",
+      "value": -1.7058
      }
     },
     "kre_xlf_3m": {
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-28",
-      "value": -3.3135
+      "date": "2026-10-29",
+      "value": -4.1063
      }
     },
     "iwm_spy_1m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-10-28",
-      "value": -0.2415
+      "date": "2026-10-29",
+      "value": 1.4741
      }
     },
     "iwm_spy_3m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-10-28",
-      "value": -7.6618
+      "date": "2026-10-29",
+      "value": -5.1327
      }
     },
     "dep_pricing": {
@@ -2767,6 +2767,6 @@
    }
   }
  },
- "checked_at": "2026-10-29T11:46:00+00:00",
+ "checked_at": "2026-10-29T17:20:49+00:00",
  "ok": false
 }
