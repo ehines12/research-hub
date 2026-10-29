@@ -1,0 +1,702 @@
+[
+{
+"filed": "2022-01-26",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481222000036/cns-earningsreleasex123121.htm",
+"period": "December 31, 2021",
+"tot": {
+"beg": 97260.0,
+"net": 1791.0,
+"end": 106629.0,
+"avg": 101630.0
+},
+"oe_label": "Open-end Funds",
+"oe": {
+"beg": 45593.0,
+"net": 2525.0,
+"end": 50911.0,
+"avg": 48054.0
+},
+"inst": {
+"beg": 39347.0,
+"net": -754.0,
+"end": 42727.0,
+"avg": 40929.0
+},
+"cef": {
+"beg": 12320.0,
+"net": 20.0,
+"end": 12991.0,
+"avg": 12647.0
+},
+"rev": 159.629,
+"rev_adj": 159.737,
+"eps": 1.24,
+"opm": 51.7,
+"fee_rep": null
+},
+{
+"filed": "2022-04-20",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481222000156/cns-earningsreleasex33122e.htm",
+"period": "March 31, 2022",
+"tot": {
+"beg": 106629.0,
+"net": 756.0,
+"end": 102122.0,
+"avg": 101236.0
+},
+"oe_label": "Open-end Funds",
+"oe": {
+"beg": 50911.0,
+"net": 208.0,
+"end": 48105.0,
+"avg": 48055.0
+},
+"inst": {
+"beg": 42727.0,
+"net": -6.0,
+"end": 40956.0,
+"avg": 40631.0
+},
+"cef": {
+"beg": 12991.0,
+"net": 554.0,
+"end": 13061.0,
+"avg": 12550.0
+},
+"rev": 154.189,
+"rev_adj": 154.312,
+"eps": 1.04,
+"opm": 44.7,
+"fee_rep": null
+},
+{
+"filed": "2022-07-20",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481222000206/cns-earningsreleasex63022e.htm",
+"period": "June 30, 2022",
+"tot": {
+"beg": 102122.0,
+"net": -717.0,
+"end": 87862.0,
+"avg": 95122.0
+},
+"oe_label": "Open-end Funds",
+"oe": {
+"beg": 48105.0,
+"net": -244.0,
+"end": 41583.0,
+"avg": 45188.0
+},
+"inst": {
+"beg": 40956.0,
+"net": -475.0,
+"end": 34506.0,
+"avg": 37506.0
+},
+"cef": {
+"beg": 13061.0,
+"net": 2.0,
+"end": 11773.0,
+"avg": 12428.0
+},
+"rev": 147.431,
+"rev_adj": 147.723,
+"eps": 0.96,
+"opm": 43.3,
+"fee_rep": null
+},
+{
+"filed": "2022-10-19",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481222000256/cns-earningsreleasex93022e.htm",
+"period": "September 30, 2022",
+"tot": {
+"beg": 87862.0,
+"net": -598.0,
+"end": 79198.0,
+"avg": 89743.0
+},
+"oe_label": "Open-end Funds",
+"oe": {
+"beg": 41583.0,
+"net": -732.0,
+"end": 37346.0,
+"avg": 42322.0
+},
+"inst": {
+"beg": 34506.0,
+"net": 123.0,
+"end": 30867.0,
+"avg": 35396.0
+},
+"cef": {
+"beg": 11773.0,
+"net": 11.0,
+"end": 10985.0,
+"avg": 12025.0
+},
+"rev": 139.951,
+"rev_adj": 140.166,
+"eps": 0.92,
+"opm": 42.8,
+"fee_rep": null
+},
+{
+"filed": "2023-01-25",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481223000018/cns-earningsreleasex123122.htm",
+"period": null,
+"tot": {
+"beg": 79198.0,
+"net": -1082.0,
+"end": 80425.0,
+"avg": 80511.0
+},
+"oe_label": "Open-end Funds",
+"oe": {
+"beg": 37346.0,
+"net": -1006.0,
+"end": 36903.0,
+"avg": 37311.0
+},
+"inst": {
+"beg": 30867.0,
+"net": -84.0,
+"end": 32373.0,
+"avg": 32032.0
+},
+"cef": {
+"beg": 10985.0,
+"net": 8.0,
+"end": 11149.0,
+"avg": 11168.0
+},
+"rev": 125.335,
+"rev_adj": 125.495,
+"eps": 0.79,
+"opm": 40.5,
+"fee_rep": null
+},
+{
+"filed": "2023-04-19",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481223000151/cns-earningsreleasex33123e.htm",
+"period": "March 31, 2023",
+"tot": {
+"beg": 80425.0,
+"net": -497.0,
+"end": 79905.0,
+"avg": 83202.0
+},
+"oe_label": "Open-end Funds",
+"oe": {
+"beg": 36903.0,
+"net": -305.0,
+"end": 36427.0,
+"avg": 38440.0
+},
+"inst": {
+"beg": 32373.0,
+"net": -118.0,
+"end": 32604.0,
+"avg": 33409.0
+},
+"cef": {
+"beg": 11149.0,
+"net": -74.0,
+"end": 10874.0,
+"avg": 11353.0
+},
+"rev": 126.082,
+"rev_adj": 126.265,
+"eps": 0.76,
+"opm": 38.0,
+"fee_rep": null
+},
+{
+"filed": "2023-07-19",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481223000216/cns-earningsreleasex63023e.htm",
+"period": "June 30, 2023",
+"tot": {
+"beg": 79905.0,
+"net": -512.0,
+"end": 80413.0,
+"avg": 79406.0
+},
+"oe_label": "Open-end Funds",
+"oe": {
+"beg": 36427.0,
+"net": -508.0,
+"end": 36209.0,
+"avg": 35911.0
+},
+"inst": {
+"beg": 32604.0,
+"net": -6.0,
+"end": 33275.0,
+"avg": 32682.0
+},
+"cef": {
+"beg": 10874.0,
+"net": 2.0,
+"end": 10929.0,
+"avg": 10813.0
+},
+"rev": 120.63,
+"rev_adj": 120.309,
+"eps": 0.7,
+"opm": 36.4,
+"fee_rep": null
+},
+{
+"filed": "2023-10-18",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481223000277/cns-earningsreleasex93023e.htm",
+"period": "September 30, 2023",
+"tot": {
+"beg": 80413.0,
+"net": -47.0,
+"end": 75158.0,
+"avg": 79966.0
+},
+"oe_label": "Open-end Funds",
+"oe": {
+"beg": 36209.0,
+"net": -360.0,
+"end": 33671.0,
+"avg": 35878.0
+},
+"inst": {
+"beg": 33275.0,
+"net": 311.0,
+"end": 31216.0,
+"avg": 33304.0
+},
+"cef": {
+"beg": 10929.0,
+"net": 2.0,
+"end": 10271.0,
+"avg": 10784.0
+},
+"rev": 123.737,
+"rev_adj": 123.551,
+"eps": 0.7,
+"opm": 35.5,
+"fee_rep": null
+},
+{
+"filed": "2024-01-24",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481224000020/cns-earningsreleasex123123.htm",
+"period": "December 31, 2023",
+"tot": {
+"beg": 75158.0,
+"net": -935.0,
+"end": 83136.0,
+"avg": 76988.0
+},
+"oe_label": "Open-end Funds",
+"oe": {
+"beg": 33671.0,
+"net": -504.0,
+"end": 37032.0,
+"avg": 34410.0
+},
+"inst": {
+"beg": 31216.0,
+"net": -427.0,
+"end": 35028.0,
+"avg": 32102.0
+},
+"cef": {
+"beg": 10271.0,
+"net": -4.0,
+"end": 11076.0,
+"avg": 10476.0
+},
+"rev": 119.188,
+"rev_adj": 119.046,
+"eps": 0.67,
+"opm": 34.7,
+"fee_rep": null
+},
+{
+"filed": "2024-04-17",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481224000186/cns-earningsreleasex33124e.htm",
+"period": "March 31, 2024",
+"tot": {
+"beg": 83136.0,
+"net": -1970.0,
+"end": 81235.0,
+"avg": 80175.0
+},
+"oe_label": "Open-end Funds",
+"oe": {
+"beg": 37032.0,
+"net": 569.0,
+"end": 37685.0,
+"avg": 36923.0
+},
+"inst": {
+"beg": 35028.0,
+"net": -2543.0,
+"end": 32424.0,
+"avg": 32284.0
+},
+"cef": {
+"beg": 11076.0,
+"net": 4.0,
+"end": 11126.0,
+"avg": 10968.0
+},
+"rev": 122.71,
+"rev_adj": 122.944,
+"eps": 0.7,
+"opm": 35.5,
+"fee_rep": null
+},
+{
+"filed": "2024-07-17",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481224000267/cns-earningsreleasex63024e.htm",
+"period": "June 30, 2024",
+"tot": {
+"beg": 81235.0,
+"net": -345.0,
+"end": 80709.0,
+"avg": 79585.0
+},
+"oe_label": "Open-end Funds",
+"oe": {
+"beg": 37685.0,
+"net": -101.0,
+"end": 37451.0,
+"avg": 36943.0
+},
+"inst": {
+"beg": 32424.0,
+"net": -247.0,
+"end": 32222.0,
+"avg": 31673.0
+},
+"cef": {
+"beg": 11126.0,
+"net": 3.0,
+"end": 11036.0,
+"avg": 10969.0
+},
+"rev": 121.721,
+"rev_adj": 121.988,
+"eps": 0.68,
+"opm": 34.9,
+"fee_rep": null
+},
+{
+"filed": "2024-10-16",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481224000351/cns-earningsreleasex93024e.htm",
+"period": "September 30, 2024",
+"tot": {
+"beg": 80709.0,
+"net": 1284.0,
+"end": 91780.0,
+"avg": 86227.0
+},
+"oe_label": "Open-end Funds",
+"oe": {
+"beg": 37451.0,
+"net": 1173.0,
+"end": 42979.0,
+"avg": 40130.0
+},
+"inst": {
+"beg": 32222.0,
+"net": 108.0,
+"end": 36892.0,
+"avg": 34594.0
+},
+"cef": {
+"beg": 11036.0,
+"net": 3.0,
+"end": 11909.0,
+"avg": 11503.0
+},
+"rev": 133.203,
+"rev_adj": 133.433,
+"eps": 0.77,
+"opm": 35.7,
+"fee_rep": null
+},
+{
+"filed": "2025-01-22",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481225000024/cns-earningsreleasex123124.htm",
+"period": null,
+"tot": {
+"beg": 91780.0,
+"net": 860.0,
+"end": 85814.0,
+"avg": 89435.0
+},
+"oe_label": "Open-end Funds",
+"oe": {
+"beg": 42979.0,
+"net": 1163.0,
+"end": 40962.0,
+"avg": 42337.0
+},
+"inst": {
+"beg": 36892.0,
+"net": -306.0,
+"end": 33563.0,
+"avg": 35435.0
+},
+"cef": {
+"beg": 11909.0,
+"net": 3.0,
+"end": 11289.0,
+"avg": 11663.0
+},
+"rev": 139.783,
+"rev_adj": 139.905,
+"eps": 0.78,
+"opm": 35.5,
+"fee_rep": null
+},
+{
+"filed": "2025-04-16",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481225000152/cns-earningsreleasex33125e.htm",
+"period": "March 31, 2025",
+"tot": {
+"beg": 85814.0,
+"net": 222.0,
+"end": 87579.0,
+"avg": 86778.0
+},
+"oe_label": "Open-end Funds",
+"oe": {
+"beg": 40962.0,
+"net": 585.0,
+"end": 42298.0,
+"avg": 41801.0
+},
+"inst": {
+"beg": 33563.0,
+"net": -366.0,
+"end": 33886.0,
+"avg": 33623.0
+},
+"cef": {
+"beg": 11289.0,
+"net": 3.0,
+"end": 11395.0,
+"avg": 11354.0
+},
+"rev": 134.467,
+"rev_adj": 133.79,
+"eps": 0.75,
+"opm": 34.7,
+"fee_rep": null
+},
+{
+"filed": "2025-07-17",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481225000248/cns-earningsreleasex63025e.htm",
+"period": "June 30, 2025",
+"tot": {
+"beg": 87579.0,
+"net": -131.0,
+"end": 88936.0,
+"avg": 87243.0
+},
+"oe_label": "Open-end Funds",
+"oe": {
+"beg": 42298.0,
+"net": 285.0,
+"end": 42962.0,
+"avg": 42110.0
+},
+"inst": {
+"beg": 33886.0,
+"net": -519.0,
+"end": 34386.0,
+"avg": 33844.0
+},
+"cef": {
+"beg": 11395.0,
+"net": 103.0,
+"end": 11588.0,
+"avg": 11289.0
+},
+"rev": 136.126,
+"rev_adj": 135.32,
+"eps": 0.73,
+"opm": 33.6,
+"fee_rep": null
+},
+{
+"filed": "2025-10-16",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481225000296/cns-earningsreleasex93025e.htm",
+"period": "September 30, 2025",
+"tot": {
+"beg": 88936.0,
+"net": 233.0,
+"end": 90897.0,
+"avg": 89738.0
+},
+"oe_label": "Open-end Funds",
+"oe": {
+"beg": 42962.0,
+"net": 768.0,
+"end": 44421.0,
+"avg": 43633.0
+},
+"inst": {
+"beg": 34386.0,
+"net": -537.0,
+"end": 34711.0,
+"avg": 34459.0
+},
+"cef": {
+"beg": 11588.0,
+"net": 2.0,
+"end": 11765.0,
+"avg": 11646.0
+},
+"rev": 141.72,
+"rev_adj": 140.937,
+"eps": 0.81,
+"opm": 36.1,
+"fee_rep": null
+},
+{
+"filed": "2026-01-22",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481226000006/cns-earningsreleasex123125.htm",
+"period": null,
+"tot": {
+"beg": 90897.0,
+"net": 1207.0,
+"end": 90544.0,
+"avg": 90751.0
+},
+"oe_label": "Open-end Funds",
+"oe": {
+"beg": 44421.0,
+"net": 13.0,
+"end": 43437.0,
+"avg": 43812.0
+},
+"inst": {
+"beg": 34711.0,
+"net": 681.0,
+"end": 35060.0,
+"avg": 34924.0
+},
+"cef": {
+"beg": 11765.0,
+"net": 513.0,
+"end": 12047.0,
+"avg": 12015.0
+},
+"rev": 143.803,
+"rev_adj": 143.794,
+"eps": 0.81,
+"opm": 36.4,
+"fee_rep": null
+},
+{
+"filed": "2026-04-16",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481226000035/cns-earningsreleasex33126e.htm",
+"period": "March 31, 2026",
+"tot": {
+"beg": 90544.0,
+"net": 497.0,
+"end": 93128.0,
+"avg": 94361.0
+},
+"oe_label": "Open-end Funds",
+"oe": {
+"beg": 43437.0,
+"net": 555.0,
+"end": 44841.0,
+"avg": 45279.0
+},
+"inst": {
+"beg": 35060.0,
+"net": -59.0,
+"end": 36029.0,
+"avg": 36714.0
+},
+"cef": {
+"beg": 12047.0,
+"net": 1.0,
+"end": 12258.0,
+"avg": 12368.0
+},
+"rev": 145.639,
+"rev_adj": 144.264,
+"eps": 0.79,
+"opm": 35.1,
+"fee_rep": null
+},
+{
+"filed": "2026-07-16",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481226000142/cns-earningsreleasex63026e.htm",
+"period": "June 30, 2026",
+"tot": {
+"beg": 93128.0,
+"net": 1298.0,
+"end": 100099.0,
+"avg": 98977.0
+},
+"oe_label": "Open-end Funds",
+"oe": {
+"beg": 44841.0,
+"net": 1454.0,
+"end": 48993.0,
+"avg": 48111.0
+},
+"inst": {
+"beg": 36029.0,
+"net": -157.0,
+"end": 38523.0,
+"avg": 38272.0
+},
+"cef": {
+"beg": 12258.0,
+"net": 1.0,
+"end": 12583.0,
+"avg": 12594.0
+},
+"rev": 152.73,
+"rev_adj": 151.837,
+"eps": 0.85,
+"opm": 36.3,
+"fee_rep": 58.5
+},
+{
+"filed": "2026-10-15",
+"url": "https://www.sec.gov/Archives/edgar/data/1284812/000128481226000195/cns-earningsreleasex93026e.htm",
+"period": "September 30, 2026",
+"tot": {
+"beg": 100099.0,
+"net": 1550.0,
+"end": 95944.0,
+"avg": 101105.0
+},
+"oe_label": "Wealth",
+"oe": {
+"beg": 48993.0,
+"net": 1297.0,
+"end": 47705.0,
+"avg": 49680.0
+},
+"inst": {
+"beg": 38523.0,
+"net": 49.0,
+"end": 36208.0,
+"avg": 38838.0
+},
+"cef": {
+"beg": 12583.0,
+"net": 204.0,
+"end": 12031.0,
+"avg": 12587.0
+},
+"rev": 157.427,
+"rev_adj": 156.408,
+"eps": 0.89,
+"opm": 37.2,
+"fee_rep": 58.3
+}
+]

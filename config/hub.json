@@ -46,6 +46,14 @@
    "tagline": "Geopolitical risk, policy uncertainty and shipping chokepoints",
    "description": "Caldara-Iacoviello Geopolitical Risk and Trade Policy Uncertainty, Baker-Bloom-Davis Economic Policy Uncertainty, and IMF PortWatch daily chokepoint transits (Hormuz, Bab el-Mandeb, Suez, Panama, Malacca, Bosporus).",
    "dashboard": "config/dashboards/geo.json"
+  },
+  {
+   "id": "companies",
+   "title": "Companies",
+   "icon": "building",
+   "status": "live",
+   "tagline": "Company KPIs from earnings releases: HLI, CNS",
+   "description": "Per-company quarterly KPIs, charts and tables built from SEC 8-K earnings releases. Switch tickers at the top."
   }
  ],
  "links": [

@@ -12,6 +12,7 @@
     table: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M3 14h18M9 9v11M15 9v11"/></svg>',
     shield: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><circle cx="12" cy="11" r="3"/><path d="M12 8v-2M12 16v-2M9 11H7M17 11h-2"/></svg>',
     odds: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 16L16 8"/><circle cx="8.5" cy="8.5" r="1.6"/><circle cx="15.5" cy="15.5" r="1.6"/></svg>',
+    building: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M11 21v-3h2v3"/></svg>',
     chart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 20h18M6 16l4-5 3 3 5-7"/><circle cx="18" cy="7" r="1.2"/></svg>'
   };
   const EXT = '<svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" style="vertical-align:-1px"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
@@ -75,6 +76,7 @@
       if (link) return embed(link);
       if (!area) return home(hub);
       crumbs.innerHTML = '<a href="#/">Hub</a> / ' + esc(area.title);
+      if (area.id === "companies") return companiesPage(new URLSearchParams(q || "").get("t"));
       if (area.status === "live") return dashboard(area);
       return soon(area);
     } catch (e) { app.innerHTML = '<p class="err">Failed to load: ' + esc(e.message) + "</p>"; }
@@ -632,6 +634,70 @@
         }
       }));
     }));
+  }
+
+  // ---- companies: config-driven per-ticker pages (data/companies.json, built by companies/build_companies.py) ----
+  function cfmt(v, f) {
+    if (v == null) return "n/a";
+    if (f === "m1") return "$" + v.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "M";
+    if (f === "m2") return "$" + v.toFixed(2) + "M";
+    if (f === "bn1") return "$" + v.toFixed(1) + "bn";
+    if (f === "bnf") return (v < 0 ? "−$" : "$") + Math.abs(v).toFixed(2) + "bn";
+    if (f === "n0") return Math.round(v).toLocaleString();
+    if (f === "x2") return v.toFixed(2);
+    if (f === "usd2") return "$" + v.toFixed(2);
+    if (f === "pct1") return v.toFixed(1) + "%";
+    if (f === "bps") return v.toFixed(1) + " bps";
+    return String(v);
+  }
+  function cchg(cur, prev, f) {  // % change for levels, pp / bps / $ deltas for ratios, flows and EPS-like values
+    if (cur == null || prev == null) return null;
+    if (f === "pct1") return { d: cur - prev, t: (cur - prev >= 0 ? "+" : "−") + Math.abs(cur - prev).toFixed(1) + " pp" };
+    if (f === "bps") return { d: cur - prev, t: (cur - prev >= 0 ? "+" : "−") + Math.abs(cur - prev).toFixed(1) + " bps" };
+    if (f === "bnf") return { d: cur - prev, t: (cur - prev >= 0 ? "+$" : "−$") + Math.abs(cur - prev).toFixed(2) + "bn" };
+    if (!prev) return null;
+    const p = (cur / prev - 1) * 100; return { d: p, t: (p >= 0 ? "+" : "−") + Math.abs(p).toFixed(1) + "%" };
+  }
+  async function companiesPage(t) {
+    const C = (await load("companies")).companies;
+    const c = C.find(x => x.ticker === (t || "").toUpperCase()) || C[0];
+    document.title = c.ticker + " · Companies · Research Hub";
+    crumbs.innerHTML = '<a href="#/">Hub</a> / <a href="#/companies">Companies</a> / ' + esc(c.ticker);
+    stamp.textContent = "";
+    const F = {}; c.fields.forEach(f => F[f.key] = f);
+    const R = c.rows, n = R.length, L = R[n - 1], P = R[n - 2], Y = R[n - 5];
+    const sw = '<div class="seg">' + C.map(x => '<button class="' + (x === c ? "on" : "") + '" data-t="' + esc(x.ticker) + '">' + esc(x.ticker) + "</button>").join("") + "</div>";
+    const kp = c.kpis.map(k => { const f = F[k], q = cchg(L[k], P[k], f.fmt), y = cchg(L[k], Y[k], f.fmt);
+      const cl = o => !o || Math.abs(o.d) < 1e-9 ? "flat" : (o.d > 0) !== !!f.invert ? "pos" : "neg";
+      return '<div class="kpi"><div class="t">' + esc(f.label) + '</div><div class="v">' + cfmt(L[k], f.fmt) + '</div><div class="d"><span class="' + cl(q) + '">' + (q ? q.t : "n/a") + '</span> <span class="flat">QoQ</span> &nbsp; <span class="' + cl(y) + '">' + (y ? y.t : "n/a") + '</span> <span class="flat">YoY</span></div></div>'; }).join("");
+    const th = "<tr><th class=\"sl\">Quarter</th><th>Period end</th>" + c.fields.map(f => '<th class="r">' + esc(f.label) + "</th>").join("") + "<th>Source</th></tr>";
+    const tb = R.slice().reverse().map(r => '<tr><td class="sl b">' + esc(r.q) + "</td><td>" + esc(r.end) + "</td>" + c.fields.map(f => '<td class="r' + (r[f.key] == null ? " na" : "") + '">' + cfmt(r[f.key], f.fmt) + "</td>").join("") + '<td><a class="hint" style="color:var(--acc)" href="' + esc(r.src) + '" target="_blank" rel="noopener noreferrer">8-K ' + EXT + "</a></td></tr>").join("");
+    app.innerHTML = '<div class="qbar"><div><h1>' + esc(c.name) + " (" + esc(c.ticker) + ')</h1><p class="sub" style="margin:0">Latest quarter: ' + esc(L.q) + " (ended " + esc(L.end) + "). " + esc(c.fiscal) + "</p></div>" + sw + "</div>" +
+      '<h2>Latest quarter <span class="hint">vs prior quarter (QoQ) and year-ago quarter (YoY)</span></h2><div class="kpis sec">' + kp + "</div>" +
+      '<h2>Trends <span class="hint">last ' + n + ' quarters</span></h2><div class="panels">' + c.charts.map((ch, i) => '<div class="panel"><h4>' + esc(ch.title) + '</h4><div class="cv"><canvas id="cc' + i + '"></canvas></div></div>').join("") + "</div>" +
+      '<div class="qbar" style="margin-top:30px"><h2 style="margin:0">Quarterly data</h2><div class="qdl"><button class="btn" id="cocsv">CSV</button><a class="btn" href="data/company-' + esc(c.ticker) + '.xlsx" download>Excel</a></div></div>' +
+      '<div class="qwrap"><table class="sumtbl qtbl"><thead>' + th + "</thead><tbody>" + tb + "</tbody></table></div>" +
+      c.notes.map(x => '<div class="pnote">' + esc(x) + "</div>").join("");
+    app.querySelectorAll(".seg button").forEach(b => b.onclick = () => { location.hash = "#/companies?t=" + b.dataset.t; });
+    document.getElementById("cocsv").onclick = () => {
+      const q = v => { v = v == null ? "n/a" : String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; };
+      const rows = [["Quarter", "Period end"].concat(c.fields.map(f => f.label), ["Source"])].concat(R.map(r => [r.q, r.end].concat(c.fields.map(f => r[f.key]), [r.src])));
+      const blob = new Blob([rows.map(r => r.map(q).join(",")).concat(["", ...c.notes.map(q)]).join("\r\n")], { type: "text/csv" });
+      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "company-" + c.ticker + ".csv"; document.body.appendChild(a); a.click(); a.remove();
+    };
+    const labels = R.map(r => r.q);
+    c.charts.forEach((ch, i) => {
+      const datasets = ch.series.map((k, j) => { const col = COLORS[j % COLORS.length], ty = (ch.types && ch.types[j]) || ch.type;
+        return { type: ty, label: F[k].label.replace("*", ""), data: R.map(r => r[k]), borderColor: col, backgroundColor: ty === "bar" ? (ch.stacked ? col + "c0" : R.map(r => r[k] < 0 ? "#f85149" : col)) : col,
+          borderWidth: ty === "bar" ? 0 : 2, pointRadius: ty === "line" ? 2 : 0, yAxisID: ch.y2 && ch.y2.includes(k) ? "y2" : "y", order: ty === "line" ? 0 : 1, spanGaps: false }; });
+      const g = { color: "#1f2a37" }, tk = { color: "#8b9bb0" };
+      const scales = { x: { stacked: !!ch.stacked, grid: g, ticks: Object.assign({ maxTicksLimit: 7, maxRotation: 0 }, tk) }, y: { stacked: !!ch.stacked, grid: g, ticks: tk } };
+      if (ch.y2) scales.y2 = { position: "right", grid: { display: false }, ticks: tk };
+      charts.push(new Chart(document.getElementById("cc" + i), { type: ch.type, data: { labels, datasets },
+        options: { animation: false, maintainAspectRatio: false, interaction: { mode: "index", intersect: false }, scales,
+          plugins: { legend: { display: ch.series.length > 1, labels: { color: "#e6edf3", boxWidth: 12 } },
+            tooltip: { callbacks: { label: it => it.dataset.label + ": " + cfmt(it.parsed.y, F[ch.series[it.datasetIndex]].fmt) } } } } }));
+    });
   }
 
   window.addEventListener("hashchange", route);
