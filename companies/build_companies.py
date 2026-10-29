@@ -35,6 +35,7 @@ def hli():
             {"key": "rev_md_ltm", "label": "CF rev / MD (LTM)*", "fmt": "m2"}, {"key": "txn_md_q", "label": "Txns / MD (qtr)*", "fmt": "x2"},
             {"key": "txn_md_ltm", "label": "Txns / MD (LTM)*", "fmt": "x2"}, {"key": "adj_eps", "label": "Adj. diluted EPS", "fmt": "usd2"},
             {"key": "adj_comp", "label": "Adj. comp ratio", "fmt": "pct1", "invert": True}, {"key": "adj_noncomp", "label": "Adj. non-comp ratio", "fmt": "pct1", "invert": True}],
+        "tiles": ["total_rev", "cf_rev", "cf_avg"],
         "kpis": ["total_rev", "cf_rev", "cf_txn", "cf_avg", "cf_md", "rev_md_ltm", "adj_eps", "adj_noncomp"],
         "charts": [
             {"title": "Revenue by segment ($M)", "type": "bar", "stacked": True, "series": ["cf_rev", "fr_rev", "fva_rev"]},
@@ -77,6 +78,7 @@ def cns():
             {"key": "rev", "label": "Revenue (GAAP)", "fmt": "m1"}, {"key": "rev_adj", "label": "Revenue (adj.)", "fmt": "m1"},
             {"key": "fee_calc", "label": "Effective fee rate*", "fmt": "bps"}, {"key": "fee_rep", "label": "Reported fee rate ex perf.", "fmt": "bps"},
             {"key": "opm_adj", "label": "Op. margin (as adj.)", "fmt": "pct1"}, {"key": "adj_eps", "label": "Adj. diluted EPS", "fmt": "usd2"}],
+        "tiles": ["aum_end", "flow_tot", "og"],
         "kpis": ["aum_end", "aum_avg", "flow_tot", "og", "rev", "fee_calc", "opm_adj", "adj_eps"],
         "charts": [
             {"title": "AUM by vehicle ($bn)", "type": "bar", "stacked": True, "series": ["aum_oe", "aum_inst", "aum_cef"]},

@@ -78,6 +78,11 @@
      "invert": true
     }
    ],
+   "tiles": [
+    "total_rev",
+    "cf_rev",
+    "cf_avg"
+   ],
    "kpis": [
     "total_rev",
     "cf_rev",
@@ -643,6 +648,11 @@
      "label": "Adj. diluted EPS",
      "fmt": "usd2"
     }
+   ],
+   "tiles": [
+    "aum_end",
+    "flow_tot",
+    "og"
    ],
    "kpis": [
     "aum_end",

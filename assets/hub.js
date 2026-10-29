@@ -68,7 +68,8 @@
     const [h, q] = location.hash.replace(/^#\/?/, "").split("?");
     const rq = new URLSearchParams(q || "").get("r"); if (["1Y", "5Y", "10Y", "Max"].includes(rq)) range = rq;
     const hub = await load("hub");
-    const area = hub.areas.find(a => a.id === h);
+    const hp = (h || "").split("/"), sub = hp[1] || new URLSearchParams(q || "").get("t");
+    const area = hub.areas.find(a => a.id === hp[0]);
     const link = (hub.links || []).find(l => l.id === h && l.embed);
     document.body.classList.toggle("embedded", !!link);
     window.scrollTo(0, 0);
@@ -76,7 +77,7 @@
       if (link) return embed(link);
       if (!area) return home(hub);
       crumbs.innerHTML = '<a href="#/">Hub</a> / ' + esc(area.title);
-      if (area.id === "companies") return companiesPage(new URLSearchParams(q || "").get("t"));
+      if (area.id === "companies") return sub ? companiesPage(sub) : companiesHome();
       if (area.status === "live") return dashboard(area);
       return soon(area);
     } catch (e) { app.innerHTML = '<p class="err">Failed to load: ' + esc(e.message) + "</p>"; }
@@ -658,15 +659,25 @@
     if (!prev) return null;
     const p = (cur / prev - 1) * 100; return { d: p, t: (p >= 0 ? "+" : "−") + Math.abs(p).toFixed(1) + "%" };
   }
+  async function companiesHome() {
+    const C = (await load("companies")).companies;
+    document.title = "Companies · Research Hub"; stamp.textContent = "";
+    app.innerHTML = '<h1>Companies</h1><p class="sub">Quarterly KPIs from SEC 8-K earnings releases. Select a company.</p><div class="tiles">' + C.map(c => {
+      const R = c.rows, L = R[R.length - 1], Y = R[R.length - 5], F = {}; c.fields.forEach(f => F[f.key] = f);
+      const kp = (c.tiles || c.kpis.slice(0, 3)).map(k => { const f = F[k], y = cchg(L[k], Y[k], f.fmt), cl = !y || Math.abs(y.d) < 1e-9 ? "flat" : (y.d > 0) !== !!f.invert ? "pos" : "neg";
+        return '<div class="ctk"><span>' + esc(f.label.replace("*", "")) + "</span><b>" + cfmt(L[k], f.fmt) + '</b><i class="' + cl + '">' + (y ? y.t + " YoY" : "") + "</i></div>"; }).join("");
+      return '<a class="tile" href="#/companies/' + esc(c.ticker) + '"><span class="badge live">' + esc(L.q) + '</span><div class="ic">' + ICONS.building + "</div><h3>" + esc(c.name) + ' <span class="hint">' + esc(c.ticker) + '</span></h3><div class="ctks">' + kp + "</div></a>"; }).join("") + "</div>";
+  }
   async function companiesPage(t) {
     const C = (await load("companies")).companies;
-    const c = C.find(x => x.ticker === (t || "").toUpperCase()) || C[0];
+    const c = C.find(x => x.ticker === (t || "").toUpperCase());
+    if (!c) return companiesHome();
     document.title = c.ticker + " · Companies · Research Hub";
     crumbs.innerHTML = '<a href="#/">Hub</a> / <a href="#/companies">Companies</a> / ' + esc(c.ticker);
     stamp.textContent = "";
     const F = {}; c.fields.forEach(f => F[f.key] = f);
     const R = c.rows, n = R.length, L = R[n - 1], P = R[n - 2], Y = R[n - 5];
-    const sw = '<div class="seg">' + C.map(x => '<button class="' + (x === c ? "on" : "") + '" data-t="' + esc(x.ticker) + '">' + esc(x.ticker) + "</button>").join("") + "</div>";
+    const sw = '<a class="btn sm" href="#/companies">← Back to Companies</a>';
     const kp = c.kpis.map(k => { const f = F[k], q = cchg(L[k], P[k], f.fmt), y = cchg(L[k], Y[k], f.fmt);
       const cl = o => !o || Math.abs(o.d) < 1e-9 ? "flat" : (o.d > 0) !== !!f.invert ? "pos" : "neg";
       return '<div class="kpi"><div class="t">' + esc(f.label) + '</div><div class="v">' + cfmt(L[k], f.fmt) + '</div><div class="d"><span class="' + cl(q) + '">' + (q ? q.t : "n/a") + '</span> <span class="flat">QoQ</span> &nbsp; <span class="' + cl(y) + '">' + (y ? y.t : "n/a") + '</span> <span class="flat">YoY</span></div></div>'; }).join("");
@@ -678,7 +689,6 @@
       '<div class="qbar" style="margin-top:30px"><h2 style="margin:0">Quarterly data</h2><div class="qdl"><button class="btn" id="cocsv">CSV</button><a class="btn" href="data/company-' + esc(c.ticker) + '.xlsx" download>Excel</a></div></div>' +
       '<div class="qwrap"><table class="sumtbl qtbl"><thead>' + th + "</thead><tbody>" + tb + "</tbody></table></div>" +
       c.notes.map(x => '<div class="pnote">' + esc(x) + "</div>").join("");
-    app.querySelectorAll(".seg button").forEach(b => b.onclick = () => { location.hash = "#/companies?t=" + b.dataset.t; });
     document.getElementById("cocsv").onclick = () => {
       const q = v => { v = v == null ? "n/a" : String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; };
       const rows = [["Quarter", "Period end"].concat(c.fields.map(f => f.label), ["Source"])].concat(R.map(r => [r.q, r.end].concat(c.fields.map(f => r[f.key]), [r.src])));
