@@ -1,7 +1,7 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-30T16:56:21+00:00",
+   "checked_at": "2026-10-30T18:51:51+00:00",
    "data_changed_at": "2026-10-30T16:56:15+00:00",
    "series": {
     "gdp": {
@@ -421,7 +421,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-30T16:56:41+00:00",
+   "checked_at": "2026-10-30T18:52:00+00:00",
    "data_changed_at": "2026-10-27T18:58:28+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2067,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-30T16:58:57+00:00",
-   "data_changed_at": "2026-10-30T16:57:02+00:00",
+   "checked_at": "2026-10-30T18:54:11+00:00",
+   "data_changed_at": "2026-10-30T18:52:17+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,8 +2083,8 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-30T17:00:19+00:00",
-   "data_changed_at": "2026-10-30T16:58:57+00:00",
+   "checked_at": "2026-10-30T18:56:17+00:00",
+   "data_changed_at": "2026-10-30T18:54:11+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
@@ -2216,111 +2216,99 @@
     },
     "pw_hormuz": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 3.2857
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_hormuz_tank": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 0.8571
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_hormuz_cont": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 0.1429
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_hormuz_ly": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 102.0
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_babelmandeb": {
      "fred": "PortWatch chokepoint4",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 28.8571
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_babelmandeb_tank": {
      "fred": "PortWatch chokepoint4",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 9.5714
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_babelmandeb_cont": {
      "fred": "PortWatch chokepoint4",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 7.2857
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_babelmandeb_ly": {
      "fred": "PortWatch chokepoint4",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 37.4286
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_suez": {
      "fred": "PortWatch chokepoint1",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 41.2857
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_suez_tank": {
      "fred": "PortWatch chokepoint1",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 16.2857
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_suez_cont": {
      "fred": "PortWatch chokepoint1",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 13.8571
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_suez_ly": {
      "fred": "PortWatch chokepoint1",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 42.7143
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_panama": {
      "fred": "PortWatch chokepoint2",
@@ -2433,8 +2421,8 @@
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-10-30T16:57:02+00:00",
-   "data_changed_at": "2026-10-30T16:56:41+00:00",
+   "checked_at": "2026-10-30T18:52:17+00:00",
+   "data_changed_at": "2026-10-30T18:52:00+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2577,7 +2565,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-30",
-      "value": 97.9332
+      "value": 100.0959
      }
     },
     "hy_lvl": {
@@ -2673,7 +2661,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-30",
-      "value": -2.692
+      "value": -2.6056
      }
     },
     "kre_xlf_3m": {
@@ -2681,7 +2669,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-30",
-      "value": -4.9897
+      "value": -4.9053
      }
     },
     "iwm_spy_1m": {
@@ -2689,7 +2677,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-30",
-      "value": 0.6931
+      "value": 0.7654
      }
     },
     "iwm_spy_3m": {
@@ -2697,7 +2685,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-30",
-      "value": -5.9262
+      "value": -5.8587
      }
     },
     "dep_pricing": {
@@ -2767,6 +2755,6 @@
    }
   }
  },
- "checked_at": "2026-10-30T17:00:19+00:00",
+ "checked_at": "2026-10-30T18:56:17+00:00",
  "ok": false
 }
