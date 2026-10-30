@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-29T21:00:23+00:00",
-   "data_changed_at": "2026-10-29T21:00:19+00:00",
+   "checked_at": "2026-10-30T01:06:30+00:00",
+   "data_changed_at": "2026-10-30T01:06:26+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -98,8 +98,8 @@
      "fred": "T10Y2Y",
      "status": "ok",
      "latest": {
-      "date": "2026-10-28",
-      "value": 0.38
+      "date": "2026-10-29",
+      "value": 0.37
      }
     },
     "indpro": {
@@ -122,24 +122,24 @@
      "fred": "T5YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-10-28",
-      "value": 2.49
+      "date": "2026-10-29",
+      "value": 2.47
      }
     },
     "t10yie": {
      "fred": "T10YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-10-28",
-      "value": 2.38
+      "date": "2026-10-29",
+      "value": 2.35
      }
     },
     "t5yifr": {
      "fred": "T5YIFR",
      "status": "ok",
      "latest": {
-      "date": "2026-10-28",
-      "value": 2.27
+      "date": "2026-10-29",
+      "value": 2.23
      }
     },
     "clev_cpi_yy": {
@@ -421,7 +421,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-29T21:00:35+00:00",
+   "checked_at": "2026-10-30T01:06:51+00:00",
    "data_changed_at": "2026-10-27T18:58:28+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2067,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-29T23:40:18+00:00",
-   "data_changed_at": "2026-10-29T23:38:30+00:00",
+   "checked_at": "2026-10-30T01:09:04+00:00",
+   "data_changed_at": "2026-10-30T01:07:13+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,8 +2083,8 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-29T21:04:31+00:00",
-   "data_changed_at": "2026-10-29T21:02:49+00:00",
+   "checked_at": "2026-10-30T01:10:37+00:00",
+   "data_changed_at": "2026-10-30T01:09:04+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
@@ -2356,39 +2356,35 @@
     },
     "pw_malacca": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 228.0
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_malacca_tank": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 75.8571
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_malacca_cont": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 61.0
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_malacca_ly": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 237.1429
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_bosporus": {
      "fred": "PortWatch chokepoint3",
@@ -2429,8 +2425,8 @@
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-10-29T21:00:56+00:00",
-   "data_changed_at": "2026-10-29T21:00:35+00:00",
+   "checked_at": "2026-10-30T01:07:13+00:00",
+   "data_changed_at": "2026-10-30T01:06:51+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2444,16 +2440,16 @@
      "fred": "T10Y2Y",
      "status": "ok",
      "latest": {
-      "date": "2026-10-28",
-      "value": 0.38
+      "date": "2026-10-29",
+      "value": 0.37
      }
     },
     "3m10y": {
      "fred": "T10Y3M",
      "status": "ok",
      "latest": {
-      "date": "2026-10-28",
-      "value": 0.87
+      "date": "2026-10-29",
+      "value": 0.8
      }
     },
     "ust10_12m": {
@@ -2668,32 +2664,32 @@
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": -1.5982
+      "date": "2026-10-28",
+      "value": -0.6352
      }
     },
     "kre_xlf_3m": {
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": -4.0013
+      "date": "2026-10-28",
+      "value": -3.3135
      }
     },
     "iwm_spy_1m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 1.3083
+      "date": "2026-10-28",
+      "value": -0.2415
      }
     },
     "iwm_spy_3m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": -5.2877
+      "date": "2026-10-28",
+      "value": -7.6618
      }
     },
     "dep_pricing": {
@@ -2763,6 +2759,6 @@
    }
   }
  },
- "checked_at": "2026-10-29T23:40:18+00:00",
- "ok": true
+ "checked_at": "2026-10-30T01:10:37+00:00",
+ "ok": false
 }
