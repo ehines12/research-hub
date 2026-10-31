@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-30T20:40:48+00:00",
-   "data_changed_at": "2026-10-30T20:40:42+00:00",
+   "checked_at": "2026-10-31T00:51:16+00:00",
+   "data_changed_at": "2026-10-31T00:51:11+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -98,8 +98,8 @@
      "fred": "T10Y2Y",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 0.37
+      "date": "2026-10-30",
+      "value": 0.38
      }
     },
     "indpro": {
@@ -122,24 +122,24 @@
      "fred": "T5YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 2.47
+      "date": "2026-10-30",
+      "value": 2.46
      }
     },
     "t10yie": {
      "fred": "T10YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 2.35
+      "date": "2026-10-30",
+      "value": 2.34
      }
     },
     "t5yifr": {
      "fred": "T5YIFR",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 2.23
+      "date": "2026-10-30",
+      "value": 2.22
      }
     },
     "clev_cpi_yy": {
@@ -421,7 +421,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-30T20:41:16+00:00",
+   "checked_at": "2026-10-31T00:51:39+00:00",
    "data_changed_at": "2026-10-30T20:40:48+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2067,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-30T23:19:52+00:00",
-   "data_changed_at": "2026-10-30T23:17:44+00:00",
+   "checked_at": "2026-10-31T00:53:45+00:00",
+   "data_changed_at": "2026-10-31T00:51:59+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,7 +2083,7 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-30T20:44:22+00:00",
+   "checked_at": "2026-10-31T00:54:48+00:00",
    "data_changed_at": "2026-10-30T20:43:29+00:00",
    "series": {
     "gprd": {
@@ -2433,8 +2433,8 @@
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-10-30T20:41:37+00:00",
-   "data_changed_at": "2026-10-30T20:41:16+00:00",
+   "checked_at": "2026-10-31T00:51:59+00:00",
+   "data_changed_at": "2026-10-31T00:51:39+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2448,16 +2448,16 @@
      "fred": "T10Y2Y",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 0.37
+      "date": "2026-10-30",
+      "value": 0.38
      }
     },
     "3m10y": {
      "fred": "T10Y3M",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 0.8
+      "date": "2026-10-30",
+      "value": 0.78
      }
     },
     "ust10_12m": {
@@ -2672,32 +2672,32 @@
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-30",
-      "value": -2.6113
+      "date": "2026-10-29",
+      "value": -1.5982
      }
     },
     "kre_xlf_3m": {
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-30",
-      "value": -4.9109
+      "date": "2026-10-29",
+      "value": -4.0013
      }
     },
     "iwm_spy_1m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-10-30",
-      "value": 1.2066
+      "date": "2026-10-29",
+      "value": 1.3083
      }
     },
     "iwm_spy_3m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-10-30",
-      "value": -5.4464
+      "date": "2026-10-29",
+      "value": -5.2877
      }
     },
     "dep_pricing": {
@@ -2767,6 +2767,6 @@
    }
   }
  },
- "checked_at": "2026-10-30T23:19:52+00:00",
- "ok": true
+ "checked_at": "2026-10-31T00:54:48+00:00",
+ "ok": false
 }
