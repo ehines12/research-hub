@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-11-02T12:40:17+00:00",
-   "data_changed_at": "2026-10-31T00:51:11+00:00",
+   "checked_at": "2026-11-02T20:37:40+00:00",
+   "data_changed_at": "2026-11-02T20:37:36+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -16,10 +16,10 @@
      "fred": "GDPNOW",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 3.2217,
+      "date": "2026-11-02",
+      "value": 3.7383,
       "target": "Q4 2026",
-      "release": "Initial GDPNow 26:Q4 forecast"
+      "release": "ISM Manufact., Construction spending"
      }
     },
     "gdpnow_q": {
@@ -27,7 +27,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 3.2217
+      "value": 3.7383
      }
     },
     "unrate": {
@@ -146,56 +146,48 @@
      "fred": "Cleveland Fed CPI y/y",
      "status": "ok",
      "latest": {
-      "date": "2026-10-01",
-      "value": 3.7418,
-      "target": "Oct 2026",
-      "asof": "2026-10-30",
+      "date": "2026-11-01",
+      "value": 4.252,
+      "target": "Nov 2026",
+      "asof": "2026-11-02",
       "pending": true,
-      "prior_date": "2026-10-23",
-      "prior_value": 3.7536,
-      "mm": 0.2421
+      "mm": 0.5415
      }
     },
     "clev_ccpi_yy": {
      "fred": "Cleveland Fed Core CPI y/y",
      "status": "ok",
      "latest": {
-      "date": "2026-10-01",
-      "value": 2.4828,
-      "target": "Oct 2026",
-      "asof": "2026-10-30",
+      "date": "2026-11-01",
+      "value": 2.7718,
+      "target": "Nov 2026",
+      "asof": "2026-11-02",
       "pending": true,
-      "prior_date": "2026-10-23",
-      "prior_value": 2.4828,
-      "mm": 0.2114
+      "mm": 0.2041
      }
     },
     "clev_pce_yy": {
      "fred": "Cleveland Fed PCE y/y",
      "status": "ok",
      "latest": {
-      "date": "2026-10-01",
-      "value": 3.7701,
-      "target": "Oct 2026",
-      "asof": "2026-10-30",
+      "date": "2026-11-01",
+      "value": 4.0252,
+      "target": "Nov 2026",
+      "asof": "2026-11-02",
       "pending": true,
-      "prior_date": "2026-10-23",
-      "prior_value": 3.7219,
-      "mm": 0.2652
+      "mm": 0.4459
      }
     },
     "clev_cpce_yy": {
      "fred": "Cleveland Fed Core PCE y/y",
      "status": "ok",
      "latest": {
-      "date": "2026-10-01",
-      "value": 3.2027,
-      "target": "Oct 2026",
-      "asof": "2026-10-30",
+      "date": "2026-11-01",
+      "value": 3.3134,
+      "target": "Nov 2026",
+      "asof": "2026-11-02",
       "pending": true,
-      "prior_date": "2026-10-23",
-      "prior_value": 3.1281,
-      "mm": 0.2565
+      "mm": 0.2631
      }
     },
     "clev_cpi_q": {
@@ -203,12 +195,12 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 5.0811,
+      "value": 5.2558,
       "target": "Q4 2026",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "pending": true,
-      "prior_date": "2026-10-23",
-      "prior_value": 5.127
+      "prior_date": "2026-10-26",
+      "prior_value": 5.3472
      }
     },
     "clev_ccpi_q": {
@@ -218,9 +210,9 @@
       "date": "2026-10-01",
       "value": 3.0164,
       "target": "Q4 2026",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "pending": true,
-      "prior_date": "2026-10-23",
+      "prior_date": "2026-10-26",
       "prior_value": 3.0164
      }
     },
@@ -229,12 +221,12 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 4.4211,
+      "value": 4.5196,
       "target": "Q4 2026",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "pending": true,
-      "prior_date": "2026-10-23",
-      "prior_value": 4.3253
+      "prior_date": "2026-10-26",
+      "prior_value": 4.4503
      }
     },
     "clev_cpce_q": {
@@ -244,9 +236,9 @@
       "date": "2026-10-01",
       "value": 3.3332,
       "target": "Q4 2026",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "pending": true,
-      "prior_date": "2026-10-23",
+      "prior_date": "2026-10-26",
       "prior_value": 3.1526
      }
     },
@@ -421,8 +413,8 @@
    }
   },
   "h8": {
-   "checked_at": "2026-11-02T12:41:22+00:00",
-   "data_changed_at": "2026-11-02T12:40:17+00:00",
+   "checked_at": "2026-11-02T20:37:55+00:00",
+   "data_changed_at": "2026-11-02T20:37:40+00:00",
    "series": {
     "LLBDCBW027SBOG": {
      "fred": "LLBDCBW027SBOG",
@@ -1082,111 +1074,99 @@
     },
     "fdic_mmda_new": {
      "fred": "MMNDR",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-01",
       "value": 0.63
-     },
-     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
+     }
     },
     "fdic_cd1_old": {
      "fred": "CD1NRNJ",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2021-03-01",
       "value": 0.04
-     },
-     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
+     }
     },
     "fdic_cd1_new": {
      "fred": "NDR1MCD",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-01",
       "value": 0.23
-     },
-     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
+     }
     },
     "fdic_cd3_old": {
      "fred": "CD3NRNJ",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2021-03-01",
       "value": 0.06
-     },
-     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
+     }
     },
     "fdic_cd3_new": {
      "fred": "NDR3MCD",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-01",
       "value": 1.14
-     },
-     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
+     }
     },
     "fdic_cd6_old": {
      "fred": "CD6NRNJ",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2021-03-01",
       "value": 0.094
-     },
-     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
+     }
     },
     "fdic_cd6_new": {
      "fred": "NDR6MCD",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-01",
       "value": 1.39
-     },
-     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
+     }
     },
     "fdic_cd12_old": {
      "fred": "CD12NRNJ",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2021-03-01",
       "value": 0.14
-     },
-     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
+     }
     },
     "fdic_cd12_new": {
      "fred": "NDR12MCD",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-01",
       "value": 1.76
-     },
-     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
+     }
     },
     "fdic_cd24_old": {
      "fred": "CD24NRNJ",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2021-03-01",
       "value": 0.188
-     },
-     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
+     }
     },
     "fdic_cd24_new": {
      "fred": "NDR24MCD",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-01",
       "value": 1.55
-     },
-     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
+     }
     },
     "fdic_cd36_old": {
      "fred": "CD36NRNJ",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2021-03-01",
       "value": 0.226
-     },
-     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
+     }
     },
     "fdic_cd36_new": {
      "fred": "NDR36MCD",
@@ -1240,87 +1220,87 @@
      "fred": "DRTSCILM",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": 0.0
+      "date": "2026-10-01",
+      "value": 1.7
      }
     },
     "sloos_dem_ci_lm": {
      "fred": "DRSDCILM",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": 16.1
+      "date": "2026-10-01",
+      "value": -11.7
      }
     },
     "sloos_std_ci_sm": {
      "fred": "DRTSCIS",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": 1.8
+      "date": "2026-10-01",
+      "value": 5.1
      }
     },
     "sloos_dem_ci_sm": {
      "fred": "DRSDCIS",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": 3.6
+      "date": "2026-10-01",
+      "value": -11.9
      }
     },
     "sloos_std_cre_cld": {
      "fred": "SUBLPDRCSC",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": -3.7
+      "date": "2026-10-01",
+      "value": 15.5
      }
     },
     "sloos_dem_cre_cld": {
      "fred": "SUBLPDRCDC",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": -11.1
+      "date": "2026-10-01",
+      "value": -25.9
      }
     },
     "sloos_std_cre_nfnr": {
      "fred": "SUBLPDRCSN",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": -11.3
+      "date": "2026-10-01",
+      "value": 8.8
      }
     },
     "sloos_dem_cre_nfnr": {
      "fred": "SUBLPDRCDN",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": 1.9
+      "date": "2026-10-01",
+      "value": -10.5
      }
     },
     "sloos_std_cre_mf": {
      "fred": "SUBLPDRCSM",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": -5.7
+      "date": "2026-10-01",
+      "value": 8.8
      }
     },
     "sloos_dem_cre_mf": {
      "fred": "SUBLPDRCDM",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": -3.8
+      "date": "2026-10-01",
+      "value": -22.8
      }
     },
     "sloos_std_rre_gse": {
      "fred": "SUBLPDHMSENQ",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
+      "date": "2026-10-01",
       "value": 0.0
      }
     },
@@ -1328,15 +1308,15 @@
      "fred": "SUBLPDHMDENQ",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": -11.8
+      "date": "2026-10-01",
+      "value": -32.1
      }
     },
     "sloos_std_rre_gov": {
      "fred": "SUBLPDHMSGNQ",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
+      "date": "2026-10-01",
       "value": 0.0
      }
     },
@@ -1344,112 +1324,112 @@
      "fred": "SUBLPDHMDGNQ",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": -16.7
+      "date": "2026-10-01",
+      "value": -30.0
      }
     },
     "sloos_std_rre_qm": {
      "fred": "SUBLPDHMSQNQ",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": -4.0
+      "date": "2026-10-01",
+      "value": -3.8
      }
     },
     "sloos_dem_rre_qm": {
      "fred": "SUBLPDHMDQNQ",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": -8.0
+      "date": "2026-10-01",
+      "value": -35.8
      }
     },
     "sloos_std_rre_qmj": {
      "fred": "SUBLPDHMSJNQ",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": -9.8
+      "date": "2026-10-01",
+      "value": -7.5
      }
     },
     "sloos_dem_rre_qmj": {
      "fred": "SUBLPDHMDJNQ",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": -8.0
+      "date": "2026-10-01",
+      "value": -30.2
      }
     },
     "sloos_std_rre_nqmj": {
      "fred": "SUBLPDHMSKNQ",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": -6.5
+      "date": "2026-10-01",
+      "value": -8.7
      }
     },
     "sloos_dem_rre_nqmj": {
      "fred": "SUBLPDHMDKNQ",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": -10.9
+      "date": "2026-10-01",
+      "value": -25.5
      }
     },
     "sloos_std_cc": {
      "fred": "DRTSCLCC",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": 6.7
+      "date": "2026-10-01",
+      "value": 4.0
      }
     },
     "sloos_dem_cc": {
      "fred": "DEMCC",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": 2.2
+      "date": "2026-10-01",
+      "value": 10.2
      }
     },
     "sloos_std_auto": {
      "fred": "STDSAUTO",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": -4.5
+      "date": "2026-10-01",
+      "value": -2.1
      }
     },
     "sloos_dem_auto": {
      "fred": "DEMAUTO",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": -11.4
+      "date": "2026-10-01",
+      "value": -12.5
      }
     },
     "sloos_std_oth": {
      "fred": "STDSOTHCONS",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": 0.0
+      "date": "2026-10-01",
+      "value": 1.9
      }
     },
     "sloos_dem_oth": {
      "fred": "DEMOTHCONS",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": -4.2
+      "date": "2026-10-01",
+      "value": 1.9
      }
     },
     "sloos_wil_cons": {
      "fred": "DRIWCIL",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": -2.0
+      "date": "2026-10-01",
+      "value": 0.0
      }
     },
     "CIL_LARGE": {
@@ -1990,7 +1970,7 @@
     },
     "dep_mmda": {
      "fred": "derived",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-01",
       "value": 0.63
@@ -1998,7 +1978,7 @@
     },
     "dep_cd1": {
      "fred": "derived",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-01",
       "value": 0.23
@@ -2006,7 +1986,7 @@
     },
     "dep_cd3": {
      "fred": "derived",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-01",
       "value": 1.14
@@ -2014,7 +1994,7 @@
     },
     "dep_cd6": {
      "fred": "derived",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-01",
       "value": 1.39
@@ -2022,7 +2002,7 @@
     },
     "dep_cd12": {
      "fred": "derived",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-01",
       "value": 1.76
@@ -2030,7 +2010,7 @@
     },
     "dep_cd24": {
      "fred": "derived",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-01",
       "value": 1.55
@@ -2038,7 +2018,7 @@
     },
     "dep_cd36": {
      "fred": "derived",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-01",
       "value": 1.39
@@ -2062,7 +2042,7 @@
     },
     "dep_sprd_cd12": {
      "fred": "derived",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-09-01",
       "value": -2.02
@@ -2070,7 +2050,7 @@
     },
     "dep_sprd_mmda": {
      "fred": "derived",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-09-01",
       "value": -3.12
@@ -2079,8 +2059,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-11-02T12:43:38+00:00",
-   "data_changed_at": "2026-11-02T12:41:38+00:00",
+   "checked_at": "2026-11-02T20:40:08+00:00",
+   "data_changed_at": "2026-11-02T20:38:14+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2095,142 +2075,136 @@
    }
   },
   "geo": {
-   "checked_at": "2026-11-02T12:45:30+00:00",
-   "data_changed_at": "2026-11-02T12:43:38+00:00",
+   "checked_at": "2026-11-02T20:40:10+00:00",
+   "data_changed_at": "2026-11-02T20:40:08+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
      "status": "ok",
      "latest": {
-      "date": "2026-10-26",
-      "value": 165.2528
+      "date": "2026-11-02",
+      "value": 97.6678
      }
     },
     "gprd_ma30": {
      "fred": "GPRD",
      "status": "ok",
      "latest": {
-      "date": "2026-10-26",
-      "value": 175.4389
+      "date": "2026-11-02",
+      "value": 164.0432
      }
     },
     "gprd_act_ma30": {
      "fred": "GPRD_ACT",
      "status": "ok",
      "latest": {
-      "date": "2026-10-26",
-      "value": 207.489
+      "date": "2026-11-02",
+      "value": 177.8962
      }
     },
     "gprd_thr_ma30": {
      "fred": "GPRD_THREAT",
      "status": "ok",
      "latest": {
-      "date": "2026-10-26",
-      "value": 180.5556
+      "date": "2026-11-02",
+      "value": 176.622
      }
     },
     "gpr_m": {
      "fred": "GPR",
      "status": "ok",
      "latest": {
-      "date": "2026-09-01",
-      "value": 146.2099
+      "date": "2026-10-01",
+      "value": 150.52
      }
     },
     "gpr_t": {
      "fred": "GPRT",
      "status": "ok",
      "latest": {
-      "date": "2026-09-01",
-      "value": 173.0874
+      "date": "2026-10-01",
+      "value": 156.8436
      }
     },
     "gpr_a": {
      "fred": "GPRA",
      "status": "ok",
      "latest": {
-      "date": "2026-09-01",
-      "value": 144.288
+      "date": "2026-10-01",
+      "value": 167.5723
      }
     },
     "epu_d": {
      "fred": "USEPUINDXD",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 251.1
-     },
-     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
+      "date": "2026-11-01",
+      "value": 647.37
+     }
     },
     "epu_d_ma7": {
      "fred": "USEPUINDXD",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 269.6614
-     },
-     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
+      "date": "2026-11-01",
+      "value": 291.8286
+     }
     },
     "epu_d_ma30": {
      "fred": "USEPUINDXD",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 276.901
-     },
-     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
+      "date": "2026-11-01",
+      "value": 300.6377
+     }
     },
     "epu_m": {
      "fred": "USEPUINDXM",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-01",
       "value": 157.0432
-     },
-     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
+     }
     },
     "gepu": {
      "fred": "GEPUCURRENT",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-07-01",
       "value": 241.6905
-     },
-     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
+     }
     },
     "tpu_d": {
      "fred": "TPUD",
      "status": "ok",
      "latest": {
-      "date": "2026-10-26",
-      "value": 280.8989
+      "date": "2026-11-02",
+      "value": 608.6957
      }
     },
     "tpu_d_ma30": {
      "fred": "TPUD",
      "status": "ok",
      "latest": {
-      "date": "2026-10-26",
-      "value": 211.9771
+      "date": "2026-11-02",
+      "value": 232.5439
      }
     },
     "tpu_m": {
      "fred": "TPU",
      "status": "ok",
      "latest": {
-      "date": "2026-09-01",
-      "value": 260.7571
+      "date": "2026-10-01",
+      "value": 217.9408
      }
     },
     "epu_trade": {
      "fred": "EPUTRADE",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-09-01",
       "value": 1400.7687
-     },
-     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
+     }
     },
     "pw_hormuz": {
      "fred": "PortWatch chokepoint6",
@@ -2239,7 +2213,7 @@
       "date": "2026-10-25",
       "value": 3.2857
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_hormuz_tank": {
      "fred": "PortWatch chokepoint6",
@@ -2248,7 +2222,7 @@
       "date": "2026-10-25",
       "value": 0.8571
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_hormuz_cont": {
      "fred": "PortWatch chokepoint6",
@@ -2257,7 +2231,7 @@
       "date": "2026-10-25",
       "value": 0.1429
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_hormuz_ly": {
      "fred": "PortWatch chokepoint6",
@@ -2266,7 +2240,7 @@
       "date": "2026-10-25",
       "value": 102.0
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_babelmandeb": {
      "fred": "PortWatch chokepoint4",
@@ -2275,7 +2249,7 @@
       "date": "2026-10-25",
       "value": 28.8571
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_babelmandeb_tank": {
      "fred": "PortWatch chokepoint4",
@@ -2284,7 +2258,7 @@
       "date": "2026-10-25",
       "value": 9.5714
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_babelmandeb_cont": {
      "fred": "PortWatch chokepoint4",
@@ -2293,7 +2267,7 @@
       "date": "2026-10-25",
       "value": 7.2857
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_babelmandeb_ly": {
      "fred": "PortWatch chokepoint4",
@@ -2302,7 +2276,7 @@
       "date": "2026-10-25",
       "value": 37.4286
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_suez": {
      "fred": "PortWatch chokepoint1",
@@ -2311,7 +2285,7 @@
       "date": "2026-10-25",
       "value": 41.2857
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_suez_tank": {
      "fred": "PortWatch chokepoint1",
@@ -2320,7 +2294,7 @@
       "date": "2026-10-25",
       "value": 16.2857
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_suez_cont": {
      "fred": "PortWatch chokepoint1",
@@ -2329,7 +2303,7 @@
       "date": "2026-10-25",
       "value": 13.8571
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_suez_ly": {
      "fred": "PortWatch chokepoint1",
@@ -2338,71 +2312,79 @@
       "date": "2026-10-25",
       "value": 42.7143
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_panama": {
      "fred": "PortWatch chokepoint2",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 28.7143
-     }
+     },
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_panama_tank": {
      "fred": "PortWatch chokepoint2",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 12.2857
-     }
+     },
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_panama_cont": {
      "fred": "PortWatch chokepoint2",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 8.4286
-     }
+     },
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_panama_ly": {
      "fred": "PortWatch chokepoint2",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 32.8571
-     }
+     },
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_malacca": {
      "fred": "PortWatch chokepoint5",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 228.0
-     }
+     },
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_malacca_tank": {
      "fred": "PortWatch chokepoint5",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 75.8571
-     }
+     },
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_malacca_cont": {
      "fred": "PortWatch chokepoint5",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 61.0
-     }
+     },
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_malacca_ly": {
      "fred": "PortWatch chokepoint5",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 237.1429
-     }
+     },
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_bosporus": {
      "fred": "PortWatch chokepoint3",
@@ -2411,7 +2393,7 @@
       "date": "2026-10-25",
       "value": 53.7143
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_bosporus_tank": {
      "fred": "PortWatch chokepoint3",
@@ -2420,7 +2402,7 @@
       "date": "2026-10-25",
       "value": 15.8571
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_bosporus_cont": {
      "fred": "PortWatch chokepoint3",
@@ -2429,7 +2411,7 @@
       "date": "2026-10-25",
       "value": 5.2857
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     },
     "pw_bosporus_ly": {
      "fred": "PortWatch chokepoint3",
@@ -2438,13 +2420,13 @@
       "date": "2026-10-25",
       "value": 101.0
      },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
     }
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-11-02T12:41:38+00:00",
-   "data_changed_at": "2026-11-02T12:41:22+00:00",
+   "checked_at": "2026-11-02T20:38:14+00:00",
+   "data_changed_at": "2026-11-02T20:37:55+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2578,80 +2560,80 @@
      "fred": "VIXCLS",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 17.2
+      "date": "2026-10-30",
+      "value": 19.42
      }
     },
     "move": {
      "fred": "^MOVE",
      "status": "ok",
      "latest": {
-      "date": "2026-10-30",
-      "value": 100.2
+      "date": "2026-11-02",
+      "value": 100.8628
      }
     },
     "hy_lvl": {
      "fred": "BAMLH0A0HYM2",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 3.26
+      "date": "2026-10-30",
+      "value": 3.44
      }
     },
     "hy_4w": {
      "fred": "BAMLH0A0HYM2",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 0.02
+      "date": "2026-10-30",
+      "value": 0.34
      }
     },
     "bbb_lvl": {
      "fred": "BAMLC0A4CBBB",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 1.1
+      "date": "2026-10-30",
+      "value": 1.16
      }
     },
     "bbb_4w": {
      "fred": "BAMLC0A4CBBB",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 0.04
+      "date": "2026-10-30",
+      "value": 0.12
      }
     },
     "sloos_ci_std": {
      "fred": "DRTSCILM",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": 0.0
+      "date": "2026-10-01",
+      "value": 1.7
      }
     },
     "sloos_ci_dem": {
      "fred": "DRSDCILM",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": 16.1
+      "date": "2026-10-01",
+      "value": -11.7
      }
     },
     "sloos_cre_std": {
      "fred": "SUBLPDRCSC+SUBLPDRCSN+SUBLPDRCSM",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": -6.9
+      "date": "2026-10-01",
+      "value": 11.0333
      }
     },
     "sloos_cre_dem": {
      "fred": "SUBLPDRCDC+SUBLPDRCDN+SUBLPDRCDM",
      "status": "ok",
      "latest": {
-      "date": "2026-07-01",
-      "value": -4.3333
+      "date": "2026-10-01",
+      "value": -19.7333
      }
     },
     "claims": {
@@ -2682,32 +2664,32 @@
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-30",
-      "value": -2.6113
+      "date": "2026-11-02",
+      "value": -3.1065
      }
     },
     "kre_xlf_3m": {
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-30",
-      "value": -4.9109
+      "date": "2026-11-02",
+      "value": -4.4589
      }
     },
     "iwm_spy_1m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-10-30",
-      "value": 1.2066
+      "date": "2026-11-02",
+      "value": 1.5297
      }
     },
     "iwm_spy_3m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-10-30",
-      "value": -5.4464
+      "date": "2026-11-02",
+      "value": -5.0443
      }
     },
     "dep_pricing": {
@@ -2777,6 +2759,6 @@
    }
   }
  },
- "checked_at": "2026-11-02T12:45:30+00:00",
+ "checked_at": "2026-11-02T20:40:10+00:00",
  "ok": false
 }
