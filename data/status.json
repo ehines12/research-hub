@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-11-02T20:37:40+00:00",
-   "data_changed_at": "2026-11-02T20:37:36+00:00",
+   "checked_at": "2026-11-02T22:27:59+00:00",
+   "data_changed_at": "2026-11-02T22:27:55+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -74,7 +74,7 @@
      "fred": "DFF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
+      "date": "2026-10-30",
       "value": 3.88
      }
     },
@@ -82,24 +82,24 @@
      "fred": "DGS2",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 4.61
+      "date": "2026-10-30",
+      "value": 4.56
      }
     },
     "dgs10": {
      "fred": "DGS10",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 4.98
+      "date": "2026-10-30",
+      "value": 4.94
      }
     },
     "spread": {
      "fred": "T10Y2Y",
      "status": "ok",
      "latest": {
-      "date": "2026-10-30",
-      "value": 0.38
+      "date": "2026-11-02",
+      "value": 0.32
      }
     },
     "indpro": {
@@ -122,24 +122,24 @@
      "fred": "T5YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-10-30",
-      "value": 2.46
+      "date": "2026-11-02",
+      "value": 2.39
      }
     },
     "t10yie": {
      "fred": "T10YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-10-30",
-      "value": 2.34
+      "date": "2026-11-02",
+      "value": 2.29
      }
     },
     "t5yifr": {
      "fred": "T5YIFR",
      "status": "ok",
      "latest": {
-      "date": "2026-10-30",
-      "value": 2.22
+      "date": "2026-11-02",
+      "value": 2.19
      }
     },
     "clev_cpi_yy": {
@@ -270,24 +270,24 @@
      "fred": "DTS",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 261.461
+      "date": "2026-10-30",
+      "value": 249.731
      }
     },
     "dts_yoy": {
      "fred": "DTS",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 3.5137
+      "date": "2026-10-30",
+      "value": 9.8086
      }
     },
     "dts_yoy60": {
      "fred": "DTS",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 5.4258
+      "date": "2026-10-30",
+      "value": 5.0701
      }
     },
     "gas": {
@@ -413,8 +413,8 @@
    }
   },
   "h8": {
-   "checked_at": "2026-11-02T20:37:55+00:00",
-   "data_changed_at": "2026-11-02T20:37:40+00:00",
+   "checked_at": "2026-11-02T22:28:21+00:00",
+   "data_changed_at": "2026-11-02T22:27:59+00:00",
    "series": {
     "LLBDCBW027SBOG": {
      "fred": "LLBDCBW027SBOG",
@@ -1212,8 +1212,8 @@
      "fred": "FEDFUNDS",
      "status": "ok",
      "latest": {
-      "date": "2026-09-01",
-      "value": 3.75
+      "date": "2026-10-01",
+      "value": 3.88
      }
     },
     "sloos_std_ci_lm": {
@@ -2044,23 +2044,23 @@
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-01",
-      "value": -2.02
+      "date": "2026-10-01",
+      "value": -2.12
      }
     },
     "dep_sprd_mmda": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-09-01",
-      "value": -3.12
+      "date": "2026-10-01",
+      "value": -3.25
      }
     }
    }
   },
   "predictions": {
-   "checked_at": "2026-11-02T20:40:08+00:00",
-   "data_changed_at": "2026-11-02T20:38:14+00:00",
+   "checked_at": "2026-11-02T22:30:33+00:00",
+   "data_changed_at": "2026-11-02T22:28:38+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2075,8 +2075,8 @@
    }
   },
   "geo": {
-   "checked_at": "2026-11-02T20:40:10+00:00",
-   "data_changed_at": "2026-11-02T20:40:08+00:00",
+   "checked_at": "2026-11-02T22:32:14+00:00",
+   "data_changed_at": "2026-11-02T22:30:33+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
@@ -2208,264 +2208,240 @@
     },
     "pw_hormuz": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 3.2857
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_hormuz_tank": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 0.8571
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_hormuz_cont": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 0.1429
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_hormuz_ly": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 102.0
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_babelmandeb": {
      "fred": "PortWatch chokepoint4",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 28.8571
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_babelmandeb_tank": {
      "fred": "PortWatch chokepoint4",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 9.5714
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_babelmandeb_cont": {
      "fred": "PortWatch chokepoint4",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 7.2857
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_babelmandeb_ly": {
      "fred": "PortWatch chokepoint4",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 37.4286
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_suez": {
      "fred": "PortWatch chokepoint1",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 41.2857
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_suez_tank": {
      "fred": "PortWatch chokepoint1",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 16.2857
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_suez_cont": {
      "fred": "PortWatch chokepoint1",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 13.8571
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_suez_ly": {
      "fred": "PortWatch chokepoint1",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 42.7143
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_panama": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 28.7143
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_panama_tank": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 12.2857
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_panama_cont": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 8.4286
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_panama_ly": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 32.8571
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_malacca": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 228.0
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_malacca_tank": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 75.8571
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_malacca_cont": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 61.0
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_malacca_ly": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 237.1429
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_bosporus": {
      "fred": "PortWatch chokepoint3",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 53.7143
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_bosporus_tank": {
      "fred": "PortWatch chokepoint3",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 15.8571
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_bosporus_cont": {
      "fred": "PortWatch chokepoint3",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 5.2857
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     },
     "pw_bosporus_ly": {
      "fred": "PortWatch chokepoint3",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 101.0
-     },
-     "error": "PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']}"
+     }
     }
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-11-02T20:38:14+00:00",
-   "data_changed_at": "2026-11-02T20:37:55+00:00",
+   "checked_at": "2026-11-02T22:28:38+00:00",
+   "data_changed_at": "2026-11-02T22:28:21+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 0.84
+      "date": "2026-10-30",
+      "value": 0.76
      }
     },
     "2s10s": {
      "fred": "T10Y2Y",
      "status": "ok",
      "latest": {
-      "date": "2026-10-30",
-      "value": 0.38
+      "date": "2026-11-02",
+      "value": 0.32
      }
     },
     "3m10y": {
      "fred": "T10Y3M",
      "status": "ok",
      "latest": {
-      "date": "2026-10-30",
-      "value": 0.78
+      "date": "2026-11-02",
+      "value": 0.7
      }
     },
     "ust10_12m": {
      "fred": "DGS10",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 90.0
+      "date": "2026-10-30",
+      "value": 83.0
      }
     },
     "ust2_12m": {
      "fred": "DGS2",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 102.0
+      "date": "2026-10-30",
+      "value": 95.0
      }
     },
     "ul_all": {
@@ -2488,24 +2464,24 @@
      "fred": "DGS10",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": -28.0
+      "date": "2026-10-30",
+      "value": -35.0
      }
     },
     "ust10_3m": {
      "fred": "DGS10",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 30.0
+      "date": "2026-10-30",
+      "value": 19.0
      }
     },
     "policy_path": {
      "fred": "DGS1+DFF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 2.16
+      "date": "2026-10-30",
+      "value": 1.92
      }
     },
     "h8_small_loans": {
@@ -2569,7 +2545,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-11-02",
-      "value": 100.8628
+      "value": 100.3615
      }
     },
     "hy_lvl": {
@@ -2665,7 +2641,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-11-02",
-      "value": -3.1065
+      "value": -3.1977
      }
     },
     "kre_xlf_3m": {
@@ -2673,7 +2649,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-11-02",
-      "value": -4.4589
+      "value": -4.5488
      }
     },
     "iwm_spy_1m": {
@@ -2681,7 +2657,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-11-02",
-      "value": 1.5297
+      "value": 1.467
      }
     },
     "iwm_spy_3m": {
@@ -2689,7 +2665,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-11-02",
-      "value": -5.0443
+      "value": -5.1029
      }
     },
     "dep_pricing": {
@@ -2697,7 +2673,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": -0.04
+      "value": -0.17
      }
     },
     "dep_mmda": {
@@ -2705,7 +2681,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": -0.14
+      "value": -0.27
      }
     },
     "ltd_share": {
@@ -2759,6 +2735,6 @@
    }
   }
  },
- "checked_at": "2026-11-02T20:40:10+00:00",
- "ok": false
+ "checked_at": "2026-11-02T22:32:14+00:00",
+ "ok": true
 }
