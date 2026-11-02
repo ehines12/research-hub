@@ -1,7 +1,7 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-10-31T00:51:16+00:00",
+   "checked_at": "2026-11-02T12:35:01+00:00",
    "data_changed_at": "2026-10-31T00:51:11+00:00",
    "series": {
     "gdp": {
@@ -421,7 +421,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-10-31T00:51:39+00:00",
+   "checked_at": "2026-11-02T12:35:15+00:00",
    "data_changed_at": "2026-10-30T20:40:48+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2067,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-10-31T00:53:45+00:00",
-   "data_changed_at": "2026-10-31T00:51:59+00:00",
+   "checked_at": "2026-11-02T12:37:31+00:00",
+   "data_changed_at": "2026-11-02T12:35:31+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,7 +2083,7 @@
    }
   },
   "geo": {
-   "checked_at": "2026-10-31T00:54:48+00:00",
+   "checked_at": "2026-11-02T12:39:31+00:00",
    "data_changed_at": "2026-10-30T20:43:29+00:00",
    "series": {
     "gprd": {
@@ -2433,8 +2433,8 @@
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-10-31T00:51:59+00:00",
-   "data_changed_at": "2026-10-31T00:51:39+00:00",
+   "checked_at": "2026-11-02T12:35:31+00:00",
+   "data_changed_at": "2026-11-02T12:35:15+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2577,7 +2577,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-30",
-      "value": 100.1976
+      "value": 100.2
      }
     },
     "hy_lvl": {
@@ -2672,32 +2672,32 @@
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": -1.5982
+      "date": "2026-10-30",
+      "value": -2.6113
      }
     },
     "kre_xlf_3m": {
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": -4.0013
+      "date": "2026-10-30",
+      "value": -4.9109
      }
     },
     "iwm_spy_1m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": 1.3083
+      "date": "2026-10-30",
+      "value": 1.2066
      }
     },
     "iwm_spy_3m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-10-29",
-      "value": -5.2877
+      "date": "2026-10-30",
+      "value": -5.4464
      }
     },
     "dep_pricing": {
@@ -2767,6 +2767,6 @@
    }
   }
  },
- "checked_at": "2026-10-31T00:54:48+00:00",
+ "checked_at": "2026-11-02T12:39:31+00:00",
  "ok": false
 }
