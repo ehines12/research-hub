@@ -1,7 +1,7 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-11-02T12:35:01+00:00",
+   "checked_at": "2026-11-02T12:40:17+00:00",
    "data_changed_at": "2026-10-31T00:51:11+00:00",
    "series": {
     "gdp": {
@@ -421,8 +421,8 @@
    }
   },
   "h8": {
-   "checked_at": "2026-11-02T12:35:15+00:00",
-   "data_changed_at": "2026-10-30T20:40:48+00:00",
+   "checked_at": "2026-11-02T12:41:22+00:00",
+   "data_changed_at": "2026-11-02T12:40:17+00:00",
    "series": {
     "LLBDCBW027SBOG": {
      "fred": "LLBDCBW027SBOG",
@@ -1082,99 +1082,111 @@
     },
     "fdic_mmda_new": {
      "fred": "MMNDR",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 0.63
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "fdic_cd1_old": {
      "fred": "CD1NRNJ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2021-03-01",
       "value": 0.04
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "fdic_cd1_new": {
      "fred": "NDR1MCD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 0.23
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "fdic_cd3_old": {
      "fred": "CD3NRNJ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2021-03-01",
       "value": 0.06
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "fdic_cd3_new": {
      "fred": "NDR3MCD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.14
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "fdic_cd6_old": {
      "fred": "CD6NRNJ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2021-03-01",
       "value": 0.094
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "fdic_cd6_new": {
      "fred": "NDR6MCD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.39
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "fdic_cd12_old": {
      "fred": "CD12NRNJ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2021-03-01",
       "value": 0.14
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "fdic_cd12_new": {
      "fred": "NDR12MCD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.76
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "fdic_cd24_old": {
      "fred": "CD24NRNJ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2021-03-01",
       "value": 0.188
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "fdic_cd24_new": {
      "fred": "NDR24MCD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.55
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "fdic_cd36_old": {
      "fred": "CD36NRNJ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2021-03-01",
       "value": 0.226
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "fdic_cd36_new": {
      "fred": "NDR36MCD",
@@ -1978,7 +1990,7 @@
     },
     "dep_mmda": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 0.63
@@ -1986,7 +1998,7 @@
     },
     "dep_cd1": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 0.23
@@ -1994,7 +2006,7 @@
     },
     "dep_cd3": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.14
@@ -2002,7 +2014,7 @@
     },
     "dep_cd6": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.39
@@ -2010,7 +2022,7 @@
     },
     "dep_cd12": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.76
@@ -2018,7 +2030,7 @@
     },
     "dep_cd24": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.55
@@ -2026,7 +2038,7 @@
     },
     "dep_cd36": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.39
@@ -2050,7 +2062,7 @@
     },
     "dep_sprd_cd12": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": -2.02
@@ -2058,7 +2070,7 @@
     },
     "dep_sprd_mmda": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": -3.12
@@ -2067,8 +2079,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-11-02T12:37:31+00:00",
-   "data_changed_at": "2026-11-02T12:35:31+00:00",
+   "checked_at": "2026-11-02T12:43:38+00:00",
+   "data_changed_at": "2026-11-02T12:41:38+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,8 +2095,8 @@
    }
   },
   "geo": {
-   "checked_at": "2026-11-02T12:39:31+00:00",
-   "data_changed_at": "2026-10-30T20:43:29+00:00",
+   "checked_at": "2026-11-02T12:45:30+00:00",
+   "data_changed_at": "2026-11-02T12:43:38+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
@@ -2144,43 +2156,48 @@
     },
     "epu_d": {
      "fred": "USEPUINDXD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-29",
       "value": 251.1
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "epu_d_ma7": {
      "fred": "USEPUINDXD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-29",
       "value": 269.6614
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "epu_d_ma30": {
      "fred": "USEPUINDXD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-29",
       "value": 276.901
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "epu_m": {
      "fred": "USEPUINDXM",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 157.0432
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "gepu": {
      "fred": "GEPUCURRENT",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 241.6905
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "tpu_d": {
      "fred": "TPUD",
@@ -2208,11 +2225,12 @@
     },
     "epu_trade": {
      "fred": "EPUTRADE",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 1400.7687
-     }
+     },
+     "error": "FRED: curl exit 22: curl: (22) The requested URL returned error: 403; ALFRED: curl exit 22: curl: (22) The requested URL returned error: 403"
     },
     "pw_hormuz": {
      "fred": "PortWatch chokepoint6",
@@ -2324,75 +2342,67 @@
     },
     "pw_panama": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 28.7143
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_panama_tank": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 12.2857
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_panama_cont": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 8.4286
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_panama_ly": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 32.8571
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_malacca": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 228.0
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_malacca_tank": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 75.8571
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_malacca_cont": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 61.0
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_malacca_ly": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 237.1429
-     },
-     "error": "PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']}"
+     }
     },
     "pw_bosporus": {
      "fred": "PortWatch chokepoint3",
@@ -2433,8 +2443,8 @@
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-11-02T12:35:31+00:00",
-   "data_changed_at": "2026-11-02T12:35:15+00:00",
+   "checked_at": "2026-11-02T12:41:38+00:00",
+   "data_changed_at": "2026-11-02T12:41:22+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2767,6 +2777,6 @@
    }
   }
  },
- "checked_at": "2026-11-02T12:39:31+00:00",
+ "checked_at": "2026-11-02T12:45:30+00:00",
  "ok": false
 }
