@@ -32,7 +32,7 @@ def http_csv(url, tries=3):
         throttled = False
         try:
             if shutil.which("curl"):
-                r = subprocess.run(["curl", "-sSL", "--http1.1", "--max-time", "60", "-A", UA["User-Agent"],
+                r = subprocess.run(["curl", "-sSL", "--max-time", "40",
                                     "-w", "\n%{http_code}", url], capture_output=True, text=True)
                 body, _, code = r.stdout.rpartition("\n")
                 if r.returncode == 0 and code == "200" and body:

@@ -29,7 +29,7 @@ def _get(sid, grid):
     url = URL.format(ids=",".join([sid] * len(vds)), vds=",".join(vds))
     last = None
     for i in range(4):
-        r = subprocess.run(["curl", "-sSL", "--max-time", "180", "-A", "Mozilla/5.0 (research-hub data refresh)", "-w", "\n%{http_code}", url], capture_output=True, text=True)
+        r = subprocess.run(["curl", "-sSL", "--max-time", "180", "-w", "\n%{http_code}", url], capture_output=True, text=True)
         body, _, code = r.stdout.rpartition("\n")
         if r.returncode == 0 and code == "404":
             if len(grid) == 1:
