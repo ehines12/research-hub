@@ -28,7 +28,7 @@ def _get(sid, grid):
     vds = [(dt.date.fromisoformat(g) - dt.timedelta(days=1)).isoformat() for g in grid]
     url = URL.format(ids=",".join([sid] * len(vds)), vds=",".join(vds))
     last = None
-    for i in range(5):
+    for i in range(4):
         r = subprocess.run(["curl", "-sSL", "--max-time", "180", "-A", "Mozilla/5.0 (research-hub data refresh)", "-w", "\n%{http_code}", url], capture_output=True, text=True)
         body, _, code = r.stdout.rpartition("\n")
         if r.returncode == 0 and code == "404":

@@ -23,7 +23,7 @@ SOURCES = [
 UA = {"User-Agent": "Mozilla/5.0 (research-hub data refresh)"}
 
 
-def http_csv(url, tries=5):
+def http_csv(url, tries=3):
     """curl is the primary transport (FRED's edge stalls Python's TLS client); urllib is a fallback.
     FRED/ALFRED intermittently answer 403/429 when several series are pulled at once: back off
     exponentially (with jitter) on those before giving up."""
@@ -45,7 +45,7 @@ def http_csv(url, tries=5):
         except Exception as e:  # noqa
             last = e
             if i < tries - 1:
-                time.sleep((5 * 2 ** i if throttled else 2 * (i + 1)) + random.uniform(0, 2))
+                time.sleep((4 * 2 ** i if throttled else 2 * (i + 1)) + random.uniform(0, 2))  # 403/429: ~4s, ~8s
     raise last
 
 
@@ -411,13 +411,13 @@ def _portwatch_rows(portid):
         # The ArcGIS feature service intermittently answers 400 "Invalid URL" / "Invalid query parameters"
         # for a perfectly valid query (roughly 1 in 3 requests since late Oct 2026, apparently a bad
         # backend node), plus 429 per-minute quota errors. Retry each page with backoff.
-        for attempt in range(8):
+        for attempt in range(6):
             try:
-                d = json.loads(_curl(url, 90))
+                d = json.loads(_curl(url, 60))
             except Exception as e:  # network/curl error: retry too
                 d = {"error": {"code": -1, "message": str(e)[:200]}}
             err = d.get("error")
-            if err and attempt < 7:
+            if err and attempt < 5:
                 time.sleep(65 if err.get("code") == 429 else min(3 * (attempt + 1), 15))
                 continue
             break

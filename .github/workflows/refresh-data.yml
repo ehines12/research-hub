@@ -41,8 +41,8 @@ jobs:
         run: |
           set +e
           case "${{ github.event.schedule }}" in
-            "52 14 * * 1-5"|"52 17 * * 1-5"|"52 19 * * 1-5") python3 fetch_data.py predictions ;;  # odds-only runs
-            *) python3 fetch_data.py ;;
+            "52 14 * * 1-5"|"52 17 * * 1-5"|"52 19 * * 1-5") python3 -u fetch_data.py predictions ;;  # odds-only runs
+            *) timeout 14m python3 -u fetch_data.py ;;
           esac
           echo "rc=$?" >> "$GITHUB_OUTPUT"
 
