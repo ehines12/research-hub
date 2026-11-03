@@ -9,6 +9,7 @@ disk is kept and flagged stale; if none exists, the series is marked failed.
 Usage:  python3 fetch_data.py            # all live dashboards
         python3 fetch_data.py macro      # one dashboard
 """
+import random
 import csv, io, json, sys, time, shutil, subprocess, datetime as dt, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -22,22 +23,29 @@ SOURCES = [
 UA = {"User-Agent": "Mozilla/5.0 (research-hub data refresh)"}
 
 
-def http_csv(url, tries=3):
-    """curl is the primary transport (FRED's edge stalls Python's TLS client); urllib is a fallback."""
+def http_csv(url, tries=5):
+    """curl is the primary transport (FRED's edge stalls Python's TLS client); urllib is a fallback.
+    FRED/ALFRED intermittently answer 403/429 when several series are pulled at once: back off
+    exponentially (with jitter) on those before giving up."""
     last = None
     for i in range(tries):
+        throttled = False
         try:
             if shutil.which("curl"):
-                r = subprocess.run(["curl", "-sSfL", "--max-time", "60", url], capture_output=True, text=True)
-                if r.returncode == 0 and r.stdout:
-                    return r.stdout
-                raise RuntimeError(f"curl exit {r.returncode}: {r.stderr.strip()[:200]}")
+                r = subprocess.run(["curl", "-sSL", "--http1.1", "--max-time", "60", "-A", UA["User-Agent"],
+                                    "-w", "\n%{http_code}", url], capture_output=True, text=True)
+                body, _, code = r.stdout.rpartition("\n")
+                if r.returncode == 0 and code == "200" and body:
+                    return body
+                throttled = code in ("403", "429", "503")
+                raise RuntimeError(f"curl exit {r.returncode} HTTP {code}: {(r.stderr or body).strip()[:160]}")
             req = urllib.request.Request(url, headers=UA)
             with urllib.request.urlopen(req, timeout=60) as r:
                 return r.read().decode("utf-8", "replace")
         except Exception as e:  # noqa
             last = e
-            time.sleep(2 * (i + 1))
+            if i < tries - 1:
+                time.sleep((5 * 2 ** i if throttled else 2 * (i + 1)) + random.uniform(0, 2))
     raise last
 
 
@@ -399,12 +407,18 @@ def _portwatch_rows(portid):
     rows, off = [], 0
     while True:
         url = (f"{PORTWATCH}?where=portid%3D%27{portid}%27&outFields=date,portname,n_total,n_tanker,n_container,n_dry_bulk,capacity"
-               f"&orderByFields=date&resultOffset={off}&resultRecordCount=1000&f=json")
-        for attempt in range(4):
-            d = json.loads(_curl(url, 90))
+               f"&orderByFields=ObjectId&resultOffset={off}&resultRecordCount=1000&f=json")
+        # The ArcGIS feature service intermittently answers 400 "Invalid URL" / "Invalid query parameters"
+        # for a perfectly valid query (roughly 1 in 3 requests since late Oct 2026, apparently a bad
+        # backend node), plus 429 per-minute quota errors. Retry each page with backoff.
+        for attempt in range(8):
+            try:
+                d = json.loads(_curl(url, 90))
+            except Exception as e:  # network/curl error: retry too
+                d = {"error": {"code": -1, "message": str(e)[:200]}}
             err = d.get("error")
-            if err and err.get("code") == 429 and attempt < 3:
-                time.sleep(65)  # ArcGIS per-minute quota; wait it out and retry
+            if err and attempt < 7:
+                time.sleep(65 if err.get("code") == 429 else min(3 * (attempt + 1), 15))
                 continue
             break
         if d.get("error"):
@@ -417,7 +431,7 @@ def _portwatch_rows(portid):
         off += len(f)
     if len(rows) < 400:
         raise ValueError(f"PortWatch {portid}: only {len(rows)} rows")
-    return rows
+    return sorted(rows, key=lambda r: str(r.get("date")))
 
 
 def fetch_portwatch(s):
@@ -1073,7 +1087,8 @@ def _strip(doc):
 def main():
     hub = json.loads((ROOT / "config/hub.json").read_text())
     only = set(sys.argv[1:])
-    bad = 0
+    bad = total = 0
+    problems = []
     status_path = DATA / "status.json"
     status = json.loads(status_path.read_text()) if status_path.exists() else {}
     status.setdefault("dashboards", {})
@@ -1084,7 +1099,10 @@ def main():
             continue
         print(f"[{a['id']}] {a['dashboard']}")
         r = run_dashboard(a["dashboard"])
-        bad += sum(1 for s in r["series"].values() if s["status"] != "ok")
+        nb = [(k, s) for k, s in r["series"].items() if s["status"] != "ok"]
+        bad += len(nb); total += len(r["series"])
+        for k, s in nb:
+            problems.append(f"{a['id']}/{k} {s['status']} (last {(s.get('latest') or {}).get('date')}): {str(s.get('error'))[:120]}")
         status["dashboards"][a["id"]] = {
             "checked_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
             "data_changed_at": r["updated_at"],
@@ -1094,7 +1112,13 @@ def main():
     status["ok"] = bad == 0
     status_path.write_text(json.dumps(status, indent=1))
     (DATA / "hub.json").write_text(json.dumps(hub, indent=1))
-    sys.exit(1 if bad else 0)
+    # Exit policy: a few stale/failed series (one source down) -> GitHub warning annotations and the
+    # per-series stale flag on the page; the job only fails when the bulk of series could not be fetched.
+    for p_ in problems[:40]:
+        print(f"::warning title=Stale series::{p_}")
+    frac = bad / total if total else 0
+    print(f"{bad}/{total} series not ok ({frac:.0%})")
+    sys.exit(1 if total and frac > 0.5 else 0)
 
 
 if __name__ == "__main__":

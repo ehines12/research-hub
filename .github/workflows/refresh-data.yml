@@ -25,7 +25,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
 
@@ -64,8 +64,8 @@ jobs:
           git commit -m "data: refresh $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
 
-      - name: Fail if any series stale or failed
+      - name: Fail if most series stale or failed (single-source outages only warn)
         if: steps.fetch.outputs.rc != '0'
         run: |
-          echo "::error::One or more series could not be fetched (kept last good copy, flagged stale). See data/status.json."
+          echo "::error::Most series could not be fetched (over half stale or failed; last good copies kept and flagged stale). See data/status.json."
           exit 1

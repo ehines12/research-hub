@@ -57,6 +57,8 @@ def _get(url, tries=4):
         if r.returncode == 0 and code == "200":
             return json.loads(body)
         last = f"HTTP {code or r.returncode}: {(body or r.stderr)[:160]}"
+        if code == "404":  # delisted / expired event or market: skip it now (no retries); re-ranking fills the slot
+            raise LookupError(f"not found (expired/delisted): {url.split('?')[0].rsplit('/', 1)[-1]}")
         time.sleep(1.5 * (i + 1) + (3 if code == "429" else 0))
     raise RuntimeError(last)
 
@@ -357,6 +359,9 @@ def build(cfg, now=None):
 def _safe(fn, *a):
     try:
         return fn(*a)
+    except LookupError as e:
+        print(f"  - {fn.__name__}: skipped {e}")
+        return None
     except Exception as e:  # noqa: BLE001
         print(f"  ! {fn.__name__}: {str(e)[:160]}")
         return None
