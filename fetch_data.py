@@ -403,35 +403,78 @@ PORTWATCH = ("https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services
              "FeatureServer/0/query")
 
 
-def _portwatch_rows(portid):
+PORTWATCH_CSV = "https://hub.arcgis.com/api/download/v1/items/3da2b9ca97684916b75c4013f95d18ab/csv?layers=0"
+PW_BUDGET = 360  # seconds: total wall-clock allowed for PortWatch query retries before giving up (-> stale)
+_PW_T0 = []
+
+
+def _portwatch_csv():
+    """Hub CSV export of the same layer: one cached ~9 MB request with all 28 chokepoints. Preferred since
+    the query service degraded (late Oct 2026: slow queries return 400 'Invalid URL'/'Invalid query parameters')."""
+    txt = _curl(PORTWATCH_CSV, 180).decode("utf-8-sig", "replace")
+    out = {}
+    for r in csv.DictReader(io.StringIO(txt)):
+        r = {k.strip().lower(): v for k, v in r.items() if k}
+        pid = r.get("portid")
+        if not pid or not r.get("date"):
+            continue
+        rec = {"date": r["date"].replace("/", "-")[:10], "portname": r.get("portname")}
+        for k in ("n_total", "n_tanker", "n_container", "n_dry_bulk", "capacity"):
+            try:
+                rec[k] = float(r[k]) if r.get(k) not in (None, "") else None
+            except ValueError:
+                rec[k] = None
+        out.setdefault(pid, []).append(rec)
+    if len(out) < 6:
+        raise ValueError(f"PortWatch CSV: only {len(out)} chokepoints")
+    return {k: sorted(v, key=lambda x: x["date"]) for k, v in out.items()}
+
+
+def _portwatch_query(portid):
     rows, off = [], 0
+    t0 = _PW_T0 or _PW_T0.append(time.time()) or _PW_T0
     while True:
         url = (f"{PORTWATCH}?where=portid%3D%27{portid}%27&outFields=date,portname,n_total,n_tanker,n_container,n_dry_bulk,capacity"
                f"&orderByFields=ObjectId&resultOffset={off}&resultRecordCount=1000&f=json")
-        # The ArcGIS feature service intermittently answers 400 "Invalid URL" / "Invalid query parameters"
-        # for a perfectly valid query (roughly 1 in 3 requests since late Oct 2026, apparently a bad
-        # backend node), plus 429 per-minute quota errors. Retry each page with backoff.
+        # Query service intermittently answers 400 for valid queries (slow backend) and 429 on quota.
+        # Retry those with backoff, but within a shared time budget; auth errors (499/403) fail fast.
         for attempt in range(6):
             try:
                 d = json.loads(_curl(url, 60))
             except Exception as e:  # network/curl error: retry too
                 d = {"error": {"code": -1, "message": str(e)[:200]}}
             err = d.get("error")
-            if err and attempt < 5:
+            if err and err.get("code") in (499, 498, 403):
+                break
+            if err and attempt < 5 and time.time() - t0[0] < PW_BUDGET:
                 time.sleep(65 if err.get("code") == 429 else min(3 * (attempt + 1), 15))
                 continue
             break
         if d.get("error"):
             raise RuntimeError(f"PortWatch: {d['error']}")
-        time.sleep(2)  # pace page requests to stay under the per-minute quota
+        time.sleep(2)
         f = [x["attributes"] for x in d.get("features", [])]
         rows += f
         if len(f) < 1000 and not d.get("exceededTransferLimit"):
             break
         off += len(f)
-    if len(rows) < 400:
-        raise ValueError(f"PortWatch {portid}: only {len(rows)} rows")
     return sorted(rows, key=lambda r: str(r.get("date")))
+
+
+def _portwatch_rows(portid):
+    errs = []
+    try:
+        rows = _cached("pw:csv", _portwatch_csv).get(portid, [])
+    except Exception as e:  # noqa: BLE001
+        errs.append(f"csv: {str(e)[:120]}"); rows = []
+    if len(rows) < 400:
+        try:
+            rows = _portwatch_query(portid)
+        except Exception as e:  # noqa: BLE001
+            errs.append(f"query: {str(e)[:160]}"); rows = []
+    if len(rows) < 400:
+        raise ValueError(f"PortWatch {portid}: only {len(rows)} rows ({'; '.join(errs)})")
+    return rows
 
 
 def fetch_portwatch(s):
