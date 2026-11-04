@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-11-03T21:40:53+00:00",
-   "data_changed_at": "2026-11-03T21:40:47+00:00",
+   "checked_at": "2026-11-04T01:27:12+00:00",
+   "data_changed_at": "2026-11-04T01:27:06+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -98,8 +98,8 @@
      "fred": "T10Y2Y",
      "status": "ok",
      "latest": {
-      "date": "2026-11-02",
-      "value": 0.32
+      "date": "2026-11-03",
+      "value": 0.34
      }
     },
     "indpro": {
@@ -122,7 +122,7 @@
      "fred": "T5YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-11-02",
+      "date": "2026-11-03",
       "value": 2.39
      }
     },
@@ -130,16 +130,16 @@
      "fred": "T10YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-11-02",
-      "value": 2.29
+      "date": "2026-11-03",
+      "value": 2.3
      }
     },
     "t5yifr": {
      "fred": "T5YIFR",
      "status": "ok",
      "latest": {
-      "date": "2026-11-02",
-      "value": 2.19
+      "date": "2026-11-03",
+      "value": 2.21
      }
     },
     "clev_cpi_yy": {
@@ -413,7 +413,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-11-03T21:41:03+00:00",
+   "checked_at": "2026-11-04T01:27:28+00:00",
    "data_changed_at": "2026-11-02T22:27:59+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2059,8 +2059,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-11-04T00:14:46+00:00",
-   "data_changed_at": "2026-11-04T00:13:08+00:00",
+   "checked_at": "2026-11-04T01:29:30+00:00",
+   "data_changed_at": "2026-11-04T01:27:49+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2075,8 +2075,8 @@
    }
   },
   "geo": {
-   "checked_at": "2026-11-03T21:42:57+00:00",
-   "data_changed_at": "2026-11-03T21:17:12+00:00",
+   "checked_at": "2026-11-04T01:32:44+00:00",
+   "data_changed_at": "2026-11-04T01:29:30+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
@@ -2202,45 +2202,41 @@
      "fred": "EPUTRADE",
      "status": "ok",
      "latest": {
-      "date": "2026-09-01",
-      "value": 1400.7687
+      "date": "2026-08-01",
+      "value": 1214.1637
      }
     },
     "pw_hormuz": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 3.2857
-     },
-     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     }
     },
     "pw_hormuz_tank": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 0.8571
-     },
-     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     }
     },
     "pw_hormuz_cont": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 0.1429
-     },
-     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     }
     },
     "pw_hormuz_ly": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 102.0
-     },
-     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     }
     },
     "pw_babelmandeb": {
      "fred": "PortWatch chokepoint4",
@@ -2249,7 +2245,7 @@
       "date": "2026-10-25",
       "value": 28.8571
      },
-     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_babelmandeb_tank": {
      "fred": "PortWatch chokepoint4",
@@ -2258,7 +2254,7 @@
       "date": "2026-10-25",
       "value": 9.5714
      },
-     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_babelmandeb_cont": {
      "fred": "PortWatch chokepoint4",
@@ -2267,7 +2263,7 @@
       "date": "2026-10-25",
       "value": 7.2857
      },
-     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_babelmandeb_ly": {
      "fred": "PortWatch chokepoint4",
@@ -2276,7 +2272,7 @@
       "date": "2026-10-25",
       "value": 37.4286
      },
-     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_suez": {
      "fred": "PortWatch chokepoint1",
@@ -2285,7 +2281,7 @@
       "date": "2026-10-25",
       "value": 41.2857
      },
-     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_suez_tank": {
      "fred": "PortWatch chokepoint1",
@@ -2294,7 +2290,7 @@
       "date": "2026-10-25",
       "value": 16.2857
      },
-     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_suez_cont": {
      "fred": "PortWatch chokepoint1",
@@ -2303,7 +2299,7 @@
       "date": "2026-10-25",
       "value": 13.8571
      },
-     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_suez_ly": {
      "fred": "PortWatch chokepoint1",
@@ -2312,7 +2308,7 @@
       "date": "2026-10-25",
       "value": 42.7143
      },
-     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_panama": {
      "fred": "PortWatch chokepoint2",
@@ -2321,7 +2317,7 @@
       "date": "2026-10-25",
       "value": 28.7143
      },
-     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_panama_tank": {
      "fred": "PortWatch chokepoint2",
@@ -2330,7 +2326,7 @@
       "date": "2026-10-25",
       "value": 12.2857
      },
-     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_panama_cont": {
      "fred": "PortWatch chokepoint2",
@@ -2339,7 +2335,7 @@
       "date": "2026-10-25",
       "value": 8.4286
      },
-     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_panama_ly": {
      "fred": "PortWatch chokepoint2",
@@ -2348,7 +2344,7 @@
       "date": "2026-10-25",
       "value": 32.8571
      },
-     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_malacca": {
      "fred": "PortWatch chokepoint5",
@@ -2357,7 +2353,7 @@
       "date": "2026-10-25",
       "value": 228.0
      },
-     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Object reference not set to an instance of an object.', 'details': []})"
     },
     "pw_malacca_tank": {
      "fred": "PortWatch chokepoint5",
@@ -2366,7 +2362,7 @@
       "date": "2026-10-25",
       "value": 75.8571
      },
-     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Object reference not set to an instance of an object.', 'details': []})"
     },
     "pw_malacca_cont": {
      "fred": "PortWatch chokepoint5",
@@ -2375,7 +2371,7 @@
       "date": "2026-10-25",
       "value": 61.0
      },
-     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Object reference not set to an instance of an object.', 'details': []})"
     },
     "pw_malacca_ly": {
      "fred": "PortWatch chokepoint5",
@@ -2384,7 +2380,7 @@
       "date": "2026-10-25",
       "value": 237.1429
      },
-     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Object reference not set to an instance of an object.', 'details': []})"
     },
     "pw_bosporus": {
      "fred": "PortWatch chokepoint3",
@@ -2393,7 +2389,7 @@
       "date": "2026-10-25",
       "value": 53.7143
      },
-     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_bosporus_tank": {
      "fred": "PortWatch chokepoint3",
@@ -2402,7 +2398,7 @@
       "date": "2026-10-25",
       "value": 15.8571
      },
-     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_bosporus_cont": {
      "fred": "PortWatch chokepoint3",
@@ -2411,7 +2407,7 @@
       "date": "2026-10-25",
       "value": 5.2857
      },
-     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_bosporus_ly": {
      "fred": "PortWatch chokepoint3",
@@ -2420,13 +2416,13 @@
       "date": "2026-10-25",
       "value": 101.0
      },
-     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
+     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     }
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-11-03T21:41:20+00:00",
-   "data_changed_at": "2026-11-03T21:41:03+00:00",
+   "checked_at": "2026-11-04T01:27:49+00:00",
+   "data_changed_at": "2026-11-04T01:27:28+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2440,16 +2436,16 @@
      "fred": "T10Y2Y",
      "status": "ok",
      "latest": {
-      "date": "2026-11-02",
-      "value": 0.32
+      "date": "2026-11-03",
+      "value": 0.34
      }
     },
     "3m10y": {
      "fred": "T10Y3M",
      "status": "ok",
      "latest": {
-      "date": "2026-11-02",
-      "value": 0.7
+      "date": "2026-11-03",
+      "value": 0.74
      }
     },
     "ust10_12m": {
@@ -2664,32 +2660,32 @@
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-11-03",
-      "value": -2.455
+      "date": "2026-11-02",
+      "value": -3.1977
      }
     },
     "kre_xlf_3m": {
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-11-03",
-      "value": -4.2267
+      "date": "2026-11-02",
+      "value": -4.5488
      }
     },
     "iwm_spy_1m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-11-03",
-      "value": 1.4137
+      "date": "2026-11-02",
+      "value": 1.467
      }
     },
     "iwm_spy_3m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-11-03",
-      "value": -4.7425
+      "date": "2026-11-02",
+      "value": -5.1029
      }
     },
     "dep_pricing": {
@@ -2759,6 +2755,6 @@
    }
   }
  },
- "checked_at": "2026-11-04T00:14:46+00:00",
- "ok": true
+ "checked_at": "2026-11-04T01:32:44+00:00",
+ "ok": false
 }
