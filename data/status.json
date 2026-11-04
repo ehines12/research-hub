@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-11-04T12:38:46+00:00",
-   "data_changed_at": "2026-11-04T01:27:06+00:00",
+   "checked_at": "2026-11-04T18:27:15+00:00",
+   "data_changed_at": "2026-11-04T18:27:11+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -16,10 +16,10 @@
      "fred": "GDPNOW",
      "status": "ok",
      "latest": {
-      "date": "2026-11-02",
-      "value": 3.7383,
+      "date": "2026-11-04",
+      "value": 3.4408,
       "target": "Q4 2026",
-      "release": "ISM Manufact., Construction spending"
+      "release": "International trade (Full report), ISM Services, Auto sales"
      }
     },
     "gdpnow_q": {
@@ -27,7 +27,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 3.7383
+      "value": 3.4408
      }
     },
     "unrate": {
@@ -147,11 +147,11 @@
      "status": "ok",
      "latest": {
       "date": "2026-11-01",
-      "value": 3.9203,
+      "value": 3.8845,
       "target": "Nov 2026",
-      "asof": "2026-11-03",
+      "asof": "2026-11-04",
       "pending": true,
-      "mm": 0.2226
+      "mm": 0.1881
      }
     },
     "clev_ccpi_yy": {
@@ -161,7 +161,7 @@
       "date": "2026-11-01",
       "value": 2.7718,
       "target": "Nov 2026",
-      "asof": "2026-11-03",
+      "asof": "2026-11-04",
       "pending": true,
       "mm": 0.2041
      }
@@ -171,11 +171,11 @@
      "status": "ok",
      "latest": {
       "date": "2026-11-01",
-      "value": 3.8378,
+      "value": 3.8176,
       "target": "Nov 2026",
-      "asof": "2026-11-03",
+      "asof": "2026-11-04",
       "pending": true,
-      "mm": 0.2649
+      "mm": 0.2454
      }
     },
     "clev_cpce_yy": {
@@ -185,7 +185,7 @@
       "date": "2026-11-01",
       "value": 3.3134,
       "target": "Nov 2026",
-      "asof": "2026-11-03",
+      "asof": "2026-11-04",
       "pending": true,
       "mm": 0.2631
      }
@@ -195,12 +195,12 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 4.4203,
+      "value": 4.3113,
       "target": "Q4 2026",
-      "asof": "2026-11-03",
+      "asof": "2026-11-04",
       "pending": true,
-      "prior_date": "2026-10-27",
-      "prior_value": 5.2117
+      "prior_date": "2026-10-28",
+      "prior_value": 5.051
      }
     },
     "clev_ccpi_q": {
@@ -210,9 +210,9 @@
       "date": "2026-10-01",
       "value": 3.0164,
       "target": "Q4 2026",
-      "asof": "2026-11-03",
+      "asof": "2026-11-04",
       "pending": true,
-      "prior_date": "2026-10-27",
+      "prior_date": "2026-10-28",
       "prior_value": 3.0164
      }
     },
@@ -221,12 +221,12 @@
      "status": "ok",
      "latest": {
       "date": "2026-10-01",
-      "value": 4.0499,
+      "value": 3.9882,
       "target": "Q4 2026",
-      "asof": "2026-11-03",
+      "asof": "2026-11-04",
       "pending": true,
-      "prior_date": "2026-10-27",
-      "prior_value": 4.3734
+      "prior_date": "2026-10-28",
+      "prior_value": 4.2822
      }
     },
     "clev_cpce_q": {
@@ -236,9 +236,9 @@
       "date": "2026-10-01",
       "value": 3.3332,
       "target": "Q4 2026",
-      "asof": "2026-11-03",
+      "asof": "2026-11-04",
       "pending": true,
-      "prior_date": "2026-10-27",
+      "prior_date": "2026-10-28",
       "prior_value": 3.1526
      }
     },
@@ -262,8 +262,8 @@
      "fred": "IHLIDXUS",
      "status": "ok",
      "latest": {
-      "date": "2026-10-23",
-      "value": 103.6712
+      "date": "2026-10-30",
+      "value": 103.7931
      }
     },
     "dts_20d": {
@@ -302,8 +302,8 @@
      "fred": "DCOILWTICO",
      "status": "ok",
      "latest": {
-      "date": "2026-10-27",
-      "value": 103.37
+      "date": "2026-11-03",
+      "value": 99.64
      }
     },
     "wei": {
@@ -326,16 +326,16 @@
      "fred": "NFCI",
      "status": "ok",
      "latest": {
-      "date": "2026-10-23",
-      "value": -0.487
+      "date": "2026-10-30",
+      "value": -0.459
      }
     },
     "stlfsi": {
      "fred": "STLFSI4",
      "status": "ok",
      "latest": {
-      "date": "2026-10-23",
-      "value": -0.5837
+      "date": "2026-10-30",
+      "value": -0.5224
      }
     },
     "rest_sales_lvl": {
@@ -413,7 +413,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-11-04T12:39:08+00:00",
+   "checked_at": "2026-11-04T18:27:35+00:00",
    "data_changed_at": "2026-11-02T22:27:59+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2059,8 +2059,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-11-04T12:41:10+00:00",
-   "data_changed_at": "2026-11-04T12:39:29+00:00",
+   "checked_at": "2026-11-04T18:29:40+00:00",
+   "data_changed_at": "2026-11-04T18:27:57+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2075,8 +2075,8 @@
    }
   },
   "geo": {
-   "checked_at": "2026-11-04T12:45:17+00:00",
-   "data_changed_at": "2026-11-04T12:41:11+00:00",
+   "checked_at": "2026-11-04T18:33:13+00:00",
+   "data_changed_at": "2026-11-04T18:29:40+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
@@ -2138,24 +2138,24 @@
      "fred": "USEPUINDXD",
      "status": "ok",
      "latest": {
-      "date": "2026-11-02",
-      "value": 415.28
+      "date": "2026-11-03",
+      "value": 288.31
      }
     },
     "epu_d_ma7": {
      "fred": "USEPUINDXD",
      "status": "ok",
      "latest": {
-      "date": "2026-11-02",
-      "value": 304.1086
+      "date": "2026-11-03",
+      "value": 308.1643
      }
     },
     "epu_d_ma30": {
      "fred": "USEPUINDXD",
      "status": "ok",
      "latest": {
-      "date": "2026-11-02",
-      "value": 293.7933
+      "date": "2026-11-03",
+      "value": 293.5257
      }
     },
     "epu_m": {
@@ -2208,67 +2208,75 @@
     },
     "pw_hormuz": {
      "fred": "PortWatch chokepoint6",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 3.2857
-     }
+     },
+     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_hormuz_tank": {
      "fred": "PortWatch chokepoint6",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 0.8571
-     }
+     },
+     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_hormuz_cont": {
      "fred": "PortWatch chokepoint6",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 0.1429
-     }
+     },
+     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_hormuz_ly": {
      "fred": "PortWatch chokepoint6",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 102.0
-     }
+     },
+     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_babelmandeb": {
      "fred": "PortWatch chokepoint4",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 28.8571
-     }
+     },
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_babelmandeb_tank": {
      "fred": "PortWatch chokepoint4",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 9.5714
-     }
+     },
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_babelmandeb_cont": {
      "fred": "PortWatch chokepoint4",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 7.2857
-     }
+     },
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_babelmandeb_ly": {
      "fred": "PortWatch chokepoint4",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 37.4286
-     }
+     },
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_suez": {
      "fred": "PortWatch chokepoint1",
@@ -2308,35 +2316,39 @@
     },
     "pw_panama": {
      "fred": "PortWatch chokepoint2",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 28.7143
-     }
+     },
+     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_panama_tank": {
      "fred": "PortWatch chokepoint2",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 12.2857
-     }
+     },
+     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_panama_cont": {
      "fred": "PortWatch chokepoint2",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 8.4286
-     }
+     },
+     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_panama_ly": {
      "fred": "PortWatch chokepoint2",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 32.8571
-     }
+     },
+     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_malacca": {
      "fred": "PortWatch chokepoint5",
@@ -2376,45 +2388,41 @@
     },
     "pw_bosporus": {
      "fred": "PortWatch chokepoint3",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 53.7143
-     },
-     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']})"
+     }
     },
     "pw_bosporus_tank": {
      "fred": "PortWatch chokepoint3",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 15.8571
-     },
-     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']})"
+     }
     },
     "pw_bosporus_cont": {
      "fred": "PortWatch chokepoint3",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 5.2857
-     },
-     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']})"
+     }
     },
     "pw_bosporus_ly": {
      "fred": "PortWatch chokepoint3",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 101.0
-     },
-     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']})"
+     }
     }
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-11-04T12:39:29+00:00",
-   "data_changed_at": "2026-11-04T12:39:08+00:00",
+   "checked_at": "2026-11-04T18:27:57+00:00",
+   "data_changed_at": "2026-11-04T18:27:35+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2532,64 +2540,64 @@
      "fred": "NFCI",
      "status": "ok",
      "latest": {
-      "date": "2026-10-23",
-      "value": -0.487
+      "date": "2026-10-30",
+      "value": -0.459
      }
     },
     "stlfsi": {
      "fred": "STLFSI4",
      "status": "ok",
      "latest": {
-      "date": "2026-10-23",
-      "value": -0.5837
+      "date": "2026-10-30",
+      "value": -0.5224
      }
     },
     "vix": {
      "fred": "VIXCLS",
      "status": "ok",
      "latest": {
-      "date": "2026-11-02",
-      "value": 21.15
+      "date": "2026-11-03",
+      "value": 20.83
      }
     },
     "move": {
      "fred": "^MOVE",
      "status": "ok",
      "latest": {
-      "date": "2026-11-03",
-      "value": 99.97
+      "date": "2026-11-04",
+      "value": 95.0931
      }
     },
     "hy_lvl": {
      "fred": "BAMLH0A0HYM2",
      "status": "ok",
      "latest": {
-      "date": "2026-11-02",
-      "value": 3.43
+      "date": "2026-11-03",
+      "value": 3.4
      }
     },
     "hy_4w": {
      "fred": "BAMLH0A0HYM2",
      "status": "ok",
      "latest": {
-      "date": "2026-11-02",
-      "value": 0.31
+      "date": "2026-11-03",
+      "value": 0.37
      }
     },
     "bbb_lvl": {
      "fred": "BAMLC0A4CBBB",
      "status": "ok",
      "latest": {
-      "date": "2026-11-02",
-      "value": 1.17
+      "date": "2026-11-03",
+      "value": 1.16
      }
     },
     "bbb_4w": {
      "fred": "BAMLC0A4CBBB",
      "status": "ok",
      "latest": {
-      "date": "2026-11-02",
-      "value": 0.13
+      "date": "2026-11-03",
+      "value": 0.14
      }
     },
     "sloos_ci_std": {
@@ -2652,32 +2660,32 @@
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-11-03",
-      "value": -2.455
+      "date": "2026-11-04",
+      "value": -2.6826
      }
     },
     "kre_xlf_3m": {
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-11-03",
-      "value": -4.2267
+      "date": "2026-11-04",
+      "value": -4.3733
      }
     },
     "iwm_spy_1m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-11-03",
-      "value": 1.4137
+      "date": "2026-11-04",
+      "value": 2.3791
      }
     },
     "iwm_spy_3m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-11-03",
-      "value": -4.7425
+      "date": "2026-11-04",
+      "value": -4.7186
      }
     },
     "dep_pricing": {
@@ -2747,6 +2755,6 @@
    }
   }
  },
- "checked_at": "2026-11-04T12:45:17+00:00",
+ "checked_at": "2026-11-04T18:33:13+00:00",
  "ok": false
 }
