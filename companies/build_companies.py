@@ -97,7 +97,52 @@ def cns():
             "Won-but-unfunded pipeline: institutional mandates awarded but not yet funded, $bn at quarter end. Not in the 8-K exhibits (checked all 20 filings); taken from the CEO's prepared remarks on each earnings call (transcript links in companies/raw/cns_pipeline.json). Values are as stated on the call, often rounded (e.g. $1.1bn). Q1 2023, Q1 2024 and Q3 2024 come from the following quarter's call ('compared with $X last quarter').",
             "Reported fee rate (ex performance fees) is first disclosed in the Q2 2026 release (with history back to Q2 2025); earlier quarters n/a."]}
 
-COMPANIES = [hli, cns]
+def wt():
+    raw = json.loads((RAW / "wt_raw.json").read_text())
+    rows = []
+    for r in raw:
+        # bps: adj revenue ($M) x 4 / avg AUM ($bn) x 10
+        fee_calc = round(r["rev_adj"] * 4 / r["aum_avg"] * 10, 1)
+        rows.append({
+            "q": r["q"], "end": r["end"], "src": r["src"], "filed": r["filed"],
+            "aum_end": r["aum_end"], "aum_avg": r["aum_avg"], "flow": r["flow"],
+            "og": round(r["flow"] * 4 / (r["aum_end"] - r["flow"]) * 100, 1) if (r["aum_end"] - r["flow"]) else None,
+            "fee_adv": r["fee_adv_bps"], "rev_yield_rep": r.get("rev_yield_rep"),
+            "rev": r["rev"], "rev_adj": r["rev_adj"], "fee_calc": fee_calc,
+            "opm_adj": r["opm_adj"], "adj_eps": r["adj_eps"],
+        })
+    return {"ticker": "WT", "name": "WisdomTree", "fiscal": "Calendar fiscal year.",
+        "fields": [
+            {"key": "aum_end", "label": "Ending AUM", "fmt": "bn1"},
+            {"key": "aum_avg", "label": "Average AUM", "fmt": "bn1"},
+            {"key": "flow", "label": "Net flows", "fmt": "bnf"},
+            {"key": "og", "label": "Organic growth (ann.)*", "fmt": "pct1"},
+            {"key": "fee_adv", "label": "Avg advisory fee", "fmt": "bps"},
+            {"key": "rev_yield_rep", "label": "Reported revenue yield", "fmt": "bps"},
+            {"key": "rev", "label": "Revenue (GAAP)", "fmt": "m1"},
+            {"key": "rev_adj", "label": "Revenue (adj.)", "fmt": "m1"},
+            {"key": "fee_calc", "label": "Effective revenue yield*", "fmt": "bps"},
+            {"key": "opm_adj", "label": "Op. margin (as adj.)", "fmt": "pct1"},
+            {"key": "adj_eps", "label": "Adj. diluted EPS", "fmt": "usd2"}],
+        "tiles": ["aum_end", "flow", "adj_eps"],
+        "kpis": ["aum_end", "aum_avg", "flow", "og", "fee_adv", "rev_adj", "fee_calc", "opm_adj", "adj_eps"],
+        "charts": [
+            {"title": "Ending AUM ($bn)", "type": "line", "series": ["aum_end"]},
+            {"title": "Net flows ($bn)", "type": "bar", "series": ["flow"], "zero": True},
+            {"title": "Organic growth, annualized (%)", "type": "bar", "series": ["og"], "zero": True},
+            {"title": "Advisory fee and effective revenue yield (bps)", "type": "line", "series": ["fee_adv", "fee_calc"]},
+            {"title": "Adj. operating margin (%)", "type": "line", "series": ["opm_adj"]},
+            {"title": "Adj. EPS", "type": "bar", "series": ["adj_eps"]},
+            {"title": "Revenue (adj., $M)", "type": "bar", "series": ["rev_adj"]}],
+        "rows": rows,
+        "notes": [
+            "Source: WisdomTree quarterly earnings releases (IR press releases / SEC Form 8-K Exhibit 99.1). Figures as first reported in each release's consolidated operating and financial highlights.",
+            "Ending AUM is company-reported total AUM (includes private assets managed by Ceres Partners once acquired in Q4 2025). The IR daily/weekly AUM spreadsheet on wisdomtree.com excludes those private assets; the earnings-power panel reconciles the two.",
+            "* Computed: organic growth = net flows x 4 / beginning AUM (ending − flows); effective revenue yield = adjusted operating revenue x 4 / average AUM (bps). Reported revenue yield is WisdomTree's disclosed adjusted revenue yield when available (first regularly shown from 2024).",
+            "Adj. operating margin and adj. diluted EPS are the non-GAAP figures from each release. Revenue (adj.) equals GAAP operating revenues except where the release disclosed a separate adjusted revenue (e.g. Q3–Q4 2024 ESG-settlement other-revenue items)."]}
+
+COMPANIES = [hli, cns, wt]
+
 
 def xlsx(c):
     wb = Workbook(); ws = wb.active; ws.title = "Data"

@@ -685,7 +685,7 @@
     const th = "<tr><th class=\"sl\">Quarter</th><th>Period end</th>" + c.fields.map(f => '<th class="r">' + esc(f.label) + "</th>").join("") + "<th>Source</th></tr>";
     const tb = R.slice().reverse().map(r => '<tr><td class="sl b">' + esc(r.q) + "</td><td>" + esc(r.end) + "</td>" + c.fields.map(f => '<td class="r' + (r[f.key] == null ? " na" : "") + '">' + cfmt(r[f.key], f.fmt) + "</td>").join("") + '<td><a class="hint" style="color:var(--acc)" href="' + esc(r.src) + '" target="_blank" rel="noopener noreferrer">8-K ' + EXT + "</a></td></tr>").join("");
     app.innerHTML = '<div class="qbar"><div><h1>' + esc(c.name) + " (" + esc(c.ticker) + ')</h1><p class="sub" style="margin:0">Latest quarter: ' + esc(L.q) + " (ended " + esc(L.end) + "). " + esc(c.fiscal) + "</p></div>" + sw + "</div>" +
-      '<h2>Latest quarter <span class="hint">vs prior quarter (QoQ) and year-ago quarter (YoY)</span></h2><div class="kpis sec">' + kp + "</div>" + (c.ticker === "CNS" ? '<div id="ncw"></div>' : "") +
+      '<h2>Latest quarter <span class="hint">vs prior quarter (QoQ) and year-ago quarter (YoY)</span></h2><div class="kpis sec">' + kp + "</div>" + (c.ticker === "CNS" ? '<div id="ncw"></div>' : c.ticker === "WT" ? '<div id="wtw"></div>' : "") +
       '<h2>Trends <span class="hint">last ' + n + ' quarters</span></h2><div class="panels">' + c.charts.map((ch, i) => '<div class="panel"><h4>' + esc(ch.title) + '</h4><div class="cv"><canvas id="cc' + i + '"></canvas></div></div>').join("") + "</div>" +
       '<div class="qbar" style="margin-top:30px"><h2 style="margin:0">Quarterly data</h2><div class="qdl"><button class="btn" id="cocsv">CSV</button><a class="btn" href="data/company-' + esc(c.ticker) + '.xlsx" download>Excel</a></div></div>' +
       '<div class="qwrap"><table class="sumtbl qtbl"><thead>' + th + "</thead><tbody>" + tb + "</tbody></table></div>" +
@@ -710,6 +710,7 @@
             tooltip: { callbacks: { label: it => it.dataset.label + ": " + cfmt(it.parsed.y, F[ch.series[it.datasetIndex]].fmt) } } } } }));
     });
     if (c.ticker === "CNS") cnsNowcast(R).catch(e => { const el = document.getElementById("ncw"); if (el) el.innerHTML = '<div class="pnote">Nowcast unavailable: ' + esc(e.message) + "</div>"; });
+    if (c.ticker === "WT") wtEarningsPower(R).catch(e => { const el = document.getElementById("wtw"); if (el) el.innerHTML = '<div class="pnote">Earnings power unavailable: ' + esc(e.message) + "</div>"; });
   }
 
   // ---- CNS nowcast (data/cns_nowcast.json, built by companies/nowcast/nowcast.py) ----
@@ -778,6 +779,84 @@
       { label: "Fit", type: "line", data: [0, 2.2].map(x => ({ x, y: PL.next1.a + PL.next1.b * x })), borderColor: COLORS[1], pointRadius: 0, borderWidth: 1.5 }] },
       options: { animation: false, maintainAspectRatio: false, scales: { x: { type: "linear", title: { display: true, text: "Pipeline at t ($bn)", color: "#8b9bb0" }, grid: g, ticks: tk }, y: { title: { display: true, text: "Inst. net flows t+1 ($bn)", color: "#8b9bb0" }, grid: g, ticks: tk } },
         plugins: { legend: { labels: { color: "#e6edf3", boxWidth: 12 } }, tooltip: { callbacks: { label: it => (it.raw.q ? it.raw.q + ": " : "") + "pipeline $" + it.raw.x.toFixed(2) + "bn → $" + it.raw.y.toFixed(2) + "bn" } } } } }));
+  }
+
+
+  // ---- WT earnings power (data/wt_earnings_power.json, built by companies/nowcast/wt_earnings_power.py) ----
+  async function wtEarningsPower(R) {
+    const N = await load("wt_earnings_power"), el = document.getElementById("wtw"); if (!el) return;
+    const A = N.aum, C = N.changes, EP = N.earnings_power, B = N.base, AD = N.assumptions_default, S = N.scenarios, CV = N.convertibles;
+    const L = R[R.length - 1];
+    const ls = (k, def) => { const v = localStorage.getItem(k); return v == null || v === "" ? def : +v; };
+    const yieldBps = ls("wt-yield-bps", AD.rev_yield * 10000);
+    const incr = ls("wt-incr", AD.incr_op_margin);
+    const tax = ls("wt-tax", AD.tax_rate);
+    const shares = ls("wt-shares", AD.diluted_shares_m);
+    const nonop = ls("wt-nonop", AD.nonop_annual_m);
+    const aumBasis = localStorage.getItem("wt-aum-basis") || AD.aum_basis;
+    const aumBn = aumBasis === "etp_onchain_bn" ? A.etp_onchain_bn : A.company_bn;
+    const yld = yieldBps / 10000;
+    const baseRev = B.rev_q_m * 4, baseOp = B.adj_op_q_m * 4;
+    const rev = aumBn * 1000 * yld;
+    const op = baseOp + incr * (rev - baseRev);
+    const pretax = op + nonop;
+    const ni = pretax * (1 - tax);
+    const eps = ni / shares;
+    const sg = v => (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(2) + "%";
+    const cls = v => v > 0 ? "pos" : v < 0 ? "neg" : "flat";
+    const m1 = v => "$" + v.toLocaleString(undefined, { maximumFractionDigits: 1, minimumFractionDigits: 1 }) + "M";
+    const bn = v => "$" + (+v).toFixed(2) + "bn";
+    const e2 = v => "$" + (+v).toFixed(2);
+    const card = (t, v, d) => '<div class="kpi"><div class="t">' + t + '</div><div class="v">' + v + '</div><div class="d">' + d + "</div></div>";
+    const chgLine = (label, o) => !o || o.pct == null ? "" : '<div class="ctk"><span>' + label + '</span><b class="' + cls(o.pct) + '">' + sg(o.pct) + '</b><i class="flat">from ' + esc(o.from || "") + "</i></div>";
+    const stale = N.stale ? '<div class="pnote" style="border-color:#f85149">AUM as-of ' + esc(N.asof) + " is " + N.stale_days + " days old — IR workbook may not have updated yet. Earnings power still uses this latest published print.</div>" : "";
+    const catRows = Object.keys(A.categories_bn || {}).map(k => '<tr><td class="sl">' + esc(k) + '</td><td class="r">' + bn(A.categories_bn[k]) + "</td></tr>").join("");
+    const scenRows = S.map(s => '<tr><td class="sl">' + esc(s.label) + '</td><td class="r">' + bn(s.aum_bn) + '</td><td class="r">' + s.shares_m.toFixed(1) + 'M</td><td class="r">' + (s.incr_margin * 100).toFixed(0) + '%</td><td class="r">' + m1(s.rev_annual_m) + '</td><td class="r">' + m1(s.op_income_annual_m) + '</td><td class="r">' + e2(s.eps) + "</td></tr>").join("");
+    const wk = (N.weekly || []).slice().reverse().slice(0, 12).map(w => '<tr><td class="sl">' + esc(w.date) + '</td><td class="r">' + bn(w.aum_bn) + "</td></tr>").join("");
+    el.innerHTML = '<h2>Weekly AUM &amp; earnings power <span class="hint">IR daily AUM through ' + esc(N.asof) + " · private AUM lagged to " + esc(A.private_asof) + "</span></h2>" + stale +
+      '<div class="kpis sec">' +
+      card("ETP + Onchain AUM (IR)", bn(A.etp_onchain_bn), '<span class="flat">excludes Ceres private</span>') +
+      card("Company AUM (incl. private)", bn(A.company_bn), '<span class="flat">+ $' + A.private_lagged_bn.toFixed(2) + "bn private @ " + esc(A.private_asof) + "</span>") +
+      card("WoW / 4W change (ETP)", (C.wow && C.wow.pct != null ? '<span class="' + cls(C.wow.pct) + '">' + sg(C.wow.pct) + "</span>" : "n/a"), '<span class="flat">4W ' + (C.w4 && C.w4.pct != null ? sg(C.w4.pct) : "n/a") + "</span>") +
+      card("QTD / YTD (ETP)", (C.qtd && C.qtd.pct != null ? '<span class="' + cls(C.qtd.pct) + '">' + sg(C.qtd.pct) + "</span>" : "n/a"), '<span class="flat">YTD ' + (C.ytd && C.ytd.pct != null ? sg(C.ytd.pct) : "n/a") + "</span>") +
+      card("Annualized EPS power", e2(eps), '<span class="flat">at ' + bn(aumBn) + " · not quarterly EPS</span>") +
+      card("Annualized rev / op. income", m1(rev), '<span class="flat">' + m1(op) + " op. · margin " + (op / rev * 100).toFixed(1) + "%</span>") +
+      "</div>" +
+      '<div class="ctks" style="margin:8px 0 18px">' + chgLine("1D", C.d1) + chgLine("≈1W (5 sessions)", C.d5_approx_1w) + chgLine("≈4W (20 sessions)", C.d20_approx_4w) + "</div>" +
+      '<div class="panels c2"><div class="panel"><h4>Weekly ETP/Onchain AUM ($bn)</h4><div class="cv"><canvas id="wta"></canvas></div></div>' +
+      '<div class="panel"><h4>Monthly ETP/Onchain AUM ($bn, long history)</h4><div class="cv"><canvas id="wtm"></canvas></div></div></div>' +
+      '<h3 style="margin-top:22px">Earnings-power assumptions <span class="hint">editable; saved in this browser · base = ' + esc(B.label) + "</span></h3>" +
+      '<div class="qwrap"><table class="sumtbl qtbl"><thead><tr><th class="sl">Assumption</th><th class="r">Value</th><th class="sl">Notes</th></tr></thead><tbody>' +
+      '<tr><td class="sl">AUM basis</td><td class="r"><select id="wtbasis"><option value="company_bn"' + (aumBasis === "company_bn" ? " selected" : "") + '>Company (ETP + lagged private)</option><option value="etp_onchain_bn"' + (aumBasis === "etp_onchain_bn" ? " selected" : "") + '>ETP/Onchain only (IR sheet)</option></select></td><td class="hint">Private AUM is only reported quarterly</td></tr>' +
+      '<tr><td class="sl">Revenue yield (bps)</td><td class="r"><input id="wtyield" type="number" step="0.1" value="' + yieldBps.toFixed(1) + '" style="width:90px"></td><td class="hint">Q3\'26 effective = ' + (B.rev_yield * 10000).toFixed(1) + " bps (= adj. rev × 4 / avg AUM)</td></tr>" +
+      '<tr><td class="sl">Incremental op. margin</td><td class="r"><input id="wtincr" type="number" step="0.05" min="0" max="1" value="' + incr + '" style="width:90px"></td><td class="hint">Applied only to revenue vs Q3\'26 annualized base (' + m1(baseRev) + ")</td></tr>" +
+      '<tr><td class="sl">Non-operating net ($M / yr)</td><td class="r"><input id="wtnonop" type="number" step="0.1" value="' + nonop + '" style="width:90px"></td><td class="hint">Q3\'26 adj. pretax − adj. op. income, ×4 = ' + B.nonop_annual_m.toFixed(1) + "</td></tr>" +
+      '<tr><td class="sl">Tax rate</td><td class="r"><input id="wttax" type="number" step="0.001" value="' + tax + '" style="width:90px"></td><td class="hint">Q3\'26 adjusted effective tax rate 24.7%</td></tr>' +
+      '<tr><td class="sl">Diluted shares (M)</td><td class="r"><input id="wtsh" type="number" step="0.1" value="' + shares + '" style="width:90px"></td><td class="hint">Q3\'26 weighted avg diluted ' + B.diluted_shares_m + "M; see convert scenarios below</td></tr>" +
+      '<tr><td class="sl b">Annualized earnings power</td><td class="r b">' + e2(eps) + '</td><td class="hint">' + m1(rev) + " rev · " + m1(op) + " op. income · " + m1(ni) + " NI</td></tr>" +
+      "</tbody></table></div>" +
+      '<div class="pnote"><b>Annualized earnings power at current AUM</b> — not quarterly EPS and not formal guidance. Revenue = current AUM × yield. Operating income = Q3\'26 annualized adj. operating income (' + m1(baseOp) + ") + incremental margin × (revenue − Q3\'26 annualized revenue). Non-op and tax held flat at the Q3\'26 adjusted run-rate unless you change them. Source: <a style=\"color:var(--acc)\" href=\"" + esc(B.src) + "\" target=\"_blank\" rel=\"noopener\">8-K Ex. 99.1</a>.</div>" +
+      '<h3 style="margin-top:22px">Scenario table <span class="hint">same yield/tax/non-op as Q3\'26 defaults; not live-linked to the inputs above</span></h3>' +
+      '<div class="qwrap"><table class="sumtbl qtbl"><thead><tr><th class="sl">Scenario</th><th class="r">AUM</th><th class="r">Shares</th><th class="r">Incr. margin</th><th class="r">Rev (ann.)</th><th class="r">Op. income</th><th class="r">EPS power</th></tr></thead><tbody>' + scenRows + "</tbody></table></div>" +
+      '<div class="pnote">Convertible dilution: ' + esc(CV.note) + " Approx adds: +" + CV.normal_convert_add_m + "M shares at normal conversion rates, +" + CV.max_makewhole_add_m + "M at make-whole maximum rates.</div>" +
+      '<div class="panels c2" style="margin-top:18px"><div class="panel"><h4>AUM by category @ ' + esc(N.asof) + ' ($bn)</h4><div class="qwrap"><table class="sumtbl qtbl"><thead><tr><th class="sl">Category</th><th class="r">AUM</th></tr></thead><tbody>' + catRows +
+      '<tr><td class="sl">WT-US / Europe / Onchain</td><td class="r">' + bn(A.divisions.us) + " / " + bn(A.divisions.europe) + " / " + bn(A.divisions.onchain) + "</td></tr></tbody></table></div></div>" +
+      '<div class="panel"><h4>Recent week-ending AUM</h4><div class="qwrap"><table class="sumtbl qtbl"><thead><tr><th class="sl">Week-ending</th><th class="r">ETP/Onchain</th></tr></thead><tbody>' + wk + "</tbody></table></div></div></div>" +
+      '<div class="pnote">Coverage: daily IR sheet ' + esc(N.coverage.daily_from) + " → " + esc(N.coverage.daily_to) + " (" + N.coverage.daily_n + " sessions); weekly = last print each ISO week (" + N.coverage.weekly_n + "). Monthly history " + N.coverage.monthly_n + " months. Workbook: <a style=\"color:var(--acc)\" href=\"" + esc(N.source_aum) + "\" target=\"_blank\" rel=\"noopener\">Historical ETF AUM</a>. Built " + esc(N.generated) + "." + (N.warnings && N.warnings.length ? " Warnings: " + esc(N.warnings.join("; ")) : "") + "</div>";
+    const bind = (id, key, reload) => { const i = document.getElementById(id); if (!i) return;
+      i.onchange = () => { if (i.tagName === "SELECT") localStorage.setItem(key, i.value); else i.value === "" ? localStorage.removeItem(key) : localStorage.setItem(key, i.value); if (reload !== false) route(); }; };
+    bind("wtbasis", "wt-aum-basis"); bind("wtyield", "wt-yield-bps"); bind("wtincr", "wt-incr"); bind("wtnonop", "wt-nonop"); bind("wttax", "wt-tax"); bind("wtsh", "wt-shares");
+    const g = { color: "#1f2a37" }, tk = { color: "#8b9bb0" };
+    const W = N.weekly || [], M = N.monthly || [];
+    charts.push(new Chart(document.getElementById("wta"), { type: "line", data: { labels: W.map(w => w.date.slice(5)), datasets: [
+      { label: "Week-ending AUM", data: W.map(w => w.aum_bn), borderColor: COLORS[0], borderWidth: 2, pointRadius: 2 },
+      { label: L.q + " end (co.)", data: W.map(() => L.aum_end), borderColor: "#8b9bb0", borderWidth: 1, pointRadius: 0 }] },
+      options: { animation: false, maintainAspectRatio: false, interaction: { mode: "index", intersect: false }, scales: { x: { grid: g, ticks: Object.assign({ maxTicksLimit: 8, maxRotation: 0 }, tk) }, y: { grid: g, ticks: tk } },
+        plugins: { legend: { labels: { color: "#e6edf3", boxWidth: 12 } } } } }));
+    charts.push(new Chart(document.getElementById("wtm"), { type: "line", data: { labels: M.map(w => w.month), datasets: [
+      { label: "Month-end AUM", data: M.map(w => w.aum_bn), borderColor: COLORS[1], borderWidth: 2, pointRadius: 0 }] },
+      options: { animation: false, maintainAspectRatio: false, interaction: { mode: "index", intersect: false }, scales: { x: { grid: g, ticks: Object.assign({ maxTicksLimit: 8, maxRotation: 0 }, tk) }, y: { grid: g, ticks: tk } },
+        plugins: { legend: { display: false } } } }));
   }
 
   window.addEventListener("hashchange", route);

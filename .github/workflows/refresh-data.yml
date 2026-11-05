@@ -52,9 +52,15 @@ jobs:
           python3 -m pip install --quiet requests || true
           python3 companies/nowcast/nowcast.py || echo "::warning::CNS nowcast failed; previous data/cns_nowcast.json kept"
 
+      - name: WT weekly AUM / earnings power (warn-only)
+        continue-on-error: true
+        run: |
+          python3 -m pip install --quiet openpyxl || true
+          python3 companies/nowcast/wt_earnings_power.py || echo "::warning::WT earnings power failed; previous data/wt_earnings_power.json kept"
+
       - name: Commit data if changed
         run: |
-          git add data/*.json data/*.json.gz data/*-history.csv data/*-quarterly.csv data/*-quarterly.xlsx data/*-growth5y.csv data/*-growth5y.xlsx
+          git add data/*.json data/*.json.gz data/*-history.csv data/*-quarterly.csv data/*-quarterly.xlsx data/*-growth5y.csv data/*-growth5y.xlsx data/company-*.xlsx
           if git diff --cached --quiet; then
             echo "No data changes."
             exit 0
