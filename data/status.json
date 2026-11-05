@@ -2059,8 +2059,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-11-05T21:57:02+00:00",
-   "data_changed_at": "2026-11-05T21:55:21+00:00",
+   "checked_at": "2026-11-05T22:57:09+00:00",
+   "data_changed_at": "2026-11-05T22:55:24+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2751,6 +2751,6 @@
    }
   }
  },
- "checked_at": "2026-11-05T22:00:35+00:00",
- "ok": false
+ "checked_at": "2026-11-05T22:57:09+00:00",
+ "ok": true
 }
