@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-11-04T21:48:52+00:00",
-   "data_changed_at": "2026-11-04T21:48:47+00:00",
+   "checked_at": "2026-11-05T01:29:25+00:00",
+   "data_changed_at": "2026-11-05T01:29:19+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -98,8 +98,8 @@
      "fred": "T10Y2Y",
      "status": "ok",
      "latest": {
-      "date": "2026-11-03",
-      "value": 0.34
+      "date": "2026-11-04",
+      "value": 0.32
      }
     },
     "indpro": {
@@ -122,24 +122,24 @@
      "fred": "T5YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-11-03",
-      "value": 2.39
+      "date": "2026-11-04",
+      "value": 2.3
      }
     },
     "t10yie": {
      "fred": "T10YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-11-03",
-      "value": 2.3
+      "date": "2026-11-04",
+      "value": 2.26
      }
     },
     "t5yifr": {
      "fred": "T5YIFR",
      "status": "ok",
      "latest": {
-      "date": "2026-11-03",
-      "value": 2.21
+      "date": "2026-11-04",
+      "value": 2.22
      }
     },
     "clev_cpi_yy": {
@@ -413,7 +413,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-11-04T21:49:05+00:00",
+   "checked_at": "2026-11-05T01:29:43+00:00",
    "data_changed_at": "2026-11-02T22:27:59+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2059,8 +2059,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-11-05T00:34:45+00:00",
-   "data_changed_at": "2026-11-05T00:33:15+00:00",
+   "checked_at": "2026-11-05T01:31:41+00:00",
+   "data_changed_at": "2026-11-05T01:30:03+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2075,8 +2075,8 @@
    }
   },
   "geo": {
-   "checked_at": "2026-11-04T21:55:39+00:00",
-   "data_changed_at": "2026-11-04T21:51:11+00:00",
+   "checked_at": "2026-11-05T01:36:39+00:00",
+   "data_changed_at": "2026-11-05T01:31:41+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
@@ -2213,7 +2213,7 @@
       "date": "2026-10-25",
       "value": 3.2857
      },
-     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
+     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_hormuz_tank": {
      "fred": "PortWatch chokepoint6",
@@ -2222,7 +2222,7 @@
       "date": "2026-10-25",
       "value": 0.8571
      },
-     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
+     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_hormuz_cont": {
      "fred": "PortWatch chokepoint6",
@@ -2231,7 +2231,7 @@
       "date": "2026-10-25",
       "value": 0.1429
      },
-     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
+     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_hormuz_ly": {
      "fred": "PortWatch chokepoint6",
@@ -2240,7 +2240,7 @@
       "date": "2026-10-25",
       "value": 102.0
      },
-     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
+     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_babelmandeb": {
      "fred": "PortWatch chokepoint4",
@@ -2249,7 +2249,7 @@
       "date": "2026-10-25",
       "value": 28.8571
      },
-     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Object reference not set to an instance of an object.', 'details': []})"
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_babelmandeb_tank": {
      "fred": "PortWatch chokepoint4",
@@ -2258,7 +2258,7 @@
       "date": "2026-10-25",
       "value": 9.5714
      },
-     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Object reference not set to an instance of an object.', 'details': []})"
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_babelmandeb_cont": {
      "fred": "PortWatch chokepoint4",
@@ -2267,7 +2267,7 @@
       "date": "2026-10-25",
       "value": 7.2857
      },
-     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Object reference not set to an instance of an object.', 'details': []})"
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_babelmandeb_ly": {
      "fred": "PortWatch chokepoint4",
@@ -2276,7 +2276,7 @@
       "date": "2026-10-25",
       "value": 37.4286
      },
-     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Object reference not set to an instance of an object.', 'details': []})"
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_suez": {
      "fred": "PortWatch chokepoint1",
@@ -2312,39 +2312,35 @@
     },
     "pw_panama": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 28.7143
-     },
-     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
+     }
     },
     "pw_panama_tank": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 12.2857
-     },
-     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
+     }
     },
     "pw_panama_cont": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 8.4286
-     },
-     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
+     }
     },
     "pw_panama_ly": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-10-25",
       "value": 32.8571
-     },
-     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
+     }
     },
     "pw_malacca": {
      "fred": "PortWatch chokepoint5",
@@ -2353,7 +2349,7 @@
       "date": "2026-10-25",
       "value": 228.0
      },
-     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
+     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_malacca_tank": {
      "fred": "PortWatch chokepoint5",
@@ -2362,7 +2358,7 @@
       "date": "2026-10-25",
       "value": 75.8571
      },
-     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
+     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_malacca_cont": {
      "fred": "PortWatch chokepoint5",
@@ -2371,7 +2367,7 @@
       "date": "2026-10-25",
       "value": 61.0
      },
-     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
+     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_malacca_ly": {
      "fred": "PortWatch chokepoint5",
@@ -2380,45 +2376,49 @@
       "date": "2026-10-25",
       "value": 237.1429
      },
-     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
+     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_bosporus": {
      "fred": "PortWatch chokepoint3",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 53.7143
-     }
+     },
+     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_bosporus_tank": {
      "fred": "PortWatch chokepoint3",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 15.8571
-     }
+     },
+     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_bosporus_cont": {
      "fred": "PortWatch chokepoint3",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 5.2857
-     }
+     },
+     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     },
     "pw_bosporus_ly": {
      "fred": "PortWatch chokepoint3",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-25",
       "value": 101.0
-     }
+     },
+     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 400; query: PortWatch: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']})"
     }
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-11-04T21:49:26+00:00",
-   "data_changed_at": "2026-11-04T21:49:05+00:00",
+   "checked_at": "2026-11-05T01:30:03+00:00",
+   "data_changed_at": "2026-11-05T01:29:43+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2432,16 +2432,16 @@
      "fred": "T10Y2Y",
      "status": "ok",
      "latest": {
-      "date": "2026-11-03",
-      "value": 0.34
+      "date": "2026-11-04",
+      "value": 0.32
      }
     },
     "3m10y": {
      "fred": "T10Y3M",
      "status": "ok",
      "latest": {
-      "date": "2026-11-03",
-      "value": 0.74
+      "date": "2026-11-04",
+      "value": 0.69
      }
     },
     "ust10_12m": {
@@ -2656,32 +2656,32 @@
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-11-04",
-      "value": -3.4807
+      "date": "2026-11-03",
+      "value": -2.455
      }
     },
     "kre_xlf_3m": {
      "fred": "KRE+XLF",
      "status": "ok",
      "latest": {
-      "date": "2026-11-04",
-      "value": -5.1576
+      "date": "2026-11-03",
+      "value": -4.2267
      }
     },
     "iwm_spy_1m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-11-04",
-      "value": 2.5693
+      "date": "2026-11-03",
+      "value": 1.4137
      }
     },
     "iwm_spy_3m": {
      "fred": "IWM+SPY",
      "status": "ok",
      "latest": {
-      "date": "2026-11-04",
-      "value": -4.5416
+      "date": "2026-11-03",
+      "value": -4.7425
      }
     },
     "dep_pricing": {
@@ -2751,6 +2751,6 @@
    }
   }
  },
- "checked_at": "2026-11-05T00:34:45+00:00",
- "ok": true
+ "checked_at": "2026-11-05T01:36:39+00:00",
+ "ok": false
 }
