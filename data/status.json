@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-11-06T21:26:11+00:00",
-   "data_changed_at": "2026-11-06T21:26:06+00:00",
+   "checked_at": "2026-11-07T00:57:52+00:00",
+   "data_changed_at": "2026-11-07T00:57:47+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -74,7 +74,7 @@
      "fred": "DFF",
      "status": "ok",
      "latest": {
-      "date": "2026-11-04",
+      "date": "2026-11-05",
       "value": 3.88
      }
     },
@@ -82,24 +82,24 @@
      "fred": "DGS2",
      "status": "ok",
      "latest": {
-      "date": "2026-11-04",
-      "value": 4.58
+      "date": "2026-11-05",
+      "value": 4.46
      }
     },
     "dgs10": {
      "fred": "DGS10",
      "status": "ok",
      "latest": {
-      "date": "2026-11-04",
-      "value": 4.9
+      "date": "2026-11-05",
+      "value": 4.84
      }
     },
     "spread": {
      "fred": "T10Y2Y",
      "status": "ok",
      "latest": {
-      "date": "2026-11-05",
-      "value": 0.38
+      "date": "2026-11-06",
+      "value": 0.35
      }
     },
     "indpro": {
@@ -122,24 +122,24 @@
      "fred": "T5YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-11-05",
-      "value": 2.26
+      "date": "2026-11-06",
+      "value": 2.29
      }
     },
     "t10yie": {
      "fred": "T10YIE",
      "status": "ok",
      "latest": {
-      "date": "2026-11-05",
-      "value": 2.24
+      "date": "2026-11-06",
+      "value": 2.23
      }
     },
     "t5yifr": {
      "fred": "T5YIFR",
      "status": "ok",
      "latest": {
-      "date": "2026-11-05",
-      "value": 2.22
+      "date": "2026-11-06",
+      "value": 2.17
      }
     },
     "clev_cpi_yy": {
@@ -413,575 +413,575 @@
    }
   },
   "h8": {
-   "checked_at": "2026-11-06T21:26:23+00:00",
-   "data_changed_at": "2026-11-02T22:27:59+00:00",
+   "checked_at": "2026-11-07T00:58:17+00:00",
+   "data_changed_at": "2026-11-07T00:57:52+00:00",
    "series": {
     "LLBDCBW027SBOG": {
      "fred": "LLBDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 12769.3564
+      "date": "2026-10-28",
+      "value": 12773.8473
      }
     },
     "LLBLCBW027SBOG": {
      "fred": "LLBLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 8005.0087
+      "date": "2026-10-28",
+      "value": 8011.7585
      }
     },
     "LLBSCBW027SBOG": {
      "fred": "LLBSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 4764.3477
+      "date": "2026-10-28",
+      "value": 4762.0888
      }
     },
     "CILDCBW027SBOG": {
      "fred": "CILDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 2356.9121
+      "date": "2026-10-28",
+      "value": 2359.0509
      }
     },
     "CILSCBW027SBOG": {
      "fred": "CILSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 741.6108
+      "date": "2026-10-28",
+      "value": 741.9553
      }
     },
     "CREDCBW027SBOG": {
      "fred": "CREDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 3025.8324
+      "date": "2026-10-28",
+      "value": 3028.0342
      }
     },
     "CRELCBW027SBOG": {
      "fred": "CRELCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 911.5154
+      "date": "2026-10-28",
+      "value": 913.9748
      }
     },
     "CRESCBW027SBOG": {
      "fred": "CRESCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 2114.317
+      "date": "2026-10-28",
+      "value": 2114.0594
      }
     },
     "CLDDCBW027SBOG": {
      "fred": "CLDDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 436.0513
+      "date": "2026-10-28",
+      "value": 435.7244
      }
     },
     "CLDLCBW027SBOG": {
      "fred": "CLDLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 126.1559
+      "date": "2026-10-28",
+      "value": 126.4533
      }
     },
     "CLDSCBW027SBOG": {
      "fred": "CLDSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 309.8954
+      "date": "2026-10-28",
+      "value": 309.2711
      }
     },
     "SBFDCBW027SBOG": {
      "fred": "SBFDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 123.4847
+      "date": "2026-10-28",
+      "value": 123.5185
      }
     },
     "SBFLCBW027SBOG": {
      "fred": "SBFLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 6.2539
+      "date": "2026-10-28",
+      "value": 6.3516
      }
     },
     "SBFSCBW027SBOG": {
      "fred": "SBFSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 117.2308
+      "date": "2026-10-28",
+      "value": 117.1669
      }
     },
     "SMPDCBW027SBOG": {
      "fred": "SMPDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 621.3443
+      "date": "2026-10-28",
+      "value": 623.0476
      }
     },
     "SMPLCBW027SBOG": {
      "fred": "SMPLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 252.4926
+      "date": "2026-10-28",
+      "value": 254.6316
      }
     },
     "SMPSCBW027SBOG": {
      "fred": "SMPSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 368.8517
+      "date": "2026-10-28",
+      "value": 368.416
      }
     },
     "SNFDCBW027SBOG": {
      "fred": "SNFDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1844.9521
+      "date": "2026-10-28",
+      "value": 1845.7436
      }
     },
     "SNFLCBW027SBOG": {
      "fred": "SNFLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 526.6131
+      "date": "2026-10-28",
+      "value": 526.5383
      }
     },
     "SNFSCBW027SBOG": {
      "fred": "SNFSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1318.339
+      "date": "2026-10-28",
+      "value": 1319.2053
      }
     },
     "RREDCBW027SBOG": {
      "fred": "RREDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 2704.5386
+      "date": "2026-10-28",
+      "value": 2700.5716
      }
     },
     "RRELCBW027SBOG": {
      "fred": "RRELCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1665.8266
+      "date": "2026-10-28",
+      "value": 1663.3928
      }
     },
     "RRESCBW027SBOG": {
      "fred": "RRESCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1038.712
+      "date": "2026-10-28",
+      "value": 1037.1788
      }
     },
     "CRLDCBW027SBOG": {
      "fred": "CRLDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 2413.0124
+      "date": "2026-10-28",
+      "value": 2409.1288
      }
     },
     "CRLLCBW027SBOG": {
      "fred": "CRLLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1504.0939
+      "date": "2026-10-28",
+      "value": 1501.6986
      }
     },
     "CRLSCBW027SBOG": {
      "fred": "CRLSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 908.9185
+      "date": "2026-10-28",
+      "value": 907.4302
      }
     },
     "RHEDCBW027SBOG": {
      "fred": "RHEDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 291.5261
+      "date": "2026-10-28",
+      "value": 291.4428
      }
     },
     "RHELCBW027SBOG": {
      "fred": "RHELCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 161.7326
+      "date": "2026-10-28",
+      "value": 161.6941
      }
     },
     "RHESCBW027SBOG": {
      "fred": "RHESCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 129.7935
+      "date": "2026-10-28",
+      "value": 129.7486
      }
     },
     "CLSDCBW027SBOG": {
      "fred": "CLSDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1932.0564
+      "date": "2026-10-28",
+      "value": 1932.0032
      }
     },
     "CLSLCBW027SBOG": {
      "fred": "CLSLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1584.9065
+      "date": "2026-10-28",
+      "value": 1584.7276
      }
     },
     "CLSSCBW027SBOG": {
      "fred": "CLSSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 347.1499
+      "date": "2026-10-28",
+      "value": 347.2756
      }
     },
     "CCLDCBW027SBOG": {
      "fred": "CCLDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1099.8702
+      "date": "2026-10-28",
+      "value": 1099.5397
      }
     },
     "CCLLCBW027SBOG": {
      "fred": "CCLLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1003.4587
+      "date": "2026-10-28",
+      "value": 1003.3552
      }
     },
     "CCLSCBW027SBOG": {
      "fred": "CCLSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 96.4115
+      "date": "2026-10-28",
+      "value": 96.1845
      }
     },
     "OCLDCBW027SBOG": {
      "fred": "OCLDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 832.1863
+      "date": "2026-10-28",
+      "value": 832.4635
      }
     },
     "OCLLCBW027SBOG": {
      "fred": "OCLLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 581.4478
+      "date": "2026-10-28",
+      "value": 581.3724
      }
     },
     "OCLSCBW027SBOG": {
      "fred": "OCLSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 250.7384
+      "date": "2026-10-28",
+      "value": 251.0911
      }
     },
     "CARDCBW027SBOG": {
      "fred": "CARDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 524.6327
+      "date": "2026-10-28",
+      "value": 524.9818
      }
     },
     "CARLCBW027SBOG": {
      "fred": "CARLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 436.0257
+      "date": "2026-10-28",
+      "value": 436.0303
      }
     },
     "CARSCBW027SBOG": {
      "fred": "CARSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 88.607
+      "date": "2026-10-28",
+      "value": 88.9515
      }
     },
     "AOLDCBW027SBOG": {
      "fred": "AOLDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 2750.017
+      "date": "2026-10-28",
+      "value": 2754.1874
      }
     },
     "AOLLCBW027SBOG": {
      "fred": "AOLLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 2227.4589
+      "date": "2026-10-28",
+      "value": 2232.5677
      }
     },
     "AOLSCBW027SBOG": {
      "fred": "AOLSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 522.558
+      "date": "2026-10-28",
+      "value": 521.6197
      }
     },
     "LNFDCBW027SBOG": {
      "fred": "LNFDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1578.511
+      "date": "2026-10-28",
+      "value": 1575.3305
      }
     },
     "LNFLCBW027SBOG": {
      "fred": "LNFLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1378.0017
+      "date": "2026-10-28",
+      "value": 1376.133
      }
     },
     "LNFSCBW027SBOG": {
      "fred": "LNFSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 200.5093
+      "date": "2026-10-28",
+      "value": 199.1975
      }
     },
     "DPSDCBW027SBOG": {
      "fred": "DPSDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 18125.2465
+      "date": "2026-10-28",
+      "value": 18192.3407
      }
     },
     "DPSLCBW027SBOG": {
      "fred": "DPSLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 12438.8322
+      "date": "2026-10-28",
+      "value": 12490.667
      }
     },
     "DPSSCBW027SBOG": {
      "fred": "DPSSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 5686.4143
+      "date": "2026-10-28",
+      "value": 5701.6737
      }
     },
     "LTDDCBW027SBOG": {
      "fred": "LTDDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1690.3555
+      "date": "2026-10-28",
+      "value": 1688.6005
      }
     },
     "LTDLCBW027SBOG": {
      "fred": "LTDLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 946.9381
+      "date": "2026-10-28",
+      "value": 948.0303
      }
     },
     "LTDSCBW027SBOG": {
      "fred": "LTDSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 743.4174
+      "date": "2026-10-28",
+      "value": 740.5702
      }
     },
     "ODSDCBW027SBOG": {
      "fred": "ODSDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 16434.8911
+      "date": "2026-10-28",
+      "value": 16503.7401
      }
     },
     "ODSLCBW027SBOG": {
      "fred": "ODSLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 11491.8941
+      "date": "2026-10-28",
+      "value": 11542.6366
      }
     },
     "ODSSCBW027SBOG": {
      "fred": "ODSSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 4942.997
+      "date": "2026-10-28",
+      "value": 4961.1035
      }
     },
     "SBCDCBW027SBOG": {
      "fred": "SBCDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 5469.8172
+      "date": "2026-10-28",
+      "value": 5478.3076
      }
     },
     "SBCLCBW027SBOG": {
      "fred": "SBCLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 4227.7476
+      "date": "2026-10-28",
+      "value": 4229.6821
      }
     },
     "SBCSCBW027SBOG": {
      "fred": "SBCSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1242.0696
+      "date": "2026-10-28",
+      "value": 1248.6255
      }
     },
     "TASDCBW027SBOG": {
      "fred": "TASDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 4551.9379
+      "date": "2026-10-28",
+      "value": 4556.3735
      }
     },
     "TASLCBW027SBOG": {
      "fred": "TASLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 3650.086
+      "date": "2026-10-28",
+      "value": 3647.3342
      }
     },
     "TASSCBW027SBOG": {
      "fred": "TASSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 901.8519
+      "date": "2026-10-28",
+      "value": 909.0393
      }
     },
     "CASDCBW027SBOG": {
      "fred": "CASDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1886.5446
+      "date": "2026-10-28",
+      "value": 1856.5981
      }
     },
     "CASLCBW027SBOG": {
      "fred": "CASLCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1395.879
+      "date": "2026-10-28",
+      "value": 1358.2772
      }
     },
     "CASSCBW027SBOG": {
      "fred": "CASSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 490.6656
+      "date": "2026-10-28",
+      "value": 498.3208
      }
     },
     "TLADCBW027SBOG": {
      "fred": "TLADCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 22383.1664
+      "date": "2026-10-28",
+      "value": 22421.4847
      }
     },
     "TLALCBW027SBOG": {
      "fred": "TLALCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 15443.7562
+      "date": "2026-10-28",
+      "value": 15470.6962
      }
     },
     "TLASCBW027SBOG": {
      "fred": "TLASCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 6939.4102
+      "date": "2026-10-28",
+      "value": 6950.7885
      }
     },
     "BOR_D": {
      "fred": "H8B3094NDMD",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1441.289
+      "date": "2026-10-28",
+      "value": 1402.809
      }
     },
     "BOR_L": {
      "fred": "H8B3094NLGD",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1146.303
+      "date": "2026-10-28",
+      "value": 1105.266
      }
     },
     "BOR_S": {
      "fred": "H8B3094NSMD",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 294.986
+      "date": "2026-10-28",
+      "value": 297.543
      }
     },
     "DEMDEPSL": {
@@ -1436,400 +1436,400 @@
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1615.3013
+      "date": "2026-10-28",
+      "value": 1617.0956
      }
     },
     "DPSDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 6.0
+      "date": "2026-10-28",
+      "value": 6.558
      }
     },
     "DPSLCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 6.903
+      "date": "2026-10-28",
+      "value": 7.635
      }
     },
     "DPSSCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 4.077
+      "date": "2026-10-28",
+      "value": 4.274
      }
     },
     "LLBDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 6.933
+      "date": "2026-10-28",
+      "value": 7.02
      }
     },
     "LLBLCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 7.899
+      "date": "2026-10-28",
+      "value": 8.08
      }
     },
     "LLBSCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 5.348
+      "date": "2026-10-28",
+      "value": 5.283
      }
     },
     "CILDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 9.682
+      "date": "2026-10-28",
+      "value": 9.904
      }
     },
     "CIL_LARGE_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 11.326
+      "date": "2026-10-28",
+      "value": 11.68
      }
     },
     "CILSCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 6.264
+      "date": "2026-10-28",
+      "value": 6.223
      }
     },
     "CREDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 3.454
+      "date": "2026-10-28",
+      "value": 3.514
      }
     },
     "CRELCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 3.116
+      "date": "2026-10-28",
+      "value": 3.453
      }
     },
     "CRESCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 3.6
+      "date": "2026-10-28",
+      "value": 3.54
      }
     },
     "RREDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1.498
+      "date": "2026-10-28",
+      "value": 1.284
      }
     },
     "RRELCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 0.562
+      "date": "2026-10-28",
+      "value": 0.31
      }
     },
     "RRESCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 3.038
+      "date": "2026-10-28",
+      "value": 2.886
      }
     },
     "CLSDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 4.836
+      "date": "2026-10-28",
+      "value": 4.732
      }
     },
     "CLSLCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 3.735
+      "date": "2026-10-28",
+      "value": 3.61
      }
     },
     "CLSSCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 10.173
+      "date": "2026-10-28",
+      "value": 10.176
      }
     },
     "CCLDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 4.268
+      "date": "2026-10-28",
+      "value": 4.16
      }
     },
     "CCLLCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 4.734
+      "date": "2026-10-28",
+      "value": 4.607
      }
     },
     "CCLSCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": -0.346
+      "date": "2026-10-28",
+      "value": -0.279
      }
     },
     "LTDDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 7.845
+      "date": "2026-10-28",
+      "value": 7.661
      }
     },
     "LTDLCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 15.377
+      "date": "2026-10-28",
+      "value": 15.289
      }
     },
     "LTDSCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": -0.435
+      "date": "2026-10-28",
+      "value": -0.745
      }
     },
     "ODSDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 5.814
+      "date": "2026-10-28",
+      "value": 6.447
      }
     },
     "ODSLCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 6.26
+      "date": "2026-10-28",
+      "value": 7.051
      }
     },
     "ODSSCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 4.792
+      "date": "2026-10-28",
+      "value": 5.067
      }
     },
     "SBCDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1.409
+      "date": "2026-10-28",
+      "value": 1.717
      }
     },
     "SBCLCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1.632
+      "date": "2026-10-28",
+      "value": 1.912
      }
     },
     "SBCSCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 0.656
+      "date": "2026-10-28",
+      "value": 1.06
      }
     },
     "CASDCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 0.591
+      "date": "2026-10-28",
+      "value": 0.746
      }
     },
     "CASLCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 0.993
+      "date": "2026-10-28",
+      "value": 0.923
      }
     },
     "CASSCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": -0.533
+      "date": "2026-10-28",
+      "value": 0.267
      }
     },
     "TLADCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 5.506
+      "date": "2026-10-28",
+      "value": 5.814
      }
     },
     "TLALCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 6.008
+      "date": "2026-10-28",
+      "value": 6.414
      }
     },
     "TLASCBW027SBOG_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 4.406
+      "date": "2026-10-28",
+      "value": 4.501
      }
     },
     "BOR_D_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 13.468
+      "date": "2026-10-28",
+      "value": 11.554
      }
     },
     "BOR_L_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 15.744
+      "date": "2026-10-28",
+      "value": 12.991
      }
     },
     "BOR_S_YOY": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 5.413
+      "date": "2026-10-28",
+      "value": 6.524
      }
     },
     "LTD_SHARE_DOM": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 9.326
+      "date": "2026-10-28",
+      "value": 9.2819
      }
     },
     "LDR_DOM": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 70.4507
+      "date": "2026-10-28",
+      "value": 70.2155
      }
     },
     "LTD_SHARE_LARGE": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 7.6128
+      "date": "2026-10-28",
+      "value": 7.5899
      }
     },
     "LDR_LARGE": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 64.355
+      "date": "2026-10-28",
+      "value": 64.142
      }
     },
     "LTD_SHARE_SMALL": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 13.0736
+      "date": "2026-10-28",
+      "value": 12.9886
      }
     },
     "LDR_SMALL": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 83.7847
+      "date": "2026-10-28",
+      "value": 83.5209
      }
     },
     "H8_CONTRIB_LTD_D": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 0.719
+      "date": "2026-10-28",
+      "value": 0.704
      }
     },
     "H8_CONTRIB_OTHER_D": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 5.281
+      "date": "2026-10-28",
+      "value": 5.855
      }
     },
     "H8_CONTRIB_LTD_S": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": -0.059
+      "date": "2026-10-28",
+      "value": -0.102
      }
     },
     "H8_CONTRIB_OTHER_S": {
      "fred": "derived",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 4.137
+      "date": "2026-10-28",
+      "value": 4.375
      }
     },
     "OLD_PRE": {
@@ -2059,8 +2059,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-11-06T23:51:38+00:00",
-   "data_changed_at": "2026-11-06T23:49:54+00:00",
+   "checked_at": "2026-11-07T01:00:28+00:00",
+   "data_changed_at": "2026-11-07T00:58:41+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2075,8 +2075,8 @@
    }
   },
   "geo": {
-   "checked_at": "2026-11-06T21:35:10+00:00",
-   "data_changed_at": "2026-11-06T21:28:30+00:00",
+   "checked_at": "2026-11-07T01:07:08+00:00",
+   "data_changed_at": "2026-11-07T01:00:28+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
@@ -2213,7 +2213,7 @@
       "date": "2026-10-25",
       "value": 3.2857
      },
-     "error": "PortWatch chokepoint6: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6075 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6162 request units)! maximum allowed r)"
     },
     "pw_hormuz_tank": {
      "fred": "PortWatch chokepoint6",
@@ -2222,7 +2222,7 @@
       "date": "2026-10-25",
       "value": 0.8571
      },
-     "error": "PortWatch chokepoint6: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6075 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6162 request units)! maximum allowed r)"
     },
     "pw_hormuz_cont": {
      "fred": "PortWatch chokepoint6",
@@ -2231,7 +2231,7 @@
       "date": "2026-10-25",
       "value": 0.1429
      },
-     "error": "PortWatch chokepoint6: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6075 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6162 request units)! maximum allowed r)"
     },
     "pw_hormuz_ly": {
      "fred": "PortWatch chokepoint6",
@@ -2240,7 +2240,7 @@
       "date": "2026-10-25",
       "value": 102.0
      },
-     "error": "PortWatch chokepoint6: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6075 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6162 request units)! maximum allowed r)"
     },
     "pw_babelmandeb": {
      "fred": "PortWatch chokepoint4",
@@ -2249,7 +2249,7 @@
       "date": "2026-10-25",
       "value": 28.8571
      },
-     "error": "PortWatch chokepoint4: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6078 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6174 request units)! maximum allowed r)"
     },
     "pw_babelmandeb_tank": {
      "fred": "PortWatch chokepoint4",
@@ -2258,7 +2258,7 @@
       "date": "2026-10-25",
       "value": 9.5714
      },
-     "error": "PortWatch chokepoint4: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6078 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6174 request units)! maximum allowed r)"
     },
     "pw_babelmandeb_cont": {
      "fred": "PortWatch chokepoint4",
@@ -2267,7 +2267,7 @@
       "date": "2026-10-25",
       "value": 7.2857
      },
-     "error": "PortWatch chokepoint4: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6078 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6174 request units)! maximum allowed r)"
     },
     "pw_babelmandeb_ly": {
      "fred": "PortWatch chokepoint4",
@@ -2276,7 +2276,7 @@
       "date": "2026-10-25",
       "value": 37.4286
      },
-     "error": "PortWatch chokepoint4: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6078 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6174 request units)! maximum allowed r)"
     },
     "pw_suez": {
      "fred": "PortWatch chokepoint1",
@@ -2285,7 +2285,7 @@
       "date": "2026-10-25",
       "value": 41.2857
      },
-     "error": "PortWatch chokepoint1: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6272 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6205 request units)! maximum allowed r)"
     },
     "pw_suez_tank": {
      "fred": "PortWatch chokepoint1",
@@ -2294,7 +2294,7 @@
       "date": "2026-10-25",
       "value": 16.2857
      },
-     "error": "PortWatch chokepoint1: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6272 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6205 request units)! maximum allowed r)"
     },
     "pw_suez_cont": {
      "fred": "PortWatch chokepoint1",
@@ -2303,7 +2303,7 @@
       "date": "2026-10-25",
       "value": 13.8571
      },
-     "error": "PortWatch chokepoint1: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6272 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6205 request units)! maximum allowed r)"
     },
     "pw_suez_ly": {
      "fred": "PortWatch chokepoint1",
@@ -2312,7 +2312,7 @@
       "date": "2026-10-25",
       "value": 42.7143
      },
-     "error": "PortWatch chokepoint1: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6272 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6205 request units)! maximum allowed r)"
     },
     "pw_panama": {
      "fred": "PortWatch chokepoint2",
@@ -2321,7 +2321,7 @@
       "date": "2026-10-25",
       "value": 28.7143
      },
-     "error": "PortWatch chokepoint2: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6272 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6205 request units)! maximum allowed r)"
     },
     "pw_panama_tank": {
      "fred": "PortWatch chokepoint2",
@@ -2330,7 +2330,7 @@
       "date": "2026-10-25",
       "value": 12.2857
      },
-     "error": "PortWatch chokepoint2: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6272 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6205 request units)! maximum allowed r)"
     },
     "pw_panama_cont": {
      "fred": "PortWatch chokepoint2",
@@ -2339,7 +2339,7 @@
       "date": "2026-10-25",
       "value": 8.4286
      },
-     "error": "PortWatch chokepoint2: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6272 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6205 request units)! maximum allowed r)"
     },
     "pw_panama_ly": {
      "fred": "PortWatch chokepoint2",
@@ -2348,7 +2348,7 @@
       "date": "2026-10-25",
       "value": 32.8571
      },
-     "error": "PortWatch chokepoint2: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6272 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6205 request units)! maximum allowed r)"
     },
     "pw_malacca": {
      "fred": "PortWatch chokepoint5",
@@ -2357,7 +2357,7 @@
       "date": "2026-10-25",
       "value": 228.0
      },
-     "error": "PortWatch chokepoint5: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6275 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6211 request units)! maximum allowed r)"
     },
     "pw_malacca_tank": {
      "fred": "PortWatch chokepoint5",
@@ -2366,7 +2366,7 @@
       "date": "2026-10-25",
       "value": 75.8571
      },
-     "error": "PortWatch chokepoint5: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6275 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6211 request units)! maximum allowed r)"
     },
     "pw_malacca_cont": {
      "fred": "PortWatch chokepoint5",
@@ -2375,7 +2375,7 @@
       "date": "2026-10-25",
       "value": 61.0
      },
-     "error": "PortWatch chokepoint5: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6275 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6211 request units)! maximum allowed r)"
     },
     "pw_malacca_ly": {
      "fred": "PortWatch chokepoint5",
@@ -2384,7 +2384,7 @@
       "date": "2026-10-25",
       "value": 237.1429
      },
-     "error": "PortWatch chokepoint5: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6275 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6211 request units)! maximum allowed r)"
     },
     "pw_bosporus": {
      "fred": "PortWatch chokepoint3",
@@ -2393,7 +2393,7 @@
       "date": "2026-10-25",
       "value": 53.7143
      },
-     "error": "PortWatch chokepoint3: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6275 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6211 request units)! maximum allowed r)"
     },
     "pw_bosporus_tank": {
      "fred": "PortWatch chokepoint3",
@@ -2402,7 +2402,7 @@
       "date": "2026-10-25",
       "value": 15.8571
      },
-     "error": "PortWatch chokepoint3: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6275 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6211 request units)! maximum allowed r)"
     },
     "pw_bosporus_cont": {
      "fred": "PortWatch chokepoint3",
@@ -2411,7 +2411,7 @@
       "date": "2026-10-25",
       "value": 5.2857
      },
-     "error": "PortWatch chokepoint3: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6275 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6211 request units)! maximum allowed r)"
     },
     "pw_bosporus_ly": {
      "fred": "PortWatch chokepoint3",
@@ -2420,35 +2420,35 @@
       "date": "2026-10-25",
       "value": 101.0
      },
-     "error": "PortWatch chokepoint3: only 0 rows (csv: PortWatch CSV: only 0 chokepoints; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6275 request units)! maximum allowed r)"
+     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6211 request units)! maximum allowed r)"
     }
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-11-06T21:26:45+00:00",
-   "data_changed_at": "2026-11-06T21:26:23+00:00",
+   "checked_at": "2026-11-07T00:58:41+00:00",
+   "data_changed_at": "2026-11-07T00:58:17+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
      "status": "ok",
      "latest": {
-      "date": "2026-11-04",
-      "value": 0.75
+      "date": "2026-11-05",
+      "value": 0.67
      }
     },
     "2s10s": {
      "fred": "T10Y2Y",
      "status": "ok",
      "latest": {
-      "date": "2026-11-05",
-      "value": 0.38
+      "date": "2026-11-06",
+      "value": 0.35
      }
     },
     "3m10y": {
      "fred": "T10Y3M",
      "status": "ok",
      "latest": {
-      "date": "2026-11-05",
+      "date": "2026-11-06",
       "value": 0.67
      }
     },
@@ -2456,16 +2456,16 @@
      "fred": "DGS10",
      "status": "ok",
      "latest": {
-      "date": "2026-11-04",
-      "value": 80.0
+      "date": "2026-11-05",
+      "value": 67.0
      }
     },
     "ust2_12m": {
      "fred": "DGS2",
      "status": "ok",
      "latest": {
-      "date": "2026-11-04",
-      "value": 100.0
+      "date": "2026-11-05",
+      "value": 83.0
      }
     },
     "ul_all": {
@@ -2488,56 +2488,56 @@
      "fred": "DGS10",
      "status": "ok",
      "latest": {
-      "date": "2026-11-04",
-      "value": -41.0
+      "date": "2026-11-05",
+      "value": -43.0
      }
     },
     "ust10_3m": {
      "fred": "DGS10",
      "status": "ok",
      "latest": {
-      "date": "2026-11-04",
-      "value": 27.0
+      "date": "2026-11-05",
+      "value": 15.0
      }
     },
     "policy_path": {
      "fred": "DGS1+DFF",
      "status": "ok",
      "latest": {
-      "date": "2026-11-04",
-      "value": 2.04
+      "date": "2026-11-05",
+      "value": 1.6
      }
     },
     "h8_small_loans": {
      "fred": "LLBSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": -0.2825
+      "date": "2026-10-28",
+      "value": -0.3395
      }
     },
     "h8_dom_loans": {
      "fred": "LLBDCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1.0218
+      "date": "2026-10-28",
+      "value": 0.7237
      }
     },
     "h8_small_deps": {
      "fred": "DPSSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": -1.8408
+      "date": "2026-10-28",
+      "value": -0.6585
      }
     },
     "h8_small_ldr": {
      "fred": "LLBSCBW027SBOG+DPSSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 83.7847
+      "date": "2026-10-28",
+      "value": 83.5209
      }
     },
     "nfci": {
@@ -2569,7 +2569,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-11-06",
-      "value": 92.8123
+      "value": 92.7721
      }
     },
     "hy_lvl": {
@@ -2681,7 +2681,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-11-06",
-      "value": 3.7549
+      "value": 3.7762
      }
     },
     "iwm_spy_3m": {
@@ -2689,7 +2689,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-11-06",
-      "value": -4.0954
+      "value": -4.0758
      }
     },
     "dep_pricing": {
@@ -2712,16 +2712,16 @@
      "fred": "LTDSCBW027SBOG+DPSSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 0.0135
+      "date": "2026-10-28",
+      "value": -0.0619
      }
     },
     "bor_vs_dep": {
      "fred": "H8B3094NSMD+DPSSCBW027SBOG",
      "status": "ok",
      "latest": {
-      "date": "2026-10-21",
-      "value": 1.3359
+      "date": "2026-10-28",
+      "value": 2.2503
      }
     },
     "fed_lending": {
@@ -2759,6 +2759,6 @@
    }
   }
  },
- "checked_at": "2026-11-06T23:51:38+00:00",
- "ok": true
+ "checked_at": "2026-11-07T01:07:08+00:00",
+ "ok": false
 }
