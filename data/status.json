@@ -1,7 +1,7 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-11-07T00:57:52+00:00",
+   "checked_at": "2026-11-09T12:43:37+00:00",
    "data_changed_at": "2026-11-07T00:57:47+00:00",
    "series": {
     "gdp": {
@@ -413,7 +413,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-11-07T00:58:17+00:00",
+   "checked_at": "2026-11-09T12:43:59+00:00",
    "data_changed_at": "2026-11-07T00:57:52+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2059,8 +2059,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-11-07T01:00:28+00:00",
-   "data_changed_at": "2026-11-07T00:58:41+00:00",
+   "checked_at": "2026-11-09T12:46:04+00:00",
+   "data_changed_at": "2026-11-09T12:44:19+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2075,8 +2075,8 @@
    }
   },
   "geo": {
-   "checked_at": "2026-11-07T01:07:08+00:00",
-   "data_changed_at": "2026-11-07T01:00:28+00:00",
+   "checked_at": "2026-11-09T12:46:07+00:00",
+   "data_changed_at": "2026-11-09T12:46:04+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
@@ -2208,225 +2208,201 @@
     },
     "pw_hormuz": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 3.2857
-     },
-     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6162 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 4.4286
+     }
     },
     "pw_hormuz_tank": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 0.8571
-     },
-     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6162 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 1.4286
+     }
     },
     "pw_hormuz_cont": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 0.1429
-     },
-     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6162 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 0.4286
+     }
     },
     "pw_hormuz_ly": {
      "fred": "PortWatch chokepoint6",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 102.0
-     },
-     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6162 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 90.2857
+     }
     },
     "pw_babelmandeb": {
      "fred": "PortWatch chokepoint4",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 28.8571
-     },
-     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6174 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 27.2857
+     }
     },
     "pw_babelmandeb_tank": {
      "fred": "PortWatch chokepoint4",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 9.5714
-     },
-     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6174 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 8.5714
+     }
     },
     "pw_babelmandeb_cont": {
      "fred": "PortWatch chokepoint4",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 7.2857
-     },
-     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6174 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 5.1429
+     }
     },
     "pw_babelmandeb_ly": {
      "fred": "PortWatch chokepoint4",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 37.4286
-     },
-     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6174 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 35.0
+     }
     },
     "pw_suez": {
      "fred": "PortWatch chokepoint1",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 41.2857
-     },
-     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6205 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 43.0
+     }
     },
     "pw_suez_tank": {
      "fred": "PortWatch chokepoint1",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 16.2857
-     },
-     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6205 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 17.0
+     }
     },
     "pw_suez_cont": {
      "fred": "PortWatch chokepoint1",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 13.8571
-     },
-     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6205 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 11.7143
+     }
     },
     "pw_suez_ly": {
      "fred": "PortWatch chokepoint1",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 42.7143
-     },
-     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6205 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 39.0
+     }
     },
     "pw_panama": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 28.7143
-     },
-     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6205 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 27.2857
+     }
     },
     "pw_panama_tank": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 12.2857
-     },
-     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6205 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 11.2857
+     }
     },
     "pw_panama_cont": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 8.4286
-     },
-     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6205 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 8.1429
+     }
     },
     "pw_panama_ly": {
      "fred": "PortWatch chokepoint2",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 32.8571
-     },
-     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6205 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 30.8571
+     }
     },
     "pw_malacca": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 228.0
-     },
-     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6211 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 202.7143
+     }
     },
     "pw_malacca_tank": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 75.8571
-     },
-     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6211 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 70.7143
+     }
     },
     "pw_malacca_cont": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 61.0
-     },
-     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6211 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 56.2857
+     }
     },
     "pw_malacca_ly": {
      "fred": "PortWatch chokepoint5",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 237.1429
-     },
-     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6211 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 238.5714
+     }
     },
     "pw_bosporus": {
      "fred": "PortWatch chokepoint3",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 53.7143
-     },
-     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6211 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 44.4286
+     }
     },
     "pw_bosporus_tank": {
      "fred": "PortWatch chokepoint3",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 15.8571
-     },
-     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6211 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 12.7143
+     }
     },
     "pw_bosporus_cont": {
      "fred": "PortWatch chokepoint3",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 5.2857
-     },
-     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6211 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 6.0
+     }
     },
     "pw_bosporus_ly": {
      "fred": "PortWatch chokepoint3",
-     "status": "stale",
+     "status": "ok",
      "latest": {
-      "date": "2026-10-25",
-      "value": 101.0
-     },
-     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 500\ncurl: (22) The requested URL returned error: 500\ncurl: (2; query: PortWatch: {'code': 429, 'message': 'Unable to perform query. Too many requests.', 'details': ['API calls quota exceeded (6211 request units)! maximum allowed r)"
+      "date": "2026-11-01",
+      "value": 98.4286
+     }
     }
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-11-07T00:58:41+00:00",
-   "data_changed_at": "2026-11-07T00:58:17+00:00",
+   "checked_at": "2026-11-09T12:44:19+00:00",
+   "data_changed_at": "2026-11-09T12:43:59+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2569,7 +2545,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-11-06",
-      "value": 92.7721
+      "value": 92.77
      }
     },
     "hy_lvl": {
@@ -2759,6 +2735,6 @@
    }
   }
  },
- "checked_at": "2026-11-07T01:07:08+00:00",
- "ok": false
+ "checked_at": "2026-11-09T12:46:07+00:00",
+ "ok": true
 }

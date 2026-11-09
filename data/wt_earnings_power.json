@@ -1,60 +1,60 @@
 {
- "generated": "2026-11-07T01:07:18Z",
- "asof": "2026-10-30",
- "stale": true,
- "stale_days": 8,
+ "generated": "2026-11-09T12:46:15Z",
+ "asof": "2026-11-06",
+ "stale": false,
+ "stale_days": 3,
  "source_aum": "https://www.wisdomtree.com/-/media/us-media-files/xls/irwebsite_aum.xlsx",
  "source_inflows": "https://www.wisdomtree.com/-/media/us-media-files/xls/irwebsite_inflows.xlsx",
  "aum": {
-  "etp_onchain_m": 167238.2,
-  "etp_onchain_bn": 167.238,
+  "etp_onchain_m": 165304.0,
+  "etp_onchain_bn": 165.304,
   "private_lagged_bn": 2.055,
   "private_asof": "2026-09-30",
-  "company_bn": 169.293,
+  "company_bn": 167.359,
   "divisions": {
-   "us": 103.067,
-   "europe": 63.461,
-   "onchain": 0.71
+   "us": 101.576,
+   "europe": 63.02,
+   "onchain": 0.708
   },
   "categories_bn": {
-   "U.S. Equity": 48.159,
-   "Commodity & Currency": 38.693,
-   "International Developed Market Equity": 32.494,
-   "Fixed Income": 26.244,
-   "Emerging Market Equity": 10.468,
-   "Alternatives": 5.621,
-   "Leveraged & Inverse": 3.411,
-   "Cryptocurrency": 2.147
+   "U.S. Equity": 47.141,
+   "Commodity & Currency": 39.134,
+   "International Developed Market Equity": 31.087,
+   "Fixed Income": 26.334,
+   "Emerging Market Equity": 10.407,
+   "Alternatives": 5.743,
+   "Leveraged & Inverse": 3.369,
+   "Cryptocurrency": 2.09
   }
  },
  "changes": {
   "d1": {
-   "from": "2026-10-29",
-   "pct": -1.01
+   "from": "2026-11-05",
+   "pct": -0.8
   },
   "d5_approx_1w": {
-   "from": "2026-10-25",
-   "pct": -0.55
+   "from": "2026-11-01",
+   "pct": -0.93
   },
   "d20_approx_4w": {
-   "from": "2026-10-10",
-   "pct": -2.09
+   "from": "2026-10-17",
+   "pct": -3.01
   },
   "qtd": {
    "from": "2026-10-01",
-   "pct": -0.83
+   "pct": -1.98
   },
   "ytd": {
    "from": "2026-01-01",
-   "pct": 17.25
+   "pct": 15.89
   },
   "wow": {
-   "from": "2026-10-25",
-   "pct": -0.55
+   "from": "2026-11-01",
+   "pct": -0.93
   },
   "w4": {
-   "from": "2026-10-04",
-   "pct": -1.31
+   "from": "2026-10-11",
+   "pct": -3.22
   }
  },
  "weekly": [
@@ -250,17 +250,17 @@
   },
   {
    "date": "2026-09-27",
-   "aum_m": 170842.546006569,
+   "aum_m": 170842.546006583,
    "aum_bn": 170.843
   },
   {
    "date": "2026-10-04",
-   "aum_m": 169464.946741612,
+   "aum_m": 169464.946741626,
    "aum_bn": 169.465
   },
   {
    "date": "2026-10-11",
-   "aum_m": 170807.757276975,
+   "aum_m": 170807.757276996,
    "aum_bn": 170.808
   },
   {
@@ -270,44 +270,21 @@
   },
   {
    "date": "2026-10-25",
-   "aum_m": 168162.871542562,
+   "aum_m": 168162.871542582,
    "aum_bn": 168.163
   },
   {
-   "date": "2026-10-30",
-   "aum_m": 167238.157778175,
-   "aum_bn": 167.238
+   "date": "2026-11-01",
+   "aum_m": 166850.753337945,
+   "aum_bn": 166.851
+  },
+  {
+   "date": "2026-11-06",
+   "aum_m": 165304.029885097,
+   "aum_bn": 165.304
   }
  ],
  "daily": [
-  {
-   "d": "2026-05-04",
-   "aum_bn": 163.279
-  },
-  {
-   "d": "2026-05-05",
-   "aum_bn": 163.533
-  },
-  {
-   "d": "2026-05-06",
-   "aum_bn": 166.132
-  },
-  {
-   "d": "2026-05-07",
-   "aum_bn": 166.618
-  },
-  {
-   "d": "2026-05-08",
-   "aum_bn": 166.86
-  },
-  {
-   "d": "2026-05-09",
-   "aum_bn": 166.864
-  },
-  {
-   "d": "2026-05-10",
-   "aum_bn": 166.864
-  },
   {
    "d": "2026-05-11",
    "aum_bn": 167.411
@@ -938,11 +915,11 @@
   },
   {
    "d": "2026-10-15",
-   "aum_bn": 170.039
+   "aum_bn": 170.092
   },
   {
    "d": "2026-10-16",
-   "aum_bn": 170.444
+   "aum_bn": 170.496
   },
   {
    "d": "2026-10-17",
@@ -954,23 +931,23 @@
   },
   {
    "d": "2026-10-19",
-   "aum_bn": 169.983
+   "aum_bn": 170.036
   },
   {
    "d": "2026-10-20",
-   "aum_bn": 170.008
+   "aum_bn": 170.061
   },
   {
    "d": "2026-10-21",
-   "aum_bn": 170.315
+   "aum_bn": 170.368
   },
   {
    "d": "2026-10-22",
-   "aum_bn": 168.709
+   "aum_bn": 168.763
   },
   {
    "d": "2026-10-23",
-   "aum_bn": 168.165
+   "aum_bn": 168.218
   },
   {
    "d": "2026-10-24",
@@ -982,32 +959,54 @@
   },
   {
    "d": "2026-10-26",
-   "aum_bn": 168.62
+   "aum_bn": 168.673
   },
   {
    "d": "2026-10-27",
-   "aum_bn": 168.731
+   "aum_bn": 168.784
   },
   {
    "d": "2026-10-28",
-   "aum_bn": 168.889
+   "aum_bn": 168.942
   },
   {
    "d": "2026-10-29",
-   "aum_bn": 168.952
+   "aum_bn": 169.005
   },
   {
    "d": "2026-10-30",
-   "aum_bn": 167.238
+   "aum_bn": 166.903
+  },
+  {
+   "d": "2026-10-31",
+   "aum_bn": 166.85
+  },
+  {
+   "d": "2026-11-01",
+   "aum_bn": 166.851
+  },
+  {
+   "d": "2026-11-02",
+   "aum_bn": 167.143
+  },
+  {
+   "d": "2026-11-03",
+   "aum_bn": 166.266
+  },
+  {
+   "d": "2026-11-04",
+   "aum_bn": 168.414
+  },
+  {
+   "d": "2026-11-05",
+   "aum_bn": 166.633
+  },
+  {
+   "d": "2026-11-06",
+   "aum_bn": 165.304
   }
  ],
  "monthly": [
-  {
-   "month": "2021 Nov",
-   "end": "2021-11-30",
-   "aum_m": 74756.304418842,
-   "aum_bn": 74.756
-  },
   {
    "month": "2021 Dec",
    "end": "2021-12-31",
@@ -1359,8 +1358,14 @@
   {
    "month": "2026 Oct",
    "end": "2026-10-31",
-   "aum_m": 167238.157778175,
-   "aum_bn": 167.238
+   "aum_m": 166850.098957843,
+   "aum_bn": 166.85
+  },
+  {
+   "month": "2026 Nov",
+   "end": "2026-11-30",
+   "aum_m": 165304.029885097,
+   "aum_bn": 165.304
   }
  ],
  "base": {
@@ -1405,127 +1410,127 @@
    "vs_base_rev_m": 0.0
   },
   "at_current_etp": {
-   "aum_bn": 167.238,
-   "rev_annual_m": 703.8,
-   "op_income_annual_m": 302.5,
-   "op_margin": 43.0,
-   "pretax_annual_m": 255.9,
-   "ni_annual_m": 192.7,
-   "eps": 1.23,
-   "vs_base_rev_m": -13.7
+   "aum_bn": 165.304,
+   "rev_annual_m": 695.6,
+   "op_income_annual_m": 298.4,
+   "op_margin": 42.9,
+   "pretax_annual_m": 251.8,
+   "ni_annual_m": 189.6,
+   "eps": 1.21,
+   "vs_base_rev_m": -21.9
   },
   "at_current_company": {
-   "aum_bn": 169.293,
-   "rev_annual_m": 712.4,
-   "op_income_annual_m": 306.8,
-   "op_margin": 43.1,
-   "pretax_annual_m": 260.2,
-   "ni_annual_m": 195.9,
-   "eps": 1.25,
-   "vs_base_rev_m": -5.1
+   "aum_bn": 167.359,
+   "rev_annual_m": 704.3,
+   "op_income_annual_m": 302.8,
+   "op_margin": 43.0,
+   "pretax_annual_m": 256.1,
+   "ni_annual_m": 192.8,
+   "eps": 1.23,
+   "vs_base_rev_m": -13.2
   }
  },
  "scenarios": [
   {
-   "aum_bn": 167.238,
-   "rev_annual_m": 703.8,
-   "op_income_annual_m": 302.5,
-   "op_margin": 43.0,
-   "pretax_annual_m": 255.9,
-   "ni_annual_m": 192.7,
-   "eps": 1.23,
-   "vs_base_rev_m": -13.7,
+   "aum_bn": 165.304,
+   "rev_annual_m": 695.6,
+   "op_income_annual_m": 298.4,
+   "op_margin": 42.9,
+   "pretax_annual_m": 251.8,
+   "ni_annual_m": 189.6,
+   "eps": 1.21,
+   "vs_base_rev_m": -21.9,
    "label": "Current ETP/Onchain AUM (IR sheet)",
    "shares_m": 156.2,
    "incr_margin": 0.5
   },
   {
-   "aum_bn": 169.293,
-   "rev_annual_m": 712.4,
-   "op_income_annual_m": 306.8,
-   "op_margin": 43.1,
-   "pretax_annual_m": 260.2,
-   "ni_annual_m": 195.9,
-   "eps": 1.25,
-   "vs_base_rev_m": -5.1,
+   "aum_bn": 167.359,
+   "rev_annual_m": 704.3,
+   "op_income_annual_m": 302.8,
+   "op_margin": 43.0,
+   "pretax_annual_m": 256.1,
+   "ni_annual_m": 192.8,
+   "eps": 1.23,
+   "vs_base_rev_m": -13.2,
    "label": "Current + last-reported private (Ceres)",
    "shares_m": 156.2,
    "incr_margin": 0.5
   },
   {
-   "aum_bn": 186.222,
-   "rev_annual_m": 783.7,
-   "op_income_annual_m": 342.5,
-   "op_margin": 43.7,
-   "pretax_annual_m": 295.8,
-   "ni_annual_m": 222.7,
-   "eps": 1.43,
-   "vs_base_rev_m": 66.2,
+   "aum_bn": 184.095,
+   "rev_annual_m": 774.7,
+   "op_income_annual_m": 338.0,
+   "op_margin": 43.6,
+   "pretax_annual_m": 291.3,
+   "ni_annual_m": 219.4,
+   "eps": 1.4,
+   "vs_base_rev_m": 57.2,
    "label": "Company AUM, +10% AUM",
    "shares_m": 156.2,
    "incr_margin": 0.5
   },
   {
-   "aum_bn": 152.364,
-   "rev_annual_m": 641.2,
-   "op_income_annual_m": 271.2,
-   "op_margin": 42.3,
-   "pretax_annual_m": 224.6,
-   "ni_annual_m": 169.1,
-   "eps": 1.08,
-   "vs_base_rev_m": -76.3,
+   "aum_bn": 150.623,
+   "rev_annual_m": 633.9,
+   "op_income_annual_m": 267.5,
+   "op_margin": 42.2,
+   "pretax_annual_m": 220.9,
+   "ni_annual_m": 166.3,
+   "eps": 1.07,
+   "vs_base_rev_m": -83.6,
    "label": "Company AUM, \u221210% AUM",
    "shares_m": 156.2,
    "incr_margin": 0.5
   },
   {
-   "aum_bn": 169.293,
-   "rev_annual_m": 712.4,
-   "op_income_annual_m": 306.8,
-   "op_margin": 43.1,
-   "pretax_annual_m": 260.2,
-   "ni_annual_m": 195.9,
-   "eps": 0.94,
-   "vs_base_rev_m": -5.1,
+   "aum_bn": 167.359,
+   "rev_annual_m": 704.3,
+   "op_income_annual_m": 302.8,
+   "op_margin": 43.0,
+   "pretax_annual_m": 256.1,
+   "ni_annual_m": 192.8,
+   "eps": 0.92,
+   "vs_base_rev_m": -13.2,
    "label": "Company AUM, normal convert dilution",
    "shares_m": 209.0,
    "incr_margin": 0.5
   },
   {
-   "aum_bn": 169.293,
-   "rev_annual_m": 712.4,
-   "op_income_annual_m": 306.8,
-   "op_margin": 43.1,
-   "pretax_annual_m": 260.2,
-   "ni_annual_m": 195.9,
-   "eps": 0.83,
-   "vs_base_rev_m": -5.1,
+   "aum_bn": 167.359,
+   "rev_annual_m": 704.3,
+   "op_income_annual_m": 302.8,
+   "op_margin": 43.0,
+   "pretax_annual_m": 256.1,
+   "ni_annual_m": 192.8,
+   "eps": 0.81,
+   "vs_base_rev_m": -13.2,
    "label": "Company AUM, max make-whole convert dilution",
    "shares_m": 236.9,
    "incr_margin": 0.5
   },
   {
-   "aum_bn": 169.293,
-   "rev_annual_m": 712.4,
-   "op_income_annual_m": 307.3,
-   "op_margin": 43.1,
-   "pretax_annual_m": 260.7,
-   "ni_annual_m": 196.3,
-   "eps": 1.26,
-   "vs_base_rev_m": -5.1,
+   "aum_bn": 167.359,
+   "rev_annual_m": 704.3,
+   "op_income_annual_m": 304.1,
+   "op_margin": 43.2,
+   "pretax_annual_m": 257.4,
+   "ni_annual_m": 193.8,
+   "eps": 1.24,
+   "vs_base_rev_m": -13.2,
    "label": "Company AUM, 40% incremental margin",
    "shares_m": 156.2,
    "incr_margin": 0.4
   },
   {
-   "aum_bn": 169.293,
-   "rev_annual_m": 712.4,
-   "op_income_annual_m": 306.3,
-   "op_margin": 43.0,
-   "pretax_annual_m": 259.7,
-   "ni_annual_m": 195.5,
-   "eps": 1.25,
-   "vs_base_rev_m": -5.1,
+   "aum_bn": 167.359,
+   "rev_annual_m": 704.3,
+   "op_income_annual_m": 301.4,
+   "op_margin": 42.8,
+   "pretax_annual_m": 254.8,
+   "ni_annual_m": 191.9,
+   "eps": 1.23,
+   "vs_base_rev_m": -13.2,
    "label": "Company AUM, 60% incremental margin",
    "shares_m": 156.2,
    "incr_margin": 0.6
@@ -1539,10 +1544,10 @@
  },
  "coverage": {
   "daily_from": "2026-01-01",
-  "daily_to": "2026-10-30",
-  "daily_n": 303,
-  "weekly_n": 44,
-  "monthly_n": 245,
+  "daily_to": "2026-11-06",
+  "daily_n": 310,
+  "weekly_n": 45,
+  "monthly_n": 246,
   "note": "IR Historical ETF AUM workbook publishes daily EOP AUM (YTD window on the Daily_EOP tab) and a long monthly history. Weekly series is the last observation in each ISO week. Totals exclude Ceres private AUM; company AUM adds the last reported private figure."
  },
  "warnings": []
