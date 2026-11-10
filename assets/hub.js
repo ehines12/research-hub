@@ -689,7 +689,7 @@
       '<h2>Trends <span class="hint">last ' + n + ' quarters</span></h2><div class="panels">' + c.charts.map((ch, i) => '<div class="panel"><h4>' + esc(ch.title) + '</h4><div class="cv"><canvas id="cc' + i + '"></canvas></div></div>').join("") + "</div>" +
       '<div class="qbar" style="margin-top:30px"><h2 style="margin:0">Quarterly data</h2><div class="qdl"><button class="btn" id="cocsv">CSV</button><a class="btn" href="data/company-' + esc(c.ticker) + '.xlsx" download>Excel</a></div></div>' +
       '<div class="qwrap"><table class="sumtbl qtbl"><thead>' + th + "</thead><tbody>" + tb + "</tbody></table></div>" +
-      c.notes.map(x => '<div class="pnote">' + esc(x) + "</div>").join("");
+      c.notes.map(x => '<div class="pnote">' + esc(x) + "</div>").join("") + (c.ticker === "CNS" ? '<div id="cnsmf"></div>' : "");
     document.getElementById("cocsv").onclick = () => {
       const q = v => { v = v == null ? "n/a" : String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; };
       const rows = [["Quarter", "Period end"].concat(c.fields.map(f => f.label), ["Source"])].concat(R.map(r => [r.q, r.end].concat(c.fields.map(f => r[f.key]), [r.src])));
@@ -710,6 +710,7 @@
             tooltip: { callbacks: { label: it => it.dataset.label + ": " + cfmt(it.parsed.y, F[ch.series[it.datasetIndex]].fmt) } } } } }));
     });
     if (c.ticker === "CNS") cnsNowcast(R).catch(e => { const el = document.getElementById("ncw"); if (el) el.innerHTML = '<div class="pnote">Nowcast unavailable: ' + esc(e.message) + "</div>"; });
+    if (c.ticker === "CNS") cnsMonthlyFlows().catch(e => { const el = document.getElementById("cnsmf"); if (el) el.innerHTML = '<div class="pnote">Monthly flows unavailable: ' + esc(e.message) + "</div>"; });
     if (c.ticker === "WT") wtEarningsPower(R).catch(e => { const el = document.getElementById("wtw"); if (el) el.innerHTML = '<div class="pnote">Earnings power unavailable: ' + esc(e.message) + "</div>"; });
   }
 
@@ -781,6 +782,81 @@
         plugins: { legend: { labels: { color: "#e6edf3", boxWidth: 12 } }, tooltip: { callbacks: { label: it => (it.raw.q ? it.raw.q + ": " : "") + "pipeline $" + it.raw.x.toFixed(2) + "bn → $" + it.raw.y.toFixed(2) + "bn" } } } } }));
   }
 
+
+  // ---- CNS monthly flows (data/cns_monthly_flows.json, built by companies/nowcast/cns_monthly_flows.py) ----
+  async function cnsMonthlyFlows() {
+    const D = await load("cns_monthly_flows"), el = document.getElementById("cnsmf"); if (!el) return;
+    const M = D.months, n = M.length, L = M[n - 1], V = D.vehicles, VL = {}; V.forEach(v => VL[v.key] = v.label);
+    const view = localStorage.getItem("cns-mf-view") || "sum", veh = localStorage.getItem("cns-mf-veh") || "total";
+    const f0 = v => v == null ? "n/a" : (v < 0 ? "−" : "") + Math.abs(v).toLocaleString("en-US", { maximumFractionDigits: 0 });
+    const fs = v => v == null ? "n/a" : (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v).toLocaleString("en-US", { maximumFractionDigits: 0 });
+    const fp = v => v == null ? "n/a" : (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v).toFixed(1) + "%";
+    const cl = v => v == null ? "na" : v > 0 ? "pos" : v < 0 ? "neg" : "flat";
+    const bn = v => "$" + (v / 1000).toFixed(1) + "bn";
+    const ml = m => { const [y, mo] = m.split("-"); return ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][+mo - 1] + " " + y; };
+    const CN = { beg: "Beginning AUM", net: "Net flows", mkt: "Market app/(dep)", dist: "Distributions", xfer: "Transfers", end: "Ending AUM", og: "Organic growth, ann.*" };
+    const cell = (r, k, c) => { const x = r.rows[k]; if (!x) return '<td class="r na">–</td>';
+      if (c === "og") return '<td class="r ' + cl(x.og_ann_pct) + '">' + fp(x.og_ann_pct) + "</td>";
+      if (c === "xfer" && x.xfer == null) return '<td class="r na">–</td>';
+      return '<td class="r' + (c === "net" ? " " + cl(x.net) : "") + (c === "end" ? " b" : "") + '">' + (c === "net" || c === "xfer" ? fs(x[c]) : f0(x[c])) + "</td>"; };
+    const flag = r => r.checks && r.checks.length ? '<sup title="' + esc(r.checks.join("; ")) + '">⚠</sup>' : "";
+    const src = r => '<td><a class="hint" style="color:var(--acc)" href="' + esc(r.url) + '" target="_blank" rel="noopener noreferrer">' + (r.source.indexOf("PDF") >= 0 ? "PDF" : r.source.indexOf("Newswire") >= 0 ? "PRN" : "CNS") + " " + EXT + "</a></td>";
+    const mcell = r => '<td class="sl b">' + ml(r.month) + flag(r) + '<span class="sid">' + esc(r.release_date || "") + "</span></td>";
+    const rows = M.slice().reverse();
+    let thead = "", tbody = "";
+    if (view === "sum") {
+      const g = '<tr><th class="sl"></th><th class="r" colspan="7" style="text-align:center">Total AUM</th><th class="r" colspan="3" style="text-align:center">Net flows by vehicle</th><th class="r" colspan="3" style="text-align:center">Organic growth, ann.*</th><th></th></tr>';
+      thead = g + '<tr><th class="sl">Month <span class="hint">release date</span></th>' + ["beg", "net", "mkt", "dist", "xfer", "end", "og"].map(c => '<th class="r">' + CN[c] + "</th>").join("") +
+        ["Wealth", "Institutional", "Closed-end"].map(x => '<th class="r">' + x + "</th>").join("") + ["Wealth", "Institutional", "Closed-end"].map(x => '<th class="r">' + x + "</th>").join("") + "<th>Source</th></tr>";
+      tbody = rows.map(r => "<tr>" + mcell(r) + ["beg", "net", "mkt", "dist", "xfer", "end", "og"].map(c => cell(r, "total", c)).join("") +
+        ["wealth", "institutional", "cef"].map(k => cell(r, k, "net")).join("") + ["wealth", "institutional", "cef"].map(k => cell(r, k, "og")).join("") + src(r) + "</tr>").join("");
+    } else if (view === "veh") {
+      const cols = ["beg", "net", "mkt", "dist", "xfer", "end", "og"];
+      thead = '<tr><th class="sl">Month <span class="hint">release date</span></th>' + cols.map(c => '<th class="r">' + CN[c] + "</th>").join("") + "<th>Source</th></tr>";
+      const rr = rows.filter(r => r.rows[veh]);
+      tbody = rr.length ? rr.map(r => "<tr>" + mcell(r) + cols.map(c => cell(r, veh, c)).join("") + src(r) + "</tr>").join("") : '<tr><td class="sl hint" colspan="9">Not reported in any month.</td></tr>';
+    } else {
+      const cols = ["beg", "net", "mkt", "dist", "xfer", "end", "og"];
+      thead = '<tr><th class="sl"></th>' + V.map(v => '<th colspan="7" style="text-align:center;border-left:1px solid var(--line)">' + esc(v.label) + "</th>").join("") + "<th></th></tr>" +
+        '<tr><th class="sl">Month</th>' + V.map(() => cols.map(c => '<th class="r">' + CN[c] + "</th>").join("")).join("") + "<th>Source</th></tr>";
+      tbody = rows.map(r => "<tr>" + mcell(r) + V.map(v => cols.map(c => cell(r, v.key, c)).join("")).join("") + src(r) + "</tr>").join("");
+    }
+    const T = L.rows.total, card = (t, v, d) => '<div class="kpi"><div class="t">' + t + '</div><div class="v">' + v + '</div><div class="d">' + d + "</div></div>";
+    const nf = k => { const x = L.rows[k]; return x ? card(esc(VL[k].replace(" (Open-end Funds)", "").replace(" (total)", "")) + " net flows", '<span class="' + cl(x.net) + '">' + fs(x.net) + "M</span>", '<span class="flat">' + fp(x.og_ann_pct) + " ann.* · end " + bn(x.end) + "</span>") : ""; };
+    const segb = '<div class="seg">' + [["sum", "Summary"], ["veh", "By vehicle"], ["full", "Full breakdown"]].map(([k, l]) => '<button data-mfv="' + k + '" class="' + (k === view ? "on" : "") + '">' + l + "</button>").join("") + "</div>" +
+      (view === "veh" ? ' <select id="mfveh" style="margin-left:8px">' + V.map(v => '<option value="' + v.key + '"' + (v.key === veh ? " selected" : "") + ">" + esc(v.label) + "</option>").join("") + "</select>" : "");
+    const disc = Object.entries(D.discrepancies || {});
+    el.innerHTML = '<h2 style="margin-top:30px">Monthly flows <span class="hint">CNS preliminary monthly AUM releases · ' + ml(D.coverage.from) + " → " + ml(D.coverage.to) + " · " + D.coverage.n + " months · $ millions</span></h2>" +
+      '<h3 style="margin:6px 0 10px">' + ml(L.month) + ' <span class="hint">released ' + esc(L.release_date || "n/a") + "</span></h3>" +
+      '<div class="kpis sec">' + card("Total net flows", '<span class="' + cl(T.net) + '">' + fs(T.net) + "M</span>", '<span class="flat">' + fp(T.og_ann_pct) + " ann.* · mkt " + fs(T.mkt) + "M · dist. " + fs(T.dist) + "M</span>") +
+      nf("wealth") + nf("institutional") + nf("cef") +
+      card("Ending AUM", bn(T.end), '<span class="' + cl(T.end - T.beg) + '">' + fs(T.end - T.beg) + "M</span> <span class=\"flat\">vs " + bn(T.beg) + "</span>") + "</div>" +
+      '<div class="panel full"><h4>Monthly net flows by vehicle ($M, stacked) and total</h4><div class="cv" style="height:280px"><canvas id="mfc"></canvas></div></div>' +
+      '<div class="qbar" style="margin-top:18px"><div class="gtg">' + segb + '</div><div class="qdl"><button class="btn" id="mfcsv">CSV</button>' + (INLINE ? "" : '<a class="btn" href="data/company-CNS-monthly-flows.xlsx" download>Excel</a>') + "</div></div>" +
+      '<div class="qwrap"><table class="sumtbl qtbl mftbl"><thead>' + thead + "</thead><tbody>" + tbody + "</tbody></table></div>" +
+      D.notes.map(x => '<div class="pnote">' + esc(x) + "</div>").join("") +
+      '<div class="pnote">* Organic growth (annualized) = net flows ÷ beginning AUM × 12 — <b>derived</b>, not reported by CNS. – = not reported for that vehicle/month (Transfers: column shown only in months with transfers).' +
+      (disc.length ? " ⚠ Arithmetic check in the source release: " + disc.map(([m, c]) => ml(m) + " — " + c.join("; ")).join(" | ") + ". Values are shown exactly as reported." : "") +
+      (D.coverage.missing.length ? " Missing months: " + D.coverage.missing.join(", ") + "." : " No missing months.") + " Built " + esc(D.generated) + " UTC.</div>";
+    el.querySelectorAll("[data-mfv]").forEach(b => b.onclick = () => { localStorage.setItem("cns-mf-view", b.dataset.mfv); cnsMonthlyFlows(); });
+    const sel = document.getElementById("mfveh"); if (sel) sel.onchange = () => { localStorage.setItem("cns-mf-veh", sel.value); cnsMonthlyFlows(); };
+    document.getElementById("mfcsv").onclick = () => {
+      const q = v => { v = v == null ? "" : String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; };
+      const cols = ["beg", "net", "mkt", "dist", "xfer", "end", "og"];
+      const hdr = ["Month", "Period end", "Release date"].concat(...V.map(v => cols.map(c => v.label + " - " + (c === "og" ? "Organic growth % ann. (derived)" : CN[c]))), ["Source", "Source checks"]);
+      const body = rows.map(r => [r.month, r.period_end, r.release_date].concat(...V.map(v => cols.map(c => { const x = r.rows[v.key]; return !x ? "" : c === "og" ? x.og_ann_pct : x[c]; })), [r.url, (r.checks || []).join("; ")]));
+      const blob = new Blob([[hdr].concat(body).map(r => r.map(q).join(",")).concat(["", "$ millions", ...D.notes.map(q)]).join("\r\n")], { type: "text/csv" });
+      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "CNS-monthly-flows.csv"; document.body.appendChild(a); a.click(); a.remove();
+    };
+    const old = charts.find(c => c.canvas && c.canvas.id === "mfc"); if (old) { old.destroy(); charts = charts.filter(c => c !== old); }
+    const g = { color: "#1f2a37" }, tk = { color: "#8b9bb0" }, lab = M.map(r => ml(r.month));
+    const ds = [["wealth", "Wealth"], ["institutional", "Institutional"], ["cef", "Closed-end"]].map(([k, l], j) => ({ type: "bar", label: l, data: M.map(r => r.rows[k] ? r.rows[k].net : null), backgroundColor: COLORS[j] + "c0", borderWidth: 0, stack: "s", order: 1 }));
+    ds.push({ type: "line", label: "Total", data: M.map(r => r.rows.total.net), borderColor: "#e6edf3", borderWidth: 1.5, pointRadius: 1.5, order: 0 });
+    charts.push(new Chart(document.getElementById("mfc"), { type: "bar", data: { labels: lab, datasets: ds },
+      options: { animation: false, maintainAspectRatio: false, interaction: { mode: "index", intersect: false },
+        scales: { x: { stacked: true, grid: g, ticks: Object.assign({ maxTicksLimit: 10, maxRotation: 0 }, tk) }, y: { stacked: true, grid: g, ticks: tk } },
+        plugins: { legend: { labels: { color: "#e6edf3", boxWidth: 12 } }, tooltip: { callbacks: { label: it => it.dataset.label + ": " + fs(it.parsed.y) + "M" } } } } }));
+  }
 
   // ---- WT earnings power (data/wt_earnings_power.json, built by companies/nowcast/wt_earnings_power.py) ----
   async function wtEarningsPower(R) {

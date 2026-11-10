@@ -1,0 +1,4831 @@
+{
+ "generated": "2026-11-10 01:19",
+ "units": "$ millions",
+ "coverage": {
+  "from": "2021-11",
+  "to": "2026-10",
+  "n": 60,
+  "missing": []
+ },
+ "vehicles": [
+  {
+   "key": "total",
+   "label": "Total AUM",
+   "note": null
+  },
+  {
+   "key": "wealth",
+   "label": "Wealth (Open-end Funds)",
+   "note": "Reported as 'Open-end Funds' through Sep 2026 and 'Total Wealth' from Oct 2026"
+  },
+  {
+   "key": "mutual_funds",
+   "label": "Wealth: Mutual Funds",
+   "note": "Reported from Oct 2026 only"
+  },
+  {
+   "key": "etfs",
+   "label": "Wealth: ETFs",
+   "note": "Reported from Oct 2026 only"
+  },
+  {
+   "key": "sicavs",
+   "label": "Wealth: SICAVs",
+   "note": "Reported from Oct 2026 only"
+  },
+  {
+   "key": "other_wealth",
+   "label": "Wealth: Other",
+   "note": "Reported from Oct 2026 only"
+  },
+  {
+   "key": "institutional",
+   "label": "Institutional (total)",
+   "note": "Reported as 'Total Institutional Accounts' through Sep 2026 and 'Institutional' from Oct 2026"
+  },
+  {
+   "key": "advisory",
+   "label": "Institutional: Advisory",
+   "note": "Reported through Sep 2026; not split out from Oct 2026"
+  },
+  {
+   "key": "subadvisory",
+   "label": "Institutional: Subadvisory",
+   "note": "Single line Apr 2025 - Sep 2026"
+  },
+  {
+   "key": "japan_sub",
+   "label": "Institutional: Japan Subadvisory",
+   "note": "Reported through Mar 2025"
+  },
+  {
+   "key": "sub_ex_japan",
+   "label": "Institutional: Subadvisory ex-Japan",
+   "note": "Reported through Mar 2025"
+  },
+  {
+   "key": "cef",
+   "label": "Closed-end Funds",
+   "note": null
+  }
+ ],
+ "columns": {
+  "beg": "Beginning AUM",
+  "net": "Net flows",
+  "mkt": "Market appreciation/(depreciation)",
+  "dist": "Distributions",
+  "xfer": "Transfers",
+  "end": "Ending AUM",
+  "og_ann_pct": "Organic growth, annualized % (DERIVED: net flows / beginning AUM x 12)"
+ },
+ "notes": [
+  "Source: Cohen & Steers monthly preliminary AUM and net flows releases (unaudited, preliminary; quarterly 8-K figures can differ slightly). $ millions, as reported.",
+  "Disclosed every month, by investment vehicle: beginning AUM, net flows, market appreciation/(depreciation), distributions and ending AUM. A 'Transfers' column (moves between vehicles, nets to zero in total) appears only in months where transfers occurred; other months it is blank (not disclosed, not zero).",
+  "Vehicle detail changed over time: Advisory / Japan Subadvisory / Subadvisory ex-Japan through Mar 2025; Advisory / Subadvisory Apr 2025 - Sep 2026; from Oct 2026 Institutional is one line and Wealth is split into Mutual Funds, ETFs, SICAVs and Other Wealth. Open-end Funds (through Sep 2026) = Total Wealth (from Oct 2026); Total Institutional Accounts = Institutional. Unreported splits are left blank, never estimated.",
+  "Not disclosed monthly: flows by strategy (real estate, preferreds, infrastructure...), gross sales vs redemptions, fee rates or revenue. Closed-end fund net flows reflect offerings/ATM issuance and are often nil.",
+  "Organic growth % (annualized) is DERIVED here: net flows / beginning AUM x 12. Everything else is reported."
+ ],
+ "discrepancies": {
+  "2026-09": [
+   "subadvisory: beg+net+mkt+dist = 14,365 vs reported end 14,419",
+   "institutional.mkt: components sum -2,211 vs reported -2,157 (advisory+subadvisory)"
+  ]
+ },
+ "warnings": [],
+ "months": [
+  {
+   "month": "2021-11",
+   "rows": {
+    "advisory": {
+     "beg": 23570.0,
+     "net": -119.0,
+     "mkt": -367.0,
+     "dist": 0.0,
+     "end": 23084.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -6.06
+    },
+    "japan_sub": {
+     "beg": 10787.0,
+     "net": -46.0,
+     "mkt": -46.0,
+     "dist": -93.0,
+     "end": 10602.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": -5.12
+    },
+    "sub_ex_japan": {
+     "beg": 6663.0,
+     "net": -18.0,
+     "mkt": -157.0,
+     "dist": 0.0,
+     "end": 6488.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -3.24
+    },
+    "institutional": {
+     "beg": 41020.0,
+     "net": -183.0,
+     "mkt": -570.0,
+     "dist": -93.0,
+     "end": 40174.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -5.35
+    },
+    "wealth": {
+     "beg": 47883.0,
+     "net": 374.0,
+     "mkt": -585.0,
+     "dist": -62.0,
+     "end": 47610.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 9.37
+    },
+    "cef": {
+     "beg": 12691.0,
+     "net": 10.0,
+     "mkt": -216.0,
+     "dist": -49.0,
+     "end": 12436.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.95
+    },
+    "total": {
+     "beg": 101594.0,
+     "net": 201.0,
+     "mkt": -1371.0,
+     "dist": -204.0,
+     "end": 100220.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 2.37
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2021-12-08",
+   "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-november-2021-301440684.html",
+   "source": "PR Newswire",
+   "period_end": "2021-11-30",
+   "checks": []
+  },
+  {
+   "month": "2021-12",
+   "rows": {
+    "advisory": {
+     "beg": 23084.0,
+     "net": 29.0,
+     "mkt": 1460.0,
+     "dist": 0.0,
+     "xfer": 26.0,
+     "end": 24599.0,
+     "label": "Advisory",
+     "og_ann_pct": 1.51
+    },
+    "japan_sub": {
+     "beg": 10602.0,
+     "net": -66.0,
+     "mkt": 885.0,
+     "dist": -92.0,
+     "xfer": 0.0,
+     "end": 11329.0,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": -7.47
+    },
+    "sub_ex_japan": {
+     "beg": 6488.0,
+     "net": -71.0,
+     "mkt": 382.0,
+     "dist": 0.0,
+     "xfer": 0.0,
+     "end": 6799.0,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -13.13
+    },
+    "institutional": {
+     "beg": 40174.0,
+     "net": -108.0,
+     "mkt": 2727.0,
+     "dist": -92.0,
+     "xfer": 26.0,
+     "end": 42727.0,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -3.23
+    },
+    "wealth": {
+     "beg": 47610.0,
+     "net": 1556.0,
+     "mkt": 2756.0,
+     "dist": -985.0,
+     "xfer": -26.0,
+     "end": 50911.0,
+     "label": "Open-end Funds",
+     "og_ann_pct": 39.22
+    },
+    "cef": {
+     "beg": 12436.0,
+     "net": 4.0,
+     "mkt": 632.0,
+     "dist": -81.0,
+     "xfer": 0.0,
+     "end": 12991.0,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.39
+    },
+    "total": {
+     "beg": 100220.0,
+     "net": 1452.0,
+     "mkt": 6115.0,
+     "dist": -1158.0,
+     "xfer": 0.0,
+     "end": 106629.0,
+     "label": "Total AUM",
+     "og_ann_pct": 17.39
+    }
+   },
+   "transfers_column": true,
+   "release_date": "2022-01-10",
+   "url": "https://assets.cohenandsteers.com/assets/content/press_releases/CNS_Monthly_AUM_Release_Dec_2021.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-december-2021/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2021-12-31",
+   "checks": []
+  },
+  {
+   "month": "2022-01",
+   "rows": {
+    "advisory": {
+     "beg": 24599.0,
+     "net": 763.0,
+     "mkt": -1167.0,
+     "dist": 0.0,
+     "end": 24195.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 37.22
+    },
+    "japan_sub": {
+     "beg": 11329.0,
+     "net": -3.0,
+     "mkt": -697.0,
+     "dist": -94.0,
+     "end": 10535.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": -0.32
+    },
+    "sub_ex_japan": {
+     "beg": 6799.0,
+     "net": -28.0,
+     "mkt": -367.0,
+     "dist": 0.0,
+     "end": 6404.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -4.94
+    },
+    "institutional": {
+     "beg": 42727.0,
+     "net": 732.0,
+     "mkt": -2231.0,
+     "dist": -94.0,
+     "end": 41134.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 20.56
+    },
+    "wealth": {
+     "beg": 50911.0,
+     "net": 201.0,
+     "mkt": -2621.0,
+     "dist": -57.0,
+     "end": 48434.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 4.74
+    },
+    "cef": {
+     "beg": 12991.0,
+     "net": 66.0,
+     "mkt": -502.0,
+     "dist": -49.0,
+     "end": 12506.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 6.1
+    },
+    "total": {
+     "beg": 106629.0,
+     "net": 999.0,
+     "mkt": -5354.0,
+     "dist": -200.0,
+     "end": 102074.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 11.24
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2022-02-08",
+   "url": "https://assets.cohenandsteers.com/assets/content/press_releases/CNS_Monthly_AUM_Release_Jan_2022.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-january-2022/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2022-01-31",
+   "checks": []
+  },
+  {
+   "month": "2022-02",
+   "rows": {
+    "advisory": {
+     "beg": 24195.0,
+     "net": -100.0,
+     "mkt": -726.0,
+     "dist": 0.0,
+     "end": 23369.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -4.96
+    },
+    "japan_sub": {
+     "beg": 10535.0,
+     "net": 59.0,
+     "mkt": -435.0,
+     "dist": -92.0,
+     "end": 10067.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 6.72
+    },
+    "sub_ex_japan": {
+     "beg": 6404.0,
+     "net": 17.0,
+     "mkt": -149.0,
+     "dist": 0.0,
+     "end": 6272.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": 3.19
+    },
+    "institutional": {
+     "beg": 41134.0,
+     "net": -24.0,
+     "mkt": -1310.0,
+     "dist": -92.0,
+     "end": 39708.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -0.7
+    },
+    "wealth": {
+     "beg": 48434.0,
+     "net": 195.0,
+     "mkt": -1798.0,
+     "dist": -56.0,
+     "end": 46775.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 4.83
+    },
+    "cef": {
+     "beg": 12506.0,
+     "net": 308.0,
+     "mkt": -349.0,
+     "dist": -49.0,
+     "end": 12416.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 29.55
+    },
+    "total": {
+     "beg": 102074.0,
+     "net": 479.0,
+     "mkt": -3457.0,
+     "dist": -197.0,
+     "end": 98899.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 5.63
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2022-03-08",
+   "url": "https://assets.cohenandsteers.com/assets/content/press_releases/CNS_Monthly_AUM_Release_Feb_2022.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-february-2022/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2022-02-28",
+   "checks": []
+  },
+  {
+   "month": "2022-03",
+   "rows": {
+    "advisory": {
+     "beg": 23369.0,
+     "net": -577.0,
+     "mkt": 934.0,
+     "dist": 0.0,
+     "end": 23726.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -29.63
+    },
+    "japan_sub": {
+     "beg": 10067.0,
+     "net": 60.0,
+     "mkt": 650.0,
+     "dist": -85.0,
+     "end": 10692.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 7.15
+    },
+    "sub_ex_japan": {
+     "beg": 6272.0,
+     "net": -68.0,
+     "mkt": 334.0,
+     "dist": 0.0,
+     "end": 6538.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -13.01
+    },
+    "institutional": {
+     "beg": 39708.0,
+     "net": -585.0,
+     "mkt": 1918.0,
+     "dist": -85.0,
+     "end": 40956.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -17.68
+    },
+    "wealth": {
+     "beg": 46775.0,
+     "net": -188.0,
+     "mkt": 1684.0,
+     "dist": -166.0,
+     "end": 48105.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": -4.82
+    },
+    "cef": {
+     "beg": 12416.0,
+     "net": 180.0,
+     "mkt": 514.0,
+     "dist": -49.0,
+     "end": 13061.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 17.4
+    },
+    "total": {
+     "beg": 98899.0,
+     "net": -593.0,
+     "mkt": 4116.0,
+     "dist": -300.0,
+     "end": 102122.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -7.2
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2022-04-11",
+   "url": "https://assets.cohenandsteers.com/assets/content/press_releases/CNS_Monthly_AUM_Release_Mar_2022.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-march-2022/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2022-03-31",
+   "checks": []
+  },
+  {
+   "month": "2022-04",
+   "rows": {
+    "advisory": {
+     "beg": 23726.0,
+     "net": -166.0,
+     "mkt": -1048.0,
+     "dist": 0.0,
+     "end": 22512.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -8.4
+    },
+    "japan_sub": {
+     "beg": 10692.0,
+     "net": -98.0,
+     "mkt": -377.0,
+     "dist": -84.0,
+     "end": 10133.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": -11.0
+    },
+    "sub_ex_japan": {
+     "beg": 6538.0,
+     "net": 34.0,
+     "mkt": -334.0,
+     "dist": 0.0,
+     "end": 6238.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": 6.24
+    },
+    "institutional": {
+     "beg": 40956.0,
+     "net": -230.0,
+     "mkt": -1759.0,
+     "dist": -84.0,
+     "end": 38883.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -6.74
+    },
+    "wealth": {
+     "beg": 48105.0,
+     "net": 232.0,
+     "mkt": -1763.0,
+     "dist": -53.0,
+     "end": 46521.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 5.79
+    },
+    "cef": {
+     "beg": 13061.0,
+     "net": 1.0,
+     "mkt": -412.0,
+     "dist": -51.0,
+     "end": 12599.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.09
+    },
+    "total": {
+     "beg": 102122.0,
+     "net": 3.0,
+     "mkt": -3934.0,
+     "dist": -188.0,
+     "end": 98003.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 0.04
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2022-05-09",
+   "url": "https://assets.cohenandsteers.com/assets/content/press_releases/CNS_Monthly_AUM_Release_Apr_2022.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-april-2022/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2022-04-30",
+   "checks": []
+  },
+  {
+   "month": "2022-05",
+   "rows": {
+    "advisory": {
+     "beg": 22512.0,
+     "net": -212.0,
+     "mkt": -689.0,
+     "dist": 0.0,
+     "end": 21611.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -11.3
+    },
+    "japan_sub": {
+     "beg": 10133.0,
+     "net": 14.0,
+     "mkt": -575.0,
+     "dist": -81.0,
+     "end": 9491.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 1.66
+    },
+    "sub_ex_japan": {
+     "beg": 6238.0,
+     "net": -43.0,
+     "mkt": -210.0,
+     "dist": 0.0,
+     "end": 5985.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -8.27
+    },
+    "institutional": {
+     "beg": 38883.0,
+     "net": -241.0,
+     "mkt": -1474.0,
+     "dist": -81.0,
+     "end": 37087.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -7.44
+    },
+    "wealth": {
+     "beg": 46521.0,
+     "net": -270.0,
+     "mkt": -1412.0,
+     "dist": -51.0,
+     "end": 44788.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": -6.96
+    },
+    "cef": {
+     "beg": 12599.0,
+     "net": 1.0,
+     "mkt": -125.0,
+     "dist": -51.0,
+     "end": 12424.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.1
+    },
+    "total": {
+     "beg": 98003.0,
+     "net": -510.0,
+     "mkt": -3011.0,
+     "dist": -183.0,
+     "end": 94299.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -6.24
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2022-06-08",
+   "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-may-2022-301564378.html",
+   "source": "PR Newswire",
+   "period_end": "2022-05-31",
+   "checks": []
+  },
+  {
+   "month": "2022-06",
+   "rows": {
+    "advisory": {
+     "beg": 21611.0,
+     "net": -30.0,
+     "mkt": -1446.0,
+     "dist": 0.0,
+     "end": 20135.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -1.67
+    },
+    "japan_sub": {
+     "beg": 9491.0,
+     "net": 107.0,
+     "mkt": -582.0,
+     "dist": -77.0,
+     "end": 8939.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 13.53
+    },
+    "sub_ex_japan": {
+     "beg": 5985.0,
+     "net": -81.0,
+     "mkt": -472.0,
+     "dist": 0.0,
+     "end": 5432.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -16.24
+    },
+    "institutional": {
+     "beg": 37087.0,
+     "net": -4.0,
+     "mkt": -2500.0,
+     "dist": -77.0,
+     "end": 34506.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -0.13
+    },
+    "wealth": {
+     "beg": 44788.0,
+     "net": -206.0,
+     "mkt": -2478.0,
+     "dist": -521.0,
+     "end": 41583.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": -5.52
+    },
+    "cef": {
+     "beg": 12424.0,
+     "net": 0.0,
+     "mkt": -600.0,
+     "dist": -51.0,
+     "end": 11773.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.0
+    },
+    "total": {
+     "beg": 94299.0,
+     "net": -210.0,
+     "mkt": -5578.0,
+     "dist": -649.0,
+     "end": 87862.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -2.67
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2022-07-11",
+   "url": "https://assets.cohenandsteers.com/assets/content/press_releases/CNS_Monthly_AUM_Release_June_2022.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-june-2022/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2022-06-30",
+   "checks": []
+  },
+  {
+   "month": "2022-07",
+   "rows": {
+    "advisory": {
+     "beg": 20135.0,
+     "net": 180.0,
+     "mkt": 1410.0,
+     "dist": 0.0,
+     "end": 21725.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 10.73
+    },
+    "japan_sub": {
+     "beg": 8939.0,
+     "net": 48.0,
+     "mkt": 798.0,
+     "dist": -81.0,
+     "end": 9704.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 6.44
+    },
+    "sub_ex_japan": {
+     "beg": 5432.0,
+     "net": -13.0,
+     "mkt": 411.0,
+     "dist": 0.0,
+     "end": 5830.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -2.87
+    },
+    "institutional": {
+     "beg": 34506.0,
+     "net": 215.0,
+     "mkt": 2619.0,
+     "dist": -81.0,
+     "end": 37259.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 7.48
+    },
+    "wealth": {
+     "beg": 41583.0,
+     "net": 109.0,
+     "mkt": 2722.0,
+     "dist": -51.0,
+     "end": 44363.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 3.15
+    },
+    "cef": {
+     "beg": 11773.0,
+     "net": 3.0,
+     "mkt": 654.0,
+     "dist": -51.0,
+     "end": 12379.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.31
+    },
+    "total": {
+     "beg": 87862.0,
+     "net": 327.0,
+     "mkt": 5995.0,
+     "dist": -183.0,
+     "end": 94001.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 4.47
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2022-08-09",
+   "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-july-2022-301602932.html",
+   "source": "PR Newswire",
+   "period_end": "2022-07-31",
+   "checks": []
+  },
+  {
+   "month": "2022-08",
+   "rows": {
+    "advisory": {
+     "beg": 21725.0,
+     "net": 46.0,
+     "mkt": -1052.0,
+     "dist": 0.0,
+     "end": 20719.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 2.54
+    },
+    "japan_sub": {
+     "beg": 9704.0,
+     "net": 24.0,
+     "mkt": -570.0,
+     "dist": -78.0,
+     "end": 9080.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 2.97
+    },
+    "sub_ex_japan": {
+     "beg": 5830.0,
+     "net": 229.0,
+     "mkt": -340.0,
+     "dist": 0.0,
+     "end": 5719.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": 47.14
+    },
+    "institutional": {
+     "beg": 37259.0,
+     "net": 299.0,
+     "mkt": -1962.0,
+     "dist": -78.0,
+     "end": 35518.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 9.63
+    },
+    "wealth": {
+     "beg": 44363.0,
+     "net": -105.0,
+     "mkt": -1921.0,
+     "dist": -51.0,
+     "end": 42286.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": -2.84
+    },
+    "cef": {
+     "beg": 12379.0,
+     "net": 3.0,
+     "mkt": -342.0,
+     "dist": -51.0,
+     "end": 11989.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.29
+    },
+    "total": {
+     "beg": 94001.0,
+     "net": 197.0,
+     "mkt": -4225.0,
+     "dist": -180.0,
+     "end": 89793.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 2.51
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2022-09-12",
+   "url": "https://assets.cohenandsteers.com/assets/content/press_releases/CNS_Monthly_AUM_Release_Aug_2022.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-august-2022/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2022-08-31",
+   "checks": []
+  },
+  {
+   "month": "2022-09",
+   "rows": {
+    "advisory": {
+     "beg": 20719.0,
+     "net": -446.0,
+     "mkt": -2299.0,
+     "dist": 0.0,
+     "end": 17974.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -25.83
+    },
+    "japan_sub": {
+     "beg": 9080.0,
+     "net": 59.0,
+     "mkt": -1148.0,
+     "dist": -76.0,
+     "end": 7915.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 7.8
+    },
+    "sub_ex_japan": {
+     "beg": 5719.0,
+     "net": -5.0,
+     "mkt": -736.0,
+     "dist": 0.0,
+     "end": 4978.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -1.05
+    },
+    "institutional": {
+     "beg": 35518.0,
+     "net": -392.0,
+     "mkt": -4183.0,
+     "dist": -76.0,
+     "end": 30867.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -13.24
+    },
+    "wealth": {
+     "beg": 42286.0,
+     "net": -736.0,
+     "mkt": -4013.0,
+     "dist": -191.0,
+     "end": 37346.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": -20.89
+    },
+    "cef": {
+     "beg": 11989.0,
+     "net": 5.0,
+     "mkt": -958.0,
+     "dist": -51.0,
+     "end": 10985.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.5
+    },
+    "total": {
+     "beg": 89793.0,
+     "net": -1123.0,
+     "mkt": -9154.0,
+     "dist": -318.0,
+     "end": 79198.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -15.01
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2022-10-10",
+   "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2022-301645134.html",
+   "source": "PR Newswire",
+   "period_end": "2022-09-30",
+   "checks": []
+  },
+  {
+   "month": "2022-10",
+   "rows": {
+    "advisory": {
+     "beg": 17974.0,
+     "net": -165.0,
+     "mkt": 371.0,
+     "dist": 0.0,
+     "end": 18180.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -11.02
+    },
+    "japan_sub": {
+     "beg": 7915.0,
+     "net": 95.0,
+     "mkt": 274.0,
+     "dist": -73.0,
+     "end": 8211.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 14.4
+    },
+    "sub_ex_japan": {
+     "beg": 4978.0,
+     "net": 131.0,
+     "mkt": 140.0,
+     "dist": 0.0,
+     "end": 5249.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": 31.58
+    },
+    "institutional": {
+     "beg": 30867.0,
+     "net": 61.0,
+     "mkt": 785.0,
+     "dist": -73.0,
+     "end": 31640.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 2.37
+    },
+    "wealth": {
+     "beg": 37346.0,
+     "net": -635.0,
+     "mkt": 565.0,
+     "dist": -48.0,
+     "end": 37228.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": -20.4
+    },
+    "cef": {
+     "beg": 10985.0,
+     "net": 4.0,
+     "mkt": 165.0,
+     "dist": -51.0,
+     "end": 11103.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.44
+    },
+    "total": {
+     "beg": 79198.0,
+     "net": -570.0,
+     "mkt": 1515.0,
+     "dist": -172.0,
+     "end": 79971.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -8.64
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2022-11-08",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2022/11/08213040/CNS-Monthly-AUM-Release-Oct-2022.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-october-2022/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2022-10-31",
+   "checks": []
+  },
+  {
+   "month": "2022-11",
+   "rows": {
+    "advisory": {
+     "beg": 18180.0,
+     "net": 152.0,
+     "mkt": 1240.0,
+     "dist": 0.0,
+     "end": 19572.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 10.03
+    },
+    "japan_sub": {
+     "beg": 8211.0,
+     "net": 86.0,
+     "mkt": 553.0,
+     "dist": -80.0,
+     "end": 8770.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 12.57
+    },
+    "sub_ex_japan": {
+     "beg": 5249.0,
+     "net": -45.0,
+     "mkt": 394.0,
+     "dist": 0.0,
+     "end": 5598.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -10.29
+    },
+    "institutional": {
+     "beg": 31640.0,
+     "net": 193.0,
+     "mkt": 2187.0,
+     "dist": -80.0,
+     "end": 33940.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 7.32
+    },
+    "wealth": {
+     "beg": 37228.0,
+     "net": -447.0,
+     "mkt": 1960.0,
+     "dist": -46.0,
+     "end": 38695.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": -14.41
+    },
+    "cef": {
+     "beg": 11103.0,
+     "net": 2.0,
+     "mkt": 495.0,
+     "dist": -51.0,
+     "end": 11549.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.22
+    },
+    "total": {
+     "beg": 79971.0,
+     "net": -252.0,
+     "mkt": 4642.0,
+     "dist": -177.0,
+     "end": 84184.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -3.78
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2022-12-08",
+   "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-november-2022-301698775.html",
+   "source": "PR Newswire",
+   "period_end": "2022-11-30",
+   "checks": []
+  },
+  {
+   "month": "2022-12",
+   "rows": {
+    "advisory": {
+     "beg": 19572.0,
+     "net": -379.0,
+     "mkt": -562.0,
+     "dist": 0.0,
+     "end": 18631.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -23.24
+    },
+    "japan_sub": {
+     "beg": 8770.0,
+     "net": 99.0,
+     "mkt": -409.0,
+     "dist": -84.0,
+     "end": 8376.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 13.55
+    },
+    "sub_ex_japan": {
+     "beg": 5598.0,
+     "net": -59.0,
+     "mkt": -173.0,
+     "dist": 0.0,
+     "end": 5366.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -12.65
+    },
+    "institutional": {
+     "beg": 33940.0,
+     "net": -339.0,
+     "mkt": -1144.0,
+     "dist": -84.0,
+     "end": 32373.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -11.99
+    },
+    "wealth": {
+     "beg": 38695.0,
+     "net": 76.0,
+     "mkt": -1206.0,
+     "dist": -662.0,
+     "end": 36903.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 2.36
+    },
+    "cef": {
+     "beg": 11549.0,
+     "net": 3.0,
+     "mkt": -262.0,
+     "dist": -141.0,
+     "end": 11149.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.31
+    },
+    "total": {
+     "beg": 84184.0,
+     "net": -260.0,
+     "mkt": -2612.0,
+     "dist": -887.0,
+     "end": 80425.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -3.71
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2023-01-10",
+   "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-december-2022-301718383.html",
+   "source": "PR Newswire",
+   "period_end": "2022-12-31",
+   "checks": []
+  },
+  {
+   "month": "2023-01",
+   "rows": {
+    "advisory": {
+     "beg": 18631.0,
+     "net": -197.0,
+     "mkt": 1544.0,
+     "dist": 0.0,
+     "end": 19978.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -12.69
+    },
+    "japan_sub": {
+     "beg": 8376.0,
+     "net": 89.0,
+     "mkt": 887.0,
+     "dist": -88.0,
+     "end": 9264.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 12.75
+    },
+    "sub_ex_japan": {
+     "beg": 5366.0,
+     "net": -4.0,
+     "mkt": 464.0,
+     "dist": 0.0,
+     "end": 5826.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -0.89
+    },
+    "institutional": {
+     "beg": 32373.0,
+     "net": -112.0,
+     "mkt": 2895.0,
+     "dist": -88.0,
+     "end": 35068.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -4.15
+    },
+    "wealth": {
+     "beg": 36903.0,
+     "net": 431.0,
+     "mkt": 3150.0,
+     "dist": -51.0,
+     "end": 40433.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 14.02
+    },
+    "cef": {
+     "beg": 11149.0,
+     "net": 3.0,
+     "mkt": 678.0,
+     "dist": -51.0,
+     "end": 11779.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.32
+    },
+    "total": {
+     "beg": 80425.0,
+     "net": 322.0,
+     "mkt": 6723.0,
+     "dist": -190.0,
+     "end": 87280.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 4.8
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2023-02-08",
+   "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-january-2023-301742486.html",
+   "source": "PR Newswire",
+   "period_end": "2023-01-31",
+   "checks": []
+  },
+  {
+   "month": "2023-02",
+   "rows": {
+    "advisory": {
+     "beg": 19978.0,
+     "net": -148.0,
+     "mkt": -803.0,
+     "dist": 0.0,
+     "end": 19027.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -8.89
+    },
+    "japan_sub": {
+     "beg": 9264.0,
+     "net": 46.0,
+     "mkt": -416.0,
+     "dist": -84.0,
+     "end": 8810.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 5.96
+    },
+    "sub_ex_japan": {
+     "beg": 5826.0,
+     "net": -28.0,
+     "mkt": -275.0,
+     "dist": 0.0,
+     "end": 5523.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -5.77
+    },
+    "institutional": {
+     "beg": 35068.0,
+     "net": -130.0,
+     "mkt": -1494.0,
+     "dist": -84.0,
+     "end": 33360.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -4.45
+    },
+    "wealth": {
+     "beg": 40433.0,
+     "net": 7.0,
+     "mkt": -1645.0,
+     "dist": -50.0,
+     "end": 38745.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 0.21
+    },
+    "cef": {
+     "beg": 11779.0,
+     "net": 5.0,
+     "mkt": -346.0,
+     "dist": -51.0,
+     "end": 11387.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.51
+    },
+    "total": {
+     "beg": 87280.0,
+     "net": -118.0,
+     "mkt": -3485.0,
+     "dist": -185.0,
+     "end": 83492.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -1.62
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2023-03-08",
+   "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-february-2023-301766257.html",
+   "source": "PR Newswire",
+   "period_end": "2023-02-28",
+   "checks": []
+  },
+  {
+   "month": "2023-03",
+   "rows": {
+    "advisory": {
+     "beg": 19027.0,
+     "net": -53.0,
+     "mkt": -484.0,
+     "dist": 0.0,
+     "end": 18490.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -3.34
+    },
+    "japan_sub": {
+     "beg": 8810.0,
+     "net": 191.0,
+     "mkt": -201.0,
+     "dist": -87.0,
+     "end": 8713.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 26.02
+    },
+    "sub_ex_japan": {
+     "beg": 5523.0,
+     "net": -14.0,
+     "mkt": -108.0,
+     "dist": 0.0,
+     "end": 5401.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -3.04
+    },
+    "institutional": {
+     "beg": 33360.0,
+     "net": 124.0,
+     "mkt": -793.0,
+     "dist": -87.0,
+     "end": 32604.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 4.46
+    },
+    "wealth": {
+     "beg": 38745.0,
+     "net": -742.0,
+     "mkt": -1396.0,
+     "dist": -180.0,
+     "end": 36427.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": -22.98
+    },
+    "cef": {
+     "beg": 11387.0,
+     "net": -82.0,
+     "mkt": -380.0,
+     "dist": -51.0,
+     "end": 10874.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": -8.64
+    },
+    "total": {
+     "beg": 83492.0,
+     "net": -700.0,
+     "mkt": -2569.0,
+     "dist": -318.0,
+     "end": 79905.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -10.06
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2023-04-11",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2023/04/11210927/CNS-Monthly-AUM-Release-March-2023.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-march-2023/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2023-03-31",
+   "checks": []
+  },
+  {
+   "month": "2023-04",
+   "rows": {
+    "advisory": {
+     "beg": 18490.0,
+     "net": -36.0,
+     "mkt": 408.0,
+     "dist": 0.0,
+     "end": 18862.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -2.34
+    },
+    "japan_sub": {
+     "beg": 8713.0,
+     "net": 64.0,
+     "mkt": 159.0,
+     "dist": -88.0,
+     "end": 8848.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 8.81
+    },
+    "sub_ex_japan": {
+     "beg": 5401.0,
+     "net": 17.0,
+     "mkt": 115.0,
+     "dist": 0.0,
+     "end": 5533.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": 3.78
+    },
+    "institutional": {
+     "beg": 32604.0,
+     "net": 45.0,
+     "mkt": 682.0,
+     "dist": -88.0,
+     "end": 33243.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 1.66
+    },
+    "wealth": {
+     "beg": 36427.0,
+     "net": -132.0,
+     "mkt": 492.0,
+     "dist": -46.0,
+     "end": 36741.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": -4.35
+    },
+    "cef": {
+     "beg": 10874.0,
+     "net": 1.0,
+     "mkt": 135.0,
+     "dist": -51.0,
+     "end": 10959.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.11
+    },
+    "total": {
+     "beg": 79905.0,
+     "net": -86.0,
+     "mkt": 1309.0,
+     "dist": -185.0,
+     "end": 80943.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -1.29
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2023-05-08",
+   "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-april-2023-301818669.html",
+   "source": "PR Newswire",
+   "period_end": "2023-04-30",
+   "checks": []
+  },
+  {
+   "month": "2023-05",
+   "rows": {
+    "advisory": {
+     "beg": 18862.0,
+     "net": -75.0,
+     "mkt": -696.0,
+     "dist": 0.0,
+     "xfer": 160.0,
+     "end": 18251.0,
+     "label": "Advisory",
+     "og_ann_pct": -4.77
+    },
+    "japan_sub": {
+     "beg": 8848.0,
+     "net": 49.0,
+     "mkt": -264.0,
+     "dist": -86.0,
+     "xfer": 0.0,
+     "end": 8547.0,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 6.65
+    },
+    "sub_ex_japan": {
+     "beg": 5533.0,
+     "net": -4.0,
+     "mkt": -242.0,
+     "dist": 0.0,
+     "xfer": 0.0,
+     "end": 5287.0,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -0.87
+    },
+    "institutional": {
+     "beg": 33243.0,
+     "net": -30.0,
+     "mkt": -1202.0,
+     "dist": -86.0,
+     "xfer": 160.0,
+     "end": 32085.0,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -1.08
+    },
+    "wealth": {
+     "beg": 36741.0,
+     "net": -431.0,
+     "mkt": -990.0,
+     "dist": -44.0,
+     "xfer": -160.0,
+     "end": 35116.0,
+     "label": "Open-end Funds",
+     "og_ann_pct": -14.08
+    },
+    "cef": {
+     "beg": 10959.0,
+     "net": 0.0,
+     "mkt": -257.0,
+     "dist": -51.0,
+     "xfer": 0.0,
+     "end": 10651.0,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.0
+    },
+    "total": {
+     "beg": 80943.0,
+     "net": -461.0,
+     "mkt": -2449.0,
+     "dist": -181.0,
+     "xfer": 0.0,
+     "end": 77852.0,
+     "label": "Total AUM",
+     "og_ann_pct": -6.83
+    }
+   },
+   "transfers_column": true,
+   "release_date": "2023-06-08",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2023/06/08203313/CNS-Monthly-AUM-Release-May-2023.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-may-2023/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2023-05-31",
+   "checks": []
+  },
+  {
+   "month": "2023-06",
+   "rows": {
+    "advisory": {
+     "beg": 18251.0,
+     "net": -103.0,
+     "mkt": 676.0,
+     "dist": 0.0,
+     "end": 18824.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -6.77
+    },
+    "japan_sub": {
+     "beg": 8547.0,
+     "net": 81.0,
+     "mkt": 416.0,
+     "dist": -84.0,
+     "end": 8960.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 11.37
+    },
+    "sub_ex_japan": {
+     "beg": 5287.0,
+     "net": 1.0,
+     "mkt": 203.0,
+     "dist": 0.0,
+     "end": 5491.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": 0.23
+    },
+    "institutional": {
+     "beg": 32085.0,
+     "net": -21.0,
+     "mkt": 1295.0,
+     "dist": -84.0,
+     "end": 33275.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -0.79
+    },
+    "wealth": {
+     "beg": 35116.0,
+     "net": 56.0,
+     "mkt": 1292.0,
+     "dist": -255.0,
+     "end": 36209.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 1.91
+    },
+    "cef": {
+     "beg": 10651.0,
+     "net": 1.0,
+     "mkt": 329.0,
+     "dist": -52.0,
+     "end": 10929.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.11
+    },
+    "total": {
+     "beg": 77852.0,
+     "net": 36.0,
+     "mkt": 2916.0,
+     "dist": -391.0,
+     "end": 80413.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 0.55
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2023-07-11",
+   "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-june-2023-301874834.html",
+   "source": "PR Newswire",
+   "period_end": "2023-06-30",
+   "checks": []
+  },
+  {
+   "month": "2023-07",
+   "rows": {
+    "advisory": {
+     "beg": 18824.0,
+     "net": 187.0,
+     "mkt": 516.0,
+     "dist": 0.0,
+     "end": 19527.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 11.92
+    },
+    "japan_sub": {
+     "beg": 8960.0,
+     "net": 26.0,
+     "mkt": 240.0,
+     "dist": -65.0,
+     "end": 9161.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 3.48
+    },
+    "sub_ex_japan": {
+     "beg": 5491.0,
+     "net": 79.0,
+     "mkt": 167.0,
+     "dist": 0.0,
+     "end": 5737.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": 17.26
+    },
+    "institutional": {
+     "beg": 33275.0,
+     "net": 292.0,
+     "mkt": 923.0,
+     "dist": -65.0,
+     "end": 34425.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 10.53
+    },
+    "wealth": {
+     "beg": 36209.0,
+     "net": -64.0,
+     "mkt": 753.0,
+     "dist": -46.0,
+     "end": 36852.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": -2.12
+    },
+    "cef": {
+     "beg": 10929.0,
+     "net": 3.0,
+     "mkt": 183.0,
+     "dist": -51.0,
+     "end": 11064.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.33
+    },
+    "total": {
+     "beg": 80413.0,
+     "net": 231.0,
+     "mkt": 1859.0,
+     "dist": -162.0,
+     "end": 82341.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 3.45
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2023-08-08",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2023/08/08202759/CNS-Monthly-AUM-Release-July-2023.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-july-2023/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2023-07-31",
+   "checks": []
+  },
+  {
+   "month": "2023-08",
+   "rows": {
+    "advisory": {
+     "beg": 19527.0,
+     "net": 90.0,
+     "mkt": -571.0,
+     "dist": 0.0,
+     "end": 19046.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 5.53
+    },
+    "japan_sub": {
+     "beg": 9161.0,
+     "net": 2.0,
+     "mkt": -291.0,
+     "dist": -62.0,
+     "end": 8810.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 0.26
+    },
+    "sub_ex_japan": {
+     "beg": 5737.0,
+     "net": 93.0,
+     "mkt": -205.0,
+     "dist": 0.0,
+     "end": 5625.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": 19.45
+    },
+    "institutional": {
+     "beg": 34425.0,
+     "net": 185.0,
+     "mkt": -1067.0,
+     "dist": -62.0,
+     "end": 33481.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 6.45
+    },
+    "wealth": {
+     "beg": 36852.0,
+     "net": -173.0,
+     "mkt": -800.0,
+     "dist": -44.0,
+     "end": 35835.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": -5.63
+    },
+    "cef": {
+     "beg": 11064.0,
+     "net": 0.0,
+     "mkt": -298.0,
+     "dist": -51.0,
+     "end": 10715.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.0
+    },
+    "total": {
+     "beg": 82341.0,
+     "net": 12.0,
+     "mkt": -2165.0,
+     "dist": -157.0,
+     "end": 80031.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 0.17
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2023-09-11",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2023/09/11213329/CNS-Monthly-AUM-Release-Aug-2023.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-august-2023/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2023-08-31",
+   "checks": []
+  },
+  {
+   "month": "2023-09",
+   "rows": {
+    "advisory": {
+     "beg": 19046.0,
+     "net": -87.0,
+     "mkt": -1055.0,
+     "dist": 0.0,
+     "end": 17904.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -5.48
+    },
+    "japan_sub": {
+     "beg": 8810.0,
+     "net": -30.0,
+     "mkt": -630.0,
+     "dist": -60.0,
+     "end": 8090.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": -4.09
+    },
+    "sub_ex_japan": {
+     "beg": 5625.0,
+     "net": -49.0,
+     "mkt": -354.0,
+     "dist": 0.0,
+     "end": 5222.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -10.45
+    },
+    "institutional": {
+     "beg": 33481.0,
+     "net": -166.0,
+     "mkt": -2039.0,
+     "dist": -60.0,
+     "end": 31216.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -5.95
+    },
+    "wealth": {
+     "beg": 35835.0,
+     "net": -123.0,
+     "mkt": -1869.0,
+     "dist": -172.0,
+     "end": 33671.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": -4.12
+    },
+    "cef": {
+     "beg": 10715.0,
+     "net": -1.0,
+     "mkt": -392.0,
+     "dist": -51.0,
+     "end": 10271.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": -0.11
+    },
+    "total": {
+     "beg": 80031.0,
+     "net": -290.0,
+     "mkt": -4300.0,
+     "dist": -283.0,
+     "end": 75158.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -4.35
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2023-10-09",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2023/10/09203402/CNS-Monthly-AUM-Release-Sep-2023.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2023/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2023-09-30",
+   "checks": []
+  },
+  {
+   "month": "2023-10",
+   "rows": {
+    "advisory": {
+     "beg": 17904.0,
+     "net": -74.0,
+     "mkt": -564.0,
+     "dist": 0.0,
+     "end": 17266.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -4.96
+    },
+    "japan_sub": {
+     "beg": 8090.0,
+     "net": 4.0,
+     "mkt": -325.0,
+     "dist": -60.0,
+     "end": 7709.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 0.59
+    },
+    "sub_ex_japan": {
+     "beg": 5222.0,
+     "net": -234.0,
+     "mkt": -183.0,
+     "dist": 0.0,
+     "end": 4805.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -53.77
+    },
+    "institutional": {
+     "beg": 31216.0,
+     "net": -304.0,
+     "mkt": -1072.0,
+     "dist": -60.0,
+     "end": 29780.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -11.69
+    },
+    "wealth": {
+     "beg": 33671.0,
+     "net": -423.0,
+     "mkt": -835.0,
+     "dist": -43.0,
+     "end": 32370.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": -15.08
+    },
+    "cef": {
+     "beg": 10271.0,
+     "net": -5.0,
+     "mkt": -180.0,
+     "dist": -51.0,
+     "end": 10035.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": -0.58
+    },
+    "total": {
+     "beg": 75158.0,
+     "net": -732.0,
+     "mkt": -2087.0,
+     "dist": -154.0,
+     "end": 72185.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -11.69
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2023-11-08",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2023/11/08213529/CNS-Monthly-AUM-Release-Oct-2023.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-october-2023/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2023-10-31",
+   "checks": []
+  },
+  {
+   "month": "2023-11",
+   "rows": {
+    "advisory": {
+     "beg": 17266.0,
+     "net": -113.0,
+     "mkt": 1700.0,
+     "dist": 0.0,
+     "end": 18853.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -7.85
+    },
+    "japan_sub": {
+     "beg": 7709.0,
+     "net": -12.0,
+     "mkt": 912.0,
+     "dist": -61.0,
+     "end": 8548.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": -1.87
+    },
+    "sub_ex_japan": {
+     "beg": 4805.0,
+     "net": -23.0,
+     "mkt": 532.0,
+     "dist": 0.0,
+     "end": 5314.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -5.74
+    },
+    "institutional": {
+     "beg": 29780.0,
+     "net": -148.0,
+     "mkt": 3144.0,
+     "dist": -61.0,
+     "end": 32715.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -5.96
+    },
+    "wealth": {
+     "beg": 32370.0,
+     "net": -117.0,
+     "mkt": 3102.0,
+     "dist": -43.0,
+     "end": 35312.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": -4.34
+    },
+    "cef": {
+     "beg": 10035.0,
+     "net": 1.0,
+     "mkt": 716.0,
+     "dist": -51.0,
+     "end": 10701.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.12
+    },
+    "total": {
+     "beg": 72185.0,
+     "net": -264.0,
+     "mkt": 6962.0,
+     "dist": -155.0,
+     "end": 78728.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -4.39
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2023-12-11",
+   "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-november-2023-302011855.html",
+   "source": "PR Newswire",
+   "period_end": "2023-11-30",
+   "checks": []
+  },
+  {
+   "month": "2023-12",
+   "rows": {
+    "advisory": {
+     "beg": 18853.0,
+     "net": 157.0,
+     "mkt": 1254.0,
+     "dist": 0.0,
+     "end": 20264.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 9.99
+    },
+    "japan_sub": {
+     "beg": 8548.0,
+     "net": -160.0,
+     "mkt": 702.0,
+     "dist": -64.0,
+     "end": 9026.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": -22.46
+    },
+    "sub_ex_japan": {
+     "beg": 5314.0,
+     "net": 28.0,
+     "mkt": 396.0,
+     "dist": 0.0,
+     "end": 5738.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": 6.32
+    },
+    "institutional": {
+     "beg": 32715.0,
+     "net": 25.0,
+     "mkt": 2352.0,
+     "dist": -64.0,
+     "end": 35028.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 0.92
+    },
+    "wealth": {
+     "beg": 35312.0,
+     "net": 36.0,
+     "mkt": 1977.0,
+     "dist": -293.0,
+     "end": 37032.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 1.22
+    },
+    "cef": {
+     "beg": 10701.0,
+     "net": 0.0,
+     "mkt": 426.0,
+     "dist": -51.0,
+     "end": 11076.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.0
+    },
+    "total": {
+     "beg": 78728.0,
+     "net": 61.0,
+     "mkt": 4755.0,
+     "dist": -408.0,
+     "end": 83136.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 0.93
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2024-01-09",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2024/01/09221045/CNS-Monthly-AUM-Release-Dec-2023.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-december-2023/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2023-12-31",
+   "checks": []
+  },
+  {
+   "month": "2024-01",
+   "rows": {
+    "advisory": {
+     "beg": 20264.0,
+     "net": -1744.0,
+     "mkt": -552.0,
+     "dist": 0.0,
+     "end": 17968.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -103.28
+    },
+    "japan_sub": {
+     "beg": 9026.0,
+     "net": -64.0,
+     "mkt": -352.0,
+     "dist": -62.0,
+     "end": 8548.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": -8.51
+    },
+    "sub_ex_japan": {
+     "beg": 5738.0,
+     "net": -19.0,
+     "mkt": -223.0,
+     "dist": 0.0,
+     "end": 5496.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -3.97
+    },
+    "institutional": {
+     "beg": 35028.0,
+     "net": -1827.0,
+     "mkt": -1127.0,
+     "dist": -62.0,
+     "end": 32012.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -62.59
+    },
+    "wealth": {
+     "beg": 37032.0,
+     "net": 356.0,
+     "mkt": -909.0,
+     "dist": -44.0,
+     "end": 36435.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 11.54
+    },
+    "cef": {
+     "beg": 11076.0,
+     "net": 1.0,
+     "mkt": -157.0,
+     "dist": -51.0,
+     "end": 10869.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.11
+    },
+    "total": {
+     "beg": 83136.0,
+     "net": -1470.0,
+     "mkt": -2193.0,
+     "dist": -157.0,
+     "end": 79316.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -21.22
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2024-02-08",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2024/02/09134839/CNS-Monthly-AUM-Release-Jan-2024.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-january-2024/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2024-01-31",
+   "checks": []
+  },
+  {
+   "month": "2024-02",
+   "rows": {
+    "advisory": {
+     "beg": 17968.0,
+     "net": -776.0,
+     "mkt": 180.0,
+     "dist": 0.0,
+     "end": 17372.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -51.83
+    },
+    "japan_sub": {
+     "beg": 8548.0,
+     "net": -26.0,
+     "mkt": 181.0,
+     "dist": -60.0,
+     "end": 8643.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": -3.65
+    },
+    "sub_ex_japan": {
+     "beg": 5496.0,
+     "net": -18.0,
+     "mkt": 39.0,
+     "dist": 0.0,
+     "end": 5517.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -3.93
+    },
+    "institutional": {
+     "beg": 32012.0,
+     "net": -820.0,
+     "mkt": 400.0,
+     "dist": -60.0,
+     "end": 31532.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -30.74
+    },
+    "wealth": {
+     "beg": 36435.0,
+     "net": 136.0,
+     "mkt": 619.0,
+     "dist": -44.0,
+     "end": 37146.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 4.48
+    },
+    "cef": {
+     "beg": 10869.0,
+     "net": 1.0,
+     "mkt": 152.0,
+     "dist": -51.0,
+     "end": 10971.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.11
+    },
+    "total": {
+     "beg": 79316.0,
+     "net": -683.0,
+     "mkt": 1171.0,
+     "dist": -155.0,
+     "end": 79649.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -10.33
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2024-03-11",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2024/03/11203110/CNS-Monthly-AUM-Release-Feb-2024.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-february-2024/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2024-02-29",
+   "checks": []
+  },
+  {
+   "month": "2024-03",
+   "rows": {
+    "advisory": {
+     "beg": 17372.0,
+     "net": 324.0,
+     "mkt": 500.0,
+     "dist": 0.0,
+     "end": 18196.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 22.38
+    },
+    "japan_sub": {
+     "beg": 8643.0,
+     "net": -221.0,
+     "mkt": 176.0,
+     "dist": -63.0,
+     "end": 8535.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": -30.68
+    },
+    "sub_ex_japan": {
+     "beg": 5517.0,
+     "net": 1.0,
+     "mkt": 175.0,
+     "dist": 0.0,
+     "end": 5693.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": 0.22
+    },
+    "institutional": {
+     "beg": 31532.0,
+     "net": 104.0,
+     "mkt": 851.0,
+     "dist": -63.0,
+     "end": 32424.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 3.96
+    },
+    "wealth": {
+     "beg": 37146.0,
+     "net": 78.0,
+     "mkt": 645.0,
+     "dist": -184.0,
+     "end": 37685.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 2.52
+    },
+    "cef": {
+     "beg": 10971.0,
+     "net": 1.0,
+     "mkt": 205.0,
+     "dist": -51.0,
+     "end": 11126.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.11
+    },
+    "total": {
+     "beg": 79649.0,
+     "net": 183.0,
+     "mkt": 1701.0,
+     "dist": -298.0,
+     "end": 81235.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 2.76
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2024-04-08",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2024/04/08205736/CNS-Monthly-AUM-Release-Mar-2024.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-march-2024/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2024-03-31",
+   "checks": []
+  },
+  {
+   "month": "2024-04",
+   "rows": {
+    "advisory": {
+     "beg": 18196.0,
+     "net": -17.0,
+     "mkt": -802.0,
+     "dist": 0.0,
+     "end": 17377.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -1.12
+    },
+    "japan_sub": {
+     "beg": 8535.0,
+     "net": -58.0,
+     "mkt": -531.0,
+     "dist": -56.0,
+     "end": 7890.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": -8.15
+    },
+    "sub_ex_japan": {
+     "beg": 5693.0,
+     "net": -9.0,
+     "mkt": -306.0,
+     "dist": 0.0,
+     "end": 5378.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -1.9
+    },
+    "institutional": {
+     "beg": 32424.0,
+     "net": -84.0,
+     "mkt": -1639.0,
+     "dist": -56.0,
+     "end": 30645.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -3.11
+    },
+    "wealth": {
+     "beg": 37685.0,
+     "net": 9.0,
+     "mkt": -1881.0,
+     "dist": -44.0,
+     "end": 35769.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 0.29
+    },
+    "cef": {
+     "beg": 11126.0,
+     "net": 1.0,
+     "mkt": -330.0,
+     "dist": -51.0,
+     "end": 10746.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.11
+    },
+    "total": {
+     "beg": 81235.0,
+     "net": -74.0,
+     "mkt": -3850.0,
+     "dist": -151.0,
+     "end": 77160.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -1.09
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2024-05-08",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2024/05/08211702/CNS-Monthly-AUM-Release-Apr-2024.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-april-2024/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2024-04-30",
+   "checks": []
+  },
+  {
+   "month": "2024-05",
+   "rows": {
+    "advisory": {
+     "beg": 17377.0,
+     "net": 61.0,
+     "mkt": 823.0,
+     "dist": 0.0,
+     "end": 18261.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 4.21
+    },
+    "japan_sub": {
+     "beg": 7890.0,
+     "net": -84.0,
+     "mkt": 463.0,
+     "dist": -55.0,
+     "end": 8214.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": -12.78
+    },
+    "sub_ex_japan": {
+     "beg": 5378.0,
+     "net": -7.0,
+     "mkt": 276.0,
+     "dist": 0.0,
+     "end": 5647.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -1.56
+    },
+    "institutional": {
+     "beg": 30645.0,
+     "net": -30.0,
+     "mkt": 1562.0,
+     "dist": -55.0,
+     "end": 32122.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -1.17
+    },
+    "wealth": {
+     "beg": 35769.0,
+     "net": -64.0,
+     "mkt": 1623.0,
+     "dist": -44.0,
+     "end": 37284.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": -2.15
+    },
+    "cef": {
+     "beg": 10746.0,
+     "net": 1.0,
+     "mkt": 386.0,
+     "dist": -51.0,
+     "end": 11082.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.11
+    },
+    "total": {
+     "beg": 77160.0,
+     "net": -93.0,
+     "mkt": 3571.0,
+     "dist": -150.0,
+     "end": 80488.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -1.45
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2024-06-10",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2024/06/10202939/CNS-Monthly-AUM-Release-May-2024.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-may-2024/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2024-05-31",
+   "checks": []
+  },
+  {
+   "month": "2024-06",
+   "rows": {
+    "advisory": {
+     "beg": 18261.0,
+     "net": 29.0,
+     "mkt": 77.0,
+     "dist": 0.0,
+     "end": 18367.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 1.91
+    },
+    "japan_sub": {
+     "beg": 8214.0,
+     "net": -43.0,
+     "mkt": 198.0,
+     "dist": -60.0,
+     "end": 8309.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": -6.28
+    },
+    "sub_ex_japan": {
+     "beg": 5647.0,
+     "net": -118.0,
+     "mkt": 17.0,
+     "dist": 0.0,
+     "end": 5546.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -25.08
+    },
+    "institutional": {
+     "beg": 32122.0,
+     "net": -132.0,
+     "mkt": 292.0,
+     "dist": -60.0,
+     "end": 32222.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -4.93
+    },
+    "wealth": {
+     "beg": 37284.0,
+     "net": -46.0,
+     "mkt": 474.0,
+     "dist": -261.0,
+     "end": 37451.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": -1.48
+    },
+    "cef": {
+     "beg": 11082.0,
+     "net": 0.0,
+     "mkt": 5.0,
+     "dist": -51.0,
+     "end": 11036.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.0
+    },
+    "total": {
+     "beg": 80488.0,
+     "net": -178.0,
+     "mkt": 771.0,
+     "dist": -372.0,
+     "end": 80709.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -2.65
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2024-07-09",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2024/07/09202440/CNS-Monthly-AUM-Release-June-2024.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-june-2024/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2024-06-30",
+   "checks": []
+  },
+  {
+   "month": "2024-07",
+   "rows": {
+    "advisory": {
+     "beg": 18367.0,
+     "net": -66.0,
+     "mkt": 991.0,
+     "dist": 0.0,
+     "end": 19292.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -4.31
+    },
+    "japan_sub": {
+     "beg": 8309.0,
+     "net": -77.0,
+     "mkt": 481.0,
+     "dist": -57.0,
+     "end": 8656.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": -11.12
+    },
+    "sub_ex_japan": {
+     "beg": 5546.0,
+     "net": -59.0,
+     "mkt": 329.0,
+     "dist": 0.0,
+     "end": 5816.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -12.77
+    },
+    "institutional": {
+     "beg": 32222.0,
+     "net": -202.0,
+     "mkt": 1801.0,
+     "dist": -57.0,
+     "end": 33764.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -7.52
+    },
+    "wealth": {
+     "beg": 37451.0,
+     "net": 156.0,
+     "mkt": 1858.0,
+     "dist": -45.0,
+     "end": 39420.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 5.0
+    },
+    "cef": {
+     "beg": 11036.0,
+     "net": 1.0,
+     "mkt": 405.0,
+     "dist": -51.0,
+     "end": 11391.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.11
+    },
+    "total": {
+     "beg": 80709.0,
+     "net": -45.0,
+     "mkt": 4064.0,
+     "dist": -153.0,
+     "end": 84575.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -0.67
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2024-08-08",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2024/08/08205050/CNS-Monthly-AUM-Release-July-2024.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-july-2024/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2024-07-31",
+   "checks": []
+  },
+  {
+   "month": "2024-08",
+   "rows": {
+    "advisory": {
+     "beg": 19292.0,
+     "net": -7.0,
+     "mkt": 918.0,
+     "dist": 0.0,
+     "end": 20203.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -0.44
+    },
+    "japan_sub": {
+     "beg": 8656.0,
+     "net": 25.0,
+     "mkt": 506.0,
+     "dist": -58.0,
+     "end": 9129.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 3.47
+    },
+    "sub_ex_japan": {
+     "beg": 5816.0,
+     "net": -45.0,
+     "mkt": 325.0,
+     "dist": 0.0,
+     "end": 6096.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -9.28
+    },
+    "institutional": {
+     "beg": 33764.0,
+     "net": -27.0,
+     "mkt": 1749.0,
+     "dist": -58.0,
+     "end": 35428.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -0.96
+    },
+    "wealth": {
+     "beg": 39420.0,
+     "net": 34.0,
+     "mkt": 1573.0,
+     "dist": -43.0,
+     "end": 40984.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 1.04
+    },
+    "cef": {
+     "beg": 11391.0,
+     "net": 1.0,
+     "mkt": 347.0,
+     "dist": -51.0,
+     "end": 11688.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.11
+    },
+    "total": {
+     "beg": 84575.0,
+     "net": 8.0,
+     "mkt": 3669.0,
+     "dist": -152.0,
+     "end": 88100.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 0.11
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2024-09-10",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2024/09/10203430/CNS-Monthly-AUM-Release-August-2024.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-august-2024/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2024-08-31",
+   "checks": []
+  },
+  {
+   "month": "2024-09",
+   "rows": {
+    "advisory": {
+     "beg": 20203.0,
+     "net": 82.0,
+     "mkt": 697.0,
+     "dist": 0.0,
+     "end": 20982.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 4.87
+    },
+    "japan_sub": {
+     "beg": 9129.0,
+     "net": 20.0,
+     "mkt": 275.0,
+     "dist": -59.0,
+     "end": 9365.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 2.63
+    },
+    "sub_ex_japan": {
+     "beg": 6096.0,
+     "net": 235.0,
+     "mkt": 214.0,
+     "dist": 0.0,
+     "end": 6545.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": 46.26
+    },
+    "institutional": {
+     "beg": 35428.0,
+     "net": 337.0,
+     "mkt": 1186.0,
+     "dist": -59.0,
+     "end": 36892.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 11.41
+    },
+    "wealth": {
+     "beg": 40984.0,
+     "net": 983.0,
+     "mkt": 1188.0,
+     "dist": -176.0,
+     "end": 42979.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 28.78
+    },
+    "cef": {
+     "beg": 11688.0,
+     "net": 1.0,
+     "mkt": 271.0,
+     "dist": -51.0,
+     "end": 11909.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.1
+    },
+    "total": {
+     "beg": 88100.0,
+     "net": 1321.0,
+     "mkt": 2645.0,
+     "dist": -286.0,
+     "end": 91780.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 17.99
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2024-10-08",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2024/10/09125925/CNS-Monthly-AUM-Release-September-2024.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2024/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2024-09-30",
+   "checks": []
+  },
+  {
+   "month": "2024-10",
+   "rows": {
+    "advisory": {
+     "beg": 20982.0,
+     "net": -49.0,
+     "mkt": -637.0,
+     "dist": 0.0,
+     "end": 20296.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -2.8
+    },
+    "japan_sub": {
+     "beg": 9365.0,
+     "net": -3.0,
+     "mkt": -258.0,
+     "dist": -55.0,
+     "end": 9049.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": -0.38
+    },
+    "sub_ex_japan": {
+     "beg": 6545.0,
+     "net": -41.0,
+     "mkt": -263.0,
+     "dist": 0.0,
+     "end": 6241.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -7.52
+    },
+    "institutional": {
+     "beg": 36892.0,
+     "net": -93.0,
+     "mkt": -1158.0,
+     "dist": -55.0,
+     "end": 35586.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -3.03
+    },
+    "wealth": {
+     "beg": 42979.0,
+     "net": 546.0,
+     "mkt": -996.0,
+     "dist": -44.0,
+     "end": 42485.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 15.24
+    },
+    "cef": {
+     "beg": 11909.0,
+     "net": 1.0,
+     "mkt": -191.0,
+     "dist": -51.0,
+     "end": 11668.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.1
+    },
+    "total": {
+     "beg": 91780.0,
+     "net": 454.0,
+     "mkt": -2345.0,
+     "dist": -150.0,
+     "end": 89739.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 5.94
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2024-11-11",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2024/11/11212838/CNS-Monthly-AUM-Release-October-2024.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-october-2024/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2024-10-31",
+   "checks": []
+  },
+  {
+   "month": "2024-11",
+   "rows": {
+    "advisory": {
+     "beg": 20296.0,
+     "net": -123.0,
+     "mkt": 390.0,
+     "dist": 0.0,
+     "end": 20563.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -7.27
+    },
+    "japan_sub": {
+     "beg": 9049.0,
+     "net": -2.0,
+     "mkt": 357.0,
+     "dist": -56.0,
+     "end": 9348.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": -0.27
+    },
+    "sub_ex_japan": {
+     "beg": 6241.0,
+     "net": -23.0,
+     "mkt": 155.0,
+     "dist": 0.0,
+     "end": 6373.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -4.42
+    },
+    "institutional": {
+     "beg": 35586.0,
+     "net": -148.0,
+     "mkt": 902.0,
+     "dist": -56.0,
+     "end": 36284.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -4.99
+    },
+    "wealth": {
+     "beg": 42485.0,
+     "net": 49.0,
+     "mkt": 817.0,
+     "dist": -44.0,
+     "end": 43307.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 1.38
+    },
+    "cef": {
+     "beg": 11668.0,
+     "net": 1.0,
+     "mkt": 227.0,
+     "dist": -51.0,
+     "end": 11845.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.1
+    },
+    "total": {
+     "beg": 89739.0,
+     "net": -98.0,
+     "mkt": 1946.0,
+     "dist": -151.0,
+     "end": 91436.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -1.31
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2024-12-09",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2024/12/09222519/CNS-Monthly-AUM-Release-November-2024.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-november-2024/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2024-11-30",
+   "checks": []
+  },
+  {
+   "month": "2024-12",
+   "rows": {
+    "advisory": {
+     "beg": 20563.0,
+     "net": 71.0,
+     "mkt": -1362.0,
+     "dist": 0.0,
+     "end": 19272.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 4.14
+    },
+    "japan_sub": {
+     "beg": 9348.0,
+     "net": -28.0,
+     "mkt": -745.0,
+     "dist": -53.0,
+     "end": 8522.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": -3.59
+    },
+    "sub_ex_japan": {
+     "beg": 6373.0,
+     "net": -108.0,
+     "mkt": -496.0,
+     "dist": 0.0,
+     "end": 5769.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -20.34
+    },
+    "institutional": {
+     "beg": 36284.0,
+     "net": -65.0,
+     "mkt": -2603.0,
+     "dist": -53.0,
+     "end": 33563.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -2.15
+    },
+    "wealth": {
+     "beg": 43307.0,
+     "net": 568.0,
+     "mkt": -2621.0,
+     "dist": -292.0,
+     "end": 40962.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 15.74
+    },
+    "cef": {
+     "beg": 11845.0,
+     "net": 1.0,
+     "mkt": -506.0,
+     "dist": -51.0,
+     "end": 11289.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.1
+    },
+    "total": {
+     "beg": 91436.0,
+     "net": 504.0,
+     "mkt": -5730.0,
+     "dist": -396.0,
+     "end": 85814.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 6.61
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2025-01-09",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2025/01/09212839/CNS-Monthly-AUM-Release-December-2024.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-december-2024/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2024-12-31",
+   "checks": []
+  },
+  {
+   "month": "2025-01",
+   "rows": {
+    "advisory": {
+     "beg": 19272.0,
+     "net": 83.0,
+     "mkt": 243.0,
+     "dist": 0.0,
+     "end": 19598.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 5.17
+    },
+    "japan_sub": {
+     "beg": 8522.0,
+     "net": 28.0,
+     "mkt": 102.0,
+     "dist": -54.0,
+     "end": 8598.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": 3.94
+    },
+    "sub_ex_japan": {
+     "beg": 5769.0,
+     "net": -458.0,
+     "mkt": 70.0,
+     "dist": 0.0,
+     "end": 5381.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -95.27
+    },
+    "institutional": {
+     "beg": 33563.0,
+     "net": -347.0,
+     "mkt": 415.0,
+     "dist": -54.0,
+     "end": 33577.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -12.41
+    },
+    "wealth": {
+     "beg": 40962.0,
+     "net": 133.0,
+     "mkt": 459.0,
+     "dist": -44.0,
+     "end": 41510.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 3.9
+    },
+    "cef": {
+     "beg": 11289.0,
+     "net": 1.0,
+     "mkt": 86.0,
+     "dist": -51.0,
+     "end": 11325.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.11
+    },
+    "total": {
+     "beg": 85814.0,
+     "net": -213.0,
+     "mkt": 960.0,
+     "dist": -149.0,
+     "end": 86412.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -2.98
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2025-02-10",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2025/02/10133434/CNS-Monthly-AUM-Release-January-2025.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-january-2025/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2025-01-31",
+   "checks": []
+  },
+  {
+   "month": "2025-02",
+   "rows": {
+    "advisory": {
+     "beg": 19598.0,
+     "net": -235.0,
+     "mkt": 505.0,
+     "dist": 0.0,
+     "end": 19868.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -14.39
+    },
+    "japan_sub": {
+     "beg": 8598.0,
+     "net": -5.0,
+     "mkt": 282.0,
+     "dist": -55.0,
+     "end": 8820.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": -0.7
+    },
+    "sub_ex_japan": {
+     "beg": 5381.0,
+     "net": -24.0,
+     "mkt": 135.0,
+     "dist": 0.0,
+     "end": 5492.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": -5.35
+    },
+    "institutional": {
+     "beg": 33577.0,
+     "net": -264.0,
+     "mkt": 922.0,
+     "dist": -55.0,
+     "end": 34180.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -9.44
+    },
+    "wealth": {
+     "beg": 41510.0,
+     "net": 247.0,
+     "mkt": 1173.0,
+     "dist": -44.0,
+     "end": 42886.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 7.14
+    },
+    "cef": {
+     "beg": 11325.0,
+     "net": 1.0,
+     "mkt": 218.0,
+     "dist": -52.0,
+     "end": 11492.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.11
+    },
+    "total": {
+     "beg": 86412.0,
+     "net": -16.0,
+     "mkt": 2313.0,
+     "dist": -151.0,
+     "end": 88558.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -0.22
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2025-03-10",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2025/03/10203230/CNS-Monthly-AUM-Release-February-2025.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-february-2025/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2025-02-28",
+   "checks": []
+  },
+  {
+   "month": "2025-03",
+   "rows": {
+    "advisory": {
+     "beg": 19868.0,
+     "net": 44.0,
+     "mkt": -209.0,
+     "dist": 0.0,
+     "end": 19703.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 2.66
+    },
+    "japan_sub": {
+     "beg": 8820.0,
+     "net": -13.0,
+     "mkt": -218.0,
+     "dist": -55.0,
+     "end": 8534.0,
+     "xfer": null,
+     "label": "Japan Subadvisory",
+     "og_ann_pct": -1.77
+    },
+    "sub_ex_japan": {
+     "beg": 5492.0,
+     "net": 215.0,
+     "mkt": -58.0,
+     "dist": 0.0,
+     "end": 5649.0,
+     "xfer": null,
+     "label": "Subadvisory excluding Japan",
+     "og_ann_pct": 46.98
+    },
+    "institutional": {
+     "beg": 34180.0,
+     "net": 246.0,
+     "mkt": -485.0,
+     "dist": -55.0,
+     "end": 33886.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 8.64
+    },
+    "wealth": {
+     "beg": 42886.0,
+     "net": 205.0,
+     "mkt": -598.0,
+     "dist": -195.0,
+     "end": 42298.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 5.74
+    },
+    "cef": {
+     "beg": 11492.0,
+     "net": 1.0,
+     "mkt": -47.0,
+     "dist": -51.0,
+     "end": 11395.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.1
+    },
+    "total": {
+     "beg": 88558.0,
+     "net": 452.0,
+     "mkt": -1130.0,
+     "dist": -301.0,
+     "end": 87579.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 6.12
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2025-04-08",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2025/04/09123542/CNS-Monthly-AUM-Release-March-2025.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-march-2025/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2025-03-31",
+   "checks": []
+  },
+  {
+   "month": "2025-04",
+   "rows": {
+    "advisory": {
+     "beg": 19703.0,
+     "net": 104.0,
+     "mkt": 130.0,
+     "dist": 0.0,
+     "end": 19937.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 6.33
+    },
+    "subadvisory": {
+     "beg": 14183.0,
+     "net": -69.0,
+     "mkt": 34.0,
+     "dist": -57.0,
+     "end": 14091.0,
+     "xfer": null,
+     "label": "Subadvisory",
+     "og_ann_pct": -5.84
+    },
+    "institutional": {
+     "beg": 33886.0,
+     "net": 35.0,
+     "mkt": 164.0,
+     "dist": -57.0,
+     "end": 34028.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 1.24
+    },
+    "wealth": {
+     "beg": 42298.0,
+     "net": 105.0,
+     "mkt": -150.0,
+     "dist": -43.0,
+     "end": 42210.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 2.98
+    },
+    "cef": {
+     "beg": 11395.0,
+     "net": 1.0,
+     "mkt": -74.0,
+     "dist": -51.0,
+     "end": 11271.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.11
+    },
+    "total": {
+     "beg": 87579.0,
+     "net": 141.0,
+     "mkt": -60.0,
+     "dist": -151.0,
+     "end": 87509.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 1.93
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2025-05-08",
+   "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-april-2025-302450596.html",
+   "source": "PR Newswire",
+   "period_end": "2025-04-30",
+   "checks": []
+  },
+  {
+   "month": "2025-05",
+   "rows": {
+    "advisory": {
+     "beg": 19937.0,
+     "net": 10.0,
+     "mkt": 352.0,
+     "dist": 0.0,
+     "end": 20299.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 0.6
+    },
+    "subadvisory": {
+     "beg": 14091.0,
+     "net": -19.0,
+     "mkt": 306.0,
+     "dist": -57.0,
+     "end": 14321.0,
+     "xfer": null,
+     "label": "Subadvisory",
+     "og_ann_pct": -1.62
+    },
+    "institutional": {
+     "beg": 34028.0,
+     "net": -9.0,
+     "mkt": 658.0,
+     "dist": -57.0,
+     "end": 34620.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -0.32
+    },
+    "wealth": {
+     "beg": 42210.0,
+     "net": -80.0,
+     "mkt": 510.0,
+     "dist": -42.0,
+     "end": 42598.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": -2.27
+    },
+    "cef": {
+     "beg": 11271.0,
+     "net": 1.0,
+     "mkt": 176.0,
+     "dist": -51.0,
+     "end": 11397.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.11
+    },
+    "total": {
+     "beg": 87509.0,
+     "net": -88.0,
+     "mkt": 1344.0,
+     "dist": -150.0,
+     "end": 88615.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -1.21
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2025-06-09",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2025/06/09204002/CNS-Monthly-AUM-Release-May-2025.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-may-2025/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2025-05-31",
+   "checks": []
+  },
+  {
+   "month": "2025-06",
+   "rows": {
+    "advisory": {
+     "beg": 20299.0,
+     "net": -526.0,
+     "mkt": 272.0,
+     "dist": 0.0,
+     "end": 20045.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -31.1
+    },
+    "subadvisory": {
+     "beg": 14321.0,
+     "net": -19.0,
+     "mkt": 96.0,
+     "dist": -57.0,
+     "end": 14341.0,
+     "xfer": null,
+     "label": "Subadvisory",
+     "og_ann_pct": -1.59
+    },
+    "institutional": {
+     "beg": 34620.0,
+     "net": -545.0,
+     "mkt": 368.0,
+     "dist": -57.0,
+     "end": 34386.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -18.89
+    },
+    "wealth": {
+     "beg": 42598.0,
+     "net": 260.0,
+     "mkt": 456.0,
+     "dist": -352.0,
+     "end": 42962.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 7.32
+    },
+    "cef": {
+     "beg": 11397.0,
+     "net": 101.0,
+     "mkt": 141.0,
+     "dist": -51.0,
+     "end": 11588.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 10.63
+    },
+    "total": {
+     "beg": 88615.0,
+     "net": -184.0,
+     "mkt": 965.0,
+     "dist": -460.0,
+     "end": 88936.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -2.49
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2025-07-09",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2025/07/09204402/CNS-Monthly-AUM-Release-June-2025.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-june-2025/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2025-06-30",
+   "checks": []
+  },
+  {
+   "month": "2025-07",
+   "rows": {
+    "advisory": {
+     "beg": 20045.0,
+     "net": -66.0,
+     "mkt": -117.0,
+     "dist": 0.0,
+     "end": 19862.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -3.95
+    },
+    "subadvisory": {
+     "beg": 14341.0,
+     "net": -20.0,
+     "mkt": -125.0,
+     "dist": -55.0,
+     "end": 14141.0,
+     "xfer": null,
+     "label": "Subadvisory",
+     "og_ann_pct": -1.67
+    },
+    "institutional": {
+     "beg": 34386.0,
+     "net": -86.0,
+     "mkt": -242.0,
+     "dist": -55.0,
+     "end": 34003.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -3.0
+    },
+    "wealth": {
+     "beg": 42962.0,
+     "net": 294.0,
+     "mkt": -210.0,
+     "dist": -46.0,
+     "end": 43000.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 8.21
+    },
+    "cef": {
+     "beg": 11588.0,
+     "net": 1.0,
+     "mkt": 42.0,
+     "dist": -51.0,
+     "end": 11580.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.1
+    },
+    "total": {
+     "beg": 88936.0,
+     "net": 209.0,
+     "mkt": -410.0,
+     "dist": -152.0,
+     "end": 88583.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 2.82
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2025-08-11",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2025/08/11212158/CNS-Monthly-AUM-Release-July-2025.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-july-2025/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2025-07-31",
+   "checks": []
+  },
+  {
+   "month": "2025-08",
+   "rows": {
+    "advisory": {
+     "beg": 19862.0,
+     "net": -162.0,
+     "mkt": 483.0,
+     "dist": 0.0,
+     "end": 20183.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -9.79
+    },
+    "subadvisory": {
+     "beg": 14141.0,
+     "net": 18.0,
+     "mkt": 413.0,
+     "dist": -55.0,
+     "end": 14517.0,
+     "xfer": null,
+     "label": "Subadvisory",
+     "og_ann_pct": 1.53
+    },
+    "institutional": {
+     "beg": 34003.0,
+     "net": -144.0,
+     "mkt": 896.0,
+     "dist": -55.0,
+     "end": 34700.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -5.08
+    },
+    "wealth": {
+     "beg": 43000.0,
+     "net": 247.0,
+     "mkt": 785.0,
+     "dist": -45.0,
+     "end": 43987.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 6.89
+    },
+    "cef": {
+     "beg": 11580.0,
+     "net": 1.0,
+     "mkt": 138.0,
+     "dist": -51.0,
+     "end": 11668.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.1
+    },
+    "total": {
+     "beg": 88583.0,
+     "net": 104.0,
+     "mkt": 1819.0,
+     "dist": -151.0,
+     "end": 90355.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 1.41
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2025-09-09",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2025/09/10143528/CNS-Monthly-AUM-Release-August-2025-002.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-august-2025/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2025-08-31",
+   "checks": []
+  },
+  {
+   "month": "2025-09",
+   "rows": {
+    "advisory": {
+     "beg": 20183.0,
+     "net": -228.0,
+     "mkt": 253.0,
+     "dist": 0.0,
+     "xfer": 0.0,
+     "end": 20208.0,
+     "label": "Advisory",
+     "og_ann_pct": -13.56
+    },
+    "subadvisory": {
+     "beg": 14517.0,
+     "net": -80.0,
+     "mkt": 147.0,
+     "dist": -57.0,
+     "xfer": -24.0,
+     "end": 14503.0,
+     "label": "Subadvisory",
+     "og_ann_pct": -6.61
+    },
+    "institutional": {
+     "beg": 34700.0,
+     "net": -308.0,
+     "mkt": 400.0,
+     "dist": -57.0,
+     "xfer": -24.0,
+     "end": 34711.0,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -10.65
+    },
+    "wealth": {
+     "beg": 43987.0,
+     "net": 226.0,
+     "mkt": 397.0,
+     "dist": -213.0,
+     "xfer": 24.0,
+     "end": 44421.0,
+     "label": "Open-end Funds",
+     "og_ann_pct": 6.17
+    },
+    "cef": {
+     "beg": 11668.0,
+     "net": 1.0,
+     "mkt": 148.0,
+     "dist": -52.0,
+     "xfer": 0.0,
+     "end": 11765.0,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.1
+    },
+    "total": {
+     "beg": 90355.0,
+     "net": -81.0,
+     "mkt": 945.0,
+     "dist": -322.0,
+     "xfer": 0.0,
+     "end": 90897.0,
+     "label": "Total AUM",
+     "og_ann_pct": -1.08
+    }
+   },
+   "transfers_column": true,
+   "release_date": "2025-10-08",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2025/10/08204555/CNS-Monthly-AUM-Release-September-2025.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2025/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2025-09-30",
+   "checks": []
+  },
+  {
+   "month": "2025-10",
+   "rows": {
+    "advisory": {
+     "beg": 20208.0,
+     "net": 390.0,
+     "mkt": -324.0,
+     "dist": 0.0,
+     "end": 20274.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 23.16
+    },
+    "subadvisory": {
+     "beg": 14503.0,
+     "net": 293.0,
+     "mkt": -202.0,
+     "dist": -54.0,
+     "end": 14540.0,
+     "xfer": null,
+     "label": "Subadvisory",
+     "og_ann_pct": 24.24
+    },
+    "institutional": {
+     "beg": 34711.0,
+     "net": 683.0,
+     "mkt": -526.0,
+     "dist": -54.0,
+     "end": 34814.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 23.61
+    },
+    "wealth": {
+     "beg": 44421.0,
+     "net": -61.0,
+     "mkt": -668.0,
+     "dist": -45.0,
+     "end": 43647.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": -1.65
+    },
+    "cef": {
+     "beg": 11765.0,
+     "net": 513.0,
+     "mkt": -103.0,
+     "dist": -51.0,
+     "end": 12124.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 52.32
+    },
+    "total": {
+     "beg": 90897.0,
+     "net": 1135.0,
+     "mkt": -1297.0,
+     "dist": -150.0,
+     "end": 90585.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 14.98
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2025-11-10",
+   "url": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-october-2025-302610686.html",
+   "source": "PR Newswire",
+   "period_end": "2025-10-31",
+   "checks": []
+  },
+  {
+   "month": "2025-11",
+   "rows": {
+    "advisory": {
+     "beg": 20274.0,
+     "net": 175.0,
+     "mkt": 555.0,
+     "dist": 0.0,
+     "end": 21004.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 10.36
+    },
+    "subadvisory": {
+     "beg": 14540.0,
+     "net": -344.0,
+     "mkt": 344.0,
+     "dist": -54.0,
+     "end": 14486.0,
+     "xfer": null,
+     "label": "Subadvisory",
+     "og_ann_pct": -28.39
+    },
+    "institutional": {
+     "beg": 34814.0,
+     "net": -169.0,
+     "mkt": 899.0,
+     "dist": -54.0,
+     "end": 35490.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -5.83
+    },
+    "wealth": {
+     "beg": 43647.0,
+     "net": -333.0,
+     "mkt": 923.0,
+     "dist": -43.0,
+     "end": 44194.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": -9.16
+    },
+    "cef": {
+     "beg": 12124.0,
+     "net": 0.0,
+     "mkt": 179.0,
+     "dist": -54.0,
+     "end": 12249.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.0
+    },
+    "total": {
+     "beg": 90585.0,
+     "net": -502.0,
+     "mkt": 2001.0,
+     "dist": -151.0,
+     "end": 91933.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -6.65
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2025-12-08",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2025/12/08213112/CNS-Monthly-AUM-Release-November-2025.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-november-2025/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2025-11-30",
+   "checks": []
+  },
+  {
+   "month": "2025-12",
+   "rows": {
+    "advisory": {
+     "beg": 21004.0,
+     "net": 86.0,
+     "mkt": -331.0,
+     "dist": 0.0,
+     "xfer": 84.0,
+     "end": 20843.0,
+     "label": "Advisory",
+     "og_ann_pct": 4.91
+    },
+    "subadvisory": {
+     "beg": 14486.0,
+     "net": 81.0,
+     "mkt": -294.0,
+     "dist": -56.0,
+     "xfer": 0.0,
+     "end": 14217.0,
+     "label": "Subadvisory",
+     "og_ann_pct": 6.71
+    },
+    "institutional": {
+     "beg": 35490.0,
+     "net": 167.0,
+     "mkt": -625.0,
+     "dist": -56.0,
+     "xfer": 84.0,
+     "end": 35060.0,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 5.65
+    },
+    "wealth": {
+     "beg": 44194.0,
+     "net": 407.0,
+     "mkt": -633.0,
+     "dist": -447.0,
+     "xfer": -84.0,
+     "end": 43437.0,
+     "label": "Open-end Funds",
+     "og_ann_pct": 11.05
+    },
+    "cef": {
+     "beg": 12249.0,
+     "net": 0.0,
+     "mkt": -131.0,
+     "dist": -71.0,
+     "xfer": 0.0,
+     "end": 12047.0,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.0
+    },
+    "total": {
+     "beg": 91933.0,
+     "net": 574.0,
+     "mkt": -1389.0,
+     "dist": -574.0,
+     "xfer": 0.0,
+     "end": 90544.0,
+     "label": "Total AUM",
+     "og_ann_pct": 7.49
+    }
+   },
+   "transfers_column": true,
+   "release_date": "2026-01-12",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2026/01/12213138/CNS-Monthly-AUM-Release-December2025.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-december-2025/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2025-12-31",
+   "checks": []
+  },
+  {
+   "month": "2026-01",
+   "rows": {
+    "advisory": {
+     "beg": 20843.0,
+     "net": 257.0,
+     "mkt": 598.0,
+     "dist": 0.0,
+     "end": 21698.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 14.8
+    },
+    "subadvisory": {
+     "beg": 14217.0,
+     "net": -112.0,
+     "mkt": 468.0,
+     "dist": -53.0,
+     "end": 14520.0,
+     "xfer": null,
+     "label": "Subadvisory",
+     "og_ann_pct": -9.45
+    },
+    "institutional": {
+     "beg": 35060.0,
+     "net": 145.0,
+     "mkt": 1066.0,
+     "dist": -53.0,
+     "end": 36218.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 4.96
+    },
+    "wealth": {
+     "beg": 43437.0,
+     "net": 304.0,
+     "mkt": 870.0,
+     "dist": -45.0,
+     "end": 44566.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 8.4
+    },
+    "cef": {
+     "beg": 12047.0,
+     "net": 0.0,
+     "mkt": 291.0,
+     "dist": -55.0,
+     "end": 12283.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.0
+    },
+    "total": {
+     "beg": 90544.0,
+     "net": 449.0,
+     "mkt": 2227.0,
+     "dist": -153.0,
+     "end": 93067.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 5.95
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2026-02-09",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2026/02/09124128/CNS-Monthly-AUM-Release-January-2026.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-january-2026/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2026-01-31",
+   "checks": []
+  },
+  {
+   "month": "2026-02",
+   "rows": {
+    "advisory": {
+     "beg": 21698.0,
+     "net": -24.0,
+     "mkt": 1421.0,
+     "dist": 0.0,
+     "end": 23095.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -1.33
+    },
+    "subadvisory": {
+     "beg": 14520.0,
+     "net": -97.0,
+     "mkt": 1066.0,
+     "dist": -51.0,
+     "end": 15438.0,
+     "xfer": null,
+     "label": "Subadvisory",
+     "og_ann_pct": -8.02
+    },
+    "institutional": {
+     "beg": 36218.0,
+     "net": -121.0,
+     "mkt": 2487.0,
+     "dist": -51.0,
+     "end": 38533.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -4.01
+    },
+    "wealth": {
+     "beg": 44566.0,
+     "net": 127.0,
+     "mkt": 2480.0,
+     "dist": -45.0,
+     "end": 47128.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 3.42
+    },
+    "cef": {
+     "beg": 12283.0,
+     "net": 1.0,
+     "mkt": 530.0,
+     "dist": -55.0,
+     "end": 12759.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.1
+    },
+    "total": {
+     "beg": 93067.0,
+     "net": 7.0,
+     "mkt": 5497.0,
+     "dist": -151.0,
+     "end": 98420.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 0.09
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2026-03-09",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2026/03/09202905/CNS-Monthly-AUM-Release-February-2026.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-february-2026/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2026-02-28",
+   "checks": []
+  },
+  {
+   "month": "2026-03",
+   "rows": {
+    "advisory": {
+     "beg": 23095.0,
+     "net": -21.0,
+     "mkt": -1395.0,
+     "dist": 0.0,
+     "end": 21679.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -1.09
+    },
+    "subadvisory": {
+     "beg": 15438.0,
+     "net": -62.0,
+     "mkt": -974.0,
+     "dist": -52.0,
+     "end": 14350.0,
+     "xfer": null,
+     "label": "Subadvisory",
+     "og_ann_pct": -4.82
+    },
+    "institutional": {
+     "beg": 38533.0,
+     "net": -83.0,
+     "mkt": -2369.0,
+     "dist": -52.0,
+     "end": 36029.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -2.58
+    },
+    "wealth": {
+     "beg": 47128.0,
+     "net": 124.0,
+     "mkt": -2195.0,
+     "dist": -216.0,
+     "end": 44841.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 3.16
+    },
+    "cef": {
+     "beg": 12759.0,
+     "net": 1.0,
+     "mkt": -447.0,
+     "dist": -55.0,
+     "end": 12258.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.09
+    },
+    "total": {
+     "beg": 98420.0,
+     "net": 42.0,
+     "mkt": -5011.0,
+     "dist": -323.0,
+     "end": 93128.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 0.51
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2026-04-09",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2026/04/10122841/CNS-Monthly-AUM-Release-March-2026.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-march-2026/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2026-03-31",
+   "checks": []
+  },
+  {
+   "month": "2026-04",
+   "rows": {
+    "advisory": {
+     "beg": 21679.0,
+     "net": -299.0,
+     "mkt": 1538.0,
+     "dist": 0.0,
+     "end": 22918.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -16.55
+    },
+    "subadvisory": {
+     "beg": 14350.0,
+     "net": 429.0,
+     "mkt": 1208.0,
+     "dist": -49.0,
+     "end": 15938.0,
+     "xfer": null,
+     "label": "Subadvisory",
+     "og_ann_pct": 35.87
+    },
+    "institutional": {
+     "beg": 36029.0,
+     "net": 130.0,
+     "mkt": 2746.0,
+     "dist": -49.0,
+     "end": 38856.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 4.33
+    },
+    "wealth": {
+     "beg": 44841.0,
+     "net": 571.0,
+     "mkt": 3141.0,
+     "dist": -47.0,
+     "end": 48506.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 15.28
+    },
+    "cef": {
+     "beg": 12258.0,
+     "net": 0.0,
+     "mkt": 536.0,
+     "dist": -56.0,
+     "end": 12738.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.0
+    },
+    "total": {
+     "beg": 93128.0,
+     "net": 701.0,
+     "mkt": 6423.0,
+     "dist": -152.0,
+     "end": 100100.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 9.03
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2026-05-11",
+   "url": "https://assets-prod.cohenandsteers.com/wp-content/uploads/2026/05/11203405/CNS-Monthly-AUM-Release-April-2026.pdf",
+   "page_url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-april-2026/",
+   "source": "cohenandsteers.com (PDF)",
+   "period_end": "2026-04-30",
+   "checks": []
+  },
+  {
+   "month": "2026-05",
+   "rows": {
+    "advisory": {
+     "beg": 22918.0,
+     "net": -1.0,
+     "mkt": -219.0,
+     "dist": 0.0,
+     "end": 22698.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -0.05
+    },
+    "subadvisory": {
+     "beg": 15938.0,
+     "net": -87.0,
+     "mkt": -89.0,
+     "dist": -50.0,
+     "end": 15712.0,
+     "xfer": null,
+     "label": "Subadvisory",
+     "og_ann_pct": -6.55
+    },
+    "institutional": {
+     "beg": 38856.0,
+     "net": -88.0,
+     "mkt": -308.0,
+     "dist": -50.0,
+     "end": 38410.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -2.72
+    },
+    "wealth": {
+     "beg": 48506.0,
+     "net": 189.0,
+     "mkt": -191.0,
+     "dist": -48.0,
+     "end": 48456.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 4.68
+    },
+    "cef": {
+     "beg": 12738.0,
+     "net": 0.0,
+     "mkt": -93.0,
+     "dist": -56.0,
+     "end": 12589.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.0
+    },
+    "total": {
+     "beg": 100100.0,
+     "net": 101.0,
+     "mkt": -592.0,
+     "dist": -154.0,
+     "end": 99455.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 1.21
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2026-06-08",
+   "url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-may-2026/",
+   "source": "cohenandsteers.com",
+   "period_end": "2026-05-31",
+   "checks": []
+  },
+  {
+   "month": "2026-06",
+   "rows": {
+    "advisory": {
+     "beg": 22698.0,
+     "net": 36.0,
+     "mkt": 171.0,
+     "dist": 0.0,
+     "end": 22905.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 1.9
+    },
+    "subadvisory": {
+     "beg": 15712.0,
+     "net": -236.0,
+     "mkt": 194.0,
+     "dist": -52.0,
+     "end": 15618.0,
+     "xfer": null,
+     "label": "Subadvisory",
+     "og_ann_pct": -18.02
+    },
+    "institutional": {
+     "beg": 38410.0,
+     "net": -200.0,
+     "mkt": 365.0,
+     "dist": -52.0,
+     "end": 38523.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -6.25
+    },
+    "wealth": {
+     "beg": 48456.0,
+     "net": 695.0,
+     "mkt": 196.0,
+     "dist": -354.0,
+     "end": 48993.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 17.21
+    },
+    "cef": {
+     "beg": 12589.0,
+     "net": 0.0,
+     "mkt": 50.0,
+     "dist": -56.0,
+     "end": 12583.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.0
+    },
+    "total": {
+     "beg": 99455.0,
+     "net": 495.0,
+     "mkt": 611.0,
+     "dist": -462.0,
+     "end": 100099.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 5.97
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2026-07-09",
+   "url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-june-2026/",
+   "source": "cohenandsteers.com",
+   "period_end": "2026-06-30",
+   "checks": []
+  },
+  {
+   "month": "2026-07",
+   "rows": {
+    "advisory": {
+     "beg": 22905.0,
+     "net": 190.0,
+     "mkt": 476.0,
+     "dist": 0.0,
+     "end": 23571.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": 9.95
+    },
+    "subadvisory": {
+     "beg": 15618.0,
+     "net": 75.0,
+     "mkt": 385.0,
+     "dist": -49.0,
+     "end": 16029.0,
+     "xfer": null,
+     "label": "Subadvisory",
+     "og_ann_pct": 5.76
+    },
+    "institutional": {
+     "beg": 38523.0,
+     "net": 265.0,
+     "mkt": 861.0,
+     "dist": -49.0,
+     "end": 39600.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 8.25
+    },
+    "wealth": {
+     "beg": 48993.0,
+     "net": 269.0,
+     "mkt": 933.0,
+     "dist": -50.0,
+     "end": 50145.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 6.59
+    },
+    "cef": {
+     "beg": 12583.0,
+     "net": 154.0,
+     "mkt": 97.0,
+     "dist": -56.0,
+     "end": 12778.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 14.69
+    },
+    "total": {
+     "beg": 100099.0,
+     "net": 688.0,
+     "mkt": 1891.0,
+     "dist": -155.0,
+     "end": 102523.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 8.25
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2026-08-10",
+   "url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-july-2026/",
+   "source": "cohenandsteers.com",
+   "period_end": "2026-07-31",
+   "checks": []
+  },
+  {
+   "month": "2026-08",
+   "rows": {
+    "advisory": {
+     "beg": 23571.0,
+     "net": -21.0,
+     "mkt": -504.0,
+     "dist": 0.0,
+     "end": 23046.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -1.07
+    },
+    "subadvisory": {
+     "beg": 16029.0,
+     "net": 119.0,
+     "mkt": -420.0,
+     "dist": -48.0,
+     "end": 15680.0,
+     "xfer": null,
+     "label": "Subadvisory",
+     "og_ann_pct": 8.91
+    },
+    "institutional": {
+     "beg": 39600.0,
+     "net": 98.0,
+     "mkt": -924.0,
+     "dist": -48.0,
+     "end": 38726.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": 2.97
+    },
+    "wealth": {
+     "beg": 50145.0,
+     "net": 430.0,
+     "mkt": -804.0,
+     "dist": -49.0,
+     "end": 49722.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 10.29
+    },
+    "cef": {
+     "beg": 12778.0,
+     "net": 0.0,
+     "mkt": -144.0,
+     "dist": -58.0,
+     "end": 12576.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.0
+    },
+    "total": {
+     "beg": 102523.0,
+     "net": 528.0,
+     "mkt": -1872.0,
+     "dist": -155.0,
+     "end": 101024.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 6.18
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2026-09-09",
+   "url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-august-2026/",
+   "source": "cohenandsteers.com",
+   "period_end": "2026-08-31",
+   "checks": []
+  },
+  {
+   "month": "2026-09",
+   "rows": {
+    "advisory": {
+     "beg": 23046.0,
+     "net": -6.0,
+     "mkt": -1251.0,
+     "dist": 0.0,
+     "end": 21789.0,
+     "xfer": null,
+     "label": "Advisory",
+     "og_ann_pct": -0.31
+    },
+    "subadvisory": {
+     "beg": 15680.0,
+     "net": -307.0,
+     "mkt": -960.0,
+     "dist": -48.0,
+     "end": 14419.0,
+     "xfer": null,
+     "label": "Subadvisory",
+     "og_ann_pct": -23.49
+    },
+    "institutional": {
+     "beg": 38726.0,
+     "net": -313.0,
+     "mkt": -2157.0,
+     "dist": -48.0,
+     "end": 36208.0,
+     "xfer": null,
+     "label": "Total Institutional Accounts",
+     "og_ann_pct": -9.7
+    },
+    "wealth": {
+     "beg": 49722.0,
+     "net": 598.0,
+     "mkt": -2397.0,
+     "dist": -218.0,
+     "end": 47705.0,
+     "xfer": null,
+     "label": "Open-end Funds",
+     "og_ann_pct": 14.43
+    },
+    "cef": {
+     "beg": 12576.0,
+     "net": 50.0,
+     "mkt": -538.0,
+     "dist": -57.0,
+     "end": 12031.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 4.77
+    },
+    "total": {
+     "beg": 101024.0,
+     "net": 335.0,
+     "mkt": -5092.0,
+     "dist": -323.0,
+     "end": 95944.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": 3.98
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2026-10-08",
+   "url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2026/",
+   "source": "cohenandsteers.com",
+   "period_end": "2026-09-30",
+   "checks": [
+    "subadvisory: beg+net+mkt+dist = 14,365 vs reported end 14,419",
+    "institutional.mkt: components sum -2,211 vs reported -2,157 (advisory+subadvisory)"
+   ]
+  },
+  {
+   "month": "2026-10",
+   "rows": {
+    "mutual_funds": {
+     "beg": 40012.0,
+     "net": -270.0,
+     "mkt": 1716.0,
+     "dist": -46.0,
+     "end": 41412.0,
+     "xfer": null,
+     "label": "Mutual Funds",
+     "og_ann_pct": -8.1
+    },
+    "etfs": {
+     "beg": 1310.0,
+     "net": 128.0,
+     "mkt": 51.0,
+     "dist": -3.0,
+     "end": 1486.0,
+     "xfer": null,
+     "label": "ETFs",
+     "og_ann_pct": 117.25
+    },
+    "sicavs": {
+     "beg": 2225.0,
+     "net": -14.0,
+     "mkt": 74.0,
+     "dist": -1.0,
+     "end": 2284.0,
+     "xfer": null,
+     "label": "SICAVs",
+     "og_ann_pct": -7.55
+    },
+    "other_wealth": {
+     "beg": 4158.0,
+     "net": 16.0,
+     "mkt": 91.0,
+     "dist": -1.0,
+     "end": 4264.0,
+     "xfer": null,
+     "label": "Other Wealth",
+     "og_ann_pct": 4.62
+    },
+    "wealth": {
+     "beg": 47705.0,
+     "net": -140.0,
+     "mkt": 1932.0,
+     "dist": -51.0,
+     "end": 49446.0,
+     "xfer": null,
+     "label": "Total Wealth",
+     "og_ann_pct": -3.52
+    },
+    "institutional": {
+     "beg": 36208.0,
+     "net": -69.0,
+     "mkt": 1661.0,
+     "dist": -47.0,
+     "end": 37753.0,
+     "xfer": null,
+     "label": "Institutional",
+     "og_ann_pct": -2.29
+    },
+    "cef": {
+     "beg": 12031.0,
+     "net": 0.0,
+     "mkt": 433.0,
+     "dist": -57.0,
+     "end": 12407.0,
+     "xfer": null,
+     "label": "Closed-end Funds",
+     "og_ann_pct": 0.0
+    },
+    "total": {
+     "beg": 95944.0,
+     "net": -209.0,
+     "mkt": 4026.0,
+     "dist": -155.0,
+     "end": 99606.0,
+     "xfer": null,
+     "label": "Total AUM",
+     "og_ann_pct": -2.61
+    }
+   },
+   "transfers_column": false,
+   "release_date": "2026-11-09",
+   "url": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-october-2026/",
+   "source": "cohenandsteers.com",
+   "period_end": "2026-10-31",
+   "checks": []
+  }
+ ]
+}

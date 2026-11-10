@@ -52,6 +52,13 @@ jobs:
           python3 -m pip install --quiet requests || true
           python3 companies/nowcast/nowcast.py || echo "::warning::CNS nowcast failed; previous data/cns_nowcast.json kept"
 
+      - name: CNS monthly AUM / net flows by vehicle (warn-only)
+        # CNS posts the prior month's preliminary AUM release ~6th-10th business day; incremental, so most runs are a no-op
+        continue-on-error: true
+        run: |
+          python3 -m pip install --quiet openpyxl pypdf || true
+          python3 companies/nowcast/cns_monthly_flows.py || echo "::warning::CNS monthly flows failed; previous data/cns_monthly_flows.json kept"
+
       - name: WT weekly AUM / earnings power (warn-only)
         continue-on-error: true
         run: |
