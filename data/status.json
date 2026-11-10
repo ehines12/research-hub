@@ -1,7 +1,7 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-11-10T18:27:47+00:00",
+   "checked_at": "2026-11-10T20:36:27+00:00",
    "data_changed_at": "2026-11-10T18:27:41+00:00",
    "series": {
     "gdp": {
@@ -421,7 +421,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-11-10T18:28:09+00:00",
+   "checked_at": "2026-11-10T20:36:36+00:00",
    "data_changed_at": "2026-11-07T00:57:52+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2067,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-11-10T18:30:19+00:00",
-   "data_changed_at": "2026-11-10T18:28:29+00:00",
+   "checked_at": "2026-11-10T20:38:38+00:00",
+   "data_changed_at": "2026-11-10T20:36:55+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,7 +2083,7 @@
    }
   },
   "geo": {
-   "checked_at": "2026-11-10T18:30:26+00:00",
+   "checked_at": "2026-11-10T20:38:42+00:00",
    "data_changed_at": "2026-11-10T18:30:20+00:00",
    "series": {
     "gprd": {
@@ -2409,8 +2409,8 @@
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-11-10T18:28:29+00:00",
-   "data_changed_at": "2026-11-10T18:28:09+00:00",
+   "checked_at": "2026-11-10T20:36:55+00:00",
+   "data_changed_at": "2026-11-10T20:36:36+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2553,7 +2553,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-11-10",
-      "value": 94.22
+      "value": 92.2092
      }
     },
     "hy_lvl": {
@@ -2649,7 +2649,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-11-10",
-      "value": -0.6833
+      "value": -0.6279
      }
     },
     "kre_xlf_3m": {
@@ -2657,7 +2657,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-11-10",
-      "value": -5.8639
+      "value": -5.8114
      }
     },
     "iwm_spy_1m": {
@@ -2665,7 +2665,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-11-10",
-      "value": 4.8955
+      "value": 4.648
      }
     },
     "iwm_spy_3m": {
@@ -2673,7 +2673,7 @@
      "status": "ok",
      "latest": {
       "date": "2026-11-10",
-      "value": -4.3837
+      "value": -4.6093
      }
     },
     "dep_pricing": {
@@ -2743,6 +2743,6 @@
    }
   }
  },
- "checked_at": "2026-11-10T18:30:26+00:00",
+ "checked_at": "2026-11-10T20:38:42+00:00",
  "ok": true
 }
