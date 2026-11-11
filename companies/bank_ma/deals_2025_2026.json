@@ -212,6 +212,17 @@
      "v": "4Q 2025",
      "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054274/tm2516417d1_ex99-2.htm",
      "q": "…be paid by Seacoast would be approximately $710.8 million. Closing of the transaction is expected in the fourth quarter of 2025, following receipt of approvals from regulatory authorities, the approval of VBI shareholders, and the satisf…"
+    },
+    "cost_saves": {
+     "v": 27,
+     "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054277/tm2516417d1_ex99-1.htm",
+     "q": "…ing Adjustments • Pre - tax, merger costs of $ 52 million • Cost savings equal to 27% of VBI’s non - interest expense base anticipated, 65% realized in 2026 • No branch closings are planned with this acquisition One - Time Merger Co…"
+    },
+    "tgt_roaa": {
+     "v": 1.11,
+     "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054277/tm2516417d1_ex99-1.htm",
+     "q": "…¹ Total Assets $4.1B Total Loans $1.3B Total Deposits $3.5B ROAA 1.11% As of June 30, 2024Branch Market Rank Deposits Count Share Institution (#) ($M) (#) (%) Villages Bancorporati…",
+     "note": "As shown in the deck financial highlights"
     }
    }
   },
@@ -539,6 +550,11 @@
      "v": "1Q 2026",
      "src": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-1.htm",
      "q": "…perity, among other worthwhile causes. Timing and Approvals The transaction is expected to close in the first quarter of 2026, subject to the receipt of required regulatory approvals, approval by Pinnacle and Synovus shareholders and t…"
+    },
+    "tgt_assets_b": {
+     "v": 61,
+     "src": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-1.htm",
+     "q": "…is a financial services company based in Columbus, Georgia, with approximately $61 billion in assets. Synovus provides commercial and consumer banking and a full suite of specialized products and services, incl…"
     }
    }
   },
@@ -727,6 +743,11 @@
      "v": "End of 1Q 2026",
      "src": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex992.htm",
      "q": "…ontingent on customary regulatory approvals $6.5B closing • Anticipated closing end of first quarter 2026 in capitalized value from expense synergies⁴ 1 Source: S&P Capital IQ, FactSet, FITB filings and management a…"
+    },
+    "tgt_assets_b": {
+     "v": 78.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex991.htm",
+     "q": "…gest U.S. metropolitan areas, as well as Canada and Mexico. Comerica reported total assets of $78.0 billion at June 30, 2025. Learn more about how Comerica is raising expectations of what a bank can be by visiting www.comerica.com . F…"
     }
    }
   },
@@ -1312,6 +1333,11 @@
      "v": "2Q 2026",
      "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex992.htm",
      "q": "…rovals, and other closing conditions Approvals and Closing➢ Anticipated closing in 2Q 2026 Attractive 13.2% (7.7% ) 2.5 yrs TBV Accretive ~20% ~17% ~1.5% Financial EPS Accretion TBV. Dilution Earnback…"
+    },
+    "tgt_assets_b": {
+     "v": 5.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex992.htm",
+     "q": "…Palo Alto San Jose Los Altos Financial Highlights Los Gatos $5.6bn $3.6bn $4.8bn 75% Morgan Hill Assets Loans Deposits Loans / Deposits 5.65% 1.52% 13.2% 15.4% Hollister Yield on Loans Cost of D…"
     }
    }
   },
@@ -1421,6 +1447,22 @@
      "v": "2Q 2026",
      "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex992.htm",
      "q": "…ium to the price paid on common stock. Timing and Approvals The transaction is expected to close in the second quarter of 2026, subject to the receipt of regulatory approvals, approval by OceanFirst and Flushing shareholders, and the sa…"
+    },
+    "tgt_assets_b": {
+     "v": 8.9,
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex991.htm",
+     "q": "…ing Long Island Footprint (1) Branch Locations (30) Balance $8.9bn $7.4bn $6.6bn Sheet Assets Deposits Net Loans New York Suffolk Deposit Nassau ~7 years ~$41,000 90% Queens Franchise Average Tenure (2) Avg. Deposit Size (…"
+    },
+    "tgt_deposits_b": {
+     "v": 7.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex991.htm",
+     "q": "…ing Long Island Footprint (1) Branch Locations (30) Balance $8.9bn $7.4bn $6.6bn Sheet Assets Deposits Net Loans New York Suffolk Deposit Nassau ~7 years ~$41,000 90% Queens Franchise Average Tenure (2) Avg. Deposit Size (…"
+    },
+    "tgt_loans_b": {
+     "v": 6.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex991.htm",
+     "q": "…ing Long Island Footprint (1) Branch Locations (30) Balance $8.9bn $7.4bn $6.6bn Sheet Assets Deposits Net Loans New York Suffolk Deposit Nassau ~7 years ~$41,000 90% Queens Franchise Average Tenure (2) Avg. Deposit Size (…",
+     "note": "Net loans"
     }
    }
   },
@@ -1546,6 +1588,12 @@
      "v": "2Q 2026",
      "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex991.htm",
      "q": "…pproved by the Boards of Directors of both companies and is expected to close during the second quarter of 2026, subject to the receipt of required regulatory approvals, approval by Stellar’s shareholders and the satisfac…"
+    },
+    "tgt_roaa": {
+     "v": 1.12,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex992.htm",
+     "q": "…ic Banks – Profitability and Asset Quality Deposit Rankings 1.12% 4.21% 61.6% <0.01% ❖ Highly experienced management team and board with deep Core ROAA NIM Efficiency NCO / local knowledge and s…",
+     "note": "Core ROAA as shown in deck"
     }
    }
   },
