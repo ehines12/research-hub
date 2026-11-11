@@ -73,8 +73,9 @@ jobs:
           python3 companies/nowcast/wt_earnings_power.py || echo "::warning::WT earnings power failed; previous data/wt_earnings_power.json kept"
 
       - name: Bank M&A status / close-date refresh (warn-only)
-        # Only re-checks deals still marked pending (acquirer 8-K Item 2.01 / 1.02 on EDGAR). Never adds deals:
-        # the deal list is curated in companies/bank_ma/deals_2024.json. All 2024 deals are closed, so this is normally a no-op.
+        # Only re-checks deals still marked pending (acquirer or target 8-K Item 2.01 / 1.02 on EDGAR). Never adds deals:
+        # the deal list is curated in companies/bank_ma/deals_*.json (2024 through Nov 2026). Checks pending deals for completion /
+        # termination 8-Ks and lists new >$500M bank merger 8-Ks as review candidates (never auto-added).
         continue-on-error: true
         run: |
           python3 -m pip install --quiet openpyxl || true

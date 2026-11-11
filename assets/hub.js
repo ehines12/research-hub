@@ -872,7 +872,7 @@
     const st = localStorage.getItem("bma-st") || "all", yr = localStorage.getItem("bma-yr") || "all";
     let sk = localStorage.getItem("bma-sk") || "announced", sd = +(localStorage.getItem("bma-sd") || 1);
     const years = [...new Set(ALL.map(d => d.announced.slice(0, 4)))].sort();
-    const rows = ALL.filter(d => (st === "all" || d.status === st) && (yr === "all" || d.announced.slice(0, 4) === yr));
+    const rows = ALL.filter(d => (st === "all" || d.status === st) && (yr === "all" || (yr === "2025+" ? d.announced >= "2025" : d.announced.slice(0, 4) === yr)));
     const fv = (d, k) => { const x = d.f[k]; return x ? x.v : null; };
     const val = (d, k) => k === "announced" ? d.announced : k === "status" ? d.status : k === "close" ? (d.close_date || "~" + (fv(d, "expected_close") || "")) :
       k === "acquirer" ? d.acquirer : k === "target" ? d.target : k === "tgt_state" ? fv(d, "tgt_state") : fv(d, k);
@@ -890,16 +890,16 @@
     const tip = (d, k) => { const x = d.f[k]; return x ? (x.note ? x.note + " — " : "") + "Source: " + (x.q || "") : ""; };
     const cnt = s => ALL.filter(d => d.status === s).length;
     const segS = '<div class="seg">' + [["all", "All " + ALL.length], ["pending", "Pending " + cnt("pending")], ["closed", "Closed " + cnt("closed")], ["terminated", "Terminated " + cnt("terminated")]].map(([k, l]) => '<button data-bst="' + k + '" class="' + (st === k ? "on" : "") + '">' + l + "</button>").join("") + "</div>";
-    const segY = '<div class="seg">' + [["all", "All years"]].concat(years.map(y => [y, y])).map(([k, l]) => '<button data-byr="' + k + '" class="' + (yr === k ? "on" : "") + '">' + l + "</button>").join("") + "</div>";
+    const segY = '<div class="seg">' + [["all", "All years"]].concat(years.map(y => [y, y]), years.filter(y => y >= "2025").length > 1 ? [["2025+", "2025–" + years[years.length - 1].slice(2)]] : []).map(([k, l]) => '<button data-byr="' + k + '" class="' + (yr === k ? "on" : "") + '">' + l + "</button>").join("") + "</div>";
     const th = (k, l, cl) => '<th class="' + (cl || "") + ' srt" data-sk="' + k + '" title="Sort">' + esc(l) + (sk === k ? (sd > 0 ? " ▲" : " ▼") : "") + "</th>";
     const head = "<tr>" + th("announced", "Announced", "sl") + th("status", "Status") + th("close", "Closed / expected") + th("acquirer", "Acquirer") + th("target", "Target") + th("tgt_state", "St.") +
       C.map(c => th(c.key, c.label, c.fmt === "txt" ? "" : "r")).join("") + "<th>Sources</th></tr>";
     const stb = s => '<span class="bst ' + s + '">' + s.toUpperCase() + "</span>";
     const body = rows.map(d => {
-      const src = Object.entries(d.sources).map(([l, u]) => '<a href="' + esc(u) + '" target="_blank" rel="noopener noreferrer" title="' + esc(l) + '">' + (/press/i.test(l) ? "PR" : "Deck") + " " + EXT + "</a>").join(" ") +
+      const src = Object.entries(d.sources).map(([l, u]) => '<a href="' + esc(u) + '" target="_blank" rel="noopener noreferrer" title="' + esc(l) + '">' + (/press/i.test(l) ? "PR" : /transcript/i.test(l) ? "Call" : "Deck") + " " + EXT + "</a>").join(" ") +
         (d.close_src ? ' <a href="' + esc(d.close_src) + '" target="_blank" rel="noopener noreferrer" title="Completion 8-K">Close ' + EXT + "</a>" : "");
       return '<tr class="bmr" data-id="' + esc(d.id) + '"><td class="sl b"><span class="tw">▸</span> ' + fdt(d.announced) + (d.deal_type !== "Acquisition" ? '<span class="tag">' + esc(d.deal_type.toUpperCase()) + "</span>" : "") + "</td><td>" + stb(d.status) + "</td>" +
-        "<td" + (d.close_date ? ' title="' + esc(d.close_q || "") + '">' + fdt(d.close_date) : ' class="na" title="Expected at announcement">exp. ' + esc(fv(d, "expected_close") || "–")) + "</td>" +
+        "<td" + (d.close_date ? ' title="' + esc(d.close_q || "") + '">' + fdt(d.close_date) :  ' class="na" title="' + esc(d.exp_update ? "Latest filing (" + d.exp_update.filed + "): " + d.exp_update.q : "Expected at announcement") + '">exp. ' + esc(fv(d, "expected_close") || "–") + (d.exp_update ? "<sup>†</sup>" : "")) + "</td>" +
         '<td class="b">' + esc(d.acquirer) + ' <span class="sid">' + esc(d.acq_ticker) + "</span></td><td class=\"b\">" + esc(d.target) + ' <span class="sid">' + esc(d.tgt_ticker) + '</span></td><td title="' + esc(tip(d, "tgt_state")) + '">' + esc(fv(d, "tgt_state") || "–") + "</td>" +
         C.map(c => { const v = fv(d, c.key); return '<td class="' + (c.fmt === "txt" ? "" : "r") + (v == null ? " na" : "") + '"' + (v == null ? ' title="Not disclosed in announcement documents"' : ' title="' + esc(tip(d, c.key)) + '"') + ">" + F(v, c.fmt) + (d.f[c.key] && d.f[c.key].note ? "<sup>*</sup>" : "") + "</td>"; }).join("") +
         '<td class="srcs">' + src + "</td></tr>" +
@@ -910,7 +910,8 @@
       const fm = Object.fromEntries(C.map(c => [c.key, c.fmt]));
       return '<table class="sumtbl"><thead><tr><th>Field</th><th class="r">Value</th><th>Note</th><th>Verbatim source text</th><th>Doc</th></tr></thead><tbody>' +
         Object.entries(d.f).map(([k, x]) => "<tr><td>" + esc(lab[k] || k) + '</td><td class="r b">' + F(x.v, fm[k]) + "</td><td>" + esc(x.note || "") + '</td><td class="qq">' + esc(x.q || "") + '</td><td><a href="' + esc(x.src) + '" target="_blank" rel="noopener noreferrer">' + (Object.entries(d.sources).find(([l, u]) => u === x.src) || ["source"])[0].replace(/ \(.*/, "") + " " + EXT + "</a></td></tr>").join("") +
-        (d.close_src ? "<tr><td>Status / close date</td><td class=\"r b\">" + esc(d.status) + " " + fdt(d.close_date) + '</td><td>Auto-checked from acquirer 8-K filed ' + esc(d.close_filed || "") + '</td><td class="qq">' + esc(d.close_q || "") + '</td><td><a href="' + esc(d.close_src) + '" target="_blank" rel="noopener noreferrer">8-K ' + EXT + "</a></td></tr>" : "") +
+        (d.close_src ? "<tr><td>Status / close date</td><td class=\"r b\">" + esc(d.status) + " " + fdt(d.close_date) + '</td><td>Auto-checked from 8-K filed ' + esc(d.close_filed || "") + '</td><td class="qq">' + esc(d.close_q || "") + '</td><td><a href="' + esc(d.close_src) + '" target="_blank" rel="noopener noreferrer">8-K ' + EXT + "</a></td></tr>" : "") +
+        (d.exp_update ? "<tr><td>Expected close (latest filing)</td><td></td><td>Auto-checked from 8-K filed " + esc(d.exp_update.filed) + '</td><td class="qq">' + esc(d.exp_update.q) + '</td><td><a href="' + esc(d.exp_update.src) + '" target="_blank" rel="noopener noreferrer">8-K ' + EXT + "</a></td></tr>" : "") +
         "</tbody></table>";
     }
     const srow = (lab, fn) => '<tr class="bms"><td class="sl b">' + lab + '</td><td></td><td></td><td></td><td></td><td></td>' + C.map(c => { if (!c.stat) return "<td></td>"; const xs = nums(c.key), v = fn(xs);
@@ -928,7 +929,9 @@
       '<div class="pnote">Click a row for every field with its verbatim source text and document link; hover any value for its source snippet. * = see note in row detail. Median/average rows recompute for the filtered set.</div>' +
       "<h2>Notes</h2>" + D.notes.map(x => '<div class="pnote">' + esc(x) + "</div>").join("") +
       "<h2>Exclusions &amp; coverage</h2>" + D.exclusions.map(x => '<div class="pnote">' + esc(x) + "</div>").join("") +
-      (D.warnings && D.warnings.length ? '<div class="pnote">Last refresh warnings: ' + esc(D.warnings.join("; ")) + "</div>" : "");
+      (D.warnings && D.warnings.length ? '<div class="pnote">Last refresh warnings: ' + esc(D.warnings.join("; ")) + "</div>" : "") +
+      ((D.candidates || []).length ? "<h2>Review candidates (auto-flagged, not published)</h2>" + '<div class="pnote">Bank/thrift 8-Ks (Item 1.01) filed in the last 45 days announcing a merger agreement with a stated value of $500M+ or no parsable value. They are NOT in the table above and are only added after manual review.</div>' +
+        D.candidates.map(c => c.error ? '<div class="pnote">' + esc(c.error) + "</div>" : '<div class="pnote">' + esc(c.filed) + " · " + esc(c.company) + " · " + (c.value_m != null ? "$" + c.value_m.toLocaleString("en-US") + "M" : "value not parsed") + ' · <a href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">8-K ' + EXT + "</a>" + (c.q ? ' <span class="hint">' + esc(c.q) + "</span>" : "") + "</div>").join("") : "");
     app.querySelectorAll("[data-bst]").forEach(b => b.onclick = () => { localStorage.setItem("bma-st", b.dataset.bst); bankMA(area); });
     app.querySelectorAll("[data-byr]").forEach(b => b.onclick = () => { localStorage.setItem("bma-yr", b.dataset.byr); bankMA(area); });
     app.querySelectorAll("th[data-sk]").forEach(h => h.onclick = () => { const k = h.dataset.sk; localStorage.setItem("bma-sd", k === sk ? -sd : (["announced", "status", "close", "acquirer", "target", "tgt_state", "consideration"].includes(k) ? 1 : -1)); localStorage.setItem("bma-sk", k); bankMA(area); });

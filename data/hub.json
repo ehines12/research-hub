@@ -61,7 +61,7 @@
    "icon": "bank",
    "status": "live",
    "tagline": "US bank deals > $500M: pricing, marks, accretion and dilution as announced",
-   "description": "US bank and thrift whole-company acquisitions with deal value above $500M (v1: deals announced in 2024). Deal terms, target profile and pro forma metrics as announced, each sourced to the merger press release or investor deck on SEC EDGAR; status and close date checked automatically."
+   "description": "US bank and thrift whole-company acquisitions with deal value above $500M announced 2024 through Nov 2026. Deal terms, target profile and pro forma metrics as announced, each sourced to the merger press release or investor deck on SEC EDGAR; status and close date checked automatically."
   }
  ],
  "links": [

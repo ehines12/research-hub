@@ -1,128 +1,155 @@
 {
- "generated": "2026-11-11 19:34",
- "scope": "US bank & thrift whole-company acquisitions announced 2024-01-01 to 2024-12-31, aggregate deal value > $500M at announcement",
+ "generated": "2026-11-11 20:14",
+ "scope": "US bank & thrift whole-company acquisitions announced 2024-01-01 to 2026-11-11, aggregate deal value > $500M at announcement",
  "notes": [
-  "Metrics are AS ANNOUNCED: deal value, price per share, multiples and pro forma estimates are from the announcement-day merger press release and investor presentation (8-K exhibits), based on the acquirer's share price before announcement. Final closing values differ for stock deals.",
-  "Nothing is estimated. A blank (–) means the announcement documents did not disclose that metric. Hover a value (or open a row) to see the verbatim source text; every row links to its source documents on SEC EDGAR.",
-  "P/forward EPS uses the year the company disclosed (mostly 2025E consensus; INDB/EBTC is 2026E per INDB management). No deal in this set disclosed a P/LTM EPS multiple, so that column is blank.",
-  "EPS accretion is the headline figure as disclosed, which in every case assumes fully phased-in cost savings and excludes one-time merger charges (the year is shown in the row detail). No deal disclosed a separate partially-phased year-1 figure; Wintrust/Macatawa gave no number ('accretive in first year').",
-  "Core deposit premium is shown only where the company labelled it as such (RNST/FBMS, AUB/SASR); core deposit intangible assumptions are not substituted for it.",
-  "Cost saves are % of the target's noninterest expense, except BHLB/BRKL (merger of equals), which disclosed 12.6% of the combined company's expense base. Pro forma CET1 is the consolidated ratio at close except WSBC/PFC (bank-level Tier 1 common, the figure disclosed).",
-  "Target ROAA, NPAs/assets and CRE concentration are as of the latest quarter cited in each deck (period shown in row detail); HTLF ROAA is the adjusted (non-GAAP) figure UMB disclosed.",
-  "Status and actual close date are checked automatically against each acquirer's EDGAR 8-K filings (Item 2.01 completion). New deals are never added automatically; the deal list is curated."
+  "Metrics are AS ANNOUNCED: deal value, price per share, multiples and pro forma estimates are from the announcement-day merger press release and investor presentation (8-K exhibits / Rule 425 filings), based on the acquirer's share price before announcement. Final closing values differ for stock deals.",
+  "Nothing is estimated or derived. A blank (–) means the announcement documents did not disclose that metric (or disclosed it only qualitatively, e.g. 'modestly accretive' — see row detail). Every value links to its EDGAR source with the verbatim text it came from.",
+  "Two investor decks were filed as slide images only (PNC/FirstBank, HBAN/Cadence): values from them are transcribed from the slide image and flagged in the row detail; the EDGAR link points to the filed exhibit.",
+  "P/forward EPS uses the year the company disclosed: mostly next-year consensus (2025E for 2024 deals, 2026E for 2025 deals); CVBF/HTBK and FHB/TCBK disclosed only 2027E. P/LTM EPS is shown where disclosed (COLB/PPBI, SBCF/Villages, PB/STEL, PEBO/CBNK).",
+  "EPS accretion is the headline figure as disclosed, assuming fully phased-in cost savings and excluding one-time charges; the year (2025E–2028E) is in the row detail. Santander/Webster disclosed only a group-level range (c.7–8% by 2028), so it is left blank.",
+  "TBV dilution is shown as a positive number; FITB/CMA disclosed TBVPS ACCRETION (0.1%), shown as -0.1. Core deposit premium is shown only where the company labelled it as such.",
+  "Cost saves are % of the target's noninterest expense, except mergers where only a combined-base figure was disclosed: BHLB/BRKL (12.6%), PNFP/SNV (10%), WAFD/EverBank (~11%) and Santander/Webster (~19% of the combined U.S. cost base).",
+  "Pro forma CET1 is the consolidated ratio at close as disclosed (WSBC/PFC bank-level; HBAN/Cadence adjusted CET1 incl. AOCI; Santander/Webster is Santander group CET1; FSUN/FFWM is the 2027 pro forma figure).",
+  "Target ROAA, NPAs/assets, CRE concentration, assets, deposits and loans are as of the latest quarter cited in each deck (period shown in row detail).",
+  "WaFd/EverBank is a reverse merger: WaFd is the legal acquirer and issues shares, EverBank is the accounting acquirer and its holders own ~59%. Purchase-accounting marks there apply to WaFd, so the mark columns are blank for that row. Columbia Financial/Northfield metrics are at the midpoint of the preliminary appraisal for Columbia's second-step conversion.",
+  "Status and actual close date are checked automatically each weekday against EDGAR 8-K filings by the acquirer and (where it files with the SEC) the target: Item 2.01 completion, Item 1.02 termination. The latest 'expected to close' statement from those filings is shown for pending deals. New deals are never added automatically; the deal list is curated."
  ],
  "exclusions": [
+  "Not shown: deals announced before 2024 (held off the page by design).",
   "Excluded: Capital One / Discover Financial (announced Feb 2024, ~$35.3B) - Discover is a card network and consumer lender rather than a bank/thrift franchise, and its size would dominate the averages.",
-  "Excluded: National Bank of Canada / Canadian Western Bank (non-US target); FirstSun / HomeStreet (below $500M and later terminated); FDIC-assisted transactions; branch, partial and non-bank (wealth, fintech, insurance) acquisitions.",
-  "Below the $500M threshold in 2024 (not shown): e.g. German American / Heartland BancCorp (~$330M), ConnectOne / First of Long Island (~$284M).",
-  "Coverage limits: the deal list was built from SEC EDGAR filings (merger 8-Ks, Forms 425/S-4/DEFM14A filed by bank holding companies). A deal whose acquirer and target both file only with bank regulators (not the SEC) could be missed."
+  "Excluded: non-US targets (e.g. National Bank of Canada / Canadian Western Bank; foreign deals by US-listed banks); FDIC-assisted transactions; branch, partial and non-bank (wealth, fintech, insurance) acquisitions; Green Dot / CommerceOne / Smith Ventures (fintech-bank split transaction).",
+  "Below the $500M threshold at announcement (not shown), e.g.: 2024 - German American / Heartland BancCorp (~$330M), ConnectOne / First of Long Island (~$284M), FirstSun / HomeStreet (later terminated); 2025-26 - Glacier / Guaranty Bancshares ($476M at announcement; ~$537M at close), Eastern / HarborOne (~$490M), FB Financial / Southern States (~$381M), Burke & Herbert / LINKBANCORP (~$354M), Home BancShares / Mountain Commerce (~$150M).",
+  "Coverage limits: the deal list was built from SEC EDGAR filings (merger 8-Ks, Forms 425/S-4/DEFM14A, full-text search through 2026-11-11). A deal whose acquirer and target both file only with bank regulators (not the SEC) could be missed."
  ],
  "warnings": [],
+ "candidates": [
+  {
+   "filed": "2026-10-30",
+   "company": "Texas Community Bancshares, Inc.  (TCBS)  (CIK 0001849466)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1849466/000110465926120589/tcbs-ex99d1.htm",
+   "value_m": null,
+   "q": "Deal value not stated in the 8-K text (check exhibits)"
+  },
+  {
+   "filed": "2026-10-29",
+   "company": "FIRST MID BANCSHARES, INC.  (FMBH)  (CIK 0000700565)",
+   "url": "https://www.sec.gov/Archives/edgar/data/700565/000117184326006953/f8k_102826.htm",
+   "value_m": null,
+   "q": "Deal value not stated in the 8-K text (check exhibits)"
+  },
+  {
+   "filed": "2026-10-13",
+   "company": "Third Coast Bancshares, Inc.  (TCBX)  (CIK 0001781730)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1781730/000119312526420491/d160832d8k.htm",
+   "value_m": null,
+   "q": "Deal value not stated in the 8-K text (check exhibits)"
+  }
+ ],
  "summary": {
   "deal_value_m": {
-   "n": 10,
+   "n": 30,
    "median": 1170.0,
-   "mean": 1229.49
+   "mean": 2472.977
   },
   "premium": {
-   "n": 4,
-   "median": 22.0,
-   "mean": 20.525
+   "n": 9,
+   "median": 20,
+   "mean": 21.778
   },
   "p_tbv": {
-   "n": 7,
-   "median": 1.48,
-   "mean": 1.443
+   "n": 23,
+   "median": 1.53,
+   "mean": 1.463
   },
   "p_ltm_eps": {
-   "n": 0,
-   "median": null,
-   "mean": null
+   "n": 4,
+   "median": 14.75,
+   "mean": 15.525
   },
   "p_fwd_eps": {
-   "n": 8,
-   "median": 11.8,
-   "mean": 11.725
+   "n": 21,
+   "median": 12.0,
+   "mean": 12.49
   },
   "cdp": {
-   "n": 2,
-   "median": 5.8,
-   "mean": 5.8
+   "n": 6,
+   "median": 8.15,
+   "mean": 7.25
   },
   "tgt_assets_b": {
-   "n": 9,
-   "median": 11.7,
-   "mean": 11.649
+   "n": 25,
+   "median": 10.807,
+   "mean": 16.254
   },
   "tgt_deposits_b": {
-   "n": 10,
-   "median": 7.95,
-   "mean": 9.259
+   "n": 25,
+   "median": 7.2,
+   "mean": 10.86
   },
   "tgt_loans_b": {
-   "n": 10,
-   "median": 8.3,
-   "mean": 8.306
+   "n": 25,
+   "median": 6.8,
+   "mean": 9.266
   },
   "tgt_roaa": {
-   "n": 5,
-   "median": 0.99,
-   "mean": 1.044
+   "n": 12,
+   "median": 0.97,
+   "mean": 0.993
   },
   "tgt_npa": {
-   "n": 3,
-   "median": 0.34,
-   "mean": 0.407
+   "n": 7,
+   "median": 0.26,
+   "mean": 0.269
   },
   "tgt_cre": {
-   "n": 3,
-   "median": 324,
-   "mean": 303.333
+   "n": 4,
+   "median": 318.5,
+   "mean": 305.75
   },
   "eps_accr": {
-   "n": 9,
-   "median": 27.3,
-   "mean": 28.033
+   "n": 25,
+   "median": 21,
+   "mean": 21.92
   },
   "tbv_dil": {
-   "n": 9,
-   "median": 10,
-   "mean": 10.944
+   "n": 25,
+   "median": 8.2,
+   "mean": 7.876
   },
   "earnback": {
-   "n": 9,
+   "n": 26,
    "median": 2.8,
-   "mean": 2.411
+   "mean": 2.475
   },
   "cost_saves": {
-   "n": 9,
-   "median": 27,
-   "mean": 24.9
+   "n": 26,
+   "median": 27.25,
+   "mean": 26.119
   },
   "credit_mark_pct": {
-   "n": 7,
+   "n": 21,
    "median": 1.6,
-   "mean": 1.614
+   "mean": 1.611
   },
   "credit_mark_m": {
-   "n": 7,
-   "median": 143.4,
-   "mean": 144.114
+   "n": 21,
+   "median": 119.4,
+   "mean": 183.057
   },
   "rate_mark_m": {
-   "n": 9,
-   "median": 324.5,
-   "mean": 339.567
+   "n": 23,
+   "median": 166,
+   "mean": 297.791
   },
   "pf_cet1": {
-   "n": 9,
-   "median": 10.4,
-   "mean": 10.633
+   "n": 24,
+   "median": 10.8,
+   "mean": 11.287
   },
   "tgt_own": {
-   "n": 10,
-   "median": 29.5,
-   "mean": 26.72
+   "n": 27,
+   "median": 29,
+   "mean": 26.278
   }
  },
  "columns": [
@@ -479,7 +506,7 @@
    "status": "closed",
    "close_date": "2025-01-31",
    "close_src": "https://www.sec.gov/Archives/edgar/data/101382/000119312525018885/d827883d8k.htm",
-   "close_q": "completion on January 31, 2025 (the “Closing Date”) of the previously announced merger between UMB Financial Corporation, a Missouri corporation (“UMB” or the “Company”) and Heartland Financial USA, Inc, a Delaware corporation (“HTLF”), pursuant to the Agreement and Plan of Merge",
+   "close_q": "☐ Introduction This Current Report on Form 8-K is being filed in connection with the completion on January 31, 2025 (the “Closing Date”) of the previously announced merger between UMB Financial Corporation, a Missouri corporation (“UMB” or the “Company”) and Heartland Financial USA, Inc, a Delaware ",
    "close_filed": "2025-02-03",
    "checked": "2026-11-11",
    "deal_type": "Acquisition"
@@ -614,7 +641,7 @@
    "status": "closed",
    "close_date": "2025-01-01",
    "close_src": "https://www.sec.gov/Archives/edgar/data/764038/000155837025000006/ssb-20250102x8k.htm",
-   "close_q": "completion (the “Closing”) on January 1, 2025 (the “Closing Date”) of the previously announced merger of Independent Bank Group, Inc, a Texas corporation (“IBTX”), with and into SouthState Corporation, a South Carolina corporation (“SouthState” or the “Company”), pursuant to the Agreement and P",
+   "close_q": "This Current Report on Form 8-K is being filed in connection with the completion (the “Closing”) on January 1, 2025 (the “Closing Date”) of the previously announced merger of Independent Bank Group, Inc, a Texas corporation (“IBTX”), with and into SouthState Corporation, a South Carolina corporation",
    "close_filed": "2025-01-02",
    "checked": "2026-11-11",
    "deal_type": "Acquisition"
@@ -1083,7 +1110,7 @@
    "status": "closed",
    "close_date": "2025-04-01",
    "close_src": "https://www.sec.gov/Archives/edgar/data/883948/000110465925030587/tm2510687d1_8k.htm",
-   "close_q": "completion on April 1, 2025 (the “Closing Date”) of the previously announced merger between Atlantic Union Bankshares Corporation, a Virginia corporation (the “Company”), and Sandy Spring Bancorp, Inc, a Maryland corporation (“Sandy Spring”), pursuant to the Agreement and Plan",
+   "close_q": "¨ Introduction This Current Report on Form 8-K is being filed in connection with the completion on April 1, 2025 (the “Closing Date”) of the previously announced merger between Atlantic Union Bankshares Corporation, a Virginia corporation (the “Company”), and Sandy Spring Bancorp, Inc, a Maryland co",
    "close_filed": "2025-04-01",
    "checked": "2026-11-11",
    "deal_type": "Acquisition"
@@ -1446,6 +1473,2276 @@
    "close_src": "https://www.sec.gov/Archives/edgar/data/1108134/000110465925086043/tm2524397d1_8k.htm",
    "close_q": "On September 1, 2025, Beacon Financial Corporation, a Delaware corporation previously known as “Berkshire Hills Bancorp, Inc” (the “Company” or “Beacon Financial”), completed its previously announced merger of equals transaction with Brookline Bancorp, Inc, a Delaware corporation (“Brookline”), purs",
    "close_filed": "2025-09-02",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "colb-ppbi",
+   "announced": "2025-04-23",
+   "acquirer": "Columbia Banking System",
+   "acq_ticker": "COLB",
+   "target": "Pacific Premier Bancorp",
+   "tgt_ticker": "PPBI",
+   "deal_type": "Acquisition",
+   "sources": {
+    "Press release (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex991.htm",
+    "Investor presentation (8-K Ex. 99.2)": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "CA",
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
+     "q": "…ic Premier Bancorp, Inc. (NASDAQ: PPBI) ● Founded in 1983 ● Headquarters: Irvine, CA $18.1B $12.0B $14.7B ● 58 full-service branches in major metro areas of the Western U.S. Total Assets Loans H…"
+    },
+    "deal_value_m": {
+     "v": 2000,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex991.htm",
+     "q": "…umbia common stock for each Pacific Premier share they own. The merger is valued at approximately $2.0 billion, or $20.83 per Pacific Premier share, based on Columbia’s closing stock price of $22.77 on April 22, 2025. Following closing, Pacific Premier stoc…",
+     "note": "Deck pro forma table: deal value $2,033M"
+    },
+    "price_per_share": {
+     "v": 20.83,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex991.htm",
+     "q": "…umbia common stock for each Pacific Premier share they own. The merger is valued at approximately $2.0 billion, or $20.83 per Pacific Premier share, based on Columbia’s closing stock price of $22.77 on April 22, 2025. Following closing, Pacific Premier stoc…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex991.htm",
+     "q": "…nt, pursuant to which Columbia will acquire Pacific Premier in an all-stock transaction. The combined company will have approximately $70 billion in assets and will be a market leader in the larges…"
+    },
+    "p_tbv": {
+     "v": 0.99,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
+     "q": "…egate transaction value: $2.0 billion Implied Transaction ▪ Price / Tangible Book Value per Share: 0.99x Value & ▪ Price / LTM GAAP EPS: 13.7x 1 Multiples ▪ Price / 2026E Consensus EPS: 13.5x ▪ Price / 2026E Consen…"
+    },
+    "p_ltm_eps": {
+     "v": 13.7,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
+     "q": "…on ▪ Price / Tangible Book Value per Share: 0.99x Value & ▪ Price / LTM GAAP EPS: 13.7x 1 Multiples ▪ Price / 2026E Consensus EPS: 13.5x ▪ Price / 2026E Consensus EPS + After-Tax Cost Savings: 8.4x…"
+    },
+    "p_fwd_eps": {
+     "v": 13.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
+     "q": "…: 0.99x Value & ▪ Price / LTM GAAP EPS: 13.7x 1 Multiples ▪ Price / 2026E Consensus EPS: 13.5x ▪ Price / 2026E Consensus EPS + After-Tax Cost Savings: 8.4x ▪ Three Pacific Premier directors invited to joi…",
+     "note": "2026E consensus EPS"
+    },
+    "tgt_assets_b": {
+     "v": 18.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
+     "q": "…ic Premier Bancorp, Inc. (NASDAQ: PPBI) ● Founded in 1983 ● Headquarters: Irvine, CA $18.1B $12.0B $14.7B ● 58 full-service branches in major metro areas of the Western U.S. Total Assets Loans HFI Total Deposits Ove…"
+    },
+    "tgt_loans_b": {
+     "v": 12.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
+     "q": "…ic Premier Bancorp, Inc. (NASDAQ: PPBI) ● Founded in 1983 ● Headquarters: Irvine, CA $18.1B $12.0B $14.7B ● 58 full-service branches in major metro areas of the Western U.S. Total Assets Loans HFI Total Deposits Ove…"
+    },
+    "tgt_deposits_b": {
+     "v": 14.7,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
+     "q": "…ic Premier Bancorp, Inc. (NASDAQ: PPBI) ● Founded in 1983 ● Headquarters: Irvine, CA $18.1B $12.0B $14.7B ● 58 full-service branches in major metro areas of the Western U.S. Total Assets Loans HFI Total Deposits Ove…"
+    },
+    "tgt_roaa": {
+     "v": 0.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
+     "q": "…fic Premier Trust – IRA custodial services in all 50 states 0.80% 7.5% 67.5% ● Small Business Administration – 15 years as a successful, nationwide preferred lender ROAA ROATCE Efficienc…",
+     "note": "Most recent quarter per deck (ROAA / ROATCE / efficiency)"
+    },
+    "tgt_npa": {
+     "v": 0.15,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
+     "q": "…Merger to depositors, borrowers and relationship managers ▪ Pacific Premier has pristine credit (15bps NPAs/Assets) ▪ Creates a strategically cohesive regional powerhouse with ▪ Cost savings focused on back-office redundancie…"
+    },
+    "eps_accr": {
+     "v": 14,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
+     "q": "…ratio with $18B in AUC, $1.1B in deposits and an average ▪ 14% 2026E EPS accretion with initial TBVPS dilution account size of ~$592k recovered in three years (crossover method) ▪ Leverage Pac…",
+     "note": "2026E, fully phased-in cost savings"
+    },
+    "earnback": {
+     "v": 3,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
+     "q": "…ccretion with initial TBVPS dilution account size of ~$592k recovered in three years (crossover method) ▪ Leverage Pacific Premier’s best -in-class API Marketplace to existing Columbia client base for additional r…"
+    },
+    "cost_saves": {
+     "v": 30,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
+     "q": "…s▪ Estimated $127 million of full run-rate cost savings, or 30% of Pacific Premier’s noninterest expense ▪ Cost savings realization expected to be 75% in 2026 and 100% thereafter ▪ Significant revenue enhancements…"
+    },
+    "credit_mark_m": {
+     "v": 96,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
+     "q": "…sits (amortized over the remaining life of time deposits) ▪ $96 million pre-tax write-down, or 0.8% of Pacific Premier’s projected gross loans at closing (equal -tpe o r3.5x form ing no ln oans¹) Credit Marks / CECL Impact ▪ $4 million, or 50% of the t…"
+    },
+    "credit_mark_pct": {
+     "v": 0.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
+     "q": "…sits (amortized over the remaining life of time deposits) ▪ $96 million pre-tax write-down, or 0.8% of Pacific Premier’s projected gross loans at closing (equal -tpe o r3.5x form ing no ln oans¹) Credit Marks / CECL Impact ▪ $4 million, or 50% of the t…"
+    },
+    "rate_mark_m": {
+     "v": 449,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
+     "q": "…realized at or prior to closing for illustrative purposes ▪ $449 million write-down on Pacific Premier’s gross loans, 3.6% or of its projected gross loans at closing (accreted over remaining life of loans) Fair Value and Inter…"
+    },
+    "pf_cet1": {
+     "v": 11,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
+     "q": "…lance Sheet ~14% 3 Years 2026E EPS Accretion TBVPS Earnback ~1.4% ~20% ~11% Pro Forma Pro Forma Pro Forma CET1 2026E ROAA 2026E ROATCE Ratio @ Close 1 Top Western-Region Headquartered Banks by Assets Los Angeles B B B B…"
+    },
+    "tgt_own": {
+     "v": 30,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
+     "q": "…umbia shares for each Pacific Premier share Consideration ▪ Pro forma ownership: 70% Columbia / 30% Pacific Premier ▪ Implied value per Pacific Premier share: $20.83 ▪ Implied aggregate transaction value: $2.0 billion Implied…"
+    },
+    "expected_close": {
+     "v": "2H 2025",
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
+     "q": "…er shareholders and regulatory approvals Expected Closing ▪ Expected closing in the second half of 2025 1) Based on closing price of Columbia common stock of $22.77 as of April 22, 2025 Note: Assumes 97,069,001 Pa…"
+    }
+   },
+   "status": "closed",
+   "close_date": "2025-08-31",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525193405/d21865d8k.htm",
+   "close_q": "Effective on August 31, 2025 (the “ Closing Date ”), Columbia completed its previously announced all-stock acquisition of Pacific Premier (the “ Closing ”)",
+   "close_filed": "2025-09-02",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "sbcf-villages",
+   "announced": "2025-05-29",
+   "acquirer": "Seacoast Banking Corp. of Florida",
+   "acq_ticker": "SBCF",
+   "target": "Villages Bancorporation",
+   "tgt_ticker": "private",
+   "deal_type": "Acquisition",
+   "sources": {
+    "Press release (8-K Ex. 99.2)": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054274/tm2516417d1_ex99-2.htm",
+    "Investor presentation (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054274/tm2516417d1_ex99-1.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "FL",
+     "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054274/tm2516417d1_ex99-1.htm",
+     "q": "…ng company of Citizens First Bank, established in 1991, and is headquartered in The Villages, Florida • 19 branches with 13 located in The Villages and 6 locations located outside The Villages across Lake Sumter…"
+    },
+    "deal_value_m": {
+     "v": 710.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054274/tm2516417d1_ex99-2.htm",
+     "q": "…regate value of merger consideration to be paid by Seacoast would be approximately $710.8 million. Closing of the transaction is expected in the fourth quarter of 2025, following receipt of approvals from re…"
+    },
+    "consideration": {
+     "v": "75% stock / 25% cash",
+     "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054274/tm2516417d1_ex99-2.htm",
+     "q": "…The final election will be subject to a proration mechanism such that 25% of VBI shares of common stock will receive the cash consideration and 75% of VBI shares of common stock will receive the stock consideration. In the event any shareholder or sharehold…"
+    },
+    "p_tbv": {
+     "v": 1.61,
+     "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054274/tm2516417d1_ex99-1.htm",
+     "q": "…ing • Implied aggregate transaction value: $710.8 million • Price / Tangible Book Value per Share: 161% • Price / LTM Earnings: 15.8x • Price / 2026E Earnings + Cost Saves + Restructuring: 6.7x¹ Implied Transactio…"
+    },
+    "p_ltm_eps": {
+     "v": 15.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054274/tm2516417d1_ex99-1.htm",
+     "q": "…0.8 million • Price / Tangible Book Value per Share: 161% • Price / LTM Earnings: 15.8x • Price / 2026E Earnings + Cost Saves + Restructuring: 6.7x¹ Implied Transaction Value and Multiples ACQUISIT…"
+    },
+    "tgt_assets_b": {
+     "v": 4.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054274/tm2516417d1_ex99-2.htm",
+     "q": "…rate. VBI is the 11th largest bank in the state of Florida with $4.1 billion in assets as of March 31, 2025. VBI operates 19 branches with deposits of approximately $3.5 billion and loans of approximately $1.3 billion…"
+    },
+    "tgt_deposits_b": {
+     "v": 3.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054274/tm2516417d1_ex99-2.htm",
+     "q": "…assets as of March 31, 2025. VBI operates 19 branches with deposits of approximately $3.5 billion and loans of approximately $1.3 billion as of March 31, 2025. As the only community-focused bank deeply integrated into The Villages, VBI has a leadi…"
+    },
+    "tgt_loans_b": {
+     "v": 1.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054274/tm2516417d1_ex99-2.htm",
+     "q": "…assets as of March 31, 2025. VBI operates 19 branches with deposits of approximately $3.5 billion and loans of approximately $1.3 billion as of March 31, 2025. As the only community-focused bank deeply integrated into The Villages, VBI has a leadi…"
+    },
+    "eps_accr": {
+     "v": 24.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054274/tm2516417d1_ex99-1.htm",
+     "q": "…9.8 Pro Forma EPS $2.46 $2.51 EPS Accretion ($) $0.45 $0.49 EPS Accretion (%) 22.1% 24.3% Illustrative 2026E EPS Accretion¹ Illustrative Reconciliation of Tangible Book Value Dilution TBV Shares TBV…",
+     "note": "2026E, cost savings 100% phased in (deck headline ~24%; press release says approximately 22%)"
+    },
+    "tbv_dil": {
+     "v": 9.9,
+     "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054274/tm2516417d1_ex99-1.htm",
+     "q": "…ble Book Value per Share Accretion / (Dilution) ($) ($1.69) SBCF Tangible Book Value per Share Accretion / (Dilution) (%) (9.9%) TBVPS Earnback Period 2.8 Years $ Millions Aggregate Transaction Value $710.8 VBI Estimated Tangible Common E…"
+    },
+    "earnback": {
+     "v": 2.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054274/tm2516417d1_ex99-1.htm",
+     "q": "…ible Book Value per Share Accretion / (Dilution) (%) (9.9%) TBVPS Earnback Period 2.8 Years $ Millions Aggregate Transaction Value $710.8 VBI Estimated Tangible Common Equity at Closing (12/31/2025) 47…"
+    },
+    "rate_mark_m": {
+     "v": 46.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054274/tm2516417d1_ex99-1.htm",
+     "q": "…s loan portfolio, consisting of the following components: • $46.6 million negative interest rate mark (~3.5% of total loans) accreted into earnings over time • $33.1 million non - PCD loans credit mark (~2.5% of total loans) accreted…"
+    },
+    "pf_cet1": {
+     "v": 10.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054274/tm2516417d1_ex99-1.htm",
+     "q": "…ack Earnback Earnback Strong Capital and Liquidity Position 10.8% 14.7% 73.0% CET1 Capital Total Capital Loan-to-Deposit Ratio Ratio Ratio Enhanced Profitability 1.31% 16.9% 52.5% ROAA (2) ROATCE (2)…"
+    },
+    "tgt_own": {
+     "v": 19,
+     "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054274/tm2516417d1_ex99-1.htm",
+     "q": "…holders to maintain aggregate voting ownership below 1 0% • Approximately 81% Seacoast / 19% VBI ownership, inclusive of non - voting preferred on a fully converted basis • No changes to the Board of Directors or exe…"
+    },
+    "expected_close": {
+     "v": "4Q 2025",
+     "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054274/tm2516417d1_ex99-2.htm",
+     "q": "…be paid by Seacoast would be approximately $710.8 million. Closing of the transaction is expected in the fourth quarter of 2025, following receipt of approvals from regulatory authorities, the approval of VBI shareholders, and the satisf…"
+    }
+   },
+   "status": "closed",
+   "close_date": "2025-10-01",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/730708/000073070825000204/sbcf-20251001.htm",
+   "close_q": "Effective October 1, 2025, Seacoast Banking Corporation of Florida (“Seacoast” or the “Company”), and Seacoast's wholly-owned subsidiary Seacoast National Bank, completed the previously announced merger (the \"Merger\") with Villages Bancorporation, Inc (“VBI”), parent company of Citizens First Bank",
+   "close_filed": "2025-10-06",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "cbsh-finemark",
+   "announced": "2025-06-16",
+   "acquirer": "Commerce Bancshares",
+   "acq_ticker": "CBSH",
+   "target": "FineMark Holdings",
+   "tgt_ticker": "FNBT",
+   "deal_type": "Acquisition",
+   "sources": {
+    "Press release (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-1.htm",
+    "Investor presentation (8-K Ex. 99.2)": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-2.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "FL",
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-1.htm",
+     "q": "…d commercial bank and trust company serving clients through 13 banking offices in Florida, Arizona and South Carolina. Founded in 2007, FineMark has a long history of building extraordinary client relationships through a holist…",
+     "note": "Banking footprint in FL, AZ, SC; FL is the home market (holding company based in Fort Myers)"
+    },
+    "deal_value_m": {
+     "v": 585.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-2.htm",
+     "q": "…based on Commerce closing price of $60.68 as of 6/13/2025 • Aggregate transaction value of $585.4 million 1 Consideration • Price / Stated 3/31/2025 TBVPS: 153% • Pay - to - trade: 63% 2 • Price / 2026E EPS: 14.1x •…",
+     "note": "Press release: approximately $585 million including conversion of outstanding preferred stock"
+    },
+    "price_per_share": {
+     "v": 41.87,
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-2.htm",
+     "q": "…of CBSH common stock to be issued for each share of FNBT • $41.87 per share based on Commerce closing price of $60.68 as of 6/13/2025 • Aggregate transaction value of $585.4 million 1 Consideration • Price / Stated 3/31/2025 TBVPS: 153% • Pay…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-1.htm",
+     "q": "…he agreement, shareholders of FineMark will receive a fixed exchange ratio of 0.690 shares of Commerce common stock for each share of FineMark common stock. The per share value equates to $41.87 for FineMark shareholders based on the closing price of Commerce commo…"
+    },
+    "p_tbv": {
+     "v": 1.53,
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-2.htm",
+     "q": "…egate transaction value of $585.4 million 1 Consideration • Price / Stated 3/31/2025 TBVPS: 153% • Pay - to - trade: 63% 2 • Price / 2026E EPS: 14.1x • Price / 2026E EPS with cost savings: 10.9x 3 Multiples…"
+    },
+    "p_fwd_eps": {
+     "v": 14.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-2.htm",
+     "q": "…/ Stated 3/31/2025 TBVPS: 153% • Pay - to - trade: 63% 2 • Price / 2026E EPS: 14.1x • Price / 2026E EPS with cost savings: 10.9x 3 Multiples • Approximately 93% CBSH / 7% FineMark Ownership • R…",
+     "note": "2026E EPS"
+    },
+    "tgt_assets_b": {
+     "v": 4.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-1.htm",
+     "q": "…mmerce’s own client-first philosophy. As of March 31, 2025, FineMark had assets of $4.0 billion, deposits of $3.1 billion and loans of $2.6 billion. FineMark’s Trust and Investment business delivers a comprehensive suite of highly personalized services to a…"
+    },
+    "tgt_deposits_b": {
+     "v": 3.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-1.htm",
+     "q": "…mmerce’s own client-first philosophy. As of March 31, 2025, FineMark had assets of $4.0 billion, deposits of $3.1 billion and loans of $2.6 billion. FineMark’s Trust and Investment business delivers a comprehensive suite of highly personalized services to a…"
+    },
+    "tgt_loans_b": {
+     "v": 2.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-1.htm",
+     "q": "…mmerce’s own client-first philosophy. As of March 31, 2025, FineMark had assets of $4.0 billion, deposits of $3.1 billion and loans of $2.6 billion. FineMark’s Trust and Investment business delivers a comprehensive suite of highly personalized services to a…"
+    },
+    "tgt_roaa": {
+     "v": 0.41,
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-2.htm",
+     "q": "…me to common $22.0 $25.0 $22.4 $5.1 $5.1 $.2 $1.3 $2.8 $3.6 Return on average assets .89% .83% .64% .13% .15% .07% .12% .34% .41% Return on average equity 11.2% 9.7% 8.2% 1.8% 1.9% .9% 1.5% 4.0% 4.6% Net interest margin (taxable-equivalent…",
+     "note": "Quarter ended 3/31/2025 (last column)"
+    },
+    "tgt_npa": {
+     "v": 0.02,
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-2.htm",
+     "q": "…revenue 28% 30% 32% 41% 45% 46% 44% 42% 39% ASSET QUALITY: NPAs & 90+ PD / total assets .07% .03% .06% .06% .05% .03% .01% .05% .02% ACL / total gross loans 1.11% 1.01% 1.03% .93% .88% .89% .88% .88% .87% Net charge-offs / average loans .00%…",
+     "note": "NPAs & 90+ days past due / total assets, 3/31/2025"
+    },
+    "eps_accr": {
+     "v": 6.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-2.htm",
+     "q": "…6 CBSH standalone EPS $4.09 EPS accretion to CBSH ($) $0.26 EPS accretion to CBSH (%) 6.5% 1 3 2 2 1 Estimated fair value marks accreted back through earnings based on the estimated expected lives of…",
+     "note": "2026E, fully phased cost savings (headline ~6%)"
+    },
+    "tbv_dil": {
+     "v": 2.2,
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-2.htm",
+     "q": "…are at close $3,803 143 $26.58 Dilution to CBSH ($) ($0.59) Dilution to CBSH (%) (2.2%) 2 1 3,4 5 2 2 GOODWILL & OTHER INTANGIBLE ASSET RECOGNITION $ MILLIONS Aggregate merger consideration 585 Sta…"
+    },
+    "earnback": {
+     "v": 1.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-2.htm",
+     "q": "…n ting summary. Pro Forma Impact 2 ~6% 2026 EPS Accretion 2 ~2.2% TBVPS Dilution 1.6 Yrs TBVPS Earnback 3 ~17% CET1 Ratio 4 Adds $7.7B Assets under Administration OVERVIEW OF FINEMARK The preeminent, relationship…"
+    },
+    "cost_saves": {
+     "v": 15,
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-2.htm",
+     "q": "…es following due diligence (~0.90% ROA in 2026E) Earnings • Cost savings equal to 15% of FNBT’s noninterest expense (50% phased in 2026; 100% in years thereafter) • Additional revenue synergies identified, but not modeled Cos…"
+    },
+    "credit_mark_m": {
+     "v": 26,
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-2.htm",
+     "q": "…orma tangible book value estimate at closing Merger Costs • Total gross credit mark of $26 million pre - tax, or .99% of FNBT’s loans – $11 million (41%) allocated to purchase credit deteriorated (PCD) loans, recorded into ACL – $15 million (5…"
+    },
+    "credit_mark_pct": {
+     "v": 0.99,
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-2.htm",
+     "q": "…orma tangible book value estimate at closing Merger Costs • Total gross credit mark of $26 million pre - tax, or .99% of FNBT’s loans – $11 million (41%) allocated to purchase credit deteriorated (PCD) loans, recorded into ACL – $15 million (5…"
+    },
+    "rate_mark_m": {
+     "v": 146,
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-2.htm",
+     "q": "…ay 2 via provision expense (CECL “double - count”) Credit • $146 million loan interest rate write - down, accreted over 5 years using straight - line methodology • $35 million AFS securities portfolio (AOCI), accre…"
+    },
+    "pf_cet1": {
+     "v": 17,
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-2.htm",
+     "q": "…ase accounting marks 3 • Limited capital impact at closing, with CET1 ~17%, well - positioned for continued growth • Limited reliance on cost savings (cost savings at 15%) in assumptio…"
+    },
+    "tgt_own": {
+     "v": 7,
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-2.htm",
+     "q": "…• Price / 2026E EPS with cost savings: 10.9x 3 Multiples • Approximately 93% CBSH / 7% FineMark Ownership • Retention agreements are in place for key leadership • Joseph R. Catti, Chairman & CEO of FineMark, will be…"
+    },
+    "expected_close": {
+     "v": "Jan 1, 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-1.htm",
+     "q": "…ther customary closing conditions. Pending these approvals, the transaction is anticipated to close on January 1, 2026. CONFERENCE CALL Commerce will host an investor call on Monday, June 16, at 10:00 a.m. (CT) / 11:00 a.m. (ET)…"
+    }
+   },
+   "status": "closed",
+   "close_date": "2026-01-01",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/22356/000110465926000016/tm2534427d1_8k.htm",
+   "close_q": "Effective on January 1, 2026 (the “ Closing Date ”), Commerce completed its previously announced all-stock acquisition of FineMark (the “ Closing ”)",
+   "close_filed": "2026-01-02",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "hban-vbtx",
+   "announced": "2025-07-14",
+   "acquirer": "Huntington Bancshares",
+   "acq_ticker": "HBAN",
+   "target": "Veritex Holdings",
+   "tgt_ticker": "VBTX",
+   "deal_type": "Acquisition",
+   "sources": {
+    "Press release (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/49196/000114036125025732/ef20051952_ex99-1.htm",
+    "Investor presentation (8-K Ex. 99.2)": "https://www.sec.gov/Archives/edgar/data/49196/000114036125025732/ef20051952_ex99-2.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "TX",
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125025732/ef20051952_ex99-1.htm",
+     "q": "…Columbus, Ohio, and Veritex Holdings, Inc. (Nasdaq: VBTX), a bank holding company headquartered in Dallas, Texas, today announced entry into a definitive merger agreement, and Huntington announced preliminary second quarte…"
+    },
+    "deal_value_m": {
+     "v": 1900,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125025732/ef20051952_ex99-1.htm",
+     "q": "…2025, the consideration implies $33.91 per Veritex share or an aggregate transaction value of $1.9 billion. The transaction is expected to be modestly accretive to Huntington’s earnings per share, neutral to regulato…"
+    },
+    "price_per_share": {
+     "v": 33.91,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125025732/ef20051952_ex99-1.htm",
+     "q": "…n Huntington’s closing price of $17.39 as of July 11, 2025, the consideration implies $33.91 per Veritex share or an aggregate transaction value of $1.9 billion. The transaction is expected to be modestly accretive to Hu…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125025732/ef20051952_ex99-1.htm",
+     "q": "…ill issue 1.95 shares for each outstanding share of Veritex in a 100% stock transaction. Based on Huntington’s closing price of $17.39 as of July 11, 2025, the consideration implies $33.91 per Veri…"
+    },
+    "p_tbv": {
+     "v": 1.52,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125025732/ef20051952_ex99-2.htm",
+     "q": "…Value and Multiples Aggregate Consideration – $1.9 billion Price / TBVPS – 1.52x Price / 2026E Consensus EPS – 14.3x Price / Syn. Consensus 2026E EPS – 10.2x1 Expected Closing Approvals – su…"
+    },
+    "p_fwd_eps": {
+     "v": 14.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125025732/ef20051952_ex99-2.htm",
+     "q": "…ggregate Consideration – $1.9 billion Price / TBVPS – 1.52x Price / 2026E Consensus EPS – 14.3x Price / Syn. Consensus 2026E EPS – 10.2x1 Expected Closing Approvals – subject to approvals from Veritex shar…",
+     "note": "2026E consensus EPS"
+    },
+    "tgt_assets_b": {
+     "v": 12.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125025732/ef20051952_ex99-2.htm",
+     "q": "…her Noninterest Bearing Interest Bearing2 Money Market Time $11B $12.6B Assets 3.31% 1Q25 NIM 0.94% 1Q25 ROAA 11.0% CET1 CRE / C&I SBA / USDA Strong Cultural Alignment Best in Show ‘Gold E…",
+     "note": "3/31/2025"
+    },
+    "tgt_loans_b": {
+     "v": 9,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125025732/ef20051952_ex99-2.htm",
+     "q": "…ngs deposits Branch Map Residential C&D1 13% 8% Multifamily CRE C&I $9B Lending & Deposit Profile Loans Deposits Mortgage Warehouse Other Noninterest Bearing Interest Bearing2 Money Market Time $11B $12.6B Assets 3.31% 1Q2…",
+     "note": "Deck chart: loans ~$9B, deposits ~$11B (3/31/2025; rounded)"
+    },
+    "tgt_deposits_b": {
+     "v": 11,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125025732/ef20051952_ex99-2.htm",
+     "q": "…her Noninterest Bearing Interest Bearing2 Money Market Time $11B $12.6B Assets 3.31% 1Q25 NIM 0.94% 1Q25 ROAA 11.0% CET1 CRE / C&I SBA / USDA Strong Cultural Alignment Best in Show ‘Gold E…",
+     "note": "Deck chart: deposits ~$11B (3/31/2025; rounded)"
+    },
+    "tgt_roaa": {
+     "v": 0.94,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125025732/ef20051952_ex99-2.htm",
+     "q": "…earing2 Money Market Time $11B $12.6B Assets 3.31% 1Q25 NIM 0.94% 1Q25 ROAA 11.0% CET1 CRE / C&I SBA / USDA Strong Cultural Alignment Best in Show ‘Gold Eagle’ Award for Community Servi…",
+     "note": "1Q25"
+    },
+    "eps_accr": {
+     "v": null,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125025732/ef20051952_ex99-1.htm",
+     "q": "…egate transaction value of $1.9 billion. The transaction is expected to be modestly accretive to Huntington’s earnings per share, neutral to regulatory capital at close, and slightly dilutive to tangible book value per share with payback…",
+     "note": "Not quantified: \"modestly accretive\""
+    },
+    "tbv_dil": {
+     "v": null,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125025732/ef20051952_ex99-1.htm",
+     "q": "…ings per share, neutral to regulatory capital at close, and slightly dilutive to tangible book value per share with payback in approximately one year inclusive of merger expenses and CECL double count. Second Quarter 2025 Financial Highlights The announcement…",
+     "note": "Not quantified: \"slightly dilutive\""
+    },
+    "earnback": {
+     "v": 1,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125025732/ef20051952_ex99-1.htm",
+     "q": "…ings per share, neutral to regulatory capital at close, and slightly dilutive to tangible book value per share with payback in approximately one year inclusive of merger expenses and CECL double count. Second Quarter 2025 Financial Highlights The announcement…"
+    },
+    "cost_saves": {
+     "v": 25,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125025732/ef20051952_ex99-2.htm",
+     "q": "…f March 31, 2025; Market data as of July 11, 2025 1 Assumes fully realized synergies of 25% of Veritex’s 2026E non-interest expense; 2 Crossover method earn-back 4 Powerful Pro Forma Texas Franchise $15B Total Loans $13B Total Deposits ~200…"
+    },
+    "pf_cet1": {
+     "v": null,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125025732/ef20051952_ex99-2.htm",
+     "q": "…sits ~200 Total Bankers Modestly accretive to EPS and ROTCE Neutral to regulatory capital at close Minimally dilutive to tangible book value per share, with an earn-back of ~1 year2 Exceeds IRR Hurdle Pro For…",
+     "note": "Not quantified: \"neutral to regulatory capital at close\""
+    },
+    "tgt_own": {
+     "v": 7,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125025732/ef20051952_ex99-2.htm",
+     "q": "…will receive 1.95 Huntington shares for each Veritex share Pro forma ownership – 93% Huntington / 7% Veritex Transaction Value and Multiples Aggregate Consideration – $1.9 billion Price / TBVPS – 1.52x Price / 2026E Co…"
+    },
+    "expected_close": {
+     "v": "4Q 2025",
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125025732/ef20051952_ex99-2.htm",
+     "q": "…rom Veritex shareholders and customary regulatory approvals Closing – estimated in 4Q25 Leadership and Community Leadership – Malcolm Holland to be Chairman of Texas Community – continue to support…"
+    }
+   },
+   "status": "closed",
+   "close_date": "2025-10-20",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125038574/ef20057398_8k.htm",
+   "close_q": "Effective October 20, 2025 (the “Closing Date”), Huntington completed its previously announced acquisition of Veritex Holdings, Inc, a Texas corporation (“Veritex”), pursuant to the Agreement and Plan of Merger, dated as of July 13, 2025 (the “Mer",
+   "close_filed": "2025-10-20",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "pnfp-snv",
+   "announced": "2025-07-24",
+   "acquirer": "Pinnacle Financial Partners",
+   "acq_ticker": "PNFP",
+   "target": "Synovus Financial",
+   "tgt_ticker": "SNV",
+   "deal_type": "Merger of equals",
+   "sources": {
+    "Press release (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-1.htm",
+    "Investor presentation (8-K Ex. 99.2)": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-2.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "GA",
+     "src": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-1.htm",
+     "q": "…mpanies to Host Joint Conference Call Today at 5:30 p.m. ET Nashville, TN and Columbus, GA — July 24, 2025 — Pinnacle Financial Partners (Nasdaq/NGS: PNFP) and Synovus Financial Corp. (NYSE: SNV) toda…",
+     "note": "Synovus is based in Columbus, GA"
+    },
+    "deal_value_m": {
+     "v": 8600,
+     "src": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-1.htm",
+     "q": "…hange ratio represents a Synovus per share value of $61.18, a transaction value of $8.6 billion and an approximate 10% premium to Synovus on an unaffected basis. 1 Following the close of the transaction, S…"
+    },
+    "price_per_share": {
+     "v": 61.18,
+     "src": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-1.htm",
+     "q": "…s shares per Pinnacle share. This exchange ratio represents a Synovus per share value of $61.18, a transaction value of $8.6 billion and an approximate 10% premium to Synovus on an unaffected basis. 1 Foll…"
+    },
+    "premium": {
+     "v": 10,
+     "src": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-1.htm",
+     "q": "…re value of $61.18, a transaction value of $8.6 billion and an approximate 10% premium to Synovus on an unaffected basis. 1 Following the close of the transaction, Synovus shareholders will own approximately 48.5% and Pinnacle sha…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-1.htm",
+     "q": "…es, the shares of Synovus and Pinnacle shareholders will be converted into shares of a new Pinnacle parent company based on a fixed exchange ratio of 0.5237 Synovus shares per Pinnacle share. This exchange ratio represents a Synovus per share value of $61.…"
+    },
+    "eps_accr": {
+     "v": 21,
+     "src": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-1.htm",
+     "q": "…of the combined company. The transaction is expected to be approximately 21% accretive to Pinnacle’s estimated operating EPS in 2027, 2 with a rapid tangible book value per share earnback period of 2.6 years. The transaction is expected to be…",
+     "note": "2027E operating EPS, fully phased-in cost savings"
+    },
+    "tbv_dil": {
+     "v": 9,
+     "src": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-2.htm",
+     "q": "…close 8,972 152 58.90 TBVPS Dilution to Pinnacle ($) (5.89) TBVPS Dilution to Pinnacle (%) (9)% Goodwill reconciliation $mm Merger consideration 8,623 ( ‐ ) Synovus marked tangible common equity (4,506) Ex…"
+    },
+    "earnback": {
+     "v": 2.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-1.htm",
+     "q": "…Pinnacle’s estimated operating EPS in 2027, 2 with a rapid tangible book value per share earnback period of 2.6 years. The transaction is expected to be tax-free to shareholders of both companies. “Over the last 25 years, we ha…"
+    },
+    "cost_saves": {
+     "v": 10,
+     "src": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-2.htm",
+     "q": "…ional estimated $45 million of one‐time LFI costs Synergies $250 million of run‐rate net expense savings, or 10% of combined non‐interest expense ‒ Includes estimated $285 million of gross run‐rate expense savings with an incremental $35 million of ongoin…",
+     "note": "Basis is COMBINED non-interest expense (not target-only)"
+    },
+    "credit_mark_m": {
+     "v": 483,
+     "src": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-2.htm",
+     "q": "…ot included in announced financial metrics Loan Credit Mark $(483) million gross loan credit mark or 1.1% of Synovus gross loans, in‐line with Synovus' existing ALL Interest Rate & Fair Value Marks $(1.8) billion of total pre‐tax net asse…"
+    },
+    "credit_mark_pct": {
+     "v": 1.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-2.htm",
+     "q": "…ot included in announced financial metrics Loan Credit Mark $(483) million gross loan credit mark or 1.1% of Synovus gross loans, in‐line with Synovus' existing ALL Interest Rate & Fair Value Marks $(1.8) billion of total pre‐tax net asse…"
+    },
+    "rate_mark_m": {
+     "v": 874,
+     "src": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-2.htm",
+     "q": "…tax net asset marks & AOCI accreted back through earnings ‒ $(874) million pre‐tax loan mark ‒ $(946) million pre‐tax AFS and HTM securities mark ‒ $(4) million pre‐tax time deposits mark $237 million p…"
+    },
+    "pf_cet1": {
+     "v": 9.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-2.htm",
+     "q": "…r to the End Notes for sources and footnoted information. 6 9.8% CET1 Ratio at Close … And Positioned to Deliver for Clients and Investors … High‐Growth Market Focus Winning Culture Exceptional…"
+    },
+    "tgt_own": {
+     "v": 48.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-1.htm",
+     "q": "…unaffected basis. 1 Following the close of the transaction, Synovus shareholders will own approximately 48.5% and Pinnacle shareholders will own approximately 51.5% of the combined company. The transaction is expected t…"
+    },
+    "expected_close": {
+     "v": "1Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-1.htm",
+     "q": "…perity, among other worthwhile causes. Timing and Approvals The transaction is expected to close in the first quarter of 2026, subject to the receipt of required regulatory approvals, approval by Pinnacle and Synovus shareholders and t…"
+    }
+   },
+   "status": "closed",
+   "close_date": "2026-01-02",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/1115055/000111505526000002/pnfp-20260102.htm",
+   "close_q": "On January 2, 2026, Pinnacle and Synovus issued a press release announcing the completion of the Merger, a copy of which is filed as Exhibit 99",
+   "close_filed": "2026-01-02",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "pnc-firstbank",
+   "announced": "2025-09-08",
+   "acquirer": "PNC Financial Services Group",
+   "acq_ticker": "PNC",
+   "target": "FirstBank Holding Company",
+   "tgt_ticker": "private",
+   "deal_type": "Acquisition",
+   "sources": {
+    "Press release (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/713676/000071367625000062/a2025_0908xrlsxpncaquire.htm",
+    "Investor presentation (8-K Ex. 99.2, slide images)": "https://www.sec.gov/Archives/edgar/data/713676/000071367625000062/firstbankacquisition_inv.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "CO",
+     "src": "https://www.sec.gov/Archives/edgar/data/713676/000071367625000062/a2025_0908xrlsxpncaquire.htm",
+     "q": "…e agreement to acquire FirstBank Holding Company, including its banking subsidiary FirstBank, headquartered in Lakewood, CO. FirstBank, with $26.8 billion in assets as of June 30, 2025, provides commercial and retail banking services…"
+    },
+    "deal_value_m": {
+     "v": 4100,
+     "src": "https://www.sec.gov/Archives/edgar/data/713676/000071367625000062/a2025_0908xrlsxpncaquire.htm",
+     "q": "…ion shares of PNC common stock and $1.2 billion in cash and implies a transaction value of $4.1 billion. Advisors Wells Fargo is serving as financial advisor to PNC. Wachtell, Lipton, Rosen & Katz is serving as le…",
+     "note": "Deck: total implied consideration of $4.125 billion"
+    },
+    "consideration": {
+     "v": "70% stock / 30% cash",
+     "src": "https://www.sec.gov/Archives/edgar/data/713676/000071367625000062/firstbankacquisition_inv.htm",
+     "q": "…saction Value Total implied consideration of $4.125 billion 70% stock; 30% cash Key Financial Metrics Immediately accretive to earnings ~ 25% internal rate of return 3.8% TBV dilution; earn…",
+     "note": "Investor presentation is image-only; quote transcribed from slide image. PR: ~13.9M PNC shares plus $1.2B cash"
+    },
+    "tgt_assets_b": {
+     "v": 26.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/713676/000071367625000062/a2025_0908xrlsxpncaquire.htm",
+     "q": "…anking subsidiary FirstBank, headquartered in Lakewood, CO. FirstBank, with $26.8 billion in assets as of June 30, 2025, provides commercial and retail banking services across Colorado and Arizona. FirstBank operates 95 branches,…"
+    },
+    "tgt_deposits_b": {
+     "v": 23,
+     "src": "https://www.sec.gov/Archives/edgar/data/713676/000071367625000062/firstbankacquisition_inv.htm",
+     "q": "…s 700k+ Customers Served 95 Total Branches 15.8% CET1 Ratio Quality Low-Cost Deposit Franchise $23bn Diversified Loan Mix with Low Losses $16bn CRE 32% Note: Figures as of 6/30/25 unless otherwise noted. Transa…",
+     "note": "Investor presentation is image-only; quote transcribed from slide image; 6/30/25, rounded"
+    },
+    "tgt_loans_b": {
+     "v": 16,
+     "src": "https://www.sec.gov/Archives/edgar/data/713676/000071367625000062/firstbankacquisition_inv.htm",
+     "q": "…s 15.8% CET1 Ratio Quality Low-Cost Deposit Franchise $23bn Diversified Loan Mix with Low Losses $16bn CRE 32% Note: Figures as of 6/30/25 unless otherwise noted. Transaction Overview Transaction Summary Transact…",
+     "note": "Investor presentation is image-only; quote transcribed from slide image; 6/30/25, rounded"
+    },
+    "tgt_cre": {
+     "v": null,
+     "src": "https://www.sec.gov/Archives/edgar/data/713676/000071367625000062/firstbankacquisition_inv.htm",
+     "q": "…s 15.8% CET1 Ratio Quality Low-Cost Deposit Franchise $23bn Diversified Loan Mix with Low Losses $16bn CRE 32% Note: Figures as of 6/30/25 unless otherwise noted. Transaction Overview Transaction Summary Transaction Valu…",
+     "note": "Deck shows CRE = 32% of loans (loan mix), not the regulatory CRE/capital concentration; left blank"
+    },
+    "eps_accr": {
+     "v": null,
+     "src": "https://www.sec.gov/Archives/edgar/data/713676/000071367625000062/firstbankacquisition_inv.htm",
+     "q": "…of $4.125 billion 70% stock; 30% cash Key Financial Metrics Immediately accretive to earnings ~ 25% internal rate of return 3.8% TBV dilution; earn-back of 3.3 years No change to announced buyback plan P…",
+     "note": "Not quantified"
+    },
+    "tbv_dil": {
+     "v": 3.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/713676/000071367625000062/firstbankacquisition_inv.htm",
+     "q": "…diately accretive to earnings ~ 25% internal rate of return 3.8% TBV dilution; earn-back of 3.3 years No change to announced buyback plan Pro Forma Impact Basel III CET1 Capital Ratio 10.5% 6/30/25 10.4% Pro For…",
+     "note": "Investor presentation is image-only; quote transcribed from slide image"
+    },
+    "earnback": {
+     "v": 3.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/713676/000071367625000062/firstbankacquisition_inv.htm",
+     "q": "…diately accretive to earnings ~ 25% internal rate of return 3.8% TBV dilution; earn-back of 3.3 years No change to announced buyback plan Pro Forma Impact Basel III CET1 Capital Ratio 10.5% 6/30/25 10.4% Pro For…",
+     "note": "Investor presentation is image-only; quote transcribed from slide image"
+    },
+    "pf_cet1": {
+     "v": 10.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/713676/000071367625000062/firstbankacquisition_inv.htm",
+     "q": "…buyback plan Pro Forma Impact Basel III CET1 Capital Ratio 10.5% 6/30/25 10.4% Pro Forma at Close Anticipated Integration Timeline September 2025 Announcement 1Q 2026 Estimated Close June 2026 Systems Integr…",
+     "note": "Investor presentation is image-only; quote transcribed from slide image; Basel III CET1"
+    },
+    "expected_close": {
+     "v": "1Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/713676/000071367625000062/firstbankacquisition_inv.htm",
+     "q": "…nticipated Integration Timeline September 2025 Announcement 1Q 2026 Estimated Close June 2026 Systems Integration",
+     "note": "Investor presentation is image-only; quote transcribed from slide image. PR: expected to close in early 2026"
+    }
+   },
+   "status": "closed",
+   "close_date": "2026-01-05",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/713676/000071367626000003/pnc-20260105.htm",
+   "close_q": "On January 5, 2026, PNC issued a press release announcing the completion of the Mergers, a copy of which is attached as Exhibit 99",
+   "close_filed": "2026-01-05",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "fitb-cma",
+   "announced": "2025-10-06",
+   "acquirer": "Fifth Third Bancorp",
+   "acq_ticker": "FITB",
+   "target": "Comerica",
+   "tgt_ticker": "CMA",
+   "deal_type": "Acquisition",
+   "sources": {
+    "Press release (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex991.htm",
+    "Investor presentation (8-K Ex. 99.2)": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex992.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "TX",
+     "src": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex991.htm",
+     "q": "…e Comerica Merger Delivers Compelling Value to Shareholders CINCINNATI and DALLAS—Fifth Third Bancorp (Nasdaq: FITB) and Comerica Incorporated (NYSE: CMA) today announced that they have enter…",
+     "note": "Comerica is headquartered in Dallas, TX"
+    },
+    "deal_value_m": {
+     "v": 10900,
+     "src": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex991.htm",
+     "q": "…ger agreement under which Fifth Third will acquire Comerica in an all-stock transaction valued at $10.9 billion. Under the terms of the agreement, Comerica’s stockholders will receive 1.8663 Fifth Third shares for each Co…"
+    },
+    "price_per_share": {
+     "v": 82.88,
+     "src": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex991.htm",
+     "q": "…receive 1.8663 Fifth Third shares for each Comerica share, representing $82.88 per share as of Fifth Third’s closing stock price on October 3, 2025, and a 20% premium to Comerica’s 10-day volume-wei…"
+    },
+    "premium": {
+     "v": 20,
+     "src": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex991.htm",
+     "q": "…f Fifth Third’s closing stock price on October 3, 2025, and a 20% premium to Comerica’s 10-day volume-weighted average stock price. At close, Fifth Third shareholders will own approximately 73% and Comerica shareholders will own approximate…",
+     "note": "vs. 10-day VWAP"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex991.htm",
+     "q": "…ger agreement under which Fifth Third will acquire Comerica in an all-stock transaction valued at $10.9 billion. Under the terms of the agreement, Comerica’s stockholders will receive 1.8663 Fifth…"
+    },
+    "p_tbv": {
+     "v": 1.73,
+     "src": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex992.htm",
+     "q": "…onsideration of $10.9 billion 22% IRR Transaction metrics • Price/TBVPS of 1.73x – Price/Marked TBVPS of 1.75x² with no revenue • Price/2026E of 15.4x – Price/Synergized 2026E of 7.9x³ syner…",
+     "note": "Price / marked TBVPS 1.75x"
+    },
+    "p_fwd_eps": {
+     "v": 15.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex992.htm",
+     "q": "…S of 1.73x – Price/Marked TBVPS of 1.75x² with no revenue • Price/2026E of 15.4x – Price/Synergized 2026E of 7.9x³ synergies • Expense synergies (pretax) of $850 million representing 35% of…",
+     "note": "2026E EPS"
+    },
+    "eps_accr": {
+     "v": 9,
+     "src": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex992.htm",
+     "q": "…rd pro forma earnings per share $4.89 EPS accretion $ $0.39 EPS accretion % 9% Source: S&P Capital IQ, FactSet, FITB filings and management and CMA filings. Pro forma impact is presented f…",
+     "note": "2027E, fully phased cost savings"
+    },
+    "tbv_dil": {
+     "v": -0.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex992.htm",
+     "q": "…k value $4,336 $ (including one-time charge at close) $0.01 % (including one-time charge at close) 0.1% (-) Core deposit intangible created (1,257) (-) Transaction DTL 312 $ (excluding one-time charge at close) $1…",
+     "note": "No TBV dilution: TBVPS ACCRETION of 0.1% incl. one-time charge (4.7% excl.); shown as negative dilution"
+    },
+    "earnback": {
+     "v": null,
+     "src": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex992.htm",
+     "q": "…vestor Presentation\\PPT\\Express_2.0_v2 - From FITB_v01.pptx Key transaction terms • 100% common stock No TBV • Fixed exchange ratio of 1.8663 shares of Fifth Third for each Comerica share Structure and • Purchase price…",
+     "note": "No earnback: deck states no TBV dilution"
+    },
+    "cost_saves": {
+     "v": 35,
+     "src": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex992.htm",
+     "q": "…ed 2026E of 7.9x³ synergies • Expense synergies (pretax) of $850 million representing 35% of Comerica’s projected noninterest expense base Key assumptions • One-time costs of 1.5x synergies recognized at close • No revenue synergies modeled 9% EPS…"
+    },
+    "credit_mark_m": {
+     "v": 806,
+     "src": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex992.htm",
+     "q": "…ed at close in all capital ratios and TBVPS Restructuring • Gross pre-tax credit mark of $806 million (1.15x Comerica’s existing reserve levels), or 1.6% of Comerica’s estimated loans at close Fair value • $1.7…"
+    },
+    "credit_mark_pct": {
+     "v": 1.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex992.htm",
+     "q": "…of $806 million (1.15x Comerica’s existing reserve levels), or 1.6% of Comerica’s estimated loans at close Fair value • $1.7 billion rate mark (after-tax) on AFS securities accreted over 8.5 years, and $0.5 billion (…"
+    },
+    "rate_mark_m": {
+     "v": null,
+     "src": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex992.htm",
+     "q": "…or 1.6% of Comerica’s estimated loans at close Fair value • $1.7 billion rate mark (after-tax) on AFS securities accreted over 8.5 years, and $0.5 billion (after-tax) in other losses (cash flow adjustments¹ hedges and pens…",
+     "note": "Only a securities (AFS) rate mark is disclosed; no loan rate mark"
+    },
+    "tgt_own": {
+     "v": 27,
+     "src": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex991.htm",
+     "q": "…se, Fifth Third shareholders will own approximately 73% and Comerica shareholders will own approximately 27% of the combined company. This transaction brings together two long-tenured banking franchises to create the 9…"
+    },
+    "expected_close": {
+     "v": "End of 1Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/35527/000119312525230873/d91245dex992.htm",
+     "q": "…ontingent on customary regulatory approvals $6.5B closing • Anticipated closing end of first quarter 2026 in capitalized value from expense synergies⁴ 1 Source: S&P Capital IQ, FactSet, FITB filings and management a…"
+    }
+   },
+   "status": "closed",
+   "close_date": "2026-02-01",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/35527/000119312526032625/d642888d8k.htm",
+   "close_q": "This Current Report on Form 8-K is being filed in connection with the closing on February 1, 2026 (the “Closing Date”) of the previously announced Mergers (as defined below) contemplated by the Agreement and Plan of Merger, dated as of October 5, 2025 (the “Merger Agreement”), by and among Fifth Thi",
+   "close_filed": "2026-02-02",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "nic-mofg",
+   "announced": "2025-10-23",
+   "acquirer": "Nicolet Bankshares",
+   "acq_ticker": "NIC",
+   "target": "MidWestOne Financial Group",
+   "tgt_ticker": "MOFG",
+   "deal_type": "Acquisition",
+   "sources": {
+    "Press release (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit99_1heartlandpressr.htm",
+    "Investor presentation (8-K Ex. 99.2)": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "IA",
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit99_1heartlandpressr.htm",
+     "q": "…ONE FINANCIAL GROUP, INC. MidWest One Financial Group, Inc. is a financial holding company headquartered in Iowa City, Iowa. MidWest One is the parent company of MidWest One Bank, which operates banking offices in Iowa, Minnesota, Wi…"
+    },
+    "deal_value_m": {
+     "v": 864.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…ership: 69.1% NIC | 30.9% MOFG • $41.37 per MOFG share(1) • Aggregate Consideration: $864.1 million(2) • Price / 2026E Consensus EPS: 11.5x • Price / TBV: 1.66x • Market Premium: 45.2%(1) • Pay-to-Trade: 71%(3…"
+    },
+    "price_per_share": {
+     "v": 41.37,
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…MOFG share • Pro Forma Ownership: 69.1% NIC | 30.9% MOFG • $41.37 per MOFG share(1) • Aggregate Consideration: $864.1 million(2) • Price / 2026E Consensus EPS: 11.5x • Price / TBV: 1.66x • M…"
+    },
+    "premium": {
+     "v": 45.2,
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…• Price / 2026E Consensus EPS: 11.5x • Price / TBV: 1.66x • Market Premium: 45.2%(1) • Pay-to-Trade: 71%(3) • Post-closing, the NIC Board will have 12 members; 8 NIC members and 4 MOFG member…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…dalone tangible book value multiple Transaction Structure • 100% stock consideration • Fixed exchange ratio of 0.3175x NIC shares for each MOFG share • Pro Forma Ownership: 69.1% NIC | 30.9% MOF…"
+    },
+    "p_tbv": {
+     "v": 1.66,
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…n: $864.1 million(2) • Price / 2026E Consensus EPS: 11.5x • Price / TBV: 1.66x • Market Premium: 45.2%(1) • Pay-to-Trade: 71%(3) • Post-closing, the NIC Board will have 12 members; 8 NIC m…"
+    },
+    "p_fwd_eps": {
+     "v": 11.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…OFG share(1) • Aggregate Consideration: $864.1 million(2) • Price / 2026E Consensus EPS: 11.5x • Price / TBV: 1.66x • Market Premium: 45.2%(1) • Pay-to-Trade: 71%(3) • Post-closing, the NIC Board will hav…",
+     "note": "2026E consensus EPS"
+    },
+    "tgt_assets_b": {
+     "v": 6.2,
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…MN – WI (4) Denver – Denver / Aurora / Centennial, Colorado $6.2bn Total Assets $4.4bn Gross Loans $5.5bn Total Deposits $3.4bn Wealth Mgmt AUA 1.09% ROAA 2025 Q3 Financial Highlights 8.4% TCE / TA 11.1% CET1 80.7% Loans / Deposit…"
+    },
+    "tgt_loans_b": {
+     "v": 4.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…MN – WI (4) Denver – Denver / Aurora / Centennial, Colorado $6.2bn Total Assets $4.4bn Gross Loans $5.5bn Total Deposits $3.4bn Wealth Mgmt AUA 1.09% ROAA 2025 Q3 Financial Highlights 8.4% TCE / TA 11.1% CET1 80.7% Loans / Deposit…"
+    },
+    "tgt_deposits_b": {
+     "v": 5.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…MN – WI (4) Denver – Denver / Aurora / Centennial, Colorado $6.2bn Total Assets $4.4bn Gross Loans $5.5bn Total Deposits $3.4bn Wealth Mgmt AUA 1.09% ROAA 2025 Q3 Financial Highlights 8.4% TCE / TA 11.1% CET1 80.7% Loans / Deposit…"
+    },
+    "tgt_roaa": {
+     "v": 1.09,
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…bn Gross Loans $5.5bn Total Deposits $3.4bn Wealth Mgmt AUA 1.09% ROAA 2025 Q3 Financial Highlights 8.4% TCE / TA 11.1% CET1 80.7% Loans / Deposits 3.57% NIM, FTE Overview of Markets Compa…",
+     "note": "3Q25"
+    },
+    "eps_accr": {
+     "v": 36.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…e 2026 EPS $9.70 $9.70 $ – EPS Accretion to NIC $2.36 $3.54 % – EPS Accretion to NIC 24.4% 36.5% 18 Overview of Nicolet Bankshares, Inc.Purchase Accounting Summary Note: Pro forma metrics projected to closi…",
+     "note": "2026E fully phased cost savings (headline ~37%)"
+    },
+    "tbv_dil": {
+     "v": 1.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…S at Close $1,248.2 21.4 $58.25 $ – Dilution to NIC ($0.62) % – Dilution to NIC (1.1%) Goodwill & Other Intangibles Recognition $ millions Merger Consideration $864.1 Standalone MOFG TBV at Close…"
+    },
+    "earnback": {
+     "v": 0.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…6E NIM Compelling Financial Metrics ~200% CRE Concentration ~0.1yr TBVPS Earnback 10 Overview of Nicolet Bankshares, Inc.Positions Nicolet as a Top Performer Performance Relative to Pro Forma…"
+    },
+    "cost_saves": {
+     "v": 25,
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…net income estimates until 2026 – Grown at 7% thereafter • Cost saves equal to 25% of MOFG’s noninterest expense ($38 million pre-tax run-rate cost savings) − 50% phased-in 2026; 100% in years thereafter • Revenue synergie…"
+    },
+    "credit_mark_m": {
+     "v": 73,
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…cted in pro forma tangible book value estimate at closing • $73 million or 1.65% of MOFG’s gross loans HFI (equivalent to 1.4x of MOFG’s LLR) • Credit mark assumes 100% PCD loans under new FASB accounting guidelines…"
+    },
+    "credit_mark_pct": {
+     "v": 1.65,
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…cted in pro forma tangible book value estimate at closing • $73 million or 1.65% of MOFG’s gross loans HFI (equivalent to 1.4x of MOFG’s LLR) • Credit mark assumes 100% PCD loans under new FASB accounting guidelines…"
+    },
+    "rate_mark_m": {
+     "v": 125,
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…sumes 100% PCD loans under new FASB accounting guidelines • $125 million loan write-down, accreted over 2.25 years using the straight-line methodology • $63 million unrealized AFS loss already in equity, accreted over 3.5 ye…"
+    },
+    "pf_cet1": {
+     "v": 10.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…1.8% Fully-Phased 2026E ROAA ~23% Fully-Phased 2026E ROATCE ~10.6% CET1 Ratio ~85% Loans / Deposits ~4.3% Fully-Phased 2026E NIM Compelling Financial Metrics ~200% CRE Concentration ~0.1y…"
+    },
+    "tgt_own": {
+     "v": 30.9,
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…exchange ratio of 0.3175x NIC shares for each MOFG share • Pro Forma Ownership: 69.1% NIC | 30.9% MOFG • $41.37 per MOFG share(1) • Aggregate Consideration: $864.1 million(2) • Price / 2026E Consensus EPS: 11.5x…"
+    },
+    "expected_close": {
+     "v": "1H 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…FG shareholders required • Customary regulatory approvals • Anticipated closing in the first half of 2026 7 $808mm Gross Loans 2 Banking Offices $107K Median HHI 13.2% Proj. ’25-’30 HHI Δ Overview of Nicolet Banksha…"
+    }
+   },
+   "status": "closed",
+   "close_date": "2026-02-13",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485026000072/nic-20260213.htm",
+   "close_q": "Effective February 13, 2026 , Nicolet Bankshares, Inc (“Nicolet” or the “Company”) completed its previously announced merger (the “Merger”) with MidWest One Financial Group, Inc (“MidWest One ”), pursuant to the terms of the Agreement and Plan of Merger, dated October 23, 2025, by and betw",
+   "close_filed": "2026-02-20",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "fsun-ffwm",
+   "announced": "2025-10-27",
+   "acquirer": "FirstSun Capital Bancorp",
+   "acq_ticker": "FSUN",
+   "target": "First Foundation",
+   "tgt_ticker": "FFWM",
+   "deal_type": "Acquisition",
+   "sources": {
+    "Press release (8-K Ex. 99.2)": "https://www.sec.gov/Archives/edgar/data/1709442/000155278125000372/e25387_ex99-2.htm",
+    "Investor presentation (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/1709442/000155278125000372/e25387_ex99-1.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "CA",
+     "src": "https://www.sec.gov/Archives/edgar/data/1709442/000155278125000372/e25387_ex99-2.htm",
+     "q": "…owned operating subsidiaries, First Foundation Advisors and Irvine, California-based First Foundation Bank (“First Foundation Bank”) jointly announced today that they have entered into a definitive merger agreement (…"
+    },
+    "deal_value_m": {
+     "v": 785,
+     "src": "https://www.sec.gov/Archives/edgar/data/1709442/000155278125000372/e25387_ex99-2.htm",
+     "q": "…ve of the cash consideration being paid to warrant holders, is estimated at $785 million based on FirstSun’s closing price as of October 24, 2025. FirstSun stockholders will own 59.5% and First Foundation stockholders will own 40.5% of the combined compan…",
+     "note": "Includes $17.5M cash to warrant holders"
+    },
+    "price_per_share": {
+     "v": 6.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/1709442/000155278125000372/e25387_ex99-1.htm",
+     "q": "…, will receive 0.16083 shares of FSUN for each FFWM share – Equivalent to $6.50 per FFWM share based on FSUN’s closing stock price on October 24, 2025 • FFWM warrants will convert into common shares and w…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/1709442/000155278125000372/e25387_ex99-2.htm",
+     "q": "…ion, respectively. Under the terms of the Merger Agreement, the companies will combine in an all-stock transaction in which First Foundation common and preferred stockholders will receive 0.16083 of a share of FirstSun commo…",
+     "note": "Plus $17.5M cash to FFWM warrant holders"
+    },
+    "p_tbv": {
+     "v": 0.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/1709442/000155278125000372/e25387_ex99-1.htm",
+     "q": "…Converted Shares Outstanding -- 112,197,071 -- 112,200,097 Adjusted Tangible Book Value per Share $35.77 $9.34 $36.92 $8.16 Price / TBV 1.13x 0.70x 1.10x 0.80x Pay-to-Trade (%) -- 62% -- 73% First Foundation DTA Recovery @ 9/30 -- -- -- $84,700 Fully Adjusted Tangible…",
+     "note": "9/30/2025 TBVPS adjusted for convertible preferred (deck also shows 0.65x on reported TBVPS and 0.73x incl. DTA valuation-allowance reversal)"
+    },
+    "tgt_assets_b": {
+     "v": 11.9,
+     "src": "https://www.sec.gov/Archives/edgar/data/1709442/000155278125000372/e25387_ex99-1.htm",
+     "q": "…stSun Capital Bancorp First Foundation Inc. Tangible Assets Total Assets (GAAP) $8,435,861 $11,588,362 $8,495,437 $11,910,044 Less: Goodwill 93,483 0 93,483 0 Less: Core Deposits and Other Intangibles 6,228 2,947 5,650 2,672 Tangible A…",
+     "note": "9/30/2025 ($ thousands)"
+    },
+    "eps_accr": {
+     "v": 30,
+     "src": "https://www.sec.gov/Archives/edgar/data/1709442/000155278125000372/e25387_ex99-2.htm",
+     "q": "…financial benefits of the transaction are compelling, with estimated 2027 EPS accretion of 30%+ and a 3.3 year earn back on tangible book value dilution. The pro forma combined company financial metrics ar…",
+     "note": "2027E GAAP, fully phased; \"30%+\" (deck reconciliation 29%/31%); cash EPS accretion mid-to-high single digit"
+    },
+    "tbv_dil": {
+     "v": 14.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/1709442/000155278125000372/e25387_ex99-1.htm",
+     "q": "….27 Goodwill Created $116 TBV Dilution at Close - $ ($5.53) TBV Dilution at Close - % (14.3%) Tangible Book Value Earnback (Crossover Method) 3.3 Years 48 Notes: Preliminary financial data as of for the…"
+    },
+    "earnback": {
+     "v": 3.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/1709442/000155278125000372/e25387_ex99-1.htm",
+     "q": "…tion at Close - $ ($5.53) TBV Dilution at Close - % (14.3%) Tangible Book Value Earnback (Crossover Method) 3.3 Years 48 Notes: Preliminary financial data as of for the quarter ended 9/30/2025. $ in thousands, except per share…"
+    },
+    "cost_saves": {
+     "v": 35,
+     "src": "https://www.sec.gov/Archives/edgar/data/1709442/000155278125000372/e25387_ex99-1.htm",
+     "q": "…et downsizing provides combined balance sheet flexibility • Pre - tax cost savings of $68.8 million or 35.0% of FFWM expense base • $425 million pre - tax FFWM loan interest rate mark; $287 million assumed to be accreted into earnings base…"
+    },
+    "credit_mark_m": {
+     "v": 94.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/1709442/000155278125000372/e25387_ex99-1.htm",
+     "q": "…; accretion based on estimated remaining life Credit Mark • Gross credit mark of $94.8 million; equal to 1.25% of pre - close loan balance; 1.32% pro forma reserves / loans at close • No CECL double - count modeled; no credit mark related earnings…"
+    },
+    "credit_mark_pct": {
+     "v": 1.25,
+     "src": "https://www.sec.gov/Archives/edgar/data/1709442/000155278125000372/e25387_ex99-1.htm",
+     "q": "…; accretion based on estimated remaining life Credit Mark • Gross credit mark of $94.8 million; equal to 1.25% of pre - close loan balance; 1.32% pro forma reserves / loans at close • No CECL double - count modeled; no credit mark related earnings…"
+    },
+    "rate_mark_m": {
+     "v": 425,
+     "src": "https://www.sec.gov/Archives/edgar/data/1709442/000155278125000372/e25387_ex99-1.htm",
+     "q": "…zed in 2026 &100% in 2027 and thereafter Fair Value Marks • $425.0 million pre - tax FFWM loan interest rate mark; equal to 5.60% of pre - close loan balance; $286.7 million assumed to be accreted into earnings based on estimated remaining life (remaining $138.3 mill…"
+    },
+    "pf_cet1": {
+     "v": 10.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/1709442/000155278125000372/e25387_ex99-2.htm",
+     "q": "…on Tangible Common Equity to Tangible Assets Ratio of ~9.6% Common Equity Tier 1 Capital Ratio of ~10.5% Return on Average Assets of ~1.45% Return on Average Tangible Common Equity of ~13.3% Fee Income to Total Rev…",
+     "note": "Pro forma 2027 basis per press release"
+    },
+    "tgt_own": {
+     "v": 40.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/1709442/000155278125000372/e25387_ex99-2.htm",
+     "q": "…October 24, 2025. FirstSun stockholders will own 59.5% and First Foundation stockholders will own 40.5% of the combined company following the merger. Mollie Hale Carter, Executive Chairman of FirstSun, Neal Arnold…"
+    },
+    "expected_close": {
+     "v": "Early 2Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/1709442/000155278125000372/e25387_ex99-2.htm",
+     "q": "…The parties expect the closing of the proposed transaction to occur early in the second quarter of 2026, subject to satisfaction of closing conditions, including receipt of customary required regulatory approvals…"
+    }
+   },
+   "status": "closed",
+   "close_date": "2026-04-01",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/1709442/000155278126000187/e26165_fsun-8k.htm",
+   "close_q": "On April 1, 2026, FirstSun Capital Bancorp (“ FirstSun, ” “ we ,” us “ and “ our ”) completed its previously announced merger (the “ Merger ”) with First Foundation Inc (“ First Foundation ”), pursuant to the Agreement and Plan of Merger, dated as of October 27, 2025, as amended (the “ Merg",
+   "close_filed": "2026-04-01",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "hban-cade",
+   "announced": "2025-10-27",
+   "acquirer": "Huntington Bancshares",
+   "acq_ticker": "HBAN",
+   "target": "Cadence Bank",
+   "tgt_ticker": "CADE",
+   "deal_type": "Acquisition",
+   "sources": {
+    "Press release (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039391/ef20057752_ex99-1.htm",
+    "Investor presentation (425, slide images)": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039392/ef20057752_425.htm",
+    "Call transcript (425)": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039508/ef20057815_425.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "MS",
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039391/ef20057752_ex99-1.htm",
+     "q": "…ntered into a definitive agreement to acquire Cadence Bank, a $53 billion regional bank headquartered in Houston, Texas and Tupelo, Mississippi. With more than 390 locations across Texas and the South, the addition of Cadence marks a significant milesto…",
+     "note": "Dual HQ Houston, TX / Tupelo, MS; Mississippi-chartered bank"
+    },
+    "deal_value_m": {
+     "v": 7400,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039391/ef20057752_ex99-1.htm",
+     "q": "…2025, the consideration implies $39.77 per Cadence share or an aggregate transaction value of $7.4 billion. The transaction is expected to be 10% accretive to Huntington's earnings per share, mildly dilutive to regul…"
+    },
+    "price_per_share": {
+     "v": 39.77,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039391/ef20057752_ex99-1.htm",
+     "q": "…untington's closing price of $16.07 as of October 24, 2025, the consideration implies $39.77 per Cadence share or an aggregate transaction value of $7.4 billion. The transaction is expected to be 10% accretive to Hunting…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039391/ef20057752_ex99-1.htm",
+     "q": "…on stock for each outstanding share of Cadence common stock in a 100% stock transaction. Based on Huntington's closing price of $16.07 as of October 24, 2025, the consideration implies $39.77 per C…"
+    },
+    "p_tbv": {
+     "v": 1.7,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039508/ef20057815_425.htm",
+     "q": "…ggregate consideration for the transaction is $7.4 billion, representing 1.7x tangible book value and 11.7x 2026 consensus earnings per share or importantly, 8.2x synergy adjusted earnings per share. The tra…",
+     "note": "Deck: Price / TBVPS – 1.7x"
+    },
+    "p_fwd_eps": {
+     "v": 11.7,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039508/ef20057815_425.htm",
+     "q": "…is $7.4 billion, representing 1.7x tangible book value and 11.7x 2026 consensus earnings per share or importantly, 8.2x synergy adjusted earnings per share. The transaction is expected to be accretive to 2027…",
+     "note": "2026E consensus EPS"
+    },
+    "tgt_assets_b": {
+     "v": 53,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039392/ef20057752_425.htm",
+     "q": "…0% 2027E EPS Accretion 3yr TBVPS Earn-back Cadence Overview $53B Total Assets 11.5% CET1 Ratio 3.46% Net Interest Margin 0.26% NCOs / Avg. Loans Loans $37B Deposits $44B Note: Data as of…",
+     "note": "Investor presentation (filed as 425) is image-only; quote transcribed from slide image; 9/30/2025"
+    },
+    "tgt_loans_b": {
+     "v": 37,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039392/ef20057752_425.htm",
+     "q": "…ET1 Ratio 3.46% Net Interest Margin 0.26% NCOs / Avg. Loans Loans $37B Deposits $44B Note: Data as of September 30, 2025 Detailed Transaction Assumptions Synergies Identified $365M…",
+     "note": "Investor presentation (filed as 425) is image-only; quote transcribed from slide image"
+    },
+    "tgt_deposits_b": {
+     "v": 44,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039392/ef20057752_425.htm",
+     "q": "….46% Net Interest Margin 0.26% NCOs / Avg. Loans Loans $37B Deposits $44B Note: Data as of September 30, 2025 Detailed Transaction Assumptions Synergies Identified $365M of pre-tax co…",
+     "note": "Investor presentation (filed as 425) is image-only; quote transcribed from slide image"
+    },
+    "eps_accr": {
+     "v": 10,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039391/ef20057752_ex99-1.htm",
+     "q": "…egate transaction value of $7.4 billion. The transaction is expected to be 10% accretive to Huntington's earnings per share, mildly dilutive to regulatory capital at close, and 7% dilutive to tangible book value per share with earn-b…",
+     "note": "2027E (deck: 10% 2027E EPS accretion)"
+    },
+    "tbv_dil": {
+     "v": 7,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039391/ef20057752_ex99-1.htm",
+     "q": "…share, mildly dilutive to regulatory capital at close, and 7% dilutive to tangible book value per share with earn-back in three years inclusive of merger expenses. Advisors Evercore served as the financial advisor…",
+     "note": "vs. est. 1Q26 TBVPS; 2% vs. 3Q25 level"
+    },
+    "earnback": {
+     "v": 3,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039391/ef20057752_ex99-1.htm",
+     "q": "…lose, and 7% dilutive to tangible book value per share with earn-back in three years inclusive of merger expenses. Advisors Evercore served as the financial advisor and Wachtell, Lipton, Rosen & Katz served as legal counsel…"
+    },
+    "cost_saves": {
+     "v": 30,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039508/ef20057815_425.htm",
+     "q": "…. We have identified $365 million in pretax cost synergies, representing 30% of Cadence's forecasted 2027 cash noninterest expense. Our teams have mapped out specific actions and time lines, and we have a high confidence in our ability to m…"
+    },
+    "credit_mark_m": {
+     "v": 574,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039392/ef20057752_425.htm",
+     "q": "…Cadence's total cash non-interest expense Loan Credit Mark Gross credit mark down of $574M pre-tax or 1.5% of loans at close; equal to 1.13x Cadence's estimated reserves at close Interest Rate & Fair Value Marks Loan rate mark down of…",
+     "note": "Investor presentation (filed as 425) is image-only; quote transcribed from slide image"
+    },
+    "credit_mark_pct": {
+     "v": 1.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039392/ef20057752_425.htm",
+     "q": "…Cadence's total cash non-interest expense Loan Credit Mark Gross credit mark down of $574M pre-tax or 1.5% of loans at close; equal to 1.13x Cadence's estimated reserves at close Interest Rate & Fair Value Marks Loan rate mark down of…",
+     "note": "Investor presentation (filed as 425) is image-only; quote transcribed from slide image"
+    },
+    "rate_mark_m": {
+     "v": 1056,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039392/ef20057752_425.htm",
+     "q": "…stimated reserves at close Interest Rate & Fair Value Marks Loan rate mark down of $1,056M pre-tax, accreted sum-of-years-digits over the expected life of loans",
+     "note": "Investor presentation (filed as 425) is image-only; quote transcribed from slide image"
+    },
+    "pf_cet1": {
+     "v": 9.2,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039508/ef20057815_425.htm",
+     "q": "…. We anticipate minimal impacts to our capital ratios, with an expected adjusted CET1 at closing of 9.2%. We will maintain a strong balance sheet and financial flexibility to support ongoing growth and investment.…",
+     "note": "Adjusted CET1 (incl. AOCI) at close"
+    },
+    "tgt_own": {
+     "v": 23,
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039508/ef20057815_425.htm",
+     "q": "….475 Huntington shares for each Cadence share, resulting in pro forma ownership split of 77% Huntington and 23% Cadence. Let's spend a moment on key financial metrics. The aggregate consideration for the transaction is $7.4 billi…"
+    },
+    "expected_close": {
+     "v": "1Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/49196/000114036125039391/ef20057752_ex99-1.htm",
+     "q": "…support for the Tupelo community and state of Mississippi. The transaction is expected to close in the first quarter of 2026, subject to regulatory approvals, approval by Huntington and Cadence shareholders and other customary closing…"
+    }
+   },
+   "status": "closed",
+   "close_date": "2026-02-01",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/49196/000114036126003083/ef20064500_8k.htm",
+   "close_q": "Effective February 1, 2026, Huntington Bancshares Incorporated (“Huntington” or the “Company”) completed its previously announced acquisition of Cadence Bank, a Mississippi-chartered bank (“Cadence”), pursuant to the Agreement and Plan of Merger, dated as of October 26, 2025 (the “Merger Agreement”)",
+   "close_filed": "2026-02-02",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "asb-anb",
+   "announced": "2025-12-01",
+   "acquirer": "Associated Banc-Corp",
+   "acq_ticker": "ASB",
+   "target": "American National Corporation",
+   "tgt_ticker": "private",
+   "deal_type": "Acquisition",
+   "sources": {
+    "Press release (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancpressreleasefinal.htm",
+    "Investor presentation (8-K Ex. 99.2)": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancinvestorpresentat.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "NE",
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancpressreleasefinal.htm",
+     "q": "…unities across Wisconsin, Illinois, Minnesota and Missouri. Headquartered in Omaha, Nebraska, American National Bank operates 33 branches across Nebraska, Minnesota and Iowa, with a concentration in the Greater Omaha and Minne…"
+    },
+    "deal_value_m": {
+     "v": 604,
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancpressreleasefinal.htm",
+     "q": "…merican National stock. The all-stock, fixed exchange ratio transaction is valued at approximately $604 million based on Associated’s closing price of $26.29 as of November 28, 2025. The Boards of Directors of both Associ…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancinvestorpresentat.htm",
+     "q": "…ership Leadership & Community Transaction Value & Pricing ▪ Merger consideration: 100% stock ▪ Fixed exchange ratio: Associated to issue 36.250 ASB shares for each ANC share ▪ Pro forma ownership: 88% A…"
+    },
+    "p_tbv": {
+     "v": 1.14,
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancinvestorpresentat.htm",
+     "q": "…ity contributions ▪ $604M aggregate consideration to ANC1 ▪ Deal Value / ANC TBV2: 1.14x ▪ Deal Value / ANC 2026E Net Income3: 9.2x ▪ Deal Value / ANC 2026E Net Income3 + Cost Synergies: 6.8x ▪ Core…",
+     "note": "ANC TBV as of 9/30/2025"
+    },
+    "p_fwd_eps": {
+     "v": 9.2,
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancinvestorpresentat.htm",
+     "q": "…gate consideration to ANC1 ▪ Deal Value / ANC TBV2: 1.14x ▪ Deal Value / ANC 2026E Net Income3: 9.2x ▪ Deal Value / ANC 2026E Net Income3 + Cost Synergies: 6.8x ▪ Core Deposit Premium4: 1.6% 1 Based on 633,457…",
+     "note": "2026E net income per ASB management, adjusted for S-Corp to C-Corp at 21% tax"
+    },
+    "cdp": {
+     "v": 1.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancinvestorpresentat.htm",
+     "q": "…Deal Value / ANC 2026E Net Income3 + Cost Synergies: 6.8x ▪ Core Deposit Premium4: 1.6% 1 Based on 633,457 total ANC diluted shares outstanding and ASB closing price of $26.29 as of 11/28/2025. 2 A…"
+    },
+    "tgt_assets_b": {
+     "v": 5.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancpressreleasefinal.htm",
+     "q": "…eapolis / St. Paul metro markets. As of September 30, 2025, American National reported total assets of $5.3 billion, total loans of $3.8 billion and total deposits of $4.7 billion. As a result of this partnership, Associated will become the #2 bank in the Omaha MSA and the #10 bank in the…"
+    },
+    "tgt_loans_b": {
+     "v": 3.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancpressreleasefinal.htm",
+     "q": "…eapolis / St. Paul metro markets. As of September 30, 2025, American National reported total assets of $5.3 billion, total loans of $3.8 billion and total deposits of $4.7 billion. As a result of this partnership, Associated will become the #2 bank in the Omaha MSA and the #10 bank in the…"
+    },
+    "tgt_deposits_b": {
+     "v": 4.7,
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancpressreleasefinal.htm",
+     "q": "…eapolis / St. Paul metro markets. As of September 30, 2025, American National reported total assets of $5.3 billion, total loans of $3.8 billion and total deposits of $4.7 billion. As a result of this partnership, Associated will become the #2 bank in the Omaha MSA and the #10 bank in the…"
+    },
+    "tgt_roaa": {
+     "v": 1.12,
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancinvestorpresentat.htm",
+     "q": "…rs $5.3B Assets 2 Primary Shareholders 82% Loans / Deposits 1.12% ROAA2 13.2% CET1 Ratio 0.15% 10-Yr. Avg. NCOs / Avg. Loans Branch Footprint Attractive Business Mix Loans by Type $…",
+     "note": "Deck footnoted basis (period per deck footnote 2)"
+    },
+    "eps_accr": {
+     "v": 2.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancinvestorpresentat.htm",
+     "q": "…bined deposit market share rank Strong Cultural Alignment ▪ 2.0% 2027E EPS accretion ▪ 1.2% TBVPS2 dilution at close ▪ 2.25-year TBVPS2 earn- back ▪ Achievable cost saves of 25% of ANC’s noninte…",
+     "note": "2027E"
+    },
+    "tbv_dil": {
+     "v": 1.2,
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancinvestorpresentat.htm",
+     "q": "…rank Strong Cultural Alignment ▪ 2.0% 2027E EPS accretion ▪ 1.2% TBVPS2 dilution at close ▪ 2.25-year TBVPS2 earn- back ▪ Achievable cost saves of 25% of ANC’s noninterest expense base ▪ ~60 bps 2027…"
+    },
+    "earnback": {
+     "v": 2.25,
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancinvestorpresentat.htm",
+     "q": "…2.0% 2027E EPS accretion ▪ 1.2% TBVPS2 dilution at close ▪ 2.25-year TBVPS2 earn- back ▪ Achievable cost saves of 25% of ANC’s noninterest expense base ▪ ~60 bps 2027E ROATCE2 accretion ▪ Accretiv…"
+    },
+    "cost_saves": {
+     "v": 25,
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancinvestorpresentat.htm",
+     "q": "…ional earnings based on Associated management projections ▪ Cost savings equal to 25%, or $29M, of American National’s noninterest expense base ▪ Realized 50% in 2026E and 100% thereafter ▪ Revenue synergies identified but not modeled ▪ One-time pre-tax…"
+    },
+    "credit_mark_m": {
+     "v": 74,
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancinvestorpresentat.htm",
+     "q": "…▪ Realized 100% in TBVPS1 dilution and capital at closing ▪ Gross credit mark down of $74M pre-tax ▪ 1.9% of loans at close ▪ Loan fair value mark down of $17.4M, amortized sum-of-years-digits over ~5 years ▪ AFS securities-related A…"
+    },
+    "credit_mark_pct": {
+     "v": 1.9,
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancinvestorpresentat.htm",
+     "q": "…▪ Realized 100% in TBVPS1 dilution and capital at closing ▪ Gross credit mark down of $74M pre-tax ▪ 1.9% of loans at close ▪ Loan fair value mark down of $17.4M, amortized sum-of-years-digits over ~5 years ▪ AFS securities-related A…"
+    },
+    "rate_mark_m": {
+     "v": 17.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancinvestorpresentat.htm",
+     "q": "…credit mark down of $74M pre-tax ▪ 1.9% of loans at close ▪ Loan fair value mark down of $17.4M, amortized sum-of-years-digits over ~5 years ▪ AFS securities-related AOCI mark down of $36.5M, assumes Day 2…"
+    },
+    "pf_cet1": {
+     "v": null,
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancinvestorpresentat.htm",
+     "q": "…oninterest expense base ▪ ~60 bps 2027E ROATCE2 accretion ▪ Accretive to CET1 at close ▪ Similar customer segmentation & operating models ▪ Shared emphasis on supporting & uplifting communities ▪…",
+     "note": "Not quantified: \"accretive to CET1 at close\""
+    },
+    "tgt_own": {
+     "v": 12,
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancinvestorpresentat.htm",
+     "q": "…Associated to issue 36.250 ASB shares for each ANC share ▪ Pro forma ownership: 88% Associated / 12% American National ▪ Wende Kotouc (Co-CEO & Co-Chairperson of American National Bank) to join Associated’s Board ▪ John Kotouc (…"
+    },
+    "expected_close": {
+     "v": "2Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancpressreleasefinal.htm",
+     "q": "…d into transfer, voting and registration rights agreements. The transaction is expected to close in the second quarter of 2026 subject to customary closing conditions including the receipt of regulatory approvals. Evercore served as fin…"
+    }
+   },
+   "status": "closed",
+   "close_date": "2026-04-01",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/7789/000119312526138248/d141611d8k.htm",
+   "close_q": "On April 1, 2026, Associated Banc-Corp (“Associated”) completed its previously announced acquisition of American National Corporation (“American National”) pursuant to the terms of the Agreement and Plan of Merger, dated November 30, 2025 (the “Merger Agreement",
+   "close_filed": "2026-04-01",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "cvbf-htbk",
+   "announced": "2025-12-17",
+   "acquirer": "CVB Financial",
+   "acq_ticker": "CVBF",
+   "target": "Heritage Commerce Corp",
+   "tgt_ticker": "HTBK",
+   "deal_type": "Acquisition",
+   "sources": {
+    "Press release (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex991.htm",
+    "Investor presentation (8-K Ex. 99.2)": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex992.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "CA",
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex991.htm",
+     "q": "…Area and to enhance industry-leading financial performance ONTARIO, Calif. & SAN JOSE, Calif., December 17, 2025 — CVB Financial Corp. (Nasdaq: CVBF; together with Citizens Business Bank, National Associ…",
+     "note": "Heritage Commerce is based in San Jose, CA"
+    },
+    "deal_value_m": {
+     "v": 811,
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex992.htm",
+     "q": "…ratio of 0.6500x CVBF shares for each HTBK share Structure➢ Deal value: $811mm aggregate transaction value, or $13.00 per Heritage Commerce share¹ ➢ Pro forma ownership: 77% CVB / 23% Heritage Commerce 12.6x 7.3x 1.51x 83% Pricing / Price / 2027E EPS Pric…"
+    },
+    "price_per_share": {
+     "v": 13.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex992.htm",
+     "q": "…ratio of 0.6500x CVBF shares for each HTBK share Structure➢ Deal value: $811mm aggregate transaction value, or $13.00 per Heritage Commerce share¹ ➢ Pro forma ownership: 77% CVB / 23% Heritage Commerce 12.6x 7.3x 1.51x 83% Pricing / Price / 2027E EPS Pric…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex992.htm",
+     "q": "…banks with less than $100bn in assets Transaction Summary ➢ Consideration: 100% stock with fixed exchange ratio of 0.6500x CVBF shares for each HTBK share Structure➢ Deal value: $811mm aggregate transaction value, or $13.00 per Heri…"
+    },
+    "p_tbv": {
+     "v": 1.51,
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex992.htm",
+     "q": "…are¹ ➢ Pro forma ownership: 77% CVB / 23% Heritage Commerce 12.6x 7.3x 1.51x 83% Pricing / Price / 2027E EPS Price / 2027E Fully- Price / TBVPS Pay-to-trade² Multiples Synergized EPS ➢ 2 directors from Heritage Commerce to join CVB’s board of directors…",
+     "note": "Deck order: P/2027E EPS 12.6x, P/2027E synergized EPS 7.3x, P/TBVPS 1.51x, pay-to-trade 83%"
+    },
+    "p_fwd_eps": {
+     "v": 12.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex992.htm",
+     "q": "…are¹ ➢ Pro forma ownership: 77% CVB / 23% Heritage Commerce 12.6x 7.3x 1.51x 83% Pricing / Price / 2027E EPS Price / 2027E Fully- Price / TBVPS Pay-to-trade² Multiples Synergized EPS ➢ 2 directors from Heritage Commerc…",
+     "note": "2027E EPS (not 2026E)"
+    },
+    "tgt_deposits_b": {
+     "v": 4.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex992.htm",
+     "q": "…6% Savings Savings Savings & MMDA & MMDA & MMDA 29% 31% 31% Non- Non- $4.8bn $12.1bn interest 50% interest $17.2bn¹ 60% bearing bearing 4% 40% 14% Interest-bearing Interest-bearing Interest-bear…",
+     "note": "9/30/2025; deck composition chart (CVB / Heritage / pro forma)"
+    },
+    "tgt_loans_b": {
+     "v": 3.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex992.htm",
+     "q": "…&D 1% C&D <1% 8% 1–4 family 4% 6% 16% 3% C&D C&I 11% 4% C&I 13% $8.5bn $3.6bn Multifamily 2% $11.7bn¹ 15% C&I 57% CRE CRE 77% 74% 8% CRE Multifamily Yield on Loans: 5.25% Yield on Loans: 5.65% Yield…",
+     "note": "9/30/2025; deck composition chart"
+    },
+    "tgt_cre": {
+     "v": 313,
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex992.htm",
+     "q": "…on Loans: 5.25% Yield on Loans: 5.65% Yield on Loans: 5.81% CRE concentration: 233% CRE concentration: 313% CRE concentration: 270% Deposit Composition Time Time Time Non- 5% 5% interest 5% bearing 26% Savings Savings Savings & MMDA & MMDA &…",
+     "note": "Middle column = Heritage Commerce (CVB / Heritage / pro forma)"
+    },
+    "eps_accr": {
+     "v": 13.2,
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex991.htm",
+     "q": "…immediately accretive to Citizens’ earnings per share, with projected 2027 EPS accretion of 13.2%, a strong internal rate of return of approximately 20%, to be accretive to tangible book value per share, exc…",
+     "note": "2027E"
+    },
+    "tbv_dil": {
+     "v": 7.7,
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex991.htm",
+     "q": "…per share, excluding the impact of interest rate marks, and to be 7.7% tangible book value per share dilutive, with an earn-back period of approximately 2.5 years, including interest rate marks. Upon completion of the m…"
+    },
+    "earnback": {
+     "v": 2.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex991.htm",
+     "q": "…rks, and to be 7.7% tangible book value per share dilutive, with an earn-back period of approximately 2.5 years, including interest rate marks. Upon completion of the merger, David Brager will retain his role as CEO of Ci…"
+    },
+    "cost_saves": {
+     "v": 35,
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex992.htm",
+     "q": "…edian consensus analyst estimates for earnings and assets ➢ Estimated at 35% of Heritage Commerce’s 2027E operating noninterest expense (~$43mm) Cost Savings / ➢ 75% phase-in during the second half of 2026 and 100% thereafter Revenue Synergies ➢…"
+    },
+    "credit_mark_m": {
+     "v": 40,
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex992.htm",
+     "q": "…deposits (~$4bn), amortized SYD over 10 years Intangible ➢ Gross credit mark of 1.08% of Heritage Commerce’s gross loans at close ($40mm) Loan Credit Mark ➢ $63mm HTM securities write down, accreted over 5 years straight-line Purchase ➢ $164mm loa…"
+    },
+    "credit_mark_pct": {
+     "v": 1.08,
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex992.htm",
+     "q": "…deposits (~$4bn), amortized SYD over 10 years Intangible ➢ Gross credit mark of 1.08% of Heritage Commerce’s gross loans at close ($40mm) Loan Credit Mark ➢ $63mm HTM securities write down, accreted over 5 years straight-line Purchase ➢ $164mm loa…"
+    },
+    "rate_mark_m": {
+     "v": 164,
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex992.htm",
+     "q": "…write down, accreted over 5 years straight-line Purchase ➢ $164mm loan write down, accreted over 4 years straight-line Accounting ➢ $2mm deposit write up, accreted over 1 year (Pre-tax Marks) ➢ $5mm debt write down…"
+    },
+    "pf_cet1": {
+     "v": 14.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex992.htm",
+     "q": "…eading pro forma capital and profitability Capital Deployed ~210bps of CET1 – 14.6% ~17% ✓ CET1 ROATCE Materially Higher EPS th th EPS Accretion 13.2% 8 in KRX³ 5 in KRX³ Accretion ➢ Strong pro forma capital ✓ ge…",
+     "note": "Pro forma CET1 per deck capital slide"
+    },
+    "tgt_own": {
+     "v": 23,
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex991.htm",
+     "q": "…n closing, CVBF shareholders will own approximately 77% and HTBK shareholders will own approximately 23% of the combined company. This all-stock transaction is expected to be immediately accretive to Citizens’ earn…"
+    },
+    "expected_close": {
+     "v": "2Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/354647/000119312525322972/d91305dex992.htm",
+     "q": "…rovals, and other closing conditions Approvals and Closing➢ Anticipated closing in 2Q 2026 Attractive 13.2% (7.7% ) 2.5 yrs TBV Accretive ~20% ~17% ~1.5% Financial EPS Accretion TBV. Dilution Earnback…"
+    }
+   },
+   "status": "closed",
+   "close_date": "2026-04-17",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/354647/000119312526167264/d123515d8k.htm",
+   "close_q": "Effective April 17, 2026 (the “Closing Date”), CVB Financial Corp, a California corporation (“CVBF” or the “Company”) completed its previously announced acquisition of Heritage Commerce Corp, a California corporation (“Heritage”), in accordance",
+   "close_filed": "2026-04-21",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "ocfc-ffic",
+   "announced": "2025-12-29",
+   "acquirer": "OceanFirst Financial",
+   "acq_ticker": "OCFC",
+   "target": "Flushing Financial",
+   "tgt_ticker": "FFIC",
+   "deal_type": "Acquisition",
+   "sources": {
+    "Press release (8-K Ex. 99.2)": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex992.htm",
+    "Investor presentation (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex991.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "NY",
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex992.htm",
+     "q": "…after extensive investor due diligence by Warburg Pincus 1 RED BANK, N.J. and UNIONDALE, N.Y. December 29, 2025. OceanFirst Financial Corp. (NASDAQ: “OCFC”), (“OceanFirst”) , the holding company for Ocea…",
+     "note": "Flushing Financial is based in Uniondale, NY"
+    },
+    "deal_value_m": {
+     "v": 579,
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex992.htm",
+     "q": "…First’s closing stock price on December 26, 2025 of $19.76, the transaction is valued at $579 million and will create a high-performing regional bank with a significant presence across attractive New Jersey, Lon…",
+     "note": "Deck goodwill table: merger consideration $579.2M. Separate $225M Warburg Pincus equity raise not included"
+    },
+    "price_per_share": {
+     "v": 16.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex991.htm",
+     "q": "…r each Flushing Fixed exchange ratio of 0.8500 shares share $16.80 per FFIC share / $579mm deal value, at-market transaction (1) Price / 2026E of 10.6x; Price / 2027E of 9.6x; Price / Synergized 2027E of 5.0x (2) Pricing / Multiples P…"
+    },
+    "premium": {
+     "v": null,
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex991.htm",
+     "q": "…r each Flushing Fixed exchange ratio of 0.8500 shares share $16.80 per FFIC share / $579mm deal value, at-market transaction (1) Price / 2026E of 10.6x; Price / 2027E of 9.6x; Price / Synergized 2027E of 5.0x (2) Pricing / Multiples P…",
+     "note": "Described as at-market; no premium stated"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex992.htm",
+     "q": "…anFirst surviving. Under the terms of the merger agreement, Flushing stockholders will be entitled to receive 0.85x of a share of OceanFirst common stock for each share of Flushing common stock. In the equity capital raise transaction, OceanFirst will sell approx…"
+    },
+    "p_tbv": {
+     "v": 0.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex991.htm",
+     "q": "…x; Price / Synergized 2027E of 5.0x (2) Pricing / Multiples Price / TBVPS of 0.80x Pay-to-trade of 79% raise from Warburg (3) Capital Raise $225mm committed equity Pincus Purchase price is fix…"
+    },
+    "p_fwd_eps": {
+     "v": 10.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex991.htm",
+     "q": "…r FFIC share / $579mm deal value, at-market transaction (1) Price / 2026E of 10.6x; Price / 2027E of 9.6x; Price / Synergized 2027E of 5.0x (2) Pricing / Multiples Price / TBVPS of 0.80x Pay-t…",
+     "note": "2026E (2027E: 9.6x)"
+    },
+    "eps_accr": {
+     "v": 16,
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex992.htm",
+     "q": "…ransaction is expected to be financially attractive with an estimated 2027 EPS accretion of approximately 16%, a strong internal rate of return of approximately 24% and with tangible book value dilution of approximately…",
+     "note": "2027E, incl. $225M Warburg Pincus raise"
+    },
+    "tbv_dil": {
+     "v": 6,
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex991.htm",
+     "q": "…e $1,823.4 98.1 $18.59 $—TBVPS Impact to OceanFirst ($1.28) %—TBVPS Impact to OceanFirst (6%) Goodwill & Intangibles Reconciliation $ millions Merger Consideration $579.2 Standalone Flushing TBV at Close…",
+     "note": "Incl. rate marks; ~3% ex-rate marks"
+    },
+    "earnback": {
+     "v": 3.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex991.htm",
+     "q": "…7E ROAA Loans / Deposits CET1 Ratio (4) (6%) 53% 461% 14.2% TBV Dilution (With Rate Marks) 2027E Efficiency CRE Concentration (3) Total Risk Based Ratio 3.1 years 3.2% 20% 8.3% Earnback 2027E Net Interest Margin Cash + Securities / Assets Leverage Ratio Source: Company fi…",
+     "note": "Press release: approximately 3 years"
+    },
+    "cost_saves": {
+     "v": 35,
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex991.htm",
+     "q": "…s Earnings Projections based on consensus analyst estimates Cost Savings Estimated at 35.0% of Flushing’s non-interest expense (50% phased-in in 2026E, 100% thereafter) One-Time Expenses Pre-tax one-time expenses of $106 million (1.7x 2…"
+    },
+    "credit_mark_m": {
+     "v": 174,
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex991.htm",
+     "q": "…P/TBV), which will fund concurrent with the merger closing Gross credit mark of 2.6% of Flushing’s gross loans at close ($174 million, ~4.1x current reserves) Credit Mark 8% credit mark (10%+ total mark inclusive of rate component) on FFIC’s $…"
+    },
+    "credit_mark_pct": {
+     "v": 2.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex991.htm",
+     "q": "…P/TBV), which will fund concurrent with the merger closing Gross credit mark of 2.6% of Flushing’s gross loans at close ($174 million, ~4.1x current reserves) Credit Mark 8% credit mark (10%+ total mark inclusive of rate component) on FFIC’s $…"
+    },
+    "rate_mark_m": {
+     "v": 129,
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex991.htm",
+     "q": "…eliminating non-PCD credit mark and related “double-count” $129mm (1.9%) loan portfolio write-down, accreted over 4 years straight line Pre-Tax Interest Rate $4mm (8.2%) HTM securities portfolio write-down, a…"
+    },
+    "pf_cet1": {
+     "v": 10.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex992.htm",
+     "q": "…ximately 1.7% • Allowance Coverage Ratio of 1.5% at close • Common Equity Tier 1 Capital Ratio of 10.8% Transaction Details Flushing will merge into OceanFirst, with OceanFirst surviving. Under the terms of the me…",
+     "note": "Pro forma at close incl. Warburg Pincus raise"
+    },
+    "tgt_own": {
+     "v": 30,
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex992.htm",
+     "q": "…he shares issued to Flushing stockholders in the merger are expected to represent approximately 30% of the outstanding shares of the combined company, (b) the shares issued to Warburg Pincus in the equity capital raise transaction discussed above are expected…",
+     "note": "Warburg Pincus ~12%"
+    },
+    "expected_close": {
+     "v": "2Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex992.htm",
+     "q": "…ium to the price paid on common stock. Timing and Approvals The transaction is expected to close in the second quarter of 2026, subject to the receipt of regulatory approvals, approval by OceanFirst and Flushing shareholders, and the sa…"
+    }
+   },
+   "status": "closed",
+   "close_date": "2026-06-01",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312526251758/d145829d8k.htm",
+   "close_q": "Effective as of June 1, 2026 (the “ Closing Date ”), OceanFirst consummated its previously announced transaction with Flushing (the “ Closing ”)",
+   "close_filed": "2026-06-01",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "pb-stel",
+   "announced": "2026-01-28",
+   "acquirer": "Prosperity Bancshares",
+   "acq_ticker": "PB",
+   "target": "Stellar Bancorp",
+   "tgt_ticker": "STEL",
+   "deal_type": "Acquisition",
+   "sources": {
+    "Press release (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex991.htm",
+    "Investor presentation (8-K Ex. 99.2)": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex992.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "TX",
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex991.htm",
+     "q": "…ank ® , and Stellar Bancorp, Inc. (NYSE: STEL) (“Stellar”), the parent holding company of Stellar Bank, headquartered in Houston, Texas, today jointly announced the signing of a definitive merger agreement whereby Prosperity will acquire Stellar…"
+    },
+    "deal_value_m": {
+     "v": 2002,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex992.htm",
+     "q": "…exchange ratio • Implied value of $39.08 per common share • Implied aggregate transaction value of $2,002 million • Price / tangible book value per share: 1.81x Transaction Value • Price / 2025 EPS: 19.7x and Multiples • Pr…"
+    },
+    "price_per_share": {
+     "v": 39.08,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex992.htm",
+     "q": "…n shares for each STEL common share; fixed exchange ratio • Implied value of $39.08 per common share • Implied aggregate transaction value of $2,002 million • Price / tangible book value per share: 1.81x Transa…"
+    },
+    "consideration": {
+     "v": "Stock + cash",
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex991.htm",
+     "q": "…and subject to the conditions of the definitive agreement, Prosperity will issue 0.3803 shares of Prosperity common stock and $11.36 in cash for each outstanding share of Stellar common stock. Based on Prosperity’s closing price of $72.90 on January 27, 2026, the total consideration was valued at app…",
+     "note": "0.3803 PB shares + $11.36 cash per STEL share"
+    },
+    "p_tbv": {
+     "v": 1.81,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex992.htm",
+     "q": "…e • Implied aggregate transaction value of $2,002 million • Price / tangible book value per share: 1.81x Transaction Value • Price / 2025 EPS: 19.7x and Multiples • Price / 2026 estimated EPS: 17.9x (1) • Price / 2…"
+    },
+    "p_ltm_eps": {
+     "v": 19.7,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex992.htm",
+     "q": "…/ tangible book value per share: 1.81x Transaction Value • Price / 2025 EPS: 19.7x and Multiples • Price / 2026 estimated EPS: 17.9x (1) • Price / 2026 estimated EPS with synergies: 10.7x • Co…",
+     "note": "FY2025 EPS"
+    },
+    "p_fwd_eps": {
+     "v": 17.9,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex992.htm",
+     "q": "…Transaction Value • Price / 2025 EPS: 19.7x and Multiples • Price / 2026 estimated EPS: 17.9x (1) • Price / 2026 estimated EPS with synergies: 10.7x • Core deposit premium: 10.9% • Two Stellar directors…",
+     "note": "2026E EPS"
+    },
+    "cdp": {
+     "v": 10.9,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex992.htm",
+     "q": "…9x (1) • Price / 2026 estimated EPS with synergies: 10.7x • Core deposit premium: 10.9% • Two Stellar directors to be added to Prosperity Bancshares Board of Directors, one of whom will be Bob Fran…"
+    },
+    "tgt_assets_b": {
+     "v": 10.807,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex991.htm",
+     "q": "…As of December 31, 2025, Stellar, on a consolidated basis, reported total assets of $10.807 billion, total loans of $7.301 billion and total deposits of $9.021 billion. Under the terms and subject to the conditions of the definitive agreement, Prosperity will issue 0.3803 shar…"
+    },
+    "tgt_loans_b": {
+     "v": 7.301,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex991.htm",
+     "q": "…As of December 31, 2025, Stellar, on a consolidated basis, reported total assets of $10.807 billion, total loans of $7.301 billion and total deposits of $9.021 billion. Under the terms and subject to the conditions of the definitive agreement, Prosperity will issue 0.3803 shar…"
+    },
+    "tgt_deposits_b": {
+     "v": 9.021,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex991.htm",
+     "q": "…As of December 31, 2025, Stellar, on a consolidated basis, reported total assets of $10.807 billion, total loans of $7.301 billion and total deposits of $9.021 billion. Under the terms and subject to the conditions of the definitive agreement, Prosperity will issue 0.3803 shar…"
+    },
+    "eps_accr": {
+     "v": 9.2,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex992.htm",
+     "q": "…2027E EPS $6.72 2027E EPS Accretion to Prosperity ($) $0.62 2027E EPS Accretion to Prosperity (%) 9.2% 16 Important Information Additional Information about the Transaction and Where to Find It Prosperity intends…",
+     "note": "2027E"
+    },
+    "tbv_dil": {
+     "v": 7.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex992.htm",
+     "q": "…pact Earnings and (1) Projected Capital Tangible Book Value 9.2% (7.8%) 13.6% 14.6% 2027 EPS Accretion TBV Dilution CET1 Ratio Total Capital Ratio ~4.5 years 10.0% 9.9% TBV Earnback Leverage Ratio TCE / TA Profitability Depos…"
+    },
+    "earnback": {
+     "v": 4.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex992.htm",
+     "q": "…7 EPS Accretion TBV Dilution CET1 Ratio Total Capital Ratio ~4.5 years 10.0% 9.9% TBV Earnback Leverage Ratio TCE / TA Profitability Deposit Footprint 1.58% 17.1% #1 #2 2027 2027 Deposit Franchise Deposit…"
+    },
+    "cost_saves": {
+     "v": 35,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex992.htm",
+     "q": "…ates per Stellar Management • 2026: $113mm | 2027: $126mm • Cost savings estimated at 35.0% of STEL non-interest expense Targeted Cost Savings • Cost saving phased-in at 25.0% in 2026 and 100% thereafter Loan Credit Mark • $85.6 m…"
+    },
+    "credit_mark_m": {
+     "v": 85.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex992.htm",
+     "q": "…-in at 25.0% in 2026 and 100% thereafter Loan Credit Mark • $85.6 million gross loan credit mark or 1.17% of STEL's total loans Assumptions Fair Market Value • $30.8 million pre-tax rate write-down on STEL's loans (accreted into earnings…"
+    },
+    "credit_mark_pct": {
+     "v": 1.17,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex992.htm",
+     "q": "…-in at 25.0% in 2026 and 100% thereafter Loan Credit Mark • $85.6 million gross loan credit mark or 1.17% of STEL's total loans Assumptions Fair Market Value • $30.8 million pre-tax rate write-down on STEL's loans (accreted into earnings…"
+    },
+    "rate_mark_m": {
+     "v": 30.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex992.htm",
+     "q": "…1.17% of STEL's total loans Assumptions Fair Market Value • $30.8 million pre-tax rate write-down on STEL's loans (accreted into earnings over 4 years using sum of the years digits) Assumptions • Elimination of STEL's AOCI…"
+    },
+    "pf_cet1": {
+     "v": 13.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex992.htm",
+     "q": "…pact Earnings and (1) Projected Capital Tangible Book Value 9.2% (7.8%) 13.6% 14.6% 2027 EPS Accretion TBV Dilution CET1 Ratio Total Capital Ratio ~4.5 years 10.0% 9.9% TBV Earnback Leverage Ratio TCE / TA Profitability Deposit Footprin…",
+     "note": "Projected pro forma CET1"
+    },
+    "tgt_own": {
+     "v": 16,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex992.htm",
+     "q": "…ments with key Stellar Bank personnel Pro Forma Ownership • 84% Prosperity Bancshares, Inc. / 16% Stellar Bancorp, Inc. (2) (3) PB Today Pro Forma Company at Est. Close Leverage Ratio: • Leverage Ratio: 10.9% 10.0% Capital Impact…"
+    },
+    "expected_close": {
+     "v": "2Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex991.htm",
+     "q": "…pproved by the Boards of Directors of both companies and is expected to close during the second quarter of 2026, subject to the receipt of required regulatory approvals, approval by Stellar’s shareholders and the satisfac…"
+    }
+   },
+   "status": "closed",
+   "close_date": "2026-07-01",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526291486/d109409d8k.htm",
+   "close_q": "Effective July 1, 2026 (the “Closing Date”), Prosperity Bancshares, Inc (“Prosperity” or the “Company”) completed its previously announced acquisition of Stellar Bancorp, Inc, a Texas corporation (“Stellar”), pursuant to the Agreement and Plan",
+   "close_filed": "2026-07-01",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "clbk-nfbk",
+   "announced": "2026-02-02",
+   "acquirer": "Columbia Financial",
+   "acq_ticker": "CLBK",
+   "target": "Northfield Bancorp",
+   "tgt_ticker": "NFBK",
+   "deal_type": "Acquisition",
+   "sources": {
+    "Press release (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-1.htm",
+    "Investor presentation (8-K Ex. 99.2)": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-2.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "NJ",
+     "src": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-1.htm",
+     "q": "…rtake Second-Step Conversion in Connection with Transaction Fair Lawn, New Jersey and Woodbridge, New Jersey (February 2, 2026): Columbia Financial, Inc. (“Columbia”) (NASDAQ: CLBK), the mid-tier holding company for Co…",
+     "note": "Northfield is based in Woodbridge, NJ"
+    },
+    "deal_value_m": {
+     "v": 597,
+     "src": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-2.htm",
+     "q": "…s ~$13bn Deposits Acquisition Deal Value / Multiples (1)(2) $597mm Deal Value 0.86x P / TBV 10.6x P / ’27E EPS Transaction Impacts (1)(2) ~50% ’27E EPS Accretion 4.4% TBV Dilution 1.8 Yr. TBV Earnback…",
+     "note": "At midpoint of RP Financial preliminary appraisal for Columbia second-step conversion; potential range $597–613M"
+    },
+    "price_per_share": {
+     "v": 14.25,
+     "src": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-1.htm",
+     "q": "…holder, as follows: (i) if the final Independent Valuation is less than $2.3 billion, either 1.425 shares of Holding Company common stock or $14.25 in cash; (ii) if the Independent Valuation is equal to or greater than $2.3 billion and less than $2.6 billion, eithe…",
+     "note": "Per-share value depends on final appraisal ($14.25/$14.50/$14.65); $14.25 applies at preliminary midpoint"
+    },
+    "consideration": {
+     "v": "70% stock / 30% cash",
+     "src": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-2.htm",
+     "q": "…0% of outstanding Northfield shares) – Presentation assumes 70% stock / 30% cash consideration structure • Merger consideration per Northfield share based on final appraisal for Columbia at closing as outlined belo…",
+     "note": "Election with proration; stock is post-second-step Columbia stock"
+    },
+    "p_tbv": {
+     "v": 0.86,
+     "src": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-2.htm",
+     "q": "…s ~$13bn Deposits Acquisition Deal Value / Multiples (1)(2) $597mm Deal Value 0.86x P / TBV 10.6x P / ’27E EPS Transaction Impacts (1)(2) ~50% ’27E EPS Accretion 4.4% TBV Dilution 1.8 Yr. TBV Earnback…",
+     "note": "At midpoint of RP Financial preliminary appraisal for Columbia second-step conversion"
+    },
+    "p_fwd_eps": {
+     "v": 10.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-2.htm",
+     "q": "…Acquisition Deal Value / Multiples (1)(2) $597mm Deal Value 0.86x P / TBV 10.6x P / ’27E EPS Transaction Impacts (1)(2) ~50% ’27E EPS Accretion 4.4% TBV Dilution 1.8 Yr. TBV Earnback (1) Data presented…",
+     "note": "2027E EPS; At midpoint of RP Financial preliminary appraisal for Columbia second-step conversion"
+    },
+    "tgt_assets_b": {
+     "v": 5.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-2.htm",
+     "q": "…ar deposit mix and high - value relationships (2) NFBK (37) 2025 Q4 Financial Overview $5.8bn Total Assets $4.0bn Total Deposits $3.8bn Net Loans 0.95% Non - GAAP ROAA (3) 7.5% Non - GAAP ROAE (3) 50.9% Non - GAAP Efficiency Ratio (3) 4.77% Yield on Loans…"
+    },
+    "tgt_deposits_b": {
+     "v": 4.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-2.htm",
+     "q": "…ar deposit mix and high - value relationships (2) NFBK (37) 2025 Q4 Financial Overview $5.8bn Total Assets $4.0bn Total Deposits $3.8bn Net Loans 0.95% Non - GAAP ROAA (3) 7.5% Non - GAAP ROAE (3) 50.9% Non - GAAP Efficiency Ratio (3) 4.77% Yield on Loans…"
+    },
+    "tgt_loans_b": {
+     "v": 3.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-2.htm",
+     "q": "…ar deposit mix and high - value relationships (2) NFBK (37) 2025 Q4 Financial Overview $5.8bn Total Assets $4.0bn Total Deposits $3.8bn Net Loans 0.95% Non - GAAP ROAA (3) 7.5% Non - GAAP ROAE (3) 50.9% Non - GAAP Efficiency Ratio (3) 4.77% Yield on Loans…",
+     "note": "Net loans"
+    },
+    "tgt_roaa": {
+     "v": 0.95,
+     "src": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-2.htm",
+     "q": "…$5.8bn Total Assets $4.0bn Total Deposits $3.8bn Net Loans 0.95% Non - GAAP ROAA (3) 7.5% Non - GAAP ROAE (3) 50.9% Non - GAAP Efficiency Ratio (3) 4.77% Yield on Loans 2.23% Cost of Int. Be…",
+     "note": "4Q25, non-GAAP"
+    },
+    "eps_accr": {
+     "v": 50,
+     "src": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-2.htm",
+     "q": "…0.86x P / TBV 10.6x P / ’27E EPS Transaction Impacts (1)(2) ~50% ’27E EPS Accretion 4.4% TBV Dilution 1.8 Yr. TBV Earnback (1) Data presented at the midpoint of the preliminary appraisal conduc…",
+     "note": "2027E; includes second-step conversion effects; At midpoint of RP Financial preliminary appraisal for Columbia second-step conversion"
+    },
+    "tbv_dil": {
+     "v": 4.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-2.htm",
+     "q": "…’27E EPS Transaction Impacts (1)(2) ~50% ’27E EPS Accretion 4.4% TBV Dilution 1.8 Yr. TBV Earnback (1) Data presented at the midpoint of the preliminary appraisal conducted by RP Financial. The final appraisa…"
+    },
+    "earnback": {
+     "v": 1.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-2.htm",
+     "q": "…’27E EPS Transaction Impacts (1)(2) ~50% ’27E EPS Accretion 4.4% TBV Dilution 1.8 Yr. TBV Earnback (1) Data presented at the midpoint of the preliminary appraisal conducted by RP Financial. The final appraisa…"
+    },
+    "cost_saves": {
+     "v": 35,
+     "src": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-2.htm",
+     "q": "…FBK earnings through 2027 per FactSet Consensus Estimates • Pre - tax cost savings estimated at 35.0% of NFBK non - interest expense, phased in 50% in 2026, 90% in 2027 and 100% thereafter • Pre - tax one - time expenses of $55.0 million (~1.…"
+    },
+    "credit_mark_m": {
+     "v": 81,
+     "src": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-2.htm",
+     "q": "…cost savings after - tax or 9.2% of deal value pre - tax) • Gross credit mark of 2.1% of NFBK’s gross loans at close ($81 million, ~2.2x reserves at close) − Review resulted in ~14% combined mark (~7% credit mark / ~7% interest rate mark)…"
+    },
+    "credit_mark_pct": {
+     "v": 2.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-2.htm",
+     "q": "…cost savings after - tax or 9.2% of deal value pre - tax) • Gross credit mark of 2.1% of NFBK’s gross loans at close ($81 million, ~2.2x reserves at close) − Review resulted in ~14% combined mark (~7% credit mark / ~7% interest rate mark)…"
+    },
+    "rate_mark_m": {
+     "v": 137.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-2.htm",
+     "q": "…minating non - PCD credit mark and related “double count” • $137.3mm (3.6%) loan portfolio write - down, accreted over 4 years straight line • $0.3mm (3.8%) HTM securities write - down, accreted over 5 years strai…"
+    },
+    "tgt_own": {
+     "v": null,
+     "src": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-2.htm",
+     "q": "…7% 23.7% 20.4% TRBC 306% 196% 211% 228% 265% CRE / TRBC (4) Pro Forma Ownership Breakdown 86.0% 84.6% 82.3% 78.6% Columbia Ownership 14.0% 15.4% 17.7% 21.4% Northfield Ownership Transaction Impact At Preliminary Appraisal Source: S&P Global Market Intelligence (1) Appraisal conducted by…",
+     "note": "Depends on final appraisal: 14.0%–21.4% Northfield ownership across the appraisal range"
+    },
+    "expected_close": {
+     "v": "Early 3Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/1723596/000110465926008969/tm264645d1_ex99-1.htm",
+     "q": "…ond-step conversion, the conversion offering and the merger are expected to be completed early in the third quarter of 2026. Keefe, Bruyette & Woods, Inc., A Stifel Company , is serving as financial advisor to Columbia. Keefe Bruyett…"
+    }
+   },
+   "status": "closed",
+   "close_date": "2026-07-20",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/1493225/000119312526312412/d173115d8k.htm",
+   "close_q": "completion on July 20, 2026 of the previously announced merger between Columbia Financial, Inc, a Maryland corporation (“Columbia Financial”), and Northfield Bancorp, Inc, a Delaware corporation (“Northfield Bancorp”), pursuant to the Agreement and Plan of Merger, dated as of",
+   "close_filed": "2026-07-22",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "san-wbs",
+   "announced": "2026-02-03",
+   "acquirer": "Banco Santander",
+   "acq_ticker": "SAN",
+   "target": "Webster Financial",
+   "tgt_ticker": "WBS",
+   "deal_type": "Acquisition (foreign acquirer)",
+   "sources": {
+    "Webster press release (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/801337/000119312526035891/d101831dex991.htm",
+    "Santander press release (425)": "https://www.sec.gov/Archives/edgar/data/801337/000095010326001521/dp240963_425-2.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "CT",
+     "src": "https://www.sec.gov/Archives/edgar/data/801337/000119312526035891/d101831dex991.htm",
+     "q": "…he holding company for Webster Bank, N.A. (“Webster Bank”). Founded in 1935 and headquartered in Stamford, CT, Webster is a values-driven organization with more than $80 billion in total assets. Webster Bank is a commer…"
+    },
+    "deal_value_m": {
+     "v": 12300,
+     "src": "https://www.sec.gov/Archives/edgar/data/801337/000119312526035891/d101831dex991.htm",
+     "q": "…antander’s closing stock price on Monday, February 2, 2026, the transaction has an aggregate value of approximately $12.3 billion. The per share consideration of $75.59 is based on closing prices as of February 2, 2026 and represents a 16%…",
+     "note": "Webster PR at Feb 2, 2026 closing prices; Santander PR cites $12.2 billion / $75 per share using 3-day VWAP"
+    },
+    "price_per_share": {
+     "v": 75.59,
+     "src": "https://www.sec.gov/Archives/edgar/data/801337/000119312526035891/d101831dex991.htm",
+     "q": "…tion has an aggregate value of approximately $12.3 billion. The per share consideration of $75.59 is based on closing prices as of February 2, 2026 and represents a 16% premium to Webster’s 10-day volume-weighted average stock price, a 9% premium to Webster…"
+    },
+    "premium": {
+     "v": 16,
+     "src": "https://www.sec.gov/Archives/edgar/data/801337/000119312526035891/d101831dex991.htm",
+     "q": "…75.59 is based on closing prices as of February 2, 2026 and represents a 16% premium to Webster’s 10-day volume-weighted average stock price, a 9% premium to Webster’s all-time high closing stock price, and is greater than 2.0x Webster’s fourth quart…",
+     "note": "vs. 10-day VWAP"
+    },
+    "consideration": {
+     "v": "Cash + stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/801337/000119312526035891/d101831dex991.htm",
+     "q": "…sh-and-stock transaction. Under the terms of the agreement, Webster stockholders will receive $48.75 in cash and 2.0548 Santander American Depository Shares for each Webster common share. Based on Santander’s closing stock price on Monday, February 2, 2026, the transaction has an aggregate value…",
+     "note": "$48.75 cash + 2.0548 SAN ADS per share"
+    },
+    "p_tbv": {
+     "v": 2.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/801337/000095010326001521/dp240963_425-2.htm",
+     "q": "…mong peers in the U.S., at 6.8x 2028 P/E post-synergies and 2.0x Q425 P/TBV, with an expected return on invested capital for Santander of c.15% and c.7-8% earnings per share accretion b…",
+     "note": "Webster PR: greater than 2.0x 4Q25 period-end TBVPS"
+    },
+    "tgt_assets_b": {
+     "v": 80,
+     "src": "https://www.sec.gov/Archives/edgar/data/801337/000119312526035891/d101831dex991.htm",
+     "q": "…ed in Stamford, CT, Webster is a values-driven organization with more than $80 billion in total assets. Webster Bank is a commercial bank that provides a wide range of financial products and services to businesse…",
+     "note": "\"More than $80 billion\""
+    },
+    "eps_accr": {
+     "v": null,
+     "src": "https://www.sec.gov/Archives/edgar/data/801337/000095010326001521/dp240963_425-2.htm",
+     "q": "…ected return on invested capital for Santander of c.15% and c.7-8% earnings per share accretion by 2028. · The transaction is consistent with Santander’s strategy to carry out bolt-on acquisitions to accelerate or…",
+     "note": "Santander GROUP EPS accretion of c.7–8% by 2028 (a range; left blank rather than picking a point)"
+    },
+    "cost_saves": {
+     "v": 19,
+     "src": "https://www.sec.gov/Archives/edgar/data/801337/000095010326001521/dp240963_425-2.htm",
+     "q": "…ng. The combination is also expected to deliver significant combined cost synergies of approximately $800 million 2 , equivalent to around c.19% of the combined cost base, supported by Santander’s and Webster’s integration track record and disciplined execution model. As a result…",
+     "note": "Basis is COMBINED Santander U.S. + Webster cost base (not target-only)"
+    },
+    "pf_cet1": {
+     "v": 12.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/801337/000095010326001521/dp240963_425-2.htm",
+     "q": "…d funding structure and continued organic transformation. · Group CET1 ratio of 12.8% post-closing 3 , with the group maintaining all buyback targets 4 , and over 13% by 2027, thereby maintaining capital leve…",
+     "note": "Santander GROUP CET1"
+    },
+    "expected_close": {
+     "v": "2H 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/801337/000119312526035891/d101831dex991.htm",
+     "q": "…approval of the stockholders of both Webster and Santander. The transaction is expected to close in the second half of 2026. J.P. Morgan Securities LLC is serving as lead financial advisor and rendered a fairness opinion to Webster a…"
+    }
+   },
+   "status": "closed",
+   "close_date": "2026-08-20",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/801337/000119312526357758/d919931d8k.htm",
+   "close_q": "This Current Report on Form 8-K is being filed in connection with the completion on August 20, 2026 (the “Closing Date”) of the previously announced acquisition of Webster Financial Corporation, a Delaware corporation (“Webster”), by Banco Santander, S",
+   "close_filed": "2026-08-20",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "fhb-tcbk",
+   "announced": "2026-07-13",
+   "acquirer": "First Hawaiian",
+   "acq_ticker": "FHB",
+   "target": "TriCo Bancshares",
+   "tgt_ticker": "TCBK",
+   "deal_type": "Acquisition",
+   "sources": {
+    "Press release (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-1.htm",
+    "Investor presentation (8-K Ex. 99.2)": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-2.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "CA",
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-1.htm",
+     "q": "…in 1975, Tri Counties Bank is a wholly-owned subsidiary of TriCo Bancshares (NASDAQ: TCBK) headquartered in Chico, California, providing services in traditional stand-alone and in-store bank branches and loan production offices in comm…"
+    },
+    "deal_value_m": {
+     "v": 2022,
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-2.htm",
+     "q": "…olders / ~35% TCBK shareholders Structure & Consideration • Consideration – $63.12 per share 2 or $2,022mm in aggregate transaction value • Price / TBV – 1.98x • Price / 2027E EPS – 14.4x • Price / fully - synergized 2027E EPS 3 – 10.7x Transactio…"
+    },
+    "price_per_share": {
+     "v": 63.12,
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-1.htm",
+     "q": "…l receive 2.095 First Hawaiian shares for each TriCo share, representing $63.12 per share as of First Hawaiian’s closing stock price on July 10, 2026. Upon closing of the transaction, First Hawaiian and TriCo shareholders are expected to own approximately 65%…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-2.htm",
+     "q": "…ynergized earnings include fully phased - in cost savings • Consideration mix – 100% common stock • Fixed exchange ratio – 2.095 shares of FHB common stock to be exchanged for each share of TCBK common stock…"
+    },
+    "p_tbv": {
+     "v": 1.98,
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-2.htm",
+     "q": "…12 per share 2 or $2,022mm in aggregate transaction value • Price / TBV – 1.98x • Price / 2027E EPS – 14.4x • Price / fully - synergized 2027E EPS 3 – 10.7x Transaction Pricing & Multiples…"
+    },
+    "p_fwd_eps": {
+     "v": 14.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-2.htm",
+     "q": "…22mm in aggregate transaction value • Price / TBV – 1.98x • Price / 2027E EPS – 14.4x • Price / fully - synergized 2027E EPS 3 – 10.7x Transaction Pricing & Multiples • Board of Directors – 4 dir…",
+     "note": "2027E EPS (not 2026E)"
+    },
+    "tgt_assets_b": {
+     "v": 9.9,
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-2.htm",
+     "q": "…CET1 Ratio (%) 68 Branches and 83 ATMs serving 31 Counties $9.9bn Total Assets $7.1bn Total Loans $8.4bn Total Deposits 0.03% 10 - Year Avg. NCOs / Loans Retail Branches Commercial Banking Centers Private Banking Office Crescent…"
+    },
+    "tgt_loans_b": {
+     "v": 7.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-2.htm",
+     "q": "…CET1 Ratio (%) 68 Branches and 83 ATMs serving 31 Counties $9.9bn Total Assets $7.1bn Total Loans $8.4bn Total Deposits 0.03% 10 - Year Avg. NCOs / Loans Retail Branches Commercial Banking Centers Private Banking Office Crescent…"
+    },
+    "tgt_deposits_b": {
+     "v": 8.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-2.htm",
+     "q": "…CET1 Ratio (%) 68 Branches and 83 ATMs serving 31 Counties $9.9bn Total Assets $7.1bn Total Loans $8.4bn Total Deposits 0.03% 10 - Year Avg. NCOs / Loans Retail Branches Commercial Banking Centers Private Banking Office Crescent…"
+    },
+    "tgt_roaa": {
+     "v": 1.38,
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-2.htm",
+     "q": "…l data as of quarter ended 3/31/2026 1.26% Cost of Deposits 1.38% Return on Avg. Assets 54.6% Efficiency Ratio 13.3% CET1 Ratio (%) 68 Branches and 83 ATMs serving 31 Counties $9.9bn Total Assets $…",
+     "note": "Quarter ended 3/31/2026"
+    },
+    "eps_accr": {
+     "v": 6,
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-2.htm",
+     "q": "…e $2.50 $2.50 Accretion / (dilution) to FHB - $ $0.03 $0.16 Accretion / (dilution) to FHB - % 1% 6% $ Millions Basic Shares (millions) $ Per Share FHB standalone TBV at close $1,830 120 $15.31 (+) Foregone rep…",
+     "note": "2027E with 100% phased-in cost synergies (1% at 50% phase-in)"
+    },
+    "tbv_dil": {
+     "v": 4.7,
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-2.htm",
+     "q": "…t close $2,754 189 $14.59 TBVPS dilution to FHB - $ $(0.72) TBVPS dilution to FHB - % (4.7)% Crossover earn-back - years 2.8 years 21 GAAP to non - GAAP Reconciliations Return on average tangible stockh…"
+    },
+    "earnback": {
+     "v": 2.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-2.htm",
+     "q": "…ilution to FHB - $ $(0.72) TBVPS dilution to FHB - % (4.7)% Crossover earn-back - years 2.8 years 21 GAAP to non - GAAP Reconciliations Return on average tangible stockholders’ equity and tangible book value…"
+    },
+    "cost_saves": {
+     "v": 25,
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-2.htm",
+     "q": "…estimates for First Hawaiian and TriCo Earnings Estimates • $61 million of pre - tax run - rate net expense savings, or 25% of TriCo’s 2026E cash non - interest expense base – Realized 50% in 2027E and 100% thereafter • Revenue synergies identified but not included in model Synergie…"
+    },
+    "credit_mark_m": {
+     "v": 135,
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-2.htm",
+     "q": "…alized 100% at closing for model purposes Merger Expenses • $135 million gross loan credit mark or 1.8% of gross loans at close, equal to TriCo’s ACL at close Loan Credit Mark • $(332) million of total pre - tax net asset marks – $(166)…"
+    },
+    "credit_mark_pct": {
+     "v": 1.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-2.htm",
+     "q": "…alized 100% at closing for model purposes Merger Expenses • $135 million gross loan credit mark or 1.8% of gross loans at close, equal to TriCo’s ACL at close Loan Credit Mark • $(332) million of total pre - tax net asset marks – $(166)…"
+    },
+    "rate_mark_m": {
+     "v": 166,
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-2.htm",
+     "q": "…Mark • $(332) million of total pre - tax net asset marks – $(166) million pre - tax loan mark at close; mark accreted sum - of - the - years - digits over 8 years – $(166) million pre - tax AFS and HTM securities…"
+    },
+    "pf_cet1": {
+     "v": 12.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-2.htm",
+     "q": "…Total Deposits 1 1.35%+ 2027E ROAA 2 18%+ 2027E ROATCE 2,3 12.4% CET1 Ratio at Close 2 <50% 2027E Efficiency 2 Branches Loans Deposits 117 Branches $21.5bn Loans $29.2bn Deposits Expands Branch…"
+    },
+    "tgt_own": {
+     "v": 35,
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-1.htm",
+     "q": "…the transaction, First Hawaiian and TriCo shareholders are expected to own approximately 65% and 35%, respectively, of the combined company. Four current TriCo directors, including Rick Smith, will join the First Hawaiian an…"
+    },
+    "expected_close": {
+     "v": "By end of 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-1.htm",
+     "q": "…and TriCo unanimously approved the definitive agreement and the parties expect to close the transaction by the end of 2026, subject to the receipt of required regulatory approvals, approval by First Hawaiian and TriCo shareholders a…"
+    }
+   },
+   "status": "pending",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "wafd-everbank",
+   "announced": "2026-09-07",
+   "acquirer": "WaFd, Inc.",
+   "acq_ticker": "WAFD",
+   "target": "EverBank Financial Corp",
+   "tgt_ticker": "private",
+   "deal_type": "Reverse merger",
+   "sources": {
+    "Press release (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-1.htm",
+    "Investor presentation (8-K Ex. 99.2)": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-2.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "FL",
+     "src": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-2.htm",
+     "q": "…rship split: 59.2% EverBank / 40.8% WaFd Brand Headquarters Holding company: Bellevue, WA | Bank: Jacksonville, FL Board of Directors 7 EverBank / 6 WaFd Directors Chairman: Robert Radway | Directors include Greg Seibly and…",
+     "note": "EverBank is based in Jacksonville, FL"
+    },
+    "deal_value_m": {
+     "v": 3900,
+     "src": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-1.htm",
+     "q": "…ef20081702_ex99-1.htm EXHIBIT 99.1 Exhibit 99.1 WaFd, Inc. Enters into a $3.9 Billion Reverse Merger Transaction with EverBank Financial Corp Combination will position bank for strong performance and returns, with signific…",
+     "note": "Reverse merger: WaFd is legal acquirer, EverBank is accounting acquirer; value of WaFd shares issued to EverBank holders (~103.1M shares, 107.7M incl. options, at $36.30)"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-2.htm",
+     "q": "…ulated by the Federal Reserve and EverBank, N.A. by the OCC Consideration 100% common stock consideration WaFd will issue 103.1mm shares(1) (107.7mm inclusive of options) in connection with the transaction Pro forma shares: 177.1mm basic | 182.0m…"
+    },
+    "tgt_assets_b": {
+     "v": 46.7,
+     "src": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-2.htm",
+     "q": "…6 years years of experience Overview of Standalone EverBank EverBank at a Glance $46.7B Assets $37.7B Deposits $37.1B Loans & Leases $9.1B Cash & Securities 53% Adj. Efficiency Ratio (1) (2) 2.59% NIM (2) Digitally Led, Efficient Deposit Gath…",
+     "note": "6/30/2026"
+    },
+    "tgt_deposits_b": {
+     "v": 37.7,
+     "src": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-2.htm",
+     "q": "…6 years years of experience Overview of Standalone EverBank EverBank at a Glance $46.7B Assets $37.7B Deposits $37.1B Loans & Leases $9.1B Cash & Securities 53% Adj. Efficiency Ratio (1) (2) 2.59% NIM (2) Digitally Led, Efficient Deposit Gath…"
+    },
+    "tgt_loans_b": {
+     "v": 37.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-2.htm",
+     "q": "…6 years years of experience Overview of Standalone EverBank EverBank at a Glance $46.7B Assets $37.7B Deposits $37.1B Loans & Leases $9.1B Cash & Securities 53% Adj. Efficiency Ratio (1) (2) 2.59% NIM (2) Digitally Led, Efficient Deposit Gath…",
+     "note": "Loans & leases"
+    },
+    "tgt_npa": {
+     "v": 0.45,
+     "src": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-2.htm",
+     "q": "…Loan Mix Residential (5) Commercial Real Estate Commercial 0.45% Adj. NPAs / Assets (4) 0.02% NCOs / Avg. Loans Growth-Oriented, Profitability Focused Loans ($B) Since 2023, deposits grew 38% (…",
+     "note": "Adjusted NPAs / assets"
+    },
+    "eps_accr": {
+     "v": 29,
+     "src": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-1.htm",
+     "q": "…on of expected cost synergies. For WaFd, Inc. shareholders, the expected 2027 EPS accretion is approximately 29%, with an earn-back period for tangible book value dilution of under two years. As a result, the transaction i…",
+     "note": "2027E, to WaFd shareholders, fully synergized"
+    },
+    "tbv_dil": {
+     "v": 8.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-2.htm",
+     "q": "…xcess capital generation ~90bps+ Annual CET1 generation (4) 2.0 years TBV earnback period (3) (8.6%) TBV per share dilution Source: Company filings; FactSet; S&P Global Market Intelligence Notes: Financial data as of June 30, 2026; M…"
+    },
+    "earnback": {
+     "v": 2.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-2.htm",
+     "q": "…xcess capital generation ~90bps+ Annual CET1 generation (4) 2.0 years TBV earnback period (3) (8.6%) TBV per share dilution Source: Company filings; FactSet; S&P Global Market Intelligence Notes: Fin…"
+    },
+    "cost_saves": {
+     "v": 11,
+     "src": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-2.htm",
+     "q": "…recast through 2028, as reflected on slide 19 Cost savings: $135mm annual run-rate pre-tax cost savings (~11% of the combined NIX); grown 3% annually 40% phase-in during 2027, 100% phase-in by 2H 2028 Revenue synergies: Not modeled in pro f…",
+     "note": "Basis is COMBINED non-interest expense"
+    },
+    "credit_mark_m": {
+     "v": null,
+     "src": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-2.htm",
+     "q": "…purposes, fully reflected in pro forma capital at closing) Credit mark: $313mm (1.55% of WaFd’s projected gross loans at closing, 1.45x WaFd’s loan loss reserve at close) Fair value marks on WaFd: ($601mm) pre-tax loan mark accreted 10 ye…",
+     "note": "Reverse merger: WaFd is legal acquirer, EverBank is accounting acquirer; marks ($313M credit, $601M loan rate) apply to WaFd, not EverBank — left blank for comparability"
+    },
+    "rate_mark_m": {
+     "v": null,
+     "src": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-2.htm",
+     "q": "…aFd’s loan loss reserve at close) Fair value marks on WaFd: ($601mm) pre-tax loan mark accreted 10 years using straight-line method ($145mm) pre-tax securities mark accreted 4.5 years using straight-line method $29…",
+     "note": "Reverse merger: WaFd is legal acquirer, EverBank is accounting acquirer; mark applies to WaFd loans"
+    },
+    "pf_cet1": {
+     "v": 9.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-2.htm",
+     "q": "…orma balance sheet 12.6% Total capital 8.1% Tier 1 leverage 9.8% CET1 Enhanced profitability drives short TBV earnback period and excess capital generation ~90bps+ Annual CET1 generation (4) 2.0 years TBV earnback period (3) (8.…"
+    },
+    "tgt_own": {
+     "v": 59.2,
+     "src": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-2.htm",
+     "q": "…ansaction Pro forma shares: 177.1mm basic | 182.0mm diluted Ownership split: 59.2% EverBank / 40.8% WaFd Brand Headquarters Holding company: Bellevue, WA | Bank: Jacksonville, FL Board of Directors 7 EverBank / 6 W…",
+     "note": "EverBank holders own the majority (reverse merger)"
+    },
+    "expected_close": {
+     "v": "Early 2027",
+     "src": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-1.htm",
+     "q": "…lders owning approximately 40.8%. The transaction, which is expected to be completed in early 2027 and be tax-free for both EverBank Financial Corp and WaFd, Inc. common shareholders, is subject to regulatory…"
+    }
+   },
+   "status": "pending",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "pebo-cbnk",
+   "announced": "2026-09-30",
+   "acquirer": "Peoples Bancorp",
+   "acq_ticker": "PEBO",
+   "target": "Capital Bancorp",
+   "tgt_ticker": "CBNK",
+   "deal_type": "Acquisition",
+   "sources": {
+    "Press release (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerpressrelease.htm",
+    "Investor presentation (8-K Ex. 99.2)": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerinvestorde.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "MD",
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerpressrelease.htm",
+     "q": "…C, and Vantage Financial, LLC. About Capital Bancorp, Inc.: Capital Bancorp, Inc., Rockville, Maryland is a registered bank holding company incorporated under the laws of Maryland. Capital Bancorp has been providing financial services since 1999 and…"
+    },
+    "deal_value_m": {
+     "v": 728.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerpressrelease.htm",
+     "q": "…closing price of $39.41 per share as of September 29, 2026, the aggregate transaction value is approximately $728.1 million, or $43.75 per share. Former Capital shareholders are expected to collectively own approximately 32% of Peoples following completi…"
+    },
+    "price_per_share": {
+     "v": 43.75,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerpressrelease.htm",
+     "q": "…closing price of $39.41 per share as of September 29, 2026, the aggregate transaction value is approximately $728.1 million, or $43.75 per share. Former Capital shareholders are expected to collectively own approximately 32% of Peoples following completi…",
+     "note": "Based on PEBO 20-day VWAP of $39.41"
+    },
+    "premium": {
+     "v": 22.7,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerinvestorde.htm",
+     "q": "…lue / 2027E Earnings + Fully-Phased Cost Savings: 6.7x(3) ― Market Premium: 22.7%(4) ― Core Deposit Premium: 11.4% ― 67.8% PEBO | 32.2% CBNK (diluted) ― Three board seats to be offered to cur…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerinvestorde.htm",
+     "q": "…ed exchange ratio of 1.11 PEBO shares for each CBNK share ― 100% stock consideration ― Deal Value / TBV: 191% ― Deal Value / LTM Earnings: 12.9x ― Deal Value / 2026E Earnings: 12.7x ― Deal Value…"
+    },
+    "p_tbv": {
+     "v": 1.91,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerinvestorde.htm",
+     "q": "…EBO shares for each CBNK share ― 100% stock consideration ― Deal Value / TBV: 191% ― Deal Value / LTM Earnings: 12.9x ― Deal Value / 2026E Earnings: 12.7x ― Deal Value / 2027E Earnings + Fully…"
+    },
+    "p_ltm_eps": {
+     "v": 12.9,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerinvestorde.htm",
+     "q": "…share ― 100% stock consideration ― Deal Value / TBV: 191% ― Deal Value / LTM Earnings: 12.9x ― Deal Value / 2026E Earnings: 12.7x ― Deal Value / 2027E Earnings + Fully-Phased Cost Savings: 6.7x(3) ― Mar…"
+    },
+    "p_fwd_eps": {
+     "v": 12.7,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerinvestorde.htm",
+     "q": "…Deal Value / TBV: 191% ― Deal Value / LTM Earnings: 12.9x ― Deal Value / 2026E Earnings: 12.7x ― Deal Value / 2027E Earnings + Fully-Phased Cost Savings: 6.7x(3) ― Market Premium: 22.7%(4) ― Core Deposit…",
+     "note": "2026E earnings"
+    },
+    "cdp": {
+     "v": 11.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerinvestorde.htm",
+     "q": "…y-Phased Cost Savings: 6.7x(3) ― Market Premium: 22.7%(4) ― Core Deposit Premium: 11.4% ― 67.8% PEBO | 32.2% CBNK (diluted) ― Three board seats to be offered to current CBNK Board members ― Approva…"
+    },
+    "tgt_assets_b": {
+     "v": 3.9,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerpressrelease.htm",
+     "q": "…Sky TM , Windsor Advantage TM and Capital Bank Home Loans - had $3.9 billion in total assets, $3.1 billion in gross loans and $3.4 billion in total deposits as of June 30, 2026. Fee-based revenue represented approximately 22% of Capital's total revenue in the second quarter of 2026, an…"
+    },
+    "tgt_loans_b": {
+     "v": 3.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerpressrelease.htm",
+     "q": "…Sky TM , Windsor Advantage TM and Capital Bank Home Loans - had $3.9 billion in total assets, $3.1 billion in gross loans and $3.4 billion in total deposits as of June 30, 2026. Fee-based revenue represented approximately 22% of Capital's total revenue in the second quarter of 2026, an…"
+    },
+    "tgt_deposits_b": {
+     "v": 3.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerpressrelease.htm",
+     "q": "…Sky TM , Windsor Advantage TM and Capital Bank Home Loans - had $3.9 billion in total assets, $3.1 billion in gross loans and $3.4 billion in total deposits as of June 30, 2026. Fee-based revenue represented approximately 22% of Capital's total revenue in the second quarter of 2026, an…"
+    },
+    "eps_accr": {
+     "v": 19,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerinvestorde.htm",
+     "q": "…0.8%(5) with a TBVPS earnback period of less than 3 years ― Fully-phased 2027E EPS accretion of 19%(6) Consideration and Value Transaction Multiples(1)(2) Pro Forma Ownership Timing & Approvals Expected Financ…",
+     "note": "2027E fully phased"
+    },
+    "tbv_dil": {
+     "v": 10.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerinvestorde.htm",
+     "q": "…mary regulatory approvals ― Anticipated closing in 1H2027 ― Initial TBVPS dilution of 10.8%(5) with a TBVPS earnback period of less than 3 years ― Fully-phased 2027E EPS accretion of 19%(6) Considerati…"
+    },
+    "earnback": {
+     "v": 3,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerinvestorde.htm",
+     "q": "…ated closing in 1H2027 ― Initial TBVPS dilution of 10.8%(5) with a TBVPS earnback period of less than 3 years ― Fully-phased 2027E EPS accretion of 19%(6) Consideration and Value Transaction Multiples(1)(2) Pro Forma Ow…",
+     "note": "\"Less than 3 years\""
+    },
+    "cost_saves": {
+     "v": 30,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerinvestorde.htm",
+     "q": "…her comprehensive income; “CDI” = core deposit intangible ― 30% cost savings of CBNK’s non-interest expense ― 70% phased in during 2027, 100% during 2028 and thereafter ― Revenue synergies identified but not modeled ―…"
+    },
+    "credit_mark_m": {
+     "v": 93,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerinvestorde.htm",
+     "q": "…― Pre-tax one-time transaction expenses of $56.5 million ― Gross credit mark equal to 3.0% of CBNK loans ($93 million) ― Includes $5.5 million of Non-PCD credit card loans receiving CECL “double-count” treatment ― AOCI write-dow…"
+    },
+    "credit_mark_pct": {
+     "v": 3.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerinvestorde.htm",
+     "q": "…― Pre-tax one-time transaction expenses of $56.5 million ― Gross credit mark equal to 3.0% of CBNK loans ($93 million) ― Includes $5.5 million of Non-PCD credit card loans receiving CECL “double-count” treatment ― AOCI write-dow…"
+    },
+    "rate_mark_m": {
+     "v": 27,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerinvestorde.htm",
+     "q": "…wn of $4.9 million, accreted straight line over 2.4 years ― Loan interest rate mark-down of 0.8%, or $27 million, accreted straight line over 2.2 years ― Time deposit mark-down of $0.6 million, amortized straight line over…"
+    },
+    "pf_cet1": {
+     "v": 11.9,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerinvestorde.htm",
+     "q": "…BVPS Dilution(2) < 3 Years TBVPS Earnback Robust Capital(3) 11.9% CET1 Ratio 9.2% TCE Ratio 13.5% Total Risk Based Capital Ratio 196% CRE Concentration Ratio(4) 14 Pro Forma Performance Relative to Pee…"
+    },
+    "tgt_own": {
+     "v": 32.2,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerinvestorde.htm",
+     "q": "…― Market Premium: 22.7%(4) ― Core Deposit Premium: 11.4% ― 67.8% PEBO | 32.2% CBNK (diluted) ― Three board seats to be offered to current CBNK Board members ― Approvals of PEBO and CBNK shareholders ― C…"
+    },
+    "expected_close": {
+     "v": "1H 2027",
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerpressrelease.htm",
+     "q": "…actices and director evaluation process. The acquisition is expected to close during the first half of 2027, subject to the satisfaction of customary closing conditions, including regulatory approvals and the approval…"
+    }
+   },
+   "status": "pending",
+   "checked": "2026-11-11"
+  },
+  {
+   "id": "umbf-eldorado",
+   "announced": "2026-10-27",
+   "acquirer": "UMB Financial",
+   "acq_ticker": "UMBF",
+   "target": "El Dorado Savings Bank, F.S.B.",
+   "tgt_ticker": "private",
+   "deal_type": "Acquisition",
+   "sources": {
+    "Press release (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/101382/000119312526434196/umbf-ex99_1.htm",
+    "Investor presentation (8-K Ex. 99.2)": "https://www.sec.gov/Archives/edgar/data/101382/000119312526434196/umbf-ex99_2.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "CA",
+     "src": "https://www.sec.gov/Archives/edgar/data/101382/000119312526434196/umbf-ex99_1.htm",
+     "q": "…tion valued at approximately $506 million. Founded in 1958, El Dorado is headquartered in Placerville, Calif., and has $2.4 billion in assets, $2.1 billion in total deposits, and $0.5 billion in total loans, as of Septe…"
+    },
+    "deal_value_m": {
+     "v": 506,
+     "src": "https://www.sec.gov/Archives/edgar/data/101382/000119312526434196/umbf-ex99_1.htm",
+     "q": "…MB) will acquire El Dorado Savings Bank, F.S.B. (El Dorado) in a 52% cash, 48% stock transaction valued at approximately $506 million. Founded in 1958, El Dorado is headquartered in Placerville, Calif., and has $2.4 billion in assets, $2.1 bil…"
+    },
+    "consideration": {
+     "v": "52% cash / 48% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/101382/000119312526434196/umbf-ex99_1.htm",
+     "q": "…MB) will acquire El Dorado Savings Bank, F.S.B. (El Dorado) in a 52% cash, 48% stock transaction valued at approximately $506 million. Founded in 1958, El Dorado is headquartered in Placerville, Calif., and…",
+     "note": "13.553 UMBF shares + $1,958.88 cash per El Dorado share"
+    },
+    "cdp": {
+     "v": 8.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/101382/000119312526434196/umbf-ex99_2.htm",
+     "q": "…Dorado Transaction Structure Transaction Value & Multiples $506MM Deal Value 8.0% Deposit Premium Approvals & Timing Approval of El Dorado shareholders required Customary regulatory approvals Anticipated clo…"
+    },
+    "tgt_assets_b": {
+     "v": 2.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/101382/000119312526434196/umbf-ex99_2.htm",
+     "q": "…ea, Sierra Nevada foothills, and the Lake Tahoe communities $2.4B Total Assets $0.5B Total Loans $2.1B Total Deposits 0.04% NPAs/Assets 24% Loan/Deposit Ratio 0.88% / 1.04% Cost of Total / IB Deposits 1) Includes equity securities with readily d…",
+     "note": "Bank-level, 9/30/2026"
+    },
+    "tgt_loans_b": {
+     "v": 0.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/101382/000119312526434196/umbf-ex99_2.htm",
+     "q": "…ea, Sierra Nevada foothills, and the Lake Tahoe communities $2.4B Total Assets $0.5B Total Loans $2.1B Total Deposits 0.04% NPAs/Assets 24% Loan/Deposit Ratio 0.88% / 1.04% Cost of Total / IB Deposits 1) Includes equity securit…"
+    },
+    "tgt_deposits_b": {
+     "v": 2.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/101382/000119312526434196/umbf-ex99_2.htm",
+     "q": "…ea, Sierra Nevada foothills, and the Lake Tahoe communities $2.4B Total Assets $0.5B Total Loans $2.1B Total Deposits 0.04% NPAs/Assets 24% Loan/Deposit Ratio 0.88% / 1.04% Cost of Total / IB Deposits 1) Includes equity securit…"
+    },
+    "tgt_npa": {
+     "v": 0.04,
+     "src": "https://www.sec.gov/Archives/edgar/data/101382/000119312526434196/umbf-ex99_2.htm",
+     "q": "…Lake Tahoe communities $2.4B Total Assets $0.5B Total Loans $2.1B Total Deposits 0.04% NPAs/Assets 24% Loan/Deposit Ratio 0.88% / 1.04% Cost of Total / IB Deposits 1) Includes equity securities with readily d…"
+    },
+    "tgt_own": {
+     "v": 2,
+     "src": "https://www.sec.gov/Archives/edgar/data/101382/000119312526434196/umbf-ex99_2.htm",
+     "q": "…orado share plus $1,958.88 in cash for each El Dorado share Pro forma ownership: 98% UMB | 2% El Dorado Transaction Structure Transaction Value & Multiples $506MM Deal Value 8.0% Deposit Premium Approvals & Timing…"
+    },
+    "expected_close": {
+     "v": "1Q 2027",
+     "src": "https://www.sec.gov/Archives/edgar/data/101382/000119312526434196/umbf-ex99_1.htm",
+     "q": "…pprovals and approval by the shareholders of El Dorado, and is expected to close in the first quarter of 2027. Sullivan & Cromwell LLP served as legal counsel to UMB. Piper Sandler & Co. served as financial advisor and…"
+    }
+   },
+   "status": "pending",
    "checked": "2026-11-11"
   }
  ]
