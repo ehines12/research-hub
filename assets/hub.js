@@ -667,7 +667,10 @@
       const R = c.rows, L = R[R.length - 1], Y = R[R.length - 5], F = {}; c.fields.forEach(f => F[f.key] = f);
       const kp = (c.tiles || c.kpis.slice(0, 3)).map(k => { const f = F[k], y = cchg(L[k], Y[k], f.fmt), cl = !y || Math.abs(y.d) < 1e-9 ? "flat" : (y.d > 0) !== !!f.invert ? "pos" : "neg";
         return '<div class="ctk"><span>' + esc(f.label.replace("*", "")) + "</span><b>" + cfmt(L[k], f.fmt) + '</b><i class="' + cl + '">' + (y ? y.t + " YoY" : "") + "</i></div>"; }).join("");
-      return '<a class="tile" href="#/companies/' + esc(c.ticker) + '"><span class="badge live">' + esc(L.q) + '</span><div class="ic">' + ICONS.building + "</div><h3>" + esc(c.name) + ' <span class="hint">' + esc(c.ticker) + '</span></h3><div class="ctks">' + kp + "</div></a>"; }).join("") + "</div>";
+      return '<a class="tile" href="#/companies/' + esc(c.ticker) + '"><span class="badge live">' + esc(L.q) + '</span><div class="ic">' + ICONS.building + "</div><h3>" + esc(c.name) + ' <span class="hint">' + esc(c.ticker) + '</span></h3><div class="ctks">' + kp + "</div>" + (c.ticker === "WT" ? '<div class="ctks" id="wtmft"></div>' : "") + "</a>"; }).join("") + "</div>";
+    load("wt_monthly_flows").then(D => { const el = document.getElementById("wtmft"); if (!el || !D) return; const M = D.months.filter(r => !r.missing), L = M[M.length - 1];
+      const mo = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][+L.month.slice(5) - 1] + " " + L.month.slice(2, 4), sg = v => (v < 0 ? "−" : "+") + Math.abs(v).toFixed(1) + "%";
+      el.innerHTML = '<div class="ctk"><span>' + mo + ' net flows</span><b>' + (L.net < 0 ? "−$" : "$") + Math.abs(L.net / 1000).toFixed(2) + 'bn</b><i class="flat">monthly</i></div><div class="ctk"><span>' + mo + ' organic growth*</span><b>' + sg(L.og_ann_pct) + '</b><i class="' + (L.t6_og_pct == null ? "flat" : L.og_ann_pct >= L.t6_og_pct ? "pos" : "neg") + '">6M avg ' + (L.t6_og_pct == null ? "n/a" : sg(L.t6_og_pct)) + "</i></div>"; }).catch(() => {});
   }
   async function companiesPage(t) {
     const C = (await load("companies")).companies;
@@ -685,7 +688,7 @@
     const th = "<tr><th class=\"sl\">Quarter</th><th>Period end</th>" + c.fields.map(f => '<th class="r">' + esc(f.label) + "</th>").join("") + "<th>Source</th></tr>";
     const tb = R.slice().reverse().map(r => '<tr><td class="sl b">' + esc(r.q) + "</td><td>" + esc(r.end) + "</td>" + c.fields.map(f => '<td class="r' + (r[f.key] == null ? " na" : "") + '">' + cfmt(r[f.key], f.fmt) + "</td>").join("") + '<td><a class="hint" style="color:var(--acc)" href="' + esc(r.src) + '" target="_blank" rel="noopener noreferrer">8-K ' + EXT + "</a></td></tr>").join("");
     app.innerHTML = '<div class="qbar"><div><h1>' + esc(c.name) + " (" + esc(c.ticker) + ')</h1><p class="sub" style="margin:0">Latest quarter: ' + esc(L.q) + " (ended " + esc(L.end) + "). " + esc(c.fiscal) + "</p></div>" + sw + "</div>" +
-      '<h2>Latest quarter <span class="hint">vs prior quarter (QoQ) and year-ago quarter (YoY)</span></h2><div class="kpis sec">' + kp + "</div>" + (c.ticker === "CNS" ? '<div id="ncw"></div>' : c.ticker === "WT" ? '<div id="wtw"></div>' : "") +
+      '<h2>Latest quarter <span class="hint">vs prior quarter (QoQ) and year-ago quarter (YoY)</span></h2><div class="kpis sec">' + kp + "</div>" + (c.ticker === "CNS" ? '<div id="ncw"></div>' : c.ticker === "WT" ? '<div id="wtmf"></div><div id="wtw"></div>' : "") +
       '<h2>Trends <span class="hint">last ' + n + ' quarters</span></h2><div class="panels">' + c.charts.map((ch, i) => '<div class="panel"><h4>' + esc(ch.title) + '</h4><div class="cv"><canvas id="cc' + i + '"></canvas></div></div>').join("") + "</div>" +
       '<div class="qbar" style="margin-top:30px"><h2 style="margin:0">Quarterly data</h2><div class="qdl"><button class="btn" id="cocsv">CSV</button><a class="btn" href="data/company-' + esc(c.ticker) + '.xlsx" download>Excel</a></div></div>' +
       '<div class="qwrap"><table class="sumtbl qtbl"><thead>' + th + "</thead><tbody>" + tb + "</tbody></table></div>" +
@@ -711,6 +714,7 @@
     });
     if (c.ticker === "CNS") cnsNowcast(R).catch(e => { const el = document.getElementById("ncw"); if (el) el.innerHTML = '<div class="pnote">Nowcast unavailable: ' + esc(e.message) + "</div>"; });
     if (c.ticker === "CNS") cnsMonthlyFlows().catch(e => { const el = document.getElementById("cnsmf"); if (el) el.innerHTML = '<div class="pnote">Monthly flows unavailable: ' + esc(e.message) + "</div>"; });
+    if (c.ticker === "WT") wtMonthlyFlows().catch(e => { const el = document.getElementById("wtmf"); if (el) el.innerHTML = '<div class="pnote">Monthly flows unavailable: ' + esc(e.message) + "</div>"; });
     if (c.ticker === "WT") wtEarningsPower(R).catch(e => { const el = document.getElementById("wtw"); if (el) el.innerHTML = '<div class="pnote">Earnings power unavailable: ' + esc(e.message) + "</div>"; });
   }
 
@@ -856,6 +860,65 @@
       options: { animation: false, maintainAspectRatio: false, interaction: { mode: "index", intersect: false },
         scales: { x: { stacked: true, grid: g, ticks: Object.assign({ maxTicksLimit: 10, maxRotation: 0 }, tk) }, y: { stacked: true, grid: g, ticks: tk } },
         plugins: { legend: { labels: { color: "#e6edf3", boxWidth: 12 } }, tooltip: { callbacks: { label: it => it.dataset.label + ": " + fs(it.parsed.y) + "M" } } } } }));
+  }
+
+  // ---- WT monthly net flows / organic growth (data/wt_monthly_flows.json, built by companies/nowcast/wt_monthly_flows.py) ----
+  async function wtMonthlyFlows() {
+    const D = await load("wt_monthly_flows"), el = document.getElementById("wtmf"); if (!el) return;
+    const A = D.months, M = A.filter(r => !r.missing), L = M[M.length - 1];
+    const all = localStorage.getItem("wt-mf-all") === "1";
+    const ml = m => ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][+m.slice(5) - 1] + " " + m.slice(0, 4);
+    const fs = v => v == null ? "–" : (v > 0 ? "+" : v < 0 ? "−" : "") + "$" + Math.abs(v).toLocaleString("en-US", { maximumFractionDigits: 0 }) + "M";
+    const f0 = v => v == null ? "–" : "$" + (v / 1000).toFixed(2) + "bn";
+    const fp = v => v == null ? "–" : (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v).toFixed(1) + "%";
+    const cl = v => v == null ? "na" : v > 0 ? "pos" : v < 0 ? "neg" : "flat";
+    const card = (t, v, d) => '<div class="kpi"><div class="t">' + t + '</div><div class="v">' + v + '</div><div class="d">' + d + "</div></div>";
+    const last12 = A.slice(-12), rows = (all ? A : last12).slice().reverse();
+    const dOG = L.t6_og_pct == null ? null : L.og_ann_pct - L.t6_og_pct, dNF = L.t6_net == null ? null : L.net - L.t6_net;
+    const cats = Object.keys(L.categories || {});
+    const tb = rows.map(r => r.missing ? '<tr><td class="sl b">' + ml(r.month) + '</td><td class="na hint" colspan="10">Blank: ' + esc(r.missing) + "</td></tr>" :
+      '<tr class="' + (r.month === L.month ? "latest" : "") + '"><td class="sl b">' + ml(r.month) + (r.month === L.month ? '<span class="tag">LATEST</span>' : "") + (r.checks && r.checks.length ? '<sup title="' + esc(r.checks.join("; ")) + '">⚠</sup>' : "") + '<span class="sid">' + esc(r.release_date || "") + "</span></td>" +
+      '<td class="r">' + f0(r.beg) + '</td><td class="r ' + cl(r.net) + '">' + fs(r.net) + '</td><td class="r ' + cl(r.og_ann_pct) + '">' + fp(r.og_ann_pct) + '</td><td class="r ' + cl(r.t6_og_pct) + '">' + fp(r.t6_og_pct) + '</td><td class="r ' + cl(r.t6_net) + '">' + fs(r.t6_net) + '</td><td class="r flat">' + fp(r.ann_rate_rep_pct) +
+      '</td><td class="r">' + fs(r.mkt) + '</td><td class="r' + (r.acq == null ? " na" : "") + '">' + fs(r.acq) + '</td><td class="r b">' + f0(r.end) + "</td>" +
+      '<td><a class="hint" style="color:var(--acc)" href="' + esc(r.url) + '" target="_blank" rel="noopener noreferrer">IR ' + EXT + "</a></td></tr>").join("");
+    const ctb = rows.filter(r => !r.missing).map(r => '<tr class="' + (r.month === L.month ? "latest" : "") + '"><td class="sl b">' + ml(r.month) + "</td>" + cats.map(c => { const x = r.categories[c]; return '<td class="r ' + cl(x && x.net) + '">' + fs(x ? x.net : null) + "</td>"; }).join("") + '<td class="r b ' + cl(r.net) + '">' + fs(r.net) + "</td></tr>").join("");
+    const blanks = A.filter(r => r.missing).map(r => ml(r.month));
+    el.innerHTML = '<h2>Monthly net flows &amp; organic growth <span class="hint">WisdomTree monthly metrics releases · ' + ml(D.coverage.from) + " → " + ml(D.coverage.to) + " · ETP + tokenized AUM, ex-Ceres private</span></h2>" +
+      '<h3 style="margin:6px 0 10px">' + ml(L.month) + ' <span class="hint">released ' + esc(L.release_date || "n/a") + " · latest month</span></h3>" +
+      '<div class="kpis sec">' +
+      card("Net flows, " + ml(L.month), '<span class="' + cl(L.net) + '">' + fs(L.net) + "</span>", '<span class="flat">6M avg ' + fs(L.t6_net) + '</span> <span class="' + cl(dNF) + '">' + (dNF == null ? "" : fs(dNF) + " vs avg") + "</span>") +
+      card("Organic growth, ann.*", '<span class="' + cl(L.og_ann_pct) + '">' + fp(L.og_ann_pct) + "</span>", '<span class="flat">WT-reported rate ' + fp(L.ann_rate_rep_pct) + "</span>") +
+      card("Trailing 6M avg organic growth*", '<span class="' + cl(L.t6_og_pct) + '">' + fp(L.t6_og_pct) + "</span>", '<span class="' + cl(dOG) + '">' + (dOG == null ? "n/a" : (dOG >= 0 ? "+" : "−") + Math.abs(dOG).toFixed(1) + " pp") + '</span> <span class="flat">latest vs 6M avg</span>') +
+      card("YTD net flows", '<span class="' + cl(L.ytd_net) + '">' + fs(L.ytd_net) + "</span>", '<span class="flat">through ' + ml(L.month) + "</span>") +
+      card("Ending AUM (ETP + tokenized)", f0(L.end), '<span class="flat">from ' + f0(L.beg) + " · market " + fs(L.mkt) + "</span>") + "</div>" +
+      '<div class="panels c2"><div class="panel"><h4>Monthly net flows ($M), last 12 months · latest highlighted · line = trailing 6M avg</h4><div class="cv"><canvas id="wtmfa"></canvas></div></div>' +
+      '<div class="panel"><h4>Organic growth, annualized (%) · line = trailing 6M avg</h4><div class="cv"><canvas id="wtmfb"></canvas></div></div></div>' +
+      '<div class="qbar" style="margin-top:18px"><div class="gtg"><div class="seg"><button data-wtall="0" class="' + (all ? "" : "on") + '">Last 12 months</button><button data-wtall="1" class="' + (all ? "on" : "") + '">All ' + A.length + " months</button></div></div>" +
+      '<div class="qdl"><button class="btn" id="wtmfcsv">CSV</button>' + (INLINE ? "" : '<a class="btn" href="data/company-WT-monthly-flows.xlsx" download>Excel</a>') + "</div></div>" +
+      '<div class="qwrap"><table class="sumtbl qtbl mftbl wtmf"><thead><tr><th class="sl">Month <span class="hint">release date</span></th><th class="r">Beginning AUM</th><th class="r">Net flows</th><th class="r">Organic growth, ann.*</th><th class="r">6M avg organic growth*</th><th class="r">6M avg net flows*</th><th class="r">WT-reported ann. flow rate</th><th class="r">Market move</th><th class="r">Acquired AUM</th><th class="r">Ending AUM</th><th>Source</th></tr></thead><tbody>' + tb + "</tbody></table></div>" +
+      '<details style="margin-top:8px"><summary class="hint" style="cursor:pointer">Net flows by asset class (as reported)</summary><div class="qwrap"><table class="sumtbl qtbl mftbl wtmf"><thead><tr><th class="sl">Month</th>' + cats.map(c => '<th class="r">' + esc(c) + "</th>").join("") + '<th class="r">Total</th></tr></thead><tbody>' + ctb + "</tbody></table></div></details>" +
+      D.notes.map(x => '<div class="pnote">' + esc(x) + "</div>").join("") +
+      '<div class="pnote">* Derived, not reported: organic growth = net flows ÷ beginning-of-month AUM × 12; 6M averages = simple mean of the latest 6 monthly values (blank unless all 6 months are disclosed). – = not shown in the release (e.g. no acquisition that month). ' +
+      (blanks.length ? "Blank months (no release found, left blank rather than estimated): " + blanks.join(", ") + ". " : "No blank months in coverage. ") + (D.coverage.pending && D.coverage.pending.length ? "Awaiting release: " + D.coverage.pending.map(ml).join(", ") + ". " : "") +
+      "Updates automatically when WisdomTree posts a new monthly release (weekday refresh). Built " + esc(D.generated) + " UTC." + (D.warnings && D.warnings.length ? " Warnings: " + esc(D.warnings.join("; ")) : "") + "</div>";
+    el.querySelectorAll("[data-wtall]").forEach(b => b.onclick = () => { localStorage.setItem("wt-mf-all", b.dataset.wtall); wtMonthlyFlows(); });
+    document.getElementById("wtmfcsv").onclick = () => {
+      const q = v => { v = v == null ? "" : String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; };
+      const hdr = ["Month", "Release date", "Beginning AUM ($M)", "Net flows ($M)", "Organic growth % ann. (derived)", "Trailing 6M avg organic growth % (derived)", "Trailing 6M avg net flows $M (derived)", "WT-reported annualized flow rate %", "Market move ($M)", "Acquired AUM ($M)", "Ending AUM ($M)", "Average AUM ($M)"].concat(cats.map(c => c + " net flows ($M)"), ["Source", "Checks / blank reason"]);
+      const body = A.slice().reverse().map(r => r.missing ? [r.month].concat(Array(hdr.length - 3).fill(""), ["", r.missing]) : [r.month, r.release_date, r.beg, r.net, r.og_ann_pct, r.t6_og_pct, r.t6_net, r.ann_rate_rep_pct, r.mkt, r.acq, r.end, r.avg].concat(cats.map(c => r.categories[c] ? r.categories[c].net : ""), [r.url, (r.checks || []).join("; ")]));
+      const blob = new Blob([[hdr].concat(body).map(r => r.map(q).join(",")).concat(["", ...D.notes.map(q)]).join("\r\n")], { type: "text/csv" });
+      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "WT-monthly-flows.csv"; document.body.appendChild(a); a.click(); a.remove();
+    };
+    ["wtmfa", "wtmfb"].forEach(id => { const o = charts.find(c => c.canvas && c.canvas.id === id); if (o) { o.destroy(); charts = charts.filter(c => c !== o); } });
+    const g = { color: "#1f2a37" }, tk = { color: "#8b9bb0" }, W = last12, lab = W.map(r => ml(r.month));
+    const bc = (r, v) => r.month === L.month ? "#e3b341" : v < 0 ? "#f85149c0" : COLORS[0] + "c0";
+    const mk = (id, key, avg, fmt) => charts.push(new Chart(document.getElementById(id), { type: "bar", data: { labels: lab, datasets: [
+      { type: "bar", label: key === "net" ? "Net flows" : "Organic growth, ann.", data: W.map(r => r.missing ? null : r[key]), backgroundColor: W.map(r => bc(r, r[key])), borderColor: W.map(r => r.month === L.month ? "#ffffff" : "transparent"), borderWidth: W.map(r => r.month === L.month ? 1.5 : 0), order: 1 },
+      { type: "line", label: "Trailing 6M avg", data: W.map(r => r.missing ? null : r[avg]), borderColor: "#e6edf3", borderWidth: 1.5, pointRadius: 1.5, order: 0, spanGaps: false }] },
+      options: { animation: false, maintainAspectRatio: false, interaction: { mode: "index", intersect: false },
+        scales: { x: { grid: g, ticks: Object.assign({ maxTicksLimit: 12, maxRotation: 0, autoSkip: true }, tk) }, y: { grid: g, ticks: tk } },
+        plugins: { legend: { labels: { color: "#e6edf3", boxWidth: 12 } }, tooltip: { callbacks: { label: it => it.dataset.label + ": " + fmt(it.parsed.y) } } } } }));
+    mk("wtmfa", "net", "t6_net", fs); mk("wtmfb", "og_ann_pct", "t6_og_pct", fp);
   }
 
   // ---- WT earnings power (data/wt_earnings_power.json, built by companies/nowcast/wt_earnings_power.py) ----

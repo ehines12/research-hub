@@ -1,0 +1,1899 @@
+{
+ "generated": "2026-11-11 16:09",
+ "units": "$ millions",
+ "coverage": {
+  "from": "2024-01",
+  "to": "2026-10",
+  "n": 34,
+  "missing": [],
+  "pending": []
+ },
+ "notes": [
+  "Source: WisdomTree 'Reports Monthly Metrics' press releases (ir.wisdomtree.com), AUM rollforward table, $ millions as reported. One link per month. WisdomTree does not file these monthly releases on Form 8-K (EDGAR shows only quarterly-results 8-Ks), so the IR release is the primary source.",
+  "Scope: ETP and tokenized AUM; excludes private assets managed by Ceres Partners (~$2.1bn at Sep 30, 2026), which WisdomTree reports only with quarterly results. So monthly AUM here will not tie exactly to the quarterly company-total AUM above.",
+  "Beginning AUM = 'Beginning of Period Total AUM' (MTD column) in each month's release. It occasionally differs by a few $M from the prior release's ending AUM (WisdomTree revisions); both are stored and differences flagged.",
+  "Acquired AUM: May 2026 includes $4,134M of acquired AUM (later shown as $4,101M in QTD/YTD columns); it is excluded from net flows, as WisdomTree reports it.",
+  "DERIVED (not reported): organic growth, annualized = net flows / beginning AUM x 12; trailing 6-month averages = simple mean of the latest 6 months, shown only when all 6 months are disclosed. WisdomTree's own 'Annualized Flow Rate' is shown alongside for reference (it annualizes by day count, so it differs slightly from x12)."
+ ],
+ "warnings": [],
+ "months": [
+  {
+   "month": "2024-01",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/671/wisdomtree-reports-monthly-metrics-for-january-2024",
+   "columns": "MTD / QTD / YTD MTD / QTD / YTD",
+   "ncol": 1,
+   "beg": 100124.0,
+   "net": 268.0,
+   "mkt": -114.0,
+   "acq": null,
+   "end": 100278.0,
+   "avg": 99795.0,
+   "ann_rate_rep_pct": 3.2,
+   "fee_bps": 36.0,
+   "ytd_net": 268.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 397.0,
+     "ann_rate_rep_pct": 16.0
+    },
+    "International Dev. Mkt Equity": {
+     "net": 447.0,
+     "ann_rate_rep_pct": 34.9
+    },
+    "Emerging Market Equity": {
+     "net": 152.0,
+     "ann_rate_rep_pct": 16.7
+    },
+    "Fixed Income": {
+     "net": -342.0,
+     "ann_rate_rep_pct": -19.0
+    },
+    "Commodity & Currency": {
+     "net": -443.0,
+     "ann_rate_rep_pct": -24.4
+    },
+    "Alternatives": {
+     "net": 9.0,
+     "ann_rate_rep_pct": 29.4
+    },
+    "Cryptocurrency": {
+     "net": 59.0,
+     "ann_rate_rep_pct": 168.2
+    },
+    "Leveraged & Inverse": {
+     "net": -12.0,
+     "ann_rate_rep_pct": -7.6
+    }
+   },
+   "release_date": "2024-02-12",
+   "og_ann_pct": 3.21,
+   "prior_end": null,
+   "checks": [],
+   "t6_og_pct": null,
+   "t6_net": null
+  },
+  {
+   "month": "2024-02",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/674/wisdomtree-reports-monthly-metrics-for-february-2024",
+   "columns": "MTD QTD / YTD MTD QTD / YTD",
+   "ncol": 2,
+   "beg": 100278.0,
+   "net": 512.0,
+   "mkt": 2066.0,
+   "acq": null,
+   "end": 102856.0,
+   "avg": 101374.0,
+   "ann_rate_rep_pct": 6.4,
+   "fee_bps": null,
+   "ytd_net": 780.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": -126.0,
+     "ann_rate_rep_pct": -5.4
+    },
+    "International Dev. Mkt Equity": {
+     "net": 1020.0,
+     "ann_rate_rep_pct": 81.4
+    },
+    "Emerging Market Equity": {
+     "net": 13.0,
+     "ann_rate_rep_pct": 1.5
+    },
+    "Fixed Income": {
+     "net": 98.0,
+     "ann_rate_rep_pct": 5.9
+    },
+    "Commodity & Currency": {
+     "net": -533.0,
+     "ann_rate_rep_pct": -32.4
+    },
+    "Alternatives": {
+     "net": -5.0,
+     "ann_rate_rep_pct": -14.9
+    },
+    "Cryptocurrency": {
+     "net": 46.0,
+     "ann_rate_rep_pct": 123.5
+    },
+    "Leveraged & Inverse": {
+     "net": -2.0,
+     "ann_rate_rep_pct": -1.7
+    }
+   },
+   "release_date": "2024-03-11",
+   "og_ann_pct": 6.13,
+   "prior_end": 100278.0,
+   "checks": [],
+   "t6_og_pct": null,
+   "t6_net": null
+  },
+  {
+   "month": "2024-03",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/679/wisdomtree-reports-monthly-metrics-for-march-2024",
+   "columns": "MTD QTD / YTD MTD QTD / YTD",
+   "ncol": 2,
+   "beg": 102804.0,
+   "net": 1210.0,
+   "mkt": 3216.0,
+   "acq": null,
+   "end": 107230.0,
+   "avg": 105514.0,
+   "ann_rate_rep_pct": 13.9,
+   "fee_bps": null,
+   "ytd_net": 1990.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 265.0,
+     "ann_rate_rep_pct": 10.3
+    },
+    "International Dev. Mkt Equity": {
+     "net": 131.0,
+     "ann_rate_rep_pct": 8.9
+    },
+    "Emerging Market Equity": {
+     "net": 52.0,
+     "ann_rate_rep_pct": 5.6
+    },
+    "Fixed Income": {
+     "net": 230.0,
+     "ann_rate_rep_pct": 13.0
+    },
+    "Commodity & Currency": {
+     "net": 516.0,
+     "ann_rate_rep_pct": 30.4
+    },
+    "Alternatives": {
+     "net": -1.0,
+     "ann_rate_rep_pct": -3.4
+    },
+    "Cryptocurrency": {
+     "net": 53.0,
+     "ann_rate_rep_pct": 85.0
+    },
+    "Leveraged & Inverse": {
+     "net": -36.0,
+     "ann_rate_rep_pct": -23.8
+    }
+   },
+   "release_date": "2024-04-09",
+   "og_ann_pct": 14.12,
+   "prior_end": 102856.0,
+   "checks": [
+    "beginning AUM 102,804 vs prior release's ending 102,856 (revised)"
+   ],
+   "t6_og_pct": null,
+   "t6_net": null
+  },
+  {
+   "month": "2024-04",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/686/wisdomtree-reports-monthly-metrics-for-april-2024",
+   "columns": "MTD/QTD YTD MTD/QTD YTD",
+   "ncol": 2,
+   "beg": 107230.0,
+   "net": -569.0,
+   "mkt": -695.0,
+   "acq": null,
+   "end": 105966.0,
+   "avg": 106654.0,
+   "ann_rate_rep_pct": -6.5,
+   "fee_bps": 37.0,
+   "ytd_net": 1421.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 185.0,
+     "ann_rate_rep_pct": 7.1
+    },
+    "International Dev. Mkt Equity": {
+     "net": 540.0,
+     "ann_rate_rep_pct": 36.4
+    },
+    "Emerging Market Equity": {
+     "net": -221.0,
+     "ann_rate_rep_pct": -24.1
+    },
+    "Fixed Income": {
+     "net": -117.0,
+     "ann_rate_rep_pct": -6.7
+    },
+    "Commodity & Currency": {
+     "net": -993.0,
+     "ann_rate_rep_pct": -55.2
+    },
+    "Alternatives": {
+     "net": 18.0,
+     "ann_rate_rep_pct": 55.1
+    },
+    "Cryptocurrency": {
+     "net": 18.0,
+     "ann_rate_rep_pct": 25.2
+    },
+    "Leveraged & Inverse": {
+     "net": 0.0,
+     "ann_rate_rep_pct": 0.3
+    }
+   },
+   "release_date": "2024-05-10",
+   "og_ann_pct": -6.37,
+   "prior_end": 107230.0,
+   "checks": [],
+   "t6_og_pct": null,
+   "t6_net": null
+  },
+  {
+   "month": "2024-05",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/693/wisdomtree-reports-monthly-metrics-for-may-2024",
+   "columns": "MTD QTD YTD MTD QTD YTD",
+   "ncol": 3,
+   "beg": 105968.0,
+   "net": 577.0,
+   "mkt": 2676.0,
+   "acq": null,
+   "end": 109221.0,
+   "avg": 109307.0,
+   "ann_rate_rep_pct": 6.4,
+   "fee_bps": null,
+   "ytd_net": 1998.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 10.0,
+     "ann_rate_rep_pct": 0.4
+    },
+    "International Dev. Mkt Equity": {
+     "net": 429.0,
+     "ann_rate_rep_pct": 27.6
+    },
+    "Emerging Market Equity": {
+     "net": 153.0,
+     "ann_rate_rep_pct": 16.2
+    },
+    "Fixed Income": {
+     "net": 303.0,
+     "ann_rate_rep_pct": 17.0
+    },
+    "Commodity & Currency": {
+     "net": -330.0,
+     "ann_rate_rep_pct": -17.7
+    },
+    "Alternatives": {
+     "net": -13.0,
+     "ann_rate_rep_pct": -37.7
+    },
+    "Cryptocurrency": {
+     "net": 56.0,
+     "ann_rate_rep_pct": 86.5
+    },
+    "Leveraged & Inverse": {
+     "net": -29.0,
+     "ann_rate_rep_pct": -19.1
+    }
+   },
+   "release_date": "2024-06-11",
+   "og_ann_pct": 6.53,
+   "prior_end": 105966.0,
+   "checks": [],
+   "t6_og_pct": null,
+   "t6_net": null
+  },
+  {
+   "month": "2024-06",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/696/wisdomtree-reports-monthly-metrics-for-june-2024",
+   "columns": "MTD QTD YTD MTD QTD YTD",
+   "ncol": 3,
+   "beg": 109065.0,
+   "net": 332.0,
+   "mkt": 288.0,
+   "acq": null,
+   "end": 109686.0,
+   "avg": 109267.0,
+   "ann_rate_rep_pct": 3.7,
+   "fee_bps": null,
+   "ytd_net": 2330.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 26.0,
+     "ann_rate_rep_pct": 1.0
+    },
+    "International Dev. Mkt Equity": {
+     "net": 285.0,
+     "ann_rate_rep_pct": 18.1
+    },
+    "Emerging Market Equity": {
+     "net": 125.0,
+     "ann_rate_rep_pct": 13.3
+    },
+    "Fixed Income": {
+     "net": 51.0,
+     "ann_rate_rep_pct": 2.9
+    },
+    "Commodity & Currency": {
+     "net": -176.0,
+     "ann_rate_rep_pct": -9.5
+    },
+    "Alternatives": {
+     "net": 10.0,
+     "ann_rate_rep_pct": 28.7
+    },
+    "Cryptocurrency": {
+     "net": 1.0,
+     "ann_rate_rep_pct": 1.2
+    },
+    "Leveraged & Inverse": {
+     "net": 11.0,
+     "ann_rate_rep_pct": 6.8
+    }
+   },
+   "release_date": "2024-07-10",
+   "og_ann_pct": 3.65,
+   "prior_end": 109221.0,
+   "checks": [
+    "beginning AUM 109,065 vs prior release's ending 109,221 (revised)"
+   ],
+   "t6_og_pct": 4.54,
+   "t6_net": 388.3
+  },
+  {
+   "month": "2024-07",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/701/wisdomtree-reports-monthly-metrics-for-july-2024",
+   "columns": "MTD/QTD YTD MTD/QTD YTD",
+   "ncol": 2,
+   "beg": 109686.0,
+   "net": -580.0,
+   "mkt": 1855.0,
+   "acq": null,
+   "end": 110962.0,
+   "avg": 111110.0,
+   "ann_rate_rep_pct": -6.2,
+   "fee_bps": 37.0,
+   "ytd_net": 1751.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 76.0,
+     "ann_rate_rep_pct": 2.8
+    },
+    "International Dev. Mkt Equity": {
+     "net": -32.0,
+     "ann_rate_rep_pct": -2.0
+    },
+    "Emerging Market Equity": {
+     "net": 155.0,
+     "ann_rate_rep_pct": 15.4
+    },
+    "Fixed Income": {
+     "net": -551.0,
+     "ann_rate_rep_pct": -30.4
+    },
+    "Commodity & Currency": {
+     "net": -272.0,
+     "ann_rate_rep_pct": -14.6
+    },
+    "Alternatives": {
+     "net": 22.0,
+     "ann_rate_rep_pct": 62.3
+    },
+    "Cryptocurrency": {
+     "net": 8.0,
+     "ann_rate_rep_pct": 11.6
+    },
+    "Leveraged & Inverse": {
+     "net": 15.0,
+     "ann_rate_rep_pct": 9.0
+    }
+   },
+   "release_date": "2024-08-08",
+   "og_ann_pct": -6.35,
+   "prior_end": 109686.0,
+   "checks": [],
+   "t6_og_pct": 2.95,
+   "t6_net": 247.0
+  },
+  {
+   "month": "2024-08",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/703/wisdomtree-reports-monthly-metrics-for-august-2024",
+   "columns": "MTD QTD YTD MTD QTD YTD",
+   "ncol": 3,
+   "beg": 110962.0,
+   "net": -919.0,
+   "mkt": 1150.0,
+   "acq": null,
+   "end": 111192.0,
+   "avg": 109125.0,
+   "ann_rate_rep_pct": -9.8,
+   "fee_bps": null,
+   "ytd_net": 831.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 209.0,
+     "ann_rate_rep_pct": 7.4
+    },
+    "International Dev. Mkt Equity": {
+     "net": -881.0,
+     "ann_rate_rep_pct": -53.3
+    },
+    "Emerging Market Equity": {
+     "net": -23.0,
+     "ann_rate_rep_pct": -2.2
+    },
+    "Fixed Income": {
+     "net": 27.0,
+     "ann_rate_rep_pct": 1.5
+    },
+    "Commodity & Currency": {
+     "net": -519.0,
+     "ann_rate_rep_pct": -28.0
+    },
+    "Alternatives": {
+     "net": 26.0,
+     "ann_rate_rep_pct": 69.5
+    },
+    "Cryptocurrency": {
+     "net": 164.0,
+     "ann_rate_rep_pct": 212.2
+    },
+    "Leveraged & Inverse": {
+     "net": 78.0,
+     "ann_rate_rep_pct": 48.4
+    }
+   },
+   "release_date": "2024-09-11",
+   "og_ann_pct": -9.94,
+   "prior_end": 110962.0,
+   "checks": [],
+   "t6_og_pct": 0.27,
+   "t6_net": 8.5
+  },
+  {
+   "month": "2024-09",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/707/wisdomtree-reports-monthly-metrics-for-september-2024",
+   "columns": "MTD QTD YTD MTD QTD YTD",
+   "ncol": 3,
+   "beg": 111192.0,
+   "net": -896.0,
+   "mkt": 2281.0,
+   "acq": null,
+   "end": 112577.0,
+   "avg": 110806.0,
+   "ann_rate_rep_pct": -9.8,
+   "fee_bps": null,
+   "ytd_net": -65.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 43.0,
+     "ann_rate_rep_pct": 1.5
+    },
+    "International Dev. Mkt Equity": {
+     "net": -478.0,
+     "ann_rate_rep_pct": -31.3
+    },
+    "Emerging Market Equity": {
+     "net": -153.0,
+     "ann_rate_rep_pct": -15.2
+    },
+    "Fixed Income": {
+     "net": -372.0,
+     "ann_rate_rep_pct": -21.8
+    },
+    "Commodity & Currency": {
+     "net": 51.0,
+     "ann_rate_rep_pct": 2.8
+    },
+    "Alternatives": {
+     "net": 6.0,
+     "ann_rate_rep_pct": 16.5
+    },
+    "Cryptocurrency": {
+     "net": 29.0,
+     "ann_rate_rep_pct": 36.9
+    },
+    "Leveraged & Inverse": {
+     "net": -22.0,
+     "ann_rate_rep_pct": -13.3
+    }
+   },
+   "release_date": "2024-10-10",
+   "og_ann_pct": -9.67,
+   "prior_end": 111192.0,
+   "checks": [],
+   "t6_og_pct": -3.69,
+   "t6_net": -342.5
+  },
+  {
+   "month": "2024-10",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/713/wisdomtree-reports-monthly-metrics-for-october-2024",
+   "columns": "MTD/QTD YTD MTD/QTD YTD",
+   "ncol": 2,
+   "beg": 112577.0,
+   "net": 51.0,
+   "mkt": -1113.0,
+   "acq": null,
+   "end": 111515.0,
+   "avg": 112565.0,
+   "ann_rate_rep_pct": 0.5,
+   "fee_bps": 36.0,
+   "ytd_net": -15.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 211.0,
+     "ann_rate_rep_pct": 7.2
+    },
+    "International Dev. Mkt Equity": {
+     "net": -211.0,
+     "ann_rate_rep_pct": -13.8
+    },
+    "Emerging Market Equity": {
+     "net": -172.0,
+     "ann_rate_rep_pct": -16.3
+    },
+    "Fixed Income": {
+     "net": -216.0,
+     "ann_rate_rep_pct": -12.3
+    },
+    "Commodity & Currency": {
+     "net": 421.0,
+     "ann_rate_rep_pct": 21.6
+    },
+    "Alternatives": {
+     "net": 27.0,
+     "ann_rate_rep_pct": 66.8
+    },
+    "Cryptocurrency": {
+     "net": -0.0,
+     "ann_rate_rep_pct": -0.2
+    },
+    "Leveraged & Inverse": {
+     "net": -7.0,
+     "ann_rate_rep_pct": -4.0
+    }
+   },
+   "release_date": "2024-11-12",
+   "og_ann_pct": 0.54,
+   "prior_end": 112577.0,
+   "checks": [],
+   "t6_og_pct": -2.54,
+   "t6_net": -239.2
+  },
+  {
+   "month": "2024-11",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/715/wisdomtree-reports-monthly-metrics-for-november-2024",
+   "columns": "MTD QTD YTD MTD QTD YTD",
+   "ncol": 3,
+   "beg": 111515.0,
+   "net": -118.0,
+   "mkt": 1685.0,
+   "acq": null,
+   "end": 113082.0,
+   "avg": 112322.0,
+   "ann_rate_rep_pct": -1.3,
+   "fee_bps": null,
+   "ytd_net": -133.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 346.0,
+     "ann_rate_rep_pct": 12.2
+    },
+    "International Dev. Mkt Equity": {
+     "net": 285.0,
+     "ann_rate_rep_pct": 20.0
+    },
+    "Emerging Market Equity": {
+     "net": -371.0,
+     "ann_rate_rep_pct": -38.8
+    },
+    "Fixed Income": {
+     "net": 206.0,
+     "ann_rate_rep_pct": 12.3
+    },
+    "Commodity & Currency": {
+     "net": -695.0,
+     "ann_rate_rep_pct": -35.4
+    },
+    "Alternatives": {
+     "net": -7.0,
+     "ann_rate_rep_pct": -16.3
+    },
+    "Cryptocurrency": {
+     "net": 136.0,
+     "ann_rate_rep_pct": 143.1
+    },
+    "Leveraged & Inverse": {
+     "net": -18.0,
+     "ann_rate_rep_pct": -10.7
+    }
+   },
+   "release_date": "2024-12-10",
+   "og_ann_pct": -1.27,
+   "prior_end": 111515.0,
+   "checks": [],
+   "t6_og_pct": -3.84,
+   "t6_net": -355.0
+  },
+  {
+   "month": "2024-12",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/716/wisdomtree-reports-monthly-metrics-for-december-2024",
+   "columns": "MTD QTD YTD MTD QTD YTD",
+   "ncol": 3,
+   "beg": 113082.0,
+   "net": -214.0,
+   "mkt": -3089.0,
+   "acq": null,
+   "end": 109779.0,
+   "avg": 111918.0,
+   "ann_rate_rep_pct": -2.2,
+   "fee_bps": null,
+   "ytd_net": -347.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 543.0,
+     "ann_rate_rep_pct": 17.3
+    },
+    "International Dev. Mkt Equity": {
+     "net": -11.0,
+     "ann_rate_rep_pct": -0.7
+    },
+    "Emerging Market Equity": {
+     "net": -365.0,
+     "ann_rate_rep_pct": -39.0
+    },
+    "Fixed Income": {
+     "net": -376.0,
+     "ann_rate_rep_pct": -21.6
+    },
+    "Commodity & Currency": {
+     "net": -165.0,
+     "ann_rate_rep_pct": -8.7
+    },
+    "Alternatives": {
+     "net": 26.0,
+     "ann_rate_rep_pct": 60.8
+    },
+    "Cryptocurrency": {
+     "net": 180.0,
+     "ann_rate_rep_pct": 118.7
+    },
+    "Leveraged & Inverse": {
+     "net": -44.0,
+     "ann_rate_rep_pct": -26.0
+    }
+   },
+   "release_date": "2025-01-10",
+   "og_ann_pct": -2.27,
+   "prior_end": 113082.0,
+   "checks": [],
+   "t6_og_pct": -4.83,
+   "t6_net": -446.0
+  },
+  {
+   "month": "2025-01",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/722/wisdomtree-reports-monthly-metrics-for-january-2025",
+   "columns": "MTD / QTD / YTD MTD / QTD / YTD",
+   "ncol": 1,
+   "beg": 109779.0,
+   "net": 1137.0,
+   "mkt": 3648.0,
+   "acq": null,
+   "end": 114564.0,
+   "avg": 112148.0,
+   "ann_rate_rep_pct": 12.2,
+   "fee_bps": 36.0,
+   "ytd_net": 1137.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 175.0,
+     "ann_rate_rep_pct": 5.8
+    },
+    "International Dev. Mkt Equity": {
+     "net": -36.0,
+     "ann_rate_rep_pct": -2.4
+    },
+    "Emerging Market Equity": {
+     "net": -262.0,
+     "ann_rate_rep_pct": -29.4
+    },
+    "Fixed Income": {
+     "net": 1078.0,
+     "ann_rate_rep_pct": 63.3
+    },
+    "Commodity & Currency": {
+     "net": 133.0,
+     "ann_rate_rep_pct": 7.2
+    },
+    "Alternatives": {
+     "net": 9.0,
+     "ann_rate_rep_pct": 21.3
+    },
+    "Cryptocurrency": {
+     "net": 15.0,
+     "ann_rate_rep_pct": 9.2
+    },
+    "Leveraged & Inverse": {
+     "net": 25.0,
+     "ann_rate_rep_pct": 15.4
+    }
+   },
+   "release_date": "2025-02-11",
+   "og_ann_pct": 12.43,
+   "prior_end": 109779.0,
+   "checks": [],
+   "t6_og_pct": -1.7,
+   "t6_net": -159.8
+  },
+  {
+   "month": "2025-02",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/724/wisdomtree-reports-monthly-metrics-for-february-2025",
+   "columns": "MTD QTD / YTD MTD QTD / YTD",
+   "ncol": 2,
+   "beg": 114593.0,
+   "net": 834.0,
+   "mkt": -1039.0,
+   "acq": null,
+   "end": 114389.0,
+   "avg": 115716.0,
+   "ann_rate_rep_pct": 9.5,
+   "fee_bps": null,
+   "ytd_net": 1972.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 651.0,
+     "ann_rate_rep_pct": 23.1
+    },
+    "International Dev. Mkt Equity": {
+     "net": -150.0,
+     "ann_rate_rep_pct": -10.7
+    },
+    "Emerging Market Equity": {
+     "net": -103.0,
+     "ann_rate_rep_pct": -13.2
+    },
+    "Fixed Income": {
+     "net": 300.0,
+     "ann_rate_rep_pct": 18.4
+    },
+    "Commodity & Currency": {
+     "net": 114.0,
+     "ann_rate_rep_pct": 6.3
+    },
+    "Alternatives": {
+     "net": 66.0,
+     "ann_rate_rep_pct": 164.0
+    },
+    "Cryptocurrency": {
+     "net": -71.0,
+     "ann_rate_rep_pct": -42.2
+    },
+    "Leveraged & Inverse": {
+     "net": 27.0,
+     "ann_rate_rep_pct": 17.2
+    }
+   },
+   "release_date": "2025-03-11",
+   "og_ann_pct": 8.73,
+   "prior_end": 114564.0,
+   "checks": [
+    "beginning AUM 114,593 vs prior release's ending 114,564 (revised)"
+   ],
+   "t6_og_pct": 1.42,
+   "t6_net": 132.3
+  },
+  {
+   "month": "2025-03",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/728/wisdomtree-reports-monthly-metrics-for-march-2025",
+   "columns": "MTD QTD / YTD MTD QTD / YTD",
+   "ncol": 2,
+   "beg": 114389.0,
+   "net": 1076.0,
+   "mkt": 323.0,
+   "acq": null,
+   "end": 115787.0,
+   "avg": 115420.0,
+   "ann_rate_rep_pct": 11.1,
+   "fee_bps": null,
+   "ytd_net": 3048.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 137.0,
+     "ann_rate_rep_pct": 4.3
+    },
+    "International Dev. Mkt Equity": {
+     "net": 660.0,
+     "ann_rate_rep_pct": 43.2
+    },
+    "Emerging Market Equity": {
+     "net": -80.0,
+     "ann_rate_rep_pct": -9.7
+    },
+    "Fixed Income": {
+     "net": 710.0,
+     "ann_rate_rep_pct": 38.9
+    },
+    "Commodity & Currency": {
+     "net": -406.0,
+     "ann_rate_rep_pct": -20.1
+    },
+    "Alternatives": {
+     "net": 25.0,
+     "ann_rate_rep_pct": 50.6
+    },
+    "Cryptocurrency": {
+     "net": -34.0,
+     "ann_rate_rep_pct": -24.8
+    },
+    "Leveraged & Inverse": {
+     "net": 64.0,
+     "ann_rate_rep_pct": 35.9
+    }
+   },
+   "release_date": "2025-04-09",
+   "og_ann_pct": 11.29,
+   "prior_end": 114389.0,
+   "checks": [],
+   "t6_og_pct": 4.91,
+   "t6_net": 461.0
+  },
+  {
+   "month": "2025-04",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/734/wisdomtree-reports-monthly-metrics-for-april-2025",
+   "columns": "MTD/QTD YTD MTD/QTD YTD",
+   "ncol": 2,
+   "beg": 115788.0,
+   "net": 127.0,
+   "mkt": 342.0,
+   "acq": null,
+   "end": 116257.0,
+   "avg": 113147.0,
+   "ann_rate_rep_pct": 1.3,
+   "fee_bps": 35.0,
+   "ytd_net": 3179.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 414.0,
+     "ann_rate_rep_pct": 14.1
+    },
+    "International Dev. Mkt Equity": {
+     "net": 235.0,
+     "ann_rate_rep_pct": 15.8
+    },
+    "Emerging Market Equity": {
+     "net": -126.0,
+     "ann_rate_rep_pct": -15.3
+    },
+    "Fixed Income": {
+     "net": -32.0,
+     "ann_rate_rep_pct": -1.8
+    },
+    "Commodity & Currency": {
+     "net": -490.0,
+     "ann_rate_rep_pct": -23.4
+    },
+    "Alternatives": {
+     "net": 20.0,
+     "ann_rate_rep_pct": 40.1
+    },
+    "Cryptocurrency": {
+     "net": 16.0,
+     "ann_rate_rep_pct": 12.9
+    },
+    "Leveraged & Inverse": {
+     "net": 90.0,
+     "ann_rate_rep_pct": 51.1
+    }
+   },
+   "release_date": "2025-05-09",
+   "og_ann_pct": 1.32,
+   "prior_end": 115787.0,
+   "checks": [],
+   "t6_og_pct": 5.04,
+   "t6_net": 473.7
+  },
+  {
+   "month": "2025-05",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/738/wisdomtree-reports-monthly-metrics-for-may-2025",
+   "columns": "MTD QTD YTD MTD QTD YTD",
+   "ncol": 3,
+   "beg": 116257.0,
+   "net": 1974.0,
+   "mkt": 3307.0,
+   "acq": null,
+   "end": 121537.0,
+   "avg": 119780.0,
+   "ann_rate_rep_pct": 20.0,
+   "fee_bps": null,
+   "ytd_net": 5152.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 514.0,
+     "ann_rate_rep_pct": 17.3
+    },
+    "International Dev. Mkt Equity": {
+     "net": 720.0,
+     "ann_rate_rep_pct": 45.1
+    },
+    "Emerging Market Equity": {
+     "net": 174.0,
+     "ann_rate_rep_pct": 20.4
+    },
+    "Fixed Income": {
+     "net": 356.0,
+     "ann_rate_rep_pct": 18.8
+    },
+    "Commodity & Currency": {
+     "net": 72.0,
+     "ann_rate_rep_pct": 3.3
+    },
+    "Alternatives": {
+     "net": 52.0,
+     "ann_rate_rep_pct": 99.1
+    },
+    "Cryptocurrency": {
+     "net": 31.0,
+     "ann_rate_rep_pct": 21.7
+    },
+    "Leveraged & Inverse": {
+     "net": 55.0,
+     "ann_rate_rep_pct": 29.4
+    }
+   },
+   "release_date": "2025-06-10",
+   "og_ann_pct": 20.38,
+   "prior_end": 116257.0,
+   "checks": [],
+   "t6_og_pct": 8.65,
+   "t6_net": 822.3
+  },
+  {
+   "month": "2025-06",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/743/wisdomtree-reports-monthly-metrics-for-june-2025",
+   "columns": "MTD QTD YTD MTD QTD YTD",
+   "ncol": 3,
+   "beg": 121650.0,
+   "net": 1427.0,
+   "mkt": 2994.0,
+   "acq": null,
+   "end": 126070.0,
+   "avg": 124516.0,
+   "ann_rate_rep_pct": 14.3,
+   "fee_bps": null,
+   "ytd_net": 6579.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 359.0,
+     "ann_rate_rep_pct": 11.8
+    },
+    "International Dev. Mkt Equity": {
+     "net": 692.0,
+     "ann_rate_rep_pct": 40.7
+    },
+    "Emerging Market Equity": {
+     "net": -20.0,
+     "ann_rate_rep_pct": -2.3
+    },
+    "Fixed Income": {
+     "net": -178.0,
+     "ann_rate_rep_pct": -9.6
+    },
+    "Commodity & Currency": {
+     "net": 308.0,
+     "ann_rate_rep_pct": 14.6
+    },
+    "Alternatives": {
+     "net": 120.0,
+     "ann_rate_rep_pct": 214.9
+    },
+    "Cryptocurrency": {
+     "net": 150.0,
+     "ann_rate_rep_pct": 94.9
+    },
+    "Leveraged & Inverse": {
+     "net": -4.0,
+     "ann_rate_rep_pct": -2.2
+    }
+   },
+   "release_date": "2025-07-10",
+   "og_ann_pct": 14.08,
+   "prior_end": 121537.0,
+   "checks": [
+    "beginning AUM 121,650 vs prior release's ending 121,537 (revised)"
+   ],
+   "t6_og_pct": 11.37,
+   "t6_net": 1095.8
+  },
+  {
+   "month": "2025-07",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/749/wisdomtree-reports-monthly-metrics-for-july-2025",
+   "columns": "MTD/QTD YTD MTD/QTD YTD",
+   "ncol": 2,
+   "beg": 126070.0,
+   "net": 353.0,
+   "mkt": 771.0,
+   "acq": null,
+   "end": 127194.0,
+   "avg": 128098.0,
+   "ann_rate_rep_pct": 3.3,
+   "fee_bps": 35.0,
+   "ytd_net": 6934.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 50.0,
+     "ann_rate_rep_pct": 1.5
+    },
+    "International Dev. Mkt Equity": {
+     "net": 172.0,
+     "ann_rate_rep_pct": 9.3
+    },
+    "Emerging Market Equity": {
+     "net": -138.0,
+     "ann_rate_rep_pct": -14.8
+    },
+    "Fixed Income": {
+     "net": 482.0,
+     "ann_rate_rep_pct": 25.2
+    },
+    "Commodity & Currency": {
+     "net": -176.0,
+     "ann_rate_rep_pct": -7.8
+    },
+    "Alternatives": {
+     "net": 26.0,
+     "ann_rate_rep_pct": 38.0
+    },
+    "Cryptocurrency": {
+     "net": -29.0,
+     "ann_rate_rep_pct": -16.4
+    },
+    "Leveraged & Inverse": {
+     "net": -34.0,
+     "ann_rate_rep_pct": -15.4
+    }
+   },
+   "release_date": "2025-08-11",
+   "og_ann_pct": 3.36,
+   "prior_end": 126070.0,
+   "checks": [],
+   "t6_og_pct": 9.86,
+   "t6_net": 965.2
+  },
+  {
+   "month": "2025-08",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/753/wisdomtree-reports-monthly-metrics-for-august-2025",
+   "columns": "MTD QTD YTD MTD QTD YTD",
+   "ncol": 3,
+   "beg": 127194.0,
+   "net": 1067.0,
+   "mkt": 2875.0,
+   "acq": null,
+   "end": 131136.0,
+   "avg": 129804.0,
+   "ann_rate_rep_pct": 9.9,
+   "fee_bps": null,
+   "ytd_net": 8001.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 38.0,
+     "ann_rate_rep_pct": 1.1
+    },
+    "International Dev. Mkt Equity": {
+     "net": -23.0,
+     "ann_rate_rep_pct": -1.3
+    },
+    "Emerging Market Equity": {
+     "net": -154.0,
+     "ann_rate_rep_pct": -16.9
+    },
+    "Fixed Income": {
+     "net": 498.0,
+     "ann_rate_rep_pct": 25.5
+    },
+    "Commodity & Currency": {
+     "net": 585.0,
+     "ann_rate_rep_pct": 26.1
+    },
+    "Alternatives": {
+     "net": 50.0,
+     "ann_rate_rep_pct": 68.2
+    },
+    "Cryptocurrency": {
+     "net": 39.0,
+     "ann_rate_rep_pct": 19.1
+    },
+    "Leveraged & Inverse": {
+     "net": 35.0,
+     "ann_rate_rep_pct": 15.5
+    }
+   },
+   "release_date": "2025-09-11",
+   "og_ann_pct": 10.07,
+   "prior_end": 127194.0,
+   "checks": [],
+   "t6_og_pct": 10.08,
+   "t6_net": 1004.0
+  },
+  {
+   "month": "2025-09",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/759/wisdomtree-reports-monthly-metrics-for-september-2025",
+   "columns": "MTD QTD YTD MTD QTD YTD",
+   "ncol": 3,
+   "beg": 131136.0,
+   "net": 813.0,
+   "mkt": 5226.0,
+   "acq": null,
+   "end": 137175.0,
+   "avg": 134466.0,
+   "ann_rate_rep_pct": 7.5,
+   "fee_bps": null,
+   "ytd_net": 8815.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": -48.0,
+     "ann_rate_rep_pct": -1.4
+    },
+    "International Dev. Mkt Equity": {
+     "net": 324.0,
+     "ann_rate_rep_pct": 17.5
+    },
+    "Emerging Market Equity": {
+     "net": 42.0,
+     "ann_rate_rep_pct": 4.8
+    },
+    "Fixed Income": {
+     "net": -1041.0,
+     "ann_rate_rep_pct": -54.1
+    },
+    "Commodity & Currency": {
+     "net": 688.0,
+     "ann_rate_rep_pct": 29.9
+    },
+    "Alternatives": {
+     "net": 146.0,
+     "ann_rate_rep_pct": 189.2
+    },
+    "Cryptocurrency": {
+     "net": 754.0,
+     "ann_rate_rep_pct": 389.0
+    },
+    "Leveraged & Inverse": {
+     "net": -52.0,
+     "ann_rate_rep_pct": -22.9
+    }
+   },
+   "release_date": "2025-10-10",
+   "og_ann_pct": 7.44,
+   "prior_end": 131136.0,
+   "checks": [],
+   "t6_og_pct": 9.44,
+   "t6_net": 960.2
+  },
+  {
+   "month": "2025-10",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/766/wisdomtree-reports-monthly-metrics-for-october-2025",
+   "columns": "MTD/QTD YTD MTD/QTD YTD",
+   "ncol": 2,
+   "beg": 137175.0,
+   "net": -2298.0,
+   "mkt": 1461.0,
+   "acq": null,
+   "end": 136339.0,
+   "avg": 138296.0,
+   "ann_rate_rep_pct": -19.7,
+   "fee_bps": 35.0,
+   "ytd_net": 6523.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": -74.0,
+     "ann_rate_rep_pct": -2.1
+    },
+    "International Dev. Mkt Equity": {
+     "net": 694.0,
+     "ann_rate_rep_pct": 34.2
+    },
+    "Emerging Market Equity": {
+     "net": -164.0,
+     "ann_rate_rep_pct": -17.8
+    },
+    "Fixed Income": {
+     "net": -1261.0,
+     "ann_rate_rep_pct": -65.9
+    },
+    "Commodity & Currency": {
+     "net": -1216.0,
+     "ann_rate_rep_pct": -45.2
+    },
+    "Alternatives": {
+     "net": 50.0,
+     "ann_rate_rep_pct": 51.5
+    },
+    "Cryptocurrency": {
+     "net": -349.0,
+     "ann_rate_rep_pct": -129.6
+    },
+    "Leveraged & Inverse": {
+     "net": 21.0,
+     "ann_rate_rep_pct": 8.5
+    }
+   },
+   "release_date": "2025-11-12",
+   "og_ann_pct": -20.1,
+   "prior_end": 137175.0,
+   "checks": [],
+   "t6_og_pct": 5.87,
+   "t6_net": 556.0
+  },
+  {
+   "month": "2025-11",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/770/wisdomtree-reports-monthly-metrics-for-november-2025",
+   "columns": "MTD QTD YTD MTD QTD YTD",
+   "ncol": 3,
+   "beg": 136339.0,
+   "net": 837.0,
+   "mkt": 1895.0,
+   "acq": null,
+   "end": 139071.0,
+   "avg": 136408.0,
+   "ann_rate_rep_pct": 7.5,
+   "fee_bps": null,
+   "ytd_net": 7359.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 326.0,
+     "ann_rate_rep_pct": 9.7
+    },
+    "International Dev. Mkt Equity": {
+     "net": 142.0,
+     "ann_rate_rep_pct": 7.0
+    },
+    "Emerging Market Equity": {
+     "net": -162.0,
+     "ann_rate_rep_pct": -17.9
+    },
+    "Fixed Income": {
+     "net": 204.0,
+     "ann_rate_rep_pct": 11.7
+    },
+    "Commodity & Currency": {
+     "net": 237.0,
+     "ann_rate_rep_pct": 9.0
+    },
+    "Alternatives": {
+     "net": 1.0,
+     "ann_rate_rep_pct": 1.3
+    },
+    "Cryptocurrency": {
+     "net": 100.0,
+     "ann_rate_rep_pct": 46.5
+    },
+    "Leveraged & Inverse": {
+     "net": -11.0,
+     "ann_rate_rep_pct": -4.4
+    }
+   },
+   "release_date": "2025-12-10",
+   "og_ann_pct": 7.37,
+   "prior_end": 136339.0,
+   "checks": [],
+   "t6_og_pct": 3.7,
+   "t6_net": 366.5
+  },
+  {
+   "month": "2025-12",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/771/wisdomtree-reports-monthly-metrics-for-december-2025",
+   "columns": "MTD QTD YTD MTD QTD YTD",
+   "ncol": 3,
+   "beg": 139071.0,
+   "net": 1140.0,
+   "mkt": 2425.0,
+   "acq": null,
+   "end": 142636.0,
+   "avg": 141715.0,
+   "ann_rate_rep_pct": 9.7,
+   "fee_bps": null,
+   "ytd_net": 8501.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": -62.0,
+     "ann_rate_rep_pct": -1.7
+    },
+    "International Dev. Mkt Equity": {
+     "net": 310.0,
+     "ann_rate_rep_pct": 14.8
+    },
+    "Emerging Market Equity": {
+     "net": -181.0,
+     "ann_rate_rep_pct": -19.8
+    },
+    "Fixed Income": {
+     "net": -299.0,
+     "ann_rate_rep_pct": -16.5
+    },
+    "Commodity & Currency": {
+     "net": 1157.0,
+     "ann_rate_rep_pct": 40.7
+    },
+    "Alternatives": {
+     "net": 109.0,
+     "ann_rate_rep_pct": 101.7
+    },
+    "Cryptocurrency": {
+     "net": 132.0,
+     "ann_rate_rep_pct": 68.2
+    },
+    "Leveraged & Inverse": {
+     "net": -25.0,
+     "ann_rate_rep_pct": -9.4
+    }
+   },
+   "release_date": "2026-01-13",
+   "og_ann_pct": 9.84,
+   "prior_end": 139071.0,
+   "checks": [],
+   "t6_og_pct": 3.0,
+   "t6_net": 318.7
+  },
+  {
+   "month": "2026-01",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/776/wisdomtree-reports-monthly-metrics-for-january-2026",
+   "columns": "MTD / QTD / YTD MTD / QTD / YTD",
+   "ncol": 1,
+   "beg": 142636.0,
+   "net": 1632.0,
+   "mkt": 9853.0,
+   "acq": null,
+   "end": 154122.0,
+   "avg": 150755.0,
+   "ann_rate_rep_pct": 13.5,
+   "fee_bps": 36.0,
+   "ytd_net": 1632.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": -63.0,
+     "ann_rate_rep_pct": -1.8
+    },
+    "International Dev. Mkt Equity": {
+     "net": 1707.0,
+     "ann_rate_rep_pct": 78.5
+    },
+    "Emerging Market Equity": {
+     "net": -120.0,
+     "ann_rate_rep_pct": -13.2
+    },
+    "Fixed Income": {
+     "net": 9.0,
+     "ann_rate_rep_pct": 0.5
+    },
+    "Commodity & Currency": {
+     "net": -192.0,
+     "ann_rate_rep_pct": -6.1
+    },
+    "Alternatives": {
+     "net": 155.0,
+     "ann_rate_rep_pct": 132.3
+    },
+    "Cryptocurrency": {
+     "net": 93.0,
+     "ann_rate_rep_pct": 48.9
+    },
+    "Leveraged & Inverse": {
+     "net": 43.0,
+     "ann_rate_rep_pct": 15.6
+    }
+   },
+   "release_date": "2026-02-11",
+   "og_ann_pct": 13.73,
+   "prior_end": 142636.0,
+   "checks": [],
+   "t6_og_pct": 4.73,
+   "t6_net": 531.8
+  },
+  {
+   "month": "2026-02",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/778/wisdomtree-reports-monthly-metrics-for-february-2026",
+   "columns": "MTD/QTD YTD MTD/QTD YTD",
+   "ncol": 2,
+   "beg": 154122.0,
+   "net": 1664.0,
+   "mkt": 2980.0,
+   "acq": null,
+   "end": 158765.0,
+   "avg": 154961.0,
+   "ann_rate_rep_pct": 14.1,
+   "fee_bps": 36.0,
+   "ytd_net": 3296.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 22.0,
+     "ann_rate_rep_pct": 0.7
+    },
+    "International Dev. Mkt Equity": {
+     "net": 1204.0,
+     "ann_rate_rep_pct": 54.4
+    },
+    "Emerging Market Equity": {
+     "net": 105.0,
+     "ann_rate_rep_pct": 12.5
+    },
+    "Fixed Income": {
+     "net": -293.0,
+     "ann_rate_rep_pct": -18.1
+    },
+    "Commodity & Currency": {
+     "net": 47.0,
+     "ann_rate_rep_pct": 1.4
+    },
+    "Alternatives": {
+     "net": 52.0,
+     "ann_rate_rep_pct": 42.2
+    },
+    "Cryptocurrency": {
+     "net": 93.0,
+     "ann_rate_rep_pct": 55.5
+    },
+    "Leveraged & Inverse": {
+     "net": 433.0,
+     "ann_rate_rep_pct": 158.2
+    }
+   },
+   "release_date": "2026-03-11",
+   "og_ann_pct": 12.96,
+   "prior_end": 154122.0,
+   "checks": [],
+   "t6_og_pct": 5.21,
+   "t6_net": 631.3
+  },
+  {
+   "month": "2026-03",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/785/wisdomtree-reports-monthly-metrics-for-march-2026",
+   "columns": "MTD QTD / YTD MTD QTD / YTD",
+   "ncol": 2,
+   "beg": 158765.0,
+   "net": 2562.0,
+   "mkt": -10757.0,
+   "acq": null,
+   "end": 150571.0,
+   "avg": 152531.0,
+   "ann_rate_rep_pct": 19.0,
+   "fee_bps": null,
+   "ytd_net": 5858.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 395.0,
+     "ann_rate_rep_pct": 10.8
+    },
+    "International Dev. Mkt Equity": {
+     "net": 584.0,
+     "ann_rate_rep_pct": 21.7
+    },
+    "Emerging Market Equity": {
+     "net": -192.0,
+     "ann_rate_rep_pct": -19.7
+    },
+    "Fixed Income": {
+     "net": 1556.0,
+     "ann_rate_rep_pct": 88.1
+    },
+    "Commodity & Currency": {
+     "net": 180.0,
+     "ann_rate_rep_pct": 4.8
+    },
+    "Alternatives": {
+     "net": 0.0,
+     "ann_rate_rep_pct": 0.1
+    },
+    "Cryptocurrency": {
+     "net": -50.0,
+     "ann_rate_rep_pct": -32.5
+    },
+    "Leveraged & Inverse": {
+     "net": 89.0,
+     "ann_rate_rep_pct": 25.0
+    }
+   },
+   "release_date": "2026-04-13",
+   "og_ann_pct": 19.36,
+   "prior_end": 158765.0,
+   "checks": [],
+   "t6_og_pct": 7.19,
+   "t6_net": 922.8
+  },
+  {
+   "month": "2026-04",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/790/wisdomtree-reports-monthly-metrics-for-april-2026",
+   "columns": "MTD/QTD YTD MTD/QTD YTD",
+   "ncol": 2,
+   "beg": 150571.0,
+   "net": 1215.0,
+   "mkt": 6873.0,
+   "acq": null,
+   "end": 158659.0,
+   "avg": 156941.0,
+   "ann_rate_rep_pct": 9.8,
+   "fee_bps": 36.0,
+   "ytd_net": 7073.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 107.0,
+     "ann_rate_rep_pct": 3.1
+    },
+    "International Dev. Mkt Equity": {
+     "net": 482.0,
+     "ann_rate_rep_pct": 20.1
+    },
+    "Emerging Market Equity": {
+     "net": -112.0,
+     "ann_rate_rep_pct": -13.5
+    },
+    "Fixed Income": {
+     "net": -552.0,
+     "ann_rate_rep_pct": -30.0
+    },
+    "Commodity & Currency": {
+     "net": 1368.0,
+     "ann_rate_rep_pct": 41.3
+    },
+    "Alternatives": {
+     "net": 7.0,
+     "ann_rate_rep_pct": 5.7
+    },
+    "Cryptocurrency": {
+     "net": 20.0,
+     "ann_rate_rep_pct": 13.9
+    },
+    "Leveraged & Inverse": {
+     "net": -106.0,
+     "ann_rate_rep_pct": -35.1
+    }
+   },
+   "release_date": "2026-05-12",
+   "og_ann_pct": 9.68,
+   "prior_end": 150571.0,
+   "checks": [],
+   "t6_og_pct": 12.16,
+   "t6_net": 1508.3
+  },
+  {
+   "month": "2026-05",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/793/wisdomtree-reports-monthly-metrics-for-may-2026",
+   "columns": "MTD QTD YTD MTD QTD YTD",
+   "ncol": 3,
+   "beg": 158659.0,
+   "net": 2215.0,
+   "mkt": 3127.0,
+   "acq": 4134.0,
+   "end": 168134.0,
+   "avg": 166019.0,
+   "ann_rate_rep_pct": 16.4,
+   "fee_bps": null,
+   "ytd_net": 9288.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 290.0,
+     "ann_rate_rep_pct": 7.7
+    },
+    "International Dev. Mkt Equity": {
+     "net": 594.0,
+     "ann_rate_rep_pct": 22.3
+    },
+    "Emerging Market Equity": {
+     "net": 46.0,
+     "ann_rate_rep_pct": 5.0
+    },
+    "Fixed Income": {
+     "net": 394.0,
+     "ann_rate_rep_pct": 21.2
+    },
+    "Commodity & Currency": {
+     "net": 932.0,
+     "ann_rate_rep_pct": 25.8
+    },
+    "Alternatives": {
+     "net": 7.0,
+     "ann_rate_rep_pct": 4.9
+    },
+    "Cryptocurrency": {
+     "net": 1.0,
+     "ann_rate_rep_pct": 0.8
+    },
+    "Leveraged & Inverse": {
+     "net": -50.0,
+     "ann_rate_rep_pct": -15.6
+    }
+   },
+   "release_date": "2026-06-11",
+   "og_ann_pct": 16.75,
+   "prior_end": 158659.0,
+   "checks": [],
+   "t6_og_pct": 13.72,
+   "t6_net": 1738.0
+  },
+  {
+   "month": "2026-06",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/798/wisdomtree-reports-monthly-metrics-for-june-2026",
+   "columns": "MTD QTD YTD MTD QTD YTD",
+   "ncol": 3,
+   "beg": 168136.0,
+   "net": -372.0,
+   "mkt": -6884.0,
+   "acq": null,
+   "end": 160880.0,
+   "avg": 163203.0,
+   "ann_rate_rep_pct": -2.7,
+   "fee_bps": null,
+   "ytd_net": 8916.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 72.0,
+     "ann_rate_rep_pct": 1.9
+    },
+    "International Dev. Mkt Equity": {
+     "net": -341.0,
+     "ann_rate_rep_pct": -12.3
+    },
+    "Emerging Market Equity": {
+     "net": -40.0,
+     "ann_rate_rep_pct": -4.2
+    },
+    "Fixed Income": {
+     "net": 478.0,
+     "ann_rate_rep_pct": 26.5
+    },
+    "Commodity & Currency": {
+     "net": -410.0,
+     "ann_rate_rep_pct": -11.6
+    },
+    "Alternatives": {
+     "net": 17.0,
+     "ann_rate_rep_pct": 3.6
+    },
+    "Cryptocurrency": {
+     "net": 50.0,
+     "ann_rate_rep_pct": 31.5
+    },
+    "Leveraged & Inverse": {
+     "net": -198.0,
+     "ann_rate_rep_pct": -60.7
+    }
+   },
+   "release_date": "2026-07-10",
+   "og_ann_pct": -2.65,
+   "prior_end": 168134.0,
+   "checks": [],
+   "t6_og_pct": 11.64,
+   "t6_net": 1486.0
+  },
+  {
+   "month": "2026-07",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/801/wisdomtree-reports-monthly-metrics-for-july-2026",
+   "columns": "MTD/QTD YTD MTD/QTD YTD",
+   "ncol": 2,
+   "beg": 160880.0,
+   "net": 1343.0,
+   "mkt": 774.0,
+   "acq": null,
+   "end": 162997.0,
+   "avg": 162196.0,
+   "ann_rate_rep_pct": 9.8,
+   "fee_bps": 36.0,
+   "ytd_net": 10260.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 344.0,
+     "ann_rate_rep_pct": 8.7
+    },
+    "International Dev. Mkt Equity": {
+     "net": 8.0,
+     "ann_rate_rep_pct": 0.3
+    },
+    "Emerging Market Equity": {
+     "net": -104.0,
+     "ann_rate_rep_pct": -10.9
+    },
+    "Fixed Income": {
+     "net": 1281.0,
+     "ann_rate_rep_pct": 66.5
+    },
+    "Commodity & Currency": {
+     "net": -328.0,
+     "ann_rate_rep_pct": -10.3
+    },
+    "Alternatives": {
+     "net": -26.0,
+     "ann_rate_rep_pct": -5.3
+    },
+    "Cryptocurrency": {
+     "net": 15.0,
+     "ann_rate_rep_pct": 10.7
+    },
+    "Leveraged & Inverse": {
+     "net": 153.0,
+     "ann_rate_rep_pct": 52.0
+    }
+   },
+   "release_date": "2026-08-12",
+   "og_ann_pct": 10.02,
+   "prior_end": 160880.0,
+   "checks": [],
+   "t6_og_pct": 11.02,
+   "t6_net": 1437.8
+  },
+  {
+   "month": "2026-08",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/802/wisdomtree-reports-monthly-metrics-for-august-2026",
+   "columns": "MTD QTD YTD MTD QTD YTD",
+   "ncol": 3,
+   "beg": 162997.0,
+   "net": 2085.0,
+   "mkt": 8572.0,
+   "acq": null,
+   "end": 173654.0,
+   "avg": 170969.0,
+   "ann_rate_rep_pct": 15.1,
+   "fee_bps": null,
+   "ytd_net": 12345.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 375.0,
+     "ann_rate_rep_pct": 9.4
+    },
+    "International Dev. Mkt Equity": {
+     "net": 36.0,
+     "ann_rate_rep_pct": 1.3
+    },
+    "Emerging Market Equity": {
+     "net": 119.0,
+     "ann_rate_rep_pct": 12.7
+    },
+    "Fixed Income": {
+     "net": 93.0,
+     "ann_rate_rep_pct": 4.7
+    },
+    "Commodity & Currency": {
+     "net": 1340.0,
+     "ann_rate_rep_pct": 41.5
+    },
+    "Alternatives": {
+     "net": 85.0,
+     "ann_rate_rep_pct": 17.4
+    },
+    "Cryptocurrency": {
+     "net": 19.0,
+     "ann_rate_rep_pct": 12.9
+    },
+    "Leveraged & Inverse": {
+     "net": 18.0,
+     "ann_rate_rep_pct": 6.2
+    }
+   },
+   "release_date": "2026-09-14",
+   "og_ann_pct": 15.35,
+   "prior_end": 162997.0,
+   "checks": [],
+   "t6_og_pct": 11.42,
+   "t6_net": 1508.0
+  },
+  {
+   "month": "2026-09",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/809/wisdomtree-reports-monthly-metrics-for-september-2026",
+   "columns": "MTD QTD YTD MTD QTD YTD",
+   "ncol": 3,
+   "beg": 173654.0,
+   "net": 1194.0,
+   "mkt": -5918.0,
+   "acq": null,
+   "end": 168930.0,
+   "avg": 171574.0,
+   "ann_rate_rep_pct": 8.4,
+   "fee_bps": null,
+   "ytd_net": 13540.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 56.0,
+     "ann_rate_rep_pct": 1.4
+    },
+    "International Dev. Mkt Equity": {
+     "net": -185.0,
+     "ann_rate_rep_pct": -6.7
+    },
+    "Emerging Market Equity": {
+     "net": -121.0,
+     "ann_rate_rep_pct": -12.8
+    },
+    "Fixed Income": {
+     "net": 1347.0,
+     "ann_rate_rep_pct": 68.2
+    },
+    "Commodity & Currency": {
+     "net": -4.0,
+     "ann_rate_rep_pct": -0.1
+    },
+    "Alternatives": {
+     "net": -8.0,
+     "ann_rate_rep_pct": -1.6
+    },
+    "Cryptocurrency": {
+     "net": 9.0,
+     "ann_rate_rep_pct": 5.0
+    },
+    "Leveraged & Inverse": {
+     "net": 101.0,
+     "ann_rate_rep_pct": 32.1
+    }
+   },
+   "release_date": "2026-10-12",
+   "og_ann_pct": 8.25,
+   "prior_end": 173654.0,
+   "checks": [],
+   "t6_og_pct": 9.57,
+   "t6_net": 1280.0
+  },
+  {
+   "month": "2026-10",
+   "url": "https://ir.wisdomtree.com/news-events/press-releases/detail/815/wisdomtree-reports-monthly-metrics-for-october-2026",
+   "columns": "MTD/QTD YTD MTD/QTD YTD",
+   "ncol": 2,
+   "beg": 168930.0,
+   "net": 1654.0,
+   "mkt": -3733.0,
+   "acq": null,
+   "end": 166850.0,
+   "avg": 169724.0,
+   "ann_rate_rep_pct": 11.5,
+   "fee_bps": 35.0,
+   "ytd_net": 15202.0,
+   "categories": {
+    "U.S. Equity": {
+     "net": 120.0,
+     "ann_rate_rep_pct": 3.0
+    },
+    "International Dev. Mkt Equity": {
+     "net": 355.0,
+     "ann_rate_rep_pct": 12.8
+    },
+    "Emerging Market Equity": {
+     "net": -60.0,
+     "ann_rate_rep_pct": -6.4
+    },
+    "Fixed Income": {
+     "net": 1067.0,
+     "ann_rate_rep_pct": 49.9
+    },
+    "Commodity & Currency": {
+     "net": -153.0,
+     "ann_rate_rep_pct": -4.4
+    },
+    "Alternatives": {
+     "net": 135.0,
+     "ann_rate_rep_pct": 27.2
+    },
+    "Cryptocurrency": {
+     "net": 10.0,
+     "ann_rate_rep_pct": 5.2
+    },
+    "Leveraged & Inverse": {
+     "net": 180.0,
+     "ann_rate_rep_pct": 58.3
+    }
+   },
+   "release_date": "2026-11-11",
+   "og_ann_pct": 11.75,
+   "prior_end": 168930.0,
+   "checks": [],
+   "t6_og_pct": 9.91,
+   "t6_net": 1353.2
+  }
+ ]
+}

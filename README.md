@@ -56,3 +56,7 @@ H.8 is released Fridays around 4:15 PM ET; the 21:17 UTC (4:17 PM CDT / 3:17 PM 
 ## Treasury auctions (Macro, `auctions` block)
 
 Fiscal Data `auctions_query` (notes/bonds incl. TIPS and FRNs) + TreasuryDirect `TA_WS/securities/upcoming`. Each auction is compared with the prior 6 of the same tenor (reopenings under original tenor) and flagged weak/strong on bid-to-cover (±0.10) and dealer takedown (±3 pp). No tails: when-issued yields are not freely available.
+
+## WT monthly net flows (#/companies/WT)
+
+`companies/nowcast/wt_monthly_flows.py` parses WisdomTree's "Reports Monthly Metrics for <Month>" press releases (ir.wisdomtree.com; found via the press-release listing, source URL stored per month) into `data/wt_monthly_flows.json` and `data/company-WT-monthly-flows.xlsx`, from Jan 2024. Stored as reported ($M, MTD column of the AUM rollforward: beginning AUM, net flows by asset class and total, market move, acquired AUM, ending/average AUM, WT's own annualized flow rate). Derived and labelled: organic growth = net flows / beginning AUM x 12, trailing 6-month averages (only when all 6 months are disclosed). Months without a release are left blank and listed. WisdomTree does not furnish these monthly releases on 8-K. Incremental and warn-only in the weekday refresh; output files are rewritten only when the data changes. `--full` re-fetches every month.

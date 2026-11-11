@@ -59,6 +59,13 @@ jobs:
           python3 -m pip install --quiet openpyxl pypdf || true
           python3 companies/nowcast/cns_monthly_flows.py || echo "::warning::CNS monthly flows failed; previous data/cns_monthly_flows.json kept"
 
+      - name: WT monthly net flows / organic growth (warn-only)
+        # WT posts "Monthly Metrics" on ir.wisdomtree.com ~8th business day; incremental, so most runs are a no-op
+        continue-on-error: true
+        run: |
+          python3 -m pip install --quiet openpyxl || true
+          python3 companies/nowcast/wt_monthly_flows.py || echo "::warning::WT monthly flows failed; previous data/wt_monthly_flows.json kept"
+
       - name: WT weekly AUM / earnings power (warn-only)
         continue-on-error: true
         run: |
