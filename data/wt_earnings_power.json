@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-10T22:36:02Z",
+ "generated": "2026-11-11T00:17:18Z",
  "asof": "2026-11-06",
  "stale": false,
- "stale_days": 4,
+ "stale_days": 5,
  "source_aum": "https://www.wisdomtree.com/-/media/us-media-files/xls/irwebsite_aum.xlsx",
  "source_inflows": "https://www.wisdomtree.com/-/media/us-media-files/xls/irwebsite_inflows.xlsx",
  "aum": {
