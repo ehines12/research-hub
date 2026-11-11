@@ -72,9 +72,17 @@ jobs:
           python3 -m pip install --quiet openpyxl || true
           python3 companies/nowcast/wt_earnings_power.py || echo "::warning::WT earnings power failed; previous data/wt_earnings_power.json kept"
 
+      - name: Bank M&A status / close-date refresh (warn-only)
+        # Only re-checks deals still marked pending (acquirer 8-K Item 2.01 / 1.02 on EDGAR). Never adds deals:
+        # the deal list is curated in companies/bank_ma/deals_2024.json. All 2024 deals are closed, so this is normally a no-op.
+        continue-on-error: true
+        run: |
+          python3 -m pip install --quiet openpyxl || true
+          python3 companies/nowcast/bank_ma.py || echo "::warning::Bank M&A refresh failed; previous data/bank-ma.json kept"
+
       - name: Commit data if changed
         run: |
-          git add data/*.json data/*.json.gz data/*-history.csv data/*-quarterly.csv data/*-quarterly.xlsx data/*-growth5y.csv data/*-growth5y.xlsx data/company-*.xlsx
+          git add data/*.json data/*.json.gz data/*-history.csv data/*-quarterly.csv data/*-quarterly.xlsx data/*-growth5y.csv data/*-growth5y.xlsx data/company-*.xlsx data/bank-ma*.xlsx
           if git diff --cached --quiet; then
             echo "No data changes."
             exit 0

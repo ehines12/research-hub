@@ -78,6 +78,7 @@
       if (!area) return home(hub);
       crumbs.innerHTML = '<a href="#/">Hub</a> / ' + esc(area.title);
       if (area.id === "companies") return sub ? companiesPage(sub) : companiesHome();
+      if (area.id === "bank-ma") return bankMA(area);
       if (area.status === "live") return dashboard(area);
       return soon(area);
     } catch (e) { app.innerHTML = '<p class="err">Failed to load: ' + esc(e.message) + "</p>"; }
@@ -860,6 +861,86 @@
       options: { animation: false, maintainAspectRatio: false, interaction: { mode: "index", intersect: false },
         scales: { x: { stacked: true, grid: g, ticks: Object.assign({ maxTicksLimit: 10, maxRotation: 0 }, tk) }, y: { stacked: true, grid: g, ticks: tk } },
         plugins: { legend: { labels: { color: "#e6edf3", boxWidth: 12 } }, tooltip: { callbacks: { label: it => it.dataset.label + ": " + fs(it.parsed.y) + "M" } } } } }));
+  }
+
+  // ---- Bank M&A (data/bank-ma.json, built by companies/nowcast/bank_ma.py from curated companies/bank_ma/deals_2024.json) ----
+  async function bankMA(area) {
+    const D = await load("bank-ma");
+    document.title = area.title + " · Research Hub";
+    stamp.textContent = D.generated ? "Data last updated " + fmtTime(D.generated.replace(" ", "T") + ":00Z") : "";
+    const C = D.columns, ALL = D.deals;
+    const st = localStorage.getItem("bma-st") || "all", yr = localStorage.getItem("bma-yr") || "all";
+    let sk = localStorage.getItem("bma-sk") || "announced", sd = +(localStorage.getItem("bma-sd") || 1);
+    const years = [...new Set(ALL.map(d => d.announced.slice(0, 4)))].sort();
+    const rows = ALL.filter(d => (st === "all" || d.status === st) && (yr === "all" || d.announced.slice(0, 4) === yr));
+    const fv = (d, k) => { const x = d.f[k]; return x ? x.v : null; };
+    const val = (d, k) => k === "announced" ? d.announced : k === "status" ? d.status : k === "close" ? (d.close_date || "~" + (fv(d, "expected_close") || "")) :
+      k === "acquirer" ? d.acquirer : k === "target" ? d.target : k === "tgt_state" ? fv(d, "tgt_state") : fv(d, k);
+    rows.sort((a, b) => { const x = val(a, sk), y = val(b, sk); if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1;
+      return (typeof x === "number" && typeof y === "number" ? x - y : String(x).localeCompare(String(y))) * sd; });
+    const F = (v, f) => { if (v == null || v === "") return "–"; if (typeof v !== "number") return esc(v);
+      if (f === "m") return "$" + v.toLocaleString("en-US", { maximumFractionDigits: 1 }); if (f === "usd") return "$" + v.toFixed(2);
+      if (f === "pct1") return v.toFixed(1) + "%"; if (f === "pct2") return v.toFixed(2) + "%"; if (f === "pct0") return v.toFixed(0) + "%";
+      if (f === "x2") return v.toFixed(2) + "x"; if (f === "x1") return v.toFixed(1) + "x"; if (f === "b") return "$" + v.toFixed(v < 10 ? 2 : 1) + "B";
+      if (f === "n1") return v.toFixed(1); return String(v); };
+    const med = xs => { if (!xs.length) return null; const s = xs.slice().sort((a, b) => a - b), m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
+    const avg = xs => xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null;
+    const nums = k => rows.map(d => fv(d, k)).filter(v => typeof v === "number");
+    const fdt = s => s ? new Date(s + "T00:00:00Z").toLocaleString("en-US", { timeZone: "UTC", month: "short", day: "numeric", year: "numeric" }) : "";
+    const tip = (d, k) => { const x = d.f[k]; return x ? (x.note ? x.note + " — " : "") + "Source: " + (x.q || "") : ""; };
+    const cnt = s => ALL.filter(d => d.status === s).length;
+    const segS = '<div class="seg">' + [["all", "All " + ALL.length], ["pending", "Pending " + cnt("pending")], ["closed", "Closed " + cnt("closed")], ["terminated", "Terminated " + cnt("terminated")]].map(([k, l]) => '<button data-bst="' + k + '" class="' + (st === k ? "on" : "") + '">' + l + "</button>").join("") + "</div>";
+    const segY = '<div class="seg">' + [["all", "All years"]].concat(years.map(y => [y, y])).map(([k, l]) => '<button data-byr="' + k + '" class="' + (yr === k ? "on" : "") + '">' + l + "</button>").join("") + "</div>";
+    const th = (k, l, cl) => '<th class="' + (cl || "") + ' srt" data-sk="' + k + '" title="Sort">' + esc(l) + (sk === k ? (sd > 0 ? " ▲" : " ▼") : "") + "</th>";
+    const head = "<tr>" + th("announced", "Announced", "sl") + th("status", "Status") + th("close", "Closed / expected") + th("acquirer", "Acquirer") + th("target", "Target") + th("tgt_state", "St.") +
+      C.map(c => th(c.key, c.label, c.fmt === "txt" ? "" : "r")).join("") + "<th>Sources</th></tr>";
+    const stb = s => '<span class="bst ' + s + '">' + s.toUpperCase() + "</span>";
+    const body = rows.map(d => {
+      const src = Object.entries(d.sources).map(([l, u]) => '<a href="' + esc(u) + '" target="_blank" rel="noopener noreferrer" title="' + esc(l) + '">' + (/press/i.test(l) ? "PR" : "Deck") + " " + EXT + "</a>").join(" ") +
+        (d.close_src ? ' <a href="' + esc(d.close_src) + '" target="_blank" rel="noopener noreferrer" title="Completion 8-K">Close ' + EXT + "</a>" : "");
+      return '<tr class="bmr" data-id="' + esc(d.id) + '"><td class="sl b"><span class="tw">▸</span> ' + fdt(d.announced) + (d.deal_type !== "Acquisition" ? '<span class="tag">' + esc(d.deal_type.toUpperCase()) + "</span>" : "") + "</td><td>" + stb(d.status) + "</td>" +
+        "<td" + (d.close_date ? ' title="' + esc(d.close_q || "") + '">' + fdt(d.close_date) : ' class="na" title="Expected at announcement">exp. ' + esc(fv(d, "expected_close") || "–")) + "</td>" +
+        '<td class="b">' + esc(d.acquirer) + ' <span class="sid">' + esc(d.acq_ticker) + "</span></td><td class=\"b\">" + esc(d.target) + ' <span class="sid">' + esc(d.tgt_ticker) + '</span></td><td title="' + esc(tip(d, "tgt_state")) + '">' + esc(fv(d, "tgt_state") || "–") + "</td>" +
+        C.map(c => { const v = fv(d, c.key); return '<td class="' + (c.fmt === "txt" ? "" : "r") + (v == null ? " na" : "") + '"' + (v == null ? ' title="Not disclosed in announcement documents"' : ' title="' + esc(tip(d, c.key)) + '"') + ">" + F(v, c.fmt) + (d.f[c.key] && d.f[c.key].note ? "<sup>*</sup>" : "") + "</td>"; }).join("") +
+        '<td class="srcs">' + src + "</td></tr>" +
+        '<tr class="bmd" data-for="' + esc(d.id) + '" hidden><td colspan="' + (7 + C.length) + '"><div class="bmdet">' + detail(d) + "</div></td></tr>";
+    }).join("");
+    function detail(d) {
+      const lab = Object.fromEntries(C.map(c => [c.key, c.label])); Object.assign(lab, { tgt_state: "Target state", expected_close: "Expected close (at announcement)", eps_note: "EPS impact" });
+      const fm = Object.fromEntries(C.map(c => [c.key, c.fmt]));
+      return '<table class="sumtbl"><thead><tr><th>Field</th><th class="r">Value</th><th>Note</th><th>Verbatim source text</th><th>Doc</th></tr></thead><tbody>' +
+        Object.entries(d.f).map(([k, x]) => "<tr><td>" + esc(lab[k] || k) + '</td><td class="r b">' + F(x.v, fm[k]) + "</td><td>" + esc(x.note || "") + '</td><td class="qq">' + esc(x.q || "") + '</td><td><a href="' + esc(x.src) + '" target="_blank" rel="noopener noreferrer">' + (Object.entries(d.sources).find(([l, u]) => u === x.src) || ["source"])[0].replace(/ \(.*/, "") + " " + EXT + "</a></td></tr>").join("") +
+        (d.close_src ? "<tr><td>Status / close date</td><td class=\"r b\">" + esc(d.status) + " " + fdt(d.close_date) + '</td><td>Auto-checked from acquirer 8-K filed ' + esc(d.close_filed || "") + '</td><td class="qq">' + esc(d.close_q || "") + '</td><td><a href="' + esc(d.close_src) + '" target="_blank" rel="noopener noreferrer">8-K ' + EXT + "</a></td></tr>" : "") +
+        "</tbody></table>";
+    }
+    const srow = (lab, fn) => '<tr class="bms"><td class="sl b">' + lab + '</td><td></td><td></td><td></td><td></td><td></td>' + C.map(c => { if (!c.stat) return "<td></td>"; const xs = nums(c.key), v = fn(xs);
+      return '<td class="r b' + (v == null ? " na" : "") + '" title="n = ' + xs.length + ' disclosed">' + F(v, c.fmt) + "</td>"; }).join("") + "<td></td></tr>";
+    const nrow = '<tr class="bms"><td class="sl hint">n disclosed</td><td></td><td></td><td></td><td></td><td></td>' + C.map(c => '<td class="r hint">' + (c.stat ? nums(c.key).length : "") + "</td>").join("") + "<td></td></tr>";
+    const foot = rows.length ? srow("Median", med) + srow("Average", avg) + nrow : "";
+    const card = (t, k, f) => { const xs = nums(k); return '<div class="kpi"><div class="t">' + t + '</div><div class="v">' + F(med(xs), f) + '</div><div class="d">median · avg ' + F(avg(xs), f) + " · n=" + xs.length + "</div></div>"; };
+    const tot = nums("deal_value_m").reduce((a, b) => a + b, 0);
+    app.innerHTML = "<h1>" + esc(area.title) + '</h1><p class="sub">' + esc(D.scope) + ". Metrics as announced; blank = not disclosed.</p>" +
+      '<div class="kpis sec"><div class="kpi"><div class="t">Deals in view</div><div class="v">' + rows.length + '</div><div class="d">' + ["pending", "closed", "terminated"].map(s => rows.filter(d => d.status === s).length + " " + s).join(" · ") + "</div></div>" +
+      '<div class="kpi"><div class="t">Aggregate deal value</div><div class="v">$' + (tot / 1000).toFixed(1) + 'B</div><div class="d">as announced</div></div>' +
+      card("P/TBV", "p_tbv", "x2") + card("P/forward EPS", "p_fwd_eps", "x1") + card("EPS accretion (fully phased)", "eps_accr", "pct1") + card("TBV dilution at close", "tbv_dil", "pct1") + card("TBV earnback (yrs)", "earnback", "n1") + card("Core deposit premium", "cdp", "pct1") + "</div>" +
+      '<div class="qbar"><div class="gtg"><span class="glab">Status</span>' + segS + '<span class="glab">Announced</span>' + segY + '</div><div class="qdl"><button class="btn sm" id="bmacsv">Download CSV</button>' + (INLINE ? "" : '<a class="btn sm" href="data/bank-ma.xlsx" download>Download Excel</a>') + "</div></div>" +
+      '<div class="qwrap"><table class="sumtbl qtbl bmtbl"><thead>' + head + "</thead><tbody>" + (body || '<tr><td class="sl na" colspan="' + (7 + C.length) + '">No deals match these filters.</td></tr>') + "</tbody><tfoot>" + foot + "</tfoot></table></div>" +
+      '<div class="pnote">Click a row for every field with its verbatim source text and document link; hover any value for its source snippet. * = see note in row detail. Median/average rows recompute for the filtered set.</div>' +
+      "<h2>Notes</h2>" + D.notes.map(x => '<div class="pnote">' + esc(x) + "</div>").join("") +
+      "<h2>Exclusions &amp; coverage</h2>" + D.exclusions.map(x => '<div class="pnote">' + esc(x) + "</div>").join("") +
+      (D.warnings && D.warnings.length ? '<div class="pnote">Last refresh warnings: ' + esc(D.warnings.join("; ")) + "</div>" : "");
+    app.querySelectorAll("[data-bst]").forEach(b => b.onclick = () => { localStorage.setItem("bma-st", b.dataset.bst); bankMA(area); });
+    app.querySelectorAll("[data-byr]").forEach(b => b.onclick = () => { localStorage.setItem("bma-yr", b.dataset.byr); bankMA(area); });
+    app.querySelectorAll("th[data-sk]").forEach(h => h.onclick = () => { const k = h.dataset.sk; localStorage.setItem("bma-sd", k === sk ? -sd : (["announced", "status", "close", "acquirer", "target", "tgt_state", "consideration"].includes(k) ? 1 : -1)); localStorage.setItem("bma-sk", k); bankMA(area); });
+    app.querySelectorAll("tr.bmr").forEach(r => r.onclick = e => { if (e.target.closest("a")) return; const dr = app.querySelector('tr.bmd[data-for="' + r.dataset.id + '"]'); dr.hidden = !dr.hidden; r.classList.toggle("open", !dr.hidden); });
+    document.getElementById("bmacsv").onclick = () => {
+      const q = v => { v = v == null ? "" : String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; };
+      const hdr = ["Announced", "Status", "Close date", "Expected close (at announcement)", "Acquirer", "Acquirer ticker", "Target", "Target ticker", "Target state", "Deal type"].concat(C.map(c => c.label), ["EPS accretion basis", "Press release", "Investor presentation", "Close source (8-K)"]);
+      const L = rows.map(d => { const s = Object.values(d.sources); return [d.announced, d.status, d.close_date, fv(d, "expected_close"), d.acquirer, d.acq_ticker, d.target, d.tgt_ticker, fv(d, "tgt_state"), d.deal_type].concat(C.map(c => fv(d, c.key)), [(d.f.eps_accr && d.f.eps_accr.note) || fv(d, "eps_note"), s[0], s[1], d.close_src]); });
+      const sm = rows.length ? [["Median (filtered)"], ["Average (filtered)"]].map((r, i) => r.concat(Array(9).fill(""), C.map(c => { if (!c.stat) return ""; const v = (i ? avg : med)(nums(c.key)); return v == null ? "" : +v.toFixed(3); }))) : [];
+      const blob = new Blob([[hdr].concat(L, sm).map(r => r.map(q).join(",")).concat(["", ...D.notes.map(q), ...D.exclusions.map(q)]).join("\r\n")], { type: "text/csv" });
+      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "bank-ma-" + (yr === "all" ? "all" : yr) + "-" + st + ".csv"; document.body.appendChild(a); a.click(); a.remove();
+    };
   }
 
   // ---- WT monthly net flows / organic growth (data/wt_monthly_flows.json, built by companies/nowcast/wt_monthly_flows.py) ----

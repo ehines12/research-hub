@@ -54,6 +54,14 @@
    "status": "live",
    "tagline": "Company KPIs from earnings releases: HLI, CNS",
    "description": "Per-company quarterly KPIs, charts and tables built from SEC 8-K earnings releases. Switch tickers at the top."
+  },
+  {
+   "id": "bank-ma",
+   "title": "Bank M&A",
+   "icon": "bank",
+   "status": "live",
+   "tagline": "US bank deals > $500M: pricing, marks, accretion and dilution as announced",
+   "description": "US bank and thrift whole-company acquisitions with deal value above $500M (v1: deals announced in 2024). Deal terms, target profile and pro forma metrics as announced, each sourced to the merger press release or investor deck on SEC EDGAR; status and close date checked automatically."
   }
  ],
  "links": [
