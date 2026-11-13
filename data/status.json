@@ -1,7 +1,7 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-11-13T01:53:38+00:00",
+   "checked_at": "2026-11-13T12:41:26+00:00",
    "data_changed_at": "2026-11-13T01:53:34+00:00",
    "series": {
     "gdp": {
@@ -421,8 +421,8 @@
    }
   },
   "h8": {
-   "checked_at": "2026-11-13T01:53:47+00:00",
-   "data_changed_at": "2026-11-07T00:57:52+00:00",
+   "checked_at": "2026-11-13T12:42:03+00:00",
+   "data_changed_at": "2026-11-13T12:41:26+00:00",
    "series": {
     "LLBDCBW027SBOG": {
      "fred": "LLBDCBW027SBOG",
@@ -1426,11 +1426,12 @@
     },
     "sloos_dem_oth": {
      "fred": "DEMOTHCONS",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.9
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_wil_cons": {
      "fred": "DRIWCIL",
@@ -2067,8 +2068,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-11-13T01:59:34+00:00",
-   "data_changed_at": "2026-11-13T01:54:03+00:00",
+   "checked_at": "2026-11-13T12:51:36+00:00",
+   "data_changed_at": "2026-11-13T12:46:04+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,7 +2084,7 @@
    }
   },
   "geo": {
-   "checked_at": "2026-11-13T01:59:37+00:00",
+   "checked_at": "2026-11-13T12:51:39+00:00",
    "data_changed_at": "2026-11-12T18:46:53+00:00",
    "series": {
     "gprd": {
@@ -2409,7 +2410,7 @@
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-11-13T01:54:03+00:00",
+   "checked_at": "2026-11-13T12:46:04+00:00",
    "data_changed_at": "2026-11-13T01:53:47+00:00",
    "series": {
     "5y_sofr": {
@@ -2743,6 +2744,6 @@
    }
   }
  },
- "checked_at": "2026-11-13T01:59:37+00:00",
- "ok": true
+ "checked_at": "2026-11-13T12:51:39+00:00",
+ "ok": false
 }
