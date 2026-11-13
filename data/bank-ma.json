@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12 18:47",
+ "generated": "2026-11-13 00:48",
  "scope": "US bank & thrift whole-company acquisitions announced 2024-01-01 to 2026-11-11, aggregate deal value > $500M at announcement",
  "notes": [
   "Metrics are AS ANNOUNCED: deal value, price per share, multiples and pro forma estimates are from the announcement-day merger press release and investor presentation (8-K exhibits / Rule 425 filings), based on the acquirer's share price before announcement. Final closing values differ for stock deals.",
@@ -3477,7 +3477,7 @@
     }
    },
    "status": "pending",
-   "checked": "2026-11-12"
+   "checked": "2026-11-13"
   },
   {
    "id": "wafd-everbank",
@@ -3584,7 +3584,7 @@
     }
    },
    "status": "pending",
-   "checked": "2026-11-12"
+   "checked": "2026-11-13"
   },
   {
    "id": "pebo-cbnk",
@@ -3715,7 +3715,7 @@
     }
    },
    "status": "pending",
-   "checked": "2026-11-12"
+   "checked": "2026-11-13"
   },
   {
    "id": "umbf-eldorado",
@@ -3784,7 +3784,7 @@
     }
    },
    "status": "pending",
-   "checked": "2026-11-12"
+   "checked": "2026-11-13"
   }
  ]
 }
