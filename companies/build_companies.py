@@ -8,24 +8,20 @@ from openpyxl.styles import Font
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "companies/raw"
 
-def k2m(s):  # HLI tables: $K through FQ4'26, whole $M from FQ1'27
-    v = float(s.replace(",", "")); return v / 1000 if v > 5000 else v
-
 def hli():
-    x = json.loads((RAW / "hli_extra.json").read_text()); urls = dict(json.loads((RAW / "hli_urls.json").read_text()))
-    Q = [("FQ3'22","2021-12-31",715.663,238,198),("FQ4'22","2022-03-31",279.019,144,202),("FQ1'23","2022-06-30",263.951,124,217),("FQ2'23","2022-09-30",315.016,114,210),("FQ3'23","2022-12-31",291.734,125,215),("FQ4'23","2023-03-31",256.425,140,217),("FQ1'24","2023-06-30",227.051,95,225),("FQ2'24","2023-09-30",281.684,117,211),("FQ3'24","2023-12-31",310.512,117,219),("FQ4'24","2024-03-31",287.579,121,223),("FQ1'25","2024-06-30",328.417,116,228),("FQ2'25","2024-09-30",364.028,131,224),("FQ3'25","2024-12-31",421.602,170,238),("FQ4'25","2025-03-31",412.709,147,240),("FQ1'26","2025-06-30",398.519,125,244),("FQ2'26","2025-09-30",438.661,171,242),("FQ3'26","2025-12-31",473.688,177,238),("FQ4'26","2026-03-31",433.766,171,251),("FQ1'27","2026-06-30",303,127,260),("FQ2'27","2026-09-30",481,142,267)]
-    PR = [(306.171,121),(300.662,151),(209.991,84),(388.41,134)]  # FQ3'21-FQ2'22 from prior-year columns
-    AR = [p[0] for p in PR] + [q[2] for q in Q]; AN = [p[1] for p in PR] + [q[3] for q in Q]
-    filed = sorted(x)
+    raw = json.loads((RAW / "hli_raw.json").read_text())  # inputs in $M; new quarters appended by companies/nowcast/hli_quarterly.py
+    Q, PR = raw["quarters"], raw["prior"]
+    AR = [p["cf_rev"] for p in PR] + [q["cf_rev"] for q in Q]; AN = [p["cf_txn"] for p in PR] + [q["cf_txn"] for q in Q]
     rows = []
-    for i, (q, end, rev, n, md) in enumerate(Q):
-        e = x[filed[i]]; k = i + 4
-        rows.append({"q": q, "end": end, "src": urls[filed[i]], "filed": filed[i],
-            "total_rev": round(k2m(e["total"]), 3), "cf_rev": rev, "fr_rev": round(k2m(e["fr"]), 3), "fva_rev": round(k2m(e["fva"]), 3),
+    for i, e in enumerate(Q):
+        rev, n, md, k = e["cf_rev"], e["cf_txn"], e["cf_md"], i + len(PR)
+        rows.append({"q": e["q"], "end": e["end"], "src": e["src"], "filed": e["filed"],
+            "total_rev": round(e["total"], 3), "cf_rev": rev, "fr_rev": round(e["fr"], 3), "fva_rev": round(e["fva"], 3),
             "cf_txn": n, "cf_avg": round(rev / n, 3), "cf_md": md,
             "rev_md_q": round(rev / md, 3), "rev_md_ltm": round(sum(AR[k-3:k+1]) / md, 3),
             "txn_md_q": round(n / md, 3), "txn_md_ltm": round(sum(AN[k-3:k+1]) / md, 3),
-            "adj_eps": float(e["eps"]), "adj_comp": float(e["comp_tbl"]), "adj_noncomp": float(e["nc_tbl"])})
+            "adj_eps": e["eps"], "adj_comp": e["comp_tbl"], "adj_noncomp": e["nc_tbl"]})
+    rows = rows[-20:]  # page shows the latest 20 quarters
     return {"ticker": "HLI", "name": "Houlihan Lokey", "fiscal": "Fiscal year ends March 31 (FQ2'27 = quarter ended Sep 30, 2026).",
         "fields": [
             {"key": "total_rev", "label": "Total revenue", "fmt": "m1"}, {"key": "cf_rev", "label": "CF revenue", "fmt": "m1"},
@@ -45,7 +41,7 @@ def hli():
             {"title": "Adj. EPS", "type": "bar", "series": ["adj_eps"]},
             {"title": "Adj. comp and non-comp ratios (%)", "type": "line", "series": ["adj_comp", "adj_noncomp"]}],
         "rows": rows,
-        "notes": ["Source: Houlihan Lokey quarterly earnings releases (SEC Form 8-K, Exhibit 99.1); one link per quarter.",
+        "notes": ["Source: Houlihan Lokey quarterly earnings releases (SEC Form 8-K, Exhibit 99.1); one link per quarter. Refreshed automatically: the weekday workflow checks EDGAR for a new Item 2.02 8-K and adds the quarter only if it ties out (segments sum to total revenues; adjusted op income = revenues - adjusted comp - adjusted non-comp; reported adjusted % match the dollar amounts; adjusted EPS = adjusted net income / adjusted diluted shares).",
             "* Computed: avg rev/txn = CF revenue / closed transactions; per-MD = revenue or transactions / period-end CF MDs; LTM = trailing four quarters.",
             "Releases from FQ1'27 report in whole $M (rounded); earlier ones in $K.",
             "Adj. comp and non-comp ratios are the adjusted (non-GAAP) % of revenues in each release's expense table.",
@@ -161,6 +157,7 @@ def evr():
             "adj_comp": r["comp_adj"], "adj_noncomp": r["nc_adj"], "opm_adj": r["opm_adj"],
             "adj_eps": r["eps_adj"], "gaap_eps": r["eps_gaap"], "sh_adj": round(r["sh_adj"] / 1000, 2),
             "aum": round(r["aum"] / 1000, 2) if r.get("aum") else None})
+    rows = rows[-20:]  # page shows the latest 20 quarters
     return {"ticker": "EVR", "name": "Evercore", "fiscal": "Calendar fiscal year.",
         "fields": [
             {"key": "net_rev", "label": "Net revenues (GAAP)", "fmt": "m1"}, {"key": "adj_rev", "label": "Net revenues (adj.)", "fmt": "m1"},

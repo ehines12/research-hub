@@ -556,7 +556,7 @@
     }
    ],
    "notes": [
-    "Source: Houlihan Lokey quarterly earnings releases (SEC Form 8-K, Exhibit 99.1); one link per quarter.",
+    "Source: Houlihan Lokey quarterly earnings releases (SEC Form 8-K, Exhibit 99.1); one link per quarter. Refreshed automatically: the weekday workflow checks EDGAR for a new Item 2.02 8-K and adds the quarter only if it ties out (segments sum to total revenues; adjusted op income = revenues - adjusted comp - adjusted non-comp; reported adjusted % match the dollar amounts; adjusted EPS = adjusted net income / adjusted diluted shares).",
     "* Computed: avg rev/txn = CF revenue / closed transactions; per-MD = revenue or transactions / period-end CF MDs; LTM = trailing four quarters.",
     "Releases from FQ1'27 report in whole $M (rounded); earlier ones in $K.",
     "Adj. comp and non-comp ratios are the adjusted (non-GAAP) % of revenues in each release's expense table.",

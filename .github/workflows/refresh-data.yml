@@ -72,6 +72,14 @@ jobs:
           python3 -m pip install --quiet openpyxl || true
           python3 companies/nowcast/wt_earnings_power.py || echo "::warning::WT earnings power failed; previous data/wt_earnings_power.json kept"
 
+      - name: HLI quarterly KPIs from 8-K earnings releases (warn-only)
+        # Checks EDGAR for a new Houlihan Lokey Item 2.02 8-K (late Jan/Apr-May/Jul/Oct); incremental, so most runs are a no-op.
+        # A new fiscal quarter is added only if it ties out (segments = total revenues, adj. op income and %s, adj. EPS math).
+        continue-on-error: true
+        run: |
+          python3 -m pip install --quiet openpyxl || true
+          python3 companies/nowcast/hli_quarterly.py || echo "::warning::HLI quarterly refresh failed; previous data kept"
+
       - name: EVR quarterly KPIs from 8-K earnings releases (warn-only)
         # Checks EDGAR for a new Evercore Item 2.02 8-K (late Jan/Apr/Jul/Oct); incremental, so most runs are a no-op.
         # A new quarter is added only if its revenue lines sum to net revenues and the adjusted margin ties.
@@ -91,7 +99,7 @@ jobs:
 
       - name: Commit data if changed
         run: |
-          git add data/*.json data/*.json.gz data/*-history.csv data/*-quarterly.csv data/*-quarterly.xlsx data/*-growth5y.csv data/*-growth5y.xlsx data/company-*.xlsx data/bank-ma*.xlsx companies/raw/evr_raw.json
+          git add data/*.json data/*.json.gz data/*-history.csv data/*-quarterly.csv data/*-quarterly.xlsx data/*-growth5y.csv data/*-growth5y.xlsx data/company-*.xlsx data/bank-ma*.xlsx companies/raw/evr_raw.json companies/raw/hli_raw.json
           if git diff --cached --quiet; then
             echo "No data changes."
             exit 0
