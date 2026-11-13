@@ -1,7 +1,7 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-11-13T16:30:23+00:00",
+   "checked_at": "2026-11-13T18:21:55+00:00",
    "data_changed_at": "2026-11-13T16:09:45+00:00",
    "series": {
     "gdp": {
@@ -421,8 +421,8 @@
    }
   },
   "h8": {
-   "checked_at": "2026-11-13T16:31:00+00:00",
-   "data_changed_at": "2026-11-13T16:09:49+00:00",
+   "checked_at": "2026-11-13T18:24:50+00:00",
+   "data_changed_at": "2026-11-13T18:21:55+00:00",
    "series": {
     "LLBDCBW027SBOG": {
      "fred": "LLBDCBW027SBOG",
@@ -1186,259 +1186,291 @@
     },
     "fdic_cd48_old": {
      "fred": "CD48NRNJ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2021-03-01",
       "value": 0.252
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "fdic_cd48_new": {
      "fred": "NDR48MCD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.31
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "fdic_cd60_old": {
      "fred": "CD60NRNJ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2021-03-01",
       "value": 0.304
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "fdic_cd60_new": {
      "fred": "NDR60MCD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.4148
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "ff_m": {
      "fred": "FEDFUNDS",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 3.88
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_std_ci_lm": {
      "fred": "DRTSCILM",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.7
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_dem_ci_lm": {
      "fred": "DRSDCILM",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": -11.7
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_std_ci_sm": {
      "fred": "DRTSCIS",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 5.1
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_dem_ci_sm": {
      "fred": "DRSDCIS",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": -11.9
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_std_cre_cld": {
      "fred": "SUBLPDRCSC",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 15.5
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_dem_cre_cld": {
      "fred": "SUBLPDRCDC",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": -25.9
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_std_cre_nfnr": {
      "fred": "SUBLPDRCSN",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 8.8
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_dem_cre_nfnr": {
      "fred": "SUBLPDRCDN",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": -10.5
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_std_cre_mf": {
      "fred": "SUBLPDRCSM",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 8.8
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_dem_cre_mf": {
      "fred": "SUBLPDRCDM",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": -22.8
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_std_rre_gse": {
      "fred": "SUBLPDHMSENQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 0.0
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_dem_rre_gse": {
      "fred": "SUBLPDHMDENQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": -32.1
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_std_rre_gov": {
      "fred": "SUBLPDHMSGNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 0.0
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_dem_rre_gov": {
      "fred": "SUBLPDHMDGNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": -30.0
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_std_rre_qm": {
      "fred": "SUBLPDHMSQNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": -3.8
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_dem_rre_qm": {
      "fred": "SUBLPDHMDQNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": -35.8
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_std_rre_qmj": {
      "fred": "SUBLPDHMSJNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": -7.5
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_dem_rre_qmj": {
      "fred": "SUBLPDHMDJNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": -30.2
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_std_rre_nqmj": {
      "fred": "SUBLPDHMSKNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": -8.7
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_dem_rre_nqmj": {
      "fred": "SUBLPDHMDKNQ",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": -25.5
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_std_cc": {
      "fred": "DRTSCLCC",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 4.0
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_dem_cc": {
      "fred": "DEMCC",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 10.2
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_std_auto": {
      "fred": "STDSAUTO",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": -2.1
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_dem_auto": {
      "fred": "DEMAUTO",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": -12.5
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_std_oth": {
      "fred": "STDSOTHCONS",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.9
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_dem_oth": {
      "fred": "DEMOTHCONS",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.9
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "sloos_wil_cons": {
      "fred": "DRIWCIL",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 0.0
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "CIL_LARGE": {
      "fred": "derived",
@@ -2034,7 +2066,7 @@
     },
     "dep_cd48": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.31
@@ -2042,7 +2074,7 @@
     },
     "dep_cd60": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 1.4148
@@ -2050,7 +2082,7 @@
     },
     "dep_sprd_cd12": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": -2.12
@@ -2058,7 +2090,7 @@
     },
     "dep_sprd_mmda": {
      "fred": "derived",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": -3.25
@@ -2067,8 +2099,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-11-13T16:36:59+00:00",
-   "data_changed_at": "2026-11-13T16:31:21+00:00",
+   "checked_at": "2026-11-13T18:34:24+00:00",
+   "data_changed_at": "2026-11-13T18:29:01+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,7 +2115,7 @@
    }
   },
   "geo": {
-   "checked_at": "2026-11-13T16:37:02+00:00",
+   "checked_at": "2026-11-13T18:34:28+00:00",
    "data_changed_at": "2026-11-13T16:15:42+00:00",
    "series": {
     "gprd": {
@@ -2409,7 +2441,7 @@
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-11-13T16:31:21+00:00",
+   "checked_at": "2026-11-13T18:29:01+00:00",
    "data_changed_at": "2026-11-13T16:31:00+00:00",
    "series": {
     "5y_sofr": {
@@ -2743,6 +2775,6 @@
    }
   }
  },
- "checked_at": "2026-11-13T16:37:02+00:00",
- "ok": true
+ "checked_at": "2026-11-13T18:34:28+00:00",
+ "ok": false
 }
