@@ -93,7 +93,7 @@ def parse(L, filed, url, need_eps_tie=True):
     r = {"q": fq_label(end), "end": end, "filed": filed, "src": url,
          "total": v(tot), "cf_rev": v(cf), "fr": v(fr), "fva": v(fva), "cf_txn": int(txn) if txn is not None else None, "cf_md": int(md) if md is not None else None,
          "eps": eps, "comp_tbl": comp_p, "nc_tbl": nc_p, "opm_adj": round(oi / tot * 100, 1) if oi and tot else None}
-    miss = [x for x in ("total", "cf_rev", "fr", "fva", "cf_txn", "cf_md", "eps", "comp_tbl", "nc_tbl") if r[x] is None]
+    miss = [x for x in ("total", "cf_rev", "fr", "fva", "cf_txn", "cf_md", "eps", "comp_tbl", "nc_tbl", "opm_adj") if r[x] is None]
     if miss:
         raise ValueError(f"missing {miss}")
     errs = []

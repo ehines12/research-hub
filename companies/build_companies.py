@@ -20,7 +20,7 @@ def hli():
             "cf_txn": n, "cf_avg": round(rev / n, 3), "cf_md": md,
             "rev_md_q": round(rev / md, 3), "rev_md_ltm": round(sum(AR[k-3:k+1]) / md, 3),
             "txn_md_q": round(n / md, 3), "txn_md_ltm": round(sum(AN[k-3:k+1]) / md, 3),
-            "adj_eps": e["eps"], "adj_comp": e["comp_tbl"], "adj_noncomp": e["nc_tbl"]})
+            "adj_eps": e["eps"], "adj_comp": e["comp_tbl"], "adj_noncomp": e["nc_tbl"], "opm_adj": e.get("opm_adj")})
     rows = rows[-20:]  # page shows the latest 20 quarters
     return {"ticker": "HLI", "name": "Houlihan Lokey", "fiscal": "Fiscal year ends March 31 (FQ2'27 = quarter ended Sep 30, 2026).",
         "fields": [
@@ -30,21 +30,22 @@ def hli():
             {"key": "cf_md", "label": "CF MDs", "fmt": "n0"}, {"key": "rev_md_q", "label": "CF rev / MD (qtr)*", "fmt": "m2"},
             {"key": "rev_md_ltm", "label": "CF rev / MD (LTM)*", "fmt": "m2"}, {"key": "txn_md_q", "label": "Txns / MD (qtr)*", "fmt": "x2"},
             {"key": "txn_md_ltm", "label": "Txns / MD (LTM)*", "fmt": "x2"}, {"key": "adj_eps", "label": "Adj. diluted EPS", "fmt": "usd2"},
-            {"key": "adj_comp", "label": "Adj. comp ratio", "fmt": "pct1", "invert": True}, {"key": "adj_noncomp", "label": "Adj. non-comp ratio", "fmt": "pct1", "invert": True}],
+            {"key": "adj_comp", "label": "Adj. comp ratio", "fmt": "pct1", "invert": True}, {"key": "adj_noncomp", "label": "Adj. non-comp ratio", "fmt": "pct1", "invert": True},
+            {"key": "opm_adj", "label": "Adj. operating margin*", "fmt": "pct1"}],
         "tiles": ["total_rev", "cf_rev", "cf_avg"],
-        "kpis": ["total_rev", "cf_rev", "cf_txn", "cf_avg", "cf_md", "rev_md_ltm", "adj_eps", "adj_noncomp"],
+        "kpis": ["total_rev", "cf_rev", "cf_txn", "cf_avg", "cf_md", "rev_md_ltm", "adj_eps", "adj_noncomp", "opm_adj"],
         "charts": [
             {"title": "Revenue by segment ($M)", "type": "bar", "stacked": True, "series": ["cf_rev", "fr_rev", "fva_rev"]},
             {"title": "CF revenue ($M) vs closed transactions", "type": "bar", "series": ["cf_rev", "cf_txn"], "y2": ["cf_txn"], "types": ["bar", "line"]},
             {"title": "CF avg revenue per closed transaction ($M)", "type": "line", "series": ["cf_avg"]},
             {"title": "CF productivity per MD (LTM)", "type": "line", "series": ["rev_md_ltm", "txn_md_ltm"], "y2": ["txn_md_ltm"]},
             {"title": "Adj. EPS", "type": "bar", "series": ["adj_eps"]},
-            {"title": "Adj. comp and non-comp ratios (%)", "type": "line", "series": ["adj_comp", "adj_noncomp"]}],
+            {"title": "Adj. comp, non-comp ratios and operating margin (%)", "type": "line", "series": ["adj_comp", "adj_noncomp", "opm_adj"]}],
         "rows": rows,
         "notes": ["Source: Houlihan Lokey quarterly earnings releases (SEC Form 8-K, Exhibit 99.1); one link per quarter. Refreshed automatically: the weekday workflow checks EDGAR for a new Item 2.02 8-K and adds the quarter only if it ties out (segments sum to total revenues; adjusted op income = revenues - adjusted comp - adjusted non-comp; reported adjusted % match the dollar amounts; adjusted EPS = adjusted net income / adjusted diluted shares).",
             "* Computed: avg rev/txn = CF revenue / closed transactions; per-MD = revenue or transactions / period-end CF MDs; LTM = trailing four quarters.",
             "Releases from FQ1'27 report in whole $M (rounded); earlier ones in $K.",
-            "Adj. comp and non-comp ratios are the adjusted (non-GAAP) % of revenues in each release's expense table.",
+            "Adj. comp and non-comp ratios are the adjusted (non-GAAP) % of revenues in each release's expense table. * Adj. operating margin is computed = operating income (adjusted) / revenues from each release's GAAP-to-adjusted reconciliation (HLI does not print the margin); from FQ1'27 both inputs are rounded to whole $M, so it can differ from 100 − comp − non-comp by ~0.1pp.",
             "FQ3'22 includes GCA, acquired during that quarter. LTM for FQ3'22-FQ1'23 uses FQ3'21-FQ2'22 from prior-year columns."]}
 
 # Fee rate ex performance fees (GAAP), as reported in the Jul and Oct 2026 releases' 5-quarter highlight tables
