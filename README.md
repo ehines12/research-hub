@@ -68,3 +68,7 @@ US bank & thrift whole-company acquisitions with aggregate deal value > $500M at
 - **Page**: sortable columns, status (all/pending/closed/terminated) and announce-year filters (incl. a 2025–26 combined view), median/average rows recomputed for the filtered set, click a row for per-field provenance, CSV (filtered view) and Excel (all deals) downloads.
 - **Adding deals**: append to a curated file (same `{v, src, q}` shape), then run the script.
 
+
+## EVR quarterly KPIs (#/companies/EVR)
+
+`companies/nowcast/evr_quarterly.py` finds Evercore's Item 2.02 8-Ks on EDGAR (submissions API, descriptive User-Agent), parses each Exhibit 99.1 earnings release (current-quarter column, as first reported) into `companies/raw/evr_raw.json`, then re-runs `companies/build_companies.py` to rebuild `data/companies.json` and `data/company-EVR.xlsx`. Fields: GAAP net revenues by line (advisory, underwriting, commissions, asset management & admin fees, other), adjusted net revenues, IM segment adjusted net revenues, number of advisory + underwriting client fees (total and >= $1M), period-end IB and IB&E SMD headcount, adjusted comp / non-comp ratios, adjusted operating margin, adjusted and GAAP diluted EPS, adjusted diluted shares, Wealth Management AUM. A quarter is accepted only if the revenue lines sum to net revenues and adjusted operating income / adjusted revenue ties to the reported margin. Incremental and warn-only in the weekday refresh (most runs are a no-op); `--full` re-parses all releases from Q4 2021.

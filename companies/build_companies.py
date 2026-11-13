@@ -141,7 +141,60 @@ def wt():
             "* Computed: organic growth = net flows x 4 / beginning AUM (ending − flows); effective revenue yield = adjusted operating revenue x 4 / average AUM (bps). Reported revenue yield is WisdomTree's disclosed adjusted revenue yield when available (first regularly shown from 2024).",
             "Adj. operating margin and adj. diluted EPS are the non-GAAP figures from each release. Revenue (adj.) equals GAAP operating revenues except where the release disclosed a separate adjusted revenue (e.g. Q3–Q4 2024 ESG-settlement other-revenue items)."]}
 
-COMPANIES = [hli, cns, wt]
+def evr():
+    raw = json.loads((RAW / "evr_raw.json").read_text())  # written by companies/nowcast/evr_quarterly.py
+    m = lambda v: None if v is None else round(v / 1000, 3)  # $K -> $M
+    adv = [r["adv"] / 1000 for r in raw]
+    rows = []
+    for i, r in enumerate(raw):
+        # trailing four quarters of advisory fees; before the 4th row, earlier quarters come from the year-ago column
+        # of the releases 4 quarters later (raw[i+4-k]["adv_py"])
+        t4 = [adv[j] if j >= 0 else raw[j + 4]["adv_py"] / 1000 for j in range(i - 3, i + 1)]
+        ib = r["smd_ib"]; fee_n = r["nfee"]
+        rows.append({"q": r["q"], "end": r["end"], "src": r["src"], "filed": r["filed"],
+            "net_rev": m(r["net"]), "adj_rev": m(r["rev_adj"]),
+            "adv": m(r["adv"]), "uw": m(r["uw"]), "comm": m(r["comm"]), "amf": m(r["amf"]), "oth": m(r["oth"]), "im_adj": m(r["im_adj"]),
+            "nfee": fee_n, "nfee1m": r["nfee1m"],
+            "avg_fee": round((r["adv"] + r["uw"]) / 1000 / fee_n, 3) if fee_n else None,
+            "smd_ib": ib, "smd_tot": r["smd_tot"],
+            "adv_smd_q": round(adv[i] / ib, 3) if ib else None, "adv_smd_ltm": round(sum(t4) / ib, 3) if ib else None,
+            "adj_comp": r["comp_adj"], "adj_noncomp": r["nc_adj"], "opm_adj": r["opm_adj"],
+            "adj_eps": r["eps_adj"], "gaap_eps": r["eps_gaap"], "sh_adj": round(r["sh_adj"] / 1000, 2),
+            "aum": round(r["aum"] / 1000, 2) if r.get("aum") else None})
+    return {"ticker": "EVR", "name": "Evercore", "fiscal": "Calendar fiscal year.",
+        "fields": [
+            {"key": "net_rev", "label": "Net revenues (GAAP)", "fmt": "m1"}, {"key": "adj_rev", "label": "Net revenues (adj.)", "fmt": "m1"},
+            {"key": "adv", "label": "Advisory fees", "fmt": "m1"}, {"key": "uw", "label": "Underwriting fees", "fmt": "m1"},
+            {"key": "comm", "label": "Commissions & related", "fmt": "m1"}, {"key": "amf", "label": "Asset mgmt & admin fees (IM)", "fmt": "m1"},
+            {"key": "oth", "label": "Other revenue, net", "fmt": "m1"}, {"key": "im_adj", "label": "IM segment net rev. (adj.)", "fmt": "m1"},
+            {"key": "nfee", "label": "Client fees (adv. + UW)", "fmt": "n0"}, {"key": "nfee1m", "label": "Client fees >= $1M", "fmt": "n0"},
+            {"key": "avg_fee", "label": "Avg fee per client fee*", "fmt": "m2"},
+            {"key": "smd_ib", "label": "IB SMDs", "fmt": "n0"}, {"key": "smd_tot", "label": "IB&E SMDs (total)", "fmt": "n0"},
+            {"key": "adv_smd_q", "label": "Advisory / IB SMD (qtr)*", "fmt": "m2"}, {"key": "adv_smd_ltm", "label": "Advisory / IB SMD (LTM)*", "fmt": "m2"},
+            {"key": "adj_comp", "label": "Adj. comp ratio", "fmt": "pct1", "invert": True}, {"key": "adj_noncomp", "label": "Adj. non-comp ratio", "fmt": "pct1", "invert": True},
+            {"key": "opm_adj", "label": "Adj. operating margin", "fmt": "pct1"},
+            {"key": "adj_eps", "label": "Adj. diluted EPS", "fmt": "usd2"}, {"key": "gaap_eps", "label": "GAAP diluted EPS", "fmt": "usd2"},
+            {"key": "sh_adj", "label": "Adj. diluted shares (M)", "fmt": "x2", "invert": True},
+            {"key": "aum", "label": "Wealth Mgmt AUM", "fmt": "bn2"}],
+        "tiles": ["adj_rev", "adv", "adv_smd_ltm"],
+        "kpis": ["adj_rev", "adv", "nfee", "avg_fee", "smd_ib", "adv_smd_ltm", "adj_comp", "opm_adj", "adj_eps"],
+        "charts": [
+            {"title": "Net revenues by line ($M, GAAP)", "type": "bar", "stacked": True, "series": ["adv", "uw", "comm", "amf", "oth"]},
+            {"title": "Advisory fees ($M) vs client fees earned", "type": "bar", "series": ["adv", "nfee"], "y2": ["nfee"], "types": ["bar", "line"]},
+            {"title": "Avg fee per advisory + underwriting client fee ($M)", "type": "line", "series": ["avg_fee"]},
+            {"title": "Advisory fees per IB SMD (LTM, $M) vs IB SMDs", "type": "line", "series": ["adv_smd_ltm", "smd_ib"], "y2": ["smd_ib"]},
+            {"title": "Adj. and GAAP diluted EPS", "type": "bar", "series": ["adj_eps", "gaap_eps"]},
+            {"title": "Adj. comp, non-comp ratios and operating margin (%)", "type": "line", "series": ["adj_comp", "adj_noncomp", "opm_adj"]},
+            {"title": "Investment Management: Wealth AUM ($bn) vs segment adj. net revenues ($M)", "type": "line", "series": ["aum", "im_adj"], "y2": ["im_adj"]}],
+        "rows": rows,
+        "notes": ["Source: Evercore quarterly earnings releases (SEC Form 8-K, Exhibit 99.1); one link per quarter. Each quarter is as first reported in its own release (later recasts not applied). Refreshed automatically: the weekday workflow checks EDGAR for a new Item 2.02 8-K and adds the quarter only if it passes the checks below.",
+            "Revenue lines are U.S. GAAP and sum to GAAP net revenues every quarter (checked). Advisory, Underwriting and Commissions are the Investment Banking & Equities segment; Asset Management & Administration Fees are the Investment Management segment (Wealth Management); Other revenue is mostly interest and investment-fund marks, net of interest expense. Adjusted net revenues add back mainly the Robey Warshaw / notes-related interest and equity-method reclasses; adjusted advisory fees differ from GAAP by < $1M a quarter.",
+            "* Computed: avg fee = (advisory + underwriting fees) / number of advisory and underwriting client fees; per-SMD = advisory fees / period-end IB SMDs; LTM = trailing four quarters (Q4 2021-Q2 2022 use the year-ago advisory column of the releases a year later for Q1-Q3 2021).",
+            "SMD headcount is as stated in each release and, per Evercore's footnote, includes SMDs who have committed to join and excludes known departures as of the release date. Label change: 'Advisory SMDs' through Q4 2023, 'Investment Banking SMDs' from Q1 2024 (same population: Q1 2024's year-ago figure equals the Q1 2023 Advisory count). Total is IB & Equities SMDs (incl. Equities/research). Hires and promotions are not disclosed on a consistent quarterly basis, so they are not tabulated; disclosed: 17 Advisory MDs promoted to SMD in Jan 2022, 7 Advisory SMDs hired in 2022, 7 Advisory promotions in Jan 2023 and Jan 2024, 8 IB promotions in Jan 2026, 14 IB SMD hires YTD 2026 (as of the Q3 2026 release).",
+            "Segment labels: 'Investment Banking' renamed 'Investment Banking & Equities' from the Q4 2022 release; client-fee counts labelled 'from Advisory Client Transactions' through Q4 2022 and 'from Advisory and Underwriting Client Transactions' from Q1 2023 (year-ago comparatives unchanged, so treated as continuous).",
+            "Adj. comp and non-comp ratios, adj. operating margin and EPS are Evercore's non-GAAP figures (A-2 reconciliation); adj. diluted shares include Evercore LP units. Wealth Mgmt AUM is period-end AUM of the consolidated Wealth Management business. First-quarter EPS is lifted by the tax deduction on employee share awards vesting above grant price (adj. effective tax rate 3.0% in Q1 2026 and (39.7%) in Q1 2025 vs ~25-29% in other quarters)."]}
+
+COMPANIES = [hli, cns, wt, evr]
 
 
 def xlsx(c):

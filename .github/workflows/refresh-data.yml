@@ -72,6 +72,14 @@ jobs:
           python3 -m pip install --quiet openpyxl || true
           python3 companies/nowcast/wt_earnings_power.py || echo "::warning::WT earnings power failed; previous data/wt_earnings_power.json kept"
 
+      - name: EVR quarterly KPIs from 8-K earnings releases (warn-only)
+        # Checks EDGAR for a new Evercore Item 2.02 8-K (late Jan/Apr/Jul/Oct); incremental, so most runs are a no-op.
+        # A new quarter is added only if its revenue lines sum to net revenues and the adjusted margin ties.
+        continue-on-error: true
+        run: |
+          python3 -m pip install --quiet openpyxl || true
+          python3 companies/nowcast/evr_quarterly.py || echo "::warning::EVR quarterly refresh failed; previous data kept"
+
       - name: Bank M&A status / close-date refresh (warn-only)
         # Only re-checks deals still marked pending (acquirer or target 8-K Item 2.01 / 1.02 on EDGAR). Never adds deals:
         # the deal list is curated in companies/bank_ma/deals_*.json (2024 through Nov 2026). Checks pending deals for completion /
@@ -83,7 +91,7 @@ jobs:
 
       - name: Commit data if changed
         run: |
-          git add data/*.json data/*.json.gz data/*-history.csv data/*-quarterly.csv data/*-quarterly.xlsx data/*-growth5y.csv data/*-growth5y.xlsx data/company-*.xlsx data/bank-ma*.xlsx
+          git add data/*.json data/*.json.gz data/*-history.csv data/*-quarterly.csv data/*-quarterly.xlsx data/*-growth5y.csv data/*-growth5y.xlsx data/company-*.xlsx data/bank-ma*.xlsx companies/raw/evr_raw.json
           if git diff --cached --quiet; then
             echo "No data changes."
             exit 0
