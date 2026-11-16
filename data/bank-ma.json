@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16 14:27",
+ "generated": "2026-11-16 20:54",
  "scope": "US bank & thrift whole-company acquisitions announced since 2024-01-01 with an aggregate deal value above $500M at announcement (curated through 2026-11-16; new deals auto-added weekly from EDGAR)",
  "last_scanned": "2026-11-16 14:27",
  "scan_window": [
@@ -5718,7 +5718,8 @@
      "note": "Late 1Q 2027"
     }
    },
-   "status": "pending"
+   "status": "pending",
+   "checked": "2026-11-16"
   }
  ]
 }
