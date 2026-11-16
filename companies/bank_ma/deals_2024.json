@@ -329,6 +329,16 @@
      "v": "By end of 1Q 2025",
      "src": "https://www.sec.gov/Archives/edgar/data/764038/000155837024008442/ssb-20240517xex99d2.htm",
      "q": "…• 75.3% SouthState / 24.7% Independent Timing & Approvals • Anticipated closing by the end of the first quarter of 2025 • Subject to SSB and IBTX shareholder approvals and required regulatory approvals Transaction Value and Multi…"
+    },
+    "cdi_pct": {
+     "v": 3.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/764038/000155837024008442/ssb-20240517xex99d2.htm",
+     "q": "…3 years using straight-line amortization) • Day two CECL reserve of $103.5 million non-PCD credit mark CDI • Core deposit intangible of 3.0% of Independent's core deposits (amortized over 10 years using sum-of-years-digits) Other Assumptions • Sale and…"
+    },
+    "pf_assets_b": {
+     "v": 65.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/764038/000155837024008442/ssb-20240517xex99d2.htm",
+     "q": "…in 12 of 15 Fastest Growing U.S. MSAs(2) Projected Population Growth Top 20% of U.S. MSAs highlighted in blue Pro Forma Branch Footprint $65B Assets $48B Loans $55B Deposits 1.3% ROAA 18.0% ROATCE 49% Efficiency (1) Projected balances at merger close. (2) In…"
     }
    }
   },
@@ -436,6 +446,11 @@
      "v": 30,
      "src": "https://www.sec.gov/Archives/edgar/data/203596/000119312524185459/d869328dex991.htm",
      "q": "…ge ratio – 0.80 WSBC shares to be issued for each PFC share Pro forma ownership: 62% WSBC, 30% PFC, 8% new shareholders Transaction Value Deal value of $959 million, or $26.66 per PFC share(1) Pricing metrics include: 12.0x DV/20…"
+    },
+    "pf_assets_b": {
+     "v": 27.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/203596/000119312524185459/d869328dex991.htm",
+     "q": "…fferent companies might calculate these measures differently. Forward-Looking Statements Increased Scale With ~$27B in assets, the combined organization will benefit from significant economies of scale Complementary geographic footprints in familiar…"
     }
    }
   },
@@ -659,6 +674,11 @@
      "v": "1Q or 2Q 2025",
      "src": "https://www.sec.gov/Archives/edgar/data/314489/000110465924093098/tm2422366d1_ex99-3.htm",
      "q": "…osures or consolidations • Completion of the transaction is expected in the first or second quarter of 2025 and remains subject to customary closing conditions, including regulatory & shareholder approvals • Bank merg…"
+    },
+    "pf_assets_b": {
+     "v": 20.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/314489/000110465924093098/tm2422366d1_ex99-2.htm",
+     "q": "…ed at approximately $916.8 million, based on Busey’s closing stock price of $27.39 as of August 26, 2024. The combined company, which will operate under the Busey brand, will have approximately $20 billion in total assets, approximately $17 billion in total deposits and approximately $13 billion in wealth management assets under…"
     }
    }
   },
@@ -770,6 +790,11 @@
      "v": "By end of 3Q 2025",
      "src": "https://www.sec.gov/Archives/edgar/data/883948/000110465924110007/tm2426467d1_ex99-2.htm",
      "q": "…tic Union and Sandy Spring shareholder approvals required • Anticipated closing by the end of Q3’25 Notes: Estimated financial impact is presented for illustrative purposes only, as of the quarter ended 9/30/2…"
+    },
+    "cdi_pct": {
+     "v": 2.75,
+     "src": "https://www.sec.gov/Archives/edgar/data/883948/000110465924110007/tm2426467d1_ex99-2.htm",
+     "q": "…o $5MM benefit on subordinated debt and time deposits at closing • $9MM write - up of fixed assets and PP&E • Core Deposit Intangible of 2.75% of Sandy Spring’s core deposits; amortized over 10 years using sum - of - years digits method • $66MM Wealth Int…"
     }
    }
   },
@@ -876,6 +901,18 @@
      "v": "Mid-2025",
      "src": "https://www.sec.gov/Archives/edgar/data/707179/000110465924122326/tm2429075d4_ex99-2.htm",
      "q": "…g control of Bremer shar es) Customary regulatory approvals Anticipated closing in the middle of 2025 Board Representation Otto Bremer Trust to appoint one Trustee to Old National Bancorp Board of Directors Tran…"
+    },
+    "pf_assets_b": {
+     "v": 70.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/707179/000110465924122326/tm2429075d4_ex99-1.htm",
+     "q": "…ld National’s reach into several other vibrant markets throughout Minnesota, North Dakota and Wisconsin. Once combined, the new organization would have over $70 billion in assets (based on September 30, 2024 asset figures), a significantly larger footprint, and offer additional banking c…",
+     "note": "\"over $70 billion\""
+    },
+    "cdi_pct": {
+     "v": 4.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/707179/000110465924122326/tm2429075d4_ex99-2.htm",
+     "q": "…e - time merger expenses (fully - reflected in pro forma tangible book value estimate at closing) Intangibles Core deposit intangible of $479 million, or 4.0% of non - time deposits; amortized sum - of - years digits over 10 years Customer relationship intangible of $20…",
+     "note": "% of non-time deposits"
     }
    }
   },
@@ -1000,6 +1037,11 @@
      "v": "2H 2025",
      "src": "https://www.sec.gov/Archives/edgar/data/776901/000077690124000173/exhibit991-pressrelease.htm",
      "q": "…mount of $27.1 million in cash in the merger. The merger is expected to close in the second half of 2025 subject to customary closing conditions, including regulatory approvals and approval of Enterprise shareholde…"
+    },
+    "cdi_pct": {
+     "v": 3.75,
+     "src": "https://www.sec.gov/Archives/edgar/data/776901/000077690124000173/investorpresentation.htm",
+     "q": "…y Transaction Assumptions ◼ INDB Earnings per Street Consensus ◼ EBTC Earnings per INDB Management Earnings ◼ Core Deposit Intangible of 3.75% of Enterprise’s core deposits; amortized over 10 years using sum-of-years digits methodIntangibles ◼ Estimated c…"
     }
    }
   },

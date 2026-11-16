@@ -125,3 +125,5 @@ h2 a.hint{margin-left:8px;color:var(--acc)}
 .bmdet{padding:6px 4px 10px;white-space:normal;position:sticky;left:0;width:min(1250px,calc(100vw - 110px))}.bmdet .sumtbl td{white-space:normal;vertical-align:top}.bmdet .qq{color:var(--mut);font-size:11.5px;max-width:640px}.bmdet a{color:var(--acc)}
 .bmtbl .tag{display:inline-block;margin-left:6px;padding:0 5px;border-radius:4px;background:var(--acc2,#a371f7);color:#fff;font-size:9.5px;font-weight:700;vertical-align:1px}
 .bmtbl tr.bmr:hover td.sl,.bmtbl tr.bmr.open td.sl{background:#16202b}
+
+.bmtbl .tag.auto{background:#e3b341;color:#111}.bmtbl .tag.scan{background:rgba(139,148,158,.35);color:#e6edf3}

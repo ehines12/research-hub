@@ -121,6 +121,16 @@
      "v": "2H 2025",
      "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
      "q": "…er shareholders and regulatory approvals Expected Closing ▪ Expected closing in the second half of 2025 1) Based on closing price of Columbia common stock of $22.77 as of April 22, 2025 Note: Assumes 97,069,001 Pa…"
+    },
+    "pf_assets_b": {
+     "v": 70.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex991.htm",
+     "q": "…ve merger agreement, pursuant to which Columbia will acquire Pacific Premier in an all-stock transaction. The combined company will have approximately $70 billion in assets and will be a market leader in the largest banking markets within the Western U.S. Clint Stein, President, CE…"
+    },
+    "cdi_pct": {
+     "v": 3.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/887343/000119312525091469/d908038dex992.htm",
+     "q": "…over remaining life of loans ) ▪ Day two CECL reserve of $48 million, equal to the mark on non-PCD loans CDI▪ Core deposit intangible of 3.3% of Pacific Premier’s core deposits (amortized over 10 years -ofusi -yng ea rs sum digits) Other Assumptions▪ Pac…"
     }
    }
   },
@@ -223,6 +233,11 @@
      "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054277/tm2516417d1_ex99-1.htm",
      "q": "…¹ Total Assets $4.1B Total Loans $1.3B Total Deposits $3.5B ROAA 1.11% As of June 30, 2024Branch Market Rank Deposits Count Share Institution (#) ($M) (#) (%) Villages Bancorporati…",
      "note": "As shown in the deck financial highlights"
+    },
+    "cdi_pct": {
+     "v": 3.2,
+     "src": "https://www.sec.gov/Archives/edgar/data/730708/000110465925054274/tm2516417d1_ex99-1.htm",
+     "q": "…itional estimated $31.0 million for Day 2 CECL Provision for non - PCD loans Loan Mark and CECL Assumptions • Core deposit intangible assumed to equal 3.2% of VBI ’s core deposits, amortized SYD over 10 years • Fixed asset write - up of $6.8 million • Mortgage servici…"
     }
    }
   },
@@ -349,6 +364,12 @@
      "v": "Jan 1, 2026",
      "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-1.htm",
      "q": "…ther customary closing conditions. Pending these approvals, the transaction is anticipated to close on January 1, 2026. CONFERENCE CALL Commerce will host an investor call on Monday, June 16, at 10:00 a.m. (CT) / 11:00 a.m. (ET)…"
+    },
+    "cdi_pct": {
+     "v": 3.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/22356/000110465925059658/tm2517993d1_ex99-2.htm",
+     "q": "…ortfolio write - down, accreted over 4 years using straight - line methodology Other Fair Value (Pre - tax) • Core deposit intangible of 3.0% of non - time deposits, amortized sum - of - years digits over 10 years • Customer relationship intangible of 0.…",
+     "note": "% of non-time deposits"
     }
    }
   },
@@ -555,6 +576,12 @@
      "v": 61,
      "src": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-1.htm",
      "q": "…is a financial services company based in Columbus, Georgia, with approximately $61 billion in assets. Synovus provides commercial and consumer banking and a full suite of specialized products and services, incl…"
+    },
+    "cdi_pct": {
+     "v": 2.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/1115055/000114036125027137/ef20052543_ex99-2.htm",
+     "q": "…posits mark $237 million pre‐tax write‐up of fixed assets (primarily branch related) Identifiable Intangibles Core deposit intangible of 2.4% of Synovus' total core deposits excluding jumbo CDs $197 million wealth intangible Capital Pro forma common divi…",
+     "note": "% of total core deposits excl. jumbo CDs"
     }
    }
   },
@@ -871,6 +898,12 @@
      "v": "1H 2026",
      "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
      "q": "…FG shareholders required • Customary regulatory approvals • Anticipated closing in the first half of 2026 7 $808mm Gross Loans 2 Banking Offices $107K Median HHI 13.2% Proj. ’25-’30 HHI Δ Overview of Nicolet Banksha…"
+    },
+    "cdi_pct": {
+     "v": 3.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/1174850/000117485025000056/exhibit992nicmofgmergerp.htm",
+     "q": "…ology • $8 million funding liabilities write-down, amortized over remaining lives of individual liabilities • Core deposit intangible of 3.40% of non-time deposits, amortized sum-of-the-years digits over 10 years • Customer list intangible of 0.40% of tot…",
+     "note": "% of non-time deposits"
     }
    }
   },
@@ -1215,6 +1248,11 @@
      "v": "2Q 2026",
      "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancpressreleasefinal.htm",
      "q": "…d into transfer, voting and registration rights agreements. The transaction is expected to close in the second quarter of 2026 subject to customary closing conditions including the receipt of regulatory approvals. Evercore served as fin…"
+    },
+    "cdi_pct": {
+     "v": 3.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/7789/000000778925000189/asb-ancinvestorpresentat.htm",
+     "q": "…t line over 30 years ▪ Other fixed asset mark down of $4.8M pre-tax, depreciated straight line over 5 years ▪ Core deposit intangible equal to 3% of American National core deposits at close, amortized sum- of-years-digits over 10 years ▪ Pre-tax annual reduc…"
     }
    }
   },
@@ -1463,6 +1501,11 @@
      "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex991.htm",
      "q": "…ing Long Island Footprint (1) Branch Locations (30) Balance $8.9bn $7.4bn $6.6bn Sheet Assets Deposits Net Loans New York Suffolk Deposit Nassau ~7 years ~$41,000 90% Queens Franchise Average Tenure (2) Avg. Deposit Size (…",
      "note": "Net loans"
+    },
+    "pf_assets_b": {
+     "v": 23.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/1004702/000119312525335646/d51796dex992.htm",
+     "q": "…ch markets of Suffolk, Nassau, Queens, Brooklyn, and Manhattan counties. Following closing of the merger, the combined company is expected to have approximately $23 billion in assets, $17 billion in total loans, and $18 billion in total deposits across 71 retail branches. OceanFirst concurre…"
     }
    }
   },
@@ -1594,6 +1637,12 @@
      "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex992.htm",
      "q": "…ic Banks – Profitability and Asset Quality Deposit Rankings 1.12% 4.21% 61.6% <0.01% ❖ Highly experienced management team and board with deep Core ROAA NIM Efficiency NCO / local knowledge and s…",
      "note": "Core ROAA as shown in deck"
+    },
+    "pf_assets_b": {
+     "v": 54.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/1068851/000119312526025602/d103745dex992.htm",
+     "q": "…n other filings made by Prosperity and Stellar with the SEC from time to time. 2 Enhances Texas Footprint (1) Pro Forma Snapshot at Estimated Close Pro Forma Texas Branches $54B $33B $42B Assets Loans Deposits 78.9% 9.9% 34% (3) Loans HFI / Deposits TCE / TA NIB Deposits 10.0% 13.6% 14.6% Leverage Ratio…",
+     "note": "Pro forma snapshot at estimated close: $54B assets / $33B loans / $42B deposits"
     }
    }
   },
@@ -1910,6 +1959,12 @@
      "v": "By end of 2026",
      "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-1.htm",
      "q": "…and TriCo unanimously approved the definitive agreement and the parties expect to close the transaction by the end of 2026, subject to the receipt of required regulatory approvals, approval by First Hawaiian and TriCo shareholders a…"
+    },
+    "cdi_pct": {
+     "v": 3.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/36377/000110465926082856/tm2620283d1_ex99-2.htm",
+     "q": "…ark at close; mark accreted sum - of - the - years - digits over 2 years Interest Rate & Fair Value Marks 1 • Core deposit intangible of 3.0% of TriCo’s total core deposits excluding time deposits – Amortized sum - of - the - years - digits over 10 years…",
+     "note": "% of core deposits excl. time deposits"
     }
    }
   },
@@ -2015,6 +2070,11 @@
      "v": "Early 2027",
      "src": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-1.htm",
      "q": "…lders owning approximately 40.8%. The transaction, which is expected to be completed in early 2027 and be tax-free for both EverBank Financial Corp and WaFd, Inc. common shareholders, is subject to regulatory…"
+    },
+    "pf_assets_b": {
+     "v": 75.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/936528/000114036126035826/ef20081702_ex99-2.htm",
+     "q": "…t; S&P Global Market Intelligence Note: Financial data as June 30, 2026; Market data as of September 4, 2026; Pro forma metrics are represented at close and fully-synergized where applicable $75B Assets 74% Commercial Loans $58B Loans 45% 2027E Efficiency Ratio 15%+ 2027E ROATCE $59B Deposits 82% insured Nation…"
     }
    }
   },
@@ -2144,6 +2204,11 @@
      "v": "1H 2027",
      "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerpressrelease.htm",
      "q": "…actices and director evaluation process. The acquisition is expected to close during the first half of 2027, subject to the satisfaction of customary closing conditions, including regulatory approvals and the approval…"
+    },
+    "pf_assets_b": {
+     "v": 14.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000205/projectpioneerpressrelease.htm",
+     "q": "…ry, Peoples Bank, in a transaction valued at approximately $728.1 million. Upon completion of the Merger, the combined company is expected to have approximately $14 billion in total assets, $10 billion in total loans and $11 billion in total deposits, with over 150 banking locations across eight s…"
     }
    }
   },
@@ -2211,6 +2276,141 @@
      "v": "1Q 2027",
      "src": "https://www.sec.gov/Archives/edgar/data/101382/000119312526434196/umbf-ex99_1.htm",
      "q": "…pprovals and approval by the shareholders of El Dorado, and is expected to close in the first quarter of 2027. Sullivan & Cromwell LLP served as legal counsel to UMB. Piper Sandler & Co. served as financial advisor and…"
+    }
+   }
+  },
+  {
+   "id": "hwc-trmk",
+   "announced": "2026-11-12",
+   "acquirer": "Hancock Whitney",
+   "acq_ticker": "HWC",
+   "target": "Trustmark",
+   "tgt_ticker": "TRMK",
+   "deal_type": "Acquisition",
+   "sources": {
+    "Press release (8-K Ex. 99.1)": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_1.htm",
+    "Investor presentation (8-K Ex. 99.2)": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_2.htm"
+   },
+   "f": {
+    "tgt_state": {
+     "v": "MS",
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_1.htm",
+     "q": "…on is available at www.hancockwhitney.com . 2 About Trustmark Trustmark Corporation is a bank holding company headquartered in Jackson, Mississippi, with assets of $19.1 billion as of September 30, 2026. Trustmark Corporation trades on the NASDAQ under the…"
+    },
+    "deal_value_m": {
+     "v": 3200,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_1.htm",
+     "q": "…tive agreement and plan of merger, pursuant to which Trustmark will merge with and into Hancock Whitney in an all-stock transaction valued at approximately $3.2 billion. This merger establishes a premier Gulf South regional bank with approximately $58 billion in assets and a pr…"
+    },
+    "price_per_share": {
+     "v": 54.02,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_2.htm",
+     "q": "…om HWC and TRMK shareholders and customary regulatory approvals Closing: Estimated late first quarter of 2027 Consideration: ~$54.02 per share or $3.2B in aggregate transaction value Price / TBV: 1.78x Pay-to-Trade: 93% Price / 2028E EPS: 11.8x Price /…",
+     "note": "Based on HWC close on 11/11/2026"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_1.htm",
+     "q": "…ncock Whitney name and brand. Transaction Terms Under the terms of the merger agreement, Hancock Whitney will issue 0.7463 shares of common stock for each outstanding share of Trustmark common stock in a 100% stock transaction. Based on Hancock Whitney’s closing stock price on November 11, 2026, the consideration implies an aggregate…",
+     "note": "0.7463 HWC shares per TRMK share (fixed exchange ratio)"
+    },
+    "p_tbv": {
+     "v": 1.78,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_2.htm",
+     "q": "…Estimated late first quarter of 2027 Consideration: ~$54.02 per share or $3.2B in aggregate transaction value Price / TBV: 1.78x Pay-to-Trade: 93% Price / 2028E EPS: 11.8x Price / fully-synergized 2028E EPS: 7.2x Board of Directors: 5 dir…"
+    },
+    "p_fwd_eps": {
+     "v": 11.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_2.htm",
+     "q": "…Consideration: ~$54.02 per share or $3.2B in aggregate transaction value Price / TBV: 1.78x Pay-to-Trade: 93% Price / 2028E EPS: 11.8x Price / fully-synergized 2028E EPS: 7.2x Board of Directors: 5 directors from TRMK, including President and C…",
+     "note": "2028E EPS (7.2x fully-synergized 2028E)"
+    },
+    "tgt_assets_b": {
+     "v": 19.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_2.htm",
+     "q": "…2026 Overview of Trustmark Branch Footprint Financial Highlights(1) Trustmark at a Glance $13.9B Gross Loans $19.1B Assets $16.1B Deposits 64% Efficiency 1.22% ROAA 3.87% NIM 12.0% CET1 Ratio 0.09% 5-year Avg. NCOs / Avg. Loans 19%…",
+     "note": "9/30/2026"
+    },
+    "tgt_deposits_b": {
+     "v": 16.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_2.htm",
+     "q": "…of Trustmark Branch Footprint Financial Highlights(1) Trustmark at a Glance $13.9B Gross Loans $19.1B Assets $16.1B Deposits 64% Efficiency 1.22% ROAA 3.87% NIM 12.0% CET1 Ratio 0.09% 5-year Avg. NCOs / Avg. Loans 19% Fee Income / Rev…"
+    },
+    "tgt_loans_b": {
+     "v": 13.9,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_2.htm",
+     "q": "…as of September 30, 2026 Overview of Trustmark Branch Footprint Financial Highlights(1) Trustmark at a Glance $13.9B Gross Loans $19.1B Assets $16.1B Deposits 64% Efficiency 1.22% ROAA 3.87% NIM 12.0% CET1 Ratio 0.09% 5-year Avg. NCOs / A…"
+    },
+    "tgt_roaa": {
+     "v": 1.22,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_2.htm",
+     "q": "…Financial Highlights(1) Trustmark at a Glance $13.9B Gross Loans $19.1B Assets $16.1B Deposits 64% Efficiency 1.22% ROAA 3.87% NIM 12.0% CET1 Ratio 0.09% 5-year Avg. NCOs / Avg. Loans 19% Fee Income / Revenue Regional Footprint: B…",
+     "note": "9/30/2026"
+    },
+    "eps_accr": {
+     "v": 7,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_1.htm",
+     "q": "…ation implies an aggregate transaction value of approximately $3.2 billion. The transaction is expected to be approximately 7% accretive to Hancock Whitney’s 2028 estimated earnings per share, mildly dilutive to regulatory capital at close, and approximately 7% dilutive to tangible book value per sha…",
+     "note": "2028E, fully phased cost saves"
+    },
+    "tbv_dil": {
+     "v": 7,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_1.htm",
+     "q": "…e to Hancock Whitney’s 2028 estimated earnings per share, mildly dilutive to regulatory capital at close, and approximately 7% dilutive to tangible book value per share with earn-back in approximately 2.8 years inclusive of merger expenses. At close, Hancock Whitney’s sharehold…"
+    },
+    "earnback": {
+     "v": 2.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_1.htm",
+     "q": "…dilutive to regulatory capital at close, and approximately 7% dilutive to tangible book value per share with earn-back in approximately 2.8 years inclusive of merger expenses. At close, Hancock Whitney’s shareholders will own approximately 65% and Trustmark shareholders will own appr…"
+    },
+    "cost_saves": {
+     "v": 35,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_2.htm",
+     "q": "…inancial Assumptions Earnings forecast based on consensus analyst estimates for Hancock Whitney and Trustmark $205.5 million of pre-tax run-rate net expense savings, or 35% of Trustmark’s noninterest expense Realized 37.5% in 2027E and 100% thereafter Revenue synergies identified but not included in model $250 milli…",
+     "note": "$205.5M pre-tax; 37.5% realized in 2027E, 100% thereafter"
+    },
+    "credit_mark_pct": {
+     "v": 1.26,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_2.htm",
+     "q": "…ut not included in model $250 million in pre-tax merger expenses, realized 100% at closing for model purposes $180.8 million gross loan credit mark or 1.26% of gross loans at close (~1.2x current TRMK reserves) $(175.4) million pre-tax loan mark at close; mark accreted SYD over the expecte…"
+    },
+    "credit_mark_m": {
+     "v": 180.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_2.htm",
+     "q": "…ut not included in model $250 million in pre-tax merger expenses, realized 100% at closing for model purposes $180.8 million gross loan credit mark or 1.26% of gross loans at close (~1.2x current TRMK reserves) $(175.4) million pre-tax loan mark at close; m…"
+    },
+    "rate_mark_m": {
+     "v": 175.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_2.htm",
+     "q": "…purposes $180.8 million gross loan credit mark or 1.26% of gross loans at close (~1.2x current TRMK reserves) $(175.4) million pre-tax loan mark at close; mark accreted SYD over the expected life of the loans $(102.8) million AOCI at close; mark accreted SYD over…",
+     "note": "Plus $(102.8)M AOCI and $(5.6)M sub debt marks"
+    },
+    "cdi_pct": {
+     "v": 3.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_2.htm",
+     "q": "…for cash flow hedges $(5.6) million pre-tax subordinated debt mark at close; mark accreted SL over 3.5 years Core deposit intangible of 3.5% of Trustmark’s total core deposits Amortized SYD over 9 years $50 million of wealth intangible created at close Amortized SL over 24 years Earni…",
+     "note": "Amortized SYD over 9 years; plus $50M wealth intangible"
+    },
+    "pf_cet1": {
+     "v": 11.2,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_2.htm",
+     "q": "…etion (~7%) TBV Dilution ~2.8 years TBV Earnback ~1.6% ‘28E ROA 17%-18% ‘28E ROTCE <50% ‘28E Efficiency Ratio 11.2% CET1 Ratio 8.2% TCE/TA Ratio 13.2% Total Capital Ratio Improved deposit share position in 5 of 6 states Top 5 deposit ra…"
+    },
+    "pf_assets_b": {
+     "v": 58,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_1.htm",
+     "q": "…saction valued at approximately $3.2 billion. This merger establishes a premier Gulf South regional bank with approximately $58 billion in assets and a presence across six Southeastern states, combining the scale and capabilities of a larger institution w…"
+    },
+    "tgt_own": {
+     "v": 35,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_1.htm",
+     "q": "…8 years inclusive of merger expenses. At close, Hancock Whitney’s shareholders will own approximately 65% and Trustmark shareholders will own approximately 35% of the combined company. Advisors Raymond James & Associates, Inc. is serving as financial advisor to Hancock…"
+    },
+    "expected_close": {
+     "v": "1Q 2027",
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526457037/hwc-ex99_1.htm",
+     "q": "…Board will enhance Hancock Whitney’s business development opportunities throughout the region. The merger is expected to close late in the first quarter of 2027, subject to the receipt of regulatory approvals, approval by Hancock Whitney and Trustmark shareholders, and…",
+     "note": "Late 1Q 2027"
     }
    }
   }

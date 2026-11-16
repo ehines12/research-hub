@@ -89,9 +89,9 @@ jobs:
           python3 companies/nowcast/evr_quarterly.py || echo "::warning::EVR quarterly refresh failed; previous data kept"
 
       - name: Bank M&A status / close-date refresh (warn-only)
-        # Only re-checks deals still marked pending (acquirer or target 8-K Item 2.01 / 1.02 on EDGAR). Never adds deals:
-        # the deal list is curated in companies/bank_ma/deals_*.json (2024 through Nov 2026). Checks pending deals for completion /
-        # termination 8-Ks and lists new >$500M bank merger 8-Ks as review candidates (never auto-added).
+        # Only re-checks deals still marked pending (acquirer or target 8-K Item 2.01 / 1.02 on EDGAR), including rows the weekly
+        # scan auto-added. New deals come from the weekly EDGAR scan (.github/workflows/bank-ma-weekly.yml, bank_ma_scan.py);
+        # the curated list is companies/bank_ma/deals_*.json.
         continue-on-error: true
         run: |
           python3 -m pip install --quiet openpyxl || true

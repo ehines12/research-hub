@@ -1,0 +1,2511 @@
+{
+ "coverage_start": "2026-01-01",
+ "last_scanned": "2026-11-16 13:59",
+ "last_window": [
+  "2026-11-09",
+  "2026-11-16"
+ ],
+ "note": "2026 YTD backfilled from an EDGAR full-text sweep (8-K + 425, bank/thrift SICs) on 2026-11-16; rows hand-checked. Later rows come from the weekly scan.",
+ "deals": [
+  {
+   "id": "stock-field",
+   "announced": "2026-01-27",
+   "acquirer": "Stock Yards Bancorp",
+   "acq_ticker": "SYBT",
+   "target": "Field & Main Bancorp",
+   "tgt_ticker": null,
+   "f": {
+    "expected_close": {
+     "v": "2Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/835324/000143774926002224/sybt20260127_425.htm",
+     "q": "…confidential information in connection with certain proposals for an alternative acquisition. The Mergers are anticipated to be completed in the second quarter of 2026 and are subject to the satisfaction of customary conditions, including (i) receipt of the Field & Main Shareh…"
+    },
+    "deal_value_m": {
+     "v": 105.7,
+     "src": "https://www.sec.gov/Archives/edgar/data/835324/000143774926002224/ex_912683.htm",
+     "q": "…ck Yards’ common stock of $68.01 on January 26, 2026, the implied per share purchase price is $44.55, with an aggregate transaction value of approximately $105.7 million. The transaction is expected to be 5.7% accretive to Stock Yards’ earnings per share once cost savings are fu…"
+    },
+    "eps_accr": {
+     "v": 5.7,
+     "src": "https://www.sec.gov/Archives/edgar/data/835324/000143774926002224/ex_912683.htm",
+     "q": "…44.55, with an aggregate transaction value of approximately $105.7 million. The transaction is expected to be 5.7% accretive to Stock Yards’ earnings per share once cost savings are fully phased in. In addition, tangible book value dilution is expected to be approximat…"
+    },
+    "price_per_share": {
+     "v": 44.55,
+     "src": "https://www.sec.gov/Archives/edgar/data/835324/000143774926002224/ex_912683.htm",
+     "q": "…ck Yards’ common stock of $68.01 on January 26, 2026, the implied per share purchase price is $44.55, with an aggregate transaction value of approximately $105.7 million. The transaction is expected to be 5.7% accretive to Stock Yards’ earnings per share once cost savings are fu…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/835324/000143774926002224/sybt20260127_425.htm"
+   },
+   "parties_q": "…, a Kentucky corporation and direct, wholly owned subsidiary of Stock Yards (“ Merger Sub ”), and Field & Main Bancorp, Inc…",
+   "roles": {
+    "835324": "acq"
+   },
+   "status": "closed",
+   "origin": "backfill",
+   "first_seen": "2026-11-16",
+   "close_date": "2026-05-01",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/835324/000117184326002914/f8k_043026.htm",
+   "close_q": "On May 1, 2026, the Company issued a press release announcing the completion of its previously announced acquisition of Field & Main (the “Merger”)",
+   "close_filed": "2026-05-01"
+  },
+  {
+   "id": "fs-pacific",
+   "announced": "2026-02-25",
+   "acquirer": "FS Bancorp",
+   "acq_ticker": "FSBW",
+   "target": "Pacific West Bancorp",
+   "tgt_ticker": "PWBK",
+   "f": {
+    "deal_value_m": {
+     "v": 34.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/1530249/000093905726000060/fsbanc8k22526exh991.htm",
+     "q": "…n of merger (the “Agreement”) whereby Pacific West will merge into FS Bancorp in a stock and cash transaction valued at approximately $34.6 million. As of December 31, 2025, on a pro forma consolidated basis, the combined company would have approximately $3…"
+    },
+    "eps_accr": {
+     "v": 7.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/1530249/000093905726000060/fsbanc8k22526exh991.htm",
+     "q": "…e transaction is expected to be immediately accretive to FS Bancorp’s earnings per share, with projected 2027 EPS accretion of 7.4%, and dilutive to FS Bancorp’s tangible book value with projected TBV dilution at close of 2.2% and an earnbac…"
+    },
+    "earnback": {
+     "v": 2.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/1530249/000093905726000060/fsbanc8k22526exh991.htm",
+     "q": "…of 7.4%, and dilutive to FS Bancorp’s tangible book value with projected TBV dilution at close of 2.2% and an earnback period of approximately 2.4 years. The boards of directors of FS Bancorp and Pacific West have unanimously approved the proposed merger. The cl…"
+    },
+    "pf_assets_b": {
+     "v": 3.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/1530249/000093905726000060/fsbanc8k22526exh991.htm",
+     "q": "…action valued at approximately $34.6 million. As of December 31, 2025, on a pro forma consolidated basis, the combined company would have approximately $3.6 billion in assets, $3.0 billion in loans, $3.0 billion in deposits, and 31 branch locations throughout the Pacific Northwest. P…"
+    },
+    "consideration": {
+     "v": "Cash & stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/1530249/000093905726000060/fsbanc8k22526exh991.htm",
+     "q": "…ve merger agreement and plan of merger (the “Agreement”) whereby Pacific West will merge into FS Bancorp in a stock and cash transaction valued at approximately $34.6 million. As of December 31, 2025, on a pro forma consolidated basis…"
+    },
+    "expected_close": {
+     "v": "3Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/1530249/000093905726000060/fsbanc8k22526.htm",
+     "q": "…the receipt of regulatory approvals and approval of the Agreement by the shareholders of Pacific West, and is expected to be completed in the third quarter of 2026. Forward-Looking Statements This press release contains forward-looking statements regarding FS Bancorp, Paci…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/1530249/000093905726000060/fsbanc8k22526exh991.htm"
+   },
+   "parties_q": "…(“FS Bancorp”) (NASDAQ: FSBW) and Pacific West Bancorp (“Pacific West”) (OTCPK: PWBK) announced today the signing of a definitive merger agreement and plan of merger (the “Agreement”) whereby Pacific West will merge into FS Bancorp in a stock and cash transaction valued at approximately $34…",
+   "roles": {
+    "1530249": "acq"
+   },
+   "status": "closed",
+   "origin": "backfill",
+   "first_seen": "2026-11-16",
+   "close_date": "2026-08-19",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/1530249/000093905726000205/8k82026.htm",
+   "close_q": "Effective August 19, 2026, FS Bancorp, Inc, Mountlake Terrace, Washington (“FS Bancorp”), the parent company of 1st Security Bank of Washington, completed its previously announced acquisition of Pacific West Bancorp (“Pacific West Bancorp”), the parent company of Pacific West Bank, located in Portla",
+   "close_filed": "2026-08-21"
+  },
+  {
+   "id": "esquire-signature",
+   "announced": "2026-03-12",
+   "acquirer": "Esquire Financial Holdings",
+   "acq_ticker": "ESQ",
+   "target": "Signature Bancorporation",
+   "tgt_ticker": null,
+   "f": {
+    "deal_value_m": {
+     "v": 348.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/1531031/000110465926026781/tm268605d1_ex99-3.htm",
+     "q": "…Signature shareholders based on the closing price of Esquire common stock on March 11, 2026, or approximately $348.4 million in aggregate transaction value. The exchange ratio is subject to an adjustment based on the disposition value of certain Signature Bank loan…"
+    },
+    "eps_accr": {
+     "v": 23.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/1531031/000110465926026781/tm268605d1_ex99-3.htm",
+     "q": "…spects to Accelerate Shareholder Value Creation: Pro forma calculations of the combined company indicate GAAP EPS accretion of 23% for Esquire in 2027 with no associated revenue enhancement in the pro forma calculations. The transaction is…"
+    },
+    "pf_assets_b": {
+     "v": 4.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/1531031/000110465926026781/tm268605d1_ex99-3.htm",
+     "q": "…efinitive merger agreement, pursuant to which Esquire will acquire Signature in an all-stock transaction. The combined company will have approximately $4.8 billion in assets at closing, joining Esquire’s established national verticals with Signature’s established Chicago commercial…"
+    },
+    "expected_close": {
+     "v": "3Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/1531031/000110465926026781/tm268605d1_ex99-3.htm",
+     "q": "…d Signature shareholders, and other customary closing conditions. Pending these approvals, the transaction is anticipated to close in the third quarter of 2026. Piper Sandler & Co. is serving as financial advisor and Luse Gorman, PC is serving as legal advisor to Esqui…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/1531031/000110465926026781/tm268605d1_ex99-3.htm",
+     "q": "…they have entered into a definitive merger agreement, pursuant to which Esquire will acquire Signature in an all-stock transaction. The combined company will have approximately $4.8 billion in assets at closing, joining Esquire’…",
+     "note": "2.63 acquirer shares per target share"
+    },
+    "price_per_share": {
+     "v": 260.48,
+     "src": "https://www.sec.gov/Archives/edgar/data/1531031/000110465926026781/tm268605d1_ex99-4.htm",
+     "q": "…Branding Expected Closing Transaction Price per Signature share: $260.48 Aggregate transaction value: $348.4M Price / Tangible Book Value per Share: 1.53x Price / LTM GAAP EPS: 9.0x Pay - to - Trade Ratio: 52% Two Signature directors will join the Esquire board of…",
+     "note": "Midpoint of the exchange-ratio collar shown in the deck"
+    },
+    "p_tbv": {
+     "v": 1.53,
+     "src": "https://www.sec.gov/Archives/edgar/data/1531031/000110465926026781/tm268605d1_ex99-4.htm",
+     "q": "…Branding Expected Closing Transaction Price per Signature share: $260.48 Aggregate transaction value: $348.4M Price / Tangible Book Value per Share: 1.53x Price / LTM GAAP EPS: 9.0x Pay - to - Trade Ratio: 52% Two Signature directors will join the Esquire board of…"
+    },
+    "p_ltm_eps": {
+     "v": 8.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/1531031/000110465926026781/tm268605d1_ex99-4.htm",
+     "q": "…¹ Transaction Price per Share $247.60 $260.48 $277.31 Price / Tangible Book Value per Share 1.45x 1.53x 1.63x Price / LTM EPS 8.6x 9.0x 9.6x Pay-to-Trade Ratio 50% 52% 56% Schedule A Loans Assumption Schedule A Loans Recovery Rate 0% - 10%…"
+    },
+    "cost_saves": {
+     "v": 5.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/1531031/000110465926026781/tm268605d1_ex99-4.htm",
+     "q": "…- tax) Other Assumptions : Estimated $1.1M (~50% of ~$2.1M of 2027 full run - rate) cost savings in 2027 , or 5% of Signature’s noninterest expense Revenue synergies associated with industry leading growth of Esquire’s nationwide litigation vertical have be…"
+    },
+    "cdi_pct": {
+     "v": 2.7,
+     "src": "https://www.sec.gov/Archives/edgar/data/1531031/000110465926026781/tm268605d1_ex99-4.htm",
+     "q": "…sumed fixed exchange ratio: Signature shareholders will receive 2.630 Esquire shares for each Signature share Core deposit intangible: 2.7% of Signature’s $1.3B core deposits (amortized over 10 years using sum - of - years digits) Pro forma tax rate of…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/1531031/000110465926026781/tm268605d1_ex99-1.htm"
+   },
+   "parties_q": "…, a Maryland corporation and a wholly-owned subsidiary of Esquire (“ Merger Sub ”), have entered into an Agreement and Plan of Merger, dated as of the same date hereof (as amended or modified from time to time, the “ Merger Agreement” ), pursuant to which, among other things, Merger Sub will be merged with and into Signature, with Signature as the surviving corporation (the “ Interim Surviving Corporation” ) in such merger (the “ Merger” ) and, immediately following the Merger, the Interim Surviving Corporation will merge with and into…",
+   "roles": {
+    "1531031": "acq"
+   },
+   "status": "closed",
+   "origin": "backfill",
+   "first_seen": "2026-11-16",
+   "close_date": "2026-08-01",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/1531031/000110465926089537/tm2621793d1_8k.htm",
+   "close_q": "Effective on August 1, 2026, Esquire Financial Holdings, Inc, a Maryland corporation (“Esquire”), completed its previously announced merger with Signature Bancorporation, Inc, an Illinois corporation (“Signature”), pursuant to the Agreement and Plan of Merger, dated as of March 11, 2026 (the “Merger",
+   "close_filed": "2026-08-03"
+  },
+  {
+   "id": "independent-hcb",
+   "announced": "2026-03-18",
+   "acquirer": "Independent Bank Corporation",
+   "acq_ticker": "IBCP",
+   "target": "HCB Financial Corp.",
+   "tgt_ticker": "HCBN",
+   "f": {
+    "deal_value_m": {
+     "v": 70.2,
+     "src": "https://www.sec.gov/Archives/edgar/data/39311/000003931126000020/ibcp-20260318ex991jointpre.htm",
+     "q": "…of a definitive merger agreement under which HCB will merge with Independent in a cash and stock transaction valued at approximately $70.2 million, as detailed below. The partnership combines two of Michigan’s most people-focused and community-oriented fra…"
+    },
+    "eps_accr": {
+     "v": 6.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/39311/000003931126000020/ibcp-20260318ex991jointpre.htm",
+     "q": "…gate consideration paid to HCB shareholders of approximately $70.2 million. The transaction is expected to be approximately 6% accretive to Independent’s 2027 earnings per share, assuming fully phased-in synergies. The estimated tangible book value per share dilution of 4% at closing is…"
+    },
+    "tbv_dil": {
+     "v": 4.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/39311/000003931126000020/ibcp-20260318ex991jointpre.htm",
+     "q": "…tely 6% accretive to Independent’s 2027 earnings per share, assuming fully phased-in synergies. The estimated tangible book value per share dilution of 4% at closing is expected to be earned back in approximately 3.4 years using the crossover method. Independent w…"
+    },
+    "pf_cet1": {
+     "v": 11.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/39311/000003931126000020/ibcp-20260318ex991jointpre.htm",
+     "q": "…sing the crossover method. Independent will maintain a robust capital position post-closing, with a projected CET1 ratio of approximately 11.5%. One HCB director will join each of the Board of Directors of Independent and the Board of Directors of Indep…"
+    },
+    "pf_assets_b": {
+     "v": 6.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/39311/000003931126000020/ibcp-20260318ex991jointpre.htm",
+     "q": "…e high-growth corridor between Grand Rapids and Lansing. Based on financial data as of December 31, 2025, the combined organization will have approximately $6.1 billion in total assets, $5.3 billion in total deposits, and $4.7 billion in total loans. Strategic Rationale This transaction aligns…"
+    },
+    "expected_close": {
+     "v": "3Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/39311/000003931126000020/ibcp-20260318ex991jointpre.htm",
+     "q": "…1 members. The transaction has been unanimously approved by the respective Boards of each organization and is expected to close early in the third quarter of 2026, subject to customary regulatory approvals, the approval of HCB shareholders, and the satisfaction of certain…"
+    },
+    "consideration": {
+     "v": "Cash & stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/39311/000003931126000020/ibcp-20260318ex991jointpre.htm",
+     "q": "…nounced today the execution of a definitive merger agreement under which HCB will merge with Independent in a cash and stock transaction valued at approximately $70.2 million, as detailed below. The partnership combines two of Michiga…",
+     "note": "1.59 acquirer shares per target share"
+    },
+    "price_per_share": {
+     "v": 70.19,
+     "src": "https://www.sec.gov/Archives/edgar/data/39311/000003931126000020/investorpresentationmarc.htm",
+     "q": "…illion(1)(2) ▪ Fixed exchange ratio of 1.590 IBCP shares plus $17.51 in cash for each HCBN share outstanding; equates to $70.19 per share of HCBN stock(1) ▪ Implied consideration mix of approximately 75% stock / 25% cash(1)(2) Structure & Consider…"
+    },
+    "cost_saves": {
+     "v": 40.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/39311/000003931126000020/investorpresentationmarc.htm",
+     "q": "…ons based on IBCP management’s estimates following comprehensive due diligence Earnings ▪ Cost saves equal to 40.0% of HCBN’s noninterest expense (50% phased in 2026; 100% in 2027) ▪ Revenue synergies were identified, but not included Cost Savings ▪ One-t…"
+    },
+    "credit_mark_m": {
+     "v": 4.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/39311/000003931126000020/investorpresentationmarc.htm",
+     "q": "…f $8.8 million, fully realized in pro forma tangible book value estimate at closing Transaction Costs ▪ Gross credit mark of $4.0 million, or 1.1% of HCBN’s MRQ loans held for investment (1.0x 12/31 ACL) o Utilizes early adoption of FASB’s new sta…"
+    },
+    "cdi_pct": {
+     "v": 2.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/39311/000003931126000020/investorpresentationmarc.htm",
+     "q": "…oan interest rate write-down, accreted over 4 years using straight-line methodology Loan Interest Rate Mark ▪ Core deposit intangible of 2.50% of non-time deposits, amortized sum-of-years digits over 10 yearsIntangibles ▪ Unrealized AFS securities portfol…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/39311/000003931126000020/ibcp-20260318ex21agreement.htm"
+   },
+   "parties_q": "…93 iv AGREEMENT AND PLAN OF MERGER This AGREEMENT AND PLAN OF MERGER (this “ Merger Agreement ”) is made as of March 18, 2026 (the “ Signing Date ”), by and between Independent Bank Corporation , a Michigan corporation (“ Purchaser ”), and HCB Financial Corporation , a Michigan corporation (“ Company ”)…",
+   "roles": {
+    "39311": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "fidelity-affinity",
+   "announced": "2026-03-31",
+   "acquirer": "Fidelity BancShares (N.C.)",
+   "acq_ticker": null,
+   "target": "Affinity Bancshares",
+   "tgt_ticker": "AFBI",
+   "f": {
+    "deal_value_m": {
+     "v": 142.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/1823406/000119312526134773/d138375dex992.htm",
+     "q": "…ity Bank has agreed to acquire 100% of the common stock of Affinity in an all-cash transaction (the “Merger”) valued at approximately $142.8 million. The transaction marks Fidelity’s entry into Georgia. “We are incredibly excited to welcome Affinity Bank’s c…"
+    },
+    "pf_assets_b": {
+     "v": 5.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/1823406/000119312526134773/d138375dex992.htm",
+     "q": "…g. In addition, Affinity stock options will be cashed out based on the in-the-money value of the options. The combined organization will have approximately $5.5 billion in total assets, $4.6 billion in total deposits, and $3.6 billion in loans. Following the close of the transaction, Fidelity…"
+    },
+    "expected_close": {
+     "v": "3Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/1823406/000119312526134773/d138375dex992.htm",
+     "q": "…ch. The boards of directors of both Fidelity and Affinity have unanimously approved the transaction, which is expected to close in the third quarter of 2026, subject to regulatory approvals, Affinity stockholder approval, and other customary closing conditions. Advi…"
+    },
+    "consideration": {
+     "v": "100% cash",
+     "src": "https://www.sec.gov/Archives/edgar/data/1823406/000119312526134773/d138375dex992.htm",
+     "q": "…tive merger agreement in which Fidelity Bank has agreed to acquire 100% of the common stock of Affinity in an all-cash transaction (the “Merger”) valued at approximately $142.8 million. The transaction marks Fidelity’s entry int…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/1823406/000119312526134773/d138375dex991.htm"
+   },
+   "parties_q": "…WHEREAS , BancShares, Fidelity and Affinity have entered into an Agreement and Plan of Merger, dated as of the date hereof (the “Merger Agreement”), pursuant to which Affinity and its wholly-owned subsidiary, Affinity Bank, National Association (“Bank”), will be acquired by Fidelity and all of the outstanding shares of Affinity Common Stock will be exchanged for and converted into the right to receive cash from Fidelity in accordance with the terms of the Merger Agreement; and WHEREAS , Stockholder owns, beneficially or of…",
+   "roles": {
+    "1823406": "tgt"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16",
+   "exp_update": {
+    "q": "The Mergers are expected to close August 1 , 2026, subject to the satisfaction of customary closing conditions",
+    "src": "https://www.sec.gov/Archives/edgar/data/1823406/000094337426000293/afbi-20260722.htm",
+    "filed": "2026-07-22"
+   }
+  },
+  {
+   "id": "catalyst-lakeside",
+   "announced": "2026-04-08",
+   "acquirer": "Catalyst Bancorp",
+   "acq_ticker": "CLST",
+   "target": "Lakeside Bancshares",
+   "tgt_ticker": "LKSB",
+   "f": {
+    "expected_close": {
+     "v": "3Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/1849867/000184986726000005/clst-20260407xex99d1.htm",
+     "q": "…he Merger Agreement was unanimously approved by the boards of directors of both companies. The transaction is expected to close in the third quarter of 2026, subject to customary closing conditions, including regulatory approvals and Lakeside shareholder approval. C…"
+    },
+    "consideration": {
+     "v": "100% cash",
+     "src": "https://www.sec.gov/Archives/edgar/data/1849867/000184986726000005/clst-20260407xex99d1.htm",
+     "q": "…d Plan of Share Exchange and Merger (the \"Merger Agreement\") under which Catalyst will acquire Lakeside in an all-cash transaction. The Merger Agreement also provides that Lakeside will be merged with and into Catalyst, with Cat…"
+    },
+    "deal_value_m": {
+     "v": 41.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/1849867/000184986726000005/clst-20260407xex99d2.htm",
+     "q": "…yst Bancorp, Inc. (CLST) & Lakeside Bancshares, Inc. (LKSB) • CLST to pay cash to LKSB shareholders Pricing • Aggregate deal value of $41.1M • Per share deal value of $19.58 • Price / TBV: 113.9% • Price / 2025 EPS: 22.0x • Price / 2027 EPS: 20.5x Ow…"
+    },
+    "p_fwd_eps": {
+     "v": 22.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/1849867/000184986726000005/clst-20260407xex99d2.htm",
+     "q": "…hareholders Pricing • Aggregate deal value of $41.1M • Per share deal value of $19.58 • Price / TBV: 113.9% • Price / 2025 EPS: 22.0x • Price / 2027 EPS: 20.5x Ownership • 100.0% CLST / 0.0% LKSB Headquarters • Opelousas, LA Pro Forma Entity •…"
+    },
+    "cost_saves": {
+     "v": 30.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/1849867/000184986726000005/clst-20260407xex99d2.htm",
+     "q": "…5 107 71 144 220 247 161 45 217 217 217 254 222 137 8 123 189 Estimated Cost Savings • Equal to approximately 30% of LKSB’s noninterest expense • $2.6 million in pre-tax cost savings expected in 2027 • 75% expected to be phased-in 2026; 100% in 2027 Est…"
+    },
+    "cdi_pct": {
+     "v": 3.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/1849867/000184986726000005/clst-20260407xex99d2.htm",
+     "q": "…on expenses • Fully reflected in computation of TBV Payback Period Estimated Marks on Balance Sheet Estimated Core Deposit Intangible • Core deposit intangible of 3.0% of LKSB’s estimated core deposits(1) at close • Amortized over 10 years using straight line Key M&A Assumptions…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/1849867/000184986726000005/clst-20260407xex99d1.htm"
+   },
+   "parties_q": "…C Markets: “LKSB”) (“Lakeside”), the parent company for Lakeside Bank, announced today the signing of a definitive Agreement and Plan of Share Exchange and Merger (the \"Merger Agreement\") under which Catalyst will acquire Lakeside in an all-cash transaction…",
+   "roles": {
+    "1849867": "acq"
+   },
+   "status": "closed",
+   "origin": "backfill",
+   "first_seen": "2026-11-16",
+   "close_date": "2026-07-14",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/1849867/000184986726000014/clst-20260714x8k.htm",
+   "close_q": "Effective as of July 14, 2026, Catalyst Bancorp, Inc (“Catalyst Bancorp”), a Louisiana corporation and the holding company for Catalyst Bank, a federally-chartered savings bank and wholly-owned subsidiary of Catalyst Bancorp, completed the previously announced acquisitions of Lakeside Bancshares, In",
+   "close_filed": "2026-07-14"
+  },
+  {
+   "id": "united-peach",
+   "announced": "2026-04-21",
+   "acquirer": "United Community Banks",
+   "acq_ticker": "UCB",
+   "target": "Peach State Bancshares",
+   "tgt_ticker": null,
+   "f": {
+    "deal_value_m": {
+     "v": 100.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/857855/000110465926045707/tm2612284d1_ex99-1.htm",
+     "q": "…, stock options will be cashed out at closing. Based on United’s stock price of $34.15 on April 17, 2026, the aggregate value of the Merger is $100.8 million. The Merger is expected to be accretive to United’s earnings per share by approximately $0.09 per share in 20…"
+    },
+    "expected_close": {
+     "v": "3Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/857855/000110465926045707/tm2612284d1_ex99-1.htm",
+     "q": "…Merger Agreement was unanimously approved by the boards of directors of United and Peach State. The Merger is expected to be completed in the third quarter of 2026 and is subject to customary conditions, including regulatory approval as well as the approval of Peach State’…"
+    },
+    "consideration": {
+     "v": "Cash & stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/857855/000110465926045707/tm2612284d1_ex99-1.htm",
+     "q": "…ill acquire Peach State, and its wholly-owned subsidiary, Peach State Bank & Trust (“Peach State Bank”), in a stock and cash transaction (the “Merger”). Peach State Bank is headquartered in Gainesville, Georgia, a fast-growing city in…",
+     "note": "0.8978 acquirer shares per target share"
+    },
+    "credit_mark_m": {
+     "v": 6.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/857855/000110465926045707/tm2612284d1_ex99-2.htm",
+     "q": "…arks on loans of $14.6 million, or 2.87% of gross loans, including: Interest rate mark of $8.3 million; Gross credit mark of $6.3 million Fixed asset write - up of $4.0 million, amortized straight - line over 30 years Time deposit write - down of…"
+    },
+    "rate_mark_m": {
+     "v": 8.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/857855/000110465926045707/tm2612284d1_ex99-2.htm",
+     "q": "…pital Ratio of ~13% at close Total gross marks on loans of $14.6 million, or 2.87% of gross loans, including: Interest rate mark of $8.3 million; Gross credit mark of $6.3 million Fixed asset write - up of $4.0 million, amortized straight - line over 30…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/857855/000110465926045707/tm2612284d1_ex99-1.htm"
+   },
+   "parties_q": null,
+   "roles": {
+    "857855": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "peoples-citizens",
+   "announced": "2026-04-21",
+   "acquirer": "Peoples Bancorp",
+   "acq_ticker": "PEBO",
+   "target": "Citizens National Corporation",
+   "tgt_ticker": null,
+   "f": {
+    "deal_value_m": {
+     "v": 76.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000142/projectwildcatpressrelease.htm",
+     "q": "…s Bank will subsequently merge with and into Peoples’ wholly owned subsidiary, Peoples Bank, in a transaction valued at approximately $76.6 million. Citizens, through its community bank subsidiary and 132 employees, operates 12 branches located primarily in…"
+    },
+    "expected_close": {
+     "v": "2H 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000142/projectwildcatpressrelease.htm",
+     "q": "…book value earnback of less than one year and an internal rate of return in excess of 20%. The acquisition is expected to close during the second half of 2026, subject to the satisfaction of customary closing conditions, including regulatory approvals and the approval…"
+    },
+    "consideration": {
+     "v": "Cash & stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000142/projectwildcatpressrelease.htm",
+     "q": "…d in Paintsville, Kentucky, and the parent company of Citizens Bank of Kentucky, Inc. (“Citizens Bank”), in a cash and stock transaction. Under the terms of the Merger Agreement, Citizens will merge with and into Peoples (the “Merger”…",
+     "note": "2.1 acquirer shares per target share"
+    },
+    "eps_accr": {
+     "v": 5.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000142/q12026earningspresentati.htm",
+     "q": "…t base • Attractive pricing with modest expected TBV dilution (0.9%) and earnback period (<1 year) • Expected EPS accretion of 5.6% in 2027 • Achievable and meaningful cost savings have been identified • Opportunity to strengthen and optimiz…"
+    },
+    "credit_mark_pct": {
+     "v": 4.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000142/q12026earningspresentati.htm",
+     "q": "…atio: 9.5% • Pro forma CET1 Ratio: 12.6% • All other regulatory capital ratios remain well capitalized • Loan credit mark of 4.00% of loans at closing, or $13.7 million (assumes early adoption of FASB’s amendments to ASU 2016-13; no non-PCD mark and…"
+    },
+    "cdi_pct": {
+     "v": 3.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000142/q12026earningspresentati.htm",
+     "q": "…terest rate mark down of 1.00% of loans at closing, or $3.4 million, amortized straight line over 2.6 years • Core deposit intangible of 3.00% of non-time deposits, amortized SYD over 10 years • Other adjustments: ~$5.1 million(4) Transaction Summary Valu…"
+    },
+    "pf_cet1": {
+     "v": 12.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000142/q12026earningspresentati.htm",
+     "q": "…s of CZNL’s non-interest expense • Revenue synergies identified but not modeled • Pro forma TCE Ratio: 9.5% • Pro forma CET1 Ratio: 12.6% • All other regulatory capital ratios remain well capitalized • Loan credit mark of 4.00% of loans at closing…"
+    },
+    "tgt_state": {
+     "v": "KY",
+     "src": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000142/projectwildcatpressrelease.htm",
+     "q": "…les Premium Finance and North Star Leasing), Peoples Insurance Agency, LLC, and Vantage Financial, LLC. About Citizens National Corporation: Citizens National Corporation, headquartered in Paintsville, Kentucky, is the bank holding company for Citizens Bank of Kentucky, Inc, serving consumers and businesses in Eastern…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/318300/000031830026000142/pebo-20260421.htm"
+   },
+   "parties_q": "…(“Peoples”) announced that it has entered into an Agreement and Plan of Merger dated April 20, 2026 (“Merger Agreement”) with Citizens National Corporation (\"Citizens\")…",
+   "roles": {
+    "318300": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "hawthorn-fsc",
+   "announced": "2026-04-29",
+   "acquirer": "Hawthorn Bancshares",
+   "acq_ticker": "HWBK",
+   "target": "FSC Bancshares",
+   "tgt_ticker": null,
+   "f": {
+    "deal_value_m": {
+     "v": 28.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/893847/000089384726000058/exhibit991-pressreleasere_.htm",
+     "q": "…Reorganization (the “Agreement”) pursuant to which Hawthorn will acquire FSC in a cash and stock transaction valued at approximately $28.3 million in the aggregate, based on Hawthorn’s closing stock price of $34.57 as of April 28, 2026. Based on financial…"
+    },
+    "expected_close": {
+     "v": "3Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/893847/000089384726000058/exhibit991-pressreleasere_.htm",
+     "q": "…s will receive 413,101 shares of Hawthorn common stock and $14.0 million of cash. The proposed transaction is expected to be completed in the third quarter of 2026, subject to the satisfaction of customary closing conditions, including approval by FSC shareholders and the…"
+    },
+    "consideration": {
+     "v": "Cash & stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/893847/000089384726000058/exhibit991-pressreleasere_.htm",
+     "q": "…of an Agreement and Plan of Reorganization (the “Agreement”) pursuant to which Hawthorn will acquire FSC in a cash and stock transaction valued at approximately $28.3 million in the aggregate, based on Hawthorn’s closing stock price o…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/893847/000089384726000058/exhibit991-pressreleasere_.htm"
+   },
+   "parties_q": null,
+   "roles": {
+    "893847": "acq"
+   },
+   "status": "closed",
+   "origin": "backfill",
+   "first_seen": "2026-11-16",
+   "close_date": "2026-09-04",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/893847/000089384726000091/hwbk-20260903.htm",
+   "close_q": "On September 4, 2026 , HBI issued a press release announcing the completion of the Merger, a copy of which is attached to this Current Report on Form 8-K as Exhibit 99",
+   "close_filed": "2026-09-04"
+  },
+  {
+   "id": "banner-pacific",
+   "announced": "2026-05-01",
+   "acquirer": "Banner Corporation",
+   "acq_ticker": "BANR",
+   "target": "Pacific Financial Corporation",
+   "tgt_ticker": "PFLC",
+   "f": {
+    "price_per_share": {
+     "v": 17.44,
+     "src": "https://www.sec.gov/Archives/edgar/data/946673/000094667326000123/banrpr20260430ex991.htm",
+     "q": "…l 29, 2026, the implied value of the merger consideration to be received by Pacific Financial shareholders is equal to $17.44 per share or approximately $177 million in aggregate. The merger is expected to qualify as a tax-free reorganization fo…"
+    },
+    "pf_assets_b": {
+     "v": 18.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/946673/000094667326000123/banrpr20260430ex991.htm",
+     "q": "…al in an all-stock transaction, subject to the terms and conditions set forth therein. Following closing, the combined company is expected to have approximately $18 billion in assets. Bank of the Pacific is a 55-year-old Washington state-chartered commercial bank serving business and consume…"
+    },
+    "expected_close": {
+     "v": "3Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/946673/000094667326000123/banrpr20260430ex991.htm",
+     "q": "…pproval by Pacific Financial shareholders, regulatory approvals and other customary closing conditions and is expected to close in the third quarter of 2026. For more information concerning the merger, please see the investor presentation posted April 30, 2026 in th…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/946673/000094667326000123/banrpr20260430ex991.htm",
+     "q": "…a definitive merger agreement. Under the terms of the agreement, Banner will acquire Pacific Financial in an all-stock transaction, subject to the terms and conditions set forth therein. Following closing, the combined company i…",
+     "note": "0.2633 acquirer shares per target share"
+    },
+    "deal_value_m": {
+     "v": 177.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/946673/000094667326000123/ex993bankofpacificemployee.htm",
+     "q": "…company, Pacific Financial Corporation, will merge with Banner Corporation (BANR) in an all-stock transaction valued at approximately $177 million. As a result, after closing of the merger, Bank of the Pacific will become a part of Banner Bank. Attached yo…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/946673/000094667326000123/banrpr20260430ex991.htm"
+   },
+   "parties_q": "…com Banner Corporation to Acquire Pacific Financial Corporation WALLA WALLA and ABERDEEN, WASH…",
+   "roles": {
+    "946673": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "cambridge-first",
+   "announced": "2026-05-05",
+   "acquirer": "Cambridge Financial Group (MHC)",
+   "acq_ticker": null,
+   "target": "First Seacoast Bancorp",
+   "tgt_ticker": "FSEA",
+   "f": {
+    "deal_value_m": {
+     "v": 80.9,
+     "src": "https://www.sec.gov/Archives/edgar/data/1943802/000119312526206551/d74001dex991.htm",
+     "q": "…Cambridge Savings Bank, with Cambridge Savings Bank as the surviving institution. The all-cash transaction is valued at approximately $80.9 million based on the number of shares of First Seacoast Bancorp common stock outstanding as of the date of the merger…"
+    },
+    "consideration": {
+     "v": "100% cash",
+     "src": "https://www.sec.gov/Archives/edgar/data/1943802/000119312526206551/d74001dex991.htm",
+     "q": "…st Bank will merge with Cambridge Savings Bank, with Cambridge Savings Bank as the surviving institution. The all-cash transaction is valued at approximately $80.9 million based on the number of shares of First Seacoast Bancorp…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/1943802/000119312526206551/d74001dex991.htm"
+   },
+   "parties_q": null,
+   "roles": {
+    "1943802": "tgt"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "brookfield-nsts",
+   "announced": "2026-05-12",
+   "acquirer": "Brookfield Bancshares",
+   "acq_ticker": null,
+   "target": "NSTS Bancorp",
+   "tgt_ticker": "NSTS",
+   "f": {
+    "deal_value_m": {
+     "v": 73.7,
+     "src": "https://www.sec.gov/Archives/edgar/data/1881592/000143774926016470/ex_960855.htm",
+     "q": "…definitive merger agreement in which Brookfield will acquire NSTS and North Shore in an all-cash transaction valued at approximately $73.7 million. North Shore will continue to operate under its existing name and federal savings association charter as a su…"
+    },
+    "expected_close": {
+     "v": "4Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/1881592/000143774926016470/ex_960855.htm",
+     "q": "…lders will receive approximately $14.28 in cash for each share of NSTS common stock owned. The transaction is anticipated to close in the fourth quarter of 2026, subject to certain conditions, including the receipt of required regulatory approvals, NSTS stockholder appr…"
+    },
+    "consideration": {
+     "v": "100% cash",
+     "src": "https://www.sec.gov/Archives/edgar/data/1881592/000143774926016470/ex_960855.htm",
+     "q": "…nced the signing of a definitive merger agreement in which Brookfield will acquire NSTS and North Shore in an all-cash transaction valued at approximately $73.7 million. North Shore will continue to operate under its existing na…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/1881592/000143774926016470/ex_960854.htm"
+   },
+   "parties_q": null,
+   "roles": {
+    "1881592": "tgt"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "hancock-ofb",
+   "announced": "2026-05-15",
+   "acquirer": "Hancock Whitney",
+   "acq_ticker": "HWC",
+   "target": "OFB Bancshares (One Florida Bank)",
+   "tgt_ticker": null,
+   "f": {
+    "expected_close": {
+     "v": "3Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526225443/hwc-ex99_1.htm",
+     "q": "…ing access to broader resources, expanded capabilities, and a larger platform for growth.” The transaction is expected to close in the third quarter of 2026 and is expected to be immediately accretive to GAAP EPS excluding one-time costs and meets or exceeds Hancock…"
+    },
+    "consideration": {
+     "v": "100% cash",
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526225443/hwc-ex99_1.htm",
+     "q": "…hey have entered into a definitive agreement whereby Hancock Whitney will acquire OFB Bancshares, Inc., in an all-cash transaction. “This transaction represents a significant step in our long-term growth strategy, expanding our…"
+    },
+    "deal_value_m": {
+     "v": 377.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526225443/hwc-ex99_2.htm",
+     "q": "…losing Required Approvals Personnel Projected Financial Results Transaction Overview Consideration: 100% cash Total consideration of $377.6 million for all outstanding common shares and options P / TBVPS= 200% P / 2026E Core EPS = 14.4x Franchise premium /…"
+    },
+    "credit_mark_m": {
+     "v": 11.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526225443/hwc-ex99_2.htm",
+     "q": "…One-time Merger Expenses: $30 million pre-tax Gross Credit Mark: 1.47%, or $24.6 million, resulting in a net credit mark of $11.1 million; no CECL double count Loan Rate Mark: 1.0% mark down on loans Core Deposit Intangible: 3.0% of non-time depos…"
+    },
+    "cdi_pct": {
+     "v": 3.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526225443/hwc-ex99_2.htm",
+     "q": "…resulting in a net credit mark of $11.1 million; no CECL double count Loan Rate Mark: 1.0% mark down on loans Core Deposit Intangible: 3.0% of non-time deposits Revenue synergies are expected, but not modeled TBV earnback of approximately four years; c…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/750577/000119312526225443/hwc-ex99_1.htm"
+   },
+   "parties_q": null,
+   "roles": {
+    "750577": "acq"
+   },
+   "status": "closed",
+   "origin": "backfill",
+   "first_seen": "2026-11-16",
+   "close_date": "2026-08-01",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/750577/000119312526329625/d118362d8k.htm",
+   "close_q": "Effective August 1, 2026, Hancock Whitney Corporation, a Mississippi corporation (“Hancock Whitney”), completed its previously announced mergers (the “Mergers”) with OFB Bancshares, Inc, a Florida corporation (“OFB Bancshares”), pursuant to an Agreement and Plan of Merger, dated as of May 15, 2026 (",
+   "close_filed": "2026-08-03"
+  },
+  {
+   "id": "first-psb",
+   "announced": "2026-05-19",
+   "acquirer": "Bank First Corporation",
+   "acq_ticker": "BFC",
+   "target": "PSB Holdings",
+   "tgt_ticker": null,
+   "f": {
+    "deal_value_m": {
+     "v": 202.9,
+     "src": "https://www.sec.gov/Archives/edgar/data/1746109/000110465926063919/tm2615088d1_ex99-1.htm",
+     "q": "…Bank First’s common stock in exchange for each share of Peoples common stock. The aggregate consideration is valued at approximately $202.9 million, based on the closing price of Bank First common stock as of May 18, 2026, of $143.66 per share. The partners…"
+    },
+    "pf_assets_b": {
+     "v": 7.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/1746109/000110465926063919/tm2615088d1_ex99-1.htm",
+     "q": "…anch networks creates a more robust and cohesive regional presence. · Increased Financial Capacity. Grows the combined organization to over $7.6 billion in assets, enhancing lending capacity, service capabilities, and opportunities to support individuals and businesses. ·…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/1746109/000110465926063919/tm2615088d1_ex99-1.htm",
+     "q": "…Wisconsin state-chartered bank, under which Bank First will acquire 100% of the common stock of Peoples in an all-stock transaction. Under the terms of the Agreement and Plan of Merger, each Peoples shareholder will have the righ…",
+     "note": "0.347 acquirer shares per target share"
+    },
+    "eps_accr": {
+     "v": 14.2,
+     "src": "https://www.sec.gov/Archives/edgar/data/1746109/000110465926063919/tm2615088d1_ex99-2.htm",
+     "q": "…onsin footprint to accelerate growth and capture new revenue opportunities TRANSACTION HIGHLIGHTS • Projected EPS accretion of 14.2% and 12.0% in 2027 and 2028, respectively • 1.0% TBV dilution at closing with an estimated earn back of 0.25 y…"
+    },
+    "expected_close": {
+     "v": "4Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/1746109/000110465926063919/tm2615088d1_8k.htm",
+     "q": "…Merger Agreement has been unanimously approved by the boards of directors of BFC and PSB. The transaction is expected to close in the fourth quarter of 2026, subject to customary closing conditions discussed below. Merger Consideration . Pursuant to the Merger Agree…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/1746109/000110465926063919/tm2615088d1_ex99-1.htm"
+   },
+   "parties_q": "…com NEWS release For Immediate Release Bank First Corporation Signs Agreement to Acquire PSB Holdings, Inc…",
+   "roles": {
+    "1746109": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "bogota-gsl",
+   "announced": "2026-06-01",
+   "acquirer": "Bogota Financial",
+   "acq_ticker": "BSBK",
+   "target": "GSL Savings Bank",
+   "tgt_ticker": null,
+   "f": {
+    "expected_close": {
+     "v": "2H 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/1787414/000119312526250015/d151612dex991.htm",
+     "q": "…ch of the Bogota Financial and Bogota, the Board of Trustees of the MHC and the Board of Directors of GSL, is expected to close in the second half of 2026. The transaction is subject to customary closing conditions, including the receipt of regulatory approvals. O…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/1787414/000119312526250015/d151612dex991.htm"
+   },
+   "parties_q": "…(“Bogota Financial”) (Nasdaq: BSBK), the holding company for Bogota Savings Bank (“Bogota”), and GSL Savings Bank (“GSL”) today announced the execution of a merger agreement pursuant to which GSL will merge with and into Bogota…",
+   "roles": {
+    "1787414": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "isabella-grand",
+   "announced": "2026-06-12",
+   "acquirer": "Isabella Bank Corporation",
+   "acq_ticker": "ISBA",
+   "target": "Grand River Commerce",
+   "tgt_ticker": "GNRV",
+   "f": {
+    "deal_value_m": {
+     "v": 54.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/842517/000084251726000138/isba_2026xjointprxgrcxex991.htm",
+     "q": "…Merger (“Agreement”) whereby Isabella will acquire Grand River in a cash and stock transaction (the “Merger”) valued at approximately $54.6 million. As a result of the proposed transaction, Grand River will be merged with and into a wholly-owned merger subs…"
+    },
+    "consideration": {
+     "v": "Cash & stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/842517/000084251726000138/isba_2026xjointprxgrcxex991.htm",
+     "q": "…ave entered into an Agreement and Plan of Merger (“Agreement”) whereby Isabella will acquire Grand River in a cash and stock transaction (the “Merger”) valued at approximately $54.6 million. As a result of the proposed transaction, Gr…"
+    },
+    "eps_accr": {
+     "v": 10.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/842517/000084251726000138/isba-gnrvinvestorpresent.htm",
+     "q": "…eposits: 1.72% Lo an C om po si ti on D ep os it C om po si ti on 6 Transaction Highlights • Strong projected EPS accretion of approximately 10.4% and 11.0% in 2027 and 2028, respectively, with high-teens IRR • Manageable TBV dilution at closing with an es…"
+    },
+    "earnback": {
+     "v": 1.75,
+     "src": "https://www.sec.gov/Archives/edgar/data/842517/000084251726000138/isba-gnrvinvestorpresent.htm",
+     "q": "…0% in 2027 and 2028, respectively, with high-teens IRR • Manageable TBV dilution at closing with an estimated earn back of 1.75 years using the crossover method • Conservatively underwritten profitability and cost savings outlook for Grand Riv…"
+    },
+    "pf_cet1": {
+     "v": 10.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/842517/000084251726000138/isba-gnrvinvestorpresent.htm",
+     "q": "…Close¹ 86.9% Loan / Deposits 1.75 yr. TBV Dilution Earnback 4.0% TBV Dilution 1.3% ’27E Pro Forma ROAA 10.4% CET1 Ratio at Close Transaction Impact 10.4% ’27 EPS Accr. GNRV (2) ISBA (31) Adding $434MM in net loans and $439MM in deposits to ISBA’s existing presenc…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/842517/000084251726000138/isba_2026xjointprxgrcxex991.htm"
+   },
+   "parties_q": "…MI 48858-1649 FOR MORE INFORMATION CONTACT: Jerome Schwind, Chief Executive Officer Jerry Ritzert, Chief Financial Officer Lori Peterson, Vice President and Director of Marketing Phone: 989-772-9471 Isabella Bank Corporation to Acquire Grand River Commerce, Inc…",
+   "roles": {
+    "842517": "acq"
+   },
+   "status": "closed",
+   "origin": "backfill",
+   "first_seen": "2026-11-16",
+   "close_date": "2026-11-02",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/842517/000084251726000238/isba-20261102.htm",
+   "close_q": "Effective on November 2, 2026 , Isabella Bank Corporation, a Michigan corporation (“Isabella”), completed its previously announced merger with Grand River Commerce, Inc, a Michigan corporation (“Grand River”), pursuant to the Agreement and Plan of Merger, dated as of June 11, 2026, as amended (the “",
+   "close_filed": "2026-11-02"
+  },
+  {
+   "id": "colony-first",
+   "announced": "2026-06-24",
+   "acquirer": "Colony Bankcorp",
+   "acq_ticker": "CBAN",
+   "target": "First Reliance Bancshares",
+   "tgt_ticker": "FSRL",
+   "f": {
+    "deal_value_m": {
+     "v": 163.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/711669/000110465926077342/tm2618469d1_ex99-1.htm",
+     "q": "…ich Colony has agreed to acquire 100% of the stock of First Reliance in a combined stock-and-cash transaction valued at approximately $163 million (the “Merger”). This strategic combination will create a transformational partnership, significantly expandin…"
+    },
+    "pf_assets_b": {
+     "v": 5.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/711669/000110465926077342/tm2618469d1_ex99-1.htm",
+     "q": "…k will be converted to cash consideration and the remaining 80% will be converted to Colony common stock. The combined organization will have approximately $5 billion in total assets, $4.0 billion in total deposits, and $3.2 billion in loans, making it one of the leading community banks in t…"
+    },
+    "expected_close": {
+     "v": "4Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/711669/000110465926077342/tm2618469d1_ex99-1.htm",
+     "q": "…The boards of directors of both Colony and First Reliance have unanimously approved the transaction, which is expected to close in fourth quarter 2026, subject to regulatory approvals, shareholder approval, and other customary closing conditions. A conference…"
+    },
+    "price_per_share": {
+     "v": 19.52,
+     "src": "https://www.sec.gov/Archives/edgar/data/711669/000110465926077342/tm2618469d1_ex99-2.htm",
+     "q": "…e in cash • Implied ownership: 77% CBAN / 23% FSRL • Implied Aggregate Transaction Value: $163mm • Indicative price per share: $19.52 per FSRL share • Price / Tangible Book Value per Share: 162% • Price / 2027E Earnings: 11.7x • Price / 2027E…"
+    },
+    "eps_accr": {
+     "v": 20.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/711669/000110465926077342/tm2618469d1_ex99-2.htm",
+     "q": "…ent can be obtained free of charge from the sources described above. 4 TRANSACTION RATIONALE PRO FORMA IMPACT ~20% 2027 EPS Accretion ~12% TBVPS Dilution <3.5 Years TBVPS Earnback ~11% CET1 Ratio at Closing FINANCIALLY ATTRACTIVE ~20% earnings…"
+    },
+    "earnback": {
+     "v": 3.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/711669/000110465926077342/tm2618469d1_ex99-2.htm",
+     "q": "…ources described above. 4 TRANSACTION RATIONALE PRO FORMA IMPACT ~20% 2027 EPS Accretion ~12% TBVPS Dilution <3.5 Years TBVPS Earnback ~11% CET1 Ratio at Closing FINANCIALLY ATTRACTIVE ~20% earnings accretion with fully realized cost savings Ma…"
+    },
+    "cost_saves": {
+     "v": 35.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/711669/000110465926077342/tm2618469d1_ex99-2.htm",
+     "q": "…SRL: Street consensus earnings for 2026E and 2027E Cost Savings and Synergies • Cost savings of approximately 35% of FSRL’s projected 2028 non-interest expense of $37.6mm o Phased in 60% in 2027 and 100% thereafter • Revenue synergies identified but not modeled Credit…"
+    },
+    "cdi_pct": {
+     "v": 2.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/711669/000110465926077342/tm2618469d1_ex99-2.htm",
+     "q": "…4mm amortized into earnings over time • Time deposit write-down of $0.5mm amortized into earnings over time • Core deposit intangible assumed to be 2.5% of FSRL’s core deposits, amortized over 10-years (sum- of-the-years-digits) Other Assumptions • Pre-tax merger e…"
+    },
+    "pf_cet1": {
+     "v": 11.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/711669/000110465926077342/tm2618469d1_ex99-2.htm",
+     "q": "….6% Standalone Pro Forma FINANCIAL IMPACT AT CLOSE 2027 EPS Accretion ~20% TBV Dilution ~12% Earnback <3.5yrs CET1 Ratio ~11% TRBC Ratio ~14% CRE Conc. ~270% Leverage Ratio ~9% C&D Conc. ~70% (1) 14 COMPREHENSIVE DUE DILIGENCE • Compre…"
+    },
+    "consideration": {
+     "v": "80% stock / 20% cash",
+     "src": "https://www.sec.gov/Archives/edgar/data/711669/000110465926077342/tm2618469d1_ex99-2.htm",
+     "q": "…First Reliance Bancshares, Inc. to merge with and into Colony Bankcorp, Inc. at closing • Consideration mix: 80% stock | 20% cash • 0.94 CBAN shares per FSRL share or $19.75 per share in cash • Implied ownership: 77% CBAN / 23% FSRL • Impl…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/711669/000110465926077342/tm2618469d1_8k.htm"
+   },
+   "parties_q": "…Pursuant to and simultaneously with entering into the Merger Agreement, the Company’s wholly-owned subsidiary bank, Colony Bank, and FSRL’s wholly-owned subsidiary bank, First Reliance Bank, entered into a Bank Plan of Merger and Merger Agreement whereby First Reliance Bank will be merged with and into Colony Bank immediately following the merger of FSRL with and into the Company (the “Bank Merger”)…",
+   "roles": {
+    "711669": "acq"
+   },
+   "status": "closed",
+   "origin": "backfill",
+   "first_seen": "2026-11-16",
+   "close_date": "2026-11-01",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/711669/000110465926120966/tm2628498d1_8k.htm",
+   "close_q": "Effective November 1, 2026, Colony Bankcorp, Inc, a Georgia corporation (the “Company”), completed its previously announced merger (the “Merger”) with First Reliance Bancshares, Inc, a South Carolina corporation (“FSRL”), pursuant to the Agreement and Plan of Merger by and between the Company an",
+   "close_filed": "2026-11-02"
+  },
+  {
+   "id": "first-first",
+   "announced": "2026-07-14",
+   "acquirer": "First Bancorp",
+   "acq_ticker": "FBNC",
+   "target": "First Carolina Bancshares Corporation",
+   "tgt_ticker": null,
+   "f": {
+    "deal_value_m": {
+     "v": 166.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/811589/000081158926000149/exhibit991newsreleasedated.htm",
+     "q": "…erger agreement under which First Bancorp will acquire First Carolina in a stock and cash transaction with an aggregate value of $166 million, based on First Bancorp's stock price of $64.22 as of July 13, 2026. The consideration payable to First Carol…"
+    },
+    "expected_close": {
+     "v": "4Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/811589/000081158926000149/exhibit991newsreleasedated.htm",
+     "q": "…$40 million in cash. The merger agreement, unanimously approved by the board of directors of each company, is expected to close in the fourth quarter of 2026 or early in the first quarter of 2027, subject to customary closing conditions, including First Carolina shar…"
+    },
+    "consideration": {
+     "v": "Cash & stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/811589/000081158926000149/exhibit991newsreleasedated.htm",
+     "q": "…unced the signing of a definitive merger agreement under which First Bancorp will acquire First Carolina in a stock and cash transaction with an aggregate value of $166 million, based on First Bancorp's stock price of $64.22 as of Jul…"
+    },
+    "cost_saves": {
+     "v": 30.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/811589/000081158926000149/investorpresentation.htm",
+     "q": "…internal projections (~5% annual balance sheet growth / ROAA in-line with LTM performance)  Cost savings of 30% of Carolina Bank’s noninterest expense; 75% realized in 2027 and 100% thereafter  Assumes Carolina Bank’s securities portfolio is sold and reinvest…"
+    },
+    "rate_mark_m": {
+     "v": 12.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/811589/000081158926000149/investorpresentation.htm",
+     "q": "…vested at 4.25%  Allowance for credit losses of $10.9 million or 1.75% of Carolina Bank’s loans at closing  Loan interest rate mark of $12.5 million or 2.0% of Carolina Bank’s loans at closing, accreted into earnings over 6 years using the sum- of-the-years…"
+    },
+    "cdi_pct": {
+     "v": 3.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/811589/000081158926000149/investorpresentation.htm",
+     "q": "…into earnings over 6 years using the sum- of-the-years digits method  Fixed asset write-up of $4.5 million  Core deposit intangible of 3.00% of non-time deposits, amortized over 10 years using the sum-of-the-years digits method  $15.8 million of after-…"
+    },
+    "tgt_state": {
+     "v": "SC",
+     "src": "https://www.sec.gov/Archives/edgar/data/811589/000081158926000149/exhibit991newsreleasedated.htm",
+     "q": "…r website at www.LocalFirstBank.com. Member FDIC, Equal Housing Lender. FIRST CAROLINA BANCSHARES CORPORATION First Carolina Bancshares Corporation is a bank holding company headquartered in Florence, South Carolina. Its principal activity is the ownership and operation of Carolina Bank & Trust, a community bank established…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/811589/000081158926000149/exhibit991newsreleasedated.htm"
+   },
+   "parties_q": "…First Bancorp (Nasdaq: FBNC), the parent company of First Bank, and First Carolina Bancshares Corporation (“First Carolina”), the parent company of Carolina Bank & Trust Company (“Carolina Bank”), announced the signing of a definitive merger agreement under which First Bancorp will acquire First Carolina in a stock and cash transaction with an aggregate value of $166 million, based on First Bancorp's stock price of $64…",
+   "roles": {
+    "811589": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "first-finward",
+   "announced": "2026-07-21",
+   "acquirer": "First Financial Bancorp",
+   "acq_ticker": "FFBC",
+   "target": "Finward Bancorp",
+   "tgt_ticker": "FNWD",
+   "f": {
+    "eps_accr": {
+     "v": 5.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/708955/000110465926085424/tm2620858d1_ex99-1.htm",
+     "q": "…n deposits, $1.5 billion in loans and $412 million in assets under management · Transaction is expected to be approximately 5% accretive to First Financial’s earnings per share First Financial Bancorp. (Nasdaq: FFBC) and Finward Bancorp (Nasdaq: FNWD) jointly announced today that they…"
+    },
+    "earnback": {
+     "v": 0.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/708955/000110465926085424/tm2620858d1_ex99-1.htm",
+     "q": "…per share (“TBV”) at closing is estimated to be only slightly diluted (0.4% dilution) with an anticipated TBV earnback of 0.6 years. The merger agreement has been unanimously approved by the Boards of Directors of First Financial and Finward…"
+    },
+    "tgt_assets_b": {
+     "v": 2.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/708955/000110465926085424/tm2620858d1_ex99-1.htm",
+     "q": "…e in northwest Indiana and Chicago, with the addition of a low cost core deposit franchise and 24 locations · Finward has approximately $2.0 billion in assets, $1.7 billion in deposits, $1.5 billion in loans and $412 million in assets under management · Transaction is…"
+    },
+    "expected_close": {
+     "v": "4Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/708955/000110465926085424/tm2620858d1_ex99-1.htm",
+     "q": "…t has been unanimously approved by the Boards of Directors of First Financial and Finward. The transaction is expected to close in the fourth quarter of 2026, subject to satisfaction of customary closing conditions, regulatory approvals and approval of Finward’s shar…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/708955/000110465926085424/tm2620858d1_ex99-1.htm",
+     "q": "…to $0.26 to be paid in 3Q26 · Agreement to acquire Finward Bancorp, the holding company for Peoples Bank, in all stock transaction Cincinnati, Ohio - July 21, 2026. First Financial Bancorp. (Nasdaq: FFBC) (“First Financial” or t…",
+     "note": "1.35 acquirer shares per target share"
+    },
+    "deal_value_m": {
+     "v": 210.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/708955/000110465926085424/tm2620858d1_ex99-2.htm",
+     "q": "…ange ratio of 1.35x ‒ Approximately 5.9 million shares issued to Finward in transaction • Transaction Value – $210 million deal value, or $48.22 per Finward share (1) • Pro Forma Ownership – First Financial: 95% / Finward: 5% • Price / TBV – 1…"
+    },
+    "p_tbv": {
+     "v": 1.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/708955/000110465926085424/tm2620858d1_ex99-2.htm",
+     "q": "…lion deal value, or $48.22 per Finward share (1) • Pro Forma Ownership – First Financial: 95% / Finward: 5% • Price / TBV – 1.4x • Pay-to-Trade Ratio – 66% • Core Deposit Premium – 3.8% • Price / 2027E EPS with Synergies – 6.5x • Closing…"
+    },
+    "cdp": {
+     "v": 3.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/708955/000110465926085424/tm2620858d1_ex99-2.htm",
+     "q": "…• Pro Forma Ownership – First Financial: 95% / Finward: 5% • Price / TBV – 1.4x • Pay-to-Trade Ratio – 66% • Core Deposit Premium – 3.8% • Price / 2027E EPS with Synergies – 6.5x • Closing Date – Targeted close by end of year • Integration – Expe…"
+    },
+    "cost_saves": {
+     "v": 40.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/708955/000110465926085424/tm2620858d1_ex99-2.htm",
+     "q": "…$35.72 on July 17, 2026 32 key transaction assumptions Key Merger Assumptions • Cost Savings – Approximately 40% of Finward’s annual noninterest expense ‒ 50% phase-in during 2027 and 100% in 2028 and thereafter • One-Time Merger Expenses – $36 million pre-tax ‒…"
+    },
+    "cdi_pct": {
+     "v": 3.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/708955/000110465926085424/tm2620858d1_ex99-2.htm",
+     "q": "…Expenses – $36 million pre-tax ‒ Fully reflected in pro forma impacts at closing for illustrative purposes • Core Deposit Intangible – 3.00% of Finward’s non-time deposits of $1.2 billion ‒ Amortized over 10 years using sum-of-years digits method Fair V…"
+    },
+    "tgt_state": {
+     "v": "IN",
+     "src": "https://www.sec.gov/Archives/edgar/data/708955/000110465926085424/tm2620858d1_ex99-1.htm",
+     "q": "…atements and slide presentation. Finward Bancorp Acquisition · First Financial Bancorp. has agreed to acquire Finward Bancorp, the holding company for Peoples Bank, headquartered in Munster, Indiana · Strategically expands First Financial's presence in northwest Indiana and Chicago, with the addition of a l…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/708955/000110465926085424/tm2620858d1_ex99-1.htm"
+   },
+   "parties_q": "…1 First Financial Bancorp Announces Second Quarter 2026 Financial Results, Quarterly Dividend Increase & Acquisition of Finward Bancorp · Earnings per diluted share of $0…",
+   "roles": {
+    "708955": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "northrim-pbco",
+   "announced": "2026-07-22",
+   "acquirer": "Northrim BanCorp",
+   "acq_ticker": "NRIM",
+   "target": "PBCO Financial Corporation",
+   "tgt_ticker": null,
+   "f": {
+    "deal_value_m": {
+     "v": 167.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/1163370/000116337026000027/a991pressrelease-nrimtoacq.htm",
+     "q": "…ger is expected to qualify as a tax-free reorganization for PBCO shareholders. The aggregate consideration is valued at approximately $167.3 million, or $32.36 per share of PBCO common stock, based on the closing price of Northrim common stock as of July 21,…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/1163370/000116337026000027/a991pressrelease-nrimtoacq.htm",
+     "q": "…greement and Plan of Merger under which Northrim has agreed to acquire 100% of the common stock of PBCO in an all-stock transaction. Under the terms of the Agreement and Plan of Merger, each PBCO shareholder will have the right t…",
+     "note": "1.16 acquirer shares per target share"
+    },
+    "tgt_state": {
+     "v": "OR",
+     "src": "https://www.sec.gov/Archives/edgar/data/1163370/000116337026000027/a991pressrelease-nrimtoacq.htm",
+     "q": "…Residential Mortgage, LLC, a regional home mortgage company, are wholly-owned subsidiaries of the Bank. About PBCO Financial Corporation and People’s Bank of Commerce Founded in 1998, People’s Bank of Commerce is a full-service, commercial bank headquartered in Medford, Oregon with branches in Albany, Ashland, Central Point, Eugene, Grants Pass, Jacksonville, Klamath Falls, Lebanon, M…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/1163370/000116337026000027/a991pressrelease-nrimtoacq.htm"
+   },
+   "parties_q": "…(“Northrim” or the “Company”), the holding company of Northrim Bank, and PBCO Financial Corporation (“PBCO”), the holding company of People’s Bank of Commerce (“People’s Bank”), an Oregon state-chartered bank, jointly announced today the signing of an Agreement and Plan of Merger under which Northrim has agreed to acquire 100% of the common stock of PBCO in an all-stock transaction…",
+   "roles": {
+    "1163370": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "hbt-tri",
+   "announced": "2026-08-10",
+   "acquirer": "HBT Financial",
+   "acq_ticker": "HBT",
+   "target": "Tri-County Financial Group",
+   "tgt_ticker": "TYFG",
+   "f": {
+    "deal_value_m": {
+     "v": 204.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/775215/000077521526000076/hbt-20260810ex991.htm",
+     "q": "…rsuant to which Tri-County will merge with and into HBT Financial in a combined common stock/cash transaction valued at approximately $204.6 million, based on HBT Financial’s closing stock price of $36.35 as of August 7, 2026. The combined company will have…"
+    },
+    "pf_assets_b": {
+     "v": 8.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/775215/000077521526000076/hbt-20260810ex991.htm",
+     "q": "…pproximately $204.6 million, based on HBT Financial’s closing stock price of $36.35 as of August 7, 2026. The combined company will have approximately $8.3 billion in total assets, $6.0 billion in total loans, and approximately $7.1 billion in total deposits, with branch locations across…"
+    },
+    "expected_close": {
+     "v": "1Q 2027",
+     "src": "https://www.sec.gov/Archives/edgar/data/775215/000077521526000076/hbt-20260810ex991.htm",
+     "q": "…mong other things, to vote their shares of Tri-County common stock in favor of the transaction. The merger is expected to close in the first quarter of 2027, subject to approval by Tri-County’s shareholders, required regulatory approvals, and other customary closing…"
+    },
+    "consideration": {
+     "v": "Cash & stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/775215/000077521526000076/hbt-20260810ex991.htm",
+     "q": "…cial’s common stock for each share of Tri-County stock, (2) $71.01 per share in cash, or (3) a combination of cash and stock consideration, subject to adjustment and to the election and proration provisions in the merger agreement. Ba…"
+    },
+    "eps_accr": {
+     "v": 11.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/775215/000077521526000076/hbt-20260810ex992.htm",
+     "q": "…tland Bank and Trust Company as a senior management officer Strategically Compelling Financially Attractive • EPS accretion of 11.1% in first full-year with cost savings • TBV dilution of 2.4% at closing with an earnback of less than 1 year u…"
+    },
+    "cost_saves": {
+     "v": 34.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/775215/000077521526000076/hbt-20260810ex992.htm",
+     "q": "…bo CD 6% $4.8B $5.8B $1.3B $1.3B $6.0B $7.1B 9 Financial Impact Key Assumptions ▪ Anticipated cost savings of 34% of TYFG’s noninterest expense base (excluding First State Mortgage Services, LLC) ▪ 80% phased-in during 2027, 100% thereafter ▪ $19.0 mill…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/775215/000077521526000076/hbt-20260810.htm"
+   },
+   "parties_q": "…, a Delaware corporation and wholly-owned subsidiary of HBT (“MergerCo”), and Tri-County Financial Group, Inc…",
+   "roles": {
+    "775215": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "hometrust-blue",
+   "announced": "2026-08-17",
+   "acquirer": "HomeTrust Bancshares",
+   "acq_ticker": "HTB",
+   "target": "Blue Ridge Bankshares",
+   "tgt_ticker": "BRBS",
+   "f": {
+    "deal_value_m": {
+     "v": 448.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/1538263/000153826326000107/htb-brbsxinvestorpresent.htm",
+     "q": "…common stock) • Pro forma ownership of ~65% HTB and ~35% BRBS Transaction Structure • $4.28 per BRBS share • $448.1 million in aggregate transaction value • Price / TBVPS of 140%2 • Price / 2027E EPS of 21.4x • Price / 2027E EPS + cost savings of 9.6x Transaction…"
+    },
+    "p_fwd_eps": {
+     "v": 21.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/1538263/000153826326000107/htb-brbsxinvestorpresent.htm",
+     "q": "…n Structure • $4.28 per BRBS share • $448.1 million in aggregate transaction value • Price / TBVPS of 140%2 • Price / 2027E EPS of 21.4x • Price / 2027E EPS + cost savings of 9.6x Transaction Value & Multiples¹ • 11 directors – 9 from HTB, 2 from…"
+    },
+    "pf_cet1": {
+     "v": 11.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/1538263/000153826326000107/htb-brbsxinvestorpresent.htm",
+     "q": "…Impact ’27E ROAA1 1.70% ’27E ROATCE1 15.6% ’27E Efficiency Ratio1 49.3% Enhanced Profitability Strong Capital CET1 TRBCTCE / TA 11.3% Leverage 11.3% 13.0% 13.7% 1) Run-rate EPS and operating metrics accretion represents 2027E EPS accretion wit…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/1538263/000153826326000107/htb-brbsxinvestorpresent.htm",
+     "q": "…on Overview • At closing, BRBS to merge with/into HTB and Blue Ridge Bank to merge with/into HomeTrust Bank • 100% stock consideration • Fixed exchange ratio of 0.086 HTB shares for each BRBS share • Holders of ~25% of BRBS warran…"
+    },
+    "earnback": {
+     "v": 3.25,
+     "src": "https://www.sec.gov/Archives/edgar/data/1538263/000153826326000107/htb-brbsxmergerpressrele.htm",
+     "q": "…es dilution to tangible book value per share of approximately 8.3% at the closing of the transaction, with an earn-back period of approximately 3.25 years. The boards of HomeTrust and Blue Ridge unanimously approved the transaction, which is subject to regulatory…"
+    },
+    "pf_assets_b": {
+     "v": 7.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/1538263/000153826326000107/htb-brbsxmergerpressrele.htm",
+     "q": "…approximately $448.1 million. The acquisition expands HomeTrust’s footprint into desirable Virginia markets, creating a commercial bank with over $7 billion in assets and over 60 locations across the Southeast. Leveraging HomeTrust’s demonstrated performance improvement and m…"
+    },
+    "expected_close": {
+     "v": "1Q 2027",
+     "src": "https://www.sec.gov/Archives/edgar/data/1538263/000153826326000107/htb-brbsxmergerpressrele.htm",
+     "q": "…Two Blue Ridge directors will join the board of directors of HomeTrust and HomeTrust Bank. The transaction is expected to close early in the first quarter of 2027 and be accretive to earnings per share by approximately 30% assuming anticipated cost savings are fully achie…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/1538263/000153826326000107/htb-brbsxinvestorpresent.htm"
+   },
+   "parties_q": null,
+   "roles": {
+    "1538263": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "valley-providence",
+   "announced": "2026-08-25",
+   "acquirer": "Valley National Bancorp",
+   "acq_ticker": "VLY",
+   "target": "Providence Financial Corporation",
+   "tgt_ticker": null,
+   "f": {
+    "deal_value_m": {
+     "v": 247.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/714310/000119312526364239/d149125dex991.htm",
+     "q": "…e 4.3854 shares of Valley common stock and $21.47 in cash for each share of Providence common stock they own. Total merger consideration is estimated to be $247 million, based on Valley’s closing stock price of $14.10 on August 24, 2026. The transaction is expected to be approx…"
+    },
+    "pf_assets_b": {
+     "v": 67.9,
+     "src": "https://www.sec.gov/Archives/edgar/data/714310/000119312526364239/d149125dex991.htm",
+     "q": "…rt Chicago-based civic, nonprofit, and community organizations. On a pro-forma basis as of June 30, 2026, the combined company’s balance sheet would have approximately $67.9 billion in assets, $55.5 billion of deposits and $53.5 billion in loans. Following the completion of the transaction, Valley ex…"
+    },
+    "tgt_assets_b": {
+     "v": 1.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/714310/000119312526364239/d149125dex991.htm",
+     "q": "…l delivery channel in the Chicagoland area to supplement Valley’s existing commercial presence in the market. Providence is a high-performing commercial bank with approximately $1.6 billion in total assets, $1.3 billion in total deposits, $1.1 billion in total loans, and $800 million in total wealth assets under m…"
+    },
+    "expected_close": {
+     "v": "early 2027",
+     "src": "https://www.sec.gov/Archives/edgar/data/714310/000119312526364239/d149125dex991.htm",
+     "q": "…pproximately $1.6 billion of deposits and $1.9 billion of loans in the Chicagoland market. The acquisition is expected to close in early 2027, subject to standard regulatory approvals, approval of Providence’s shareholders, and the satisfaction or wai…"
+    },
+    "p_tbv": {
+     "v": 1.45,
+     "src": "https://www.sec.gov/Archives/edgar/data/714310/000119312526364239/d149125dex992.htm",
+     "q": "…ley Has a Long Track Record of Success Expanding In New Markets Both Organically and Via M&A Chicago Market ✓ Price / TBV of 1.45x, Below Prior Chicago Bank Transactions and Recent Community Bank Transactions Low-Risk Transaction ✓ 2028 EPS…"
+    },
+    "eps_accr": {
+     "v": 2.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/714310/000119312526364239/d149125dex992.htm",
+     "q": "…45x, Below Prior Chicago Bank Transactions and Recent Community Bank Transactions Low-Risk Transaction ✓ 2028 EPS Accretion of ~2% With Disciplined Pricing and Strong Financial ✓ TBV Dilution of Less Than 1% with Sub 3-Year Earnback Returns…"
+    },
+    "cost_saves": {
+     "v": 25.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/714310/000119312526364239/d149125dex992.htm",
+     "q": "…d 333,206 outstanding options with an average exercise price of $47.76. 10 Financial Impacts ▪ Cost Savings: ~25% of non-interest expenses or $10mm (pre-tax); 75% phase-in during 2027, 100% thereafter Key ▪ Restructuring Charges: 1.7x cost savings…"
+    },
+    "credit_mark_pct": {
+     "v": 1.65,
+     "src": "https://www.sec.gov/Archives/edgar/data/714310/000119312526364239/d149125dex992.htm",
+     "q": "…e Deposit Intangibles: 3.0% of Providence's non-time deposits of $1.0bn; amortized over 10 years (SYD) ▪ Loan Credit Mark: 1.65% of total loans, equal to 1.1x reserves; no CECL double-count Fair Value & Other ▪ Loan Rate Mark: $10 million (pre-tax) esti…"
+    },
+    "cdi_pct": {
+     "v": 3.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/714310/000119312526364239/d149125dex992.htm",
+     "q": "…during 2027, 100% thereafter Key ▪ Restructuring Charges: 1.7x cost savings or $17mm (pre-tax) Assumptions ▪ Core Deposit Intangibles: 3.0% of Providence's non-time deposits of $1.0bn; amortized over 10 years (SYD) ▪ Loan Credit Mark: 1.65% of total lo…"
+    },
+    "consideration": {
+     "v": "74% stock / ~26% cash",
+     "src": "https://www.sec.gov/Archives/edgar/data/714310/000119312526364239/d149125dex992.htm",
+     "q": "…MSAs. Transaction Terms ▪ Fixed Exchange Ratio: 4.3854x VLY shares and $21.47 in cash per Providence share – ~74% stock / ~26% cash Structure & Consideration – Approximately 13 million shares issued to Providence ▪ Pro Forma Ownership: Valle…",
+     "note": "4.3854 acquirer shares per target share"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/714310/000119312526364239/d149125dex992.htm"
+   },
+   "parties_q": "…2 Valley to Acquire Providence Financial Corporation Accelerating Growth in Attractive Chicago Market August 25, 2026…",
+   "roles": {
+    "714310": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "first-first",
+   "announced": "2026-08-26",
+   "acquirer": "First Financial Corporation",
+   "acq_ticker": "THFF",
+   "target": "First Illinois Corporation",
+   "tgt_ticker": null,
+   "f": {
+    "deal_value_m": {
+     "v": 111.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/714562/000071456226000056/thff-20260826xex99d1.htm",
+     "q": "…ive agreement under which First Illinois will merge with and into First Financial in a stock/cash transaction valued at approximately $111.3 million based on First Financial’s stock price of $79.07 on August 26, 2026 . The transaction will complement First F…"
+    },
+    "pf_assets_b": {
+     "v": 6.9,
+     "src": "https://www.sec.gov/Archives/edgar/data/714562/000071456226000056/thff-20260826xex99d1.htm",
+     "q": "…e by adding Hickory Point Bank’s strong community banking presence in Decatur, Springfield and Champaign. The combined company will have approximately $6.9 billion in total assets, $4.9 billion in total loans and $5.5 billion in total deposits. Hickory Point Bank is a community bank that…"
+    },
+    "expected_close": {
+     "v": "4Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/714562/000071456226000056/thff-20260826xex99d1.htm",
+     "q": "…ely $111.3 million. The transaction has been unanimously approved by each company’s board of directors and is expected to close in the fourth quarter of 2026, subject to customary closing conditions, including, but not limited to, receipt of regulatory and First Illi…"
+    },
+    "earnback": {
+     "v": 2.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/714562/000071456226000056/thff-20260826xex99d2.htm",
+     "q": "…FINANCIALLY ATTRACTIVE • ~8% ownership for First Illinois shareholders • ~7% fully-phased EPS accretion • TBV earnback of 2.3 years • Short duration balance sheet leads to limited purchase accounting impact • 20%+ IRR ENHANCED FRANCHISE • Ac…"
+    },
+    "cost_saves": {
+     "v": 34.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/714562/000071456226000056/thff-20260826xex99d2.htm",
+     "q": "…Valuation Multiples⁽¹⁾ Buyer Seller Transaction Structure 8 Transaction Impact ∙ Anticipated cost savings of 34% of First Illinois' noninterest expense base ∙ 75% phased-in during 2027, 100% thereafter ∙ $10.8 million in estimated pre-tax transaction expenses,…"
+    },
+    "credit_mark_pct": {
+     "v": 1.39,
+     "src": "https://www.sec.gov/Archives/edgar/data/714562/000071456226000056/thff-20260826xex99d2.htm",
+     "q": "…estimated pre-tax transaction expenses, fully realized in pro forma tangible book estimate at closing ∙ Loan credit mark of 1.39% of gross loans at closing, or $6.1 million ∙ Interest rate mark on loans of 2.32% estimated gross loans at closing, or $10.1…"
+    },
+    "pf_cet1": {
+     "v": 12.9,
+     "src": "https://www.sec.gov/Archives/edgar/data/714562/000071456226000056/thff-20260826xex99d2.htm",
+     "q": "…anches ~7% ’28 EPS Accr. 3.2% TBV Dilution at Close 2.3 Years TBV Dilution Earnback 1.52% ’28E Pro Forma ROAA 12.9% CET1 Ratio at Close Central IL Franchise IL IN KY TN GA THFF (14) Hickory Point (8) Pro Forma Franchise 4 Hickory Point…"
+    },
+    "consideration": {
+     "v": "70% stock / 30% cash",
+     "src": "https://www.sec.gov/Archives/edgar/data/714562/000071456226000056/thff-20260826xex99d2.htm",
+     "q": "…Corporation ∙ Headquarters: Decatur, IL ∙ Bank Name: Hickory Point Bank and Trust ∙ Bank Established: 1979 ∙ 70% stock consideration / 30% cash election ∙ Fixed exchange ratio of 0.5727x ∙ Cash consideration per share of $44.35 ∙ Pro Forma Ownership: 92…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/714562/000071456226000056/thff-20260826xex99d1.htm"
+   },
+   "parties_q": "…1 News Release FIRST FINANCIAL CORPORATION One First Financial Plaza, Terre Haute, Indiana 47807 (812) 238-6000 First Financial Corporation and First Illinois Corporation Sign Merger Agreement Transaction Strengthens First Financial’s Illinois Franchise Through Addition of Hickory Point Bank and Trust TERRE HAUTE, IN and DECATUR, IL (August 27, 2026) - First Financial Corporation (NASDAQ: THFF) (“First Financial”), the holding company for First Financial Bank, N…",
+   "roles": {
+    "714562": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16",
+   "exp_update": {
+    "q": "The Merger is expected to be completed in the fourth calendar quarter of 2026, subject to customary closing conditions discussed below",
+    "src": "https://www.sec.gov/Archives/edgar/data/714562/000071456226000059/thff-20260826x8ka.htm",
+    "filed": "2026-08-27"
+   }
+  },
+  {
+   "id": "equity-lincoln",
+   "announced": "2026-09-03",
+   "acquirer": "Equity Bancshares",
+   "acq_ticker": "EQBK",
+   "target": "Lincoln Bancorp",
+   "tgt_ticker": null,
+   "f": {
+    "deal_value_m": {
+     "v": 123.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/1227500/000119312526381051/d152469dex991.htm",
+     "q": "…ining 22.5% in cash. Based on Equity’s spot price of $49.85 on September 2, 2026, the total consideration was valued at approximately $123.8 million. Subject to receipt of customary regulatory and shareholder approvals and closing conditions, the merger is e…"
+    },
+    "expected_close": {
+     "v": "4Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/1227500/000119312526381051/d152469dex991.htm",
+     "q": "…n. Subject to receipt of customary regulatory and shareholder approvals and closing conditions, the merger is expected to close in the fourth quarter of 2026. Following completion, Lincoln Savings Bank will merge with and into Equity Bank. “What people value most abo…"
+    },
+    "tgt_state": {
+     "v": "IA",
+     "src": "https://www.sec.gov/Archives/edgar/data/1227500/000119312526381051/d152469dex991.htm",
+     "q": "…), (“Equity,” the “Company,” “we,” “us,” “our”), the Wichita-based holding company of Equity Bank, along with Lincoln Bancorp (“Lincoln”), the parent company of Lincoln Savings Bank, headquartered in Reinbeck, Iowa, announced today they have entered into a definitive merger agreement for Lincoln to merge with and into Equi…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/1227500/000119312526381051/d152469dex991.htm"
+   },
+   "parties_q": "…(NYSE: EQBK), (“Equity,” the “Company,” “we,” “us,” “our”), the Wichita-based holding company of Equity Bank, along with Lincoln Bancorp (“Lincoln”), the parent company of Lincoln Savings Bank, headquartered in Reinbeck, Iowa, announced today they have entered into a definitive merger agreement for Lincoln to merge with and into Equity, adding 16 locations to Equity’s franchise…",
+   "roles": {
+    "1227500": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "john-eagle",
+   "announced": "2026-09-08",
+   "acquirer": "John Marshall Bancorp",
+   "acq_ticker": "JMSB",
+   "target": "Eagle Financial Services",
+   "tgt_ticker": "EFSI",
+   "f": {
+    "deal_value_m": {
+     "v": 253.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/1710482/000155278126000472/e26378_ex99-1.htm",
+     "q": "…e terms of the agreement, at closing, EFSI will merge with and into John Marshall in an all-stock transaction valued at approximately $253 million, or $46.72 per share of EFSI common stock, based on John Marshall’s closing stock price of $23.36 as of Septe…"
+    },
+    "expected_close": {
+     "v": "1Q 2027",
+     "src": "https://www.sec.gov/Archives/edgar/data/1710482/000155278126000472/e26378_ex99-1.htm",
+     "q": "…ficer of the combined company and President of the banking subsidiary Timing and Approvals The transaction is expected to close early in the first quarter of 2027, subject to satisfaction of customary closing conditions, including receipt of required regulatory approvals…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/1710482/000155278126000472/e26378_ex99-1.htm",
+     "q": "…g franchises. Under the terms of the agreement, at closing, EFSI will merge with and into John Marshall in an all-stock transaction valued at approximately $253 million, or $46.72 per share of EFSI common stock, based on John Mar…"
+    },
+    "p_tbv": {
+     "v": 1.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/1710482/000155278126000472/e26378_ex99-2.htm",
+     "q": "…I ▪ $46.72 per EFSI share (1) ▪ Aggregate Consideration: $252.8 million (2) ▪ Price / 2027E EPS (3) : 11.5x ▪ Price / TBV: 1.30x ▪ Market Premium: 11.5% (4) ▪ Upon closing, the combined Board will have 12 members; 6 JMSB members and 6 EFS…"
+    },
+    "cost_saves": {
+     "v": 15.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/1710482/000155278126000472/e26378_ex99-2.htm",
+     "q": "…r ▪ EFSI earnings per management estimates through 2027 – growth of 5% thereafter ▪ Estimated cost savings of 15% of combined annual noninterest expense base ▪ 75% phased - in in 2027 and 100% thereafter ▪ $24.0 million of one - time pre - tax merger expenses ▪…"
+    },
+    "cdi_pct": {
+     "v": 2.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/1710482/000155278126000472/e26378_ex99-2.htm",
+     "q": "…s ▪ After - tax AOCI of $6.1 million accreted back into earnings straight - line over 5 years ▪ $29.6 million core deposit intangible, 2.50% of core deposits, amortized over 10 years ▪ Assumes marginal tax rate of 21.0% ▪ Model assumes the transaction c…"
+    },
+    "pf_assets_b": {
+     "v": 4.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/1710482/000155278126000472/e26378_ex99-2.htm",
+     "q": "…ting Attractive Markets Across Virginia and Maryland Key Markets Served (5) Complementary Footprint Pro Forma Combined Company ( 2 ) $4.4B Assets $3.7B Deposits $3.6B Loans 2 3 Banking Offices ( 3) ~$ 580 M Market Cap (4) Primary Market Areas JMSB Branche…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/1710482/000155278126000472/e26378_ex99-1.htm"
+   },
+   "parties_q": null,
+   "roles": {
+    "1710482": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "bank7-century",
+   "announced": "2026-09-17",
+   "acquirer": "Bank7 Corp.",
+   "acq_ticker": "BSVN",
+   "target": "Century Financial Services Corporation",
+   "tgt_ticker": null,
+   "f": {
+    "deal_value_m": {
+     "v": 137.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/1746129/000114036126036855/ef20081983_ex99-1.htm",
+     "q": "…anding, this would equate to $210.41 in cash and 3.7052 shares of Company common stock per Century share, and implies an aggregate transaction value of approximately $137.3 million based on the Company’s 10-day average closing share price of $54.57 as of September 16, 2026. The shares of C…"
+    },
+    "pf_assets_b": {
+     "v": 3.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/1746129/000114036126036855/ef20081983_ex99-1.htm",
+     "q": "…— all to the benefit of our customers, communities, and shareholders.” Upon completion, the transaction would create a combined Southwest banking organization with approximately $3.3 billion in total assets, pairing Bank7’s high-performing franchise with Century’s long-established New Mexico deposit franchise. The…"
+    },
+    "expected_close": {
+     "v": "4Q 2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/1746129/000114036126036855/ef20081983_ex99-1.htm",
+     "q": "…by the Court, the Company may elect to proceed under the Stock Purchase Agreement instead. The transaction is expected to close in the fourth quarter of 2026. There can be no assurance that either transaction will be completed on the terms described, or at all. About…"
+    },
+    "consideration": {
+     "v": "50% stock / 50% cash",
+     "src": "https://www.sec.gov/Archives/edgar/data/1746129/000114036126036855/ef20081983_ex99-2.htm",
+     "q": "…re Century Financial Services Corp. to merge into Bank7 Corp.; Century Bank to merge into Bank7 Approximately 50% stock / 50% cash consideration $70.0 million in cash and 1,232,657 BSVN common shares; fixed exchange ratio Implied aggregate…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/1746129/000114036126036855/ef20081983_ex99-1.htm"
+   },
+   "parties_q": "…(NASDAQ: BSVN) (the “Company”), the parent company of Oklahoma City-based Bank7, and Century Financial Services Corporation (“Century”), the Santa Fe, New Mexico-based bank holding company for Century Bank, jointly announce today that they have entered into a definitive Agreement and Plan of Merger (the “Merger Agreement”) to which Bank7 Corp…",
+   "roles": {
+    "1746129": "acq"
+   },
+   "status": "closed",
+   "origin": "backfill",
+   "first_seen": "2026-11-16",
+   "close_date": "2026-11-01",
+   "close_src": "https://www.sec.gov/Archives/edgar/data/1746129/000114036126041436/ef20084649_8k.htm",
+   "close_q": "On November 1, 2026, Bank7 Corp (the “Company”) , consummated the previously announced merger (the “Merger”) pursuant to the Agreement and Plan of Merger, dated as of September 16, 2026 (the “Merger Agreement”), by and between the Company and Century Financia",
+   "close_filed": "2026-11-02"
+  },
+  {
+   "id": "byline-illinois",
+   "announced": "2026-10-06",
+   "acquirer": "Byline Bancorp",
+   "acq_ticker": "BY",
+   "target": "Illinois State Bancorp",
+   "tgt_ticker": null,
+   "f": {
+    "deal_value_m": {
+     "v": 87.9,
+     "src": "https://www.sec.gov/Archives/edgar/data/1702750/000119312526415585/by-ex99_1.htm",
+     "q": "…olly owned banking subsidiaries will merge with and into Byline Bancorp, Inc. in a cash and stock transaction valued at approximately $87.9 million, based upon Byline's closing stock price on October 5, 2026. The transaction enhances Byline's presence throu…"
+    },
+    "pf_assets_b": {
+     "v": 10.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/1702750/000119312526415585/by-ex99_1.htm",
+     "q": "…se, expanding customer relationships, and increasing market density across key communities. Upon closing, the combined franchise will operate 48 branches with approximately $10.5 billion in assets, $8.0 billion in loans, and $8.4 billion in deposits. Illinois State Bancorp, Inc., headquartered in Chicago,…"
+    },
+    "expected_close": {
+     "v": "1Q 2027",
+     "src": "https://www.sec.gov/Archives/edgar/data/1702750/000119312526415585/by-ex99_1.htm",
+     "q": "…ncorp common share. The transaction has been approved unanimously by each company’s board of directors and is expected to close during the first quarter of 2027, and is subject to regulatory approvals, the approval of Illinois State Bancorp, Inc.’s shareholders, and the…"
+    },
+    "consideration": {
+     "v": "Cash & stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/1702750/000119312526415585/by-ex99_1.htm",
+     "q": "…is State Bancorp and its wholly owned banking subsidiaries will merge with and into Byline Bancorp, Inc. in a cash and stock transaction valued at approximately $87.9 million, based upon Byline's closing stock price on October 5, 2026…"
+    },
+    "p_tbv": {
+     "v": 1.07,
+     "src": "https://www.sec.gov/Archives/edgar/data/1702750/000119312526415585/by-ex99_2.htm",
+     "q": "…this equates to an aggregate transaction value of $87.9 million or $261.23 per share(1) Transaction Multiples Price / TBV: 1.07x(1) Core Deposit Premium: 1.6%(1) LTM Earnings: 13.1x(1) Pro Forma Impacts Minimal TBV dilution of 1.2%, with…"
+    },
+    "cdp": {
+     "v": 1.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/1702750/000119312526415585/by-ex99_2.htm",
+     "q": "…regate transaction value of $87.9 million or $261.23 per share(1) Transaction Multiples Price / TBV: 1.07x(1) Core Deposit Premium: 1.6%(1) LTM Earnings: 13.1x(1) Pro Forma Impacts Minimal TBV dilution of 1.2%, with earnback expected in less than…"
+    },
+    "cdi_pct": {
+     "v": 3.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/1702750/000119312526415585/by-ex99_2.htm",
+     "q": "…100% in 2028 and thereafter Merger Costs Expected to be approximately $16.6 million pre-tax Other Assumptions Core Deposit Intangible: ~3.0% of non-jumbo deposits, amortized over 7 years utilizing the sum-of-years digits method Diligence Process Conduct…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/1702750/000119312526415585/by-20261006.htm"
+   },
+   "parties_q": "…, a Delaware corporation (\" Byline \"), issued a press release announcing the execution of an Agreement and Plan of Merger in connection with its proposed acquisition of Illinois State Bancorp, Inc…",
+   "roles": {
+    "1702750": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "third-great",
+   "announced": "2026-10-07",
+   "acquirer": "Third Coast Bancshares",
+   "acq_ticker": "TCBX",
+   "target": "Great Plains Bancshares",
+   "tgt_ticker": null,
+   "f": {
+    "deal_value_m": {
+     "v": 239.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/1781730/000119312526416163/d146780dex991.htm",
+     "q": "…finitive merger agreement pursuant to which Third Coast will acquire Great Plains in an all-stock transaction valued at approximately $239.6 million based on Third Coast’s closing stock price as of October 6, 2026. On a pro forma basis, the combined company…"
+    },
+    "pf_assets_b": {
+     "v": 9.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/1781730/000119312526416163/d146780dex991.htm",
+     "q": "…ly $239.6 million based on Third Coast’s closing stock price as of October 6, 2026. On a pro forma basis, the combined company is expected to have approximately $9 billion in assets following the completion of the transaction. The strategic partnership creates an opportunity to combine two…"
+    },
+    "expected_close": {
+     "v": "1Q 2027",
+     "src": "https://www.sec.gov/Archives/edgar/data/1781730/000119312526416163/d146780dex991.htm",
+     "q": "…the closing. The transaction has been unanimously approved by the board of directors of both companies and is expected to close in the first quarter of 2027, subject to customary regulatory approvals and other closing conditions. Closing is also subject to approval…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/1781730/000119312526416163/d146780dex991.htm",
+     "q": "…ed the signing of a definitive merger agreement pursuant to which Third Coast will acquire Great Plains in an all-stock transaction valued at approximately $239.6 million based on Third Coast’s closing stock price as of October 6…"
+    },
+    "p_tbv": {
+     "v": 1.56,
+     "src": "https://www.sec.gov/Archives/edgar/data/1781730/000119312526416163/d146780dex992.htm",
+     "q": "…potential downward adjustments BODY TEXT 0, 0, 0 (1) • Implied aggregate transaction value of $240 million • Price / tangible book value per share: 1.56x LIGHT GRAY Transaction Value (2) 210, 210, 210 • Price / LTM EPS: 9.3x and Multiples (2) • Price / LTM EPS +…"
+    },
+    "p_ltm_eps": {
+     "v": 9.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/1781730/000119312526416163/d146780dex992.htm",
+     "q": "…$240 million • Price / tangible book value per share: 1.56x LIGHT GRAY Transaction Value (2) 210, 210, 210 • Price / LTM EPS: 9.3x and Multiples (2) • Price / LTM EPS + Fully Phased-in Cost Savings: 6.1x BLACK (3) • Core deposit premium: 7.…"
+    },
+    "cdp": {
+     "v": 7.7,
+     "src": "https://www.sec.gov/Archives/edgar/data/1781730/000119312526416163/d146780dex992.htm",
+     "q": "…• Price / LTM EPS: 9.3x and Multiples (2) • Price / LTM EPS + Fully Phased-in Cost Savings: 6.1x BLACK (3) • Core deposit premium: 7.7% 0, 0, 0 ACCENT 1 Pro Forma (4) • 78% Third Coast Bancshares, Inc. / 22% Great Plains Bancshares, Inc. 1, 51,…"
+    },
+    "cost_saves": {
+     "v": 20.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/1781730/000119312526416163/d146780dex992.htm",
+     "q": "…tes per Great Plains Management 255, 255, 255 BODY TEXT 0, 0, 0 • Cost savings of $17.1 million (estimated at 20.0% of Great Plains' 2027E non-interest expense) Targeted Cost Savings • Cost saving phased-in at 50.0% in 2027 and 100% thereafter LIGHT GRAY 210, 210, 210…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/1781730/000119312526416163/d146780dex993.htm"
+   },
+   "parties_q": "…Channel CEO Email to Third Coast Employees Subject Third Coast Announces Merger with Great Plains National Bank TCB Team, Today, I am pleased to share an important milestone in Third Coast’s continued growth…",
+   "roles": {
+    "1781730": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "dime-es",
+   "announced": "2026-10-20",
+   "acquirer": "Dime Commercial Bancshares",
+   "acq_ticker": null,
+   "target": "ES Bancshares (Empire State Bank)",
+   "tgt_ticker": null,
+   "f": {
+    "deal_value_m": {
+     "v": 58.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/846617/000110465926117199/tm2627821d1_ex99-2.htm",
+     "q": "…t. Based upon Dime’s 10-day volume-weighted average price of $38.55 as of October 19, 2026, this represents a transaction value of approximately $58 million (based on 6,886,282 Empire common shares outstanding) or $8.39 per Empire common share. The purchase price re…"
+    },
+    "expected_close": {
+     "v": "1Q 2027",
+     "src": "https://www.sec.gov/Archives/edgar/data/846617/000110465926117199/tm2627821d1_ex99-2.htm",
+     "q": "…ccretion, minimal TBV dilution of approximately 2%, and an earn-back of less than 3 years. The transaction is expected to close in the first quarter of 2027 and is subject to customary closing conditions, including regulatory approval, as well as the approval of Emp…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/846617/000110465926117199/tm2627821d1_ex99-1.htm"
+   },
+   "parties_q": null,
+   "roles": {
+    "846617": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "renasant-commercial",
+   "announced": "2026-10-27",
+   "acquirer": "Renasant Corporation",
+   "acq_ticker": "RNST",
+   "target": "Commercial Holding Company",
+   "tgt_ticker": null,
+   "f": {
+    "deal_value_m": {
+     "v": 142.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/715072/000119312526434444/d180138dex991.htm",
+     "q": "…sh dividend of approximately $35.7 million to be paid by Commercial to its shareholders prior to closing, the aggregate transaction value is approximately $142 million, based on the RNST 10-day average closing price of $40.29 as of October 26, 2026. Immediately following the M…"
+    },
+    "pf_assets_b": {
+     "v": 28.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/715072/000119312526434444/d180138dex991.htm",
+     "q": "…ust and wealth management business has approximately $1.2 billion in assets under management. The Merger will create a Southeastern banking franchise with approximately $28.6 billion in total assets, $20.4 billion in total loans and $22.6 billion in total deposits, based on financial data as of September 30…"
+    },
+    "tgt_assets_b": {
+     "v": 1.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/715072/000119312526434444/d180138dex991.htm",
+     "q": "…es nine full-service branches in Paris, Union City, Jackson and Memphis, Tennessee. As of September 30, 2026, Commercial Bank had approximately $1.1 billion in total assets, $648 million in total loans and $983 million in total deposits. Complementing its banking franchise, Commerc…"
+    },
+    "expected_close": {
+     "v": "1Q 2027",
+     "src": "https://www.sec.gov/Archives/edgar/data/715072/000119312526434444/d180138dex991.htm",
+     "q": "…and into Renasant Bank. The Merger has been unanimously approved by each company’s board of directors and is expected to close in the first quarter of 2027. Completion of the transaction is subject to customary closing conditions, including the receipt of required…"
+    },
+    "cdp": {
+     "v": 6.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/715072/000119312526434444/d180138dex992.htm",
+     "q": "…s (Tax-Effected) 12.1x 13.5x (4) Transaction Value / LTM Earnings (Tax-Effected) + Cost Savings 7.7x 7.4x (5) Core Deposit Premium 6.0% 8.7% § Roy Molitor Ford, Jr., Chairman & CEO of Commercial, expected to join Renasant in a market executive r…"
+    },
+    "cost_saves": {
+     "v": 25.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/715072/000119312526434444/d180138dex992.htm",
+     "q": "…y) / Core Deposits. Financial Assumptions and Impact Key Transaction Assumptions Pro Forma Financial Impact – 25% of Commercial noninterest expense Financial Returns Cost Savings & – 50% realized in 2027; 100% thereafter Merger Charges – $19.0 million after…"
+    },
+    "cdi_pct": {
+     "v": 3.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/715072/000119312526434444/d180138dex992.htm",
+     "q": "…on (3) Pro Forma Capital at Close Adjustments – Fixed assets: $10 million write-up, amortized over 30 years – Core deposit intangible: 3.00% of core deposits ($23.8 million), amortized over 10 years (sum-of-years-digits) 8.8% 9.6% 11.0% TCE / TA Leverag…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/715072/000119312526434444/d180138dex991.htm"
+   },
+   "parties_q": "…1 Renasant Corporation to Acquire Commercial Holding Company October 27, 2026 Expands Renasant’s West Tennessee Franchise with over $900M in Low-Cost, Core Deposits TUPELO, Miss…",
+   "roles": {
+    "715072": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "first-main",
+   "announced": "2026-10-28",
+   "acquirer": "First Community Bankshares",
+   "acq_ticker": "FCBC",
+   "target": "Main Street Financial Services Corp.",
+   "tgt_ticker": null,
+   "f": {
+    "deal_value_m": {
+     "v": 243.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/859070/000143774926033708/fcbc20261028_425.htm",
+     "q": "…ber 26, 2026, the exchange ratio represents approximately $30.14 per share of Main Street Connon Stock and an aggregate transaction value of approximately $243 million. The Merger is intended to be a tax-free reorganization under Section 368(a) of the Internal Revenue Code of…"
+    },
+    "expected_close": {
+     "v": "2Q 2027",
+     "src": "https://www.sec.gov/Archives/edgar/data/859070/000143774926033708/fcbc20261028_425.htm",
+     "q": "…the Merger will qualify as a “reorganization” within the meaning of Section 368(a) of the IRC. The Merger is expected to close early in the second quarter of 2027 subject to the satisfaction of the above conditions. Termination; Termination Fee The Agreement provides cert…"
+    },
+    "pf_assets_b": {
+     "v": 5.2,
+     "src": "https://www.sec.gov/Archives/edgar/data/859070/000143774926033708/ex_1033014.htm",
+     "q": "…approximately $1.6 billion in consolidated assets. Based on the companies’ reported assets at that date, the combined organization is expected to report approximately $5.2 billion in assets before transaction-related adjustments. The proposed transaction will advance First Community’s disciplined g…"
+    },
+    "price_per_share": {
+     "v": 30.14,
+     "src": "https://www.sec.gov/Archives/edgar/data/859070/000143774926033708/fcbc20261028_425.htm",
+     "q": "…ber 26, 2026, the exchange ratio represents approximately $30.14 per share of Main Street Connon Stock and an aggregate transaction value of approximately $243 million. The Merger is intended to be a tax-free reorganization under Section 368(a) of the Internal Revenue Code of…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/859070/000143774926033708/fcbc20261028_425.htm"
+   },
+   "parties_q": "…(“First Community”) entered into an Agreement and Plan of Merger (the “Agreement”) with Main Street Financial Services Corp…",
+   "roles": {
+    "859070": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "first-evergreen",
+   "announced": "2026-10-29",
+   "acquirer": "First Mid Bancshares",
+   "acq_ticker": "FMBH",
+   "target": "Evergreen Bancshares",
+   "tgt_ticker": null,
+   "f": {
+    "eps_accr": {
+     "v": 5.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/700565/000117184326006953/exh_991.htm",
+     "q": "…y 80% stock and 20% cash based on First Mid’s stock price at announcement. The transaction is estimated to be approximately 5.0% accretive to earnings per share in 2028 (1) , inclusive of the anticipated impact from crossing $10 billion in assets. Estimated tangible boo…"
+    },
+    "earnback": {
+     "v": 0.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/700565/000117184326006953/exh_991.htm",
+     "q": "…. Estimated tangible book value per share dilution to First Mid is expected to be approximately 0.5%, with an earnback period of approximately 0.5 years (2) . First Mid expects to achieve cost savings of approximately 33% of Evergreen’s noninterest expense, in a…"
+    },
+    "cost_saves": {
+     "v": 33.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/700565/000117184326006953/exh_991.htm",
+     "q": "…n earnback period of approximately 0.5 years (2) . First Mid expects to achieve cost savings of approximately 33% of Evergreen’s noninterest expense, in addition to approximately $0.9 million of annual pre-tax savings from branch consolidation. First Mid exp…"
+    },
+    "pf_cet1": {
+     "v": 13.6,
+     "src": "https://www.sec.gov/Archives/edgar/data/700565/000117184326006953/exh_991.htm",
+     "q": "…anch consolidation. First Mid expects to maintain a strong capital position following the transaction, with a pro forma CET1 ratio of approximately 13.6%. “We are excited to welcome American Bank of Freedom’s employees, customers and shareholders to First Mid,” s…"
+    },
+    "expected_close": {
+     "v": "1Q 2027",
+     "src": "https://www.sec.gov/Archives/edgar/data/700565/000117184326006953/exh_991.htm",
+     "q": "…er banking network. The transaction has been unanimously approved by each company’s board of directors and is expected to close in the first quarter of 2027, subject to regulatory approvals, the approval of Evergreen’s shareholders and the satisfaction of customary…"
+    },
+    "consideration": {
+     "v": "Cash & stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/700565/000117184326006953/exh_991.htm",
+     "q": "…ecution of a definitive agreement dated October 28, 2026 under which Evergreen will merge with First Mid in a stock and cash transaction, strengthening First Mid’s presence in St. Louis and along the I-70 corridor, expanding its Illin…",
+     "note": "0.4081 acquirer shares per target share"
+    },
+    "deal_value_m": {
+     "v": 70.7,
+     "src": "https://www.sec.gov/Archives/edgar/data/700565/000117184326006953/exh_992.htm",
+     "q": "…bank - level regulatory data as o f September 30, 2026. 7 Transaction Summary Structure & Consideration⁽¹⁾ • Aggregate transaction value of approximately $ 70.7 million • 0.4081 FMBH shares plus $5.20 in cash for each Evergreen share outstanding • Implied consideration mix of a…"
+    },
+    "p_tbv": {
+     "v": 1.1,
+     "src": "https://www.sec.gov/Archives/edgar/data/700565/000117184326006953/exh_992.htm",
+     "q": "…and position Firs t M id for future growth opportunities Financially Attractive (1) ■ Disciplined pricing at 1.10x TBV and 67% pay - to - trade for a strategically complementary franchise ■ Approximately 5% EPS accretion in 2028…"
+    },
+    "cdp": {
+     "v": 1.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/700565/000117184326006953/exh_992.htm",
+     "q": "…lue: 1. 10 x • Price / 2027E Earnings + Fully Phased - In Cost Savings: 6. 2 x • Pay - to - Trade⁽²⁾: 6 7 % • Core Deposit Premium: 1.3 % Cost Savings & Synergies • ~33% of Evergreen's noninterest expense ⁽³⁾ ($7.6 million in 2027E); 75% realized…"
+    },
+    "cdi_pct": {
+     "v": 2.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/700565/000117184326006953/exh_992.htm",
+     "q": "…e common equity at close) • Loan interest rate mark of ~$ 8.9 million accreted over 4 years straight - line • Core deposit intangible equal to 2.0% of non - time deposits, amortized over 10 years sum - of - years - digits Transaction Costs • ~$13.8 million pre…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/700565/000117184326006953/f8k_102826.htm"
+   },
+   "parties_q": "…(“First Mid”) and Raven Sub LLC, a newly formed Missouri limited liability company and wholly-owned subsidiary of First Mid (“Merger Sub”), entered into an Agreement and Plan of Merger (the “Merger Agreement”) with Evergreen Bancshares, Inc…",
+   "roles": {
+    "700565": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "texas-san",
+   "announced": "2026-10-29",
+   "acquirer": "Texas Community Bancshares",
+   "acq_ticker": "TCBS",
+   "target": "The Banc of San Jacinto County Bancshares",
+   "tgt_ticker": null,
+   "f": {
+    "expected_close": {
+     "v": "1Q 2027",
+     "src": "https://www.sec.gov/Archives/edgar/data/1849466/000110465926120589/tcbs-ex99d1.htm",
+     "q": "…oards of directors of both the Company and SJCB have unanimously approved the Merger Agreement. The Merger is expected to close in the first quarter of 2027. Closing is subject to customary closing conditions, including receipt of required regulatory approvals and a…"
+    },
+    "consideration": {
+     "v": "100% cash",
+     "src": "https://www.sec.gov/Archives/edgar/data/1849466/000110465926120589/tcbs-ex99d1.htm",
+     "q": "…efinitive merger agreement (the “Merger Agreement”). Under the agreement, the Company will acquire SJCB in an all-cash transaction (the “Merger”). This includes SJCB’s wholly owned subsidiary, The Bank of San Jacinto County, a T…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/1849466/000110465926120589/tcbs-20261029x8k.htm"
+   },
+   "parties_q": "…Immediately following the effective time of the Merger (the “Effective Time”), SJCB’s wholly-owned banking subsidiary, The Bank of San Jacinto County, Coldspring, Texas (“Target Bank”), will merge with and into TCBS’s wholly owned banking subsidiary, Broadstreet Bank, SSB (“Broadstreet”), with Broadstreet continuing as the surviving bank (the “Bank Merger” and, toge…",
+   "roles": {
+    "1849466": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "first-first",
+   "announced": "2026-11-05",
+   "acquirer": "First Capital, Inc.",
+   "acq_ticker": "FCAP",
+   "target": "First Bancorp of Indiana",
+   "tgt_ticker": "FBPI",
+   "f": {
+    "deal_value_m": {
+     "v": 33.2,
+     "src": "https://www.sec.gov/Archives/edgar/data/1070296/000110465926123087/tm2628974d1_ex99-1.htm",
+     "q": "…agreement pursuant to which First Bancorp will merge with and into First Capital in an all-stock transaction valued at approximately $33.2 million, based upon the 20-day volume-weighted average closing price of First Capital as of November 4, 2026 of $63.0…"
+    },
+    "expected_close": {
+     "v": "1H 2027",
+     "src": "https://www.sec.gov/Archives/edgar/data/1070296/000110465926123087/tm2628974d1_ex99-1.htm",
+     "q": "…rst Capital of $63.05 per share, the transaction is valued at approximately $33.2 million. The transaction is expected to be completed in the first half of 2027, subject to the satisfaction of customary closing conditions, including regulatory approvals and the approval…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/1070296/000110465926123087/tm2628974d1_ex99-1.htm",
+     "q": "…to a definitive merger agreement pursuant to which First Bancorp will merge with and into First Capital in an all-stock transaction valued at approximately $33.2 million, based upon the 20-day volume-weighted average closing pric…",
+     "note": "0.3075 acquirer shares per target share"
+    },
+    "earnback": {
+     "v": 1.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/1070296/000110465926123087/tm2628974d1_ex99-2.htm",
+     "q": "…Dilution 6.9% TBVPS Earnback 1.4yrs ’28 PF ROAA 1.5%+ 1.56% Cost of Deposits 5 Financially Attractive • TBVPS earnback of 1.4 years • ~33% fully - phased EPS accretion • ~13% pro forma ownership for FBPI shareholders • Though not modeled, th…"
+    },
+    "credit_mark_m": {
+     "v": 4.7,
+     "src": "https://www.sec.gov/Archives/edgar/data/1070296/000110465926123087/tm2628974d1_ex99-2.htm",
+     "q": "…zation in 2028 and beyond • All regulatory capital ratios remain well capitalized at transaction close • Loan credit mark of $4.7 million (1.1% of loans at closing), assumes no CECL “double - count ” • Loan interest rate mark - down of $12.3 milli…"
+    },
+    "cdi_pct": {
+     "v": 2.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/1070296/000110465926123087/tm2628974d1_ex99-2.htm",
+     "q": "…interest rate mark - down of $12.3 million (2.8% of loans at closing) accreted straight line over 4.7 years • Core deposit intangible of 2.50% of non - time deposits, amortized SYD over 10 years • Additional fair value marks on AOCI, fixed assets, mortgag…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/1070296/000110465926123087/tm2628974d1_8k.htm"
+   },
+   "parties_q": "…(“First Capital”), an Indiana corporation, entered into an Agreement and Plan of Merger (the “Merger Agreement”) with First Bancorp of Indiana, Inc…",
+   "roles": {
+    "1070296": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "ameris-central",
+   "announced": "2026-11-16",
+   "acquirer": "Ameris Bancorp",
+   "acq_ticker": "ABCB",
+   "target": "Bank of Central Florida Holding Company",
+   "tgt_ticker": null,
+   "f": {
+    "price_per_share": {
+     "v": 51.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/351569/000035156926000166/ex991november162026pressre.htm",
+     "q": "…mmon stock for each outstanding share of Bank of Central Florida Holding Company common stock, for an implied value of $51.80 per share based on Ameris’s closing price of $82.50 as of November 12, 2026. The definitive agreement was approved by t…"
+    },
+    "tgt_assets_b": {
+     "v": 1.2,
+     "src": "https://www.sec.gov/Archives/edgar/data/351569/000035156926000166/ex991november162026pressre.htm",
+     "q": "…emium financing, and mortgage and refinancing services. Learn more about Ameris at www.amerisbank.com . About Bank of Central Florida Holding Company Bank of Central Florida Holding Company is the parent of Bank of Central Florida, a community bank headquartered in Lakeland, Florida, with approximately $1.2 billion in total assets as of September 30, 2026. Founded in 2007, Bank of Central Florida provides commercial and personal banking p…"
+    },
+    "expected_close": {
+     "v": "1Q 2027",
+     "src": "https://www.sec.gov/Archives/edgar/data/351569/000035156926000166/ex991november162026pressre.htm",
+     "q": "…approved by the boards of directors of Ameris and Bank of Central Florida Holding Company. The transaction is expected to close in the first quarter of 2027 and is subject to customary closing conditions, including regulatory approval, as well as the approval of Ban…"
+    },
+    "consideration": {
+     "v": "100% stock",
+     "src": "https://www.sec.gov/Archives/edgar/data/351569/000035156926000166/ex991november162026pressre.htm",
+     "q": "…finitive merger agreement pursuant to which Ameris will acquire Bank of Central Florida Holding Company in an all-stock merger transaction. Bank of Central Florida operates seven financial centers in the greater Lakeland/Tampa ar…",
+     "note": "0.6279 acquirer shares per target share"
+    },
+    "deal_value_m": {
+     "v": 180.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/351569/000035156926000166/ex992november16ip.htm",
+     "q": "…(2) 11.8x P / LTM EPS (2) ~3.0% 2028 EPS Accretion ~1.5% TBVPS Dilution ~2.5 year TBVPS Dilution Earnback (3) $180.0 Million Deal Value (1) (2) 1 2 3 Total Deposits $1.1 Billion YTD ROAE / ROAA 16.84% / 1.25% Total Assets $1.2 Billion Gross Loan…"
+    },
+    "p_ltm_eps": {
+     "v": 11.8,
+     "src": "https://www.sec.gov/Archives/edgar/data/351569/000035156926000166/ex992november16ip.htm",
+     "q": "…share • Pro forma ownership: ~97% Ameris / ~3% BOCF Implied Transaction Multiples (1) • Price / TBVPS: 192% • Price / LTM EPS: 11.8x • Price / 2027E EPS + Fully Phased-In Cost Savings: 7.3x \\ • Franchise Premium / Core Deposits (3): 7.9% Proj…"
+    },
+    "eps_accr": {
+     "v": 3.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/351569/000035156926000166/ex992november16ip.htm",
+     "q": "…Fits with Ameris’s profitable growth strategy Ameris (163) BOCF (7) 192% P / TBVPS (2) 11.8x P / LTM EPS (2) ~3.0% 2028 EPS Accretion ~1.5% TBVPS Dilution ~2.5 year TBVPS Dilution Earnback (3) $180.0 Million Deal Value (1) (2) 1 2 3 Total Depo…"
+    },
+    "tbv_dil": {
+     "v": 1.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/351569/000035156926000166/ex992november16ip.htm",
+     "q": "…9.5 69.2 $47.98 TBVPS Accretion / (Dilution) to Ameris ($) ($0.75) TBVPS Accretion / (Dilution) to Ameris (%) (1.5%) TBVPS Dilution Earnback Period 2.5 Years TBVPS Reconciliation Illustrative Tangible Book Value Per Share Impact Calculation…"
+    },
+    "earnback": {
+     "v": 2.5,
+     "src": "https://www.sec.gov/Archives/edgar/data/351569/000035156926000166/ex992november16ip.htm",
+     "q": "…Accretion / (Dilution) to Ameris ($) ($0.75) TBVPS Accretion / (Dilution) to Ameris (%) (1.5%) TBVPS Dilution Earnback Period 2.5 Years TBVPS Reconciliation Illustrative Tangible Book Value Per Share Impact Calculation of Intangibles Created 1 –…"
+    },
+    "cost_saves": {
+     "v": 30.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/351569/000035156926000166/ex992november16ip.htm",
+     "q": "…f BOCF’s non-time deposits, amortized sum-of- years digits over 10 years Cost Savings • Cost savings equal to 30.0% of BOCF’s non-interest expense base − 75% phased-in during 2027, 100% thereafter Merger Costs • $17.0 million, pre-tax, fully reflected in p…"
+    },
+    "credit_mark_m": {
+     "v": 22.3,
+     "src": "https://www.sec.gov/Archives/edgar/data/351569/000035156926000166/ex992november16ip.htm",
+     "q": "…ased on consensus analyst estimates for Ameris and management forecast for BOCF Loan Credit Mark • Gross loan credit mark of $22.3 million, or 2.5% of estimated gross loans at close − Results in a net credit mark of $12.9 million after reversal of…"
+    },
+    "rate_mark_m": {
+     "v": 20.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/351569/000035156926000166/ex992november16ip.htm",
+     "q": "…net credit mark of $12.9 million after reversal of BOCF’s reserves Interest Rate and Other Fair Value Marks • Loan interest rate mark of $20.0 million, accreted sum-of-years digits over 6 years • AFS securities losses of $19.3 million in AOCI, accreted straigh…"
+    },
+    "cdi_pct": {
+     "v": 3.0,
+     "src": "https://www.sec.gov/Archives/edgar/data/351569/000035156926000166/ex992november16ip.htm",
+     "q": "…aight-line over 30 years • Time deposit write-down of $0.2 million, accreted sum-of-years digits over 2 years Core Deposit Intangible • Core deposit intangible equal to 3.0% of BOCF’s non-time deposits, amortized sum-of- years digits over 10 years Cost Savings • Cost savings equal to 3…"
+    },
+    "pf_cet1": {
+     "v": 13.4,
+     "src": "https://www.sec.gov/Archives/edgar/data/351569/000035156926000166/ex992november16ip.htm",
+     "q": "…of ~1.5% at transaction close, earned back in ~2.5 years (4) • Internal Rate of Return: ~20.1% IRR • Capital: Pro forma CET1 ratio of approximately 13.4% at transaction close Approvals and Timing • Approvals: Subject to BOCF shareholder approval and customary reg…"
+    },
+    "tgt_state": {
+     "v": "FL",
+     "src": "https://www.sec.gov/Archives/edgar/data/351569/000035156926000166/ex991november162026pressre.htm",
+     "q": "…emium financing, and mortgage and refinancing services. Learn more about Ameris at www.amerisbank.com . About Bank of Central Florida Holding Company Bank of Central Florida Holding Company is the parent of Bank of Central Florida, a community bank headquartered in Lakeland, Florida, with approximately $1.2 billion in total assets as of September 30, 2026. Founded in 2007, Bank of Central F…"
+    }
+   },
+   "sources": {
+    "Announcement (8-K/425)": "https://www.sec.gov/Archives/edgar/data/351569/000035156926000166/ex991november162026pressre.htm"
+   },
+   "parties_q": "…1 Document News Release AMERIS BANCORP ENHANCES CENTRAL FLORIDA PRESENCE THROUGH AGREEMENT TO ACQUIRE BANK OF CENTRAL FLORIDA HOLDING COMPANY ATLANTA, GA, November 16, 2026 - Ameris Bancorp (NYSE: ABCB) (“Ameris”) and Lakeland, Florida-based Bank of Central Florida Holding Company, parent company of Bank of Central Florida, today announced the signing of a definitive merger agreement pursuant to which Ameris will acquire Bank of Central Florida Holding Company in an all-stock merger transaction…",
+   "roles": {
+    "351569": "acq"
+   },
+   "status": "pending",
+   "origin": "backfill",
+   "first_seen": "2026-11-16"
+  }
+ ],
+ "candidates": [],
+ "seen_acc": [
+  "0000007789-26-000013",
+  "0000007789-26-000138",
+  "0000007789-26-000147",
+  "0000007789-26-000191",
+  "0000007789-26-000219",
+  "0000007789-26-000257",
+  "0000036104-26-000005",
+  "0000039311-26-000020",
+  "0000039311-26-000025",
+  "0000039311-26-000027",
+  "0000039311-26-000042",
+  "0000039311-26-000051",
+  "0000039311-26-000053",
+  "0000039311-26-000059",
+  "0000049196-26-000029",
+  "0000318300-26-000142",
+  "0000318300-26-000145",
+  "0000318300-26-000183",
+  "0000318300-26-000202",
+  "0000318300-26-000205",
+  "0000318300-26-000227",
+  "0000318300-26-000231",
+  "0000350852-26-000019",
+  "0000351569-26-000166",
+  "0000351569-26-000167",
+  "0000356171-26-000104",
+  "0000356171-26-000106",
+  "0000356171-26-000115",
+  "0000356171-26-000119",
+  "0000700564-26-000010",
+  "0000708955-26-000002",
+  "0000708955-26-000133",
+  "0000708955-26-000195",
+  "0000708955-26-000196",
+  "0000708955-26-000206",
+  "0000712534-26-000008",
+  "0000712534-26-000013",
+  "0000714562-26-000011",
+  "0000714562-26-000056",
+  "0000714562-26-000059",
+  "0000714562-26-000068",
+  "0000717538-26-000030",
+  "0000717538-26-000031",
+  "0000717538-26-000050",
+  "0000717538-26-000090",
+  "0000717538-26-000100",
+  "0000717538-26-000123",
+  "0000717538-26-000127",
+  "0000732417-26-000058",
+  "0000750558-26-000012",
+  "0000775215-26-000003",
+  "0000775215-26-000009",
+  "0000775215-26-000010",
+  "0000775215-26-000018",
+  "0000775215-26-000021",
+  "0000775215-26-000028",
+  "0000775215-26-000050",
+  "0000775215-26-000076",
+  "0000775215-26-000077",
+  "0000775215-26-000085",
+  "0000775215-26-000086",
+  "0000775215-26-000094",
+  "0000805676-26-000008",
+  "0000805676-26-000010",
+  "0000811589-26-000149",
+  "0000811589-26-000151",
+  "0000811589-26-000162",
+  "0000842517-26-000138",
+  "0000842517-26-000140",
+  "0000842517-26-000148",
+  "0000842517-26-000151",
+  "0000842517-26-000153",
+  "0000842517-26-000158",
+  "0000842517-26-000159",
+  "0000842517-26-000163",
+  "0000842517-26-000176",
+  "0000842517-26-000222",
+  "0000842517-26-000224",
+  "0000842517-26-000227",
+  "0000842517-26-000238",
+  "0000857855-26-000023",
+  "0000857855-26-000030",
+  "0000857855-26-000036",
+  "0000857855-26-000040",
+  "0000857855-26-000044",
+  "0000857855-26-000053",
+  "0000857855-26-000055",
+  "0000857855-26-000057",
+  "0000857855-26-000060",
+  "0000879635-26-000003",
+  "0000879635-26-000011",
+  "0000879635-26-000016",
+  "0000879635-26-000018",
+  "0000879635-26-000022",
+  "0000880641-26-000026",
+  "0000880641-26-000027",
+  "0000893847-26-000058",
+  "0000893847-26-000081",
+  "0000893847-26-000091",
+  "0000893847-26-000096",
+  "0000893847-26-000099",
+  "0000923139-26-000003",
+  "0000923139-26-000012",
+  "0000927089-26-000084",
+  "0000927628-26-000039",
+  "0000927628-26-000083",
+  "0000936528-26-000069",
+  "0000939057-26-000060",
+  "0000939057-26-000205",
+  "0000943374-26-000003",
+  "0000943374-26-000019",
+  "0000943374-26-000030",
+  "0000943374-26-000120",
+  "0000943374-26-000126",
+  "0000943374-26-000141",
+  "0000943374-26-000157",
+  "0000943374-26-000182",
+  "0000943374-26-000254",
+  "0000943374-26-000270",
+  "0000943374-26-000293",
+  "0000943374-26-000392",
+  "0000943374-26-000454",
+  "0000946673-26-000123",
+  "0000946673-26-000163",
+  "0000946673-26-000179",
+  "0000946673-26-000184",
+  "0000950103-26-001815",
+  "0000950103-26-002624",
+  "0000950103-26-005096",
+  "0000950103-26-005103",
+  "0000950103-26-012673",
+  "0001004702-26-000005",
+  "0001004702-26-000008",
+  "0001004702-26-000011",
+  "0001004702-26-000024",
+  "0001004702-26-000025",
+  "0001004702-26-000032",
+  "0001004702-26-000033",
+  "0001004702-26-000041",
+  "0001004702-26-000042",
+  "0001004702-26-000050",
+  "0001104659-26-000016",
+  "0001104659-26-000083",
+  "0001104659-26-001549",
+  "0001104659-26-001622",
+  "0001104659-26-002896",
+  "0001104659-26-003879",
+  "0001104659-26-007183",
+  "0001104659-26-007184",
+  "0001104659-26-007187",
+  "0001104659-26-007411",
+  "0001104659-26-007472",
+  "0001104659-26-007474",
+  "0001104659-26-007673",
+  "0001104659-26-007678",
+  "0001104659-26-007679",
+  "0001104659-26-007980",
+  "0001104659-26-008047",
+  "0001104659-26-008967",
+  "0001104659-26-008969",
+  "0001104659-26-008996",
+  "0001104659-26-008998",
+  "0001104659-26-009723",
+  "0001104659-26-009724",
+  "0001104659-26-010369",
+  "0001104659-26-010572",
+  "0001104659-26-011609",
+  "0001104659-26-011614",
+  "0001104659-26-012668",
+  "0001104659-26-012674",
+  "0001104659-26-013385",
+  "0001104659-26-019664",
+  "0001104659-26-019666",
+  "0001104659-26-020615",
+  "0001104659-26-021698",
+  "0001104659-26-026709",
+  "0001104659-26-026711",
+  "0001104659-26-026781",
+  "0001104659-26-026782",
+  "0001104659-26-027122",
+  "0001104659-26-027529",
+  "0001104659-26-028511",
+  "0001104659-26-038418",
+  "0001104659-26-045707",
+  "0001104659-26-045711",
+  "0001104659-26-045714",
+  "0001104659-26-049027",
+  "0001104659-26-061328",
+  "0001104659-26-061904",
+  "0001104659-26-063919",
+  "0001104659-26-063925",
+  "0001104659-26-068535",
+  "0001104659-26-071835",
+  "0001104659-26-071840",
+  "0001104659-26-073197",
+  "0001104659-26-073409",
+  "0001104659-26-075113",
+  "0001104659-26-077082",
+  "0001104659-26-077084",
+  "0001104659-26-077342",
+  "0001104659-26-077346",
+  "0001104659-26-079701",
+  "0001104659-26-082469",
+  "0001104659-26-082471",
+  "0001104659-26-082851",
+  "0001104659-26-082852",
+  "0001104659-26-082853",
+  "0001104659-26-082856",
+  "0001104659-26-083099",
+  "0001104659-26-083102",
+  "0001104659-26-083105",
+  "0001104659-26-083107",
+  "0001104659-26-083108",
+  "0001104659-26-083110",
+  "0001104659-26-083886",
+  "0001104659-26-083891",
+  "0001104659-26-083893",
+  "0001104659-26-083895",
+  "0001104659-26-083898",
+  "0001104659-26-083899",
+  "0001104659-26-085424",
+  "0001104659-26-085426",
+  "0001104659-26-086650",
+  "0001104659-26-087206",
+  "0001104659-26-087832",
+  "0001104659-26-087835",
+  "0001104659-26-088743",
+  "0001104659-26-089537",
+  "0001104659-26-094994",
+  "0001104659-26-097140",
+  "0001104659-26-099244",
+  "0001104659-26-102530",
+  "0001104659-26-106666",
+  "0001104659-26-108432",
+  "0001104659-26-112138",
+  "0001104659-26-112339",
+  "0001104659-26-115958",
+  "0001104659-26-116248",
+  "0001104659-26-117199",
+  "0001104659-26-117200",
+  "0001104659-26-119174",
+  "0001104659-26-119384",
+  "0001104659-26-119632",
+  "0001104659-26-119943",
+  "0001104659-26-120019",
+  "0001104659-26-120589",
+  "0001104659-26-120694",
+  "0001104659-26-120966",
+  "0001104659-26-123087",
+  "0001104659-26-123090",
+  "0001104659-26-123464",
+  "0001104659-26-123466",
+  "0001104659-26-123603",
+  "0001104659-26-123880",
+  "0001104659-26-123946",
+  "0001104659-26-123949",
+  "0001104659-26-125108",
+  "0001104659-26-127698",
+  "0001115055-26-000002",
+  "0001128361-26-000018",
+  "0001128361-26-000049",
+  "0001137547-26-000002",
+  "0001137547-26-000004",
+  "0001137547-26-000007",
+  "0001140361-26-000049",
+  "0001140361-26-000385",
+  "0001140361-26-002118",
+  "0001140361-26-002400",
+  "0001140361-26-002402",
+  "0001140361-26-003083",
+  "0001140361-26-010771",
+  "0001140361-26-012794",
+  "0001140361-26-025338",
+  "0001140361-26-025604",
+  "0001140361-26-027463",
+  "0001140361-26-035826",
+  "0001140361-26-036192",
+  "0001140361-26-036855",
+  "0001140361-26-041436",
+  "0001163370-26-000027",
+  "0001163370-26-000032",
+  "0001163370-26-000034",
+  "0001171843-26-000009",
+  "0001171843-26-001231",
+  "0001171843-26-002468",
+  "0001171843-26-002634",
+  "0001171843-26-004658",
+  "0001171843-26-005142",
+  "0001171843-26-006740",
+  "0001171843-26-006953",
+  "0001171843-26-006958",
+  "0001171843-26-006965",
+  "0001171843-26-006983",
+  "0001171843-26-007017",
+  "0001174850-26-000004",
+  "0001174850-26-000005",
+  "0001174850-26-000039",
+  "0001174850-26-000072",
+  "0001174947-26-000109",
+  "0001185185-26-000533",
+  "0001193125-26-000016",
+  "0001193125-26-001005",
+  "0001193125-26-001612",
+  "0001193125-26-002442",
+  "0001193125-26-002449",
+  "0001193125-26-002450",
+  "0001193125-26-002461",
+  "0001193125-26-004372",
+  "0001193125-26-004377",
+  "0001193125-26-011142",
+  "0001193125-26-011710",
+  "0001193125-26-011714",
+  "0001193125-26-011717",
+  "0001193125-26-011977",
+  "0001193125-26-012057",
+  "0001193125-26-014215",
+  "0001193125-26-014706",
+  "0001193125-26-014712",
+  "0001193125-26-015445",
+  "0001193125-26-015450",
+  "0001193125-26-017998",
+  "0001193125-26-018584",
+  "0001193125-26-018599",
+  "0001193125-26-018614",
+  "0001193125-26-019444",
+  "0001193125-26-019543",
+  "0001193125-26-019695",
+  "0001193125-26-022725",
+  "0001193125-26-023830",
+  "0001193125-26-025602",
+  "0001193125-26-025604",
+  "0001193125-26-025609",
+  "0001193125-26-025613",
+  "0001193125-26-028154",
+  "0001193125-26-028157",
+  "0001193125-26-029112",
+  "0001193125-26-029488",
+  "0001193125-26-032625",
+  "0001193125-26-032627",
+  "0001193125-26-033632",
+  "0001193125-26-033737",
+  "0001193125-26-033776",
+  "0001193125-26-035891",
+  "0001193125-26-035902",
+  "0001193125-26-037873",
+  "0001193125-26-039345",
+  "0001193125-26-039349",
+  "0001193125-26-039354",
+  "0001193125-26-039357",
+  "0001193125-26-041328",
+  "0001193125-26-041337",
+  "0001193125-26-054930",
+  "0001193125-26-059013",
+  "0001193125-26-062561",
+  "0001193125-26-071157",
+  "0001193125-26-091842",
+  "0001193125-26-098675",
+  "0001193125-26-103217",
+  "0001193125-26-104124",
+  "0001193125-26-111638",
+  "0001193125-26-111641",
+  "0001193125-26-111645",
+  "0001193125-26-111649",
+  "0001193125-26-114148",
+  "0001193125-26-114201",
+  "0001193125-26-124095",
+  "0001193125-26-125298",
+  "0001193125-26-129164",
+  "0001193125-26-129189",
+  "0001193125-26-134773",
+  "0001193125-26-135892",
+  "0001193125-26-135897",
+  "0001193125-26-138245",
+  "0001193125-26-138248",
+  "0001193125-26-138261",
+  "0001193125-26-144221",
+  "0001193125-26-144222",
+  "0001193125-26-144787",
+  "0001193125-26-161692",
+  "0001193125-26-167257",
+  "0001193125-26-167264",
+  "0001193125-26-168540",
+  "0001193125-26-170616",
+  "0001193125-26-170819",
+  "0001193125-26-188851",
+  "0001193125-26-188877",
+  "0001193125-26-193743",
+  "0001193125-26-201540",
+  "0001193125-26-206551",
+  "0001193125-26-212352",
+  "0001193125-26-212391",
+  "0001193125-26-224197",
+  "0001193125-26-225443",
+  "0001193125-26-226075",
+  "0001193125-26-231144",
+  "0001193125-26-232794",
+  "0001193125-26-232803",
+  "0001193125-26-236809",
+  "0001193125-26-248900",
+  "0001193125-26-250015",
+  "0001193125-26-251758",
+  "0001193125-26-251765",
+  "0001193125-26-252582",
+  "0001193125-26-291486",
+  "0001193125-26-291511",
+  "0001193125-26-308486",
+  "0001193125-26-310388",
+  "0001193125-26-310393",
+  "0001193125-26-310467",
+  "0001193125-26-310468",
+  "0001193125-26-312412",
+  "0001193125-26-322053",
+  "0001193125-26-326406",
+  "0001193125-26-329625",
+  "0001193125-26-353285",
+  "0001193125-26-353578",
+  "0001193125-26-357758",
+  "0001193125-26-359228",
+  "0001193125-26-364239",
+  "0001193125-26-364240",
+  "0001193125-26-376886",
+  "0001193125-26-381051",
+  "0001193125-26-381059",
+  "0001193125-26-383776",
+  "0001193125-26-384457",
+  "0001193125-26-384461",
+  "0001193125-26-384465",
+  "0001193125-26-384466",
+  "0001193125-26-384468",
+  "0001193125-26-387233",
+  "0001193125-26-391921",
+  "0001193125-26-395695",
+  "0001193125-26-395743",
+  "0001193125-26-398104",
+  "0001193125-26-402604",
+  "0001193125-26-402710",
+  "0001193125-26-403391",
+  "0001193125-26-408212",
+  "0001193125-26-408215",
+  "0001193125-26-408219",
+  "0001193125-26-412873",
+  "0001193125-26-415585",
+  "0001193125-26-415739",
+  "0001193125-26-416163",
+  "0001193125-26-416164",
+  "0001193125-26-419158",
+  "0001193125-26-419159",
+  "0001193125-26-420491",
+  "0001193125-26-420500",
+  "0001193125-26-421701",
+  "0001193125-26-423324",
+  "0001193125-26-427892",
+  "0001193125-26-427908",
+  "0001193125-26-428935",
+  "0001193125-26-430506",
+  "0001193125-26-432133",
+  "0001193125-26-434196",
+  "0001193125-26-434364",
+  "0001193125-26-434372",
+  "0001193125-26-434378",
+  "0001193125-26-434381",
+  "0001193125-26-434388",
+  "0001193125-26-434392",
+  "0001193125-26-434394",
+  "0001193125-26-434397",
+  "0001193125-26-434444",
+  "0001193125-26-434449",
+  "0001193125-26-435040",
+  "0001193125-26-436178",
+  "0001193125-26-436395",
+  "0001193125-26-437993",
+  "0001193125-26-441637",
+  "0001193125-26-457037",
+  "0001193125-26-457072",
+  "0001193125-26-457078",
+  "0001193125-26-457794",
+  "0001193125-26-458293",
+  "0001193125-26-458516",
+  "0001193125-26-458694",
+  "0001193125-26-458748",
+  "0001193125-26-458753",
+  "0001193125-26-459146",
+  "0001193125-26-459150",
+  "0001193125-26-459156",
+  "0001193125-26-462266",
+  "0001193125-26-462277",
+  "0001206774-26-000226",
+  "0001213900-26-018452",
+  "0001213900-26-103052",
+  "0001213900-26-108077",
+  "0001213900-26-108080",
+  "0001277902-26-000025",
+  "0001299709-26-000018",
+  "0001299709-26-000027",
+  "0001299709-26-000047",
+  "0001331520-26-000059",
+  "0001331520-26-000061",
+  "0001331520-26-000074",
+  "0001331520-26-000078",
+  "0001331520-26-000082",
+  "0001331520-26-000088",
+  "0001336706-26-000072",
+  "0001336706-26-000083",
+  "0001408534-26-000016",
+  "0001408534-26-000035",
+  "0001412665-26-000015",
+  "0001419536-26-000145",
+  "0001419536-26-000146",
+  "0001419536-26-000151",
+  "0001419536-26-000166",
+  "0001437749-26-000013",
+  "0001437749-26-000182",
+  "0001437749-26-000650",
+  "0001437749-26-001783",
+  "0001437749-26-002090",
+  "0001437749-26-002223",
+  "0001437749-26-002224",
+  "0001437749-26-002739",
+  "0001437749-26-006231",
+  "0001437749-26-008884",
+  "0001437749-26-010364",
+  "0001437749-26-010637",
+  "0001437749-26-011154",
+  "0001437749-26-013520",
+  "0001437749-26-016395",
+  "0001437749-26-016470",
+  "0001437749-26-019566",
+  "0001437749-26-031012",
+  "0001437749-26-031152",
+  "0001437749-26-031662",
+  "0001437749-26-033170",
+  "0001437749-26-033707",
+  "0001437749-26-033708",
+  "0001437958-26-000065",
+  "0001437958-26-000075",
+  "0001437958-26-000076",
+  "0001473844-26-000019",
+  "0001473844-26-000023",
+  "0001488813-26-000005",
+  "0001493152-26-029392",
+  "0001493152-26-029394",
+  "0001493152-26-036754",
+  "0001493152-26-039232",
+  "0001493225-26-000062",
+  "0001538263-26-000107",
+  "0001538263-26-000108",
+  "0001538263-26-000115",
+  "0001538263-26-000118",
+  "0001552781-26-000009",
+  "0001552781-26-000038",
+  "0001552781-26-000039",
+  "0001552781-26-000105",
+  "0001552781-26-000106",
+  "0001552781-26-000187",
+  "0001552781-26-000394",
+  "0001552781-26-000472",
+  "0001552781-26-000473",
+  "0001562463-26-000092",
+  "0001628280-26-001441",
+  "0001628280-26-001462",
+  "0001628280-26-002187",
+  "0001628280-26-003035",
+  "0001628280-26-003075",
+  "0001628280-26-003106",
+  "0001628280-26-003108",
+  "0001628280-26-003117",
+  "0001628280-26-004511",
+  "0001628280-26-005099",
+  "0001628280-26-010394",
+  "0001628280-26-018274",
+  "0001628280-26-020231",
+  "0001628280-26-022618",
+  "0001628280-26-022619",
+  "0001628280-26-024654",
+  "0001628280-26-026843",
+  "0001628280-26-026898",
+  "0001628280-26-026904",
+  "0001628280-26-038518",
+  "0001628280-26-039245",
+  "0001628280-26-043165",
+  "0001628280-26-049383",
+  "0001628280-26-049841",
+  "0001628280-26-062578",
+  "0001628280-26-066885",
+  "0001628280-26-068629",
+  "0001649739-26-000003",
+  "0001649739-26-000020",
+  "0001675644-26-000006",
+  "0001709442-26-000004",
+  "0001709442-26-000009",
+  "0001709442-26-000011",
+  "0001709442-26-000031",
+  "0001723596-26-000013",
+  "0001723596-26-000021",
+  "0001723596-26-000023",
+  "0001723596-26-000029",
+  "0001723596-26-000031",
+  "0001734342-26-000004",
+  "0001747068-26-000007",
+  "0001849867-26-000005",
+  "0001849867-26-000011",
+  "0001849867-26-000014",
+  "0001849867-26-000022",
+  "0001964333-26-000005",
+  "0001964333-26-000006",
+  "0001964333-26-000021",
+  "0001964333-26-000022",
+  "0001964333-26-000027",
+  "0001964333-26-000028",
+  "0001964333-26-000031",
+  "0001964333-26-000037",
+  "0001964333-26-000060",
+  "0001964333-26-000084",
+  "0002082866-26-000020",
+  "0002082866-26-000047",
+  "0002115119-26-000007",
+  "0002115119-26-000010"
+ ],
+ "last_warnings": []
+}

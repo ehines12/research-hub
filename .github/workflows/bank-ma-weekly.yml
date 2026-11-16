@@ -1,0 +1,57 @@
+name: Bank M&A weekly EDGAR scan
+
+# Weekly sweep of SEC EDGAR full-text search for new US bank / thrift merger announcements (8-K and Form 425 filings
+# by SIC 6021/6022/6029/6035/6036/6712 filers). New announcements go to the "All announced bank deals" table; deals with a
+# cleanly parsed acquirer, target and stated value of $500M+ are auto-added to the main table flagged "auto-added, pending review".
+# Unparsed announcements are listed as review candidates. Warn-only: a failed scan never fails the job; previous data is kept.
+# Status / close-date checks for the main table keep running in the weekday "Refresh dashboard data" workflow.
+on:
+  schedule:
+    - cron: "0 12 * * 1"   # Mondays 6:00 AM CST (Nov-Mar) / 7:00 AM CDT; GitHub may start a few minutes late
+  workflow_dispatch:
+    inputs:
+      since:
+        description: "Optional scan start date (YYYY-MM-DD) for a backfill; default = last scan minus 7 days"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-data   # shares the lock with the weekday refresh so the two never push at the same time
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python3 -m pip install --quiet openpyxl || true
+
+      - name: Weekly EDGAR bank M&A scan (warn-only)
+        continue-on-error: true
+        run: |
+          ARGS=""
+          if [ -n "${{ github.event.inputs.since }}" ]; then ARGS="--since ${{ github.event.inputs.since }}"; fi
+          timeout 25m python3 -u companies/nowcast/bank_ma_scan.py $ARGS || echo "::warning::Bank M&A weekly scan failed or timed out; previous data kept"
+
+      - name: Commit data if changed
+        run: |
+          git add data/bank-ma.json data/bank-ma.xlsx companies/bank_ma/*.json
+          if git diff --cached --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data: bank M&A weekly scan $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git pull --rebase --autostash || true
+          git push

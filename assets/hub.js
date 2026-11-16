@@ -867,7 +867,7 @@
   async function bankMA(area) {
     const D = await load("bank-ma");
     document.title = area.title + " · Research Hub";
-    stamp.textContent = D.generated ? "Data last updated " + fmtTime(D.generated.replace(" ", "T") + ":00Z") : "";
+    stamp.textContent = (D.generated ? "Data last updated " + fmtTime(D.generated.replace(" ", "T") + ":00Z") : "") + (D.last_scanned ? " · EDGAR deal scan " + fmtTime(D.last_scanned.replace(" ", "T") + ":00Z") : "");
     const C = D.columns, ALL = D.deals;
     const st = localStorage.getItem("bma-st") || "all", yr = localStorage.getItem("bma-yr") || "all";
     let sk = localStorage.getItem("bma-sk") || "announced", sd = +(localStorage.getItem("bma-sd") || 1);
@@ -898,7 +898,7 @@
     const body = rows.map(d => {
       const src = Object.entries(d.sources).map(([l, u]) => '<a href="' + esc(u) + '" target="_blank" rel="noopener noreferrer" title="' + esc(l) + '">' + (/press/i.test(l) ? "PR" : /transcript/i.test(l) ? "Call" : "Deck") + " " + EXT + "</a>").join(" ") +
         (d.close_src ? ' <a href="' + esc(d.close_src) + '" target="_blank" rel="noopener noreferrer" title="Completion 8-K">Close ' + EXT + "</a>" : "");
-      return '<tr class="bmr" data-id="' + esc(d.id) + '"><td class="sl b"><span class="tw">▸</span> ' + fdt(d.announced) + (d.deal_type !== "Acquisition" ? '<span class="tag">' + esc(d.deal_type.toUpperCase()) + "</span>" : "") + "</td><td>" + stb(d.status) + "</td>" +
+      return '<tr class="bmr" data-id="' + esc(d.id) + '"><td class="sl b"><span class="tw">▸</span> ' + fdt(d.announced) + (d.deal_type !== "Acquisition" ? '<span class="tag">' + esc(d.deal_type.toUpperCase()) + "</span>" : "") + (d.auto ? '<span class="tag auto" title="' + esc("Auto-added by the weekly EDGAR scan on " + (d.auto_added || "") + ": fields regex-parsed from the announcement with verbatim snippets; pending manual review") + '">AUTO</span>' : "") + "</td><td>" + stb(d.status) + "</td>" +
         "<td" + (d.close_date ? ' title="' + esc(d.close_q || "") + '">' + fdt(d.close_date) :  ' class="na" title="' + esc(d.exp_update ? "Latest filing (" + d.exp_update.filed + "): " + d.exp_update.q : "Expected at announcement") + '">exp. ' + esc(fv(d, "expected_close") || "–") + (d.exp_update ? "<sup>†</sup>" : "")) + "</td>" +
         '<td class="b">' + esc(d.acquirer) + ' <span class="sid">' + esc(d.acq_ticker) + "</span></td><td class=\"b\">" + esc(d.target) + ' <span class="sid">' + esc(d.tgt_ticker) + '</span></td><td title="' + esc(tip(d, "tgt_state")) + '">' + esc(fv(d, "tgt_state") || "–") + "</td>" +
         C.map(c => { const v = fv(d, c.key); return '<td class="' + (c.fmt === "txt" ? "" : "r") + (v == null ? " na" : "") + '"' + (v == null ? ' title="Not disclosed in announcement documents"' : ' title="' + esc(tip(d, c.key)) + '"') + ">" + F(v, c.fmt) + (d.f[c.key] && d.f[c.key].note ? "<sup>*</sup>" : "") + "</td>"; }).join("") +
@@ -914,6 +914,25 @@
         (d.exp_update ? "<tr><td>Expected close (latest filing)</td><td></td><td>Auto-checked from 8-K filed " + esc(d.exp_update.filed) + '</td><td class="qq">' + esc(d.exp_update.q) + '</td><td><a href="' + esc(d.exp_update.src) + '" target="_blank" rel="noopener noreferrer">8-K ' + EXT + "</a></td></tr>" : "") +
         "</tbody></table>";
     }
+    function allDeals() {
+      const R = D.all_deals || []; if (!R.length) return "";
+      const az = localStorage.getItem("bma-az") || "all";
+      const vv = r => r.f.deal_value_m ? r.f.deal_value_m.v : null;
+      const RS = R.filter(r => az === "all" || (az === "small" ? (vv(r) == null || vv(r) < 500) : vv(r) != null && vv(r) >= 500));
+      const t2 = (r, k) => { const x = r.f[k]; return x ? (x.note ? x.note + " — " : "") + "Source: " + (x.q || "") : "Not stated in the announcement"; };
+      const cell = (r, k, f) => { const x = r.f[k]; return '<td class="' + (f === "txt" ? "" : "r") + (x ? "" : " na") + '" title="' + esc(t2(r, k)) + '">' + F(x ? x.v : null, f) + "</td>"; };
+      const segA = '<div class="seg">' + [["all", "All " + R.length], ["big", "$500M+ " + R.filter(r => vv(r) != null && vv(r) >= 500).length], ["small", "Under $500M / not stated " + R.filter(r => vv(r) == null || vv(r) < 500).length]].map(([k, l]) => '<button data-baz="' + k + '" class="' + (az === k ? "on" : "") + '">' + l + "</button>").join("") + "</div>";
+      const body2 = RS.map(r => "<tr><td class=\"sl b\">" + fdt(r.announced) + (r.auto && !r.in_main ? '<span class="tag scan" title="Found and parsed by the weekly EDGAR scan">SCAN</span>' : "") + (r.in_main && r.auto ? '<span class="tag auto" title="Auto-added to the main table, pending review">AUTO</span>' : "") + "</td><td>" + stb(r.status) + "</td>" +
+        "<td" + (r.close_date ? ' title="' + esc(r.close_q || "") + '">' + fdt(r.close_date) : ' class="na">–') + "</td>" +
+        '<td class="b" title="' + esc(r.parties_q || "") + '">' + esc(r.acquirer) + (r.acq_ticker ? ' <span class="sid">' + esc(r.acq_ticker) + "</span>" : "") + '</td><td class="b" title="' + esc(r.parties_q || "") + '">' + esc(r.target) + (r.tgt_ticker && r.tgt_ticker !== "private" ? ' <span class="sid">' + esc(r.tgt_ticker) + "</span>" : "") + "</td>" +
+        cell(r, "tgt_state", "txt") + cell(r, "deal_value_m", "m") + cell(r, "price_per_share", "usd") + cell(r, "consideration", "txt") + cell(r, "p_tbv", "x2") + cell(r, "tgt_assets_b", "b") + cell(r, "expected_close", "txt") +
+        "<td>" + (r.in_main ? "Yes" : "") + '</td><td class="srcs">' + (r.src ? '<a href="' + esc(r.src) + '" target="_blank" rel="noopener noreferrer">Filing ' + EXT + "</a>" : "") + (r.close_src ? ' <a href="' + esc(r.close_src) + '" target="_blank" rel="noopener noreferrer">Close ' + EXT + "</a>" : "") + "</td></tr>").join("");
+      return '<h2 id="bma-all">All announced bank deals (any size)</h2><p class="sub">' + esc(D.all_scope || "") + '.</p>' +
+        '<div class="qbar"><div class="gtg"><span class="glab">Deal value</span>' + segA + '</div><div class="qdl"><button class="btn sm" id="bmaallcsv">Download CSV</button>' + (INLINE ? "" : '<a class="btn sm" href="data/bank-ma.xlsx" download>Download Excel</a>') + "</div></div>" +
+        '<div class="qwrap"><table class="sumtbl qtbl bmtbl bmall"><thead><tr><th class="sl">Announced</th><th>Status</th><th>Closed</th><th>Acquirer</th><th>Target</th><th>St.</th><th class="r">Deal value ($M)</th><th class="r">Price / share</th><th>Consideration</th><th class="r">P/TBV</th><th class="r">Target assets</th><th>Exp. close</th><th>In $500M+ table</th><th>Source</th></tr></thead><tbody>' +
+        (body2 || '<tr><td class="sl na" colspan="14">No deals match.</td></tr>') + "</tbody></table></div>" +
+        '<div class="pnote">Values are as stated in the announcement filing (hover for the verbatim source text); blank = not stated. SCAN = row found and parsed by the weekly EDGAR scan (regex-parsed, not hand-checked); rows without a badge were hand-checked (curated table or the 2026 YTD backfill). Deals where neither party files with the SEC are not captured.</div>';
+    }
     const srow = (lab, fn) => '<tr class="bms"><td class="sl b">' + lab + '</td><td></td><td></td><td></td><td></td><td></td>' + C.map(c => { if (!c.stat) return "<td></td>"; const xs = nums(c.key), v = fn(xs);
       return '<td class="r b' + (v == null ? " na" : "") + '" title="n = ' + xs.length + ' disclosed">' + F(v, c.fmt) + "</td>"; }).join("") + "<td></td></tr>";
     const nrow = '<tr class="bms"><td class="sl hint">n disclosed</td><td></td><td></td><td></td><td></td><td></td>' + C.map(c => '<td class="r hint">' + (c.stat ? nums(c.key).length : "") + "</td>").join("") + "<td></td></tr>";
@@ -927,19 +946,30 @@
       '<div class="qbar"><div class="gtg"><span class="glab">Status</span>' + segS + '<span class="glab">Announced</span>' + segY + '</div><div class="qdl"><button class="btn sm" id="bmacsv">Download CSV</button>' + (INLINE ? "" : '<a class="btn sm" href="data/bank-ma.xlsx" download>Download Excel</a>') + "</div></div>" +
       '<div class="qwrap"><table class="sumtbl qtbl bmtbl"><thead>' + head + "</thead><tbody>" + (body || '<tr><td class="sl na" colspan="' + (7 + C.length) + '">No deals match these filters.</td></tr>') + "</tbody><tfoot>" + foot + "</tfoot></table></div>" +
       '<div class="pnote">Click a row for every field with its verbatim source text and document link; hover any value for its source snippet. * = see note in row detail. Median/average rows recompute for the filtered set.</div>' +
+      allDeals() +
       "<h2>Notes</h2>" + D.notes.map(x => '<div class="pnote">' + esc(x) + "</div>").join("") +
       "<h2>Exclusions &amp; coverage</h2>" + D.exclusions.map(x => '<div class="pnote">' + esc(x) + "</div>").join("") +
       (D.warnings && D.warnings.length ? '<div class="pnote">Last refresh warnings: ' + esc(D.warnings.join("; ")) + "</div>" : "") +
-      ((D.candidates || []).length ? "<h2>Review candidates (auto-flagged, not published)</h2>" + '<div class="pnote">Bank/thrift 8-Ks (Item 1.01) filed in the last 45 days announcing a merger agreement with a stated value of $500M+ or no parsable value. They are NOT in the table above and are only added after manual review.</div>' +
-        D.candidates.map(c => c.error ? '<div class="pnote">' + esc(c.error) + "</div>" : '<div class="pnote">' + esc(c.filed) + " · " + esc(c.company) + " · " + (c.value_m != null ? "$" + c.value_m.toLocaleString("en-US") + "M" : "value not parsed") + ' · <a href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">8-K ' + EXT + "</a>" + (c.q ? ' <span class="hint">' + esc(c.q) + "</span>" : "") + "</div>").join("") : "");
+      ((D.candidates || []).length ? "<h2>Review candidates (weekly scan, not published)</h2>" + '<div class="pnote">Bank/thrift 8-K / Form 425 filings with merger-agreement language that the weekly EDGAR scan could not parse into an acquirer, target and terms. They are NOT in either table; add them by hand after review.</div>' +
+        D.candidates.map(c => c.error ? '<div class="pnote">' + esc(c.error) + "</div>" : '<div class="pnote">' + esc(c.filed) + " · " + esc(c.filer || c.company || "") + (c.form ? " · " + esc(c.form) : "") + (c.value_m != null ? " · $" + c.value_m.toLocaleString("en-US") + "M" : "") + ' · <a href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">Filing ' + EXT + "</a>" + (c.lead || c.q ? ' <span class="hint">' + esc((c.lead || c.q).slice(0, 260)) + "</span>" : "") + "</div>").join("") : "");
     app.querySelectorAll("[data-bst]").forEach(b => b.onclick = () => { localStorage.setItem("bma-st", b.dataset.bst); bankMA(area); });
+    app.querySelectorAll("[data-baz]").forEach(b => b.onclick = () => { localStorage.setItem("bma-az", b.dataset.baz); bankMA(area).then(() => { const h = document.getElementById("bma-all"); if (h) h.scrollIntoView(); }); });
+    const ac = document.getElementById("bmaallcsv");
+    if (ac) ac.onclick = () => {
+      const q = v => { v = v == null ? "" : String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; };
+      const g = (r, k) => r.f[k] ? r.f[k].v : "";
+      const hdr = ["Announced", "Status", "Close date", "Acquirer", "Acquirer ticker", "Target", "Target ticker", "Target state", "Deal value ($M, as stated)", "Price / share ($)", "Consideration", "P/TBV (x)", "Target assets ($B)", "Expected close", "In $500M+ table", "Found by weekly scan", "Announcement source", "Close source"];
+      const L = (D.all_deals || []).map(r => [r.announced, r.status, r.close_date, r.acquirer, r.acq_ticker, r.target, r.tgt_ticker, g(r, "tgt_state"), g(r, "deal_value_m"), g(r, "price_per_share"), g(r, "consideration"), g(r, "p_tbv"), g(r, "tgt_assets_b"), g(r, "expected_close"), r.in_main ? "Y" : "", r.auto ? "Y" : "", r.src, r.close_src]);
+      const blob = new Blob([[hdr].concat(L).map(r => r.map(q).join(",")).concat(["", q(D.all_scope || "")]).join("\r\n")], { type: "text/csv" });
+      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "bank-ma-all-announced.csv"; document.body.appendChild(a); a.click(); a.remove();
+    };
     app.querySelectorAll("[data-byr]").forEach(b => b.onclick = () => { localStorage.setItem("bma-yr", b.dataset.byr); bankMA(area); });
     app.querySelectorAll("th[data-sk]").forEach(h => h.onclick = () => { const k = h.dataset.sk; localStorage.setItem("bma-sd", k === sk ? -sd : (["announced", "status", "close", "acquirer", "target", "tgt_state", "consideration"].includes(k) ? 1 : -1)); localStorage.setItem("bma-sk", k); bankMA(area); });
     app.querySelectorAll("tr.bmr").forEach(r => r.onclick = e => { if (e.target.closest("a")) return; const dr = app.querySelector('tr.bmd[data-for="' + r.dataset.id + '"]'); dr.hidden = !dr.hidden; r.classList.toggle("open", !dr.hidden); });
     document.getElementById("bmacsv").onclick = () => {
       const q = v => { v = v == null ? "" : String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; };
-      const hdr = ["Announced", "Status", "Close date", "Expected close (at announcement)", "Acquirer", "Acquirer ticker", "Target", "Target ticker", "Target state", "Deal type"].concat(C.map(c => c.label), ["EPS accretion basis", "Press release", "Investor presentation", "Close source (8-K)"]);
-      const L = rows.map(d => { const s = Object.values(d.sources); return [d.announced, d.status, d.close_date, fv(d, "expected_close"), d.acquirer, d.acq_ticker, d.target, d.tgt_ticker, fv(d, "tgt_state"), d.deal_type].concat(C.map(c => fv(d, c.key)), [(d.f.eps_accr && d.f.eps_accr.note) || fv(d, "eps_note"), s[0], s[1], d.close_src]); });
+      const hdr = ["Announced", "Status", "Close date", "Expected close (at announcement)", "Acquirer", "Acquirer ticker", "Target", "Target ticker", "Target state", "Deal type"].concat(C.map(c => c.label), ["EPS accretion basis", "Press release", "Investor presentation", "Close source (8-K)", "Review flag"]);
+      const L = rows.map(d => { const s = Object.values(d.sources); return [d.announced, d.status, d.close_date, fv(d, "expected_close"), d.acquirer, d.acq_ticker, d.target, d.tgt_ticker, fv(d, "tgt_state"), d.deal_type].concat(C.map(c => fv(d, c.key)), [(d.f.eps_accr && d.f.eps_accr.note) || fv(d, "eps_note"), s[0], s[1], d.close_src, d.review || ""]); });
       const sm = rows.length ? [["Median (filtered)"], ["Average (filtered)"]].map((r, i) => r.concat(Array(9).fill(""), C.map(c => { if (!c.stat) return ""; const v = (i ? avg : med)(nums(c.key)); return v == null ? "" : +v.toFixed(3); }))) : [];
       const blob = new Blob([[hdr].concat(L, sm).map(r => r.map(q).join(",")).concat(["", ...D.notes.map(q), ...D.exclusions.map(q)]).join("\r\n")], { type: "text/csv" });
       const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "bank-ma-" + (yr === "all" ? "all" : yr) + "-" + st + ".csv"; document.body.appendChild(a); a.click(); a.remove();
