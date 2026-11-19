@@ -1,11 +1,11 @@
 {
  "asof_prices": "2026-11-19",
- "generated": "2026-11-19T19:26+00:00",
+ "generated": "2026-11-19T21:55+00:00",
  "current": {
   "q": "Q4 2026",
-  "avg_aum": 98.71,
-  "end_aum_flat": 98.82,
-  "rev": 153.7,
+  "avg_aum": 98.53,
+  "end_aum_flat": 98.45,
+  "rev": 153.4,
   "eps": 0.86,
   "known_months": [
    "2026-10-31"
@@ -26,11 +26,11 @@
    "Multi-strategy real assets / other (GNR)": 3.9
   },
   "qtd_proxy": {
-   "U.S. real estate (VNQ)": 4.8,
-   "Global/intl real estate (REET)": 2.71,
-   "Global listed infrastructure (IGF)": 5.58,
-   "Preferred securities (PFF)": -7.41,
-   "Multi-strategy real assets / other (GNR)": -8.38
+   "U.S. real estate (VNQ)": 4.28,
+   "Global/intl real estate (REET)": 2.37,
+   "Global listed infrastructure (IGF)": 5.33,
+   "Preferred securities (PFF)": -7.59,
+   "Multi-strategy real assets / other (GNR)": -8.68
   },
   "path": [
    {
@@ -210,166 +210,166 @@
    },
    {
     "d": "2026-11-19",
-    "aum": 98.51,
+    "aum": 98.136,
     "proj": false
    },
    {
     "d": "2026-11-20",
-    "aum": 98.52,
+    "aum": 98.146,
     "proj": true
    },
    {
     "d": "2026-11-23",
-    "aum": 98.531,
+    "aum": 98.156,
     "proj": true
    },
    {
     "d": "2026-11-24",
-    "aum": 98.541,
+    "aum": 98.167,
     "proj": true
    },
    {
     "d": "2026-11-25",
-    "aum": 98.551,
+    "aum": 98.177,
     "proj": true
    },
    {
     "d": "2026-11-26",
-    "aum": 98.562,
+    "aum": 98.188,
     "proj": true
    },
    {
     "d": "2026-11-27",
-    "aum": 98.572,
+    "aum": 98.198,
     "proj": true
    },
    {
     "d": "2026-11-30",
-    "aum": 98.582,
+    "aum": 98.208,
     "proj": true
    },
    {
     "d": "2026-12-01",
-    "aum": 98.593,
+    "aum": 98.219,
     "proj": true
    },
    {
     "d": "2026-12-02",
-    "aum": 98.603,
+    "aum": 98.229,
     "proj": true
    },
    {
     "d": "2026-12-03",
-    "aum": 98.614,
+    "aum": 98.24,
     "proj": true
    },
    {
     "d": "2026-12-04",
-    "aum": 98.624,
+    "aum": 98.25,
     "proj": true
    },
    {
     "d": "2026-12-07",
-    "aum": 98.634,
+    "aum": 98.26,
     "proj": true
    },
    {
     "d": "2026-12-08",
-    "aum": 98.645,
+    "aum": 98.271,
     "proj": true
    },
    {
     "d": "2026-12-09",
-    "aum": 98.655,
+    "aum": 98.281,
     "proj": true
    },
    {
     "d": "2026-12-10",
-    "aum": 98.665,
+    "aum": 98.291,
     "proj": true
    },
    {
     "d": "2026-12-11",
-    "aum": 98.676,
+    "aum": 98.302,
     "proj": true
    },
    {
     "d": "2026-12-14",
-    "aum": 98.686,
+    "aum": 98.312,
     "proj": true
    },
    {
     "d": "2026-12-15",
-    "aum": 98.697,
+    "aum": 98.323,
     "proj": true
    },
    {
     "d": "2026-12-16",
-    "aum": 98.707,
+    "aum": 98.333,
     "proj": true
    },
    {
     "d": "2026-12-17",
-    "aum": 98.717,
+    "aum": 98.343,
     "proj": true
    },
    {
     "d": "2026-12-18",
-    "aum": 98.728,
+    "aum": 98.354,
     "proj": true
    },
    {
     "d": "2026-12-21",
-    "aum": 98.738,
+    "aum": 98.364,
     "proj": true
    },
    {
     "d": "2026-12-22",
-    "aum": 98.749,
+    "aum": 98.374,
     "proj": true
    },
    {
     "d": "2026-12-23",
-    "aum": 98.759,
+    "aum": 98.385,
     "proj": true
    },
    {
     "d": "2026-12-24",
-    "aum": 98.769,
+    "aum": 98.395,
     "proj": true
    },
    {
     "d": "2026-12-25",
-    "aum": 98.78,
+    "aum": 98.406,
     "proj": true
    },
    {
     "d": "2026-12-28",
-    "aum": 98.79,
+    "aum": 98.416,
     "proj": true
    },
    {
     "d": "2026-12-29",
-    "aum": 98.8,
+    "aum": 98.426,
     "proj": true
    },
    {
     "d": "2026-12-30",
-    "aum": 98.811,
+    "aum": 98.437,
     "proj": true
    },
    {
     "d": "2026-12-31",
-    "aum": 98.821,
+    "aum": 98.447,
     "proj": true
    }
   ]
  },
  "next": {
   "q": "Q1 2027",
-  "avg_aum": 99.16,
-  "rev": 151.0,
-  "eps": 0.85
+  "avg_aum": 98.78,
+  "rev": 150.4,
+  "eps": 0.84
  },
  "consensus": {
   "asof": "2026-10-29",
@@ -914,7 +914,7 @@
    {
     "from": "2026-11-14",
     "to": "2026-11-19",
-    "flow_m": 546.5,
+    "flow_m": 552.3,
     "funds": 16,
     "stale": 16
    }
