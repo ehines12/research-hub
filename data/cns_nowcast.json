@@ -1,16 +1,14 @@
 {
- "asof_prices": "2026-11-18",
- "generated": "2026-11-18T23:42+00:00",
+ "asof_prices": "2026-11-17",
+ "generated": "2026-11-19T01:37+00:00",
  "current": {
   "q": "Q4 2026",
-  "avg_aum": 99.24,
-  "end_aum_flat": 99.96,
-  "rev": 154.5,
+  "avg_aum": 99.33,
+  "end_aum_flat": 100.45,
+  "rev": 154.6,
   "eps": 0.87,
-  "known_months": [
-   "2026-10-31"
-  ],
-  "run_rate_month": 218.0,
+  "known_months": [],
+  "run_rate_month": 517.0,
   "fee_bps": 61.76,
   "eps_model": {
    "a": -0.0996,
@@ -26,350 +24,350 @@
    "Multi-strategy real assets / other (GNR)": 3.9
   },
   "qtd_proxy": {
-   "U.S. real estate (VNQ)": 6.19,
-   "Global/intl real estate (REET)": 4.11,
-   "Global listed infrastructure (IGF)": 6.82,
-   "Preferred securities (PFF)": -6.98,
-   "Multi-strategy real assets / other (GNR)": -7.19
+   "U.S. real estate (VNQ)": 5.87,
+   "Global/intl real estate (REET)": 3.88,
+   "Global listed infrastructure (IGF)": 7.42,
+   "Preferred securities (PFF)": -6.78,
+   "Multi-strategy real assets / other (GNR)": -3.95
   },
   "path": [
    {
     "d": "2026-10-01",
-    "aum": 95.532,
+    "aum": 95.534,
     "proj": false
    },
    {
     "d": "2026-10-02",
-    "aum": 95.943,
+    "aum": 95.947,
     "proj": false
    },
    {
     "d": "2026-10-05",
-    "aum": 95.79,
+    "aum": 95.751,
     "proj": false
    },
    {
     "d": "2026-10-06",
-    "aum": 96.561,
+    "aum": 96.523,
     "proj": false
    },
    {
     "d": "2026-10-07",
-    "aum": 95.434,
+    "aum": 95.399,
     "proj": false
    },
    {
     "d": "2026-10-08",
-    "aum": 95.951,
+    "aum": 95.917,
     "proj": false
    },
    {
     "d": "2026-10-09",
-    "aum": 96.885,
+    "aum": 96.852,
     "proj": false
    },
    {
     "d": "2026-10-12",
-    "aum": 97.381,
+    "aum": 97.302,
     "proj": false
    },
    {
     "d": "2026-10-13",
-    "aum": 97.458,
+    "aum": 97.381,
     "proj": false
    },
    {
     "d": "2026-10-14",
-    "aum": 96.629,
+    "aum": 96.557,
     "proj": false
    },
    {
     "d": "2026-10-15",
-    "aum": 97.551,
+    "aum": 97.477,
     "proj": false
    },
    {
     "d": "2026-10-16",
-    "aum": 97.717,
+    "aum": 97.645,
     "proj": false
    },
    {
     "d": "2026-10-19",
-    "aum": 96.866,
+    "aum": 96.753,
     "proj": false
    },
    {
     "d": "2026-10-20",
-    "aum": 98.208,
+    "aum": 98.091,
     "proj": false
    },
    {
     "d": "2026-10-21",
-    "aum": 97.782,
+    "aum": 97.669,
     "proj": false
    },
    {
     "d": "2026-10-22",
-    "aum": 98.519,
+    "aum": 98.403,
     "proj": false
    },
    {
     "d": "2026-10-23",
-    "aum": 98.562,
+    "aum": 98.448,
     "proj": false
    },
    {
     "d": "2026-10-26",
-    "aum": 98.938,
+    "aum": 98.777,
     "proj": false
    },
    {
     "d": "2026-10-27",
-    "aum": 98.588,
+    "aum": 98.431,
     "proj": false
    },
    {
     "d": "2026-10-28",
-    "aum": 98.113,
+    "aum": 97.961,
     "proj": false
    },
    {
     "d": "2026-10-29",
-    "aum": 99.645,
+    "aum": 99.483,
     "proj": false
    },
    {
     "d": "2026-10-30",
-    "aum": 99.583,
+    "aum": 99.423,
     "proj": false
    },
    {
     "d": "2026-11-02",
-    "aum": 100.195,
+    "aum": 100.023,
     "proj": false
    },
    {
     "d": "2026-11-03",
-    "aum": 100.124,
+    "aum": 99.967,
     "proj": false
    },
    {
     "d": "2026-11-04",
-    "aum": 102.577,
+    "aum": 102.415,
     "proj": false
    },
    {
     "d": "2026-11-05",
-    "aum": 100.813,
+    "aum": 100.679,
     "proj": false
    },
    {
     "d": "2026-11-06",
-    "aum": 100.514,
+    "aum": 100.396,
     "proj": false
    },
    {
     "d": "2026-11-09",
-    "aum": 102.156,
+    "aum": 102.04,
     "proj": false
    },
    {
     "d": "2026-11-10",
-    "aum": 101.724,
+    "aum": 101.626,
     "proj": false
    },
    {
     "d": "2026-11-11",
-    "aum": 101.751,
+    "aum": 101.667,
     "proj": false
    },
    {
     "d": "2026-11-12",
-    "aum": 101.188,
+    "aum": 101.123,
     "proj": false
    },
    {
     "d": "2026-11-13",
-    "aum": 101.185,
+    "aum": 101.134,
     "proj": false
    },
    {
     "d": "2026-11-16",
-    "aum": 100.726,
+    "aum": 100.693,
     "proj": false
    },
    {
     "d": "2026-11-17",
-    "aum": 99.677,
+    "aum": 99.666,
     "proj": false
    },
    {
     "d": "2026-11-18",
-    "aum": 99.641,
-    "proj": false
+    "aum": 99.691,
+    "proj": true
    },
    {
     "d": "2026-11-19",
-    "aum": 99.652,
+    "aum": 99.715,
     "proj": true
    },
    {
     "d": "2026-11-20",
-    "aum": 99.662,
+    "aum": 99.74,
     "proj": true
    },
    {
     "d": "2026-11-23",
-    "aum": 99.673,
+    "aum": 99.764,
     "proj": true
    },
    {
     "d": "2026-11-24",
-    "aum": 99.683,
+    "aum": 99.789,
     "proj": true
    },
    {
     "d": "2026-11-25",
-    "aum": 99.693,
+    "aum": 99.814,
     "proj": true
    },
    {
     "d": "2026-11-26",
-    "aum": 99.704,
+    "aum": 99.838,
     "proj": true
    },
    {
     "d": "2026-11-27",
-    "aum": 99.714,
+    "aum": 99.863,
     "proj": true
    },
    {
     "d": "2026-11-30",
-    "aum": 99.724,
+    "aum": 99.887,
     "proj": true
    },
    {
     "d": "2026-12-01",
-    "aum": 99.735,
+    "aum": 99.912,
     "proj": true
    },
    {
     "d": "2026-12-02",
-    "aum": 99.745,
+    "aum": 99.937,
     "proj": true
    },
    {
     "d": "2026-12-03",
-    "aum": 99.756,
+    "aum": 99.961,
     "proj": true
    },
    {
     "d": "2026-12-04",
-    "aum": 99.766,
+    "aum": 99.986,
     "proj": true
    },
    {
     "d": "2026-12-07",
-    "aum": 99.776,
+    "aum": 100.011,
     "proj": true
    },
    {
     "d": "2026-12-08",
-    "aum": 99.787,
+    "aum": 100.035,
     "proj": true
    },
    {
     "d": "2026-12-09",
-    "aum": 99.797,
+    "aum": 100.06,
     "proj": true
    },
    {
     "d": "2026-12-10",
-    "aum": 99.808,
+    "aum": 100.084,
     "proj": true
    },
    {
     "d": "2026-12-11",
-    "aum": 99.818,
+    "aum": 100.109,
     "proj": true
    },
    {
     "d": "2026-12-14",
-    "aum": 99.828,
+    "aum": 100.134,
     "proj": true
    },
    {
     "d": "2026-12-15",
-    "aum": 99.839,
+    "aum": 100.158,
     "proj": true
    },
    {
     "d": "2026-12-16",
-    "aum": 99.849,
+    "aum": 100.183,
     "proj": true
    },
    {
     "d": "2026-12-17",
-    "aum": 99.859,
+    "aum": 100.208,
     "proj": true
    },
    {
     "d": "2026-12-18",
-    "aum": 99.87,
+    "aum": 100.232,
     "proj": true
    },
    {
     "d": "2026-12-21",
-    "aum": 99.88,
+    "aum": 100.257,
     "proj": true
    },
    {
     "d": "2026-12-22",
-    "aum": 99.891,
+    "aum": 100.281,
     "proj": true
    },
    {
     "d": "2026-12-23",
-    "aum": 99.901,
+    "aum": 100.306,
     "proj": true
    },
    {
     "d": "2026-12-24",
-    "aum": 99.911,
+    "aum": 100.331,
     "proj": true
    },
    {
     "d": "2026-12-25",
-    "aum": 99.922,
+    "aum": 100.355,
     "proj": true
    },
    {
     "d": "2026-12-28",
-    "aum": 99.932,
+    "aum": 100.38,
     "proj": true
    },
    {
     "d": "2026-12-29",
-    "aum": 99.942,
+    "aum": 100.404,
     "proj": true
    },
    {
     "d": "2026-12-30",
-    "aum": 99.953,
+    "aum": 100.429,
     "proj": true
    },
    {
     "d": "2026-12-31",
-    "aum": 99.963,
+    "aum": 100.454,
     "proj": true
    }
   ]
  },
  "next": {
   "q": "Q1 2027",
-  "avg_aum": 100.3,
-  "rev": 152.7,
-  "eps": 0.86
+  "avg_aum": 101.25,
+  "rev": 154.2,
+  "eps": 0.87
  },
  "consensus": {
   "asof": "2026-10-29",
@@ -893,9 +891,9 @@
   }
  },
  "wealth": {
-  "snapshots": 18,
+  "snapshots": 19,
   "first": "2026-10-29",
-  "last": "2026-11-18",
+  "last": "2026-11-19",
   "weeks": [
    {
     "from": "2026-10-31",
@@ -913,8 +911,8 @@
    },
    {
     "from": "2026-11-14",
-    "to": "2026-11-18",
-    "flow_m": 617.5,
+    "to": "2026-11-19",
+    "flow_m": 614.0,
     "funds": 16,
     "stale": 16
    }
@@ -1241,8 +1239,7 @@
    "2026-06": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-june-2026/",
    "2026-07": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-july-2026/",
    "2026-08": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-august-2026/",
-   "2026-09": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2026/",
-   "2026-10": "https://www.prnewswire.com/news-releases/cohen--steers-announces-preliminary-assets-under-management-and-net-flows-for-october-2026-302933869.html"
+   "2026-09": "https://www.cohenandsteers.com/news/cohen-steers-announces-preliminary-assets-under-management-and-net-flows-for-september-2026/"
   },
   "proxies": {
    "usre": "VNQ",
