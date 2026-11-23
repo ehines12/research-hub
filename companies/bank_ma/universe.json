@@ -1,9 +1,9 @@
 {
  "coverage_start": "2026-01-01",
- "last_scanned": "2026-11-16 14:27",
+ "last_scanned": "2026-11-23 23:00",
  "last_window": [
   "2026-11-09",
-  "2026-11-16"
+  "2026-11-23"
  ],
  "note": "2026 YTD backfilled from an EDGAR full-text sweep (8-K + 425, bank/thrift SICs) on 2026-11-16; rows hand-checked. Later rows come from the weekly scan.",
  "deals": [
@@ -1071,7 +1071,12 @@
    },
    "status": "pending",
    "origin": "backfill",
-   "first_seen": "2026-11-16"
+   "first_seen": "2026-11-16",
+   "exp_update": {
+    "q": "The closing of the proposed merger remains subject to certain other customary closing conditions and, as a result, the merger is expected to close on or after January 1, 2027, with the core system conversion expected in April 2027, subject to the transaction closing",
+    "src": "https://www.sec.gov/Archives/edgar/data/775215/000077521526000103/hbt-20261116.htm",
+    "filed": "2026-11-17"
+   }
   },
   {
    "id": "hometrust-blue",
@@ -1352,7 +1357,12 @@
    },
    "status": "pending",
    "origin": "backfill",
-   "first_seen": "2026-11-16"
+   "first_seen": "2026-11-16",
+   "exp_update": {
+    "q": "The Proposed Transaction is expected to close during the first quarter of 2027",
+    "src": "https://www.sec.gov/Archives/edgar/data/1710482/000110465926130177/jmsb-20261119x8k.htm",
+    "filed": "2026-11-19"
+   }
   },
   {
    "id": "bank7-century",
@@ -1887,7 +1897,16 @@
    "first_seen": "2026-11-16"
   }
  ],
- "candidates": [],
+ "candidates": [
+  {
+   "filed": "2026-11-19",
+   "acc": "0001104659-26-130133",
+   "form": "8-K",
+   "filer": "Merchants Bancorp",
+   "url": "https://www.sec.gov/Archives/edgar/data/1629019/000110465926130133/tm2630237d1_ex99-1.htm",
+   "lead": "…s Bancorp (“Merchants”) today announced that its wholly owned subsidiary, Merchants Capital Corp. (“MCC”) has entered into a definitive agreement to acquire the remaining ownership interest in VIUM Capital, LLC (“VIUM”) that MCC does not currently own. VI…"
+  }
+ ],
  "seen_acc": [
   "0000007789-26-000013",
   "0000007789-26-000138",
@@ -1951,6 +1970,7 @@
   "0000775215-26-000085",
   "0000775215-26-000086",
   "0000775215-26-000094",
+  "0000775215-26-000103",
   "0000805676-26-000008",
   "0000805676-26-000010",
   "0000811589-26-000149",
@@ -1990,9 +2010,11 @@
   "0000893847-26-000091",
   "0000893847-26-000096",
   "0000893847-26-000099",
+  "0000893847-26-000104",
   "0000923139-26-000003",
   "0000923139-26-000012",
   "0000927089-26-000084",
+  "0000927089-26-000195",
   "0000927628-26-000039",
   "0000927628-26-000083",
   "0000936528-26-000069",
@@ -2147,6 +2169,10 @@
   "0001104659-26-123949",
   "0001104659-26-125108",
   "0001104659-26-127698",
+  "0001104659-26-130133",
+  "0001104659-26-130177",
+  "0001104659-26-130181",
+  "0001104659-26-130183",
   "0001115055-26-000002",
   "0001128361-26-000018",
   "0001128361-26-000049",
@@ -2375,6 +2401,13 @@
   "0001193125-26-459156",
   "0001193125-26-462266",
   "0001193125-26-462277",
+  "0001193125-26-463409",
+  "0001193125-26-463421",
+  "0001193125-26-463456",
+  "0001193125-26-463487",
+  "0001193125-26-468653",
+  "0001193125-26-468675",
+  "0001193125-26-468835",
   "0001206774-26-000226",
   "0001213900-26-018452",
   "0001213900-26-103052",

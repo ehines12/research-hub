@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-23 12:51",
+ "generated": "2026-11-23 23:00",
  "scope": "US bank & thrift whole-company acquisitions announced since 2024-01-01 with an aggregate deal value above $500M at announcement (curated through 2026-11-16; new deals auto-added weekly from EDGAR)",
- "last_scanned": "2026-11-16 14:27",
+ "last_scanned": "2026-11-23 23:00",
  "scan_window": [
   "2026-11-09",
-  "2026-11-16"
+  "2026-11-23"
  ],
  "all_scope": "All announced US whole-bank / thrift deals of any size found on SEC EDGAR, announced since 2026-01-01 (basic terms as stated in the announcement; blank = not stated)",
  "all_deals": [
@@ -1706,7 +1706,16 @@
   "Coverage limits: the deal list was built from SEC EDGAR filings (merger 8-Ks, Forms 425/S-4/DEFM14A, full-text search through 2026-11-16; weekly EDGAR scan thereafter). A deal whose acquirer and target both file only with bank regulators (not the SEC) could be missed."
  ],
  "warnings": [],
- "candidates": [],
+ "candidates": [
+  {
+   "filed": "2026-11-19",
+   "acc": "0001104659-26-130133",
+   "form": "8-K",
+   "filer": "Merchants Bancorp",
+   "url": "https://www.sec.gov/Archives/edgar/data/1629019/000110465926130133/tm2630237d1_ex99-1.htm",
+   "lead": "…s Bancorp (“Merchants”) today announced that its wholly owned subsidiary, Merchants Capital Corp. (“MCC”) has entered into a definitive agreement to acquire the remaining ownership interest in VIUM Capital, LLC (“VIUM”) that MCC does not currently own. VI…"
+  }
+ ],
  "summary": {
   "deal_value_m": {
    "n": 31,
