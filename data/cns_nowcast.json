@@ -1,11 +1,11 @@
 {
- "asof_prices": "2026-11-20",
- "generated": "2026-11-23T12:50+00:00",
+ "asof_prices": "2026-11-23",
+ "generated": "2026-11-23T22:34+00:00",
  "current": {
   "q": "Q4 2026",
-  "avg_aum": 98.05,
-  "end_aum_flat": 97.39,
-  "rev": 152.6,
+  "avg_aum": 98.68,
+  "end_aum_flat": 98.83,
+  "rev": 153.6,
   "eps": 0.86,
   "known_months": [
    "2026-10-31"
@@ -26,11 +26,11 @@
    "Multi-strategy real assets / other (GNR)": 3.9
   },
   "qtd_proxy": {
-   "U.S. real estate (VNQ)": 3.27,
-   "Global/intl real estate (REET)": 1.32,
-   "Global listed infrastructure (IGF)": 4.27,
-   "Preferred securities (PFF)": -8.81,
-   "Multi-strategy real assets / other (GNR)": -10.44
+   "U.S. real estate (VNQ)": 4.51,
+   "Global/intl real estate (REET)": 2.48,
+   "Global listed infrastructure (IGF)": 5.2,
+   "Preferred securities (PFF)": -6.0,
+   "Multi-strategy real assets / other (GNR)": -8.98
   },
   "path": [
    {
@@ -220,156 +220,156 @@
    },
    {
     "d": "2026-11-23",
-    "aum": 97.1,
-    "proj": true
+    "aum": 98.542,
+    "proj": false
    },
    {
     "d": "2026-11-24",
-    "aum": 97.111,
+    "aum": 98.553,
     "proj": true
    },
    {
     "d": "2026-11-25",
-    "aum": 97.121,
+    "aum": 98.563,
     "proj": true
    },
    {
     "d": "2026-11-26",
-    "aum": 97.131,
+    "aum": 98.574,
     "proj": true
    },
    {
     "d": "2026-11-27",
-    "aum": 97.142,
+    "aum": 98.584,
     "proj": true
    },
    {
     "d": "2026-11-30",
-    "aum": 97.152,
+    "aum": 98.594,
     "proj": true
    },
    {
     "d": "2026-12-01",
-    "aum": 97.163,
+    "aum": 98.605,
     "proj": true
    },
    {
     "d": "2026-12-02",
-    "aum": 97.173,
+    "aum": 98.615,
     "proj": true
    },
    {
     "d": "2026-12-03",
-    "aum": 97.183,
+    "aum": 98.625,
     "proj": true
    },
    {
     "d": "2026-12-04",
-    "aum": 97.194,
+    "aum": 98.636,
     "proj": true
    },
    {
     "d": "2026-12-07",
-    "aum": 97.204,
+    "aum": 98.646,
     "proj": true
    },
    {
     "d": "2026-12-08",
-    "aum": 97.215,
+    "aum": 98.657,
     "proj": true
    },
    {
     "d": "2026-12-09",
-    "aum": 97.225,
+    "aum": 98.667,
     "proj": true
    },
    {
     "d": "2026-12-10",
-    "aum": 97.235,
+    "aum": 98.677,
     "proj": true
    },
    {
     "d": "2026-12-11",
-    "aum": 97.246,
+    "aum": 98.688,
     "proj": true
    },
    {
     "d": "2026-12-14",
-    "aum": 97.256,
+    "aum": 98.698,
     "proj": true
    },
    {
     "d": "2026-12-15",
-    "aum": 97.266,
+    "aum": 98.709,
     "proj": true
    },
    {
     "d": "2026-12-16",
-    "aum": 97.277,
+    "aum": 98.719,
     "proj": true
    },
    {
     "d": "2026-12-17",
-    "aum": 97.287,
+    "aum": 98.729,
     "proj": true
    },
    {
     "d": "2026-12-18",
-    "aum": 97.298,
+    "aum": 98.74,
     "proj": true
    },
    {
     "d": "2026-12-21",
-    "aum": 97.308,
+    "aum": 98.75,
     "proj": true
    },
    {
     "d": "2026-12-22",
-    "aum": 97.318,
+    "aum": 98.76,
     "proj": true
    },
    {
     "d": "2026-12-23",
-    "aum": 97.329,
+    "aum": 98.771,
     "proj": true
    },
    {
     "d": "2026-12-24",
-    "aum": 97.339,
+    "aum": 98.781,
     "proj": true
    },
    {
     "d": "2026-12-25",
-    "aum": 97.349,
+    "aum": 98.792,
     "proj": true
    },
    {
     "d": "2026-12-28",
-    "aum": 97.36,
+    "aum": 98.802,
     "proj": true
    },
    {
     "d": "2026-12-29",
-    "aum": 97.37,
+    "aum": 98.812,
     "proj": true
    },
    {
     "d": "2026-12-30",
-    "aum": 97.381,
+    "aum": 98.823,
     "proj": true
    },
    {
     "d": "2026-12-31",
-    "aum": 97.391,
+    "aum": 98.833,
     "proj": true
    }
   ]
  },
  "next": {
   "q": "Q1 2027",
-  "avg_aum": 97.73,
-  "rev": 148.8,
-  "eps": 0.83
+  "avg_aum": 99.17,
+  "rev": 151.0,
+  "eps": 0.85
  },
  "consensus": {
   "asof": "2026-10-29",
@@ -921,7 +921,7 @@
    {
     "from": "2026-11-21",
     "to": "2026-11-23",
-    "flow_m": 417.6,
+    "flow_m": 404.4,
     "funds": 17,
     "stale": 17
    }
