@@ -1,7 +1,7 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-11-24T05:21:13+00:00",
+   "checked_at": "2026-11-24T12:39:21+00:00",
    "data_changed_at": "2026-11-23T22:26:45+00:00",
    "series": {
     "gdp": {
@@ -421,8 +421,8 @@
    }
   },
   "h8": {
-   "checked_at": "2026-11-24T05:21:22+00:00",
-   "data_changed_at": "2026-11-20T21:31:36+00:00",
+   "checked_at": "2026-11-24T12:39:56+00:00",
+   "data_changed_at": "2026-11-24T12:39:21+00:00",
    "series": {
     "LLBDCBW027SBOG": {
      "fred": "LLBDCBW027SBOG",
@@ -2067,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-11-24T05:27:03+00:00",
-   "data_changed_at": "2026-11-24T05:21:34+00:00",
+   "checked_at": "2026-11-24T12:46:11+00:00",
+   "data_changed_at": "2026-11-24T12:40:23+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,8 +2083,8 @@
    }
   },
   "geo": {
-   "checked_at": "2026-11-24T05:27:06+00:00",
-   "data_changed_at": "2026-11-23T22:33:03+00:00",
+   "checked_at": "2026-11-24T12:46:42+00:00",
+   "data_changed_at": "2026-11-24T12:46:11+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
@@ -2144,43 +2144,48 @@
     },
     "epu_d": {
      "fred": "USEPUINDXD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-22",
       "value": 259.27
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "epu_d_ma7": {
      "fred": "USEPUINDXD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-22",
       "value": 271.7271
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "epu_d_ma30": {
      "fred": "USEPUINDXD",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-22",
       "value": 295.6547
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "epu_m": {
      "fred": "USEPUINDXM",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-10-01",
       "value": 157.0432
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "gepu": {
      "fred": "GEPUCURRENT",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-07-01",
       "value": 241.6905
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "tpu_d": {
      "fred": "TPUD",
@@ -2208,209 +2213,234 @@
     },
     "epu_trade": {
      "fred": "EPUTRADE",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-09-01",
       "value": 1400.7687
-     }
+     },
+     "error": "FRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;fred&#46;stlouisfed&#46; ALFRED: curl exit 0 HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;alfred&#46;stlouisfed&#"
     },
     "pw_hormuz": {
      "fred": "PortWatch chokepoint6",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 2.2857
-     }
+     },
+     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_hormuz_tank": {
      "fred": "PortWatch chokepoint6",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 0.4286
-     }
+     },
+     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_hormuz_cont": {
      "fred": "PortWatch chokepoint6",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 0.2857
-     }
+     },
+     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_hormuz_ly": {
      "fred": "PortWatch chokepoint6",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 79.8571
-     }
+     },
+     "error": "PortWatch chokepoint6: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_babelmandeb": {
      "fred": "PortWatch chokepoint4",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 25.5714
-     }
+     },
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_babelmandeb_tank": {
      "fred": "PortWatch chokepoint4",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 8.8571
-     }
+     },
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_babelmandeb_cont": {
      "fred": "PortWatch chokepoint4",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 4.4286
-     }
+     },
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_babelmandeb_ly": {
      "fred": "PortWatch chokepoint4",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 33.8571
-     }
+     },
+     "error": "PortWatch chokepoint4: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_suez": {
      "fred": "PortWatch chokepoint1",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 46.1429
-     }
+     },
+     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_suez_tank": {
      "fred": "PortWatch chokepoint1",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 15.0
-     }
+     },
+     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_suez_cont": {
      "fred": "PortWatch chokepoint1",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 13.8571
-     }
+     },
+     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_suez_ly": {
      "fred": "PortWatch chokepoint1",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 45.0
-     }
+     },
+     "error": "PortWatch chokepoint1: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_panama": {
      "fred": "PortWatch chokepoint2",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 28.1429
-     }
+     },
+     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_panama_tank": {
      "fred": "PortWatch chokepoint2",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 13.2857
-     }
+     },
+     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_panama_cont": {
      "fred": "PortWatch chokepoint2",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 8.0
-     }
+     },
+     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_panama_ly": {
      "fred": "PortWatch chokepoint2",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 29.7143
-     }
+     },
+     "error": "PortWatch chokepoint2: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_malacca": {
      "fred": "PortWatch chokepoint5",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 229.8571
-     }
+     },
+     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_malacca_tank": {
      "fred": "PortWatch chokepoint5",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 78.1429
-     }
+     },
+     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_malacca_cont": {
      "fred": "PortWatch chokepoint5",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 61.8571
-     }
+     },
+     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_malacca_ly": {
      "fred": "PortWatch chokepoint5",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 246.7143
-     }
+     },
+     "error": "PortWatch chokepoint5: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_bosporus": {
      "fred": "PortWatch chokepoint3",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 48.5714
-     }
+     },
+     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_bosporus_tank": {
      "fred": "PortWatch chokepoint3",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 15.0
-     }
+     },
+     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_bosporus_cont": {
      "fred": "PortWatch chokepoint3",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 5.0
-     }
+     },
+     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     },
     "pw_bosporus_ly": {
      "fred": "PortWatch chokepoint3",
-     "status": "ok",
+     "status": "stale",
      "latest": {
       "date": "2026-11-15",
       "value": 103.0
-     }
+     },
+     "error": "PortWatch chokepoint3: only 0 rows (csv: curl exit 22: curl: (22) The requested URL returned error: 403; query: PortWatch: {'code': 499, 'message': 'Token Required', 'messageCode': 'GWM_0003', 'details': ['Token Required']})"
     }
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-11-24T05:21:34+00:00",
-   "data_changed_at": "2026-11-24T05:21:22+00:00",
+   "checked_at": "2026-11-24T12:40:23+00:00",
+   "data_changed_at": "2026-11-24T12:39:56+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2743,6 +2773,6 @@
    }
   }
  },
- "checked_at": "2026-11-24T05:27:06+00:00",
- "ok": true
+ "checked_at": "2026-11-24T12:46:42+00:00",
+ "ok": false
 }
