@@ -1,7 +1,7 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-11-26T12:40:44+00:00",
+   "checked_at": "2026-11-26T19:58:25+00:00",
    "data_changed_at": "2026-11-26T03:37:27+00:00",
    "series": {
     "gdp": {
@@ -421,7 +421,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-11-26T12:40:57+00:00",
+   "checked_at": "2026-11-26T19:58:40+00:00",
    "data_changed_at": "2026-11-24T20:58:59+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2067,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-11-26T12:46:48+00:00",
-   "data_changed_at": "2026-11-26T12:41:13+00:00",
+   "checked_at": "2026-11-26T20:04:20+00:00",
+   "data_changed_at": "2026-11-26T19:58:59+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2083,8 +2083,8 @@
    }
   },
   "geo": {
-   "checked_at": "2026-11-26T12:46:50+00:00",
-   "data_changed_at": "2026-11-25T20:28:11+00:00",
+   "checked_at": "2026-11-26T20:04:24+00:00",
+   "data_changed_at": "2026-11-26T20:04:21+00:00",
    "series": {
     "gprd": {
      "fred": "GPRD",
@@ -2146,24 +2146,24 @@
      "fred": "USEPUINDXD",
      "status": "ok",
      "latest": {
-      "date": "2026-11-24",
-      "value": 338.45
+      "date": "2026-11-25",
+      "value": 269.1
      }
     },
     "epu_d_ma7": {
      "fred": "USEPUINDXD",
      "status": "ok",
      "latest": {
-      "date": "2026-11-24",
-      "value": 257.1786
+      "date": "2026-11-25",
+      "value": 243.5329
      }
     },
     "epu_d_ma30": {
      "fred": "USEPUINDXD",
      "status": "ok",
      "latest": {
-      "date": "2026-11-24",
-      "value": 289.071
+      "date": "2026-11-25",
+      "value": 288.8247
      }
     },
     "epu_m": {
@@ -2409,8 +2409,8 @@
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-11-26T12:41:13+00:00",
-   "data_changed_at": "2026-11-26T12:40:57+00:00",
+   "checked_at": "2026-11-26T19:58:59+00:00",
+   "data_changed_at": "2026-11-26T19:58:40+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2743,6 +2743,6 @@
    }
   }
  },
- "checked_at": "2026-11-26T12:46:50+00:00",
+ "checked_at": "2026-11-26T20:04:24+00:00",
  "ok": true
 }
