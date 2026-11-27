@@ -1,8 +1,8 @@
 {
  "dashboards": {
   "macro": {
-   "checked_at": "2026-11-27T03:41:24+00:00",
-   "data_changed_at": "2026-11-27T00:29:48+00:00",
+   "checked_at": "2026-11-27T12:39:23+00:00",
+   "data_changed_at": "2026-11-27T12:39:19+00:00",
    "series": {
     "gdp": {
      "fred": "A191RL1Q225SBEA",
@@ -276,30 +276,27 @@
     },
     "dts_20d": {
      "fred": "DTS",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-11-24",
       "value": 281.781
-     },
-     "error": "curl exit 22: curl: (22) The requested URL returned error: 504\ncurl: (22) The requested URL returned error: 504\ncurl: (22) The requested URL returned error: 504"
+     }
     },
     "dts_yoy": {
      "fred": "DTS",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-11-24",
       "value": 0.011
-     },
-     "error": "curl exit 22: curl: (22) The requested URL returned error: 504\ncurl: (22) The requested URL returned error: 504\ncurl: (22) The requested URL returned error: 504"
+     }
     },
     "dts_yoy60": {
      "fred": "DTS",
-     "status": "stale",
+     "status": "ok",
      "latest": {
       "date": "2026-11-24",
       "value": 6.3688
-     },
-     "error": "curl exit 22: curl: (22) The requested URL returned error: 504\ncurl: (22) The requested URL returned error: 504\ncurl: (22) The requested URL returned error: 504"
+     }
     },
     "gas": {
      "fred": "GASREGW",
@@ -399,9 +396,11 @@
     },
     "TREASURY_AUCTIONS": {
      "fred": "Treasury auctions",
-     "status": "stale",
-     "latest": null,
-     "error": "curl exit 22: curl: (22) The requested URL returned error: 504\ncurl: (22) The requested URL returned error: 504\ncurl: (22) The requested URL returned error: 504"
+     "status": "ok",
+     "latest": {
+      "date": "2026-10-08",
+      "value": 2.54
+     }
     },
     "rest_real_lvl": {
      "fred": "derived",
@@ -422,7 +421,7 @@
    }
   },
   "h8": {
-   "checked_at": "2026-11-27T03:41:35+00:00",
+   "checked_at": "2026-11-27T12:39:33+00:00",
    "data_changed_at": "2026-11-24T20:58:59+00:00",
    "series": {
     "LLBDCBW027SBOG": {
@@ -2068,8 +2067,8 @@
    }
   },
   "predictions": {
-   "checked_at": "2026-11-27T03:47:35+00:00",
-   "data_changed_at": "2026-11-27T03:41:50+00:00",
+   "checked_at": "2026-11-27T12:45:25+00:00",
+   "data_changed_at": "2026-11-27T12:39:52+00:00",
    "series": {
     "kalshi": {
      "fred": "Kalshi",
@@ -2084,7 +2083,7 @@
    }
   },
   "geo": {
-   "checked_at": "2026-11-27T03:47:37+00:00",
+   "checked_at": "2026-11-27T12:45:28+00:00",
    "data_changed_at": "2026-11-26T20:04:21+00:00",
    "series": {
     "gprd": {
@@ -2410,8 +2409,8 @@
    }
   },
   "bank-conditions": {
-   "checked_at": "2026-11-27T03:41:50+00:00",
-   "data_changed_at": "2026-11-27T03:41:35+00:00",
+   "checked_at": "2026-11-27T12:39:52+00:00",
+   "data_changed_at": "2026-11-27T12:39:33+00:00",
    "series": {
     "5y_sofr": {
      "fred": "DGS5+SOFR",
@@ -2744,6 +2743,6 @@
    }
   }
  },
- "checked_at": "2026-11-27T03:47:37+00:00",
- "ok": false
+ "checked_at": "2026-11-27T12:45:28+00:00",
+ "ok": true
 }
