@@ -1,6 +1,6 @@
 {
  "asof_prices": "2026-11-25",
- "generated": "2026-11-27T00:37+00:00",
+ "generated": "2026-11-27T01:15+00:00",
  "current": {
   "q": "Q4 2026",
   "avg_aum": 99.24,
@@ -921,12 +921,12 @@
    {
     "from": "2026-11-21",
     "to": "2026-11-27",
-    "flow_m": -558.5,
-    "funds": 16,
-    "stale": 16
+    "flow_m": -563.3,
+    "funds": 17,
+    "stale": 17
    }
   ],
-  "cov_mf_bn": 39.58,
+  "cov_mf_bn": 41.81,
   "cov_etf_bn": 1.48,
   "rep_mf_bn": 40.012,
   "rep_etf_bn": 1.31,
@@ -977,7 +977,7 @@
    {
     "sym": "LPXIX",
     "name": "Low Duration Preferred & Income",
-    "na_bn": null,
+    "na_bn": 2.226,
     "etf": false
    },
    {
