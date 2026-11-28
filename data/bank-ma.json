@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27 00:38",
+ "generated": "2026-11-28 00:05",
  "scope": "US bank & thrift whole-company acquisitions announced since 2024-01-01 with an aggregate deal value above $500M at announcement (curated through 2026-11-16; new deals auto-added weekly from EDGAR)",
  "last_scanned": "2026-11-23 23:00",
  "scan_window": [
@@ -5274,7 +5274,7 @@
     }
    },
    "status": "pending",
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   {
    "id": "wafd-everbank",
@@ -5386,7 +5386,7 @@
     }
    },
    "status": "pending",
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   {
    "id": "pebo-cbnk",
@@ -5522,7 +5522,7 @@
     }
    },
    "status": "pending",
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   {
    "id": "umbf-eldorado",
@@ -5591,7 +5591,7 @@
     }
    },
    "status": "pending",
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   {
    "id": "hwc-trmk",
@@ -5728,7 +5728,7 @@
     }
    },
    "status": "pending",
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   }
  ]
 }
